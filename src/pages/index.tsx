@@ -14,7 +14,7 @@ export const getStaticProps: GetStaticProps<{
 const Index = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
-      <h1 className={styles.heading}>Ikanji Blog</h1>
+      <h1 className={styles.heading}>Awesome BLOG</h1>
       <div>
         {posts.map(post => (
           <article key={post.id}>
