@@ -8,10 +8,17 @@
     "start": "next start"
   },
   "dependencies": {
+    "gray-matter": "^4.0.2",
+    "mdast-util-to-markdown": "^0.6.2",
     "minireset.css": "0.0.6",
-    "next": "10.0.4",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "next": "9.5.3",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "rehype-stringify": "^8.0.0",
+    "remark-parse": "^9.0.0",
+    "remark-rehype": "^8.0.0",
+    "remark-stringify": "^9.0.1",
+    "unified": "^9.2.0"
   },
   "devDependencies": {
     "@types/node": "^14.14.16",
