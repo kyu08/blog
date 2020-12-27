@@ -4,6 +4,7 @@ import { getSortedPostsData } from '@/lib/posts'
 
 import styles from './index.module.css'
 import Meta from "@/components/Meta";
+import { BLOG_TITLE } from "@/lib/util";
 
 
 export const getStaticProps: GetStaticProps<{
@@ -17,7 +18,7 @@ const Index = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
       <Meta/>
-      <h1 className={styles.heading}>Awesome BLOG</h1>
+      <h1 className={styles.heading}>{BLOG_TITLE}</h1>
       <div>
         {posts.map(post => (
           <article key={post.id}>
