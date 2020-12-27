@@ -1,14 +1,11 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import unified from 'unified'
 import markdown from 'remark-parse'
-import remark2rehype from 'remark-rehype'
-import stringify from 'rehype-stringify'
-import highlight from 'rehype-highlight'
-import math from 'remark-math'
-import katex from 'rehype-katex'
-import raw from 'rehype-raw'
+import remark from 'remark'
+import html from 'remark-html'
+// @ts-ignore
+import highlight from 'remark-highlight.js'
 
 const POSTS_DIRECTORIES = path.join(process.cwd(), 'posts')
 
@@ -70,14 +67,10 @@ export function getSortedPostsData() {
 export async function getPostData(id: string): Promise<Post> {
   const post = ALL_POSTS.find(post => id === post.id) as Post
 
-  const processedContent = await unified()
+  const processedContent = await remark()
     .use(markdown)
-    .use(math)
-    .use(remark2rehype, { allowDangerousHtml: true })
-    .use(raw)
     .use(highlight)
-    .use(katex)
-    .use(stringify)
+    .use(html)
     .process(post.content)
   const content = processedContent.toString()
 
