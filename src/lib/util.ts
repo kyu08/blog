@@ -1,0 +1,1 @@
+export const BLOG_TITLE = 'blog.kyu08.com'

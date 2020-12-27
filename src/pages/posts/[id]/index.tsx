@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { getPostData, getAllPostIds, Post } from '@/lib/posts'
+import Meta from '@/components/Meta'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const ids = await getAllPostIds()
@@ -17,6 +18,7 @@ export const getStaticProps: GetStaticProps<Post, { id: string }> = async contex
 const PostPage = ({ title, content }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
+      <Meta title={title} />
       <h1>{title}</h1>
       <div dangerouslySetInnerHTML={{ __html: content }} />
     </>
