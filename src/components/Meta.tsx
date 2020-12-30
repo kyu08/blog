@@ -6,6 +6,7 @@ const Meta = ({ title = '' }) => {
   return (
     <Head>
       <meta name="og:title" content={MetaTitle} />
+      <meta name="color-scheme" content="dark light" />
       <title>{MetaTitle}</title>
     </Head>
   )

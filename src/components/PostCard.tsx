@@ -7,17 +7,17 @@ export default function PostCard(props: {
   const { published } = props.post
   return (
     <article>
-      <div className={styles.underLineContainer}>
-        <Link href="/posts/[id]" as={`/posts/${props.post.id}`}>
-          <a>
+      <Link href="/posts/[id]" as={`/posts/${props.post.id}`}>
+        <a>
+          <div className={styles.underLineContainer}>
             <h1 className={styles.postTitle}>{props.post.title}</h1>
             <time className={styles.postedDate} dateTime={'2020-12-27'}>
               {published}•
             </time>
-            <span>TypeScript,Next.js</span>
-          </a>
-        </Link>
-      </div>
+            <span className={styles.postTag}>#TypeScript #Next.js</span>
+          </div>
+        </a>
+      </Link>
     </article>
   )
 }

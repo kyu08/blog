@@ -16,3 +16,8 @@
 .underLineContainer {
     border-bottom: #A9B7C6 1px solid;
 }
+
+.postTag {
+    font-size: 13px;
+    color: #808080;
+}
