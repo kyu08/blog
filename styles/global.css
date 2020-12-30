@@ -1,6 +1,15 @@
+@font-face{
+  font-family: 'JetBrains Mono';
+  src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2'),
+  url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
-  padding: 0;
+  padding: 15px;
+  max-width: 600px;
   margin: 0;
   background: #2B2B2B;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -10,14 +19,6 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-@font-face{
-  font-family: 'JetBrains Mono';
-  src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2'),
-  url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
 }
 
 * {
