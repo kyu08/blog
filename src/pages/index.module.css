@@ -1,6 +1,9 @@
 .heading {
-    padding: 16px;
-    color: steelblue;
     font-size: 24px;
     font-weight: bold;
+    margin: 0;
+}
+
+.postTitle {
+    color: #CC7832;
 }

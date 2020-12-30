@@ -1,15 +1,15 @@
 import { AppProps } from 'next/app'
 
+import '../../styles/global.css'
 import 'highlight.js/styles/ocean.css'
-import styles from './_app.module.css'
-
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <div className={styles.haikei}>
-        <Component {...pageProps} />
-      </div>
+      <Component {...pageProps} />
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+      </style>
     </>
   )
 }
