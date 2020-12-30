@@ -1,7 +1,6 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { getPostData, getAllPostIds, Post } from '@/lib/posts'
 import Meta from '@/components/Meta'
-import styles from './index.module.css'
 import UnderLine from '@/components/UnderLine'
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -21,7 +20,7 @@ const PostPage = ({ title, content }: InferGetStaticPropsType<typeof getStaticPr
   return (
     <>
       <Meta title={title} />
-      <h1 className={styles.title}>{title}</h1>
+      <h1>{title}</h1>
       <article>
         <UnderLine>
           <div dangerouslySetInnerHTML={{ __html: content }} />
