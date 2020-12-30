@@ -21,11 +21,17 @@ const Index = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
       <div>
         {posts.map(post => (
           <article key={post.id}>
-            <Link href="/posts/[id]" as={`/posts/${post.id}`}>
-              <a>
-                <h1 className={styles.postTitle}>{post.title}</h1>
-              </a>
-            </Link>
+            <div className={styles.underLineContainer}>
+              <Link href="/posts/[id]" as={`/posts/${post.id}`}>
+                <a>
+                  <h1 className={styles.postTitle}>{post.title}</h1>
+                  <time className={styles.postedDate} dateTime={'2020-12-27'}>
+                    2020/12/27•
+                  </time>
+                  <span>TypeScript,Next.js</span>
+                </a>
+              </Link>
+            </div>
           </article>
         ))}
       </div>
