@@ -4,6 +4,7 @@ import Link from 'next/link'
 export default function PostCard(props: {
   post: { fileName: string; id: string; published: string; title: string; content: string }
 }) {
+  const { published } = props.post
   return (
     <article>
       <div className={styles.underLineContainer}>
@@ -11,7 +12,7 @@ export default function PostCard(props: {
           <a>
             <h1 className={styles.postTitle}>{props.post.title}</h1>
             <time className={styles.postedDate} dateTime={'2020-12-27'}>
-              2020/12/27•
+              {published}•
             </time>
             <span>TypeScript,Next.js</span>
           </a>

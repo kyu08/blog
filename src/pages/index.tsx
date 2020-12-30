@@ -16,12 +16,9 @@ const Index = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
       <Meta />
-      <HeaderComponent />
-      <div>
-        {posts.map(post => (
-          <PostCard key={post.id} post={post} />
-        ))}
-      </div>
+      {posts.map(post => (
+        <PostCard key={post.id} post={post} />
+      ))}
     </>
   )
 }
