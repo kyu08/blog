@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { BLOG_TITLE } from '@/lib/util'
+import { BLOG_TITLE } from '@/lib/config'
 
 const Meta = ({ title = '' }) => {
   const MetaTitle = title !== '' ? `${title} - ${BLOG_TITLE}` : BLOG_TITLE

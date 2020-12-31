@@ -4,10 +4,8 @@ import matter from 'gray-matter'
 import markdown from 'remark-parse'
 import remark from 'remark'
 import html from 'remark-html'
-// @ts-ignore
 import highlight from 'remark-highlight.js'
-
-const POSTS_DIRECTORIES = path.join(process.cwd(), 'posts')
+import { postsDirectory } from '@/lib/config'
 
 type MatterResult = {
   content: string
@@ -24,6 +22,8 @@ export type Post = {
   title: string
   published: string
 }
+
+const POSTS_DIRECTORIES = path.join(process.cwd(), postsDirectory)
 
 const ALL_POSTS = (() => {
   const fileNames = fs.readdirSync(POSTS_DIRECTORIES)
@@ -65,7 +65,7 @@ export function getSortedPostsData() {
 
 // idからpostを取得する
 export async function getPostData(id: string): Promise<Post> {
-  const post = ALL_POSTS.find(post => id === post.id) as Post
+  const post: Post = ALL_POSTS.find(post => id === post.id)
 
   const processedContent = await remark()
     .use(markdown)

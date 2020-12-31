@@ -12,8 +12,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps<Post, { id: string }> = async context => {
-  const data = await getPostData((context.params || {}).id as string)
-  return { props: data }
+  const post = await getPostData((context.params || {}).id as string)
+  return { props: post }
+  // error をキャッチ？
 }
 
 const PostPage = ({ title, content }: InferGetStaticPropsType<typeof getStaticProps>) => {
@@ -21,7 +22,7 @@ const PostPage = ({ title, content }: InferGetStaticPropsType<typeof getStaticPr
     <>
       <Meta title={title} />
       <h1>{title}</h1>
-      <article>
+      <article className="article-content">
         <UnderLine>
           <div dangerouslySetInnerHTML={{ __html: content }} />
         </UnderLine>

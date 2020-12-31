@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import styles from '@/pages/index.module.css'
-import { BLOG_TITLE } from '@/lib/util'
+import { BLOG_TITLE } from '@/lib/config'
 
 export default function HeaderComponent() {
   return (
