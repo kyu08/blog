@@ -1,6 +1,23 @@
 .heading {
-    padding: 16px;
-    color: steelblue;
     font-size: 24px;
     font-weight: bold;
+    margin: 0;
+}
+
+.postTitle {
+    color: #CC7832;
+    margin-bottom: 0;
+}
+
+.postedDate {
+    margin-right: 5px;
+}
+
+.underLineContainer {
+    border-bottom: #A9B7C6 1px solid;
+}
+
+.postTag {
+    font-size: 13px;
+    color: #808080;
 }

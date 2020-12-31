@@ -1,0 +1,41 @@
+@font-face{
+  font-family: 'JetBrains Mono';
+  src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2'),
+  url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  -webkit-font-feature-settings: "liga" on, "calt" on;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  color: #A9B7C6;
+  font-family: "JetBrains Mono", 'M PLUS Rounded 1c', sans-serif;
+}
+
+html,
+body {
+  padding: 15px;
+  max-width: 800px;
+  margin: 0;
+  background: #2B2B2B;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: #CC7832;
+  text-decoration: none;
+}
+
+.article-content > a {
+  color: #CC7832;
+}
+
+/*todo これが効かない*/
+.article-content > code {
+  background-color: grey;
+}

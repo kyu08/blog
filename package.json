@@ -10,7 +10,6 @@
   "dependencies": {
     "gray-matter": "^4.0.2",
     "highlight.js": "^10.5.0",
-    "minireset.css": "0.0.6",
     "next": "9.5.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
