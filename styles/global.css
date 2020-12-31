@@ -6,6 +6,15 @@
   font-style: normal;
 }
 
+* {
+  -webkit-font-feature-settings: "liga" on, "calt" on;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  color: #A9B7C6;
+  font-family: "JetBrains Mono", 'M PLUS Rounded 1c', sans-serif;
+}
+
 html,
 body {
   padding: 15px;
@@ -18,19 +27,15 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #CC7832;
   text-decoration: none;
 }
 
-* {
-  -webkit-font-feature-settings: "liga" on, "calt" on;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  font-family: 'JetBrains Mono';
+.article-content > a {
+  color: #CC7832;
 }
 
-* {
-  box-sizing: border-box;
-  color: #A9B7C6;
-  font-family: "JetBrains Mono", 'M PLUS Rounded 1c', sans-serif;
+/*todo これが効かない*/
+.article-content > code {
+  background-color: grey;
 }
