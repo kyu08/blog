@@ -66,7 +66,7 @@ export function getSortedPostsData() {
 
 // idからpostを取得する
 export async function getPostData(id: string): Promise<Post> {
-  const post: Post = ALL_POSTS.find(post => id === post.id)
+  const post = ALL_POSTS.find(post => id === post.id) as Post
 
   const processedContent = await remark()
     .use(markdown)
