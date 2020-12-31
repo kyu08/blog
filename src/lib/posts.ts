@@ -4,6 +4,7 @@ import matter from 'gray-matter'
 import markdown from 'remark-parse'
 import remark from 'remark'
 import html from 'remark-html'
+// @ts-ignore
 import highlight from 'remark-highlight.js'
 import { postsDirectory } from '@/lib/config'
 
