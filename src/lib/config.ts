@@ -3,7 +3,7 @@ export const BLOG_URL = 'https://blog.kyu08.com/'
 export const DEFAULT_OGP_IMAGE =
   'https://s3-ap-northeast-1.amazonaws.com/blog.kyu08.com/defaultOgp.png'
 export const DEFAULT_DESCRIPTION = 'kyu08のブログです'
-export const FAVICON = 'public/favicon.ico'
+export const FAVICON = 'https://s3-ap-northeast-1.amazonaws.com/blog.kyu08.com/favicon.png'
 
 type postsDirectoryType = 'postsForDev' | 'posts'
 
