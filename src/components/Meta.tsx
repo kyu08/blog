@@ -22,7 +22,7 @@ const Meta = ({
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@tcr_jp" />
       <meta name="twitter:url" content={image} />
-      <meta name="twitter:title" content={title} />
+      <meta name="twitter:title" content={metaTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <link rel="canonical" href={url} />
