@@ -20,7 +20,7 @@ const Meta = ({
       <meta property="og:image" content={image} />
       <meta property="og:site_name" content={metaTitle} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@tcr_jp" />
+      <meta name="twitter:site" content="@kyu08" />
       <meta name="twitter:url" content={image} />
       <meta name="twitter:title" content={metaTitle} />
       <meta name="twitter:description" content={description} />
