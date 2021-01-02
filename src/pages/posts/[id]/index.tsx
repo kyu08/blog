@@ -2,6 +2,7 @@ import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { getPostData, getAllPostIds, Post } from '@/lib/posts'
 import Meta from '@/components/Meta'
 import UnderLine from '@/components/UnderLine'
+import { BLOG_URL } from '@/lib/config'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const ids = await getAllPostIds()
@@ -20,7 +21,7 @@ export const getStaticProps: GetStaticProps<Post, { id: string }> = async contex
 const PostPage = ({ title, content }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
-      <Meta title={title} />
+      <Meta title={title} description={content} />
       <h1>{title}</h1>
       <article className="article-content">
         <UnderLine>
