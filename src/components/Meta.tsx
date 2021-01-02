@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { BLOG_TITLE, BLOG_URL, DEFAULT_DESCRIPTION, DEFAULT_OGP_IMAGE } from '@/lib/config'
+import { BLOG_TITLE, BLOG_URL, DEFAULT_DESCRIPTION, DEFAULT_OGP_IMAGE, FAVICON } from '@/lib/config'
 
 const Meta = ({
   title = '',
@@ -26,18 +26,8 @@ const Meta = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <link rel="canonical" href={url} />
-      <link
-        rel="shortcut icon"
-        href={
-          'https://cdn.qiita.com/assets/favicons/public/production-4ff10c1e1e2b5fcb353ff9cafdd56c70.ico'
-        }
-      />
-      <link
-        rel="apple-touch-icon"
-        href={
-          'https://cdn.qiita.com/assets/favicons/public/apple-touch-icon-f9a6afad761ec2306e10db2736187c8b.png'
-        }
-      />
+      <link rel="shortcut icon" href={FAVICON} />
+      <link rel="apple-touch-icon" href={FAVICON} />
     </Head>
   )
 }

@@ -2,6 +2,7 @@ export const BLOG_TITLE = 'blog.kyu08.com'
 export const BLOG_URL = 'https://blog.kyu08.com/'
 export const DEFAULT_OGP_IMAGE = '../../public/defaultOgp.png'
 export const DEFAULT_DESCRIPTION = 'kyu08のブログです'
+export const FAVICON = 'public/favicon.ico'
 
 type modeType = 'dev' | 'prod'
 type postsDirectoryType = 'postsForDev' | 'posts'
