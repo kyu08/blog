@@ -4,7 +4,6 @@ import React from 'react'
 import { GA_TRACKING_ID } from '@/lib/gtag'
 
 export default class MyDocument extends Document {
-  // export default class MyDocument extends Document<WithNonceProp> {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx)
 
