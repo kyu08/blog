@@ -1,4 +1,4 @@
-export const BLOG_TITLE = 'blog.kyu08.com'
+export const BLOG_TITLE: string = 'blog.kyu08.com'
 export const BLOG_URL = 'https://blog.kyu08.com/'
 export const DEFAULT_OGP_IMAGE =
   'https://s3-ap-northeast-1.amazonaws.com/blog.kyu08.com/defaultOgp.png'
