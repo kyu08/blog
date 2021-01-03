@@ -13,7 +13,6 @@ const Meta = ({
       <title>{metaTitle}</title>
       <meta name="og:title" content={metaTitle} />
       <meta name="color-scheme" content="dark light" />
-
       <meta property="og:description" content={description} />
       <meta property="og:type" content="blog" />
       <meta property="og:url" content={url} />
