@@ -4,7 +4,7 @@ export default function UnderLine({ children }: { children: React.ReactNode }) {
       <div className="underLine">{children}</div>
       <style jsx>{`
         .underLine {
-          border-bottom: #a9b7c6 1px solid;
+          border-bottom: var(--text-main-color) 1px solid;
         }
       `}</style>
     </>

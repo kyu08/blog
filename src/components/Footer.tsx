@@ -9,7 +9,7 @@ export default function Footer() {
           text-align: center;
           margin: 30px 0;
           font-size: 13px;
-          color: #808080;
+          color: var(--text-gray-color);
         }
       `}</style>
     </>
