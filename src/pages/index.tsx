@@ -2,7 +2,6 @@ import { InferGetStaticPropsType, GetStaticProps } from 'next'
 import { getSortedPostsData } from '@/lib/posts'
 
 import Meta from '@/components/Meta'
-import HeaderComponent from '@/components/HeaderComponent'
 import PostCard from '@/components/PostCard'
 
 export const getStaticProps: GetStaticProps<{

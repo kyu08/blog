@@ -2,7 +2,6 @@ import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { getPostData, getAllPostIds, Post } from '@/lib/posts'
 import Meta from '@/components/Meta'
 import UnderLine from '@/components/UnderLine'
-import { BLOG_URL } from '@/lib/config'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const ids = await getAllPostIds()

@@ -1,4 +1,3 @@
-import styles from '@/pages/index.module.css'
 import Link from 'next/link'
 import UnderLine from '@/components/UnderLine'
 
@@ -7,18 +6,36 @@ export default function PostCard(props: {
 }) {
   const { published } = props.post
   return (
-    <article>
-      <Link href="/posts/[id]" as={`/posts/${props.post.id}`}>
-        <a>
-          <UnderLine>
-            <h1 className={styles.postTitle}>{props.post.title}</h1>
-            <time className={styles.postedDate} dateTime={'2020-12-27'}>
-              {published}•
-            </time>
-            <span className={styles.postTag}>#TypeScript #Next.js</span>
-          </UnderLine>
-        </a>
-      </Link>
-    </article>
+    <>
+      <article>
+        <Link href="/posts/[id]" as={`/posts/${props.post.id}`}>
+          <a>
+            <UnderLine>
+              <h1 className="postTitle">{props.post.title}</h1>
+              <time className="postedDate" dateTime={'2020-12-27'}>
+                {published}•
+              </time>
+              <span className="postTag">#TypeScript #Next.js</span>
+            </UnderLine>
+          </a>
+        </Link>
+      </article>
+
+      <style jsx>{`
+        .postTitle {
+          color: #cc7832;
+          margin-bottom: 0;
+        }
+
+        .postedDate {
+          margin-right: 5px;
+        }
+
+        .postTag {
+          font-size: 13px;
+          color: #808080;
+        }
+      `}</style>
+    </>
   )
 }
