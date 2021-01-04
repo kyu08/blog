@@ -1,7 +1,6 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import markdown from 'remark-parse'
 import remark from 'remark'
 import html from 'remark-html'
 // @ts-ignore
@@ -9,12 +8,9 @@ import highlight from 'remark-highlight.js'
 import { postsDirectory } from '@/lib/config'
 
 type MatterResult = {
-  content: string
-  data: {
-    id: string
-    title: string
-    published: string
-  }
+  id: string
+  title: string
+  published: string
 }
 
 export type Post = {
@@ -24,38 +20,28 @@ export type Post = {
   published: string
 }
 
-const POSTS_DIRECTORIES = path.join(process.cwd(), postsDirectory)
+const POSTS_DIRECTORY = path.join(process.cwd(), postsDirectory)
 
-const ALL_POSTS = (() => {
-  const fileNames = fs.readdirSync(POSTS_DIRECTORIES)
-  return fileNames.map(fileName => {
-    const fullPath = path.join(POSTS_DIRECTORIES, fileName)
-    const fileContent = fs.readFileSync(fullPath, 'utf8')
-    const matterResult = matter(fileContent)
-    const matterResultData = matterResult.data as MatterResult['data']
-    return {
-      content: matterResult.content,
-      ...matterResultData,
-      fileName,
-    }
-  })
-})()
-
-const ID_FILENAME_MAP = (() => {
-  const map = new Map()
-  ALL_POSTS.forEach(post => {
-    map.set(post.id, post.fileName.replace(/\.md$/, ''))
-  })
-  return map
-})()
-
-// 全てのpostのid一覧を取得
 export function getAllPostIds() {
-  return Array.from(ID_FILENAME_MAP.keys())
+  const fileNames = fs.readdirSync(POSTS_DIRECTORY)
+  return fileNames.map(fileName => {
+    return fileName.replace(/\.md$/, '')
+  })
 }
 
+// ここで id をファイル名にする
 export function getSortedPostsData() {
-  return ALL_POSTS.sort((a, b) => {
+  const fileNames = fs.readdirSync(POSTS_DIRECTORY)
+  const postsData = fileNames.map(fileName => {
+    const fullPath = path.join(POSTS_DIRECTORY, fileName)
+    const fileContent = fs.readFileSync(fullPath, 'utf8')
+    const matterResult = matter(fileContent)
+    return {
+      ...(matterResult.data as MatterResult),
+      id: fileName.replace(/\.md$/, ''),
+    }
+  })
+  return postsData.sort((a, b) => {
     if (a.published < b.published) {
       return 1
     } else {
@@ -66,17 +52,14 @@ export function getSortedPostsData() {
 
 // idからpostを取得する
 export async function getPostData(id: string): Promise<Post> {
-  const post = ALL_POSTS.find(post => id === post.id) as Post
-
-  const processedContent = await remark()
-    .use(markdown)
-    .use(highlight)
-    .use(html)
-    .process(post.content)
+  const fullPath = path.join(POSTS_DIRECTORY, `${id}.md`)
+  const fileContent = fs.readFileSync(fullPath, 'utf8')
+  const matterResult = matter(fileContent)
+  const matterResultData = matterResult.data as MatterResult
+  const processedContent = await remark().use(highlight).use(html).process(matterResult.content)
   const content = processedContent.toString()
-
   return {
-    ...post,
     content,
+    ...matterResultData,
   }
 }

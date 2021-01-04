@@ -7,11 +7,15 @@
 }
 
 * {
+  --text-main-color: #A9B7C6;
+  --text-sub-color: #CC7832;
+  --background-color: #2B2B2B;
+  --text-gray-color:#808080;
   -webkit-font-feature-settings: "liga" on, "calt" on;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   box-sizing: border-box;
-  color: #A9B7C6;
+  color: var(--text-main-color);
   font-family: "JetBrains Mono", 'M PLUS Rounded 1c', sans-serif;
 }
 
@@ -20,19 +24,19 @@ body {
   padding: 15px;
   max-width: 800px;
   margin: 0;
-  background: #2B2B2B;
+  background: var(--background-color);
   margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: #CC7832;
+  color: var(--text-sub-color);
   text-decoration: none;
 }
 
 .article-content > a {
-  color: #CC7832;
+  color: var(--text-sub-color);
 }
 
 /*todo これが効かない*/

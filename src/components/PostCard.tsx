@@ -2,7 +2,8 @@ import Link from 'next/link'
 import UnderLine from '@/components/UnderLine'
 
 export default function PostCard(props: {
-  post: { fileName: string; id: string; published: string; title: string; content: string }
+  // todo ここ Type でかこう
+  post: { id: string; published: string; title: string }
 }) {
   const { published } = props.post
   return (
@@ -23,7 +24,7 @@ export default function PostCard(props: {
 
       <style jsx>{`
         .postTitle {
-          color: #cc7832;
+          color: var(--text-sub-color);
           margin-bottom: 0;
         }
 
@@ -33,7 +34,7 @@ export default function PostCard(props: {
 
         .postTag {
           font-size: 13px;
-          color: #808080;
+          color: var(--text-gray-color);
         }
       `}</style>
     </>

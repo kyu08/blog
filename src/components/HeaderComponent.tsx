@@ -4,11 +4,13 @@ import { BLOG_TITLE } from '@/lib/config'
 export default function HeaderComponent() {
   return (
     <>
-      <Link href="/">
-        <a>
-          <h1 className="heading">{BLOG_TITLE}</h1>
-        </a>
-      </Link>
+      <header>
+        <Link href="/">
+          <a>
+            <h1 className="heading">{BLOG_TITLE}</h1>
+          </a>
+        </Link>
+      </header>
       <style jsx>{`
         .heading {
           font-size: 24px;
