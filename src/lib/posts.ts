@@ -56,10 +56,8 @@ export async function getPostData(id: string): Promise<Post> {
   const fileContent = fs.readFileSync(fullPath, 'utf8')
   const matterResult = matter(fileContent)
   const matterResultData = matterResult.data as MatterResult
-
   const processedContent = await remark().use(highlight).use(html).process(matterResult.content)
   const content = processedContent.toString()
-
   return {
     content,
     ...matterResultData,
