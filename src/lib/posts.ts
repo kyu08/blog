@@ -13,11 +13,14 @@ type MatterResult = {
   published: string
 }
 
-export type Post = {
-  content: string
+export type PostCard = {
   id: string
   title: string
   published: string
+}
+
+type Post = PostCard & {
+  content: string
 }
 
 const POSTS_DIRECTORY = path.join(process.cwd(), postsDirectory)
@@ -30,7 +33,7 @@ export function getAllPostIds() {
 }
 
 // ここで id をファイル名にする
-export function getSortedPostsData() {
+export function getSortedPostsData(): PostCard[] {
   const fileNames = fs.readdirSync(POSTS_DIRECTORY)
   const postsData = fileNames.map(fileName => {
     const fullPath = path.join(POSTS_DIRECTORY, fileName)
