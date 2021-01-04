@@ -19,7 +19,7 @@ export type PostCard = {
   published: string
 }
 
-type Post = PostCard & {
+export type Post = PostCard & {
   content: string
 }
 
