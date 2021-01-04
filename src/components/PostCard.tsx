@@ -2,7 +2,8 @@ import Link from 'next/link'
 import UnderLine from '@/components/UnderLine'
 
 export default function PostCard(props: {
-  post: { fileName: string; id: string; published: string; title: string; content: string }
+  // todo ここ Type でかこう
+  post: { id: string; published: string; title: string }
 }) {
   const { published } = props.post
   return (

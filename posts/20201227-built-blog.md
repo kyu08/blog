@@ -1,5 +1,5 @@
 ---
-id: 'constructed-blog'
+id: 'built-blog'
 title: 'Next.js Vercel で Blog をつくった'
 published: '2020-12-27'
 ---
