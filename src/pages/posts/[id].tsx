@@ -11,8 +11,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-export const getStaticProps: GetStaticProps<Post, { id: string }> = async context => {
-  const post = await getPostData((context.params || {}).id as string)
+export const getStaticProps: GetStaticProps<Post, { id: string }> = async ({ params }) => {
+  const post = await getPostData((params || {}).id as string)
   return { props: post }
 }
 
