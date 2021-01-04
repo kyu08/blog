@@ -1,7 +1,6 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import markdown from 'remark-parse'
 import remark from 'remark'
 import html from 'remark-html'
 // @ts-ignore
@@ -68,11 +67,7 @@ export function getSortedPostsData() {
 export async function getPostData(id: string): Promise<Post> {
   const post = ALL_POSTS.find(post => id === post.id) as Post
 
-  const processedContent = await remark()
-    .use(markdown)
-    .use(highlight)
-    .use(html)
-    .process(post.content)
+  const processedContent = await remark().use(highlight).use(html).process(post.content)
   const content = processedContent.toString()
 
   return {
