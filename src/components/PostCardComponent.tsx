@@ -11,10 +11,11 @@ export default function PostCardComponent(props: { post: PostCard }) {
           <a>
             <UnderLine>
               <h1 className="postTitle">{props.post.title}</h1>
-              <time className="postedDate" dateTime={'2020-12-27'}>
-                {published}•
+              <time className="postedDate" dateTime={props.post.title}>
+                {published}
+                {/*•*/}
               </time>
-              <span className="postTag">#TypeScript #Next.js</span>
+              {/*<span className="postTag">#TypeScript #Next.js</span>*/}
             </UnderLine>
           </a>
         </Link>
