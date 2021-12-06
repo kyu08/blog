@@ -3,11 +3,8 @@ title: 'Elm で固定長配列が扱えるライブラリ elm-static-array を�
 published: '2021-12-18'
 ---
 
-<!-- TODO --> 
-<!-- TODO: を消化する -->
 <!-- 1. 推敲・正確性をあげたりする -->
 <!-- 微妙だったところの内容をいい感じにしていく -->
-<!-- textlint の error を解消する -->
 
 Elm で固定長配列を扱うためのライブラリ elm-static-array を触ってみたので感じたことを書いていきます。
 
@@ -161,7 +158,6 @@ get : Index n -> StaticArray n a -> a
 Array に生えている関数が StaticArray には生えてなかったりするので、都度 Array に変換して処理をした上で再度 StaticArray に変換する、というような工程が必要になる場面がありました。StaticArray には最小限の関数しか定義されていないので例えば `filter` や `foldl(foldr)` などは一度 Array などに変換し、処理してから再度 StaticArray に変換しなおす必要がありました。
 
 ### 微妙だった点②： StaticArray の書き方に慣れるまでは時間がかかる
-
 たとえばインデックスを指定して StaticArray の要素を取得する get 関数を使おうと[ドキュメント](https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/StaticArray#get)を見ると、下記のような記述があります。
 
 ```elm
@@ -176,7 +172,13 @@ get : Index n -> StaticArray n a -> a
 data = StaticArray.get (Index.fromModBy Length.four 0) points
 ```
 
-ただ逆に言えばネガティブに感じたのは上記の2点くらいで、基本的にはメリットの方が大きく感じたためこれからも必要であれば使っていきたいと思っています。
+まとめると、 **多少の手間が必要になる** ということかなと思います。
+このあたりが elm-static-array の作者が [README](https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/) の中で以下のように言っている所以かなと感じました。
+
+> Construction is a bit slower (should be neglectable for most cases).
+
+
+ただ逆に言えばネガティブに感じたのは上記のそれくらいで、基本的にはメリットの方が大きく感じたためこれからも必要であれば使っていきたいと思っています。
 
 <!-- 時間があったらかく -->
 <!-- ## 内部実装について -->
