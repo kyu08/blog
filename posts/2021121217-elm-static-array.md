@@ -1,6 +1,6 @@
 ---
 title: 'Elm で固定長配列が扱えるライブラリ elm-static-array を触ってみた'
-published: '2021-12-18'
+published: '2021-12-17'
 ---
 
 Elm で固定長配列を扱うためのライブラリ elm-static-array を触ってみたので感じたことを書いていきます。
