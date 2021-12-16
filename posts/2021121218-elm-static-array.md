@@ -3,15 +3,13 @@ title: 'Elm で固定長配列が扱えるライブラリ elm-static-array を�
 published: '2021-12-18'
 ---
 
-<!-- 1. 推敲・正確性をあげたりする -->
-
 Elm で固定長配列を扱うためのライブラリ elm-static-array を触ってみたので感じたことを書いていきます。
 
 <!-- TODO: 目次を設置する -->
 
 ## elm-static-array とは
 <!-- 全部 elm-static-array って書いた方がいいかな -->
-[elm-static-array](https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/) は Elm で固定長配列を扱うためのライブラリです。(以下 StaticArray と表記)
+[elm-static-array](https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/) は Elm で固定長配列を扱うためのライブラリです。(以下 StaticArray)
 
 配列の長さを型で表現できることが特徴です。
 
@@ -40,7 +38,7 @@ type alias Points = Array String
 ```
 
 これではあらゆる長さの配列をとることができてしまいますが、仕様上どちらも長さ 4 もしくは 5 の配列しかとることはありません。
-そこで StaticArray を用いることによって配列の長さの情報を表現できるようにしました。
+そこで StaticArray を用いることによって配列の長さの情報を型で表現できるようにしました。
 
 ```elm
 type Players
@@ -48,32 +46,29 @@ type Players
     | Players5 (StaticArray Index.Five Player)
 
 type Points
-    = Points4 StaticArray Index.Four Point
-    | Points5 StaticArray Index.Five Point
+    = Points4 (StaticArray Index.Four Point)
+    | Points5 (StaticArray Index.Five Point)
 ```
 
 ## 使ってみてよかったところ
 ここからは実際に使ってみて感じたことを書いていきます。
 
-### よかったところ①：仕様を型で表現しやすくなる
+### よかったところ①：仕様を型で表現しやすい
 上でも触れましたが、長さが 4 もしく 5 の `Point` の配列は StaticArray を使うと以下のように定義できます。
 
 ```elm
 type Points
-    = Points4 StaticArray Index.Four Point
-    | Points5 StaticArray Index.Five Point
-
--- 通常の Array
-type alias Points = Array String
+    = Points4 (StaticArray Index.Four Point)
+    | Points5 (StaticArray Index.Five Point)
 ```
 
 StaticArray を使うことで型に配列の長さの情報を持たせることができるため、**仕様を型で表現しやすくなり**コードの可読性向上に繋がります。
 
 <!-- 注釈で動画リンクを貼りたい -->
 <!-- 仕様上ありえない状態を表現できないようなコードを書くべきである、という指針 -->
-またそれにともなって、 **仕様上ありえない状態が存在できないコードを書きやすくなるためバグの可能性を減らす** ことができます。
+また、それにともなって **仕様上ありえない状態が存在できないコードを書きやすくなる**ため**バグの可能性を減らす** ことができます。
 
-たとえば以下の `isDefaultRound`関数 は引数に取った値が既定値かどうかを判定する関数です。
+たとえば以下の `isDefaultRound`関数 は引数に取った値がデフォルト値かどうかを判定する関数です。
 
 ```elm
 type Round
