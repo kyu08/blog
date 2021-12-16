@@ -5,8 +5,6 @@ published: '2021-12-18'
 
 Elm で固定長配列を扱うためのライブラリ elm-static-array を触ってみたので感じたことを書いていきます。
 
-<!-- TODO: 目次を設置する -->
-
 ## elm-static-array とは
 <!-- 全部 elm-static-array って書いた方がいいかな -->
 [elm-static-array](https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/) は Elm で固定長配列を扱うためのライブラリです。
@@ -211,11 +209,6 @@ head = StaticArray.get (Index.fromModBy Length.four 0) someStaticArray
 
 
 ただ逆に言えばネガティブに感じたのは上記のそれくらいで、基本的にはメリットの方が大きく感じたためこれからも必要であれば使っていきたいと思っています。
-
-<!-- 時間があったらかく -->
-<!-- ## 内部実装について -->
-<!--   - phantom type について理解できていると語れそう -->
-<!--     > 固定長の配列を使用してください！すべてのチェックはコンパイル時に行われます。これは可能ですか？はい、そうです！魔法の言葉はファントムタイプです。(https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/ の冒頭より) -->
 
 ## まとめ
 Elm で固定長配列を扱うためのライブラリ elm-static-array を触った感想を書いてみました。
