@@ -25,7 +25,7 @@ ordinaryArray : Array String
 
 各プレイヤーの試合毎のスコアを記録して合計を表示するだけの簡単なアプリケーションです。(※実際には順位点やトビ賞の計算などもやっていますがここでは割愛)
 
-<img src='https://user-images.githubusercontent.com/49891479/144793092-395b5cfb-fa54-43b7-9ec5-7926ccbbb647.png' width=300/>
+<img src='https://user-images.githubusercontent.com/49891479/144793092-395b5cfb-fa54-43b7-9ec5-7926ccbbb647.png' />
 
 ここで **参加者の名前** および **その試合のスコア** を `Array String` として扱おうとすると以下のようになります。
 

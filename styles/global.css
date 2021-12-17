@@ -43,3 +43,7 @@ a {
 .article-content > code {
   background-color: grey;
 }
+
+img {
+  max-width: 100%;
+}
