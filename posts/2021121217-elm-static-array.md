@@ -48,12 +48,7 @@ type Points
     | Points5 (StaticArray Index.Five Point)
 ```
 
-
-<br>
-<br>
 ここからは実際に使ってみて感じたことを書いていきます。
-<br>
-<br>
 
 ## elm-static-array を使うことで得られるメリット
 ### メリット①：仕様を型で表現しやすい
