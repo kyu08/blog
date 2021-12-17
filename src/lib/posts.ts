@@ -3,6 +3,8 @@ import path from 'path'
 import matter from 'gray-matter'
 import remark from 'remark'
 import html from 'remark-html'
+import slug from 'remark-slug'
+import toc from 'remark-toc'
 // @ts-ignore
 import highlight from 'remark-highlight.js'
 import { postsDirectory } from '@/lib/config'
@@ -61,6 +63,12 @@ export async function getPostData(id: string): Promise<Post> {
   const matterResultData = matterResult.data as MatterResult
   const processedContent = await remark().use(highlight).use(html).process(matterResult.content)
   const content = processedContent.toString()
+  // const tocResult = await remark()
+  //   .use(slug)
+  //   // .use(toc, { heading: '目次', maxDepth: 2 })
+  //   .use(html)
+  //   .process(matterResult.content)
+
   return {
     content,
     ...matterResultData,
