@@ -39,7 +39,12 @@ a {
   color: var(--text-sub-color);
 }
 
-/*todo これが効かない*/
-.article-content > code {
-  background-color: grey;
+code {
+  background-color: rgba(99,110,123,0.4);
+  border-radius: 8px;
+  padding: 0 8px;
+}
+
+img {
+  max-width: 100%;
 }
