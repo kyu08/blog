@@ -20,8 +20,8 @@ const PostPage = ({ title, content }: InferGetStaticPropsType<typeof getStaticPr
   return (
     <>
       <Meta title={title} description={content} />
-      <h1>{title}</h1>
       <article className="article-content">
+        <h1>{title}</h1>
         <UnderLine>
           <div dangerouslySetInnerHTML={{ __html: content }} />
         </UnderLine>
