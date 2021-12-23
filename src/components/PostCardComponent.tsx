@@ -3,7 +3,7 @@ import UnderLine from '@/components/UnderLine'
 import { PostCard } from '@/lib/posts'
 
 export default function PostCardComponent(props: { post: PostCard }) {
-  const { published } = props.post
+  const { publishedAt } = props.post
   return (
     <>
       <article>
@@ -12,7 +12,7 @@ export default function PostCardComponent(props: { post: PostCard }) {
             <UnderLine>
               <h1 className="postTitle">{props.post.title}</h1>
               <time className="postedDate" dateTime={props.post.title}>
-                {published}
+                {publishedAt}
                 {/*•*/}
               </time>
               {/*<span className="postTag">#TypeScript #Next.js</span>*/}

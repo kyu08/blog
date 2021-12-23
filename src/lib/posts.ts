@@ -12,13 +12,13 @@ import { postsDirectory } from '@/lib/config'
 type MatterResult = {
   id: string
   title: string
-  published: string
+  publishedAt: string
 }
 
 export type PostCard = {
   id: string
   title: string
-  published: string
+  publishedAt: string
 }
 
 export type Post = PostCard & {
@@ -47,7 +47,7 @@ export function getSortedPostsData(): PostCard[] {
     }
   })
   return postsData.sort((a, b) => {
-    if (a.published < b.published) {
+    if (a.publishedAt < b.publishedAt) {
       return 1
     } else {
       return -1
