@@ -18,12 +18,12 @@ export default function ContentHeader(props: { publishedAt: string }) {
         </div>
         <div className="shareButtonsContainer">
           <a href={TWITTER_PROFILE_LINK} target="_blank" rel="noreferrer noopener">
-            <div className="shareButton">
+            <div className="socialAcountIcon">
               <FontAwesomeIcon icon={faTwitter} size="3x" />
             </div>
           </a>
           <a href={GITHUB_PROFILE_LINK} target="_blank" rel="noreferrer noopener">
-            <div className="shareButton">
+            <div className="socialAcountIcon">
               <FontAwesomeIcon icon={faGithub} size="3x" />
             </div>
           </a>
@@ -52,7 +52,7 @@ export default function ContentHeader(props: { publishedAt: string }) {
           margin-left: auto;
           display: flex;
         }
-        .shareButton {
+        .socialAcountIcon {
           width: 30px;
           height: 30px;
           margin: 0 4px 0 16px;
