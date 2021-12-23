@@ -20,7 +20,7 @@ export const getStaticProps: GetStaticProps<Post, { id: string }> = async ({ par
 const PostPage = ({
   title,
   content,
-  published,
+  publishedAt: published,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>

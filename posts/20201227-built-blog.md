@@ -1,6 +1,6 @@
 ---
 title: 'Next.js Vercel で Blog をつくった'
-published: '2020-12-27'
+publishedAt: '2020-12-27'
 ---
 
 急にブログが書きたくなったのでつくった。
