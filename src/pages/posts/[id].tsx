@@ -2,6 +2,7 @@ import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { getPostData, getAllPostIds, Post } from '@/lib/posts'
 import Meta from '@/components/Meta'
 import UnderLine from '@/components/UnderLine'
+import ContentHeader from '@/components/ContentHeader'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const ids = await getAllPostIds()
@@ -16,12 +17,17 @@ export const getStaticProps: GetStaticProps<Post, { id: string }> = async ({ par
   return { props: post }
 }
 
-const PostPage = ({ title, content }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const PostPage = ({
+  title,
+  content,
+  published,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
       <Meta title={title} description={content} />
       <article className="article-content">
         <h1>{title}</h1>
+        <ContentHeader publishedAt={published} />
         <UnderLine>
           <div dangerouslySetInnerHTML={{ __html: content }} />
         </UnderLine>

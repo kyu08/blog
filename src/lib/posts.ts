@@ -18,6 +18,7 @@ type MatterResult = {
 export type PostCard = {
   id: string
   title: string
+  // TODO: いや publishedAt だろ・・・
   published: string
 }
 
