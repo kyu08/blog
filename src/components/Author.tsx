@@ -32,7 +32,7 @@ export default function Author() {
         .container {
           display: flex;
           justify-content: center;
-          margin: 40px 0;
+          margin: 20px 0;
         }
         .leftContainer {
           margin: 0 8px;
