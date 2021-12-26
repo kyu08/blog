@@ -20,15 +20,18 @@ export default class MyDocument extends Document {
             async={true}
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
           />
+          {/* 開発環境では GA イベントが発火しないようにする */}
           <script
             dangerouslySetInnerHTML={{
               __html: `
+              if (!window.location.hostname.includes('localhost')) {
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 gtag('config', '${GA_TRACKING_ID}', {
                   page_path: window.location.pathname,
                 });
+              }
               `,
             }}
           />
