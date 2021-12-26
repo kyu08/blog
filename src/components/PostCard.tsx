@@ -1,9 +1,12 @@
 import Link from 'next/link'
 import UnderLine from '@/components/UnderLine'
+import Tags from '@/components/Tags'
 import { PostCard } from '@/lib/posts'
+import PublishedAt from './PublishedAt'
 
 export default function PostCardComponent(props: { post: PostCard }) {
-  const { publishedAt } = props.post
+  const { publishedAt, tags } = props.post
+
   return (
     <>
       <article>
@@ -11,11 +14,8 @@ export default function PostCardComponent(props: { post: PostCard }) {
           <a>
             <UnderLine>
               <h1 className="postTitle">{props.post.title}</h1>
-              <time className="postedDate" dateTime={props.post.title}>
-                {publishedAt}
-                {/*•*/}
-              </time>
-              {/*<span className="postTag">#TypeScript #Next.js</span>*/}
+              <PublishedAt publishedAt_={publishedAt} />
+              <Tags tags_={tags} />
             </UnderLine>
           </a>
         </Link>
@@ -25,15 +25,6 @@ export default function PostCardComponent(props: { post: PostCard }) {
         .postTitle {
           color: var(--text-sub-color);
           margin-bottom: 0;
-        }
-
-        .postedDate {
-          margin-right: 5px;
-        }
-
-        .postTag {
-          font-size: 13px;
-          color: var(--text-gray-color);
         }
       `}</style>
     </>
