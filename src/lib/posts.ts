@@ -13,12 +13,14 @@ type MatterResult = {
   id: string
   title: string
   publishedAt: string
+  tags: string[]
 }
 
 export type PostCard = {
   id: string
   title: string
   publishedAt: string
+  tags: string[]
 }
 
 export type Post = PostCard & {
@@ -68,6 +70,7 @@ export async function getPostData(id: string): Promise<Post> {
   //   // .use(toc, { heading: '目次', maxDepth: 2 })
   //   .use(html)
   //   .process(matterResult.content)
+  console.log({ ...matterResultData })
 
   return {
     content,

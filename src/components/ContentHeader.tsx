@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
-export default function ContentHeader(props: { publishedAt: string }) {
+export default function ContentHeader() {
   return (
     <>
       <div className="container">
@@ -14,7 +14,6 @@ export default function ContentHeader(props: { publishedAt: string }) {
           <a href={TWITTER_PROFILE_LINK} target="_blank" rel="noreferrer noopener">
             <div className="authorName">きゅうしま</div>
           </a>
-          <div className="createdAt">{props.publishedAt}</div>
         </div>
         <div className="shareButtonsContainer">
           <a href={TWITTER_PROFILE_LINK} target="_blank" rel="noreferrer noopener">

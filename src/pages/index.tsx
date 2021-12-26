@@ -1,5 +1,6 @@
 import { InferGetStaticPropsType, GetStaticProps } from 'next'
 import { getSortedPostsData } from '@/lib/posts'
+import ContentHeader from '@/components/ContentHeader'
 
 import Meta from '@/components/Meta'
 import PostCardComponent from '@/components/PostCardComponent'
@@ -15,6 +16,7 @@ const Index = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
       <Meta />
+      <ContentHeader />
       {posts.map(post => (
         <PostCardComponent key={post.id} post={post} />
       ))}

@@ -1,6 +1,7 @@
 ---
 title: 'Next.js Vercel で Blog をつくった'
 publishedAt: '2020-12-27'
+tags: [TypeScript, Next.js]
 ---
 
 急にブログが書きたくなったのでつくった。
