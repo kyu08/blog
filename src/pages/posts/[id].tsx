@@ -3,7 +3,7 @@ import { getPostData, getAllPostIds, Post } from '@/lib/posts'
 import Meta from '@/components/Meta'
 import Tags from '@/components/Tags'
 import UnderLine from '@/components/UnderLine'
-import ContentHeader from '@/components/ContentHeader'
+import Author from '@/components/Author'
 import PublishedAt from '@/components/PublishedAt'
 
 export const getStaticPaths: GetStaticPaths = async () => {

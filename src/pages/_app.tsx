@@ -2,7 +2,7 @@ import '../../styles/global.css'
 import 'highlight.js/styles/ocean.css'
 
 import { AppProps } from 'next/app'
-import HeaderComponent from '@/components/HeaderComponent'
+import HeaderComponent from '@/components/Header'
 import Footer from '@/components/Footer'
 import * as gtag from '@/lib/gtag'
 import { useRouter } from 'next/router'
