@@ -70,7 +70,6 @@ export async function getPostData(id: string): Promise<Post> {
   //   // .use(toc, { heading: '目次', maxDepth: 2 })
   //   .use(html)
   //   .process(matterResult.content)
-  console.log({ ...matterResultData })
 
   return {
     content,
