@@ -15,6 +15,8 @@ tags: [開発環境, ターミナル, zsh, cli]
 - fzf
 - セッション復旧
 - ちなみにalacritty
+画像はgithub contentとしてuploadしてimgタグでURL指定するのがとりあえず楽そう
+
 ### シェル
 - zshを使っています
 - alias
