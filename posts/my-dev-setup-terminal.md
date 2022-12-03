@@ -19,17 +19,15 @@ tags: [開発環境, ターミナル, zsh, cli]
 筆者は普段開発にNeovimを利用しているのですが、以前からプロジェクトの全文検索に時間がかかってしまう点が気になっていました。
 動作が高速なターミナルを探していたところRust製のターミナルであるAlacrittyにたどり着きました。
 
-iTerm2からの乗り換えでしたが満足できるだけの速度になりました。ターミナルの速度を早くしたい人にはオススメです。あとは設定をyamlで記述できるのも好みなポイントです。
+iTerm2からの乗り換えでしたが満足できるだけの速度になりました。**ターミナルの速度を早くしたい人にはオススメ**です。あとは**設定をyamlで記述できる**のも好みなポイントです。
 
 カラースキームはTokyo Nightを利用しています。
 
-<img src="https://user-images.githubusercontent.com/49891479/205431883-b663d4aa-5bbc-481e-bac4-e292a7a44a7b.png" />
-<img src='https://user-images.githubusercontent.com/49891479/144793092-395b5cfb-fa54-43b7-9ec5-7926ccbbb647.png' />
-
+<img alt="alacritty setup" src="https://user-images.githubusercontent.com/49891479/205432298-5d608837-8ced-4195-83d0-bc61149b7a02.png">
 
 他にもRust製のターミナルとしてWarp, Weztermなどもありますが筆者の環境ではWarpはNeovimのcolorschemeの反映がうまくできず、Weztermは画面の再描画まわりの不具合が多少あったため、不採用となりました。(Warp便利そうだしみやすいので使いたかった)
 
-ちなみにAlacrittyにはタブ機能がないのでtmuxなどのターミナルマルチプレクサを利用する必要があります。軽く調べた感じtmuxがデファクトスタンダードっぽかったので筆者はtmuxを使うことにしました。
+ちなみにAlacrittyにはタブ機能がないのでtmuxなどのターミナルマルチプレクサを利用する必要があるので、tmuxを利用しています。
 設定・プラグインなどは後述しますが、tmuxの操作感も好みなので割と満足しています。
 
 ### ターミナルのウィンドウ・タブ管理
