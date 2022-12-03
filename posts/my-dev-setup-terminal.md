@@ -23,12 +23,12 @@ iTerm2からの乗り換えでしたが満足できるだけの速度になり�
 
 カラースキームはTokyo Nightを利用しています。
 
-<img alt="alacritty setup" src="https://user-images.githubusercontent.com/49891479/205432298-5d608837-8ced-4195-83d0-bc61149b7a02.png">
+<img alt="my alacritty setup" src="https://user-images.githubusercontent.com/49891479/205432298-5d608837-8ced-4195-83d0-bc61149b7a02.png">
 
-他にもRust製のターミナルとしてWarp, Weztermなどもありますが筆者の環境ではWarpはNeovimのcolorschemeの反映がうまくできず、Weztermは画面の再描画まわりの不具合が多少あったため、不採用となりました。(Warp便利そうだしみやすいので使いたかった)
-
-ちなみにAlacrittyにはタブ機能がないのでtmuxなどのターミナルマルチプレクサを利用する必要があるので、tmuxを利用しています。
+Alacrittyにはタブ機能がないのでtmuxなどのターミナルマルチプレクサを利用する必要があるので、tmuxを利用しています。
 設定・プラグインなどは後述しますが、tmuxの操作感も好みなので割と満足しています。
+
+他にもRust製のターミナルとしてWarp, Weztermなどがありますが筆者の環境ではWarpはNeovimのcolorschemeの反映がうまくできず、Weztermは画面の再描画まわりの不具合が多少あったため、不採用となりました。(Warp便利そうだしみやすいので使いたかった)
 
 ### ターミナルのウィンドウ・タブ管理
 前述の通りAlacrittyにはタブ機能がないため、ターミナルのウィンドウ・タブ管理にtmuxを利用しています。
