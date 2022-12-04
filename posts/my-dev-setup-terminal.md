@@ -151,10 +151,11 @@ alias pbc='pbcopy && pbpaste'
 ```zsh
 alias finder='open -a Finder ./'
 ```
-a
+現在いるディレクトをfinderで開くコマンド
 
+ごく稀に使う。
 
-- abbrの紹介
+<!-- - abbrの紹介 あとまわし-->
 
 ### ディレクトリ移動
 - cdr
