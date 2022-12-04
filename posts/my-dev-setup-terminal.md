@@ -133,13 +133,20 @@ alias m='cd ~/code/memo; FILE=~/code/memo/$(date +%Y%m%d).md; if [ ! -e $FILE ];
 ```zsh
 alias ghw='gh repo view -w'
 ```
-`gh`コマンドを利用して現在いるリポジトリをブラウザでGitHubで開いてくれる
+`gh`コマンドを利用して現在いるリポジトリをブラウザでGitHubで開くコマンド
+
+![a](https://user-images.githubusercontent.com/49891479/205504551-a201f727-61fe-4c28-a7dd-f9c7c11e0a49.gif)
 
 ```zsh
 alias pbc='pbcopy && pbpaste'
 ```
-a
-ここで紹介されていたよ
+`make test | pbc`のように出力をパイプで`pbc`に渡すとクリップボードにコピーしつつ標準出力に出力してくれる。
+
+コマンドの出力をコピーしたいけど出力内容もその場で確認したいときに便利。
+
+こちらの記事で紹介されていた。
+
+[https://takuya-1st.hatenablog.jp/entry/2017/05/30/093000](https://takuya-1st.hatenablog.jp/entry/2017/05/30/093000)
 
 ```zsh
 alias finder='open -a Finder ./'
