@@ -93,17 +93,47 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 ### よく使うalias
 zshでは`alias hoge='echo hoge'`のように記述することでaliasを定義することができます。
 
-ここでは筆者がよく使うaliasを紹介します。
-
-```zsh
-alias ghw='gh repo view -w'
-```
-これはほげほげ
+ここでは筆者がよく使うaliasをいくつか紹介します。
 
 ```zsh
 alias m='cd ~/code/memo; FILE=~/code/memo/$(date +%Y%m%d).md; if [ ! -e $FILE ]; then echo "# todo \n\n# done\n" >> $FILE; fi; nvim $FILE'
 ```
-a
+日毎に`yyyymmdd.md`形式の名前のファイルを作成してvimで開く。
+ファイルが存在していなければ
+```md
+# todo
+
+# done
+
+```
+を記入した上でvimで開く、という内容のワンライナーです。
+
+筆者は
+
+```md
+# todo
+- タスクA
+  - 子タスクa
+  - 子タスクb
+- タスクB
+
+# done
+```
+のような感じでタスクを書いていき、完了したら以下のように`done`に移すという素朴な方法でタスク管理をしています。
+```md
+# todo
+- タスクB
+
+# done
+- タスクA
+  - 子タスクa
+  - 子タスクb
+```
+
+```zsh
+alias ghw='gh repo view -w'
+```
+`gh`コマンドを利用して現在いるリポジトリをブラウザでGitHubで開いてくれる
 
 ```zsh
 alias pbc='pbcopy && pbpaste'
