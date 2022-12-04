@@ -91,9 +91,33 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 シェルはzshを使っています。 一時期fishも使っていましたが、環境移行のコストが低かったりPOSIX準拠だったりするメリットに旨味を感じてzshに乗り換えました。
 
 ### よく使うalias
-- alias
-  - memo zsh
-abbrの紹介
+zshでは`alias hoge='echo hoge'`のように記述することでaliasを定義することができます。
+
+ここでは筆者がよく使うaliasを紹介します。
+
+```zsh
+alias ghw='gh repo view -w'
+```
+これはほげほげ
+
+```zsh
+alias m='cd ~/code/memo; FILE=~/code/memo/$(date +%Y%m%d).md; if [ ! -e $FILE ]; then echo "# todo \n\n# done\n" >> $FILE; fi; nvim $FILE'
+```
+a
+
+```zsh
+alias pbc='pbcopy && pbpaste'
+```
+a
+ここで紹介されていたよ
+
+```zsh
+alias finder='open -a Finder ./'
+```
+a
+
+
+- abbrの紹介
 
 ### ディレクトリ移動
 - cdr
