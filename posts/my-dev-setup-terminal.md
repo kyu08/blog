@@ -88,9 +88,12 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 <!-- これ優先順位低いのでもしかしたら書くかもという感じ -->
 
 ## シェル
-- zshを使っています
+シェルはzshを使っています。 一時期fishも使っていましたが、環境移行のコストが低かったりPOSIX準拠だったりするメリットに旨味を感じてzshに乗り換えました。
+
+### よく使うalias
 - alias
   - memo zsh
+abbrの紹介
 
 ### ディレクトリ移動
 - cdr
@@ -99,7 +102,9 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 - c-r
 
 ## git操作
-- lazygit
+git操作のほとんどはgitのTUIクライアントであるLazygitを使っています。
+
+[https://github.com/jesseduffield/lazygit](https://github.com/jesseduffield/lazygit)
 
 ## 別のxxx編
 - neovim
