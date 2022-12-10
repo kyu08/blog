@@ -108,7 +108,7 @@ alias m='cd ~/code/memo; FILE=~/code/memo/$(date +%Y%m%d).md; if [ ! -e $FILE ];
 ```
 を記入した上でvimで開く、という内容のワンライナーです。
 
-筆者は
+ちなみに筆者は
 
 ```md
 # todo
@@ -182,7 +182,7 @@ zshにはcdrという、移動したことがあるディレクトリを自動�
 [https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/](https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/)
 
 以下のスクリプトを`.zshrc`に記述すると、`ctrl + r`でコマンド履歴を呼び出すことができます。
-```shell
+```zsh
 function select-history() {
   BUFFER=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > ")
   CURSOR=$#BUFFER
