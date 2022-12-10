@@ -110,7 +110,7 @@ alias m='MEMODIR=~/code/memo; cd $MEMODIR; FILE=$MEMODIR/$(date +%Y%m%d).md; if 
 # done
 
 ```
-を記入した上でvimで開く、という内容のワンライナーです。
+をファイルに書き込んだうえでvimで開く、という内容のワンライナーです。
 
 実際に呼び出すとこんな感じです。
 
