@@ -194,6 +194,11 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 
 ![sainnhe/tmux-fzfを利用したウィンドウ切り替え](https://user-images.githubusercontent.com/49891479/205475738-0d213f29-c217-4f90-97b9-8ce082b88a9a.gif)
 
+## git操作
+git操作のほとんどはgitのTUIクライアントであるLazygitを使っています。
+
+[https://github.com/jesseduffield/lazygit](https://github.com/jesseduffield/lazygit)
+
 ## おわりに
 ここまで読んでくださってありがとうございました。
 
