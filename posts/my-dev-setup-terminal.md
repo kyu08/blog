@@ -23,6 +23,8 @@ iTerm2からの乗り換えでしたが満足できるだけの速度になり�
 
 カラースキームはTokyo Nightを利用しています。
 
+[https://github.com/zatchheems/tokyo-night-alacritty-theme](https://github.com/zatchheems/tokyo-night-alacritty-theme)
+
 <img src="https://user-images.githubusercontent.com/49891479/205432298-5d608837-8ced-4195-83d0-bc61149b7a02.png">
 
 Alacrittyにはタブ機能がなくタブ的な機能を実現するためにはtmuxなどのターミナルマルチプレクサを利用する必要があるため筆者はtmuxを利用しています。
@@ -197,12 +199,12 @@ bindkey '^r' select-history
 
 ![](https://user-images.githubusercontent.com/49891479/206848128-e8a055ff-9f28-4ada-9769-2a5a75195573.gif)
 
-## git操作
-git操作のほとんどはgitのTUIクライアントであるLazygitを使っています。
+## おわりに
+ここまで読んでくださってありがとうございました。
 
-[https://github.com/jesseduffield/lazygit](https://github.com/jesseduffield/lazygit)
+反響があったら
+- Neovim編
+- alfred編
+- chrome拡張機能編
 
-## 別のxxx編
-- neovim
-- alfred
-- chrome拡張機能
+なども書いてみようと思います。
