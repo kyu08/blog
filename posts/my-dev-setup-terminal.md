@@ -202,4 +202,4 @@ bindkey '^r' select-history
 - alfred編
 - chrome拡張機能編
 
-なども書いてみようと思います。
+なども書こうと思います。
