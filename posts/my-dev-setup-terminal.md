@@ -197,7 +197,7 @@ bindkey '^r' select-history
 ## おわりに
 ここまで読んでくださってありがとうございました。
 
-反響があったら
+需要がありそうだったら
 - Neovim編
 - alfred編
 - chrome拡張機能編
