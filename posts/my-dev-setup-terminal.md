@@ -77,11 +77,11 @@ sainnhe/tmux-fzfはファジーファインダーで効率的にtmuxを操作す
 
 筆者はウィンドウ管理機能の中のウィンドウの切り替え機能を使っています。
 sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
-1. `prefix + t` `prefix + t`  でtmux-fzfのウィンドウ一覧を表示
+1. `prefix` + `prefix`  でtmux-fzfのウィンドウ一覧を表示
 1. 目的のウィンドウ名の一部を入力
 1. 選択する
 
-という手順でできるようになりました。文字にすると違いが伝わりづらいですが、キーのタイプ数や切り替えの際の脳の負荷を大幅に減らすことができました。
+という手順でできるようになりました。文字にすると違いが伝わりづらいですが、ファジーファインダーを使ってウィンドウの選択を行うことができるようになったことでキーのタイプ数や切り替えの際の脳の負荷を大幅に減らすことができました。
 
 ![sainnhe/tmux-fzfを利用したウィンドウ切り替え](https://user-images.githubusercontent.com/49891479/205475738-0d213f29-c217-4f90-97b9-8ce082b88a9a.gif)
 
@@ -99,8 +99,9 @@ zshでは`alias hoge='echo hoge'`のように記述することでaliasを定義
 ここでは筆者がよく使うaliasをいくつか紹介します。
 
 ```zsh
-alias m='cd ~/code/memo; FILE=~/code/memo/$(date +%Y%m%d).md; if [ ! -e $FILE ]; then echo "# todo \n\n# done\n" >> $FILE; fi; nvim $FILE'
+alias m='MEMODIR=~/code/memo; cd $MEMODIR; FILE=$MEMODIR/$(date +%Y%m%d).md; if [ ! -e $FILE ]; then echo "# todo \n\n# done\n" >> $FILE; fi; nvim $FILE'
 ```
+
 日毎に`yyyymmdd.md`形式の名前のファイルを作成してvimで開く。
 ファイルが存在していなければ
 ```md
