@@ -108,6 +108,10 @@ alias m='cd ~/code/memo; FILE=~/code/memo/$(date +%Y%m%d).md; if [ ! -e $FILE ];
 ```
 を記入した上でvimで開く、という内容のワンライナーです。
 
+実際に呼び出すとこんな感じです。
+
+![](https://user-images.githubusercontent.com/49891479/206851138-04c447bd-3015-4f40-b315-0980b5ac715c.gif)
+
 ちなみに筆者は
 
 ```md
