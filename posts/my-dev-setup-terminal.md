@@ -91,6 +91,34 @@ zshにはcdrという、移動したことがあるディレクトリを自動�
 
 [https://www.rasukarusan.com/entry/2018/08/14/083000](https://www.rasukarusan.com/entry/2018/08/14/083000)
 
+fzfをインストールした上で以下のスクリプトを`.zshrc`に記述すると`c`で呼び出すことができます。
+
+```zsh
+# fzf-cdr 
+alias c='fzf-cdr'
+function fzf-cdr() {
+    target_dir=`cdr -l | sed 's/^[^ ][^ ]*  *//' | fzf`
+    target_dir=`echo ${target_dir/\~/$HOME}`
+    if [ -n "$target_dir" ]; then
+        cd $target_dir
+    fi
+}
+
+# cdrの設定
+autoload -Uz is-at-least
+if is-at-least 4.3.11
+then
+  autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+  add-zsh-hook chpwd chpwd_recent_dirs
+  zstyle ':chpwd:*'      recent-dirs-max 500
+  zstyle ':chpwd:*'      recent-dirs-default yes
+  zstyle ':completion:*' recent-dirs-insert both
+fi
+
+# fzfの設定
+export FZF_DEFAULT_OPTS='--color=fg+:11 --height 70% --reverse --exit-0 --multi'
+```
+
 これを実際に使うとこんな感じになります。ファジーファインダーを利用して効率的にディレクトリ移動することができます。
 
 ![cdr](https://user-images.githubusercontent.com/49891479/206887169-86c4da4d-836a-4b94-862d-fd56e82bedb8.gif)
