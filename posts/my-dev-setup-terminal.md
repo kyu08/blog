@@ -163,7 +163,7 @@ Lazygitはターミナル上で動作するリッチなGitクライアントでG
 
 ちなみに筆者はkdheepak/lazygit.nvimというプラグインを使ってNeovim上からLazygitを呼び出しています。
 
-[kdheepak/lazygit.nvim](https://github.com/kdheepak/lazygit.nvim)
+[https://github.com/kdheepak/lazygit.nvim](https://github.com/kdheepak/lazygit.nvim)
 
 ## ターミナルエミュレータ
 筆者はターミナルエミュレータ(以下ターミナル)としてAlacrittyを使っています。
