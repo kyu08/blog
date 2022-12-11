@@ -35,7 +35,7 @@ alias m='MEMODIR=~/code/memo; cd $MEMODIR; FILE=$MEMODIR/$(date +%Y%m%d).md; if 
 
 実際に呼び出すとこんな感じです。
 
-![memo](https://user-images.githubusercontent.com/49891479/206887173-5475f6a2-fd6a-4f3e-8ca4-cec995ce817c.gif)
+![memo](https://user-images.githubusercontent.com/49891479/206888026-29738901-cbc1-47c2-9978-c736d6361c6c.gif)
 
 ちなみに筆者は
 
