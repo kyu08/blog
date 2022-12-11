@@ -148,12 +148,22 @@ bindkey '^r' select-history
 
 ![command-history](https://user-images.githubusercontent.com/49891479/206887171-3d32d4b0-5a4f-4527-ab8e-64ee194264ce.gif)
 
-## git操作
-git操作のほとんどはgitのTUIクライアントであるLazygitを使っています。
+## Git操作
+Git操作のほとんどはGitのTUIクライアントであるLazygitを使っています。
 
 [https://github.com/jesseduffield/lazygit](https://github.com/jesseduffield/lazygit)
 
-筆者は普段の開発をNeovimで行っているためターミナル上で動作する
+Lazygitはターミナル上で動作するリッチなGitクライアントでGitに関する大抵のことを行うことができます。(機能が豊富すぎて何ができて何ができないのかを正確に把握できていない)
+
+以下はLazygitを使って変更をaddしてcommitしてpushする例です。
+
+![lazygit-push](https://user-images.githubusercontent.com/49891479/206887714-c6593fa1-13bc-48fe-9380-d571050c9c9c.gif)
+
+見やすいですし、**少ないタイプ数で操作できる**点でおすすめです。他にも基本的なブランチ操作はもちろんのこと、`git rebase -i`相当のこともスピーディーにできるのでよく使っています。
+
+ちなみに筆者はkdheepak/lazygit.nvimというプラグインを使ってNeovim上からLazygitを呼び出しています。
+
+[kdheepak/lazygit.nvim](https://github.com/kdheepak/lazygit.nvim)
 
 ## ターミナルエミュレータ
 筆者はターミナルエミュレータ(以下ターミナル)としてAlacrittyを使っています。
