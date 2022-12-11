@@ -35,7 +35,7 @@ alias m='MEMODIR=~/code/memo; cd $MEMODIR; FILE=$MEMODIR/$(date +%Y%m%d).md; if 
 
 実際に呼び出すとこんな感じです。
 
-![](https://user-images.githubusercontent.com/49891479/206851138-04c447bd-3015-4f40-b315-0980b5ac715c.gif)
+![memo](https://user-images.githubusercontent.com/49891479/206887173-5475f6a2-fd6a-4f3e-8ca4-cec995ce817c.gif)
 
 ちなみに筆者は
 
@@ -64,7 +64,7 @@ alias ghw='gh repo view -w'
 ```
 `gh`コマンドを利用して現在いるリポジトリをブラウザでGitHubで開くコマンド
 
-![a](https://user-images.githubusercontent.com/49891479/205504551-a201f727-61fe-4c28-a7dd-f9c7c11e0a49.gif)
+![ghw](https://user-images.githubusercontent.com/49891479/206887172-bd8e7170-690e-4b03-b675-01a357912bdd.gif)
 
 ```zsh
 alias pbc='pbcopy && pbpaste'
@@ -93,7 +93,7 @@ zshにはcdrという、移動したことがあるディレクトリを自動�
 
 これを実際に使うとこんな感じになります。ファジーファインダーを利用して効率的にディレクトリ移動することができます。
 
-![](https://user-images.githubusercontent.com/49891479/205506213-aa3a4752-ad70-4f7d-812f-2ce719cecd30.gif)
+![cdr](https://user-images.githubusercontent.com/49891479/206887169-86c4da4d-836a-4b94-862d-fd56e82bedb8.gif)
 
 やっていることは以下です。
 
@@ -118,7 +118,14 @@ zle -N select-history
 bindkey '^r' select-history
 ```
 
-![](https://user-images.githubusercontent.com/49891479/206848128-e8a055ff-9f28-4ada-9769-2a5a75195573.gif)
+![command-history](https://user-images.githubusercontent.com/49891479/206887171-3d32d4b0-5a4f-4527-ab8e-64ee194264ce.gif)
+
+## git操作
+git操作のほとんどはgitのTUIクライアントであるLazygitを使っています。
+
+[https://github.com/jesseduffield/lazygit](https://github.com/jesseduffield/lazygit)
+
+筆者は普段の開発をNeovimで行っているためターミナル上で動作する
 
 ## ターミナルエミュレータ
 筆者はターミナルエミュレータ(以下ターミナル)としてAlacrittyを使っています。
@@ -168,7 +175,7 @@ Alacrittyにはタブ機能がなくタブ的な機能を実現するために�
 
 という手順で行っていましたがウィンドウが増えてくると地味にウィンドウ移動が大変になっていきました。以下は従来のウィンドウ切り替えの様子です。
 
-![従来のウィンドウ切り替え](https://user-images.githubusercontent.com/49891479/205475645-a6aa205d-2733-4764-9387-4988364b86ed.gif)
+![tmux-window](https://user-images.githubusercontent.com/49891479/206887175-34db5b7f-b01a-4b72-af9e-59d8cc1aa922.gif)
 
 どうにかもう少し楽にウィンドウ切り替えをできないかと探していたところsainnhe/tmux-fzfに出会いました。
 
@@ -192,12 +199,7 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 
 という手順でできるようになりました。文字にすると違いが伝わりづらいですが、ファジーファインダーを使ってウィンドウの選択を行うことができるようになったことでキーのタイプ数や切り替えの際の脳の負荷を大幅に減らすことができました。
 
-![sainnhe/tmux-fzfを利用したウィンドウ切り替え](https://user-images.githubusercontent.com/49891479/205475738-0d213f29-c217-4f90-97b9-8ce082b88a9a.gif)
-
-## git操作
-git操作のほとんどはgitのTUIクライアントであるLazygitを使っています。
-
-[https://github.com/jesseduffield/lazygit](https://github.com/jesseduffield/lazygit)
+![tmux-fzf](https://user-images.githubusercontent.com/49891479/206887174-ca35deba-1f78-4a07-9e58-7e87b7b1adad.gif)
 
 ## おわりに
 ここまで読んでくださってありがとうございました。
