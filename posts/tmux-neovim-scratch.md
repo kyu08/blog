@@ -11,9 +11,13 @@ tags: ['開発環境', 'ターミナル', 'zsh', 'cli', 'Neovim', 'Tmux']
 ## 動作イメージ
 こんな感じでvanillaのGoプロジェクトをTmuxのwindowに開いておいて、確認したくなったときにすぐwindowを切り替えてコードを書いて実行結果を確認できるようにしている。
 
+gif、	どんなコード例がよさそうか考える
+
+
 Gifでやっていることは以下
 
-1. GoのSandbox環境のwindowに切り替え(tmux-fzfを使って素早くwindowを切り替えられるようにしている)
+1. tmux-fzfでGoのSandbox環境を開いたNeovimが起動しているwindowに切り替え
+1. Neovim上でターミナルを表示
 1. `make clear`を実行して`main.go`の内容を`main`関数のみに
 1. コードを書く
 1. Neovim上でターミナルを表示
