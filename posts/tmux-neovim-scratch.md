@@ -11,15 +11,17 @@ tags: ['開発環境', 'ターミナル', 'zsh', 'cli', 'Neovim', 'Tmux']
 ## 動作イメージ
 こんな感じでvanillaのGoプロジェクトをTmuxのwindowに開いておいて、確認したくなったときにすぐwindowを切り替えてコードを書いて実行結果を確認できるようにしている。
 
-Gifで具体的にやっていることは以下
+Gifでやっていることは以下
 
-1. hoge
-1. hoge
-1. hoge
-1. hoge
-1. hoge
+1. GoのSandbox環境のwindowに切り替え(tmux-fzfを使って素早くwindowを切り替えられるようにしている)
+1. `make clear`を実行して`main.go`の内容を`main`関数のみに
+1. コードを書く
+1. Neovim上でターミナルを表示
+1. `make run`を実行してコード実行
+1. 結果を確認
+1. 元いたwindowに戻る
 
-tmux-fzfなどについては以下の記事を参照
+tmux-fzfなど筆者のターミナル環境については以下参照
 
 [開発の効率化のためにやっていること ターミナル編](https://blog.kyu08.com/posts/my-dev-setup-terminal)
 
@@ -28,8 +30,29 @@ tmux-fzfなどについては以下の記事を参照
 ## プロジェクトの内容
 Go固有の内容もあるので参考程度で。
 
+```bash
+├── .git
+├── .gitignore
+├── go.mod
+├── go.sum
+├── main.go
+├── main.go.sample
+├── main_test.go
+└── Makefile
+```
+
 - main.goとmain_test.go
 - Makefileの中身
+
+```Makefile
+.PHONY: run clear
+
+run:
+  @go run .
+
+clear:
+  @cp ./main.go.sample ./main.go
+```
 - あとはメモっておきたいコードスニペットは別名のファイルとして保存したり、commitしておくと後からでもみれてよさそう
 
 ## メリット
