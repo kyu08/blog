@@ -9,16 +9,13 @@ tags: ['開発環境', 'ターミナル', 'zsh', 'cli', 'Neovim', 'Tmux']
 全然大したことをやっているわけではないですがTmux, Neovimやそれらのプラグインの普及活動になれば嬉しいので書いてみます。
 
 ## 動作イメージ
-こんな感じでvanillaのGoプロジェクトをTmuxのwindowに開いておいて、確認したくなったときにすぐwindowを切り替えてコードを書いて実行結果を確認できるようにしている。
+こんな感じでvanillaのGoプロジェクトをTmuxのwindowに開いておいて、確認したくなったときにすぐwindowを切り替えてコードを書いて実行結果を確認できるようにしている。(Gifの例はGoの書式指定子`%+v`の動作を忘れて試してみているところ)
 
-gif、	どんなコード例がよさそうか考える
-
+![go-playground](https://user-images.githubusercontent.com/49891479/216776240-de8145cd-7d07-4351-9aad-587bb7711ec2.gif)
 
 Gifでやっていることは以下
 
-1. tmux-fzfでGoのSandbox環境を開いたNeovimが起動しているwindowに切り替え
-1. Neovim上でターミナルを表示
-1. `make clear`を実行して`main.go`の内容を`main`関数のみに
+1. GoのSandbox環境を開いたNeovimが起動しているwindowに切り替え
 1. コードを書く
 1. Neovim上でターミナルを表示
 1. `make run`を実行してコード実行
