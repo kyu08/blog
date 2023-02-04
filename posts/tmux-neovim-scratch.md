@@ -76,4 +76,45 @@ func main() {
 
 あとやるとしたらThe Go PlaygroundにあるURL発行機能とかを実現できると他の人への共有も楽になっていいのかもしれない。(今のところあんまり他の人に共有する機会がないので困っていない)
 
-以上です。
+## 補足
+最後に補足としてGif内で使っているNeovimのプラグインを紹介します。
+
+### ターミナル表示
+[voldikss/vim-floaterm](https://github.com/voldikss/vim-floaterm)
+
+![floaterm](https://user-images.githubusercontent.com/49891479/216777279-6e1b08b1-4e3d-47a1-b995-d388aa85d5c4.gif)
+
+GoのSandbox環境の`main.go`に書いたスクリプトを実行するために、Neovimからターミナルを表示するシーンで使っている。
+
+コード編集してサクっと動作確認したいときなどに便利。(といいつつ最近動作の重さが目立ってきたので`<C-z>`でNeovimの起動元に戻ってターミナルを操作することが多い)
+
+### カーソル移動
+[yuki-yano/fuzzy-motion.vim](https://github.com/yuki-yano/fuzzy-motion.vim)
+
+`fmt.Printf("u: %v\n", u)`の`u`から`%v`の位置にカーソル移動する際に使っているプラグイン。
+
+動作のイメージはこんな感じ。
+
+![fuzzy-motion](https://user-images.githubusercontent.com/49891479/216777071-2300fe76-cd19-4736-b18c-794c640ed623.gif)
+
+筆者はノーマルモードで`f`キーを押下するとプラグインが起動するように設定している。
+
+起動すると文字がグレーアウトするのでジャンプしたい文字列を入力するとその文字にジャンプするためのキーワードを表示してくれるというプラグイン。
+
+同様の機能をもつプラグインとしてはeasy-motionなどのプラグインが有名だが、fuzzy-motionはジャンプしたい文字列をfuzzy-finder形式で絞り込んでくれるのが大きな特徴。
+
+カーソル移動の効率がよすぎて正直もうこれなしでは開発したくない。
+
+
+### LSP Server
+[neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)
+
+Language ServerをホストするためのNeovimプラグイン。
+
+すごく簡単にいうと補完や関数定義を表示したり定義ジャンプできるようにしたりしてくれる。
+
+![coc.nvim](https://user-images.githubusercontent.com/49891479/216777324-5aef2140-e0ef-4e9f-894d-53b1343acb11.gif)
+
+
+以上です。ここまで読んでくれてありがとうございました。
+
