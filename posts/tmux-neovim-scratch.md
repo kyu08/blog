@@ -1,6 +1,6 @@
 ---
 title: 'Tmux+NeovimでJetBrains IDEのScratchみたいな機能を実現している話'
-publishedAt: '2023-02-04'
+publishedAt: '2023-02-05'
 tags: ['開発環境', 'ターミナル', 'zsh', 'cli', 'Neovim', 'Tmux']
 ---
 
@@ -97,11 +97,11 @@ GoのSandbox環境の`main.go`に書いたスクリプトを実行するため�
 
 ![fuzzy-motion](https://user-images.githubusercontent.com/49891479/216777071-2300fe76-cd19-4736-b18c-794c640ed623.gif)
 
-筆者はノーマルモードで`f`キーを押下するとプラグインが起動するように設定している。
-
 起動すると文字がグレーアウトするのでジャンプしたい文字列を入力するとその文字にジャンプするためのキーワードを表示してくれるというプラグイン。
 
-同様の機能をもつプラグインとしてはeasy-motionなどのプラグインが有名だが、fuzzy-motionはジャンプしたい文字列をfuzzy-finder形式で絞り込んでくれるのが大きな特徴。
+同様の機能をもつプラグインとしてはeasy-motionなどのプラグインが有名だが、fuzzy-motionはジャンプしたい文字列をfuzzy-finder形式で絞り込んでくれるのが大きな特徴。(詳しくはリポジトリのREADME参照)
+
+筆者はノーマルモードで`f`キーを押下するとプラグインが起動するように設定している。
 
 カーソル移動の効率がよすぎて正直もうこれなしでは開発したくない。
 
@@ -109,7 +109,7 @@ GoのSandbox環境の`main.go`に書いたスクリプトを実行するため�
 ### LSP Server
 [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)
 
-Language ServerをホストするためのNeovimプラグイン。
+Language Serverをホストするためのプラグイン。
 
 すごく簡単にいうと補完や関数定義を表示したり定義ジャンプできるようにしたりしてくれる。
 
