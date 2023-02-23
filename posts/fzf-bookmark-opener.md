@@ -4,7 +4,7 @@ publishedAt: '2023-02-23'
 tags: ['go', 'cli']
 ---
 
-# つくったもの
+## つくったもの
 yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くくんを作った。
 
 [https://github.com/kyu08/fzf-bookmark-opener](https://github.com/kyu08/fzf-bookmark-opener)
@@ -13,7 +13,7 @@ yamlに定義しておいたbookmarkをfzfで選択してブラウザで開く�
 
 ![demo](https://user-images.githubusercontent.com/49891479/218272272-e693c10d-c810-458a-bf46-9c3a4a2fe45a.gif)
 
-# コードの話
+## コードの話
 コード自体は大変シンプルで
 
 1. 設定ファイルがなければ`~/.config/fzf-bookmark-opener/config.yaml`に作成
@@ -29,7 +29,7 @@ yamlに定義しておいたbookmarkをfzfで選択してブラウザで開く�
 
 [ktr0731/go-fuzzyfinder](https://github.com/ktr0731/go-fuzzyfinder)
 
-# ちゃっかりbrewでも公開してみた
+## ちゃっかりbrewでも公開してみた
 brewでインストールできるに越したことはないだろうってことで、brewでも公開してみたが思いのほか簡単だった。
 
 ```shell
@@ -45,7 +45,7 @@ brew公開に関してはこちらのブログを参考にしたら30分弱で�
 
 詳細は↑の記事を読んでいただければわかるが、リリースにバイナリを含めて配布用のrepositoryを作るだけなので本当に簡単だったのでツールを配布したい人はぜひ。
 
-# ちゃっかりヘルパースクリプトも公開した
+## ちゃっかりヘルパースクリプトも公開した
 現在お仕事ではGCPを使っているんですが、GCPのコンソールをプロジェクト、サービスを指定して直接開きたいことが多いのでプロジェクトのリストを渡すとGCPの主要なサービス(主観)のURL一覧をfzf-bookmark-openerの設定ファイルの形式で吐いてくれるスクリプトも公開した。
     
 [kyu08/gcp-url-generator](https://github.com/kyu08/gcp-url-generator)
@@ -98,12 +98,12 @@ project名のリストとregionを渡すとこういう文字列を吐いてく�
 これで生成したURLをfzf-bookmark-openerに食わせるとお使いのGCPプロジェクトの特定のサービスがコマンドラインからサクッと開くことができる。(詳しくは[kyu08/gcp-url-generatorのREADME](https://github.com/kyu08/gcp-url-generator)を参照)
 こちらもissueやPRお待ちしてます。
 
-# 余談1
+## 余談1
 Rustだとlotabout/skimを使うとktr0731/go-fuzzyfinderと同じようなことができるらしい。最近Rust熱が高まりに高まっている(Tour of Rustやり中)ので次に何かCLIでfzfなツールをつくるときは使ってみようと思う。
 
 [lotabout/skim](https://github.com/lotabout/skim)
 
-# 余談2
+## 余談2
 ふと気になってktr0731/go-fuzzyfinderをはじめとする依存ライブラリのライセンス表示はどうすればいいか気になって調べてみたところリポジトリに`NOTICES`とか`CREDITS`とか`ThirdPartyNotices`みたいなファイルを置いてそこに依存ライブラリの著作権・ライセンス表示をするのが一般的なようだった。
 
 手作業でやるのは辛いので自動生成ツールを探したところGoだとこれが使いやすそうだったので使ってみたけど簡単でとてもよかった。ありがたや...。
@@ -111,5 +111,5 @@ Rustだとlotabout/skimを使うとktr0731/go-fuzzyfinderと同じようなこ�
 [https://github.com/Songmu/gocredits](https://github.com/Songmu/gocredits)
 
 
-# まとめ
+## まとめ
 ktr0731/go-fuzzyfinderはいいぞ〜
