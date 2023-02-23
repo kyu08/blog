@@ -98,10 +98,18 @@ project名のリストとregionを渡すとこういう文字列を吐いてく�
 これで生成したURLをfzf-bookmark-openerに食わせるとお使いのGCPプロジェクトの特定のサービスがコマンドラインからサクッと開くことができる。(詳しくは[kyu08/gcp-url-generatorのREADME](https://github.com/kyu08/gcp-url-generator)を参照)
 こちらもissueやPRお待ちしてます。
 
-# 余談
+# 余談1
 Rustだとlotabout/skimを使うとktr0731/go-fuzzyfinderと同じようなことができるらしい。最近Rust熱が高まりに高まっている(Tour of Rustやり中)ので次に何かCLIでfzfなツールをつくるときは使ってみようと思う。
 
 [lotabout/skim](https://github.com/lotabout/skim)
+
+# 余談2
+ふと気になってktr0731/go-fuzzyfinderをはじめとする依存ライブラリのライセンス表示はどうすればいいか気になって調べてみたところリポジトリに`NOTICES`とか`CREDITS`とか`ThirdPartyNotices`みたいなファイルを置いてそこに依存ライブラリの著作権・ライセンス表示をするのが一般的なようだった。
+
+手作業でやるのは辛いので自動生成ツールを探したところGoだとこれが使いやすそうだったので使ってみたけど簡単でとてもよかった。ありがたや...。
+
+[https://github.com/Songmu/gocredits](https://github.com/Songmu/gocredits)
+
 
 # まとめ
 ktr0731/go-fuzzyfinderはいいぞ〜
