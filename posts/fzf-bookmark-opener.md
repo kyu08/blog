@@ -103,6 +103,11 @@ Rustだとlotabout/skimを使うとktr0731/go-fuzzyfinderと同じようなこ�
 
 [lotabout/skim](https://github.com/lotabout/skim)
 
+[追記]
+Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった。
+
+[kyu08/fzf-make](https://github.com/kyu08/fzf-make)
+
 ## 余談2
 ふと気になってktr0731/go-fuzzyfinderをはじめとする依存ライブラリのライセンス表示はどうすればいいか気になって調べてみたところリポジトリに`NOTICES`とか`CREDITS`とか`ThirdPartyNotices`みたいなファイルを置いてそこに依存ライブラリの著作権・ライセンス表示をするのが一般的なようだった。
 
