@@ -55,7 +55,7 @@ let preview_command = r"line=$(bat Makefile | grep -nE '^{}\s*:' | sed -e 's/:.*
 ## 動機
 - Rustが書きたかった。(以上)
 
-最近Rustのやっていきが高まっており、簡単な入門書を1周したので何か作ってみるぞーという機運とMakefileのターゲットをfuzzy-finderで絞り込めたら便利そうだなーという気持ちが重なったのでRustでfzf-makeを作ってみた。 (あとはskimの存在を知っていたのも大きい。)
+最近Rustのやっていきが高まっており、[The Rust Programming Language](https://doc.rust-jp.rs/book-ja/) を1周したので何か作ってみるぞーという機運とMakefileのターゲットをfuzzy-finderで絞り込めたら便利そうだなーという気持ちが重なったのでRustでfzf-makeを作ってみた。 (あとはskimの存在を知っていたのも大きい。)
 
 自分が欲しいCLIツールを手に入れつつRustの経験が積めたのでよかった。
 
