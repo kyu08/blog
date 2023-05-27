@@ -1,12 +1,11 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import remark from 'remark'
-import html from 'remark-html'
-import slug from 'remark-slug'
-import toc from 'remark-toc'
-// @ts-ignore
-import highlight from 'remark-highlight.js'
+// import { createElement, Fragment, JSXElementConstructor, ReactElement } from 'react'
+// import rehypeReact from 'rehype-react'
+// import remarkParse from 'remark-parse'
+// import remarkRehype from 'remark-rehype'
+// import unified from 'unified'
 import { postsDirectory } from '@/lib/config'
 
 type MatterResult = {
@@ -24,7 +23,7 @@ export type PostCard = {
 }
 
 export type Post = PostCard & {
-  content: string
+  content: string,
 }
 
 const POSTS_DIRECTORY = path.join(process.cwd(), postsDirectory)
@@ -63,16 +62,16 @@ export async function getPostData(id: string): Promise<Post> {
   const fileContent = fs.readFileSync(fullPath, 'utf8')
   const matterResult = matter(fileContent)
   const matterResultData = matterResult.data as MatterResult
-  const processedContent = await remark().use(highlight).use(html).process(matterResult.content)
-  const content = processedContent.toString()
-  // const tocResult = await remark()
-  //   .use(slug)
-  //   // .use(toc, { heading: '目次', maxDepth: 2 })
-  //   .use(html)
-  //   .process(matterResult.content)
+  // const result = (await (
+  //   await unified()
+  //     .use(remarkParse)
+  //     .use(remarkRehype)
+  //     .use(rehypeReact, { createElement, Fragment })
+  //     .process(fileContent)
+  // ).result) as ReactElement<unknown, string | JSXElementConstructor<any>>
 
   return {
-    content,
+    content: fileContent,
     ...matterResultData,
   }
 }

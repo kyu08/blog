@@ -8,7 +8,7 @@ import PostCardComponent from '@/components/PostCard'
 export const getStaticProps: GetStaticProps<{
   posts: ReturnType<typeof getSortedPostsData>
 }> = async () => {
-  const posts = await getSortedPostsData()
+  const posts = getSortedPostsData()
   return { props: { posts } }
 }
 

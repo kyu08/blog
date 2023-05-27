@@ -1,13 +1,16 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { getPostData, getAllPostIds, Post } from '@/lib/posts'
-import Meta from '@/components/Meta'
 import Tags from '@/components/Tags'
 import UnderLine from '@/components/UnderLine'
-import Author from '@/components/Author'
 import PublishedAt from '@/components/PublishedAt'
+import { useEffect, useState, createElement, Fragment, JSXElementConstructor, ReactElement } from 'react'
+import rehypeReact from 'rehype-react'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import unified from 'unified'
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const ids = await getAllPostIds()
+  const ids = getAllPostIds()
   return {
     paths: ids.map(id => ({ params: { id } })),
     fallback: false,
@@ -19,24 +22,47 @@ export const getStaticProps: GetStaticProps<Post, { id: string }> = async ({ par
   return { props: post }
 }
 
+async function markdownToReact(markdown: string) {
+  const result = (await unified()
+    .use(remarkParse)
+    .use(remarkRehype)
+    .use(rehypeReact, {
+      createElement,
+      Fragment,
+      // components: {
+      //   img: PostImage(slug)
+      // }
+    })
+    .process(markdown)).result as ReactElement<unknown, string | JSXElementConstructor<any>>
+  return result
+}
+
 const PostPage = ({
   title,
   content,
   publishedAt,
   tags,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const [component, setComponent] = useState(<Fragment />)
+  useEffect(() => {
+    ; (async () => {
+      const contentComponent: ReactElement<unknown, string | JSXElementConstructor<any>> = await markdownToReact(content)
+      setComponent(contentComponent)
+    })()
+    return () => { }
+  }, [content])
+
   return (
     <>
-      <Meta title={title} description={content} />
+      {/*<Meta title={title} description={content} />*/}
       <article className="article-content">
         <UnderLine>
           <h1 className="postTitle">{title}</h1>
           <PublishedAt publishedAt_={publishedAt} />
           <Tags tags_={tags} />
         </UnderLine>
-        <UnderLine>
-          <div dangerouslySetInnerHTML={{ __html: content }} />
-        </UnderLine>
+        {component}
+        {/*<UnderLine>{content}</UnderLine>*/}
       </article>
       <style jsx>{`
         .postTitle {
