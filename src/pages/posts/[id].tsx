@@ -8,6 +8,7 @@ import rehypeReact from 'rehype-react'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import unified from 'unified'
+import PostImage from '@/components/PostImage'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const ids = getAllPostIds()
@@ -22,31 +23,33 @@ export const getStaticProps: GetStaticProps<Post, { id: string }> = async ({ par
   return { props: post }
 }
 
-async function markdownToReact(markdown: string) {
+async function markdownToReact(markdown: string, id: string) {
   const result = (await unified()
     .use(remarkParse)
     .use(remarkRehype)
     .use(rehypeReact, {
       createElement,
       Fragment,
-      // components: {
-      //   img: PostImage(slug)
-      // }
+      components: {
+        img: PostImage(id)
+      }
     })
     .process(markdown)).result as ReactElement<unknown, string | JSXElementConstructor<any>>
   return result
 }
 
 const PostPage = ({
+  id,
   title,
   content,
   publishedAt,
   tags,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  console.log({ id })
   const [component, setComponent] = useState(<Fragment />)
   useEffect(() => {
     ; (async () => {
-      const contentComponent: ReactElement<unknown, string | JSXElementConstructor<any>> = await markdownToReact(content)
+      const contentComponent: ReactElement<unknown, string | JSXElementConstructor<any>> = await markdownToReact(content, id)
       setComponent(contentComponent)
     })()
     return () => { }

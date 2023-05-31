@@ -6,9 +6,7 @@ export default function HeaderComponent() {
     <>
       <header>
         <Link href="/">
-          <a>
-            <h1 className="heading">{BLOG_TITLE}</h1>
-          </a>
+          <h1 className="heading">{BLOG_TITLE}</h1>
         </Link>
       </header>
       <style jsx>{`

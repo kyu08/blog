@@ -10,30 +10,36 @@
   "engines": {
     "node": "16.X"
   },
+  "browser": {
+    "fs": false
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
+    "file-loader": "^6.2.0",
     "gray-matter": "^4.0.2",
     "highlight.js": "^10.5.0",
-    "next": "latest",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "rehype-react": "6.2.1",
+    "next": "10.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rehype-react": "^7.2.0",
     "remark": "^13.0.0",
     "remark-highlight.js": "^6.0.0",
     "remark-html": "^13.0.1",
-    "remark-parse": "9.0.0",
-    "remark-rehype": "8.1.0",
+    "remark-parse": "^10.0.2",
+    "remark-rehype": "^10.1.0",
     "remark-slug": "^7.0.1",
     "remark-toc": "^8.0.1",
-    "unified": "9.2.2"
+    "sharp": "^0.32.1",
+    "unified": "9.2.2",
+    "url-loader": "^4.1.1"
   },
   "devDependencies": {
-    "@types/node": "^14.14.16",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
+    "@types/node": "^20.2.5",
+    "@types/react": "^18.2.7",
+    "@types/react-dom": "^18.2.4",
     "@typescript-eslint/eslint-plugin": "^4.11.0",
     "@typescript-eslint/parser": "^4.11.0",
     "eslint": "^7.16.0",
@@ -43,6 +49,6 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.2.1",
     "textlint-rule-preset-ja-technical-writing": "^7.0.0",
-    "typescript": "^4.7.0"
+    "typescript": "^5.0.4"
   }
 }

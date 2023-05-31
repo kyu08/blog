@@ -9,7 +9,7 @@ export const FAVICON = 'https://s3-ap-northeast-1.amazonaws.com/blog.kyu08.com/f
 export const TWITTER_PROFILE_LINK = 'https://twitter.com/kyu08_'
 export const GITHUB_PROFILE_LINK = 'https://github.com/kyu08/'
 
-type postsDirectoryType = 'postsForDev' | 'posts'
+type postsDirectoryType = 'postsForDev' | 'posts' | 'temp_posts'
 
 // todo MODE を切り替えればすべて切り替わるようにしたい
 // type modeType = 'dev' | 'prod'
@@ -19,4 +19,6 @@ type postsDirectoryType = 'postsForDev' | 'posts'
 //   ['prod', 'posts'],
 // ])
 
-export const postsDirectory: postsDirectoryType = 'posts'
+// FIXME: 動作確認用に一時的に書き換えている。あとで戻す
+// export const postsDirectory: postsDirectoryType = 'posts'
+export const postsDirectory: postsDirectoryType = 'temp_posts'

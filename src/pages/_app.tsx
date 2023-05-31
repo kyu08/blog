@@ -25,9 +25,9 @@ export default function App({ Component, pageProps }: AppProps) {
       <HeaderComponent />
       <Component {...pageProps} />
       <Footer />
-      <style>
+      {/*<style>
         @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
-      </style>
+      </style>*/}
     </>
   )
 }

@@ -11,13 +11,11 @@ export default function PostCardComponent(props: { post: PostCard }) {
     <>
       <article>
         <Link href="/posts/[id]" as={`/posts/${props.post.id}`}>
-          <a>
-            <UnderLine>
-              <h1 className="postTitle">{props.post.title}</h1>
-              <PublishedAt publishedAt_={publishedAt} />
-              <Tags tags_={tags} />
-            </UnderLine>
-          </a>
+          <UnderLine>
+            <h1 className="postTitle">{props.post.title}</h1>
+            <PublishedAt publishedAt_={publishedAt} />
+            <Tags tags_={tags} />
+          </UnderLine>
         </Link>
       </article>
 

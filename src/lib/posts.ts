@@ -1,11 +1,6 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-// import { createElement, Fragment, JSXElementConstructor, ReactElement } from 'react'
-// import rehypeReact from 'rehype-react'
-// import remarkParse from 'remark-parse'
-// import remarkRehype from 'remark-rehype'
-// import unified from 'unified'
 import { postsDirectory } from '@/lib/config'
 
 type MatterResult = {
@@ -29,24 +24,31 @@ export type Post = PostCard & {
 const POSTS_DIRECTORY = path.join(process.cwd(), postsDirectory)
 
 export function getAllPostIds() {
-  const fileNames = fs.readdirSync(POSTS_DIRECTORY)
-  return fileNames.map(fileName => {
-    return fileName.replace(/\.md$/, '')
-  })
+  return fs.readdirSync(POSTS_DIRECTORY)
+  // const fileNames = fs.readdirSync(POSTS_DIRECTORY)
+  // return fileNames.map(fileName => {
+  //   return fileName.replace(/\.md$/, '')
+  // })
 }
+
+const POST_FILE_NAME = 'index.md'
 
 // ここで id をファイル名にする
 export function getSortedPostsData(): PostCard[] {
-  const fileNames = fs.readdirSync(POSTS_DIRECTORY)
-  const postsData = fileNames.map(fileName => {
-    const fullPath = path.join(POSTS_DIRECTORY, fileName)
-    const fileContent = fs.readFileSync(fullPath, 'utf8')
-    const matterResult = matter(fileContent)
-    return {
-      ...(matterResult.data as MatterResult),
-      id: fileName.replace(/\.md$/, ''),
+  const postDirNames = fs.readdirSync(POSTS_DIRECTORY)
+  const postsData = postDirNames.map(postDirName => {
+    const fullPath = path.join(POSTS_DIRECTORY, postDirName, POST_FILE_NAME)
+    try {
+      const fileContent = fs.readFileSync(fullPath, 'utf8')
+      const matterResult = matter(fileContent)
+      return {
+        ...(matterResult.data as MatterResult),
+        id: postDirName
+      }
+    } catch (err) {
+      return undefined
     }
-  })
+  }).filter(elem => elem !== undefined) as PostCard[]
   return postsData.sort((a, b) => {
     if (a.publishedAt < b.publishedAt) {
       return 1
@@ -58,17 +60,10 @@ export function getSortedPostsData(): PostCard[] {
 
 // idからpostを取得する
 export async function getPostData(id: string): Promise<Post> {
-  const fullPath = path.join(POSTS_DIRECTORY, `${id}.md`)
+  const fullPath = path.join(POSTS_DIRECTORY, id, POST_FILE_NAME)
   const fileContent = fs.readFileSync(fullPath, 'utf8')
   const matterResult = matter(fileContent)
   const matterResultData = matterResult.data as MatterResult
-  // const result = (await (
-  //   await unified()
-  //     .use(remarkParse)
-  //     .use(remarkRehype)
-  //     .use(rehypeReact, { createElement, Fragment })
-  //     .process(fileContent)
-  // ).result) as ReactElement<unknown, string | JSXElementConstructor<any>>
 
   return {
     content: fileContent,
