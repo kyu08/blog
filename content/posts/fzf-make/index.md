@@ -19,7 +19,7 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 
 こんな感じで動く。
 
-![fzf-make-demo](https://user-images.githubusercontent.com/49891479/228574753-2e0e46b8-b446-4b7d-b866-2362f33c9e17.gif)
+![fzf-make-demo](fzf-make-demo.gif)
 
 ## fzf-makeがやっていること
 1. `Makefile`からtargetを正規表現で抜き出す
@@ -95,8 +95,9 @@ Rustを触る前に持っていた印象は「コンパイルが通りずらく�
 テスト実行に [https://github.com/nextest-rs/nextest](nextest-rs/nextest) を使ってみたがテスト結果が見やすくて便利だった。
 
 `cargo run`の結果
-![cargo run](https://user-images.githubusercontent.com/49891479/228600142-5a0bf96a-da2a-4dee-b23a-2b95b16d3c5e.png)
+![cargo run](cargo-run.png)
 
 `cargo nextest run`の結果
+![cargo nextest run](nextest-run.png)
+
 カラフルで見やすい。
-![cargo nextest run](https://user-images.githubusercontent.com/49891479/228600091-467eb178-1471-41a9-ae8e-a52ed17efa1c.png)

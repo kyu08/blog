@@ -20,7 +20,7 @@ color = "" #color from the theme settings
 ## 動作イメージ
 こんな感じでvanillaのGoプロジェクトをTmuxのwindowに開いておいて、確認したくなったときにすぐwindowを切り替えてコードを書いて実行結果を確認できるようにしている。(Gifの例はGoの書式指定子`%+v`の動作を忘れて試してみているところ)
 
-![go-playground](https://user-images.githubusercontent.com/49891479/216776240-de8145cd-7d07-4351-9aad-587bb7711ec2.gif)
+![go-playground](go-playground.gif)
 
 Gifでやっていることは以下
 
@@ -91,7 +91,7 @@ func main() {
 ### ターミナル表示
 [voldikss/vim-floaterm](https://github.com/voldikss/vim-floaterm)
 
-![floaterm](https://user-images.githubusercontent.com/49891479/216777279-6e1b08b1-4e3d-47a1-b995-d388aa85d5c4.gif)
+![floaterm](floaterm.gif)
 
 GoのSandbox環境の`main.go`に書いたスクリプトを実行するために、Neovimからターミナルを表示するシーンで使っている。
 
@@ -104,7 +104,7 @@ GoのSandbox環境の`main.go`に書いたスクリプトを実行するため�
 
 動作のイメージはこんな感じ。
 
-![fuzzy-motion](https://user-images.githubusercontent.com/49891479/216777071-2300fe76-cd19-4736-b18c-794c640ed623.gif)
+![fuzzy-motion](fuzzy-motion.gif)
 
 起動すると文字がグレーアウトするのでジャンプしたい文字列を入力するとその文字にジャンプするためのキーワードを表示してくれるというプラグイン。
 
@@ -122,7 +122,7 @@ Language Serverをホストするためのプラグイン。
 
 すごく簡単にいうと補完や関数定義を表示したり定義ジャンプできるようにしたりしてくれる。
 
-![coc.nvim](https://user-images.githubusercontent.com/49891479/216777324-5aef2140-e0ef-4e9f-894d-53b1343acb11.gif)
+![coc-nvim](coc-nvim.gif)
 
 
 以上です。ここまで読んでくれてありがとうございました。

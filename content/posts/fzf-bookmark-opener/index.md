@@ -20,7 +20,7 @@ yamlに定義しておいたbookmarkをfzfで選択してブラウザで開く�
 
 こんな感じで動く。
 
-![fzf-bookmark-opener-demo](fzf-bookmark-opener-demo.gif)
+![demo](https://user-images.githubusercontent.com/49891479/218272272-e693c10d-c810-458a-bf46-9c3a4a2fe45a.gif)
 
 ## コードの話
 コード自体は大変シンプルで

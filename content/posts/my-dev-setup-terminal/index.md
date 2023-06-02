@@ -45,7 +45,7 @@ alias m='MEMODIR=~/code/memo; cd $MEMODIR; FILE=$MEMODIR/$(date +%Y%m%d).md; if 
 
 実際に呼び出すとこんな感じです。
 
-![memo](https://user-images.githubusercontent.com/49891479/206888026-29738901-cbc1-47c2-9978-c736d6361c6c.gif)
+![memo](memo.gif)
 
 ちなみに筆者は
 
@@ -74,7 +74,7 @@ alias ghw='gh repo view -w'
 ```
 `gh`コマンドを利用して現在いるリポジトリをブラウザでGitHubで開くコマンド
 
-![ghw](https://user-images.githubusercontent.com/49891479/206887172-bd8e7170-690e-4b03-b675-01a357912bdd.gif)
+![ghw](ghw.gif)
 
 ```zsh
 alias pbc='pbcopy && pbpaste'
@@ -131,7 +131,7 @@ export FZF_DEFAULT_OPTS='--color=fg+:11 --height 70% --reverse --exit-0 --multi'
 
 これを実際に使うとこんな感じになります。ファジーファインダーを利用して効率的にディレクトリ移動することができます。
 
-![cdr](https://user-images.githubusercontent.com/49891479/206887169-86c4da4d-836a-4b94-862d-fd56e82bedb8.gif)
+![cdr](fzf-cdr.gif)
 
 やっていることは以下です。
 
@@ -156,7 +156,7 @@ zle -N select-history
 bindkey '^r' select-history
 ```
 
-![command-history](https://user-images.githubusercontent.com/49891479/206887171-3d32d4b0-5a4f-4527-ab8e-64ee194264ce.gif)
+![command-history](command-history.gif)
 
 ## Git操作
 Git操作のほとんどはGitのTUIクライアントであるLazygitを使っています。
@@ -167,7 +167,7 @@ Lazygitはターミナル上で動作するリッチなGitクライアントでG
 
 以下はLazygitを使って変更をaddしてcommitしてpushする例です。
 
-![lazygit-push](https://user-images.githubusercontent.com/49891479/206887714-c6593fa1-13bc-48fe-9380-d571050c9c9c.gif)
+![lazygit-push](lazygit-push.gif)
 
 見やすいですし、**少ないタイプ数で操作できる**点でおすすめです。他にも基本的なブランチ操作はもちろんのこと、`git rebase -i`相当のこともスピーディーにできるのでよく使っています。
 
@@ -189,7 +189,7 @@ iTerm2からの乗り換えでしたが満足できるだけの速度になり�
 
 [https://github.com/zatchheems/tokyo-night-alacritty-theme](https://github.com/zatchheems/tokyo-night-alacritty-theme)
 
-<img src="https://user-images.githubusercontent.com/49891479/205432298-5d608837-8ced-4195-83d0-bc61149b7a02.png">
+![tokyonight](tokyonight.png)
 
 Alacrittyにはタブ機能がなくタブ的な機能を実現するためにはtmuxなどのターミナルマルチプレクサを利用する必要があるため筆者はtmuxを利用しています。
 設定・プラグインなどは後述しますが、tmuxの操作感も好みなので割と満足しています。
@@ -208,7 +208,7 @@ Alacrittyにはタブ機能がなくタブ的な機能を実現するために�
 
 を表示するようにしています。
 
-<img src="https://user-images.githubusercontent.com/49891479/205433394-8a07f989-5aef-4644-bd3a-63110f9d76ef.png">
+![tmux-status-line](tmux-status-line.png)
 
 普段の開発ではプロジェクトごとにウィンドウを開き、必要に応じて切り替える運用にしています。
 
@@ -223,7 +223,7 @@ Alacrittyにはタブ機能がなくタブ的な機能を実現するために�
 
 という手順で行っていましたがウィンドウが増えてくると地味にウィンドウ移動が大変になっていきました。以下は従来のウィンドウ切り替えの様子です。
 
-![tmux-window](https://user-images.githubusercontent.com/49891479/206887175-34db5b7f-b01a-4b72-af9e-59d8cc1aa922.gif)
+![tmux-window](tmux-window.gif)
 
 どうにかもう少し楽にウィンドウ切り替えをできないかと探していたところsainnhe/tmux-fzfに出会いました。
 
@@ -247,7 +247,7 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 
 という手順でできるようになりました。文字にすると違いが伝わりづらいですが、ファジーファインダーを使ってウィンドウの選択を行うことができるようになったことでキーのタイプ数や切り替えの際の脳の負荷を大幅に減らすことができました。
 
-![tmux-fzf](https://user-images.githubusercontent.com/49891479/206887174-ca35deba-1f78-4a07-9e58-7e87b7b1adad.gif)
+![tmux-fzf](tmux-fzf.gif)
 
 ## おわりに
 ここまで読んでくださってありがとうございました。

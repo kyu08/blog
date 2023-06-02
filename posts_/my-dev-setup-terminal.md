@@ -35,7 +35,7 @@ alias m='MEMODIR=~/code/memo; cd $MEMODIR; FILE=$MEMODIR/$(date +%Y%m%d).md; if 
 
 実際に呼び出すとこんな感じです。
 
-![memo](https://user-images.githubusercontent.com/49891479/206888026-29738901-cbc1-47c2-9978-c736d6361c6c.gif)
+![memo](memo.gif)
 
 ちなみに筆者は
 
@@ -64,7 +64,7 @@ alias ghw='gh repo view -w'
 ```
 `gh`コマンドを利用して現在いるリポジトリをブラウザでGitHubで開くコマンド
 
-![ghw](https://user-images.githubusercontent.com/49891479/206887172-bd8e7170-690e-4b03-b675-01a357912bdd.gif)
+![ghw](ghw.gif)
 
 ```zsh
 alias pbc='pbcopy && pbpaste'
@@ -121,7 +121,7 @@ export FZF_DEFAULT_OPTS='--color=fg+:11 --height 70% --reverse --exit-0 --multi'
 
 これを実際に使うとこんな感じになります。ファジーファインダーを利用して効率的にディレクトリ移動することができます。
 
-![cdr](https://user-images.githubusercontent.com/49891479/206887169-86c4da4d-836a-4b94-862d-fd56e82bedb8.gif)
+![cdr](fzf-cdr.gif)
 
 やっていることは以下です。
 
@@ -146,7 +146,7 @@ zle -N select-history
 bindkey '^r' select-history
 ```
 
-![command-history](https://user-images.githubusercontent.com/49891479/206887171-3d32d4b0-5a4f-4527-ab8e-64ee194264ce.gif)
+![command-history](command-history.gif)
 
 ## Git操作
 Git操作のほとんどはGitのTUIクライアントであるLazygitを使っています。
@@ -157,7 +157,7 @@ Lazygitはターミナル上で動作するリッチなGitクライアントでG
 
 以下はLazygitを使って変更をaddしてcommitしてpushする例です。
 
-![lazygit-push](https://user-images.githubusercontent.com/49891479/206887714-c6593fa1-13bc-48fe-9380-d571050c9c9c.gif)
+![lazygit-push](lazygit-push.gif)
 
 見やすいですし、**少ないタイプ数で操作できる**点でおすすめです。他にも基本的なブランチ操作はもちろんのこと、`git rebase -i`相当のこともスピーディーにできるのでよく使っています。
 

@@ -16,7 +16,6 @@ color = "" #color from the theme settings
 Elm で固定長配列を扱うためのライブラリ elm-static-array を触ってみたので感じたことを書いていきます。
 
 ## elm-static-array とは
-<!-- 全部 elm-static-array って書いた方がいいかな -->
 [elm-static-array](https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/) は Elm で固定長配列を扱うためのライブラリです。
 
 配列の長さを型で表現できることが特徴です。
@@ -35,7 +34,7 @@ ordinaryArray : Array String
 
 各プレイヤーの試合毎のスコアを記録して合計を表示するだけの簡単なアプリケーションです。(※実際には順位点やトビ賞の計算などもやっていますがここでは割愛)
 
-<img src='https://user-images.githubusercontent.com/49891479/144793092-395b5cfb-fa54-43b7-9ec5-7926ccbbb647.png' />
+![jan-log-demo.png](jan-log-demo.png)
 
 ここで **参加者の名前** および **その試合のスコア** を `Array String` として扱おうとすると以下のようになります。
 
