@@ -1,8 +1,10 @@
 baseURL = 'https://blog.kyu08.com'
-languageCode = 'en-us'
 title = 'blog.kyu08.com'
 theme = "terminal"
-paginate = 5
+paginate = 10
+languageCode = "ja"
+defaultContentLanguage = "ja"
+hasCJKLanguage = true
 
 [params]
   # dir name of your main content (default is `content/posts`).
@@ -10,7 +12,7 @@ paginate = 5
   contentTypeName = "posts"
 
   # ["orange", "blue", "red", "green", "pink"]
-  themeColor = "orange"
+  themeColor = "blue"
 
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 2
@@ -53,7 +55,6 @@ paginate = 5
   # can be overridden in a page's front-matter
   # TocTitle = "Table of Contents" # default
 
-
 [params.twitter]
   # set Twitter handles for Twitter cards
   # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
@@ -61,42 +62,30 @@ paginate = 5
   creator = "kyu08_"
   site = ""
 
-# [languages]
-#   [languages.en]
-#     languageName = "English"
-#     title = "Terminal"
-#     subtitle = "A simple, retro theme for Hugo"
-#     owner = ""
-#     keywords = ""
-#     copyright = ""
-#     menuMore = "Show more"
-#     readMore = "Read more"
-#     readOtherPosts = "Read other posts"
-#     newerPosts = "Newer posts"
-#     olderPosts = "Older posts"
-#     missingContentMessage = "Page not found..."
-#     missingBackButtonLabel = "Back to home page"
-#     minuteReadingTime = "min read"
-#     words = "words"
-#
-#     [languages.en.params.logo]
-#       logoText = "Terminal"
-#       logoHomeLink = "/"
-#
-#     [languages.en.menu]
-#       [[languages.en.menu.main]]
-#         identifier = "about"
-#         name = "About"
-#         url = "/about"
-#       [[languages.en.menu.main]]
-#         identifier = "showcase"
-#         name = "Showcase"
-#         url = "/showcase"
-#
-# [module]
-#   # In case you would like to make changes to the theme and keep it locally in you repository,
-#   # uncomment the line below (and correct the local path if necessary).
-#   # --
-#   # replacements = "github.com/panr/hugo-theme-terminal -> themes/terminal"
-# [[module.imports]]
-#   path = 'github.com/panr/hugo-theme-terminal'
+[languages]
+  [languages.ja]
+    languageName = "Japanese"
+    title = "blog.kyu08.com"
+    subtitle = "blog.kyu08.com"
+    owner = "kyu08"
+    keywords = ""
+    copyright = "kyu08.com"
+    menuMore = "Show more"
+    readMore = "Read more"
+    readOtherPosts = "Read other posts"
+    newerPosts = "Newer posts"
+    olderPosts = "Older posts"
+    missingContentMessage = "Page not found..."
+    missingBackButtonLabel = "Back to home page"
+    minuteReadingTime = "min read"
+    words = "words"
+
+    [languages.ja.params.logo]
+      logoText = "blog.kyu08.com"
+      logoHomeLink = "/"
+
+    [languages.ja.menu]
+      [[languages.ja.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about"
