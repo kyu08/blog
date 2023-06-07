@@ -49,11 +49,11 @@ googleAnalytics = "G-BDQ408J45J"
 
   # whether to show a table of contents
   # can be overridden in a page's front-matter
-  # Toc = false # default
+  Toc = true
 
   # set title for the table of contents
   # can be overridden in a page's front-matter
-  # TocTitle = "Table of Contents" # default
+  TocTitle = "Table of Contents" # default
 
 [params.twitter]
   # set Twitter handles for Twitter cards
