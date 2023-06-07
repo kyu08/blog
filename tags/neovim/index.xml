@@ -6,7 +6,7 @@
     <description>Recent content in Neovim on blog.kyu08.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>kyu08.com</copyright>
+    <copyright>blog.kyu08.com</copyright>
     <lastBuildDate>Sun, 05 Feb 2023 01:15:48 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/neovim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tmux&#43;NeovimでJetBrains IDEのScratchみたいな機能を実現している話</title>
