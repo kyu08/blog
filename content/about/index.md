@@ -13,7 +13,7 @@ hideComments = true
 color = "" #color from the theme settings
 +++
 
-都内で働くエンジニアです。ご連絡はTwitterまで。
+Go Elm TypeScript Neovim tmux Rustが好きな3年目エンジニャーです。ご連絡はTwitterまで。
 
 GitHub: [kyu08](https://github.com/kyu08)
 
