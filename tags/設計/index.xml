@@ -1,21 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>設計 on blog.kyu08.com</title><link>https://blog.kyu08.com/tags/%E8%A8%AD%E8%A8%88/</link><description>Recent content in 設計 on blog.kyu08.com</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>kyu08.com</copyright><lastBuildDate>Thu, 02 Feb 2023 01:15:48 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/%E8%A8%AD%E8%A8%88/index.xml" rel="self" type="application/rss+xml"/><item><title>デザインパターンをひととおり眺めた感想</title><link>https://blog.kyu08.com/posts/learn-design-pattern/</link><pubDate>Thu, 02 Feb 2023 01:15:48 +0900</pubDate><guid>https://blog.kyu08.com/posts/learn-design-pattern/</guid><description>ずっと気になってはいたが2つ~3つくらいしか知らなかったデザインパターンをやっと勉強する気になったのでこのサイトを一通り眺めてみた。 https://refactoring.guru/ja/design-patterns こちら</description><content>&lt;p>ずっと気になってはいたが2つ~3つくらいしか知らなかったデザインパターンをやっと勉強する気になったのでこのサイトを一通り眺めてみた。&lt;/p>
-&lt;p>&lt;a href="https://refactoring.guru/ja/design-patterns">https://refactoring.guru/ja/design-patterns&lt;/a>&lt;/p>
-&lt;p>こちらのサイトは平易な文章とわかりやすい例で説明がされていて、各言語でのサンプルコードも載せてくれていたのでかなりサクサクと理解できてとてもよかった。(各パターンをC#, C++, Go, Java, php, Python, Ruby, Rust, Swift, TypeScriptで実装した例が紹介されていた)(すごい)&lt;/p>
-&lt;h2 id="自分のデザインパターンとの向き合い方について">自分のデザインパターンとの向き合い方について&lt;/h2>
-&lt;p>周りのエンジニアにデザインパターンについて聞くと、&lt;/p>
-&lt;ul>
-&lt;li>すべてのパターンが今も有用かと言われるとそうでもないかも&lt;/li>
-&lt;li>よくある設計パターンの共通言語として知っておくとコミュニケーションの効率があがってよい&lt;/li>
-&lt;li>暗記までする必要はなくて設計のときの参考程度にするとよさそう&lt;/li>
-&lt;/ul>
-&lt;p>みたいなことを言っているのをよく聞くのですべてを自分のものにするというよりは軽く雰囲気を理解するくらいのテンションでサイトを眺めてみた。&lt;/p>
-&lt;h2 id="感想">感想&lt;/h2>
-&lt;p>一通り眺めてみて、以下のようなことが重要なんだろうなと感じた。&lt;/p>
-&lt;ul>
-&lt;li>interfaceをうまく使って抽象に依存する&lt;/li>
-&lt;li>データと振る舞いを分離する&lt;/li>
-&lt;li>依存の方向に気を付ける&lt;/li>
-&lt;/ul>
-&lt;p>いろんなところで言われていることだが、やはり責務の分離や単一責任の法則を意識することで変更しやすいコードにしていくことがよりよい設計に繋がることを再確認できた。&lt;/p>
-&lt;p>いいコードを書けるようになるにはこれらのことを意識しながら実際にコードを書いて実践していくことが重要だと思うのでたくさん試行錯誤していい感じのコード書き力を身につけていきたい。(とても経験豊富な先輩エンジニアも結局自分でサービスを運用して設計の失敗の痛みを感じるのが一番成長できる、というようなことを言っていた)&lt;/p>
-&lt;p>設計関連だと &lt;a href="https://www.amazon.co.jp/dp/4297127830">良いコード/悪いコードで学ぶ設計入門 ―保守しやすい 成長し続けるコードの書き方&lt;/a> とか &lt;a href="https://www.amazon.co.jp/Clean-Architecture-%E9%81%94%E4%BA%BA%E3%81%AB%E5%AD%A6%E3%81%B6%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%AE%E6%A7%8B%E9%80%A0%E3%81%A8%E8%A8%AD%E8%A8%88-Robert-C-Martin/dp/4048930656">Clean Architecture&lt;/a> とかも気になってるので読みたい。&lt;/p></content></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>設計 on blog.kyu08.com</title>
+    <link>https://blog.kyu08.com/tags/%E8%A8%AD%E8%A8%88/</link>
+    <description>Recent content in 設計 on blog.kyu08.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>kyu08.com</copyright>
+    <lastBuildDate>Thu, 02 Feb 2023 01:15:48 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/%E8%A8%AD%E8%A8%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>デザインパターンをひととおり眺めた感想</title>
+      <link>https://blog.kyu08.com/posts/learn-design-pattern/</link>
+      <pubDate>Thu, 02 Feb 2023 01:15:48 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/posts/learn-design-pattern/</guid>
+      <description>ずっと気になってはいたが2つ~3つくらいしか知らなかったデザインパターンをやっと勉強する気になったのでこのサイトを一通り眺めてみた。 https://refactoring.guru/ja/design-patterns こちら</description>
+      <content>&lt;p&gt;ずっと気になってはいたが2つ~3つくらいしか知らなかったデザインパターンをやっと勉強する気になったのでこのサイトを一通り眺めてみた。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://refactoring.guru/ja/design-patterns&#34;&gt;https://refactoring.guru/ja/design-patterns&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;こちらのサイトは平易な文章とわかりやすい例で説明がされていて、各言語でのサンプルコードも載せてくれていたのでかなりサクサクと理解できてとてもよかった。(各パターンをC#, C++, Go, Java, php, Python, Ruby, Rust, Swift, TypeScriptで実装した例が紹介されていた)(すごい)&lt;/p&gt;
+&lt;h2 id=&#34;自分のデザインパターンとの向き合い方について&#34;&gt;自分のデザインパターンとの向き合い方について&lt;/h2&gt;
+&lt;p&gt;周りのエンジニアにデザインパターンについて聞くと、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;すべてのパターンが今も有用かと言われるとそうでもないかも&lt;/li&gt;
+&lt;li&gt;よくある設計パターンの共通言語として知っておくとコミュニケーションの効率があがってよい&lt;/li&gt;
+&lt;li&gt;暗記までする必要はなくて設計のときの参考程度にするとよさそう&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;みたいなことを言っているのをよく聞くのですべてを自分のものにするというよりは軽く雰囲気を理解するくらいのテンションでサイトを眺めてみた。&lt;/p&gt;
+&lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
+&lt;p&gt;一通り眺めてみて、以下のようなことが重要なんだろうなと感じた。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;interfaceをうまく使って抽象に依存する&lt;/li&gt;
+&lt;li&gt;データと振る舞いを分離する&lt;/li&gt;
+&lt;li&gt;依存の方向に気を付ける&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;いろんなところで言われていることだが、やはり責務の分離や単一責任の法則を意識することで変更しやすいコードにしていくことがよりよい設計に繋がることを再確認できた。&lt;/p&gt;
+&lt;p&gt;いいコードを書けるようになるにはこれらのことを意識しながら実際にコードを書いて実践していくことが重要だと思うのでたくさん試行錯誤していい感じのコード書き力を身につけていきたい。(とても経験豊富な先輩エンジニアも結局自分でサービスを運用して設計の失敗の痛みを感じるのが一番成長できる、というようなことを言っていた)&lt;/p&gt;
+&lt;p&gt;設計関連だと &lt;a href=&#34;https://www.amazon.co.jp/dp/4297127830&#34;&gt;良いコード/悪いコードで学ぶ設計入門 ―保守しやすい 成長し続けるコードの書き方&lt;/a&gt; とか &lt;a href=&#34;https://www.amazon.co.jp/Clean-Architecture-%E9%81%94%E4%BA%BA%E3%81%AB%E5%AD%A6%E3%81%B6%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%AE%E6%A7%8B%E9%80%A0%E3%81%A8%E8%A8%AD%E8%A8%88-Robert-C-Martin/dp/4048930656&#34;&gt;Clean Architecture&lt;/a&gt; とかも気になってるので読みたい。&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

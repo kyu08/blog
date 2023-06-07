@@ -1,23 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TypeScript on blog.kyu08.com</title><link>https://blog.kyu08.com/tags/typescript/</link><description>Recent content in TypeScript on blog.kyu08.com</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>kyu08.com</copyright><lastBuildDate>Sun, 27 Dec 2020 01:15:48 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/typescript/index.xml" rel="self" type="application/rss+xml"/><item><title>Next.js Vercel で Blog をつくった</title><link>https://blog.kyu08.com/posts/20201227-built-blog/</link><pubDate>Sun, 27 Dec 2020 01:15:48 +0900</pubDate><guid>https://blog.kyu08.com/posts/20201227-built-blog/</guid><description>急にブログが書きたくなったのでつくった。 使った技術 Next.js TypeScript Vercel 感想 Vercel めっちゃ楽 Syntax Highlight できてうれしい const age: number = 1 // こんなかんじ これからやりたいこと header footer つ</description><content>&lt;p>急にブログが書きたくなったのでつくった。&lt;/p>
-&lt;h2 id="使った技術">使った技術&lt;/h2>
-&lt;ul>
-&lt;li>Next.js&lt;/li>
-&lt;li>TypeScript&lt;/li>
-&lt;li>Vercel&lt;/li>
-&lt;/ul>
-&lt;h2 id="感想">感想&lt;/h2>
-&lt;ul>
-&lt;li>Vercel めっちゃ楽&lt;/li>
-&lt;li>Syntax Highlight できてうれしい&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-typescript" data-lang="typescript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">age&lt;/span>: &lt;span style="color:#66d9ef">number&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span> &lt;span style="color:#75715e">// こんなかんじ
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="これからやりたいこと">これからやりたいこと&lt;/h2>
-&lt;ul>
-&lt;li>header footer つくる&lt;/li>
-&lt;li>独自ドメイン取得&lt;/li>
-&lt;li>全体的に見た目をまともにする&lt;/li>
-&lt;li>記事一覧ページに 書いた日時・タグも表示する&lt;/li>
-&lt;li>簡単な自己紹介&lt;/li>
-&lt;li>各種SNSへのリンク&lt;/li>
-&lt;li>存在しないリンクへアクセスされたら記事一覧に戻す&lt;/li>
-&lt;/ul></content></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TypeScript on blog.kyu08.com</title>
+    <link>https://blog.kyu08.com/tags/typescript/</link>
+    <description>Recent content in TypeScript on blog.kyu08.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>kyu08.com</copyright>
+    <lastBuildDate>Sun, 27 Dec 2020 01:15:48 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Next.js Vercel で Blog をつくった</title>
+      <link>https://blog.kyu08.com/posts/20201227-built-blog/</link>
+      <pubDate>Sun, 27 Dec 2020 01:15:48 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/posts/20201227-built-blog/</guid>
+      <description>急にブログが書きたくなったのでつくった。 使った技術 Next.js TypeScript Vercel 感想 Vercel めっちゃ楽 Syntax Highlight できてうれしい const age: number = 1 // こんなかんじ これからやりたいこと header footer つ</description>
+      <content>&lt;p&gt;急にブログが書きたくなったのでつくった。&lt;/p&gt;
+&lt;h2 id=&#34;使った技術&#34;&gt;使った技術&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Next.js&lt;/li&gt;
+&lt;li&gt;TypeScript&lt;/li&gt;
+&lt;li&gt;Vercel&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Vercel めっちゃ楽&lt;/li&gt;
+&lt;li&gt;Syntax Highlight できてうれしい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-typescript&#34; data-lang=&#34;typescript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;age&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;number&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// こんなかんじ
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;これからやりたいこと&#34;&gt;これからやりたいこと&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;header footer つくる&lt;/li&gt;
+&lt;li&gt;独自ドメイン取得&lt;/li&gt;
+&lt;li&gt;全体的に見た目をまともにする&lt;/li&gt;
+&lt;li&gt;記事一覧ページに 書いた日時・タグも表示する&lt;/li&gt;
+&lt;li&gt;簡単な自己紹介&lt;/li&gt;
+&lt;li&gt;各種SNSへのリンク&lt;/li&gt;
+&lt;li&gt;存在しないリンクへアクセスされたら記事一覧に戻す&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

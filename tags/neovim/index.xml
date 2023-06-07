@@ -1,69 +1,91 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Neovim on blog.kyu08.com</title><link>https://blog.kyu08.com/tags/neovim/</link><description>Recent content in Neovim on blog.kyu08.com</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>kyu08.com</copyright><lastBuildDate>Sun, 05 Feb 2023 01:15:48 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/neovim/index.xml" rel="self" type="application/rss+xml"/><item><title>Tmux+NeovimでJetBrains IDEのScratchみたいな機能を実現している話</title><link>https://blog.kyu08.com/posts/tmux-neovim-scratch/</link><pubDate>Sun, 05 Feb 2023 01:15:48 +0900</pubDate><guid>https://blog.kyu08.com/posts/tmux-neovim-scratch/</guid><description>任意の構成のSandbox的な環境をTmuxのwindowとして用意するようにしたところターミナルから出ずにサクっと動作検証とかが行えてハッ</description><content>&lt;p>任意の構成のSandbox的な環境をTmuxのwindowとして用意するようにしたところターミナルから出ずにサクっと動作検証とかが行えてハッピーになったよ、という記事。ここではvanillaなGoのプロジェクトの例を紹介しますが、お好みの構成でSandbox環境を作ってみてください。&lt;/p>
-&lt;p>全然大したことをやっているわけではないですがTmux, Neovimやそれらのプラグインの普及活動になれば嬉しいので書いてみます。&lt;/p>
-&lt;h2 id="動作イメージ">動作イメージ&lt;/h2>
-&lt;p>こんな感じでvanillaのGoプロジェクトをTmuxのwindowに開いておいて、確認したくなったときにすぐwindowを切り替えてコードを書いて実行結果を確認できるようにしている。(Gifの例はGoの書式指定子&lt;code>%+v&lt;/code>の動作を忘れて試してみているところ)&lt;/p>
-&lt;p>&lt;img src="go-playground.gif" alt="go-playground">&lt;/p>
-&lt;p>Gifでやっていることは以下&lt;/p>
-&lt;ol>
-&lt;li>GoのSandbox環境を開いたNeovimが起動しているwindowに切り替え&lt;/li>
-&lt;li>コードを書く&lt;/li>
-&lt;li>Neovim上でターミナルを表示&lt;/li>
-&lt;li>&lt;code>make run&lt;/code>を実行してコード実行&lt;/li>
-&lt;li>結果を確認&lt;/li>
-&lt;li>元いたwindowに戻る&lt;/li>
-&lt;/ol>
-&lt;p>tmux-fzfなど筆者のターミナル環境については以下参照&lt;/p>
-&lt;p>&lt;a href="https://blog.kyu08.com/posts/my-dev-setup-terminal">開発の効率化のためにやっていること ターミナル編&lt;/a>&lt;/p>
-&lt;p>筆者はGoの動作を確認したいことがほとんどなのでこういった構成にしているが、必要に応じてよく使うFWをセットアップした環境を作っておくと便利そう。&lt;/p>
-&lt;h2 id="プロジェクトの内容">プロジェクトの内容&lt;/h2>
-&lt;p>Go固有の内容もあるので参考程度で。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>├── .git
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── .gitignore
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── go.mod
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── go.sum
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── main.go
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── main.go.sample
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── main_test.go
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>└── Makefile
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>基本的に&lt;code>main.go&lt;/code>の中身を編集して、&lt;code>go run .&lt;/code>で実行して実行結果を確認するということをしている。&lt;/p>
-&lt;p>&lt;code>Makefile&lt;/code>の中身は以下のような感じになっていて、&lt;code>make run&lt;/code>でコード実行、&lt;code>make clear&lt;/code>で&lt;code>main.go&lt;/code>をまっさらにできるようにしているだけである。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Makefile" data-lang="Makefile">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">.PHONY&lt;/span>&lt;span style="color:#f92672">:&lt;/span> run clear
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">run&lt;/span>&lt;span style="color:#f92672">:&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> @go run .
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">clear&lt;/span>&lt;span style="color:#f92672">:&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> @cp ./main.go.sample ./main.go
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>main.go.sample&lt;/code>の内容は以下。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">package&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">func&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>() {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>あとはよく見返したくなるコードは&lt;code>main.go&lt;/code>以外のファイル名で保存したり、commitしておくと後からでもさっと確認できてよさそう。(筆者はそこまでやってない)&lt;/p>
-&lt;h2 id="感想">感想&lt;/h2>
-&lt;p>ターミナルから出ずに作業が完結できてうれしい。&lt;/p>
-&lt;p>同様のことはGoの場合はブラウザからThe Go Playground(※)を開いても行えるが筆者は何でもターミナルでできると嬉しい人なのでできるようにしてみた。&lt;/p>
-&lt;p>※ブラウザ上で実行できるGoのエディタ + 実行環境がセットになったやつ。&lt;a href="https://go.dev/play/">https://go.dev/play/&lt;/a>&lt;/p>
-&lt;p>あとやるとしたらThe Go PlaygroundにあるURL発行機能とかを実現できると他の人への共有も楽になっていいのかもしれない。(今のところあんまり他の人に共有する機会がないので困っていない)&lt;/p>
-&lt;h2 id="補足">補足&lt;/h2>
-&lt;p>最後に補足としてGif内で使っているNeovimのプラグインを紹介します。&lt;/p>
-&lt;h3 id="ターミナル表示">ターミナル表示&lt;/h3>
-&lt;p>&lt;a href="https://github.com/voldikss/vim-floaterm">voldikss/vim-floaterm&lt;/a>&lt;/p>
-&lt;p>&lt;img src="floaterm.gif" alt="floaterm">&lt;/p>
-&lt;p>GoのSandbox環境の&lt;code>main.go&lt;/code>に書いたスクリプトを実行するために、Neovimからターミナルを表示するシーンで使っている。&lt;/p>
-&lt;p>コード編集してサクっと動作確認したいときなどに便利。(といいつつ最近動作の重さが目立ってきたので&lt;code>&amp;lt;C-z&amp;gt;&lt;/code>でNeovimの起動元に戻ってターミナルを操作することが多い)&lt;/p>
-&lt;h3 id="カーソル移動">カーソル移動&lt;/h3>
-&lt;p>&lt;a href="https://github.com/yuki-yano/fuzzy-motion.vim">yuki-yano/fuzzy-motion.vim&lt;/a>&lt;/p>
-&lt;p>&lt;code>fmt.Printf(&amp;quot;u: %v\n&amp;quot;, u)&lt;/code>の&lt;code>u&lt;/code>から&lt;code>%v&lt;/code>の位置にカーソル移動する際に使っているプラグイン。&lt;/p>
-&lt;p>動作のイメージはこんな感じ。&lt;/p>
-&lt;p>&lt;img src="fuzzy-motion.gif" alt="fuzzy-motion">&lt;/p>
-&lt;p>起動すると文字がグレーアウトするのでジャンプしたい文字列を入力するとその文字にジャンプするためのキーワードを表示してくれるというプラグイン。&lt;/p>
-&lt;p>同様の機能をもつプラグインとしてはeasy-motionなどのプラグインが有名だが、fuzzy-motionはジャンプしたい文字列をfuzzy-finder形式で絞り込んでくれるのが大きな特徴。(詳しくはリポジトリのREADME参照)&lt;/p>
-&lt;p>筆者はノーマルモードで&lt;code>f&lt;/code>キーを押下するとプラグインが起動するように設定している。&lt;/p>
-&lt;p>カーソル移動の効率がよすぎて正直もうこれなしでは開発したくない。&lt;/p>
-&lt;h3 id="lsp-server">LSP Server&lt;/h3>
-&lt;p>&lt;a href="https://github.com/neoclide/coc.nvim">neoclide/coc.nvim&lt;/a>&lt;/p>
-&lt;p>Language Serverをホストするためのプラグイン。&lt;/p>
-&lt;p>すごく簡単にいうと補完や関数定義を表示したり定義ジャンプできるようにしたりしてくれる。&lt;/p>
-&lt;p>&lt;img src="coc-nvim.gif" alt="coc-nvim">&lt;/p>
-&lt;p>以上です。ここまで読んでくれてありがとうございました。&lt;/p></content></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Neovim on blog.kyu08.com</title>
+    <link>https://blog.kyu08.com/tags/neovim/</link>
+    <description>Recent content in Neovim on blog.kyu08.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>kyu08.com</copyright>
+    <lastBuildDate>Sun, 05 Feb 2023 01:15:48 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/neovim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tmux&#43;NeovimでJetBrains IDEのScratchみたいな機能を実現している話</title>
+      <link>https://blog.kyu08.com/posts/tmux-neovim-scratch/</link>
+      <pubDate>Sun, 05 Feb 2023 01:15:48 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/posts/tmux-neovim-scratch/</guid>
+      <description>任意の構成のSandbox的な環境をTmuxのwindowとして用意するようにしたところターミナルから出ずにサクっと動作検証とかが行えてハッ</description>
+      <content>&lt;p&gt;任意の構成のSandbox的な環境をTmuxのwindowとして用意するようにしたところターミナルから出ずにサクっと動作検証とかが行えてハッピーになったよ、という記事。ここではvanillaなGoのプロジェクトの例を紹介しますが、お好みの構成でSandbox環境を作ってみてください。&lt;/p&gt;
+&lt;p&gt;全然大したことをやっているわけではないですがTmux, Neovimやそれらのプラグインの普及活動になれば嬉しいので書いてみます。&lt;/p&gt;
+&lt;h2 id=&#34;動作イメージ&#34;&gt;動作イメージ&lt;/h2&gt;
+&lt;p&gt;こんな感じでvanillaのGoプロジェクトをTmuxのwindowに開いておいて、確認したくなったときにすぐwindowを切り替えてコードを書いて実行結果を確認できるようにしている。(Gifの例はGoの書式指定子&lt;code&gt;%+v&lt;/code&gt;の動作を忘れて試してみているところ)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;go-playground.gif&#34; alt=&#34;go-playground&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Gifでやっていることは以下&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;GoのSandbox環境を開いたNeovimが起動しているwindowに切り替え&lt;/li&gt;
+&lt;li&gt;コードを書く&lt;/li&gt;
+&lt;li&gt;Neovim上でターミナルを表示&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make run&lt;/code&gt;を実行してコード実行&lt;/li&gt;
+&lt;li&gt;結果を確認&lt;/li&gt;
+&lt;li&gt;元いたwindowに戻る&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;tmux-fzfなど筆者のターミナル環境については以下参照&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.kyu08.com/posts/my-dev-setup-terminal&#34;&gt;開発の効率化のためにやっていること ターミナル編&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;筆者はGoの動作を確認したいことがほとんどなのでこういった構成にしているが、必要に応じてよく使うFWをセットアップした環境を作っておくと便利そう。&lt;/p&gt;
+&lt;h2 id=&#34;プロジェクトの内容&#34;&gt;プロジェクトの内容&lt;/h2&gt;
+&lt;p&gt;Go固有の内容もあるので参考程度で。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── .git
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── .gitignore
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── go.mod
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── go.sum
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── main.go
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── main.go.sample
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── main_test.go
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;└── Makefile
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;基本的に&lt;code&gt;main.go&lt;/code&gt;の中身を編集して、&lt;code&gt;go run .&lt;/code&gt;で実行して実行結果を確認するということをしている。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Makefile&lt;/code&gt;の中身は以下のような感じになっていて、&lt;code&gt;make run&lt;/code&gt;でコード実行、&lt;code&gt;make clear&lt;/code&gt;で&lt;code&gt;main.go&lt;/code&gt;をまっさらにできるようにしているだけである。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-Makefile&#34; data-lang=&#34;Makefile&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.PHONY&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; run clear
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;run&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  @go run .
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;clear&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  @cp ./main.go.sample ./main.go
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;main.go.sample&lt;/code&gt;の内容は以下。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;あとはよく見返したくなるコードは&lt;code&gt;main.go&lt;/code&gt;以外のファイル名で保存したり、commitしておくと後からでもさっと確認できてよさそう。(筆者はそこまでやってない)&lt;/p&gt;
+&lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
+&lt;p&gt;ターミナルから出ずに作業が完結できてうれしい。&lt;/p&gt;
+&lt;p&gt;同様のことはGoの場合はブラウザからThe Go Playground(※)を開いても行えるが筆者は何でもターミナルでできると嬉しい人なのでできるようにしてみた。&lt;/p&gt;
+&lt;p&gt;※ブラウザ上で実行できるGoのエディタ + 実行環境がセットになったやつ。&lt;a href=&#34;https://go.dev/play/&#34;&gt;https://go.dev/play/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;あとやるとしたらThe Go PlaygroundにあるURL発行機能とかを実現できると他の人への共有も楽になっていいのかもしれない。(今のところあんまり他の人に共有する機会がないので困っていない)&lt;/p&gt;
+&lt;h2 id=&#34;補足&#34;&gt;補足&lt;/h2&gt;
+&lt;p&gt;最後に補足としてGif内で使っているNeovimのプラグインを紹介します。&lt;/p&gt;
+&lt;h3 id=&#34;ターミナル表示&#34;&gt;ターミナル表示&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/voldikss/vim-floaterm&#34;&gt;voldikss/vim-floaterm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;floaterm.gif&#34; alt=&#34;floaterm&#34;&gt;&lt;/p&gt;
+&lt;p&gt;GoのSandbox環境の&lt;code&gt;main.go&lt;/code&gt;に書いたスクリプトを実行するために、Neovimからターミナルを表示するシーンで使っている。&lt;/p&gt;
+&lt;p&gt;コード編集してサクっと動作確認したいときなどに便利。(といいつつ最近動作の重さが目立ってきたので&lt;code&gt;&amp;lt;C-z&amp;gt;&lt;/code&gt;でNeovimの起動元に戻ってターミナルを操作することが多い)&lt;/p&gt;
+&lt;h3 id=&#34;カーソル移動&#34;&gt;カーソル移動&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/yuki-yano/fuzzy-motion.vim&#34;&gt;yuki-yano/fuzzy-motion.vim&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;fmt.Printf(&amp;quot;u: %v\n&amp;quot;, u)&lt;/code&gt;の&lt;code&gt;u&lt;/code&gt;から&lt;code&gt;%v&lt;/code&gt;の位置にカーソル移動する際に使っているプラグイン。&lt;/p&gt;
+&lt;p&gt;動作のイメージはこんな感じ。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fuzzy-motion.gif&#34; alt=&#34;fuzzy-motion&#34;&gt;&lt;/p&gt;
+&lt;p&gt;起動すると文字がグレーアウトするのでジャンプしたい文字列を入力するとその文字にジャンプするためのキーワードを表示してくれるというプラグイン。&lt;/p&gt;
+&lt;p&gt;同様の機能をもつプラグインとしてはeasy-motionなどのプラグインが有名だが、fuzzy-motionはジャンプしたい文字列をfuzzy-finder形式で絞り込んでくれるのが大きな特徴。(詳しくはリポジトリのREADME参照)&lt;/p&gt;
+&lt;p&gt;筆者はノーマルモードで&lt;code&gt;f&lt;/code&gt;キーを押下するとプラグインが起動するように設定している。&lt;/p&gt;
+&lt;p&gt;カーソル移動の効率がよすぎて正直もうこれなしでは開発したくない。&lt;/p&gt;
+&lt;h3 id=&#34;lsp-server&#34;&gt;LSP Server&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/neoclide/coc.nvim&#34;&gt;neoclide/coc.nvim&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Language Serverをホストするためのプラグイン。&lt;/p&gt;
+&lt;p&gt;すごく簡単にいうと補完や関数定義を表示したり定義ジャンプできるようにしたりしてくれる。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;coc-nvim.gif&#34; alt=&#34;coc-nvim&#34;&gt;&lt;/p&gt;
+&lt;p&gt;以上です。ここまで読んでくれてありがとうございました。&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
