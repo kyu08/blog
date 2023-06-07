@@ -1,4 +1,5 @@
 baseURL = 'https://kyu08.github.io/blog/'
+# TODO: カスタムドメイン設定したら切り替える
 # baseURL = 'https://blog.kyu08.com'
 title = 'blog.kyu08.com'
 theme = "terminal"
@@ -29,7 +30,7 @@ hasCJKLanguage = true
   # if your resource directory contains an image called `cover.(jpg|png|webp)`,
   # then the file will be used as a cover automatically.
   # With this option you don't have to put the `cover` param in a front-matter.
-  autoCover = false
+  # autoCover = false
 
   # set post to show the last updated
   # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
