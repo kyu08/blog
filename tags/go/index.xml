@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>go on blog.kyu08.com</title>
-    <link>https://blog.kyu08.com/tags/go/</link>
+    <link>https://kyu08.github.io/blog/tags/go/</link>
     <description>Recent content in go on blog.kyu08.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>kyu08.com</copyright>
-    <lastBuildDate>Thu, 23 Feb 2023 01:15:48 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Feb 2023 01:15:48 +0900</lastBuildDate><atom:link href="https://kyu08.github.io/blog/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>yamlに定義したbookmarkをfzfで選択してブラウザで開くくんを作った</title>
-      <link>https://blog.kyu08.com/posts/fzf-bookmark-opener/</link>
+      <link>https://kyu08.github.io/blog/posts/fzf-bookmark-opener/</link>
       <pubDate>Thu, 23 Feb 2023 01:15:48 +0900</pubDate>
       
-      <guid>https://blog.kyu08.com/posts/fzf-bookmark-opener/</guid>
+      <guid>https://kyu08.github.io/blog/posts/fzf-bookmark-opener/</guid>
       <description>つくったもの yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くくんを作った。 https://github.com/kyu08/fzf-bookmark-opener こんな感じで動く。 コードの話 コード自体は</description>
       <content>&lt;h2 id=&#34;つくったもの&#34;&gt;つくったもの&lt;/h2&gt;
 &lt;p&gt;yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くくんを作った。&lt;/p&gt;
