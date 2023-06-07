@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TypeScript on blog.kyu08.com</title><link>https://blog.kyu08.com/tags/typescript/</link><description>Recent content in TypeScript on blog.kyu08.com</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>kyu08.com</copyright><lastBuildDate>Sun, 27 Dec 2020 01:15:48 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/typescript/index.xml" rel="self" type="application/rss+xml"/><item><title>Next.js Vercel で Blog をつくった</title><link>https://blog.kyu08.com/posts/20201227-built-blog/</link><pubDate>Sun, 27 Dec 2020 01:15:48 +0900</pubDate><guid>https://blog.kyu08.com/posts/20201227-built-blog/</guid><description>急にブログが書きたくなったのでつくった。 使った技術 Next.js TypeScript Vercel 感想 Vercel めっちゃ楽 Syntax Highlight できてうれしい const age: number = 1 // こんなかんじ これからやりたいこと header footer つ</description><content>&lt;p>急にブログが書きたくなったのでつくった。&lt;/p>
+&lt;h2 id="使った技術">使った技術&lt;/h2>
+&lt;ul>
+&lt;li>Next.js&lt;/li>
+&lt;li>TypeScript&lt;/li>
+&lt;li>Vercel&lt;/li>
+&lt;/ul>
+&lt;h2 id="感想">感想&lt;/h2>
+&lt;ul>
+&lt;li>Vercel めっちゃ楽&lt;/li>
+&lt;li>Syntax Highlight できてうれしい&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-typescript" data-lang="typescript">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">age&lt;/span>: &lt;span style="color:#66d9ef">number&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span> &lt;span style="color:#75715e">// こんなかんじ
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="これからやりたいこと">これからやりたいこと&lt;/h2>
+&lt;ul>
+&lt;li>header footer つくる&lt;/li>
+&lt;li>独自ドメイン取得&lt;/li>
+&lt;li>全体的に見た目をまともにする&lt;/li>
+&lt;li>記事一覧ページに 書いた日時・タグも表示する&lt;/li>
+&lt;li>簡単な自己紹介&lt;/li>
+&lt;li>各種SNSへのリンク&lt;/li>
+&lt;li>存在しないリンクへアクセスされたら記事一覧に戻す&lt;/li>
+&lt;/ul></content></item></channel></rss>

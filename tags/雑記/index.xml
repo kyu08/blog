@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>雑記 on blog.kyu08.com</title><link>https://blog.kyu08.com/tags/%E9%9B%91%E8%A8%98/</link><description>Recent content in 雑記 on blog.kyu08.com</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>kyu08.com</copyright><lastBuildDate>Fri, 03 Dec 2021 01:15:48 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/%E9%9B%91%E8%A8%98/index.xml" rel="self" type="application/rss+xml"/><item><title>自己紹介</title><link>https://blog.kyu08.com/posts/20211203-introduce/</link><pubDate>Fri, 03 Dec 2021 01:15:48 +0900</pubDate><guid>https://blog.kyu08.com/posts/20211203-introduce/</guid><description>今年の2月ごろから下書きを放置していて書いてなかったことに気付いてしまったので書きます。 都内でエンジニアをしています。 Neovim, Elm, TypeScript, 麻雀, ガジェット</description><content>&lt;p>今年の2月ごろから下書きを放置していて書いてなかったことに気付いてしまったので書きます。&lt;/p>
+&lt;p>都内でエンジニアをしています。&lt;/p>
+&lt;p>Neovim, Elm, TypeScript, 麻雀, ガジェットがすきです。&lt;/p>
+&lt;p>今月はブログたくさんかくぞ〜〜&lt;/p>
+&lt;p>おわり&lt;/p></content></item><item><title>2020年をかんたんに振り返る</title><link>https://blog.kyu08.com/posts/20201231-review-of-2020/</link><pubDate>Thu, 31 Dec 2020 01:15:48 +0900</pubDate><guid>https://blog.kyu08.com/posts/20201231-review-of-2020/</guid><description>このブログを作った動機でもある今年の振り返りを書いていきます。 今年はいろいろ大変な一年でしたが家にいる時間が増えた分たくさんやりたいことがで</description><content>&lt;p>このブログを作った動機でもある今年の振り返りを書いていきます。&lt;/p>
+&lt;p>今年はいろいろ大変な一年でしたが家にいる時間が増えた分たくさんやりたいことができた一年でもありました。&lt;/p>
+&lt;p>静的型付け言語デビューしたり(TypeScript, Scala)、内定先の選考インターンで課題だと感じた設計関連のインプット・アウトプットをたくさんできたのがよかったです。&lt;/p>
+&lt;p>あとはいくつか作りたいものをつくれて充実感があってよかったです。では振り返っていきます。&lt;/p>
+&lt;h2 id="1月2月">1月~2月&lt;/h2>
+&lt;p>のちに内定先となる第一志望の企業の本選考インターン(の続き)をやっていました。いちおう詳細は伏せますが、メンターの方々に助けていただきながらがんばりました。Slackでやりとりをしていたのですが、年末年始も反応していただきとっても助かりました。&lt;/p>
+&lt;p>使った技術はReactです。&lt;/p>
+&lt;p>無事内定は頂けたものの、モデルはどういう基準で定めたの?という質問に対して全然うまく説明できず、設計関連の知識の足りなさを強く感じました。&lt;/p>
+&lt;h2 id="3月">3月&lt;/h2>
+&lt;p>N予備校の&amp;quot;サーバーサイドプログラミング入門&amp;quot;と&amp;quot;実践サーバーサイドプログラミング&amp;quot;をやりました。&lt;/p>
+&lt;p>はじめて仮想環境をつかってssh接続しながら開発しました。&lt;/p>
+&lt;p>動くコードが載ってるだけでなく割と詳しめに背景となる知識を解説してあってかなりわかりやすかったです。自分も書いたコードの背景や実装の根拠をしっかりと語れるようになりたい&amp;hellip;。&lt;/p>
+&lt;h2 id="4月">4月&lt;/h2>
+&lt;p>本選考インターンでつくった WebApp のリファクタリングをしました。
+あとはTypeScriptの勉強をはじめました。やったことは&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.typescriptlang.org/docs/handbook/intro.html">TypeScript HANDBOOK&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://typescript-jp.gitbook.io/deep-dive/">TypeScript DeepDive&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>あたりです。始めて静的型付けの言語に触れて表現力の豊かさを感じました。わかりやすさと堅牢さが得られそう&amp;hellip;、エディタがいろいろ教えてくれるので開発効率も上がりそう&amp;hellip;などと感じました。&lt;/p>
+&lt;h2 id="5月">5月&lt;/h2>
+&lt;ul>
+&lt;li>CLI の todo アプリを Node.js(TypeScript) でつくった&lt;/li>
+&lt;li>読みかけだったリーダブルコードをよんだ&lt;/li>
+&lt;li>Repository パターンを実装してみた&lt;/li>
+&lt;/ul>
+&lt;p>CLI の todo アプリは CLI で TODOを確認したくなったのと TypeScript　で何か作ってみたくなったので作って &lt;a href="https://www.npmjs.com/package/great-todo-cli">npm で公開しました。&lt;/a>&lt;/p>
+&lt;p>責務の分離を意識して書いたので今までよりは見通しの良いコードを書けたと思っています。&lt;/p>
+&lt;p>あとははじめて Webpack の設定を書いて、&lt;code>create-react-app&lt;/code> の便利さを感じました。(今まで&lt;code>create-react-app&lt;/code>が何をしてくれているのかわかってなかった&amp;hellip;)&lt;/p>
+&lt;h2 id="6月">6月&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://www.amazon.co.jp/dp/B01L8SEVYI/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1">オブジェクト指向設計実践ガイド　～Rubyでわかる 進化しつづける柔軟なアプリケーションの育て方&lt;/a>
+をよんだ&lt;/li>
+&lt;li>&lt;a href="https://www.amazon.co.jp/dp/B073GSDBGT/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1">現場で役立つシステム設計の原則 〜変更を楽で安全にするオブジェクト指向の実践技法&lt;/a>
+をよんだ&lt;/li>
+&lt;li>&lt;a href="https://www.amazon.co.jp/dp/B082WXZVPC/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1">ドメイン駆動設計入門 ボトムアップでわかる！ドメイン駆動設計の基本&lt;/a>
+をよんだ&lt;/li>
+&lt;/ul>
+&lt;p>6月はたくさん本を読みました。毎日作業を始める前に1時間本を読むスタイルが自分にあっている感じでした。&lt;/p>
+&lt;p>Ruby の OOP 本は&lt;/p>
+&lt;ul>
+&lt;li>単一責任で設計しよう&lt;/li>
+&lt;li>依存関係をちゃんと管理しよう&lt;/li>
+&lt;/ul>
+&lt;p>みたいなことが書いてあった気がします。依存関係についてあまり意識したことがなかったので新たな観点を獲得できました。&lt;/p>
+&lt;p>そのあと読んだ現場で役立つ~は&amp;quot;ドメインモデルとは&amp;quot;みたいな話が書いてあって今まで自分の中で整理できてなかったことが言語化してあってとてもスッキリしました。&lt;/p>
+&lt;p>↑の2冊を読んだ上で成瀬さんのDDD本を読んだのでスムーズに理解できました。我ながら結構いい感じの流れでDDD(の入り)を学んでいけた感じがしています。(あと成瀬さんの本がわかりやすすぎた&amp;hellip;。とてもおすすめです！)&lt;/p>
+&lt;h2 id="7月">7月&lt;/h2>
+&lt;ul>
+&lt;li>Twitter のクローンアプリの設計 &amp;amp; フロントエンドの実装開始&lt;/li>
+&lt;li>&lt;a href="https://www.amazon.co.jp/Web%E3%82%92%E6%94%AF%E3%81%88%E3%82%8B%E6%8A%80%E8%A1%93-HTTP%E3%80%81URI%E3%80%81HTML%E3%80%81%E3%81%9D%E3%81%97%E3%81%A6REST-WEB-PRESS-plus/dp/4774142042">Webを支える技術&lt;/a>
+をよんだ&lt;/li>
+&lt;/ul>
+&lt;p>設計のアウトプットをしたかったんですが特にアプリのアイディアとかもなかったので Twitter のクローンアプリを作りました。&lt;/p>
+&lt;p>事前に&lt;/p>
+&lt;ul>
+&lt;li>要件定義&lt;/li>
+&lt;li>スケジュール&lt;/li>
+&lt;li>設計&lt;/li>
+&lt;/ul>
+&lt;p>をしてから開発に入ったので大きな手戻りなく開発できました。と同時になかなかコードを書き始められなくてもどかしく感じました&amp;hellip;。&lt;/p>
+&lt;p>クローンアプリのことについてはまた別の記事で詳しく書きたいと思います。&lt;/p>
+&lt;h2 id="8月">8月&lt;/h2>
+&lt;ul>
+&lt;li>応用情報の勉強をはじめた&lt;/li>
+&lt;li>Twitter のクローンアプリのバックエンドの実装&lt;/li>
+&lt;/ul>
+&lt;p>大学・大学院で情報系を学んでいる&amp;amp;学んできた人たちに少しでも追いつきたいと思い応用情報を受けることにしました。(資格がとれるからというより試験があって合否があった方が頑張れるので&amp;hellip;)&lt;/p>
+&lt;p>友達と毎日1時間くらい Udemy の動画をみる形で応用情報の勉強をやっていきました。(動画自体は40時間くらい)&lt;/p>
+&lt;p>Udemy で試験範囲を一通り学んだあとは、試験前2週間程度で過去問10回分を3周くらいしました。&lt;/p>
+&lt;p>午前問題はわりとはやくから安定して7割以上とれてたのでよかったんですが午後問題が6割前後しか解けなくてずっと不安でした&amp;hellip;。&lt;/p>
+&lt;h2 id="9月">9月&lt;/h2>
+&lt;ul>
+&lt;li>Scala の勉強をはじめた&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://scala-text.github.io/scala_text/">scala-text&lt;/a>
+や
+&lt;a href="https://github.com/kyu08/tour-of-scala">tour of scala&lt;/a>
+とかをやりました。&lt;/p>
+&lt;p>TypeScriptと比較して、型まわりの機能が多かったり(共変、非変のあたりとか)ビルトインのメソッドが多かったりして、学習コストはあるけどちゃんと学んだら堅牢で表現力豊かなコードがかけそうだな〜という印象。&lt;/p>
+&lt;p>コップ本も買いましたが途中まで読んで積んじゃってます。再開したい。&lt;/p>
+&lt;h2 id="10月">10月&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://www.amazon.co.jp/dp/B00GRKD6XU/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1">Evans本&lt;/a>
+をよんだ&lt;/li>
+&lt;li>Vim に入門したけど2日で心がおれた&lt;/li>
+&lt;/ul>
+&lt;p>Evans本を読みました。成瀬さんのDDD本を読んでから望んだので前半はわりと理解できましたが後半はサッパリでした&amp;hellip;。🤔&lt;/p>
+&lt;p>IntelliJ ちょっと重いなあ&amp;hellip;ということで NeoVim に入門してみましたが Plugin がなかなかうまく動かなかったりして IntelliJ でやってることができる状態にするのめっちゃ大変やん&amp;hellip;となり挫折しました。&lt;/p>
+&lt;h2 id="11月">11月&lt;/h2>
+&lt;ul>
+&lt;li>Scala x PlayFramework で簡単なAPIサーバをつくった&lt;/li>
+&lt;/ul>
+&lt;p>学会準備のためあまり勉強できず、、&lt;/p>
+&lt;p>ScalikeJDBC の使い方が難しくて詰まった。あと Scala の&lt;code>implicit&lt;/code>がむずい。&lt;/p>
+&lt;h2 id="12月">12月&lt;/h2>
+&lt;ul>
+&lt;li>応用情報受かった&lt;/li>
+&lt;li>このブログを Next.js でつくった&lt;/li>
+&lt;/ul>
+&lt;p>応用情報受かりました！🎉&lt;/p>
+&lt;p>午後が結構不安だったのでめちゃめちゃ嬉しかったです。(午前78%, 午後62.5%だった)&lt;/p>
+&lt;p>わりと広く浅く学べたのでこれからがっつり学ぶ必要が出てきたときの土台となってくれれば&amp;hellip;と期待しています。。&lt;/p>
+&lt;p>Next.js に入門しました。今まで component が増えてくると辛みが増していましたが component を&lt;code>/pages&lt;/code>と&lt;code>/component&lt;/code>に配置するやり方が読みやすさ的にも書きやすさ的にもいいなと感じました。&lt;/p>
+&lt;p>あとは Vercel へのデプロイが簡単すぎて感動しました。&lt;/p>
+&lt;p>詳しくは&lt;a href="https://blog.kyu08.com/posts/constructed-blog">こちら&lt;/a>をご覧ください。&lt;/p>
+&lt;h2 id="まとめ">まとめ&lt;/h2>
+&lt;p>最後まで読んでくださりありがとうございます。&lt;/p>
+&lt;p>あと4ヶ月でエンジニアとしてのキャリアがスタートするのでそこまで頑張って力を高めていちはやく技術力で会社に貢献できるようになりたいです。&lt;/p>
+&lt;p>2021年もがんばります。&lt;/p></content></item></channel></rss>

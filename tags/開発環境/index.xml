@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>開発環境 on blog.kyu08.com</title><link>https://blog.kyu08.com/tags/%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83/</link><description>Recent content in 開発環境 on blog.kyu08.com</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>kyu08.com</copyright><lastBuildDate>Sun, 05 Feb 2023 01:15:48 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83/index.xml" rel="self" type="application/rss+xml"/><item><title>Tmux+NeovimでJetBrains IDEのScratchみたいな機能を実現している話</title><link>https://blog.kyu08.com/posts/tmux-neovim-scratch/</link><pubDate>Sun, 05 Feb 2023 01:15:48 +0900</pubDate><guid>https://blog.kyu08.com/posts/tmux-neovim-scratch/</guid><description>任意の構成のSandbox的な環境をTmuxのwindowとして用意するようにしたところターミナルから出ずにサクっと動作検証とかが行えてハッ</description><content>&lt;p>任意の構成のSandbox的な環境をTmuxのwindowとして用意するようにしたところターミナルから出ずにサクっと動作検証とかが行えてハッピーになったよ、という記事。ここではvanillaなGoのプロジェクトの例を紹介しますが、お好みの構成でSandbox環境を作ってみてください。&lt;/p>
+&lt;p>全然大したことをやっているわけではないですがTmux, Neovimやそれらのプラグインの普及活動になれば嬉しいので書いてみます。&lt;/p>
+&lt;h2 id="動作イメージ">動作イメージ&lt;/h2>
+&lt;p>こんな感じでvanillaのGoプロジェクトをTmuxのwindowに開いておいて、確認したくなったときにすぐwindowを切り替えてコードを書いて実行結果を確認できるようにしている。(Gifの例はGoの書式指定子&lt;code>%+v&lt;/code>の動作を忘れて試してみているところ)&lt;/p>
+&lt;p>&lt;img src="go-playground.gif" alt="go-playground">&lt;/p>
+&lt;p>Gifでやっていることは以下&lt;/p>
+&lt;ol>
+&lt;li>GoのSandbox環境を開いたNeovimが起動しているwindowに切り替え&lt;/li>
+&lt;li>コードを書く&lt;/li>
+&lt;li>Neovim上でターミナルを表示&lt;/li>
+&lt;li>&lt;code>make run&lt;/code>を実行してコード実行&lt;/li>
+&lt;li>結果を確認&lt;/li>
+&lt;li>元いたwindowに戻る&lt;/li>
+&lt;/ol>
+&lt;p>tmux-fzfなど筆者のターミナル環境については以下参照&lt;/p>
+&lt;p>&lt;a href="https://blog.kyu08.com/posts/my-dev-setup-terminal">開発の効率化のためにやっていること ターミナル編&lt;/a>&lt;/p>
+&lt;p>筆者はGoの動作を確認したいことがほとんどなのでこういった構成にしているが、必要に応じてよく使うFWをセットアップした環境を作っておくと便利そう。&lt;/p>
+&lt;h2 id="プロジェクトの内容">プロジェクトの内容&lt;/h2>
+&lt;p>Go固有の内容もあるので参考程度で。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>├── .git
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── .gitignore
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── go.mod
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── go.sum
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── main.go
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── main.go.sample
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├── main_test.go
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>└── Makefile
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>基本的に&lt;code>main.go&lt;/code>の中身を編集して、&lt;code>go run .&lt;/code>で実行して実行結果を確認するということをしている。&lt;/p>
+&lt;p>&lt;code>Makefile&lt;/code>の中身は以下のような感じになっていて、&lt;code>make run&lt;/code>でコード実行、&lt;code>make clear&lt;/code>で&lt;code>main.go&lt;/code>をまっさらにできるようにしているだけである。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Makefile" data-lang="Makefile">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">.PHONY&lt;/span>&lt;span style="color:#f92672">:&lt;/span> run clear
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">run&lt;/span>&lt;span style="color:#f92672">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> @go run .
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">clear&lt;/span>&lt;span style="color:#f92672">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> @cp ./main.go.sample ./main.go
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>main.go.sample&lt;/code>の内容は以下。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">package&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">func&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>あとはよく見返したくなるコードは&lt;code>main.go&lt;/code>以外のファイル名で保存したり、commitしておくと後からでもさっと確認できてよさそう。(筆者はそこまでやってない)&lt;/p>
+&lt;h2 id="感想">感想&lt;/h2>
+&lt;p>ターミナルから出ずに作業が完結できてうれしい。&lt;/p>
+&lt;p>同様のことはGoの場合はブラウザからThe Go Playground(※)を開いても行えるが筆者は何でもターミナルでできると嬉しい人なのでできるようにしてみた。&lt;/p>
+&lt;p>※ブラウザ上で実行できるGoのエディタ + 実行環境がセットになったやつ。&lt;a href="https://go.dev/play/">https://go.dev/play/&lt;/a>&lt;/p>
+&lt;p>あとやるとしたらThe Go PlaygroundにあるURL発行機能とかを実現できると他の人への共有も楽になっていいのかもしれない。(今のところあんまり他の人に共有する機会がないので困っていない)&lt;/p>
+&lt;h2 id="補足">補足&lt;/h2>
+&lt;p>最後に補足としてGif内で使っているNeovimのプラグインを紹介します。&lt;/p>
+&lt;h3 id="ターミナル表示">ターミナル表示&lt;/h3>
+&lt;p>&lt;a href="https://github.com/voldikss/vim-floaterm">voldikss/vim-floaterm&lt;/a>&lt;/p>
+&lt;p>&lt;img src="floaterm.gif" alt="floaterm">&lt;/p>
+&lt;p>GoのSandbox環境の&lt;code>main.go&lt;/code>に書いたスクリプトを実行するために、Neovimからターミナルを表示するシーンで使っている。&lt;/p>
+&lt;p>コード編集してサクっと動作確認したいときなどに便利。(といいつつ最近動作の重さが目立ってきたので&lt;code>&amp;lt;C-z&amp;gt;&lt;/code>でNeovimの起動元に戻ってターミナルを操作することが多い)&lt;/p>
+&lt;h3 id="カーソル移動">カーソル移動&lt;/h3>
+&lt;p>&lt;a href="https://github.com/yuki-yano/fuzzy-motion.vim">yuki-yano/fuzzy-motion.vim&lt;/a>&lt;/p>
+&lt;p>&lt;code>fmt.Printf(&amp;quot;u: %v\n&amp;quot;, u)&lt;/code>の&lt;code>u&lt;/code>から&lt;code>%v&lt;/code>の位置にカーソル移動する際に使っているプラグイン。&lt;/p>
+&lt;p>動作のイメージはこんな感じ。&lt;/p>
+&lt;p>&lt;img src="fuzzy-motion.gif" alt="fuzzy-motion">&lt;/p>
+&lt;p>起動すると文字がグレーアウトするのでジャンプしたい文字列を入力するとその文字にジャンプするためのキーワードを表示してくれるというプラグイン。&lt;/p>
+&lt;p>同様の機能をもつプラグインとしてはeasy-motionなどのプラグインが有名だが、fuzzy-motionはジャンプしたい文字列をfuzzy-finder形式で絞り込んでくれるのが大きな特徴。(詳しくはリポジトリのREADME参照)&lt;/p>
+&lt;p>筆者はノーマルモードで&lt;code>f&lt;/code>キーを押下するとプラグインが起動するように設定している。&lt;/p>
+&lt;p>カーソル移動の効率がよすぎて正直もうこれなしでは開発したくない。&lt;/p>
+&lt;h3 id="lsp-server">LSP Server&lt;/h3>
+&lt;p>&lt;a href="https://github.com/neoclide/coc.nvim">neoclide/coc.nvim&lt;/a>&lt;/p>
+&lt;p>Language Serverをホストするためのプラグイン。&lt;/p>
+&lt;p>すごく簡単にいうと補完や関数定義を表示したり定義ジャンプできるようにしたりしてくれる。&lt;/p>
+&lt;p>&lt;img src="coc-nvim.gif" alt="coc-nvim">&lt;/p>
+&lt;p>以上です。ここまで読んでくれてありがとうございました。&lt;/p></content></item><item><title>開発の効率化のためにやっていること ターミナル編</title><link>https://blog.kyu08.com/posts/my-dev-setup-terminal/</link><pubDate>Thu, 15 Dec 2022 01:15:48 +0900</pubDate><guid>https://blog.kyu08.com/posts/my-dev-setup-terminal/</guid><description>【この記事はUnipos Advent Calendar 2022の記事です】 この記事では筆者が開発の効率化のために行っている工夫や使っているツールなどについて紹介します</description><content>&lt;p>【この記事は&lt;a href="https://qiita.com/advent-calendar/2022/unipos">Unipos Advent Calendar 2022&lt;/a>の記事です】&lt;/p>
+&lt;p>この記事では筆者が開発の効率化のために行っている工夫や使っているツールなどについて紹介します。
+「他にもこんなツールあるよ！」「こんな設定おすすめだよ！」などなどありましたらtwitterとかで教えてもらえると助かります。&lt;/p>
+&lt;p>今回はターミナル編です！&lt;/p>
+&lt;h2 id="シェル">シェル&lt;/h2>
+&lt;p>シェルはzshを使っています。 一時期fishも使っていましたが、環境移行のコストが低かったりPOSIX準拠だったりするメリットに旨味を感じてzshに乗り換えました。&lt;/p>
+&lt;h3 id="よく使うalias">よく使うalias&lt;/h3>
+&lt;p>zshでは&lt;code>alias hoge='echo hoge'&lt;/code>のように記述することでaliasを定義することができます。&lt;/p>
+&lt;p>ここでは筆者がよく使うaliasをいくつか紹介します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-zsh" data-lang="zsh">&lt;span style="display:flex;">&lt;span>alias m&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#39;MEMODIR=~/code/memo; cd $MEMODIR; FILE=$MEMODIR/$(date +%Y%m%d).md; if [ ! -e $FILE ]; then echo &amp;#34;# todo \n\n# done\n&amp;#34; &amp;gt;&amp;gt; $FILE; fi; nvim $FILE&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>日毎に&lt;code>yyyymmdd.md&lt;/code>形式の名前のファイルを作成してvimで開く。
+ファイルが存在していなければ&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-md" data-lang="md">&lt;span style="display:flex;">&lt;span># todo
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># done
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>をファイルに書き込んだうえでvimで開く、という内容のワンライナーです。&lt;/p>
+&lt;p>実際に呼び出すとこんな感じです。&lt;/p>
+&lt;p>&lt;img src="memo.gif" alt="memo">&lt;/p>
+&lt;p>ちなみに筆者は&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-md" data-lang="md">&lt;span style="display:flex;">&lt;span># todo
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">-&lt;/span> タスクA
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> 子タスクa
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> 子タスクb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">-&lt;/span> タスクB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># done
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>のような感じでタスクを書いていき、完了したら以下のように&lt;code>done&lt;/code>に移すという素朴な方法でタスク管理をしています。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-md" data-lang="md">&lt;span style="display:flex;">&lt;span># todo
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">-&lt;/span> タスクB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># done
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">-&lt;/span> タスクA
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> 子タスクa
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">-&lt;/span> 子タスクb
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-zsh" data-lang="zsh">&lt;span style="display:flex;">&lt;span>alias ghw&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#39;gh repo view -w&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>gh&lt;/code>コマンドを利用して現在いるリポジトリをブラウザでGitHubで開くコマンド&lt;/p>
+&lt;p>&lt;img src="ghw.gif" alt="ghw">&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-zsh" data-lang="zsh">&lt;span style="display:flex;">&lt;span>alias pbc&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#39;pbcopy &amp;amp;&amp;amp; pbpaste&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>make test | pbc&lt;/code>のように出力をパイプで&lt;code>pbc&lt;/code>に渡すとクリップボードにコピーしつつ標準出力に出力してくれる。&lt;/p>
+&lt;p>コマンドの出力をコピーしたいけど出力内容もその場で確認したいときに便利。&lt;/p>
+&lt;p>こちらの記事で紹介されていた。&lt;/p>
+&lt;p>&lt;a href="https://takuya-1st.hatenablog.jp/entry/2017/05/30/093000">https://takuya-1st.hatenablog.jp/entry/2017/05/30/093000&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-zsh" data-lang="zsh">&lt;span style="display:flex;">&lt;span>alias finder&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#39;open -a Finder ./&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>現在いるディレクトをfinderで開くコマンド&lt;/p>
+&lt;p>ごく稀に使う。&lt;/p>
+&lt;h3 id="ディレクトリ移動">ディレクトリ移動&lt;/h3>
+&lt;p>zshにはcdrという、移動したことがあるディレクトリを自動的に保持してくれる機能があります。&lt;/p>
+&lt;p>これをいい感じにファジーファインダーから呼び出すスクリプトを公開して下さっている方がいたのでありがたく使わせてもらっています。&lt;/p>
+&lt;p>&lt;a href="https://www.rasukarusan.com/entry/2018/08/14/083000">https://www.rasukarusan.com/entry/2018/08/14/083000&lt;/a>&lt;/p>
+&lt;p>fzfをインストールした上で以下のスクリプトを&lt;code>.zshrc&lt;/code>に記述すると&lt;code>c&lt;/code>で呼び出すことができます。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-zsh" data-lang="zsh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># fzf-cdr &lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>alias c&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#39;fzf-cdr&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">function&lt;/span> fzf-cdr&lt;span style="color:#f92672">()&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> target_dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">`&lt;/span>cdr -l | sed &lt;span style="color:#e6db74">&amp;#39;s/^[^ ][^ ]* *//&amp;#39;&lt;/span> | fzf&lt;span style="color:#e6db74">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> target_dir&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">`&lt;/span>echo &lt;span style="color:#e6db74">${&lt;/span>target_dir/&lt;span style="color:#ae81ff">\~&lt;/span>/$HOME&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> &lt;span style="color:#f92672">[&lt;/span> -n &lt;span style="color:#e6db74">&amp;#34;&lt;/span>$target_dir&lt;span style="color:#e6db74">&amp;#34;&lt;/span> &lt;span style="color:#f92672">]&lt;/span>; &lt;span style="color:#66d9ef">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> cd $target_dir
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># cdrの設定&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>autoload -Uz is-at-least
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">if&lt;/span> is-at-least 4.3.11
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> add-zsh-hook chpwd chpwd_recent_dirs
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> zstyle &lt;span style="color:#e6db74">&amp;#39;:chpwd:*&amp;#39;&lt;/span> recent-dirs-max &lt;span style="color:#ae81ff">500&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> zstyle &lt;span style="color:#e6db74">&amp;#39;:chpwd:*&amp;#39;&lt;/span> recent-dirs-default yes
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> zstyle &lt;span style="color:#e6db74">&amp;#39;:completion:*&amp;#39;&lt;/span> recent-dirs-insert both
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># fzfの設定&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>export FZF_DEFAULT_OPTS&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#39;--color=fg+:11 --height 70% --reverse --exit-0 --multi&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>これを実際に使うとこんな感じになります。ファジーファインダーを利用して効率的にディレクトリ移動することができます。&lt;/p>
+&lt;p>&lt;img src="fzf-cdr.gif" alt="cdr">&lt;/p>
+&lt;p>やっていることは以下です。&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>.zshrc&lt;/code>に定義したfzf-cdrを実行&lt;/li>
+&lt;li>移動したいディレクトリのパスの一部を入力&lt;/li>
+&lt;li>候補から移動したいディレクトリを選択する&lt;/li>
+&lt;/ol>
+&lt;h3 id="コマンド履歴検索">コマンド履歴検索&lt;/h3>
+&lt;p>実行したコマンドの履歴についてもfzfを使って絞り込みを行うようにしています。&lt;/p>
+&lt;p>これもスクリプトを公開して下さっている方がいたのでありがたく使わせてもらっています。&lt;/p>
+&lt;p>&lt;a href="https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/">https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/&lt;/a>&lt;/p>
+&lt;p>以下のスクリプトを&lt;code>.zshrc&lt;/code>に記述すると、&lt;code>ctrl + r&lt;/code>でコマンド履歴を呼び出すことができます。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-zsh" data-lang="zsh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">function&lt;/span> &lt;span style="color:#66d9ef">select&lt;/span>-history&lt;span style="color:#f92672">()&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> BUFFER&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#66d9ef">$(&lt;/span>history -n -r &lt;span style="color:#ae81ff">1&lt;/span> | fzf --no-sort +m --query &lt;span style="color:#e6db74">&amp;#34;&lt;/span>$LBUFFER&lt;span style="color:#e6db74">&amp;#34;&lt;/span> --prompt&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;History &amp;gt; &amp;#34;&lt;/span>&lt;span style="color:#66d9ef">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> CURSOR&lt;span style="color:#f92672">=&lt;/span>$#BUFFER
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>zle -N &lt;span style="color:#66d9ef">select&lt;/span>-history
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>bindkey &lt;span style="color:#e6db74">&amp;#39;^r&amp;#39;&lt;/span> &lt;span style="color:#66d9ef">select&lt;/span>-history
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="command-history.gif" alt="command-history">&lt;/p>
+&lt;h2 id="git操作">Git操作&lt;/h2>
+&lt;p>Git操作のほとんどはGitのTUIクライアントであるLazygitを使っています。&lt;/p>
+&lt;p>&lt;a href="https://github.com/jesseduffield/lazygit">https://github.com/jesseduffield/lazygit&lt;/a>&lt;/p>
+&lt;p>Lazygitはターミナル上で動作するリッチなGitクライアントでGitに関する大抵のことを行うことができます。(機能が豊富すぎて何ができて何ができないのかを正確に把握できていない)&lt;/p>
+&lt;p>以下はLazygitを使って変更をaddしてcommitしてpushする例です。&lt;/p>
+&lt;p>&lt;img src="lazygit-push.gif" alt="lazygit-push">&lt;/p>
+&lt;p>見やすいですし、&lt;strong>少ないタイプ数で操作できる&lt;/strong>点でおすすめです。他にも基本的なブランチ操作はもちろんのこと、&lt;code>git rebase -i&lt;/code>相当のこともスピーディーにできるのでよく使っています。&lt;/p>
+&lt;p>ちなみに筆者はkdheepak/lazygit.nvimというプラグインを使ってNeovim上からLazygitを呼び出しています。&lt;/p>
+&lt;p>&lt;a href="https://github.com/kdheepak/lazygit.nvim">https://github.com/kdheepak/lazygit.nvim&lt;/a>&lt;/p>
+&lt;h2 id="ターミナルエミュレータ">ターミナルエミュレータ&lt;/h2>
+&lt;p>筆者はターミナルエミュレータ(以下ターミナル)としてAlacrittyを使っています。&lt;/p>
+&lt;p>&lt;a href="https://github.com/alacritty/alacritty">https://github.com/alacritty/alacritty&lt;/a>&lt;/p>
+&lt;p>筆者は普段開発にNeovimを利用しているのですが、以前からプロジェクトの全文検索に時間がかかってしまう点が気になっていました。
+動作が高速なターミナルを探していたところRust製のターミナルであるAlacrittyにたどり着きました。&lt;/p>
+&lt;p>iTerm2からの乗り換えでしたが満足できるだけの速度になりました。&lt;strong>ターミナルの速度を早くしたい人にはオススメ&lt;/strong>です。あとは&lt;strong>設定をyamlで記述できる&lt;/strong>のも好みなポイントです。&lt;/p>
+&lt;p>カラースキームはTokyo Nightを利用しています。&lt;/p>
+&lt;p>&lt;a href="https://github.com/zatchheems/tokyo-night-alacritty-theme">https://github.com/zatchheems/tokyo-night-alacritty-theme&lt;/a>&lt;/p>
+&lt;p>&lt;img src="tokyonight.png" alt="tokyonight">&lt;/p>
+&lt;p>Alacrittyにはタブ機能がなくタブ的な機能を実現するためにはtmuxなどのターミナルマルチプレクサを利用する必要があるため筆者はtmuxを利用しています。
+設定・プラグインなどは後述しますが、tmuxの操作感も好みなので割と満足しています。&lt;/p>
+&lt;p>他にもRust製のターミナルとしてWarp, Weztermなどがありますが筆者の環境ではWarpはNeovimのcolorschemeの反映がうまくできず、Weztermは画面の再描画まわりの不具合が多少あったため、採用しませんでした。(Warp便利そうだしみやすいので使いたかった)&lt;/p>
+&lt;h2 id="ターミナルのタブ管理">ターミナルのタブ管理&lt;/h2>
+&lt;p>前述の通りAlacrittyにはタブ機能がないため、tmuxを使ってターミナルのタブ管理を行っています。&lt;/p>
+&lt;p>&lt;a href="https://github.com/tmux/tmux">https://github.com/tmux/tmux&lt;/a>&lt;/p>
+&lt;h3 id="ステータスラインの表示">ステータスラインの表示&lt;/h3>
+&lt;p>ステータスラインは比較的シンプルにしていて、&lt;/p>
+&lt;ul>
+&lt;li>ウィンドウ一覧&lt;/li>
+&lt;li>現在時刻&lt;/li>
+&lt;/ul>
+&lt;p>を表示するようにしています。&lt;/p>
+&lt;p>&lt;img src="tmux-status-line.png" alt="tmux-status-line">&lt;/p>
+&lt;p>普段の開発ではプロジェクトごとにウィンドウを開き、必要に応じて切り替える運用にしています。&lt;/p>
+&lt;h3 id="ウィンドウの切り替え">ウィンドウの切り替え&lt;/h3>
+&lt;p>筆者はふだんプロジェクトごとのウィンドウに加えてmemo用のウィンドウ・dotfiles用のウィンドウなども開いており、常時ウィンドウが15前後あります。筆者は簡単なタスク管理もmemo用ウィンドウに立ち上げたNeovim内で行っているため、ウィンドウの切り替えを頻繁に行います。&lt;/p>
+&lt;p>以前まではウィンドウ切り替えを&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>prefix + w&lt;/code> でウィンドウの一覧を表示&lt;/li>
+&lt;li>目的のウィンドウの位置を確認&lt;/li>
+&lt;li>目的のウィンドウまで &lt;code>ctrl + n&lt;/code>, &lt;code>ctrl + p&lt;/code> で移動&lt;/li>
+&lt;li>選択する&lt;/li>
+&lt;/ol>
+&lt;p>という手順で行っていましたがウィンドウが増えてくると地味にウィンドウ移動が大変になっていきました。以下は従来のウィンドウ切り替えの様子です。&lt;/p>
+&lt;p>&lt;img src="tmux-window.gif" alt="tmux-window">&lt;/p>
+&lt;p>どうにかもう少し楽にウィンドウ切り替えをできないかと探していたところsainnhe/tmux-fzfに出会いました。&lt;/p>
+&lt;p>&lt;a href="https://github.com/sainnhe/tmux-fzf">https://github.com/sainnhe/tmux-fzf&lt;/a>&lt;/p>
+&lt;p>sainnhe/tmux-fzfはファジーファインダーで効率的にtmuxを操作するためのプラグインです。&lt;/p>
+&lt;p>詳しくはリポジトリのREADMEに譲りますが、&lt;/p>
+&lt;ul>
+&lt;li>セッション管理&lt;/li>
+&lt;li>ウィンドウ管理&lt;/li>
+&lt;li>ペイン管理&lt;/li>
+&lt;li>コマンドの検索&lt;/li>
+&lt;/ul>
+&lt;p>などが可能です。&lt;/p>
+&lt;p>筆者はウィンドウ管理機能の中のウィンドウの切り替え機能を使っています。
+sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>prefix&lt;/code> + &lt;code>prefix&lt;/code> でtmux-fzfのウィンドウ一覧を表示&lt;/li>
+&lt;li>目的のウィンドウ名の一部を入力&lt;/li>
+&lt;li>選択する&lt;/li>
+&lt;/ol>
+&lt;p>という手順でできるようになりました。文字にすると違いが伝わりづらいですが、ファジーファインダーを使ってウィンドウの選択を行うことができるようになったことでキーのタイプ数や切り替えの際の脳の負荷を大幅に減らすことができました。&lt;/p>
+&lt;p>&lt;img src="tmux-fzf.gif" alt="tmux-fzf">&lt;/p>
+&lt;h2 id="おわりに">おわりに&lt;/h2>
+&lt;p>ここまで読んでくださってありがとうございました。&lt;/p>
+&lt;p>需要がありそうだったら&lt;/p>
+&lt;ul>
+&lt;li>Neovim編&lt;/li>
+&lt;li>alfred編&lt;/li>
+&lt;li>chrome拡張機能編&lt;/li>
+&lt;/ul>
+&lt;p>なども書こうと思います。&lt;/p></content></item></channel></rss>

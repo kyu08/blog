@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Elm on blog.kyu08.com</title><link>https://blog.kyu08.com/tags/elm/</link><description>Recent content in Elm on blog.kyu08.com</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>kyu08.com</copyright><lastBuildDate>Fri, 17 Dec 2021 01:15:48 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/elm/index.xml" rel="self" type="application/rss+xml"/><item><title>Elm で固定長配列が扱えるライブラリ elm-static-array を触ってみた</title><link>https://blog.kyu08.com/posts/2021121217-elm-static-array/</link><pubDate>Fri, 17 Dec 2021 01:15:48 +0900</pubDate><guid>https://blog.kyu08.com/posts/2021121217-elm-static-array/</guid><description>Elm で固定長配列を扱うためのライブラリ elm-static-array を触ってみたので感じたことを書いていきます。 elm-static-array とは elm-static-array は Elm で固定長配列を扱うためのライブラリです。 配列の</description><content>&lt;p>Elm で固定長配列を扱うためのライブラリ elm-static-array を触ってみたので感じたことを書いていきます。&lt;/p>
+&lt;h2 id="elm-static-array-とは">elm-static-array とは&lt;/h2>
+&lt;p>&lt;a href="https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/">elm-static-array&lt;/a> は Elm で固定長配列を扱うためのライブラリです。&lt;/p>
+&lt;p>配列の長さを型で表現できることが特徴です。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elm" data-lang="elm">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">-- StaticArray&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">-- 長さ 4 の配列&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>arrayLength&lt;span style="color:#ae81ff">4&lt;/span> &lt;span style="color:#a6e22e">:&lt;/span> &lt;span style="color:#66d9ef">StaticArray&lt;/span> &lt;span style="color:#66d9ef">Index&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>&lt;span style="color:#66d9ef">Four&lt;/span> &lt;span style="color:#66d9ef">String&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">-- 通常の Array&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ordinaryArray &lt;span style="color:#a6e22e">:&lt;/span> &lt;span style="color:#66d9ef">Array&lt;/span> &lt;span style="color:#66d9ef">String&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="どんな場面で使ったか">どんな場面で使ったか&lt;/h2>
+&lt;p>趣味で開発している麻雀の点数集計アプリで使いました。&lt;/p>
+&lt;p>各プレイヤーの試合毎のスコアを記録して合計を表示するだけの簡単なアプリケーションです。(※実際には順位点やトビ賞の計算などもやっていますがここでは割愛)&lt;/p>
+&lt;p>&lt;img src="jan-log-demo.png" alt="jan-log-demo.png">&lt;/p>
+&lt;p>ここで &lt;strong>参加者の名前&lt;/strong> および &lt;strong>その試合のスコア&lt;/strong> を &lt;code>Array String&lt;/code> として扱おうとすると以下のようになります。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elm" data-lang="elm">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">type&lt;/span> &lt;span style="color:#66d9ef">alias&lt;/span> &lt;span style="color:#66d9ef">Players&lt;/span> &lt;span style="color:#a6e22e">=&lt;/span> &lt;span style="color:#66d9ef">Array&lt;/span> &lt;span style="color:#66d9ef">String&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">type&lt;/span> &lt;span style="color:#66d9ef">alias&lt;/span> &lt;span style="color:#66d9ef">Points&lt;/span> &lt;span style="color:#a6e22e">=&lt;/span> &lt;span style="color:#66d9ef">Array&lt;/span> &lt;span style="color:#66d9ef">String&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>これではあらゆる長さの配列をとることができてしまいますが、仕様上どちらも長さ 4 もしくは 5 の配列しかとることはありません。
+そこで elm-static-array を使って配列の長さの情報を型で表現しました。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elm" data-lang="elm">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">type&lt;/span> &lt;span style="color:#66d9ef">Players&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">=&lt;/span> &lt;span style="color:#66d9ef">Players4&lt;/span> (&lt;span style="color:#66d9ef">StaticArray&lt;/span> &lt;span style="color:#66d9ef">Index&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>&lt;span style="color:#66d9ef">Four&lt;/span> &lt;span style="color:#66d9ef">Player&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">|&lt;/span> &lt;span style="color:#66d9ef">Players5&lt;/span> (&lt;span style="color:#66d9ef">StaticArray&lt;/span> &lt;span style="color:#66d9ef">Index&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>&lt;span style="color:#66d9ef">Five&lt;/span> &lt;span style="color:#66d9ef">Player&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">type&lt;/span> &lt;span style="color:#66d9ef">Points&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">=&lt;/span> &lt;span style="color:#66d9ef">Points4&lt;/span> (&lt;span style="color:#66d9ef">StaticArray&lt;/span> &lt;span style="color:#66d9ef">Index&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>&lt;span style="color:#66d9ef">Four&lt;/span> &lt;span style="color:#66d9ef">Point&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">|&lt;/span> &lt;span style="color:#66d9ef">Points5&lt;/span> (&lt;span style="color:#66d9ef">StaticArray&lt;/span> &lt;span style="color:#66d9ef">Index&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>&lt;span style="color:#66d9ef">Five&lt;/span> &lt;span style="color:#66d9ef">Point&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>ここからは実際に使ってみて感じたことを書いていきます。&lt;/p>
+&lt;h2 id="elm-static-array-を使うことで得られるメリット">elm-static-array を使うことで得られるメリット&lt;/h2>
+&lt;h3 id="メリット仕様を型で表現しやすい">メリット①：仕様を型で表現しやすい&lt;/h3>
+&lt;p>上でも触れましたが、長さが 4 もしく 5 の &lt;code>Point&lt;/code> の配列は elm-static-array を使うと以下のように定義できます。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elm" data-lang="elm">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">type&lt;/span> &lt;span style="color:#66d9ef">Points&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">=&lt;/span> &lt;span style="color:#66d9ef">Points4&lt;/span> (&lt;span style="color:#66d9ef">StaticArray&lt;/span> &lt;span style="color:#66d9ef">Index&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>&lt;span style="color:#66d9ef">Four&lt;/span> &lt;span style="color:#66d9ef">Point&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">|&lt;/span> &lt;span style="color:#66d9ef">Points5&lt;/span> (&lt;span style="color:#66d9ef">StaticArray&lt;/span> &lt;span style="color:#66d9ef">Index&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>&lt;span style="color:#66d9ef">Five&lt;/span> &lt;span style="color:#66d9ef">Point&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>elm-static-array を使うことで型に配列の長さの情報を持たせることができるため、&lt;strong>仕様を型で表現しやすくなり&lt;/strong>コードの可読性向上に繋がります。&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>また、それにともなって &lt;strong>仕様上ありえない状態が存在できないコードを書きやすくなる&lt;/strong>ため&lt;strong>バグの可能性を減らす&lt;/strong> ことができます。&lt;/p>
+&lt;p>たとえば以下の &lt;code>isDefaultRound&lt;/code>関数 は引数に取った値がデフォルト値かどうかを判定する関数です。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elm" data-lang="elm">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">type&lt;/span> &lt;span style="color:#66d9ef">Round&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">=&lt;/span> &lt;span style="color:#66d9ef">Round4&lt;/span> &lt;span style="color:#66d9ef">Round4Value&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">|&lt;/span> &lt;span style="color:#66d9ef">Round5&lt;/span> &lt;span style="color:#66d9ef">Round5Value&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">type&lt;/span> &lt;span style="color:#66d9ef">alias&lt;/span> &lt;span style="color:#66d9ef">Round4Value&lt;/span> &lt;span style="color:#a6e22e">=&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">-- 長さが 4 の StaticArray&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { points &lt;span style="color:#a6e22e">:&lt;/span> &lt;span style="color:#66d9ef">StaticArray&lt;/span> &lt;span style="color:#66d9ef">Index&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>&lt;span style="color:#66d9ef">Four&lt;/span> &lt;span style="color:#66d9ef">Point&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> , seatingOrder &lt;span style="color:#a6e22e">:&lt;/span> &lt;span style="color:#66d9ef">Maybe&lt;/span> &lt;span style="color:#66d9ef">SeatingOrder&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> , tobisho &lt;span style="color:#a6e22e">:&lt;/span> &lt;span style="color:#66d9ef">StaticArray&lt;/span> &lt;span style="color:#66d9ef">Index&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>&lt;span style="color:#66d9ef">Four&lt;/span> &lt;span style="color:#66d9ef">Point&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">type&lt;/span> &lt;span style="color:#66d9ef">alias&lt;/span> &lt;span style="color:#66d9ef">Round5Value&lt;/span> &lt;span style="color:#a6e22e">=&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">-- 長さが 5 の StaticArray&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> { points &lt;span style="color:#a6e22e">:&lt;/span> &lt;span style="color:#66d9ef">StaticArray&lt;/span> &lt;span style="color:#66d9ef">Index&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>&lt;span style="color:#66d9ef">Five&lt;/span> &lt;span style="color:#66d9ef">Point&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> , seatingOrder &lt;span style="color:#a6e22e">:&lt;/span> &lt;span style="color:#66d9ef">Maybe&lt;/span> &lt;span style="color:#66d9ef">SeatingOrder&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> , tobisho &lt;span style="color:#a6e22e">:&lt;/span> &lt;span style="color:#66d9ef">StaticArray&lt;/span> &lt;span style="color:#66d9ef">Index&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>&lt;span style="color:#66d9ef">Five&lt;/span> &lt;span style="color:#66d9ef">Point&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>isDefaultRound &lt;span style="color:#a6e22e">:&lt;/span> &lt;span style="color:#66d9ef">Round&lt;/span> &lt;span style="color:#a6e22e">-&amp;gt;&lt;/span> &lt;span style="color:#66d9ef">Bool&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>isDefaultRound round &lt;span style="color:#a6e22e">=&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> round &lt;span style="color:#66d9ef">of&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">Round4&lt;/span> _ &lt;span style="color:#a6e22e">-&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> round &lt;span style="color:#a6e22e">==&lt;/span> initRound&lt;span style="color:#ae81ff">4&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">Round5&lt;/span> _ &lt;span style="color:#a6e22e">-&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> round &lt;span style="color:#a6e22e">==&lt;/span> initRound&lt;span style="color:#ae81ff">5&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>仕様上 &lt;code>Points&lt;/code> の長さは 4 もしくは 5 になるのですが、elm-static-array を使って書くと &lt;code>isDefaultRound&lt;/code>関数 のパターンマッチの中では仕様上ありえる値の分岐だけを扱えばいいことがわかると思います。&lt;/p>
+&lt;p>これを elm-static-array を使わずに書いた場合は以下のように仕様上ありえないパターンを扱う必要があります。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elm" data-lang="elm">&lt;span style="display:flex;">&lt;span>isDefaultRound &lt;span style="color:#a6e22e">:&lt;/span> &lt;span style="color:#66d9ef">Round&lt;/span> &lt;span style="color:#a6e22e">-&amp;gt;&lt;/span> &lt;span style="color:#66d9ef">Bool&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>isDefaultRound round &lt;span style="color:#a6e22e">=&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#66d9ef">Array&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>length round&lt;span style="color:#a6e22e">.&lt;/span>points &lt;span style="color:#66d9ef">of&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ae81ff">4&lt;/span> &lt;span style="color:#a6e22e">-&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> round &lt;span style="color:#a6e22e">==&lt;/span> initRound&lt;span style="color:#ae81ff">4&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ae81ff">5&lt;/span> &lt;span style="color:#a6e22e">-&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> round &lt;span style="color:#a6e22e">==&lt;/span> initRound&lt;span style="color:#ae81ff">5&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> _ &lt;span style="color:#a6e22e">-&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">False&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>elm-static-array を使うことで仕様上ありえないパターンを扱う必要がなくなりバグの可能性を減らすことができます。&lt;/p>
+&lt;h3 id="メリット配列の要素を取得する際に-maybe-をハンドリングする必要がない">メリット②：配列の要素を取得する際に &lt;code>Maybe&lt;/code> をハンドリングする必要がない&lt;/h3>
+&lt;p>配列の要素を取得する際も通常の Array との違いを感じることができます。&lt;/p>
+&lt;p>以下は配列の要素を取得する &lt;code>get&lt;/code> 関数の型定義です。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elm" data-lang="elm">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">-- 通常の配列&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>get &lt;span style="color:#a6e22e">:&lt;/span> &lt;span style="color:#66d9ef">Int&lt;/span> &lt;span style="color:#a6e22e">-&amp;gt;&lt;/span> &lt;span style="color:#66d9ef">Array&lt;/span> a &lt;span style="color:#a6e22e">-&amp;gt;&lt;/span> &lt;span style="color:#66d9ef">Maybe&lt;/span> a
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">-- StaticArray&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>get &lt;span style="color:#a6e22e">:&lt;/span> &lt;span style="color:#66d9ef">Index&lt;/span> n &lt;span style="color:#a6e22e">-&amp;gt;&lt;/span> &lt;span style="color:#66d9ef">StaticArray&lt;/span> n a &lt;span style="color:#a6e22e">-&amp;gt;&lt;/span> a
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>注目すべきは &lt;strong>返り値の型&lt;/strong> です。&lt;/p>
+&lt;p>通常の配列では要素の型が &lt;code>a&lt;/code> である配列の要素を取得する際の返り値の型が &lt;code>Maybe a&lt;/code> になりますが、 elm-static-array では返り値の型が &lt;code>a&lt;/code> になります。
+これにより &lt;strong>&lt;code>Maybe&lt;/code> をハンドリングする必要がなくなるためよりシンプルに記述できます。&lt;/strong>&lt;/p>
+&lt;h2 id="懸念点">懸念点&lt;/h2>
+&lt;p>逆に懸念だと感じたのは以下の2つです。&lt;/p>
+&lt;ul>
+&lt;li>Array に定義されているすべての関数が定義されているわけではない&lt;/li>
+&lt;li>elm-static-array の書き方に慣れるまでは時間がかかる&lt;/li>
+&lt;/ul>
+&lt;p>それぞれ補足していきます。&lt;/p>
+&lt;h3 id="懸念array-に定義されているすべての関数が定義されているわけではない">懸念①：Array に定義されているすべての関数が定義されているわけではない&lt;/h3>
+&lt;p>Array に生えている関数が StaticArray には生えてなかったりするので、都度 Array に変換して処理をした上で再度 StaticArray に変換する、というような工程が必要になる場面がありました。StaticArray には最小限の関数しか定義されていないので例えば &lt;code>filter&lt;/code> や &lt;code>foldl(foldr)&lt;/code> などは一度 Array などに変換し、処理してから再度 StaticArray に変換しなおす必要がありました。&lt;/p>
+&lt;p>以下は StaticArray を Array に変換して filter して StaticArray に戻すコード例です。&lt;/p>
+&lt;p>&lt;code>StaticArray.fromList&lt;/code> が head と tail を引数に取るため若干コード量が増えてしまいます。&lt;/p>
+&lt;p>head の要素を取り出す際に Nothing をハンドリングしなければならないのがちょっと億劫ですね。(もちろんコンパイラは StaticArray から変換された Array であることなど知るよしもないので仕方ないのですが)&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elm" data-lang="elm">&lt;span style="display:flex;">&lt;span>filterStaticArray &lt;span style="color:#a6e22e">:&lt;/span> &lt;span style="color:#66d9ef">StaticArray&lt;/span> &lt;span style="color:#66d9ef">Index&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>&lt;span style="color:#66d9ef">Four&lt;/span> &lt;span style="color:#66d9ef">String&lt;/span> &lt;span style="color:#a6e22e">-&amp;gt;&lt;/span> &lt;span style="color:#66d9ef">StaticArray&lt;/span> &lt;span style="color:#66d9ef">Index&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>&lt;span style="color:#66d9ef">Four&lt;/span> &lt;span style="color:#66d9ef">String&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>filterStaticArray staticArray &lt;span style="color:#a6e22e">=&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">let&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> filteredArray &lt;span style="color:#a6e22e">=&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> staticArray
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">|&amp;gt;&lt;/span> &lt;span style="color:#66d9ef">StaticArray&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>toArray
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">|&amp;gt;&lt;/span> &lt;span style="color:#66d9ef">Array&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>filter (&lt;span style="color:#a6e22e">(/=)&lt;/span> &lt;span style="color:#e6db74">&amp;#34;&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> head &lt;span style="color:#a6e22e">=&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">Maybe&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>withDefault &lt;span style="color:#e6db74">&amp;#34;undefined&amp;#34;&lt;/span> &lt;span style="color:#a6e22e">&amp;lt;|&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">Array&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>get
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ae81ff">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> filteredArray
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> tail &lt;span style="color:#a6e22e">=&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> filteredArray
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">|&amp;gt;&lt;/span> &lt;span style="color:#66d9ef">Array&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>slice &lt;span style="color:#ae81ff">1&lt;/span> (&lt;span style="color:#66d9ef">Array&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>length filteredArray)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">|&amp;gt;&lt;/span> &lt;span style="color:#66d9ef">Array&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>toList
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">in&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">StaticArray&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>fromList
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">Length&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>four
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> head
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> tail
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="懸念staticarray-の書き方に慣れるまでは時間がかかる">懸念②：StaticArray の書き方に慣れるまでは時間がかかる&lt;/h3>
+&lt;p>たとえばインデックスを指定して StaticArray の要素を取得する get 関数を使おうと&lt;a href="https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/StaticArray#get">ドキュメント&lt;/a>を見ると、下記のような記述があります。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elm" data-lang="elm">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">-- Gets an element of the array. Note that it only possible if the index is in bound. Therefore eliminating Off-by-one errors.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>get &lt;span style="color:#a6e22e">:&lt;/span> &lt;span style="color:#66d9ef">Index&lt;/span> n &lt;span style="color:#a6e22e">-&amp;gt;&lt;/span> &lt;span style="color:#66d9ef">StaticArray&lt;/span> n a &lt;span style="color:#a6e22e">-&amp;gt;&lt;/span> a
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>自分のElm力の乏しさのせいではありますがドキュメントに具体的なコード例が示されていないこともあり、動かすまでにそれなりの試行錯誤が必要でした。(当時は GitHub で検索しても引っ掛からずに絶望していましたが、検索の仕方が悪かっただけだということに執筆時に気付きました。)
+実際には以下のような使い方をする必要があります。ちゃんと動くコードを書くのに　1h くらい費やしてしまいました。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elm" data-lang="elm">&lt;span style="display:flex;">&lt;span>head &lt;span style="color:#a6e22e">:&lt;/span> &lt;span style="color:#66d9ef">Element&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>head &lt;span style="color:#a6e22e">=&lt;/span> &lt;span style="color:#66d9ef">StaticArray&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>get (&lt;span style="color:#66d9ef">Index&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>fromModBy &lt;span style="color:#66d9ef">Length&lt;/span>&lt;span style="color:#a6e22e">.&lt;/span>four &lt;span style="color:#ae81ff">0&lt;/span>) someStaticArray
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>まとめると、 &lt;strong>多少の手間が必要になる&lt;/strong> ということかなと思います。
+このあたりが elm-static-array の作者が &lt;a href="https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/">README&lt;/a> の中で以下のように言っている所以かなと感じました。&lt;/p>
+&lt;blockquote>
+&lt;p>Construction is a bit slower (should be neglectable for most cases).&lt;/p>
+&lt;/blockquote>
+&lt;p>ただ逆に言えばネガティブに感じたのは上記のそれくらいで、基本的にはメリットの方が大きく感じたためこれからも必要であれば使っていきたいと思っています。&lt;/p>
+&lt;h2 id="まとめ">まとめ&lt;/h2>
+&lt;p>Elm で固定長配列を扱うためのライブラリ elm-static-array を触った感想を書いてみました。&lt;/p>
+&lt;p>仕様を型で表現しやすくなるという点に魅力を感じたので今後も必要なケースでは積極的に使っていきたいと思います。&lt;/p>
+&lt;p>また、ひさびさに個人開発をして、なかなか時間が取れずコードの意図や全体像をよく忘れたりするので個人開発においても可読性が高かったり意図の伝わりやすいコードを書くことの重要性が身に染みました。&lt;/p>
+&lt;p>時間がなかなかとれないからこそ質の高いコードを意識的に書いていきたいなと思います。&lt;/p></content></item></channel></rss>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>go on blog.kyu08.com</title><link>https://blog.kyu08.com/tags/go/</link><description>Recent content in go on blog.kyu08.com</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>kyu08.com</copyright><lastBuildDate>Thu, 23 Feb 2023 01:15:48 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/go/index.xml" rel="self" type="application/rss+xml"/><item><title>yamlに定義したbookmarkをfzfで選択してブラウザで開くくんを作った</title><link>https://blog.kyu08.com/posts/fzf-bookmark-opener/</link><pubDate>Thu, 23 Feb 2023 01:15:48 +0900</pubDate><guid>https://blog.kyu08.com/posts/fzf-bookmark-opener/</guid><description>つくったもの yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くくんを作った。 https://github.com/kyu08/fzf-bookmark-opener こんな感じで動く。 コードの話 コード自体は</description><content>&lt;h2 id="つくったもの">つくったもの&lt;/h2>
+&lt;p>yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くくんを作った。&lt;/p>
+&lt;p>&lt;a href="https://github.com/kyu08/fzf-bookmark-opener">https://github.com/kyu08/fzf-bookmark-opener&lt;/a>&lt;/p>
+&lt;p>こんな感じで動く。&lt;/p>
+&lt;p>&lt;img src="https://user-images.githubusercontent.com/49891479/218272272-e693c10d-c810-458a-bf46-9c3a4a2fe45a.gif" alt="demo">&lt;/p>
+&lt;h2 id="コードの話">コードの話&lt;/h2>
+&lt;p>コード自体は大変シンプルで&lt;/p>
+&lt;ol>
+&lt;li>設定ファイルがなければ&lt;code>~/.config/fzf-bookmark-opener/config.yaml&lt;/code>に作成&lt;/li>
+&lt;li>設定ファイルの読み込み&lt;/li>
+&lt;li>fzfで選択&lt;/li>
+&lt;li>選択されたブックマークをブラウザで開く&lt;/li>
+&lt;/ol>
+&lt;p>ということをやっているだけである。(&lt;code>main.go&lt;/code>に120行弱だけという素朴なコード量)&lt;/p>
+&lt;p>&lt;a href="https://github.com/kyu08/fzf-bookmark-opener/blob/69313bf187dcfd6127efcf75e172a34fb9b8e05a/main.go#L38-L60">fzf-bookmark-opener/main.go at main · kyu08/fzf-bookmark-opener&lt;/a>&lt;/p>
+&lt;p>この記述量で作れたのは間違いなくktr0731/go-fuzzyfinderのおかげでした。このライブラリのおかげでgoのコードからfzfを簡単に呼び出すことができました。というかなんならこのライブラリの存在を知ったので使ってみたくなってfzf-bookmark-openerを作ったみたいなとこもあります。ありがとうございます。&lt;/p>
+&lt;p>&lt;a href="https://github.com/ktr0731/go-fuzzyfinder">ktr0731/go-fuzzyfinder&lt;/a>&lt;/p>
+&lt;h2 id="ちゃっかりbrewでも公開してみた">ちゃっかりbrewでも公開してみた&lt;/h2>
+&lt;p>brewでインストールできるに越したことはないだろうってことで、brewでも公開してみたが思いのほか簡単だった。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>brew tap kyu08/tap
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>brew install kyu08/tap/fzf-bookmark-opener
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>これだけでインストールできるので気になった方もそうでない方もぜひ。issueやPRもお待ちしています。(&lt;code>go install&lt;/code>でインストールしたい方はこちら(&lt;code>go install github.com/kyu08/fzf-bookmark-opener@latest&lt;/code>))&lt;/p>
+&lt;p>brew公開に関してはこちらのブログを参考にしたら30分弱でサクッと公開できた(想像より簡単だった)&lt;/p>
+&lt;p>&lt;a href="https://www.rasukarusan.com/entry/2019/11/03/211338">https://www.rasukarusan.com/entry/2019/11/03/211338&lt;/a>&lt;/p>
+&lt;p>詳細は↑の記事を読んでいただければわかるが、リリースにバイナリを含めて配布用のrepositoryを作るだけなので本当に簡単だったのでツールを配布したい人はぜひ。&lt;/p>
+&lt;h2 id="ちゃっかりヘルパースクリプトも公開した">ちゃっかりヘルパースクリプトも公開した&lt;/h2>
+&lt;p>現在お仕事ではGCPを使っているんですが、GCPのコンソールをプロジェクト、サービスを指定して直接開きたいことが多いのでプロジェクトのリストを渡すとGCPの主要なサービス(主観)のURL一覧をfzf-bookmark-openerの設定ファイルの形式で吐いてくれるスクリプトも公開した。&lt;/p>
+&lt;p>&lt;a href="https://github.com/kyu08/gcp-url-generator">kyu08/gcp-url-generator&lt;/a>&lt;/p>
+&lt;p>project名のリストとregionを渡すとこういう文字列を吐いてくれるイメージ。(以下は出力の一部)(この例だとregionは関係ない)&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#f92672">title&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;Home stg&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">url&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;https://console.cloud.google.com/home/dashboard?project=stg&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#f92672">title&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;Home dev&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">url&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;https://console.cloud.google.com/home/dashboard?project=dev&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#f92672">title&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;Home prod&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">url&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;https://console.cloud.google.com/home/dashboard?project=prod&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#f92672">title&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;Datastore stg&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">url&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;https://console.cloud.google.com/datastore/entities?project=stg&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#f92672">title&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;Datastore dev&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">url&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;https://console.cloud.google.com/datastore/entities?project=dev&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#f92672">title&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;Datastore prod&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">url&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;https://console.cloud.google.com/datastore/entities?project=prod&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>現在の対応サービスは以下で、Cloud Runに関してはサービス名の配列を渡すとプロジェクト*サービスの全組み合わせのURLを吐く。&lt;/p>
+&lt;ul>
+&lt;li>Dashboard&lt;/li>
+&lt;li>Datastore&lt;/li>
+&lt;li>App Engine&lt;/li>
+&lt;li>Artifact Registry&lt;/li>
+&lt;li>Cloud Storage&lt;/li>
+&lt;li>Spanner&lt;/li>
+&lt;li>BigQuery&lt;/li>
+&lt;li>Cloud Scheduler&lt;/li>
+&lt;li>PubSub&lt;/li>
+&lt;li>Dataflow&lt;/li>
+&lt;li>Cloud Build&lt;/li>
+&lt;li>Cloud Tasks&lt;/li>
+&lt;li>Cloud Run&lt;/li>
+&lt;li>Cloud SQL&lt;/li>
+&lt;li>Cloud Functions&lt;/li>
+&lt;li>IAM&lt;/li>
+&lt;li>Secret Manager&lt;/li>
+&lt;li>AI Platform&lt;/li>
+&lt;li>Compute Engine&lt;/li>
+&lt;li>Logging&lt;/li>
+&lt;li>Monitoring&lt;/li>
+&lt;li>Workflows&lt;/li>
+&lt;li>Firebase Realtime Database (DB)&lt;/li>
+&lt;li>Firebase Hosting&lt;/li>
+&lt;li>Firebase Remote Config&lt;/li>
+&lt;/ul>
+&lt;p>これで生成したURLをfzf-bookmark-openerに食わせるとお使いのGCPプロジェクトの特定のサービスがコマンドラインからサクッと開くことができる。(詳しくは&lt;a href="https://github.com/kyu08/gcp-url-generator">kyu08/gcp-url-generatorのREADME&lt;/a>を参照)
+こちらもissueやPRお待ちしてます。&lt;/p>
+&lt;h2 id="余談1">余談1&lt;/h2>
+&lt;p>Rustだとlotabout/skimを使うとktr0731/go-fuzzyfinderと同じようなことができるらしい。最近Rust熱が高まりに高まっている(Tour of Rustやり中)ので次に何かCLIでfzfなツールをつくるときは使ってみようと思う。&lt;/p>
+&lt;p>&lt;a href="https://github.com/lotabout/skim">lotabout/skim&lt;/a>&lt;/p>
+&lt;p>[追記]
+Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった。&lt;/p>
+&lt;p>&lt;a href="https://github.com/kyu08/fzf-make">kyu08/fzf-make&lt;/a>&lt;/p>
+&lt;h2 id="余談2">余談2&lt;/h2>
+&lt;p>ふと気になってktr0731/go-fuzzyfinderをはじめとする依存ライブラリのライセンス表示はどうすればいいか気になって調べてみたところリポジトリに&lt;code>NOTICES&lt;/code>とか&lt;code>CREDITS&lt;/code>とか&lt;code>ThirdPartyNotices&lt;/code>みたいなファイルを置いてそこに依存ライブラリの著作権・ライセンス表示をするのが一般的なようだった。&lt;/p>
+&lt;p>手作業でやるのは辛いので自動生成ツールを探したところGoだとこれが使いやすそうだったので使ってみたけど簡単でとてもよかった。ありがたや&amp;hellip;。&lt;/p>
+&lt;p>&lt;a href="https://github.com/Songmu/gocredits">https://github.com/Songmu/gocredits&lt;/a>&lt;/p>
+&lt;h2 id="まとめ">まとめ&lt;/h2>
+&lt;p>ktr0731/go-fuzzyfinderはいいぞ〜&lt;/p></content></item></channel></rss>
