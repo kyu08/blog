@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>設計 on blog.kyu08.com</title>
-    <link>https://kyu08.github.io/blog/tags/%E8%A8%AD%E8%A8%88/</link>
+    <link>https://blog.kyu08.com/tags/%E8%A8%AD%E8%A8%88/</link>
     <description>Recent content in 設計 on blog.kyu08.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>kyu08.com</copyright>
-    <lastBuildDate>Thu, 02 Feb 2023 01:15:48 +0900</lastBuildDate><atom:link href="https://kyu08.github.io/blog/tags/%E8%A8%AD%E8%A8%88/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Feb 2023 01:15:48 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/%E8%A8%AD%E8%A8%88/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>デザインパターンをひととおり眺めた感想</title>
-      <link>https://kyu08.github.io/blog/posts/learn-design-pattern/</link>
+      <link>https://blog.kyu08.com/posts/learn-design-pattern/</link>
       <pubDate>Thu, 02 Feb 2023 01:15:48 +0900</pubDate>
       
-      <guid>https://kyu08.github.io/blog/posts/learn-design-pattern/</guid>
+      <guid>https://blog.kyu08.com/posts/learn-design-pattern/</guid>
       <description>ずっと気になってはいたが2つ~3つくらいしか知らなかったデザインパターンをやっと勉強する気になったのでこのサイトを一通り眺めてみた。 https://refactoring.guru/ja/design-patterns こちら</description>
       <content>&lt;p&gt;ずっと気になってはいたが2つ~3つくらいしか知らなかったデザインパターンをやっと勉強する気になったのでこのサイトを一通り眺めてみた。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://refactoring.guru/ja/design-patterns&#34;&gt;https://refactoring.guru/ja/design-patterns&lt;/a&gt;&lt;/p&gt;
