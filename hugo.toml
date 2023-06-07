@@ -1,4 +1,5 @@
-baseURL = 'https://blog.kyu08.com'
+baseURL = 'https://kyu08.github.io/blog/'
+# baseURL = 'https://blog.kyu08.com'
 title = 'blog.kyu08.com'
 theme = "terminal"
 paginate = 10
