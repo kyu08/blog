@@ -40,7 +40,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  │     └ image.png
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  └ ...
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;で、それをやろうとしたがどうにもうまく画像を読み込むことができなかった。(当然悪いのはNext.jsではなく1000億%自分の技術力のNASAです)&lt;/p&gt;
-&lt;p&gt;ちゃんとNext.js(やJSのツールチェイン周り)のお勉強をすればNextでもできたと思うがこのところ業務ではバックエンドしか触る機会がないしブログの管理にそこまで時間をかけたい気持ちもなかったので諦めてhugoに移行することにした。&lt;/p&gt;
+&lt;p&gt;ちゃんとNext.js(やJSのツールチェイン周り)のお勉強をすればNextでもできたと思うが当面JS関連の技術を触る予定もないしブログの管理にそこまで時間をかけたい気持ちもなかったので諦めてhugoに移行することにした。&lt;/p&gt;
 &lt;h2 id=&#34;やったこと&#34;&gt;やったこと&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;テーマ選定(&lt;a href=&#34;https://github.com/panr/hugo-theme-terminal&#34;&gt;panr/hugo-theme-terminal&lt;/a&gt;を選択した)&lt;/li&gt;
