@@ -2,11 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.kyu08.com/</loc>
+    <lastmod>2023-06-07T22:25:41+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/hugo/</loc>
+    <lastmod>2023-06-07T22:25:41+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/</loc>
+    <lastmod>2023-06-07T22:25:41+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/</loc>
+    <lastmod>2023-06-07T22:25:41+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/hello-hugo/</loc>
+    <lastmod>2023-06-07T22:25:41+09:00</lastmod>
+  </url><url>
     <loc>https://blog.kyu08.com/about/</loc>
     <lastmod>2023-06-06T01:15:48+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/</loc>
-    <lastmod>2023-03-31T01:15:48+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/cli/</loc>
     <lastmod>2023-03-31T01:15:48+09:00</lastmod>
@@ -14,13 +26,7 @@
     <loc>https://blog.kyu08.com/posts/fzf-make/</loc>
     <lastmod>2023-03-31T01:15:48+09:00</lastmod>
   </url><url>
-    <loc>https://blog.kyu08.com/posts/</loc>
-    <lastmod>2023-03-31T01:15:48+09:00</lastmod>
-  </url><url>
     <loc>https://blog.kyu08.com/tags/rust/</loc>
-    <lastmod>2023-03-31T01:15:48+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/</loc>
     <lastmod>2023-03-31T01:15:48+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/go/</loc>
