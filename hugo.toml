@@ -5,6 +5,7 @@ paginate = 10
 languageCode = "ja"
 defaultContentLanguage = "ja"
 hasCJKLanguage = true
+googleAnalytics = "G-BDQ408J45J"
 
 [params]
   # dir name of your main content (default is `content/posts`).
@@ -88,3 +89,4 @@ hasCJKLanguage = true
         identifier = "about"
         name = "About"
         url = "/about"
+
