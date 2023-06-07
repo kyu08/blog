@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rust on blog.kyu08.com</title>
-    <link>https://kyu08.github.io/tags/rust/</link>
+    <link>https://kyu08.github.io/blog/tags/rust/</link>
     <description>Recent content in rust on blog.kyu08.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>kyu08.com</copyright>
-    <lastBuildDate>Fri, 31 Mar 2023 01:15:48 +0900</lastBuildDate><atom:link href="https://kyu08.github.io/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 31 Mar 2023 01:15:48 +0900</lastBuildDate><atom:link href="https://kyu08.github.io/blog/tags/rust/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった</title>
-      <link>https://kyu08.github.io/posts/fzf-make/</link>
+      <link>https://kyu08.github.io/blog/posts/fzf-make/</link>
       <pubDate>Fri, 31 Mar 2023 01:15:48 +0900</pubDate>
       
-      <guid>https://kyu08.github.io/posts/fzf-make/</guid>
+      <guid>https://kyu08.github.io/blog/posts/fzf-make/</guid>
       <description>Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった。 https://github.com/kyu08/fzf-make こんな感じで動く。 fzf-makeがや</description>
       <content>&lt;p&gt;Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34;&gt;https://github.com/kyu08/fzf-make&lt;/a&gt;&lt;/p&gt;

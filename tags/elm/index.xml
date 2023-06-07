@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Elm on blog.kyu08.com</title>
-    <link>https://kyu08.github.io/tags/elm/</link>
+    <link>https://kyu08.github.io/blog/tags/elm/</link>
     <description>Recent content in Elm on blog.kyu08.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>kyu08.com</copyright>
-    <lastBuildDate>Fri, 17 Dec 2021 01:15:48 +0900</lastBuildDate><atom:link href="https://kyu08.github.io/tags/elm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Dec 2021 01:15:48 +0900</lastBuildDate><atom:link href="https://kyu08.github.io/blog/tags/elm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Elm で固定長配列が扱えるライブラリ elm-static-array を触ってみた</title>
-      <link>https://kyu08.github.io/posts/2021121217-elm-static-array/</link>
+      <link>https://kyu08.github.io/blog/posts/2021121217-elm-static-array/</link>
       <pubDate>Fri, 17 Dec 2021 01:15:48 +0900</pubDate>
       
-      <guid>https://kyu08.github.io/posts/2021121217-elm-static-array/</guid>
+      <guid>https://kyu08.github.io/blog/posts/2021121217-elm-static-array/</guid>
       <description>Elm で固定長配列を扱うためのライブラリ elm-static-array を触ってみたので感じたことを書いていきます。 elm-static-array とは elm-static-array は Elm で固定長配列を扱うためのライブラリです。 配列の</description>
       <content>&lt;p&gt;Elm で固定長配列を扱うためのライブラリ elm-static-array を触ってみたので感じたことを書いていきます。&lt;/p&gt;
 &lt;h2 id=&#34;elm-static-array-とは&#34;&gt;elm-static-array とは&lt;/h2&gt;

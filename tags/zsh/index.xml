@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>zsh on blog.kyu08.com</title>
-    <link>https://kyu08.github.io/tags/zsh/</link>
+    <link>https://kyu08.github.io/blog/tags/zsh/</link>
     <description>Recent content in zsh on blog.kyu08.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>kyu08.com</copyright>
-    <lastBuildDate>Sun, 05 Feb 2023 01:15:48 +0900</lastBuildDate><atom:link href="https://kyu08.github.io/tags/zsh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Feb 2023 01:15:48 +0900</lastBuildDate><atom:link href="https://kyu08.github.io/blog/tags/zsh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tmux&#43;NeovimでJetBrains IDEのScratchみたいな機能を実現している話</title>
-      <link>https://kyu08.github.io/posts/tmux-neovim-scratch/</link>
+      <link>https://kyu08.github.io/blog/posts/tmux-neovim-scratch/</link>
       <pubDate>Sun, 05 Feb 2023 01:15:48 +0900</pubDate>
       
-      <guid>https://kyu08.github.io/posts/tmux-neovim-scratch/</guid>
+      <guid>https://kyu08.github.io/blog/posts/tmux-neovim-scratch/</guid>
       <description>任意の構成のSandbox的な環境をTmuxのwindowとして用意するようにしたところターミナルから出ずにサクっと動作検証とかが行えてハッ</description>
       <content>&lt;p&gt;任意の構成のSandbox的な環境をTmuxのwindowとして用意するようにしたところターミナルから出ずにサクっと動作検証とかが行えてハッピーになったよ、という記事。ここではvanillaなGoのプロジェクトの例を紹介しますが、お好みの構成でSandbox環境を作ってみてください。&lt;/p&gt;
 &lt;p&gt;全然大したことをやっているわけではないですがTmux, Neovimやそれらのプラグインの普及活動になれば嬉しいので書いてみます。&lt;/p&gt;
@@ -89,10 +89,10 @@
     
     <item>
       <title>開発の効率化のためにやっていること ターミナル編</title>
-      <link>https://kyu08.github.io/posts/my-dev-setup-terminal/</link>
+      <link>https://kyu08.github.io/blog/posts/my-dev-setup-terminal/</link>
       <pubDate>Thu, 15 Dec 2022 01:15:48 +0900</pubDate>
       
-      <guid>https://kyu08.github.io/posts/my-dev-setup-terminal/</guid>
+      <guid>https://kyu08.github.io/blog/posts/my-dev-setup-terminal/</guid>
       <description>【この記事はUnipos Advent Calendar 2022の記事です】 この記事では筆者が開発の効率化のために行っている工夫や使っているツールなどについて紹介します</description>
       <content>&lt;p&gt;【この記事は&lt;a href=&#34;https://qiita.com/advent-calendar/2022/unipos&#34;&gt;Unipos Advent Calendar 2022&lt;/a&gt;の記事です】&lt;/p&gt;
 &lt;p&gt;この記事では筆者が開発の効率化のために行っている工夫や使っているツールなどについて紹介します。
