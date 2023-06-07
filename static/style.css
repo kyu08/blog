@@ -43,6 +43,7 @@ a {
 /* 記事末尾の「次の記事ボタン」「前の記事ボタン」のスタイル */
 .button.next,.button.previous{
     border: 0;
+    max-width: 100%;
 }
 
 .button a {
