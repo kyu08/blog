@@ -3,9 +3,7 @@ name: deploy
 on:
   push:
     branches:
-      # あとで戻す
-      # - main
-      - hugo
+      - main
 
 jobs:
   deploy:
