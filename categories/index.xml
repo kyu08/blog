@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on blog.kyu08.com</title>
-    <link>https://blog.kyu08.com/categories/</link>
+    <link>https://kyu08.github.io/categories/</link>
     <description>Recent content in Categories on blog.kyu08.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>kyu08.com</copyright><atom:link href="https://blog.kyu08.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>kyu08.com</copyright><atom:link href="https://kyu08.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
