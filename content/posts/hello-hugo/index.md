@@ -1,6 +1,6 @@
 ---
 title: "このブログをhugoで作り直した"
-cover: ""
+cover: "https://blog.kyu08.com/cover.png"
 tags: ["hugo"]
 keywords: ["", ""]
 description: ""

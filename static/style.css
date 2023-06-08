@@ -72,3 +72,6 @@ h3 {
   margin: 30px 0;
 }
 
+.post-cover {
+  display: none;
+}
