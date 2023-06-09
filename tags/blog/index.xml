@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on blog.kyu08.com</title>
+    <link>https://blog.kyu08.com/tags/blog/</link>
+    <description>Recent content in blog on blog.kyu08.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>blog.kyu08.com</copyright>
+    <lastBuildDate>Sat, 10 Jun 2023 01:26:52 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ブログ用にGifでキャプチャを作る時にやっていること</title>
+      <link>https://blog.kyu08.com/posts/create-gif/</link>
+      <pubDate>Sat, 10 Jun 2023 01:26:52 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/posts/create-gif/</guid>
+      <description>ブログ用によくGifをつくるので自分用の備忘録代わりに手順を記しておく。 前提 macOS Kapがインストールされていること Keycastrがインストー</description>
+      <content>&lt;p&gt;ブログ用によくGifをつくるので自分用の備忘録代わりに手順を記しておく。&lt;/p&gt;
+&lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;macOS&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://getkap.co/&#34;&gt;Kap&lt;/a&gt;がインストールされていること&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/keycastr/keycastr&#34;&gt;Keycastr&lt;/a&gt;がインストールされていること&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;手順&#34;&gt;手順&lt;/h2&gt;
+&lt;h3 id=&#34;1-keycastrを起動&#34;&gt;1. Keycastrを起動&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;keycastr.gif&#34; alt=&#34;keycastr.gif&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-kapでいい感じに範囲を選んで録画開始ボタンを押す&#34;&gt;2. Kapでいい感じに範囲を選んで録画開始ボタンを押す&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;select-window.png&#34; alt=&#34;select-window.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3-いい感じのサイズで保存重要&#34;&gt;3. いい感じのサイズで保存(重要)&lt;/h3&gt;
+&lt;p&gt;(あとから圧縮しようとすると思いのほか大変なのでサイズを小さくしたい場合はいい感じのサイズにするのを忘れない)
+&lt;img src=&#34;select-size.png&#34; alt=&#34;select-size.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
+&lt;p&gt;(いざ書いてみると書くほどでもなかった)&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
