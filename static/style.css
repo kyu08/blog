@@ -72,6 +72,15 @@ h3 {
   margin: 30px 0;
 }
 
-.post-cover {
+.post-cover, .post-content, .read-more {
   display: none;
+}
+
+a.read-more {
+  display: none;
+}
+
+article.on-list {
+  margin: 0 auto;
+  padding: 0;
 }
