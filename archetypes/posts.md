@@ -1,8 +1,9 @@
 ---
 title: ""
-cover: "https://blog.kyu08.com/cover.png"
 tags: ["", ""]
 keywords: ["", ""]
+
+cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: {{ .Date }}
 author: "kyu08"
@@ -11,6 +12,6 @@ draft: false
 showFullContent: false
 readingTime: true
 hideComments: true
-color: "" #color from the theme settings
+color: ""
 ---
 
