@@ -72,12 +72,18 @@ h3 {
   margin: 30px 0;
 }
 
-.post-cover, .post-content, .read-more {
+.post-cover, a.read-more {
   display: none;
 }
 
-a.read-more {
+article.on-list > .post-content,
+article.on-list > .post-title::after {
   display: none;
+}
+
+article.on-list > .post-title {
+  padding-bottom: 0;
+  border: none;
 }
 
 article.on-list {
