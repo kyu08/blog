@@ -1,3 +1,7 @@
+.PHONY: init
+init:
+	@git submodule update --init --recursive
+
 .PHONY: new
 new:
 	@read -p "post id: " id; \
