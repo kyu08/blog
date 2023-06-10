@@ -14,10 +14,10 @@
       <pubDate>Sat, 10 Jun 2023 23:14:42 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/github-pages-custom-domain/</guid>
-      <description>困っていたこと GitHub Actions経由でGitHubPagesにデプロイするたびにカスタムドメインの設定が消えてしまい、デプロイ先がカスタムドメ</description>
+      <description>困っていたこと GitHub Actions経由でGitHub Pagesにデプロイするたびにカスタムドメインの設定が消えてしまい、デプロイ先がカスタムドメ</description>
       <content>&lt;h2 id=&#34;困っていたこと&#34;&gt;困っていたこと&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;GitHub Actions経由でGitHubPagesにデプロイするたびにカスタムドメインの設定が消えてしまい、デプロイ先がカスタムドメインから&lt;code&gt;https://&amp;lt;username&amp;gt;.github.io/&amp;lt;repository&amp;gt;&lt;/code&gt;に戻ってしまう&lt;/li&gt;
+&lt;li&gt;GitHub Actions経由でGitHub Pagesにデプロイするたびにカスタムドメインの設定が消えてしまい、デプロイ先がカスタムドメインから&lt;code&gt;https://&amp;lt;username&amp;gt;.github.io/&amp;lt;repository&amp;gt;&lt;/code&gt;に戻ってしまう&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;解決方法&#34;&gt;解決方法&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-add-cname-file-cname&#34; target=&#34;_blank&#34; &gt;ドキュメント&lt;/a&gt;
