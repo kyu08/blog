@@ -46,8 +46,10 @@
 &lt;p&gt;本選考インターンでつくった WebApp のリファクタリングをしました。
 あとはTypeScriptの勉強をはじめました。やったことは&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.typescriptlang.org/docs/handbook/intro.html&#34;&gt;TypeScript HANDBOOK&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://typescript-jp.gitbook.io/deep-dive/&#34;&gt;TypeScript DeepDive&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.typescriptlang.org/docs/handbook/intro.html&#34; target=&#34;_blank&#34; &gt;TypeScript HANDBOOK&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://typescript-jp.gitbook.io/deep-dive/&#34; target=&#34;_blank&#34; &gt;TypeScript DeepDive&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;あたりです。始めて静的型付けの言語に触れて表現力の豊かさを感じました。わかりやすさと堅牢さが得られそう&amp;hellip;、エディタがいろいろ教えてくれるので開発効率も上がりそう&amp;hellip;などと感じました。&lt;/p&gt;
 &lt;h2 id=&#34;5月&#34;&gt;5月&lt;/h2&gt;
@@ -56,16 +58,20 @@
 &lt;li&gt;読みかけだったリーダブルコードをよんだ&lt;/li&gt;
 &lt;li&gt;Repository パターンを実装してみた&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;CLI の todo アプリは CLI で TODOを確認したくなったのと TypeScript　で何か作ってみたくなったので作って &lt;a href=&#34;https://www.npmjs.com/package/great-todo-cli&#34;&gt;npm で公開しました。&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;CLI の todo アプリは CLI で TODOを確認したくなったのと TypeScript　で何か作ってみたくなったので作って &lt;a href=&#34;https://www.npmjs.com/package/great-todo-cli&#34; target=&#34;_blank&#34; &gt;npm で公開しました。&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;責務の分離を意識して書いたので今までよりは見通しの良いコードを書けたと思っています。&lt;/p&gt;
 &lt;p&gt;あとははじめて Webpack の設定を書いて、&lt;code&gt;create-react-app&lt;/code&gt; の便利さを感じました。(今まで&lt;code&gt;create-react-app&lt;/code&gt;が何をしてくれているのかわかってなかった&amp;hellip;)&lt;/p&gt;
 &lt;h2 id=&#34;6月&#34;&gt;6月&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/dp/B01L8SEVYI/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1&#34;&gt;オブジェクト指向設計実践ガイド　～Rubyでわかる 進化しつづける柔軟なアプリケーションの育て方&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/dp/B01L8SEVYI/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1&#34; target=&#34;_blank&#34; &gt;オブジェクト指向設計実践ガイド　～Rubyでわかる 進化しつづける柔軟なアプリケーションの育て方&lt;/a&gt;
+
 をよんだ&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/dp/B073GSDBGT/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1&#34;&gt;現場で役立つシステム設計の原則 〜変更を楽で安全にするオブジェクト指向の実践技法&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/dp/B073GSDBGT/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1&#34; target=&#34;_blank&#34; &gt;現場で役立つシステム設計の原則 〜変更を楽で安全にするオブジェクト指向の実践技法&lt;/a&gt;
+
 をよんだ&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/dp/B082WXZVPC/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1&#34;&gt;ドメイン駆動設計入門 ボトムアップでわかる！ドメイン駆動設計の基本&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/dp/B082WXZVPC/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1&#34; target=&#34;_blank&#34; &gt;ドメイン駆動設計入門 ボトムアップでわかる！ドメイン駆動設計の基本&lt;/a&gt;
+
 をよんだ&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;6月はたくさん本を読みました。毎日作業を始める前に1時間本を読むスタイルが自分にあっている感じでした。&lt;/p&gt;
@@ -80,7 +86,8 @@
 &lt;h2 id=&#34;7月&#34;&gt;7月&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Twitter のクローンアプリの設計 &amp;amp; フロントエンドの実装開始&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/Web%E3%82%92%E6%94%AF%E3%81%88%E3%82%8B%E6%8A%80%E8%A1%93-HTTP%E3%80%81URI%E3%80%81HTML%E3%80%81%E3%81%9D%E3%81%97%E3%81%A6REST-WEB-PRESS-plus/dp/4774142042&#34;&gt;Webを支える技術&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/Web%E3%82%92%E6%94%AF%E3%81%88%E3%82%8B%E6%8A%80%E8%A1%93-HTTP%E3%80%81URI%E3%80%81HTML%E3%80%81%E3%81%9D%E3%81%97%E3%81%A6REST-WEB-PRESS-plus/dp/4774142042&#34; target=&#34;_blank&#34; &gt;Webを支える技術&lt;/a&gt;
+
 をよんだ&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;設計のアウトプットをしたかったんですが特にアプリのアイディアとかもなかったので Twitter のクローンアプリを作りました。&lt;/p&gt;
@@ -105,15 +112,18 @@
 &lt;ul&gt;
 &lt;li&gt;Scala の勉強をはじめた&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://scala-text.github.io/scala_text/&#34;&gt;scala-text&lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;https://scala-text.github.io/scala_text/&#34; target=&#34;_blank&#34; &gt;scala-text&lt;/a&gt;
+
 や
-&lt;a href=&#34;https://github.com/kyu08/tour-of-scala&#34;&gt;tour of scala&lt;/a&gt;
+&lt;a href=&#34;https://github.com/kyu08/tour-of-scala&#34; target=&#34;_blank&#34; &gt;tour of scala&lt;/a&gt;
+
 とかをやりました。&lt;/p&gt;
 &lt;p&gt;TypeScriptと比較して、型まわりの機能が多かったり(共変、非変のあたりとか)ビルトインのメソッドが多かったりして、学習コストはあるけどちゃんと学んだら堅牢で表現力豊かなコードがかけそうだな〜という印象。&lt;/p&gt;
 &lt;p&gt;コップ本も買いましたが途中まで読んで積んじゃってます。再開したい。&lt;/p&gt;
 &lt;h2 id=&#34;10月&#34;&gt;10月&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/dp/B00GRKD6XU/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1&#34;&gt;Evans本&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/dp/B00GRKD6XU/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1&#34; target=&#34;_blank&#34; &gt;Evans本&lt;/a&gt;
+
 をよんだ&lt;/li&gt;
 &lt;li&gt;Vim に入門したけど2日で心がおれた&lt;/li&gt;
 &lt;/ul&gt;
@@ -135,7 +145,8 @@
 &lt;p&gt;わりと広く浅く学べたのでこれからがっつり学ぶ必要が出てきたときの土台となってくれれば&amp;hellip;と期待しています。。&lt;/p&gt;
 &lt;p&gt;Next.js に入門しました。今まで component が増えてくると辛みが増していましたが component を&lt;code&gt;/pages&lt;/code&gt;と&lt;code&gt;/component&lt;/code&gt;に配置するやり方が読みやすさ的にも書きやすさ的にもいいなと感じました。&lt;/p&gt;
 &lt;p&gt;あとは Vercel へのデプロイが簡単すぎて感動しました。&lt;/p&gt;
-&lt;p&gt;詳しくは&lt;a href=&#34;https://blog.kyu08.com/posts/constructed-blog&#34;&gt;こちら&lt;/a&gt;をご覧ください。&lt;/p&gt;
+&lt;p&gt;詳しくは&lt;a href=&#34;https://blog.kyu08.com/posts/constructed-blog&#34; target=&#34;_blank&#34; &gt;こちら&lt;/a&gt;
+をご覧ください。&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;最後まで読んでくださりありがとうございます。&lt;/p&gt;
 &lt;p&gt;あと4ヶ月でエンジニアとしてのキャリアがスタートするのでそこまで頑張って力を高めていちはやく技術力で会社に貢献できるようになりたいです。&lt;/p&gt;

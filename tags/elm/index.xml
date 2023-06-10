@@ -17,7 +17,8 @@
       <description>Elm で固定長配列を扱うためのライブラリ elm-static-array を触ってみたので感じたことを書いていきます。 elm-static-array とは elm-static-array は Elm で固定長配列を扱うためのライブラリです。 配列の</description>
       <content>&lt;p&gt;Elm で固定長配列を扱うためのライブラリ elm-static-array を触ってみたので感じたことを書いていきます。&lt;/p&gt;
 &lt;h2 id=&#34;elm-static-array-とは&#34;&gt;elm-static-array とは&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/&#34;&gt;elm-static-array&lt;/a&gt; は Elm で固定長配列を扱うためのライブラリです。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/&#34; target=&#34;_blank&#34; &gt;elm-static-array&lt;/a&gt;
+ は Elm で固定長配列を扱うためのライブラリです。&lt;/p&gt;
 &lt;p&gt;配列の長さを型で表現できることが特徴です。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- StaticArray&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- 長さ 4 の配列&lt;/span&gt;
@@ -143,7 +144,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        head
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        tail
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;懸念staticarray-の書き方に慣れるまでは時間がかかる&#34;&gt;懸念②：StaticArray の書き方に慣れるまでは時間がかかる&lt;/h3&gt;
-&lt;p&gt;たとえばインデックスを指定して StaticArray の要素を取得する get 関数を使おうと&lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/StaticArray#get&#34;&gt;ドキュメント&lt;/a&gt;を見ると、下記のような記述があります。&lt;/p&gt;
+&lt;p&gt;たとえばインデックスを指定して StaticArray の要素を取得する get 関数を使おうと&lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/StaticArray#get&#34; target=&#34;_blank&#34; &gt;ドキュメント&lt;/a&gt;
+を見ると、下記のような記述があります。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- Gets an element of the array. Note that it only possible if the index is in bound. Therefore eliminating Off-by-one errors.&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;get &lt;span style=&#34;color:#a6e22e&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Index&lt;/span&gt; n &lt;span style=&#34;color:#a6e22e&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;StaticArray&lt;/span&gt; n a &lt;span style=&#34;color:#a6e22e&#34;&gt;-&amp;gt;&lt;/span&gt; a
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;自分のElm力の乏しさのせいではありますがドキュメントに具体的なコード例が示されていないこともあり、動かすまでにそれなりの試行錯誤が必要でした。(当時は GitHub で検索しても引っ掛からずに絶望していましたが、検索の仕方が悪かっただけだということに執筆時に気付きました。)
@@ -151,7 +153,8 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;head &lt;span style=&#34;color:#a6e22e&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Element&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;head &lt;span style=&#34;color:#a6e22e&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;StaticArray&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt;get (&lt;span style=&#34;color:#66d9ef&#34;&gt;Index&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt;fromModBy &lt;span style=&#34;color:#66d9ef&#34;&gt;Length&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt;four &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) someStaticArray
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;まとめると、 &lt;strong&gt;多少の手間が必要になる&lt;/strong&gt; ということかなと思います。
-このあたりが elm-static-array の作者が &lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/&#34;&gt;README&lt;/a&gt; の中で以下のように言っている所以かなと感じました。&lt;/p&gt;
+このあたりが elm-static-array の作者が &lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/&#34; target=&#34;_blank&#34; &gt;README&lt;/a&gt;
+ の中で以下のように言っている所以かなと感じました。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Construction is a bit slower (should be neglectable for most cases).&lt;/p&gt;
 &lt;/blockquote&gt;

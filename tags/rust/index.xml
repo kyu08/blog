@@ -16,7 +16,8 @@
       <guid>https://blog.kyu08.com/posts/fzf-make/</guid>
       <description>Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった。 https://github.com/kyu08/fzf-make こんな感じで動く。 fzf-makeがや</description>
       <content>&lt;p&gt;Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34;&gt;https://github.com/kyu08/fzf-make&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/fzf-make&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;こんな感じで動く。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;fzf-makeがやっていること&#34;&gt;fzf-makeがやっていること&lt;/h2&gt;
@@ -27,29 +28,36 @@
 &lt;li&gt;&lt;code&gt;skim&lt;/code&gt;から選択されたtargetが返ってくるので&lt;code&gt;make ${target}&lt;/code&gt;を実行&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;基本的な動作はすべて&lt;code&gt;skim&lt;/code&gt;任せになっていてRust側でやっているのは&lt;code&gt;skim&lt;/code&gt;とのやりとりくらいになっている。&lt;/p&gt;
-&lt;p&gt;※&lt;a href=&#34;https://github.com/lotabout/skim&#34;&gt;lotabout/skim&lt;/a&gt;&amp;hellip;Rust製のfuzzy-finder。Rustのライブラリとして利用することもできる。&lt;/p&gt;
-&lt;p&gt;(makeの文法が思ったより多彩っぽかったので自分が必要とするごく簡単なユースケース以外をカバーするのは&lt;a href=&#34;https://twitter.com/kyu08_/status/1639986936407531525&#34;&gt;早々に諦めた。&lt;/a&gt;(makeで1冊本が書けるぐらいだしそれはそうという感じではある))&lt;/p&gt;
+&lt;p&gt;※&lt;a href=&#34;https://github.com/lotabout/skim&#34; target=&#34;_blank&#34; &gt;lotabout/skim&lt;/a&gt;
+&amp;hellip;Rust製のfuzzy-finder。Rustのライブラリとして利用することもできる。&lt;/p&gt;
+&lt;p&gt;(makeの文法が思ったより多彩っぽかったので自分が必要とするごく簡単なユースケース以外をカバーするのは&lt;a href=&#34;https://twitter.com/kyu08_/status/1639986936407531525&#34; target=&#34;_blank&#34; &gt;早々に諦めた。&lt;/a&gt;
+(makeで1冊本が書けるぐらいだしそれはそうという感じではある))&lt;/p&gt;
 &lt;p&gt;brewコマンドでインストールできるので気になる方はぜひ。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew tap kyu08/tap
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install kyu08/tap/fzf-make
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ソースも公開しているので、「こう書くといいよ」とかバグとかありましたらぜひissueやPRで教えてください。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34;&gt;https://github.com/kyu08/fzf-make&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/fzf-make&lt;/a&gt;
+&lt;/p&gt;
 &lt;h2 id=&#34;実装&#34;&gt;実装&lt;/h2&gt;
 &lt;p&gt;上述の通り処理の大部分はskim任せになっている。(書いたコードはテストを含めても200行程度)&lt;/p&gt;
 &lt;p&gt;ただskimをライブラリとして利用する実装サンプルがあまりなかったのがちょっと大変だった。特にプレビューウィンドウの表示にfzfの候補文字列を変数としたシェルコマンドの形で渡すことができることに気づくまでに時間がかかった&lt;/p&gt;
 &lt;p&gt;↓の&lt;code&gt;{}&lt;/code&gt;にtarget名が入るイメージ。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; preview_command &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;line=$(bat Makefile | grep -nE &amp;#39;^{}\s*:&amp;#39; | sed -e &amp;#39;s/:.*//g&amp;#39;); bat --style=numbers --color=always --line-range $line: --highlight-line $line Makefile&amp;#34;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18&#34;&gt;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18&lt;/a&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;あとはgoでいつもやっている感じでテーブル駆動テストっぽくテストを書いてみた。可読性も保守性も高いので割と気に入っている。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145&#34;&gt;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145&lt;/a&gt;
+&lt;/p&gt;
 &lt;h2 id=&#34;動機&#34;&gt;動機&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Rustが書きたかった。(以上)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;最近Rustのやっていきが高まっており、&lt;a href=&#34;https://doc.rust-jp.rs/book-ja/&#34;&gt;The Rust Programming Language&lt;/a&gt; を1周したので何か作ってみるぞーという機運とMakefileのターゲットをfuzzy-finderで絞り込めたら便利そうだなーという気持ちが重なったのでRustでfzf-makeを作ってみた。 (あとはskimの存在を知っていたのも大きい。)&lt;/p&gt;
+&lt;p&gt;最近Rustのやっていきが高まっており、&lt;a href=&#34;https://doc.rust-jp.rs/book-ja/&#34; target=&#34;_blank&#34; &gt;The Rust Programming Language&lt;/a&gt;
+ を1周したので何か作ってみるぞーという機運とMakefileのターゲットをfuzzy-finderで絞り込めたら便利そうだなーという気持ちが重なったのでRustでfzf-makeを作ってみた。 (あとはskimの存在を知っていたのも大きい。)&lt;/p&gt;
 &lt;p&gt;自分が欲しいCLIツールを手に入れつつRustの経験が積めたのでよかった。&lt;/p&gt;
 &lt;p&gt;ちなみにRustに入門した直接的(?)なきっかけとしてはこのスライドを目にして、「Elmっぽい！楽しそう！」と思ったのが発端だった。Rustに興味を持っている人はぜひ読んでみて欲しい。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://speakerdeck.com/estie/man-wochi-siteshi-merurust&#34;&gt;満を持して始める Rust&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://speakerdeck.com/estie/man-wochi-siteshi-merurust&#34; target=&#34;_blank&#34; &gt;満を持して始める Rust&lt;/a&gt;
+&lt;/p&gt;
 &lt;h2 id=&#34;rustを触ってみて感じたこと&#34;&gt;Rustを触ってみて感じたこと&lt;/h2&gt;
 &lt;p&gt;Rustを触る前に持っていた印象は「コンパイルが通りずらく、安全性が高い」「関数型っぽい」という感じだった。&lt;/p&gt;
 &lt;p&gt;実際に学んでみた印象は次のような感じ。&lt;/p&gt;
@@ -57,7 +65,8 @@
 &lt;li&gt;関数型っぽい書き心地
 &lt;ul&gt;
 &lt;li&gt;特にenumとパターンマッチング,Option型 ,Result型, 式指向な考え方などの関数型っぽい言語機能や極力データをイミュータブルに扱う思想などが心地よかった。筆者が大好きな言語であるElm(ウェブブラウザベースのGUIを作成するための純粋関数型)の好きな部分をほとんど含んでたのでElmに近い感覚で書くことができた。(もちろん慣れてないこともあってElmよりも全然難しかったけど)&lt;/li&gt;
-&lt;li&gt;(Elmが気になる方は&lt;a href=&#34;https://guide.elm-lang.jp/&#34;&gt;Elm Guide&lt;/a&gt;がおすすめです)&lt;/li&gt;
+&lt;li&gt;(Elmが気になる方は&lt;a href=&#34;https://guide.elm-lang.jp/&#34; target=&#34;_blank&#34; &gt;Elm Guide&lt;/a&gt;
+がおすすめです)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;↑に近いがNull安全なことに加えて所有権などの概念のおかげでコンパイルが通りさえすればちゃんと動いてくれるという安心感がある。
@@ -72,7 +81,9 @@
 &lt;/li&gt;
 &lt;li&gt;コミュニティの初学者をサポートする姿勢がすごい
 &lt;ul&gt;
-&lt;li&gt;RustのOSSプロジェクトへのcontributionについては &lt;a href=&#34;https://zenn.dev/fraternite/articles/4e11063bf05aac&#34;&gt;rust-lang/rustへのcode contributionをはじめからていねいに&lt;/a&gt; が詳しいが、Rust製のOSSプロジェクトには&lt;code&gt;E-mentor&lt;/code&gt;というタグがありissueを進めるに当たってメンターが指針を記してくれているらしい。（&lt;a href=&#34;https://github.com/rust-lang/rust/issues/109099&#34;&gt;https://github.com/rust-lang/rust/issues/109099&lt;/a&gt; これとかすごい。）&lt;/li&gt;
+&lt;li&gt;RustのOSSプロジェクトへのcontributionについては &lt;a href=&#34;https://zenn.dev/fraternite/articles/4e11063bf05aac&#34; target=&#34;_blank&#34; &gt;rust-lang/rustへのcode contributionをはじめからていねいに&lt;/a&gt;
+ が詳しいが、Rust製のOSSプロジェクトには&lt;code&gt;E-mentor&lt;/code&gt;というタグがありissueを進めるに当たってメンターが指針を記してくれているらしい。（&lt;a href=&#34;https://github.com/rust-lang/rust/issues/109099&#34; target=&#34;_blank&#34; &gt;https://github.com/rust-lang/rust/issues/109099&lt;/a&gt;
+ これとかすごい。）&lt;/li&gt;
 &lt;li&gt;いつかRustのOSSプロジェクトにもcontributionしてみたい&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -80,7 +91,8 @@
 &lt;/ul&gt;
 &lt;p&gt;総じて開発体験は良かったのでこれからもゆるゆるとRustの学習は続けていきたい。&lt;/p&gt;
 &lt;h2 id=&#34;余談&#34;&gt;余談&lt;/h2&gt;
-&lt;p&gt;テスト実行に &lt;a href=&#34;nextest-rs/nextest&#34;&gt;https://github.com/nextest-rs/nextest&lt;/a&gt; を使ってみたがテスト結果が見やすくて便利だった。&lt;/p&gt;
+&lt;p&gt;テスト実行に &lt;a href=&#34;nextest-rs/nextest&#34; &gt;https://github.com/nextest-rs/nextest&lt;/a&gt;
+ を使ってみたがテスト結果が見やすくて便利だった。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;cargo run&lt;/code&gt;の結果
 &lt;img src=&#34;cargo-run.png&#34; alt=&#34;cargo run&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;cargo nextest run&lt;/code&gt;の結果

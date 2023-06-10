@@ -166,7 +166,7 @@ if (!doNotTrack) {
       <span class="post-author">kyu08</span>
     
     
-      <span class="post-reading-time">:: 5 min read (2158 words)</span>
+      <span class="post-reading-time">:: 5 min read (2154 words)</span>
     
   </div>
 
@@ -205,7 +205,8 @@ if (!doNotTrack) {
 
   <div class="post-content"><div>
         <p>Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった。</p>
-<p><a href="https://github.com/kyu08/fzf-make">https://github.com/kyu08/fzf-make</a></p>
+<p><a href="https://github.com/kyu08/fzf-make" target="_blank" >https://github.com/kyu08/fzf-make</a>
+</p>
 <p>こんな感じで動く。</p>
 <p><img src="fzf-make-demo.gif" alt="fzf-make-demo"></p>
 <h2 id="fzf-makeがやっていること">fzf-makeがやっていること<a href="#fzf-makeがやっていること" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
@@ -216,29 +217,36 @@ if (!doNotTrack) {
 <li><code>skim</code>から選択されたtargetが返ってくるので<code>make ${target}</code>を実行</li>
 </ol>
 <p>基本的な動作はすべて<code>skim</code>任せになっていてRust側でやっているのは<code>skim</code>とのやりとりくらいになっている。</p>
-<p>※<a href="https://github.com/lotabout/skim">lotabout/skim</a>&hellip;Rust製のfuzzy-finder。Rustのライブラリとして利用することもできる。</p>
-<p>(makeの文法が思ったより多彩っぽかったので自分が必要とするごく簡単なユースケース以外をカバーするのは<a href="https://twitter.com/kyu08_/status/1639986936407531525">早々に諦めた。</a>(makeで1冊本が書けるぐらいだしそれはそうという感じではある))</p>
+<p>※<a href="https://github.com/lotabout/skim" target="_blank" >lotabout/skim</a>
+&hellip;Rust製のfuzzy-finder。Rustのライブラリとして利用することもできる。</p>
+<p>(makeの文法が思ったより多彩っぽかったので自分が必要とするごく簡単なユースケース以外をカバーするのは<a href="https://twitter.com/kyu08_/status/1639986936407531525" target="_blank" >早々に諦めた。</a>
+(makeで1冊本が書けるぐらいだしそれはそうという感じではある))</p>
 <p>brewコマンドでインストールできるので気になる方はぜひ。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>brew tap kyu08/tap
 </span></span><span style="display:flex;"><span>brew install kyu08/tap/fzf-make
 </span></span></code></pre></div><p>ソースも公開しているので、「こう書くといいよ」とかバグとかありましたらぜひissueやPRで教えてください。</p>
-<p><a href="https://github.com/kyu08/fzf-make">https://github.com/kyu08/fzf-make</a></p>
+<p><a href="https://github.com/kyu08/fzf-make" target="_blank" >https://github.com/kyu08/fzf-make</a>
+</p>
 <h2 id="実装">実装<a href="#実装" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>上述の通り処理の大部分はskim任せになっている。(書いたコードはテストを含めても200行程度)</p>
 <p>ただskimをライブラリとして利用する実装サンプルがあまりなかったのがちょっと大変だった。特にプレビューウィンドウの表示にfzfの候補文字列を変数としたシェルコマンドの形で渡すことができることに気づくまでに時間がかかった</p>
 <p>↓の<code>{}</code>にtarget名が入るイメージ。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> preview_command <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;line=$(bat Makefile | grep -nE &#39;^{}\s*:&#39; | sed -e &#39;s/:.*//g&#39;); bat --style=numbers --color=always --line-range $line: --highlight-line $line Makefile&#34;</span>;
-</span></span></code></pre></div><p><a href="https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18">https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18</a></p>
+</span></span></code></pre></div><p><a href="https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18" target="_blank" >https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18</a>
+</p>
 <p>あとはgoでいつもやっている感じでテーブル駆動テストっぽくテストを書いてみた。可読性も保守性も高いので割と気に入っている。</p>
-<p><a href="https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145">https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145</a></p>
+<p><a href="https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145" target="_blank" >https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145</a>
+</p>
 <h2 id="動機">動機<a href="#動機" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
 <li>Rustが書きたかった。(以上)</li>
 </ul>
-<p>最近Rustのやっていきが高まっており、<a href="https://doc.rust-jp.rs/book-ja/">The Rust Programming Language</a> を1周したので何か作ってみるぞーという機運とMakefileのターゲットをfuzzy-finderで絞り込めたら便利そうだなーという気持ちが重なったのでRustでfzf-makeを作ってみた。 (あとはskimの存在を知っていたのも大きい。)</p>
+<p>最近Rustのやっていきが高まっており、<a href="https://doc.rust-jp.rs/book-ja/" target="_blank" >The Rust Programming Language</a>
+ を1周したので何か作ってみるぞーという機運とMakefileのターゲットをfuzzy-finderで絞り込めたら便利そうだなーという気持ちが重なったのでRustでfzf-makeを作ってみた。 (あとはskimの存在を知っていたのも大きい。)</p>
 <p>自分が欲しいCLIツールを手に入れつつRustの経験が積めたのでよかった。</p>
 <p>ちなみにRustに入門した直接的(?)なきっかけとしてはこのスライドを目にして、「Elmっぽい！楽しそう！」と思ったのが発端だった。Rustに興味を持っている人はぜひ読んでみて欲しい。</p>
-<p><a href="https://speakerdeck.com/estie/man-wochi-siteshi-merurust">満を持して始める Rust</a></p>
+<p><a href="https://speakerdeck.com/estie/man-wochi-siteshi-merurust" target="_blank" >満を持して始める Rust</a>
+</p>
 <h2 id="rustを触ってみて感じたこと">Rustを触ってみて感じたこと<a href="#rustを触ってみて感じたこと" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>Rustを触る前に持っていた印象は「コンパイルが通りずらく、安全性が高い」「関数型っぽい」という感じだった。</p>
 <p>実際に学んでみた印象は次のような感じ。</p>
@@ -246,7 +254,8 @@ if (!doNotTrack) {
 <li>関数型っぽい書き心地
 <ul>
 <li>特にenumとパターンマッチング,Option型 ,Result型, 式指向な考え方などの関数型っぽい言語機能や極力データをイミュータブルに扱う思想などが心地よかった。筆者が大好きな言語であるElm(ウェブブラウザベースのGUIを作成するための純粋関数型)の好きな部分をほとんど含んでたのでElmに近い感覚で書くことができた。(もちろん慣れてないこともあってElmよりも全然難しかったけど)</li>
-<li>(Elmが気になる方は<a href="https://guide.elm-lang.jp/">Elm Guide</a>がおすすめです)</li>
+<li>(Elmが気になる方は<a href="https://guide.elm-lang.jp/" target="_blank" >Elm Guide</a>
+がおすすめです)</li>
 </ul>
 </li>
 <li>↑に近いがNull安全なことに加えて所有権などの概念のおかげでコンパイルが通りさえすればちゃんと動いてくれるという安心感がある。
@@ -261,7 +270,9 @@ if (!doNotTrack) {
 </li>
 <li>コミュニティの初学者をサポートする姿勢がすごい
 <ul>
-<li>RustのOSSプロジェクトへのcontributionについては <a href="https://zenn.dev/fraternite/articles/4e11063bf05aac">rust-lang/rustへのcode contributionをはじめからていねいに</a> が詳しいが、Rust製のOSSプロジェクトには<code>E-mentor</code>というタグがありissueを進めるに当たってメンターが指針を記してくれているらしい。（<a href="https://github.com/rust-lang/rust/issues/109099">https://github.com/rust-lang/rust/issues/109099</a> これとかすごい。）</li>
+<li>RustのOSSプロジェクトへのcontributionについては <a href="https://zenn.dev/fraternite/articles/4e11063bf05aac" target="_blank" >rust-lang/rustへのcode contributionをはじめからていねいに</a>
+ が詳しいが、Rust製のOSSプロジェクトには<code>E-mentor</code>というタグがありissueを進めるに当たってメンターが指針を記してくれているらしい。（<a href="https://github.com/rust-lang/rust/issues/109099" target="_blank" >https://github.com/rust-lang/rust/issues/109099</a>
+ これとかすごい。）</li>
 <li>いつかRustのOSSプロジェクトにもcontributionしてみたい</li>
 </ul>
 </li>
@@ -269,7 +280,8 @@ if (!doNotTrack) {
 </ul>
 <p>総じて開発体験は良かったのでこれからもゆるゆるとRustの学習は続けていきたい。</p>
 <h2 id="余談">余談<a href="#余談" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>テスト実行に <a href="nextest-rs/nextest">https://github.com/nextest-rs/nextest</a> を使ってみたがテスト結果が見やすくて便利だった。</p>
+<p>テスト実行に <a href="nextest-rs/nextest" >https://github.com/nextest-rs/nextest</a>
+ を使ってみたがテスト結果が見やすくて便利だった。</p>
 <p><code>cargo run</code>の結果
 <img src="cargo-run.png" alt="cargo run"></p>
 <p><code>cargo nextest run</code>の結果

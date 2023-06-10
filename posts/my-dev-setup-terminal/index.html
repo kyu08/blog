@@ -6,7 +6,7 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="【この記事はUnipos Advent Calendar 2022の記事です】 この記事では筆者が開発の効率化のために行っている工夫や使っているツールなどについて紹介します" />
+<meta name="description" content="【この記事はUnipos Advent Calendar 2022 の記事です】 この記事では筆者が開発の効率化のために行っている工夫や使っているツールなどについて紹介します。 「他" />
 <meta name="keywords" content=", " />
 
   <meta name="robots" content="noodp" />
@@ -58,7 +58,7 @@ if (!doNotTrack) {
 <meta property="og:locale" content="ja" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="開発の効率化のためにやっていること ターミナル編">
-<meta property="og:description" content="【この記事はUnipos Advent Calendar 2022の記事です】 この記事では筆者が開発の効率化のために行っている工夫や使っているツールなどについて紹介します" />
+<meta property="og:description" content="【この記事はUnipos Advent Calendar 2022 の記事です】 この記事では筆者が開発の効率化のために行っている工夫や使っているツールなどについて紹介します。 「他" />
 <meta property="og:url" content="https://blog.kyu08.com/posts/my-dev-setup-terminal/" />
 <meta property="og:site_name" content="blog.kyu08.com" />
 
@@ -166,7 +166,7 @@ if (!doNotTrack) {
       <span class="post-author">kyu08</span>
     
     
-      <span class="post-reading-time">:: 7 min read (3070 words)</span>
+      <span class="post-reading-time">:: 7 min read (3067 words)</span>
     
   </div>
 
@@ -219,7 +219,8 @@ if (!doNotTrack) {
   
 
   <div class="post-content"><div>
-        <p>【この記事は<a href="https://qiita.com/advent-calendar/2022/unipos">Unipos Advent Calendar 2022</a>の記事です】</p>
+        <p>【この記事は<a href="https://qiita.com/advent-calendar/2022/unipos" target="_blank" >Unipos Advent Calendar 2022</a>
+の記事です】</p>
 <p>この記事では筆者が開発の効率化のために行っている工夫や使っているツールなどについて紹介します。
 「他にもこんなツールあるよ！」「こんな設定おすすめだよ！」などなどありましたらtwitterとかで教えてもらえると助かります。</p>
 <p>今回はターミナル編です！</p>
@@ -260,14 +261,16 @@ if (!doNotTrack) {
 </span></span></code></pre></div><p><code>make test | pbc</code>のように出力をパイプで<code>pbc</code>に渡すとクリップボードにコピーしつつ標準出力に出力してくれる。</p>
 <p>コマンドの出力をコピーしたいけど出力内容もその場で確認したいときに便利。</p>
 <p>こちらの記事で紹介されていた。</p>
-<p><a href="https://takuya-1st.hatenablog.jp/entry/2017/05/30/093000">https://takuya-1st.hatenablog.jp/entry/2017/05/30/093000</a></p>
+<p><a href="https://takuya-1st.hatenablog.jp/entry/2017/05/30/093000" target="_blank" >https://takuya-1st.hatenablog.jp/entry/2017/05/30/093000</a>
+</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>alias finder<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;open -a Finder ./&#39;</span>
 </span></span></code></pre></div><p>現在いるディレクトをfinderで開くコマンド</p>
 <p>ごく稀に使う。</p>
 <h3 id="ディレクトリ移動">ディレクトリ移動<a href="#ディレクトリ移動" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p>zshにはcdrという、移動したことがあるディレクトリを自動的に保持してくれる機能があります。</p>
 <p>これをいい感じにファジーファインダーから呼び出すスクリプトを公開して下さっている方がいたのでありがたく使わせてもらっています。</p>
-<p><a href="https://www.rasukarusan.com/entry/2018/08/14/083000">https://www.rasukarusan.com/entry/2018/08/14/083000</a></p>
+<p><a href="https://www.rasukarusan.com/entry/2018/08/14/083000" target="_blank" >https://www.rasukarusan.com/entry/2018/08/14/083000</a>
+</p>
 <p>fzfをインストールした上で以下のスクリプトを<code>.zshrc</code>に記述すると<code>c</code>で呼び出すことができます。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span><span style="color:#75715e"># fzf-cdr </span>
 </span></span><span style="display:flex;"><span>alias c<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;fzf-cdr&#39;</span>
@@ -303,7 +306,8 @@ if (!doNotTrack) {
 <h3 id="コマンド履歴検索">コマンド履歴検索<a href="#コマンド履歴検索" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p>実行したコマンドの履歴についてもfzfを使って絞り込みを行うようにしています。</p>
 <p>これもスクリプトを公開して下さっている方がいたのでありがたく使わせてもらっています。</p>
-<p><a href="https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/">https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/</a></p>
+<p><a href="https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/" target="_blank" >https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/</a>
+</p>
 <p>以下のスクリプトを<code>.zshrc</code>に記述すると、<code>ctrl + r</code>でコマンド履歴を呼び出すことができます。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#66d9ef">select</span>-history<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>  BUFFER<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>history -n -r <span style="color:#ae81ff">1</span> | fzf --no-sort +m --query <span style="color:#e6db74">&#34;</span>$LBUFFER<span style="color:#e6db74">&#34;</span> --prompt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;History &gt; &#34;</span><span style="color:#66d9ef">)</span>
@@ -314,28 +318,33 @@ if (!doNotTrack) {
 </span></span></code></pre></div><p><img src="command-history.gif" alt="command-history"></p>
 <h2 id="git操作">Git操作<a href="#git操作" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>Git操作のほとんどはGitのTUIクライアントであるLazygitを使っています。</p>
-<p><a href="https://github.com/jesseduffield/lazygit">https://github.com/jesseduffield/lazygit</a></p>
+<p><a href="https://github.com/jesseduffield/lazygit" target="_blank" >https://github.com/jesseduffield/lazygit</a>
+</p>
 <p>Lazygitはターミナル上で動作するリッチなGitクライアントでGitに関する大抵のことを行うことができます。(機能が豊富すぎて何ができて何ができないのかを正確に把握できていない)</p>
 <p>以下はLazygitを使って変更をaddしてcommitしてpushする例です。</p>
 <p><img src="lazygit-push.gif" alt="lazygit-push"></p>
 <p>見やすいですし、<strong>少ないタイプ数で操作できる</strong>点でおすすめです。他にも基本的なブランチ操作はもちろんのこと、<code>git rebase -i</code>相当のこともスピーディーにできるのでよく使っています。</p>
 <p>ちなみに筆者はkdheepak/lazygit.nvimというプラグインを使ってNeovim上からLazygitを呼び出しています。</p>
-<p><a href="https://github.com/kdheepak/lazygit.nvim">https://github.com/kdheepak/lazygit.nvim</a></p>
+<p><a href="https://github.com/kdheepak/lazygit.nvim" target="_blank" >https://github.com/kdheepak/lazygit.nvim</a>
+</p>
 <h2 id="ターミナルエミュレータ">ターミナルエミュレータ<a href="#ターミナルエミュレータ" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>筆者はターミナルエミュレータ(以下ターミナル)としてAlacrittyを使っています。</p>
-<p><a href="https://github.com/alacritty/alacritty">https://github.com/alacritty/alacritty</a></p>
+<p><a href="https://github.com/alacritty/alacritty" target="_blank" >https://github.com/alacritty/alacritty</a>
+</p>
 <p>筆者は普段開発にNeovimを利用しているのですが、以前からプロジェクトの全文検索に時間がかかってしまう点が気になっていました。
 動作が高速なターミナルを探していたところRust製のターミナルであるAlacrittyにたどり着きました。</p>
 <p>iTerm2からの乗り換えでしたが満足できるだけの速度になりました。<strong>ターミナルの速度を早くしたい人にはオススメ</strong>です。あとは<strong>設定をyamlで記述できる</strong>のも好みなポイントです。</p>
 <p>カラースキームはTokyo Nightを利用しています。</p>
-<p><a href="https://github.com/zatchheems/tokyo-night-alacritty-theme">https://github.com/zatchheems/tokyo-night-alacritty-theme</a></p>
+<p><a href="https://github.com/zatchheems/tokyo-night-alacritty-theme" target="_blank" >https://github.com/zatchheems/tokyo-night-alacritty-theme</a>
+</p>
 <p><img src="tokyonight.png" alt="tokyonight"></p>
 <p>Alacrittyにはタブ機能がなくタブ的な機能を実現するためにはtmuxなどのターミナルマルチプレクサを利用する必要があるため筆者はtmuxを利用しています。
 設定・プラグインなどは後述しますが、tmuxの操作感も好みなので割と満足しています。</p>
 <p>他にもRust製のターミナルとしてWarp, Weztermなどがありますが筆者の環境ではWarpはNeovimのcolorschemeの反映がうまくできず、Weztermは画面の再描画まわりの不具合が多少あったため、採用しませんでした。(Warp便利そうだしみやすいので使いたかった)</p>
 <h2 id="ターミナルのタブ管理">ターミナルのタブ管理<a href="#ターミナルのタブ管理" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>前述の通りAlacrittyにはタブ機能がないため、tmuxを使ってターミナルのタブ管理を行っています。</p>
-<p><a href="https://github.com/tmux/tmux">https://github.com/tmux/tmux</a></p>
+<p><a href="https://github.com/tmux/tmux" target="_blank" >https://github.com/tmux/tmux</a>
+</p>
 <h3 id="ステータスラインの表示">ステータスラインの表示<a href="#ステータスラインの表示" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p>ステータスラインは比較的シンプルにしていて、</p>
 <ul>
@@ -357,7 +366,8 @@ if (!doNotTrack) {
 <p>という手順で行っていましたがウィンドウが増えてくると地味にウィンドウ移動が大変になっていきました。以下は従来のウィンドウ切り替えの様子です。</p>
 <p><img src="tmux-window.gif" alt="tmux-window"></p>
 <p>どうにかもう少し楽にウィンドウ切り替えをできないかと探していたところsainnhe/tmux-fzfに出会いました。</p>
-<p><a href="https://github.com/sainnhe/tmux-fzf">https://github.com/sainnhe/tmux-fzf</a></p>
+<p><a href="https://github.com/sainnhe/tmux-fzf" target="_blank" >https://github.com/sainnhe/tmux-fzf</a>
+</p>
 <p>sainnhe/tmux-fzfはファジーファインダーで効率的にtmuxを操作するためのプラグインです。</p>
 <p>詳しくはリポジトリのREADMEに譲りますが、</p>
 <ul>

@@ -14,13 +14,15 @@
       <pubDate>Sat, 10 Jun 2023 01:26:52 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/create-gif/</guid>
-      <description>ブログ用によくGifをつくるので自分用の備忘録代わりに手順を記しておく。 前提 macOS Kapがインストールされていること Keycastrがインストー</description>
+      <description>ブログ用によくGifをつくるので自分用の備忘録代わりに手順を記しておく。 前提 macOS Kap がインストールされていること Keycastr がインストールされていること 手</description>
       <content>&lt;p&gt;ブログ用によくGifをつくるので自分用の備忘録代わりに手順を記しておく。&lt;/p&gt;
 &lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;macOS&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://getkap.co/&#34;&gt;Kap&lt;/a&gt;がインストールされていること&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/keycastr/keycastr&#34;&gt;Keycastr&lt;/a&gt;がインストールされていること&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://getkap.co/&#34; target=&#34;_blank&#34; &gt;Kap&lt;/a&gt;
+がインストールされていること&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/keycastr/keycastr&#34; target=&#34;_blank&#34; &gt;Keycastr&lt;/a&gt;
+がインストールされていること&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;手順&#34;&gt;手順&lt;/h2&gt;
 &lt;h3 id=&#34;1-keycastrを起動&#34;&gt;1. Keycastrを起動&lt;/h3&gt;
@@ -70,7 +72,8 @@
 &lt;p&gt;ちゃんとNext.js(やJSのツールチェイン周り)のお勉強をすればNextでもできたと思うが当面JS関連の技術を触る予定もないしブログの管理にそこまで時間をかけたい気持ちもなかったので諦めてhugoに移行することにした。&lt;/p&gt;
 &lt;h2 id=&#34;やったこと&#34;&gt;やったこと&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;テーマ選定(&lt;a href=&#34;https://github.com/panr/hugo-theme-terminal&#34;&gt;panr/hugo-theme-terminal&lt;/a&gt;を選択した)&lt;/li&gt;
+&lt;li&gt;テーマ選定(&lt;a href=&#34;https://github.com/panr/hugo-theme-terminal&#34; target=&#34;_blank&#34; &gt;panr/hugo-theme-terminal&lt;/a&gt;
+を選択した)&lt;/li&gt;
 &lt;li&gt;フォントなどスタイルの調整&lt;/li&gt;
 &lt;li&gt;ファビコンの設定&lt;/li&gt;
 &lt;li&gt;デプロイの自動化&lt;/li&gt;
@@ -113,9 +116,11 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;publish_dir&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;./public&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;cname&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;blog.kyu08.com&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# カスタムドメインの設定をしていない場合は不要&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;ga4の導入&#34;&gt;GA4の導入&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://maku77.github.io/p/zxk6pat/&#34;&gt;こちらの記事&lt;/a&gt;を参考に進めたらできた。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://maku77.github.io/p/zxk6pat/&#34; target=&#34;_blank&#34; &gt;こちらの記事&lt;/a&gt;
+を参考に進めたらできた。&lt;/p&gt;
 &lt;p&gt;1点だけ注意が必要なのはpartialsの扱いがthemeによって異なる(っぽい)こと。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/panr/hugo-theme-terminal&#34;&gt;panr/hugo-theme-terminal&lt;/a&gt;では&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/panr/hugo-theme-terminal&#34; target=&#34;_blank&#34; &gt;panr/hugo-theme-terminal&lt;/a&gt;
+では&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;To add an extended head section, please create
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;`layouts/partials/extended_head.html` in your Hugo directory.
@@ -157,10 +162,12 @@
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.blog/changelog/2023-05-09-more-secure-private-attachments/&#34;&gt;https://github.blog/changelog/2023-05-09-more-secure-private-attachments/&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.blog/changelog/2023-05-09-more-secure-private-attachments/&#34; target=&#34;_blank&#34; &gt;https://github.blog/changelog/2023-05-09-more-secure-private-attachments/&lt;/a&gt;
+&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:2&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/panr/hugo-theme-terminal/blob/9726b8d80658c6cf3c092c21484548aba6f64a68/layouts/partials/extended_head.html&#34;&gt;https://github.com/panr/hugo-theme-terminal/blob/9726b8d80658c6cf3c092c21484548aba6f64a68/layouts/partials/extended_head.html&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/panr/hugo-theme-terminal/blob/9726b8d80658c6cf3c092c21484548aba6f64a68/layouts/partials/extended_head.html&#34; target=&#34;_blank&#34; &gt;https://github.com/panr/hugo-theme-terminal/blob/9726b8d80658c6cf3c092c21484548aba6f64a68/layouts/partials/extended_head.html&lt;/a&gt;
+&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
@@ -175,8 +182,10 @@
       <guid>https://blog.kyu08.com/about/</guid>
       <description>Go Elm TypeScript Neovim tmux Rustが好きな3年目エンジニャーです。ご連絡はTwitterまで。 GitHub: kyu08 Twitter: @kyu08_</description>
       <content>&lt;p&gt;Go Elm TypeScript Neovim tmux Rustが好きな3年目エンジニャーです。ご連絡はTwitterまで。&lt;/p&gt;
-&lt;p&gt;GitHub: &lt;a href=&#34;https://github.com/kyu08&#34;&gt;kyu08&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Twitter: &lt;a href=&#34;https://twitter.com/kyu08_&#34;&gt;@kyu08_&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;GitHub: &lt;a href=&#34;https://github.com/kyu08&#34; target=&#34;_blank&#34; &gt;kyu08&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Twitter: &lt;a href=&#34;https://twitter.com/kyu08_&#34; target=&#34;_blank&#34; &gt;@kyu08_&lt;/a&gt;
+&lt;/p&gt;
 </content>
     </item>
     
@@ -188,7 +197,8 @@
       <guid>https://blog.kyu08.com/posts/fzf-make/</guid>
       <description>Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった。 https://github.com/kyu08/fzf-make こんな感じで動く。 fzf-makeがや</description>
       <content>&lt;p&gt;Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34;&gt;https://github.com/kyu08/fzf-make&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/fzf-make&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;こんな感じで動く。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;fzf-makeがやっていること&#34;&gt;fzf-makeがやっていること&lt;/h2&gt;
@@ -199,29 +209,36 @@
 &lt;li&gt;&lt;code&gt;skim&lt;/code&gt;から選択されたtargetが返ってくるので&lt;code&gt;make ${target}&lt;/code&gt;を実行&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;基本的な動作はすべて&lt;code&gt;skim&lt;/code&gt;任せになっていてRust側でやっているのは&lt;code&gt;skim&lt;/code&gt;とのやりとりくらいになっている。&lt;/p&gt;
-&lt;p&gt;※&lt;a href=&#34;https://github.com/lotabout/skim&#34;&gt;lotabout/skim&lt;/a&gt;&amp;hellip;Rust製のfuzzy-finder。Rustのライブラリとして利用することもできる。&lt;/p&gt;
-&lt;p&gt;(makeの文法が思ったより多彩っぽかったので自分が必要とするごく簡単なユースケース以外をカバーするのは&lt;a href=&#34;https://twitter.com/kyu08_/status/1639986936407531525&#34;&gt;早々に諦めた。&lt;/a&gt;(makeで1冊本が書けるぐらいだしそれはそうという感じではある))&lt;/p&gt;
+&lt;p&gt;※&lt;a href=&#34;https://github.com/lotabout/skim&#34; target=&#34;_blank&#34; &gt;lotabout/skim&lt;/a&gt;
+&amp;hellip;Rust製のfuzzy-finder。Rustのライブラリとして利用することもできる。&lt;/p&gt;
+&lt;p&gt;(makeの文法が思ったより多彩っぽかったので自分が必要とするごく簡単なユースケース以外をカバーするのは&lt;a href=&#34;https://twitter.com/kyu08_/status/1639986936407531525&#34; target=&#34;_blank&#34; &gt;早々に諦めた。&lt;/a&gt;
+(makeで1冊本が書けるぐらいだしそれはそうという感じではある))&lt;/p&gt;
 &lt;p&gt;brewコマンドでインストールできるので気になる方はぜひ。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew tap kyu08/tap
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install kyu08/tap/fzf-make
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ソースも公開しているので、「こう書くといいよ」とかバグとかありましたらぜひissueやPRで教えてください。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34;&gt;https://github.com/kyu08/fzf-make&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/fzf-make&lt;/a&gt;
+&lt;/p&gt;
 &lt;h2 id=&#34;実装&#34;&gt;実装&lt;/h2&gt;
 &lt;p&gt;上述の通り処理の大部分はskim任せになっている。(書いたコードはテストを含めても200行程度)&lt;/p&gt;
 &lt;p&gt;ただskimをライブラリとして利用する実装サンプルがあまりなかったのがちょっと大変だった。特にプレビューウィンドウの表示にfzfの候補文字列を変数としたシェルコマンドの形で渡すことができることに気づくまでに時間がかかった&lt;/p&gt;
 &lt;p&gt;↓の&lt;code&gt;{}&lt;/code&gt;にtarget名が入るイメージ。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; preview_command &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;line=$(bat Makefile | grep -nE &amp;#39;^{}\s*:&amp;#39; | sed -e &amp;#39;s/:.*//g&amp;#39;); bat --style=numbers --color=always --line-range $line: --highlight-line $line Makefile&amp;#34;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18&#34;&gt;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18&lt;/a&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;あとはgoでいつもやっている感じでテーブル駆動テストっぽくテストを書いてみた。可読性も保守性も高いので割と気に入っている。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145&#34;&gt;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145&lt;/a&gt;
+&lt;/p&gt;
 &lt;h2 id=&#34;動機&#34;&gt;動機&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Rustが書きたかった。(以上)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;最近Rustのやっていきが高まっており、&lt;a href=&#34;https://doc.rust-jp.rs/book-ja/&#34;&gt;The Rust Programming Language&lt;/a&gt; を1周したので何か作ってみるぞーという機運とMakefileのターゲットをfuzzy-finderで絞り込めたら便利そうだなーという気持ちが重なったのでRustでfzf-makeを作ってみた。 (あとはskimの存在を知っていたのも大きい。)&lt;/p&gt;
+&lt;p&gt;最近Rustのやっていきが高まっており、&lt;a href=&#34;https://doc.rust-jp.rs/book-ja/&#34; target=&#34;_blank&#34; &gt;The Rust Programming Language&lt;/a&gt;
+ を1周したので何か作ってみるぞーという機運とMakefileのターゲットをfuzzy-finderで絞り込めたら便利そうだなーという気持ちが重なったのでRustでfzf-makeを作ってみた。 (あとはskimの存在を知っていたのも大きい。)&lt;/p&gt;
 &lt;p&gt;自分が欲しいCLIツールを手に入れつつRustの経験が積めたのでよかった。&lt;/p&gt;
 &lt;p&gt;ちなみにRustに入門した直接的(?)なきっかけとしてはこのスライドを目にして、「Elmっぽい！楽しそう！」と思ったのが発端だった。Rustに興味を持っている人はぜひ読んでみて欲しい。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://speakerdeck.com/estie/man-wochi-siteshi-merurust&#34;&gt;満を持して始める Rust&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://speakerdeck.com/estie/man-wochi-siteshi-merurust&#34; target=&#34;_blank&#34; &gt;満を持して始める Rust&lt;/a&gt;
+&lt;/p&gt;
 &lt;h2 id=&#34;rustを触ってみて感じたこと&#34;&gt;Rustを触ってみて感じたこと&lt;/h2&gt;
 &lt;p&gt;Rustを触る前に持っていた印象は「コンパイルが通りずらく、安全性が高い」「関数型っぽい」という感じだった。&lt;/p&gt;
 &lt;p&gt;実際に学んでみた印象は次のような感じ。&lt;/p&gt;
@@ -229,7 +246,8 @@
 &lt;li&gt;関数型っぽい書き心地
 &lt;ul&gt;
 &lt;li&gt;特にenumとパターンマッチング,Option型 ,Result型, 式指向な考え方などの関数型っぽい言語機能や極力データをイミュータブルに扱う思想などが心地よかった。筆者が大好きな言語であるElm(ウェブブラウザベースのGUIを作成するための純粋関数型)の好きな部分をほとんど含んでたのでElmに近い感覚で書くことができた。(もちろん慣れてないこともあってElmよりも全然難しかったけど)&lt;/li&gt;
-&lt;li&gt;(Elmが気になる方は&lt;a href=&#34;https://guide.elm-lang.jp/&#34;&gt;Elm Guide&lt;/a&gt;がおすすめです)&lt;/li&gt;
+&lt;li&gt;(Elmが気になる方は&lt;a href=&#34;https://guide.elm-lang.jp/&#34; target=&#34;_blank&#34; &gt;Elm Guide&lt;/a&gt;
+がおすすめです)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;↑に近いがNull安全なことに加えて所有権などの概念のおかげでコンパイルが通りさえすればちゃんと動いてくれるという安心感がある。
@@ -244,7 +262,9 @@
 &lt;/li&gt;
 &lt;li&gt;コミュニティの初学者をサポートする姿勢がすごい
 &lt;ul&gt;
-&lt;li&gt;RustのOSSプロジェクトへのcontributionについては &lt;a href=&#34;https://zenn.dev/fraternite/articles/4e11063bf05aac&#34;&gt;rust-lang/rustへのcode contributionをはじめからていねいに&lt;/a&gt; が詳しいが、Rust製のOSSプロジェクトには&lt;code&gt;E-mentor&lt;/code&gt;というタグがありissueを進めるに当たってメンターが指針を記してくれているらしい。（&lt;a href=&#34;https://github.com/rust-lang/rust/issues/109099&#34;&gt;https://github.com/rust-lang/rust/issues/109099&lt;/a&gt; これとかすごい。）&lt;/li&gt;
+&lt;li&gt;RustのOSSプロジェクトへのcontributionについては &lt;a href=&#34;https://zenn.dev/fraternite/articles/4e11063bf05aac&#34; target=&#34;_blank&#34; &gt;rust-lang/rustへのcode contributionをはじめからていねいに&lt;/a&gt;
+ が詳しいが、Rust製のOSSプロジェクトには&lt;code&gt;E-mentor&lt;/code&gt;というタグがありissueを進めるに当たってメンターが指針を記してくれているらしい。（&lt;a href=&#34;https://github.com/rust-lang/rust/issues/109099&#34; target=&#34;_blank&#34; &gt;https://github.com/rust-lang/rust/issues/109099&lt;/a&gt;
+ これとかすごい。）&lt;/li&gt;
 &lt;li&gt;いつかRustのOSSプロジェクトにもcontributionしてみたい&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -252,7 +272,8 @@
 &lt;/ul&gt;
 &lt;p&gt;総じて開発体験は良かったのでこれからもゆるゆるとRustの学習は続けていきたい。&lt;/p&gt;
 &lt;h2 id=&#34;余談&#34;&gt;余談&lt;/h2&gt;
-&lt;p&gt;テスト実行に &lt;a href=&#34;nextest-rs/nextest&#34;&gt;https://github.com/nextest-rs/nextest&lt;/a&gt; を使ってみたがテスト結果が見やすくて便利だった。&lt;/p&gt;
+&lt;p&gt;テスト実行に &lt;a href=&#34;nextest-rs/nextest&#34; &gt;https://github.com/nextest-rs/nextest&lt;/a&gt;
+ を使ってみたがテスト結果が見やすくて便利だった。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;cargo run&lt;/code&gt;の結果
 &lt;img src=&#34;cargo-run.png&#34; alt=&#34;cargo run&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;cargo nextest run&lt;/code&gt;の結果
@@ -270,7 +291,8 @@
       <description>つくったもの yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くくんを作った。 https://github.com/kyu08/fzf-bookmark-opener こんな感じで動く。 コードの話 コード自体は</description>
       <content>&lt;h2 id=&#34;つくったもの&#34;&gt;つくったもの&lt;/h2&gt;
 &lt;p&gt;yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くくんを作った。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-bookmark-opener&#34;&gt;https://github.com/kyu08/fzf-bookmark-opener&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-bookmark-opener&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/fzf-bookmark-opener&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;こんな感じで動く。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/49891479/218272272-e693c10d-c810-458a-bf46-9c3a4a2fe45a.gif&#34; alt=&#34;demo&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;コードの話&#34;&gt;コードの話&lt;/h2&gt;
@@ -282,20 +304,24 @@
 &lt;li&gt;選択されたブックマークをブラウザで開く&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;ということをやっているだけである。(&lt;code&gt;main.go&lt;/code&gt;に120行弱だけという素朴なコード量)&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-bookmark-opener/blob/69313bf187dcfd6127efcf75e172a34fb9b8e05a/main.go#L38-L60&#34;&gt;fzf-bookmark-opener/main.go at main · kyu08/fzf-bookmark-opener&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-bookmark-opener/blob/69313bf187dcfd6127efcf75e172a34fb9b8e05a/main.go#L38-L60&#34; target=&#34;_blank&#34; &gt;fzf-bookmark-opener/main.go at main · kyu08/fzf-bookmark-opener&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;この記述量で作れたのは間違いなくktr0731/go-fuzzyfinderのおかげでした。このライブラリのおかげでgoのコードからfzfを簡単に呼び出すことができました。というかなんならこのライブラリの存在を知ったので使ってみたくなってfzf-bookmark-openerを作ったみたいなとこもあります。ありがとうございます。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/ktr0731/go-fuzzyfinder&#34;&gt;ktr0731/go-fuzzyfinder&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/ktr0731/go-fuzzyfinder&#34; target=&#34;_blank&#34; &gt;ktr0731/go-fuzzyfinder&lt;/a&gt;
+&lt;/p&gt;
 &lt;h2 id=&#34;ちゃっかりbrewでも公開してみた&#34;&gt;ちゃっかりbrewでも公開してみた&lt;/h2&gt;
 &lt;p&gt;brewでインストールできるに越したことはないだろうってことで、brewでも公開してみたが思いのほか簡単だった。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew tap kyu08/tap
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install kyu08/tap/fzf-bookmark-opener
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これだけでインストールできるので気になった方もそうでない方もぜひ。issueやPRもお待ちしています。(&lt;code&gt;go install&lt;/code&gt;でインストールしたい方はこちら(&lt;code&gt;go install github.com/kyu08/fzf-bookmark-opener@latest&lt;/code&gt;))&lt;/p&gt;
 &lt;p&gt;brew公開に関してはこちらのブログを参考にしたら30分弱でサクッと公開できた(想像より簡単だった)&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.rasukarusan.com/entry/2019/11/03/211338&#34;&gt;https://www.rasukarusan.com/entry/2019/11/03/211338&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.rasukarusan.com/entry/2019/11/03/211338&#34; target=&#34;_blank&#34; &gt;https://www.rasukarusan.com/entry/2019/11/03/211338&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;詳細は↑の記事を読んでいただければわかるが、リリースにバイナリを含めて配布用のrepositoryを作るだけなので本当に簡単だったのでツールを配布したい人はぜひ。&lt;/p&gt;
 &lt;h2 id=&#34;ちゃっかりヘルパースクリプトも公開した&#34;&gt;ちゃっかりヘルパースクリプトも公開した&lt;/h2&gt;
 &lt;p&gt;現在お仕事ではGCPを使っているんですが、GCPのコンソールをプロジェクト、サービスを指定して直接開きたいことが多いのでプロジェクトのリストを渡すとGCPの主要なサービス(主観)のURL一覧をfzf-bookmark-openerの設定ファイルの形式で吐いてくれるスクリプトも公開した。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/gcp-url-generator&#34;&gt;kyu08/gcp-url-generator&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/gcp-url-generator&#34; target=&#34;_blank&#34; &gt;kyu08/gcp-url-generator&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;project名のリストとregionを渡すとこういう文字列を吐いてくれるイメージ。(以下は出力の一部)(この例だとregionは関係ない)&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - &lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Home stg&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;url&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;https://console.cloud.google.com/home/dashboard?project=stg&amp;#39;&lt;/span&gt;
@@ -337,18 +363,22 @@
 &lt;li&gt;Firebase Hosting&lt;/li&gt;
 &lt;li&gt;Firebase Remote Config&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;これで生成したURLをfzf-bookmark-openerに食わせるとお使いのGCPプロジェクトの特定のサービスがコマンドラインからサクッと開くことができる。(詳しくは&lt;a href=&#34;https://github.com/kyu08/gcp-url-generator&#34;&gt;kyu08/gcp-url-generatorのREADME&lt;/a&gt;を参照)
+&lt;p&gt;これで生成したURLをfzf-bookmark-openerに食わせるとお使いのGCPプロジェクトの特定のサービスがコマンドラインからサクッと開くことができる。(詳しくは&lt;a href=&#34;https://github.com/kyu08/gcp-url-generator&#34; target=&#34;_blank&#34; &gt;kyu08/gcp-url-generatorのREADME&lt;/a&gt;
+を参照)
 こちらもissueやPRお待ちしてます。&lt;/p&gt;
 &lt;h2 id=&#34;余談1&#34;&gt;余談1&lt;/h2&gt;
 &lt;p&gt;Rustだとlotabout/skimを使うとktr0731/go-fuzzyfinderと同じようなことができるらしい。最近Rust熱が高まりに高まっている(Tour of Rustやり中)ので次に何かCLIでfzfなツールをつくるときは使ってみようと思う。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/lotabout/skim&#34;&gt;lotabout/skim&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/lotabout/skim&#34; target=&#34;_blank&#34; &gt;lotabout/skim&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;[追記]
 Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34;&gt;kyu08/fzf-make&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;kyu08/fzf-make&lt;/a&gt;
+&lt;/p&gt;
 &lt;h2 id=&#34;余談2&#34;&gt;余談2&lt;/h2&gt;
 &lt;p&gt;ふと気になってktr0731/go-fuzzyfinderをはじめとする依存ライブラリのライセンス表示はどうすればいいか気になって調べてみたところリポジトリに&lt;code&gt;NOTICES&lt;/code&gt;とか&lt;code&gt;CREDITS&lt;/code&gt;とか&lt;code&gt;ThirdPartyNotices&lt;/code&gt;みたいなファイルを置いてそこに依存ライブラリの著作権・ライセンス表示をするのが一般的なようだった。&lt;/p&gt;
 &lt;p&gt;手作業でやるのは辛いので自動生成ツールを探したところGoだとこれが使いやすそうだったので使ってみたけど簡単でとてもよかった。ありがたや&amp;hellip;。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/Songmu/gocredits&#34;&gt;https://github.com/Songmu/gocredits&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Songmu/gocredits&#34; target=&#34;_blank&#34; &gt;https://github.com/Songmu/gocredits&lt;/a&gt;
+&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;ktr0731/go-fuzzyfinderはいいぞ〜&lt;/p&gt;
 </content>
@@ -376,7 +406,8 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;li&gt;元いたwindowに戻る&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;tmux-fzfなど筆者のターミナル環境については以下参照&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.kyu08.com/posts/my-dev-setup-terminal&#34;&gt;開発の効率化のためにやっていること ターミナル編&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.kyu08.com/posts/my-dev-setup-terminal&#34; target=&#34;_blank&#34; &gt;開発の効率化のためにやっていること ターミナル編&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;筆者はGoの動作を確認したいことがほとんどなのでこういった構成にしているが、必要に応じてよく使うFWをセットアップした環境を作っておくと便利そう。&lt;/p&gt;
 &lt;h2 id=&#34;プロジェクトの内容&#34;&gt;プロジェクトの内容&lt;/h2&gt;
 &lt;p&gt;Go固有の内容もあるので参考程度で。&lt;/p&gt;
@@ -406,17 +437,20 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
 &lt;p&gt;ターミナルから出ずに作業が完結できてうれしい。&lt;/p&gt;
 &lt;p&gt;同様のことはGoの場合はブラウザからThe Go Playground(※)を開いても行えるが筆者は何でもターミナルでできると嬉しい人なのでできるようにしてみた。&lt;/p&gt;
-&lt;p&gt;※ブラウザ上で実行できるGoのエディタ + 実行環境がセットになったやつ。&lt;a href=&#34;https://go.dev/play/&#34;&gt;https://go.dev/play/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;※ブラウザ上で実行できるGoのエディタ + 実行環境がセットになったやつ。&lt;a href=&#34;https://go.dev/play/&#34; target=&#34;_blank&#34; &gt;https://go.dev/play/&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;あとやるとしたらThe Go PlaygroundにあるURL発行機能とかを実現できると他の人への共有も楽になっていいのかもしれない。(今のところあんまり他の人に共有する機会がないので困っていない)&lt;/p&gt;
 &lt;h2 id=&#34;補足&#34;&gt;補足&lt;/h2&gt;
 &lt;p&gt;最後に補足としてGif内で使っているNeovimのプラグインを紹介します。&lt;/p&gt;
 &lt;h3 id=&#34;ターミナル表示&#34;&gt;ターミナル表示&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/voldikss/vim-floaterm&#34;&gt;voldikss/vim-floaterm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/voldikss/vim-floaterm&#34; target=&#34;_blank&#34; &gt;voldikss/vim-floaterm&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;floaterm.gif&#34; alt=&#34;floaterm&#34;&gt;&lt;/p&gt;
 &lt;p&gt;GoのSandbox環境の&lt;code&gt;main.go&lt;/code&gt;に書いたスクリプトを実行するために、Neovimからターミナルを表示するシーンで使っている。&lt;/p&gt;
 &lt;p&gt;コード編集してサクっと動作確認したいときなどに便利。(といいつつ最近動作の重さが目立ってきたので&lt;code&gt;&amp;lt;C-z&amp;gt;&lt;/code&gt;でNeovimの起動元に戻ってターミナルを操作することが多い)&lt;/p&gt;
 &lt;h3 id=&#34;カーソル移動&#34;&gt;カーソル移動&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/yuki-yano/fuzzy-motion.vim&#34;&gt;yuki-yano/fuzzy-motion.vim&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/yuki-yano/fuzzy-motion.vim&#34; target=&#34;_blank&#34; &gt;yuki-yano/fuzzy-motion.vim&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;fmt.Printf(&amp;quot;u: %v\n&amp;quot;, u)&lt;/code&gt;の&lt;code&gt;u&lt;/code&gt;から&lt;code&gt;%v&lt;/code&gt;の位置にカーソル移動する際に使っているプラグイン。&lt;/p&gt;
 &lt;p&gt;動作のイメージはこんな感じ。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;fuzzy-motion.gif&#34; alt=&#34;fuzzy-motion&#34;&gt;&lt;/p&gt;
@@ -425,7 +459,8 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;p&gt;筆者はノーマルモードで&lt;code&gt;f&lt;/code&gt;キーを押下するとプラグインが起動するように設定している。&lt;/p&gt;
 &lt;p&gt;カーソル移動の効率がよすぎて正直もうこれなしでは開発したくない。&lt;/p&gt;
 &lt;h3 id=&#34;lsp-server&#34;&gt;LSP Server&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/neoclide/coc.nvim&#34;&gt;neoclide/coc.nvim&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/neoclide/coc.nvim&#34; target=&#34;_blank&#34; &gt;neoclide/coc.nvim&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;Language Serverをホストするためのプラグイン。&lt;/p&gt;
 &lt;p&gt;すごく簡単にいうと補完や関数定義を表示したり定義ジャンプできるようにしたりしてくれる。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;coc-nvim.gif&#34; alt=&#34;coc-nvim&#34;&gt;&lt;/p&gt;
@@ -441,7 +476,8 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
       <guid>https://blog.kyu08.com/posts/learn-design-pattern/</guid>
       <description>ずっと気になってはいたが2つ~3つくらいしか知らなかったデザインパターンをやっと勉強する気になったのでこのサイトを一通り眺めてみた。 https://refactoring.guru/ja/design-patterns こちら</description>
       <content>&lt;p&gt;ずっと気になってはいたが2つ~3つくらいしか知らなかったデザインパターンをやっと勉強する気になったのでこのサイトを一通り眺めてみた。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://refactoring.guru/ja/design-patterns&#34;&gt;https://refactoring.guru/ja/design-patterns&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://refactoring.guru/ja/design-patterns&#34; target=&#34;_blank&#34; &gt;https://refactoring.guru/ja/design-patterns&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;こちらのサイトは平易な文章とわかりやすい例で説明がされていて、各言語でのサンプルコードも載せてくれていたのでかなりサクサクと理解できてとてもよかった。(各パターンをC#, C++, Go, Java, php, Python, Ruby, Rust, Swift, TypeScriptで実装した例が紹介されていた)(すごい)&lt;/p&gt;
 &lt;h2 id=&#34;自分のデザインパターンとの向き合い方について&#34;&gt;自分のデザインパターンとの向き合い方について&lt;/h2&gt;
 &lt;p&gt;周りのエンジニアにデザインパターンについて聞くと、&lt;/p&gt;
@@ -460,7 +496,9 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;/ul&gt;
 &lt;p&gt;いろんなところで言われていることだが、やはり責務の分離や単一責任の法則を意識することで変更しやすいコードにしていくことがよりよい設計に繋がることを再確認できた。&lt;/p&gt;
 &lt;p&gt;いいコードを書けるようになるにはこれらのことを意識しながら実際にコードを書いて実践していくことが重要だと思うのでたくさん試行錯誤していい感じのコード書き力を身につけていきたい。(とても経験豊富な先輩エンジニアも結局自分でサービスを運用して設計の失敗の痛みを感じるのが一番成長できる、というようなことを言っていた)&lt;/p&gt;
-&lt;p&gt;設計関連だと &lt;a href=&#34;https://www.amazon.co.jp/dp/4297127830&#34;&gt;良いコード/悪いコードで学ぶ設計入門 ―保守しやすい 成長し続けるコードの書き方&lt;/a&gt; とか &lt;a href=&#34;https://www.amazon.co.jp/Clean-Architecture-%E9%81%94%E4%BA%BA%E3%81%AB%E5%AD%A6%E3%81%B6%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%AE%E6%A7%8B%E9%80%A0%E3%81%A8%E8%A8%AD%E8%A8%88-Robert-C-Martin/dp/4048930656&#34;&gt;Clean Architecture&lt;/a&gt; とかも気になってるので読みたい。&lt;/p&gt;
+&lt;p&gt;設計関連だと &lt;a href=&#34;https://www.amazon.co.jp/dp/4297127830&#34; target=&#34;_blank&#34; &gt;良いコード/悪いコードで学ぶ設計入門 ―保守しやすい 成長し続けるコードの書き方&lt;/a&gt;
+ とか &lt;a href=&#34;https://www.amazon.co.jp/Clean-Architecture-%E9%81%94%E4%BA%BA%E3%81%AB%E5%AD%A6%E3%81%B6%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%AE%E6%A7%8B%E9%80%A0%E3%81%A8%E8%A8%AD%E8%A8%88-Robert-C-Martin/dp/4048930656&#34; target=&#34;_blank&#34; &gt;Clean Architecture&lt;/a&gt;
+ とかも気になってるので読みたい。&lt;/p&gt;
 </content>
     </item>
     
@@ -470,8 +508,9 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
       <pubDate>Thu, 15 Dec 2022 01:15:48 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/my-dev-setup-terminal/</guid>
-      <description>【この記事はUnipos Advent Calendar 2022の記事です】 この記事では筆者が開発の効率化のために行っている工夫や使っているツールなどについて紹介します</description>
-      <content>&lt;p&gt;【この記事は&lt;a href=&#34;https://qiita.com/advent-calendar/2022/unipos&#34;&gt;Unipos Advent Calendar 2022&lt;/a&gt;の記事です】&lt;/p&gt;
+      <description>【この記事はUnipos Advent Calendar 2022 の記事です】 この記事では筆者が開発の効率化のために行っている工夫や使っているツールなどについて紹介します。 「他</description>
+      <content>&lt;p&gt;【この記事は&lt;a href=&#34;https://qiita.com/advent-calendar/2022/unipos&#34; target=&#34;_blank&#34; &gt;Unipos Advent Calendar 2022&lt;/a&gt;
+の記事です】&lt;/p&gt;
 &lt;p&gt;この記事では筆者が開発の効率化のために行っている工夫や使っているツールなどについて紹介します。
 「他にもこんなツールあるよ！」「こんな設定おすすめだよ！」などなどありましたらtwitterとかで教えてもらえると助かります。&lt;/p&gt;
 &lt;p&gt;今回はターミナル編です！&lt;/p&gt;
@@ -512,14 +551,16 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;make test | pbc&lt;/code&gt;のように出力をパイプで&lt;code&gt;pbc&lt;/code&gt;に渡すとクリップボードにコピーしつつ標準出力に出力してくれる。&lt;/p&gt;
 &lt;p&gt;コマンドの出力をコピーしたいけど出力内容もその場で確認したいときに便利。&lt;/p&gt;
 &lt;p&gt;こちらの記事で紹介されていた。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://takuya-1st.hatenablog.jp/entry/2017/05/30/093000&#34;&gt;https://takuya-1st.hatenablog.jp/entry/2017/05/30/093000&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://takuya-1st.hatenablog.jp/entry/2017/05/30/093000&#34; target=&#34;_blank&#34; &gt;https://takuya-1st.hatenablog.jp/entry/2017/05/30/093000&lt;/a&gt;
+&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias finder&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;open -a Finder ./&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;現在いるディレクトをfinderで開くコマンド&lt;/p&gt;
 &lt;p&gt;ごく稀に使う。&lt;/p&gt;
 &lt;h3 id=&#34;ディレクトリ移動&#34;&gt;ディレクトリ移動&lt;/h3&gt;
 &lt;p&gt;zshにはcdrという、移動したことがあるディレクトリを自動的に保持してくれる機能があります。&lt;/p&gt;
 &lt;p&gt;これをいい感じにファジーファインダーから呼び出すスクリプトを公開して下さっている方がいたのでありがたく使わせてもらっています。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.rasukarusan.com/entry/2018/08/14/083000&#34;&gt;https://www.rasukarusan.com/entry/2018/08/14/083000&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.rasukarusan.com/entry/2018/08/14/083000&#34; target=&#34;_blank&#34; &gt;https://www.rasukarusan.com/entry/2018/08/14/083000&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;fzfをインストールした上で以下のスクリプトを&lt;code&gt;.zshrc&lt;/code&gt;に記述すると&lt;code&gt;c&lt;/code&gt;で呼び出すことができます。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# fzf-cdr &lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias c&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;fzf-cdr&amp;#39;&lt;/span&gt;
@@ -555,7 +596,8 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;h3 id=&#34;コマンド履歴検索&#34;&gt;コマンド履歴検索&lt;/h3&gt;
 &lt;p&gt;実行したコマンドの履歴についてもfzfを使って絞り込みを行うようにしています。&lt;/p&gt;
 &lt;p&gt;これもスクリプトを公開して下さっている方がいたのでありがたく使わせてもらっています。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/&#34;&gt;https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/&#34; target=&#34;_blank&#34; &gt;https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;以下のスクリプトを&lt;code&gt;.zshrc&lt;/code&gt;に記述すると、&lt;code&gt;ctrl + r&lt;/code&gt;でコマンド履歴を呼び出すことができます。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;select&lt;/span&gt;-history&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  BUFFER&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;history -n -r &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | fzf --no-sort +m --query &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$LBUFFER&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; --prompt&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;History &amp;gt; &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
@@ -566,28 +608,33 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;command-history.gif&#34; alt=&#34;command-history&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;git操作&#34;&gt;Git操作&lt;/h2&gt;
 &lt;p&gt;Git操作のほとんどはGitのTUIクライアントであるLazygitを使っています。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/jesseduffield/lazygit&#34;&gt;https://github.com/jesseduffield/lazygit&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/jesseduffield/lazygit&#34; target=&#34;_blank&#34; &gt;https://github.com/jesseduffield/lazygit&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;Lazygitはターミナル上で動作するリッチなGitクライアントでGitに関する大抵のことを行うことができます。(機能が豊富すぎて何ができて何ができないのかを正確に把握できていない)&lt;/p&gt;
 &lt;p&gt;以下はLazygitを使って変更をaddしてcommitしてpushする例です。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;lazygit-push.gif&#34; alt=&#34;lazygit-push&#34;&gt;&lt;/p&gt;
 &lt;p&gt;見やすいですし、&lt;strong&gt;少ないタイプ数で操作できる&lt;/strong&gt;点でおすすめです。他にも基本的なブランチ操作はもちろんのこと、&lt;code&gt;git rebase -i&lt;/code&gt;相当のこともスピーディーにできるのでよく使っています。&lt;/p&gt;
 &lt;p&gt;ちなみに筆者はkdheepak/lazygit.nvimというプラグインを使ってNeovim上からLazygitを呼び出しています。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kdheepak/lazygit.nvim&#34;&gt;https://github.com/kdheepak/lazygit.nvim&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kdheepak/lazygit.nvim&#34; target=&#34;_blank&#34; &gt;https://github.com/kdheepak/lazygit.nvim&lt;/a&gt;
+&lt;/p&gt;
 &lt;h2 id=&#34;ターミナルエミュレータ&#34;&gt;ターミナルエミュレータ&lt;/h2&gt;
 &lt;p&gt;筆者はターミナルエミュレータ(以下ターミナル)としてAlacrittyを使っています。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/alacritty/alacritty&#34;&gt;https://github.com/alacritty/alacritty&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/alacritty/alacritty&#34; target=&#34;_blank&#34; &gt;https://github.com/alacritty/alacritty&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;筆者は普段開発にNeovimを利用しているのですが、以前からプロジェクトの全文検索に時間がかかってしまう点が気になっていました。
 動作が高速なターミナルを探していたところRust製のターミナルであるAlacrittyにたどり着きました。&lt;/p&gt;
 &lt;p&gt;iTerm2からの乗り換えでしたが満足できるだけの速度になりました。&lt;strong&gt;ターミナルの速度を早くしたい人にはオススメ&lt;/strong&gt;です。あとは&lt;strong&gt;設定をyamlで記述できる&lt;/strong&gt;のも好みなポイントです。&lt;/p&gt;
 &lt;p&gt;カラースキームはTokyo Nightを利用しています。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/zatchheems/tokyo-night-alacritty-theme&#34;&gt;https://github.com/zatchheems/tokyo-night-alacritty-theme&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/zatchheems/tokyo-night-alacritty-theme&#34; target=&#34;_blank&#34; &gt;https://github.com/zatchheems/tokyo-night-alacritty-theme&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;tokyonight.png&#34; alt=&#34;tokyonight&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Alacrittyにはタブ機能がなくタブ的な機能を実現するためにはtmuxなどのターミナルマルチプレクサを利用する必要があるため筆者はtmuxを利用しています。
 設定・プラグインなどは後述しますが、tmuxの操作感も好みなので割と満足しています。&lt;/p&gt;
 &lt;p&gt;他にもRust製のターミナルとしてWarp, Weztermなどがありますが筆者の環境ではWarpはNeovimのcolorschemeの反映がうまくできず、Weztermは画面の再描画まわりの不具合が多少あったため、採用しませんでした。(Warp便利そうだしみやすいので使いたかった)&lt;/p&gt;
 &lt;h2 id=&#34;ターミナルのタブ管理&#34;&gt;ターミナルのタブ管理&lt;/h2&gt;
 &lt;p&gt;前述の通りAlacrittyにはタブ機能がないため、tmuxを使ってターミナルのタブ管理を行っています。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/tmux/tmux&#34;&gt;https://github.com/tmux/tmux&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/tmux/tmux&#34; target=&#34;_blank&#34; &gt;https://github.com/tmux/tmux&lt;/a&gt;
+&lt;/p&gt;
 &lt;h3 id=&#34;ステータスラインの表示&#34;&gt;ステータスラインの表示&lt;/h3&gt;
 &lt;p&gt;ステータスラインは比較的シンプルにしていて、&lt;/p&gt;
 &lt;ul&gt;
@@ -609,7 +656,8 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;p&gt;という手順で行っていましたがウィンドウが増えてくると地味にウィンドウ移動が大変になっていきました。以下は従来のウィンドウ切り替えの様子です。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;tmux-window.gif&#34; alt=&#34;tmux-window&#34;&gt;&lt;/p&gt;
 &lt;p&gt;どうにかもう少し楽にウィンドウ切り替えをできないかと探していたところsainnhe/tmux-fzfに出会いました。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/sainnhe/tmux-fzf&#34;&gt;https://github.com/sainnhe/tmux-fzf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/sainnhe/tmux-fzf&#34; target=&#34;_blank&#34; &gt;https://github.com/sainnhe/tmux-fzf&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;sainnhe/tmux-fzfはファジーファインダーで効率的にtmuxを操作するためのプラグインです。&lt;/p&gt;
 &lt;p&gt;詳しくはリポジトリのREADMEに譲りますが、&lt;/p&gt;
 &lt;ul&gt;
@@ -647,7 +695,8 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
       
       <guid>https://blog.kyu08.com/posts/consultant/</guid>
       <description>コンサル一年目が学ぶこと を読んだ。 何を期待して読んだのか これまで技術の勉強はしたことがあったが、社会人として普遍的なスキルである 問題解決能力</description>
-      <content>&lt;p&gt;&lt;a href=&#34;https://www.amazon.co.jp/%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%AB%E4%B8%80%E5%B9%B4%E7%9B%AE%E3%81%8C%E5%AD%A6%E3%81%B6%E3%81%93%E3%81%A8-%E5%A4%A7%E7%9F%B3%E5%93%B2%E4%B9%8B-ebook/dp/B00MA671WW/ref=sr_1_5?adgrpid=89884031168&amp;amp;gclid=CjwKCAiAhreNBhAYEiwAFGGKPLfeLxQ_KIeJv22itv63KSRBjnAb3p0hH0Q0JvgN6FzTeD2J6dcsQBoCs3QQAvD_BwE&amp;amp;hvadid=553974437471&amp;amp;hvdev=c&amp;amp;hvlocphy=1009307&amp;amp;hvnetw=g&amp;amp;hvqmt=e&amp;amp;hvrand=17984675329684059400&amp;amp;hvtargid=kwd-416077613251&amp;amp;hydadcr=27493_14478962&amp;amp;jp-ad-ap=0&amp;amp;keywords=%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%AB+%E4%B8%80+%E5%B9%B4+%E7%9B%AE+%E3%81%8C+%E5%AD%A6%E3%81%B6+%E3%81%93%E3%81%A8&amp;amp;qid=1638793971&amp;amp;sr=8-5&#34;&gt;コンサル一年目が学ぶこと&lt;/a&gt; を読んだ。&lt;/p&gt;
+      <content>&lt;p&gt;&lt;a href=&#34;https://www.amazon.co.jp/%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%AB%E4%B8%80%E5%B9%B4%E7%9B%AE%E3%81%8C%E5%AD%A6%E3%81%B6%E3%81%93%E3%81%A8-%E5%A4%A7%E7%9F%B3%E5%93%B2%E4%B9%8B-ebook/dp/B00MA671WW/ref=sr_1_5?adgrpid=89884031168&amp;amp;gclid=CjwKCAiAhreNBhAYEiwAFGGKPLfeLxQ_KIeJv22itv63KSRBjnAb3p0hH0Q0JvgN6FzTeD2J6dcsQBoCs3QQAvD_BwE&amp;amp;hvadid=553974437471&amp;amp;hvdev=c&amp;amp;hvlocphy=1009307&amp;amp;hvnetw=g&amp;amp;hvqmt=e&amp;amp;hvrand=17984675329684059400&amp;amp;hvtargid=kwd-416077613251&amp;amp;hydadcr=27493_14478962&amp;amp;jp-ad-ap=0&amp;amp;keywords=%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%AB&amp;#43;%E4%B8%80&amp;#43;%E5%B9%B4&amp;#43;%E7%9B%AE&amp;#43;%E3%81%8C&amp;#43;%E5%AD%A6%E3%81%B6&amp;#43;%E3%81%93%E3%81%A8&amp;amp;qid=1638793971&amp;amp;sr=8-5&#34; target=&#34;_blank&#34; &gt;コンサル一年目が学ぶこと&lt;/a&gt;
+ を読んだ。&lt;/p&gt;
 &lt;h2 id=&#34;何を期待して読んだのか&#34;&gt;何を期待して読んだのか&lt;/h2&gt;
 &lt;p&gt;これまで技術の勉強はしたことがあったが、社会人として普遍的なスキルである&lt;/p&gt;
 &lt;ul&gt;
@@ -719,7 +768,8 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
       <description>Elm で固定長配列を扱うためのライブラリ elm-static-array を触ってみたので感じたことを書いていきます。 elm-static-array とは elm-static-array は Elm で固定長配列を扱うためのライブラリです。 配列の</description>
       <content>&lt;p&gt;Elm で固定長配列を扱うためのライブラリ elm-static-array を触ってみたので感じたことを書いていきます。&lt;/p&gt;
 &lt;h2 id=&#34;elm-static-array-とは&#34;&gt;elm-static-array とは&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/&#34;&gt;elm-static-array&lt;/a&gt; は Elm で固定長配列を扱うためのライブラリです。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/&#34; target=&#34;_blank&#34; &gt;elm-static-array&lt;/a&gt;
+ は Elm で固定長配列を扱うためのライブラリです。&lt;/p&gt;
 &lt;p&gt;配列の長さを型で表現できることが特徴です。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- StaticArray&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- 長さ 4 の配列&lt;/span&gt;
@@ -845,7 +895,8 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        head
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        tail
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;懸念staticarray-の書き方に慣れるまでは時間がかかる&#34;&gt;懸念②：StaticArray の書き方に慣れるまでは時間がかかる&lt;/h3&gt;
-&lt;p&gt;たとえばインデックスを指定して StaticArray の要素を取得する get 関数を使おうと&lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/StaticArray#get&#34;&gt;ドキュメント&lt;/a&gt;を見ると、下記のような記述があります。&lt;/p&gt;
+&lt;p&gt;たとえばインデックスを指定して StaticArray の要素を取得する get 関数を使おうと&lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/StaticArray#get&#34; target=&#34;_blank&#34; &gt;ドキュメント&lt;/a&gt;
+を見ると、下記のような記述があります。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- Gets an element of the array. Note that it only possible if the index is in bound. Therefore eliminating Off-by-one errors.&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;get &lt;span style=&#34;color:#a6e22e&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Index&lt;/span&gt; n &lt;span style=&#34;color:#a6e22e&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;StaticArray&lt;/span&gt; n a &lt;span style=&#34;color:#a6e22e&#34;&gt;-&amp;gt;&lt;/span&gt; a
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;自分のElm力の乏しさのせいではありますがドキュメントに具体的なコード例が示されていないこともあり、動かすまでにそれなりの試行錯誤が必要でした。(当時は GitHub で検索しても引っ掛からずに絶望していましたが、検索の仕方が悪かっただけだということに執筆時に気付きました。)
@@ -853,7 +904,8 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;head &lt;span style=&#34;color:#a6e22e&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Element&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;head &lt;span style=&#34;color:#a6e22e&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;StaticArray&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt;get (&lt;span style=&#34;color:#66d9ef&#34;&gt;Index&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt;fromModBy &lt;span style=&#34;color:#66d9ef&#34;&gt;Length&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt;four &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) someStaticArray
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;まとめると、 &lt;strong&gt;多少の手間が必要になる&lt;/strong&gt; ということかなと思います。
-このあたりが elm-static-array の作者が &lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/&#34;&gt;README&lt;/a&gt; の中で以下のように言っている所以かなと感じました。&lt;/p&gt;
+このあたりが elm-static-array の作者が &lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/&#34; target=&#34;_blank&#34; &gt;README&lt;/a&gt;
+ の中で以下のように言っている所以かなと感じました。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Construction is a bit slower (should be neglectable for most cases).&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -904,8 +956,10 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 &lt;p&gt;本選考インターンでつくった WebApp のリファクタリングをしました。
 あとはTypeScriptの勉強をはじめました。やったことは&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.typescriptlang.org/docs/handbook/intro.html&#34;&gt;TypeScript HANDBOOK&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://typescript-jp.gitbook.io/deep-dive/&#34;&gt;TypeScript DeepDive&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.typescriptlang.org/docs/handbook/intro.html&#34; target=&#34;_blank&#34; &gt;TypeScript HANDBOOK&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://typescript-jp.gitbook.io/deep-dive/&#34; target=&#34;_blank&#34; &gt;TypeScript DeepDive&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;あたりです。始めて静的型付けの言語に触れて表現力の豊かさを感じました。わかりやすさと堅牢さが得られそう&amp;hellip;、エディタがいろいろ教えてくれるので開発効率も上がりそう&amp;hellip;などと感じました。&lt;/p&gt;
 &lt;h2 id=&#34;5月&#34;&gt;5月&lt;/h2&gt;
@@ -914,16 +968,20 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 &lt;li&gt;読みかけだったリーダブルコードをよんだ&lt;/li&gt;
 &lt;li&gt;Repository パターンを実装してみた&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;CLI の todo アプリは CLI で TODOを確認したくなったのと TypeScript　で何か作ってみたくなったので作って &lt;a href=&#34;https://www.npmjs.com/package/great-todo-cli&#34;&gt;npm で公開しました。&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;CLI の todo アプリは CLI で TODOを確認したくなったのと TypeScript　で何か作ってみたくなったので作って &lt;a href=&#34;https://www.npmjs.com/package/great-todo-cli&#34; target=&#34;_blank&#34; &gt;npm で公開しました。&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;責務の分離を意識して書いたので今までよりは見通しの良いコードを書けたと思っています。&lt;/p&gt;
 &lt;p&gt;あとははじめて Webpack の設定を書いて、&lt;code&gt;create-react-app&lt;/code&gt; の便利さを感じました。(今まで&lt;code&gt;create-react-app&lt;/code&gt;が何をしてくれているのかわかってなかった&amp;hellip;)&lt;/p&gt;
 &lt;h2 id=&#34;6月&#34;&gt;6月&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/dp/B01L8SEVYI/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1&#34;&gt;オブジェクト指向設計実践ガイド　～Rubyでわかる 進化しつづける柔軟なアプリケーションの育て方&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/dp/B01L8SEVYI/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1&#34; target=&#34;_blank&#34; &gt;オブジェクト指向設計実践ガイド　～Rubyでわかる 進化しつづける柔軟なアプリケーションの育て方&lt;/a&gt;
+
 をよんだ&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/dp/B073GSDBGT/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1&#34;&gt;現場で役立つシステム設計の原則 〜変更を楽で安全にするオブジェクト指向の実践技法&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/dp/B073GSDBGT/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1&#34; target=&#34;_blank&#34; &gt;現場で役立つシステム設計の原則 〜変更を楽で安全にするオブジェクト指向の実践技法&lt;/a&gt;
+
 をよんだ&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/dp/B082WXZVPC/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1&#34;&gt;ドメイン駆動設計入門 ボトムアップでわかる！ドメイン駆動設計の基本&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/dp/B082WXZVPC/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1&#34; target=&#34;_blank&#34; &gt;ドメイン駆動設計入門 ボトムアップでわかる！ドメイン駆動設計の基本&lt;/a&gt;
+
 をよんだ&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;6月はたくさん本を読みました。毎日作業を始める前に1時間本を読むスタイルが自分にあっている感じでした。&lt;/p&gt;
@@ -938,7 +996,8 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 &lt;h2 id=&#34;7月&#34;&gt;7月&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Twitter のクローンアプリの設計 &amp;amp; フロントエンドの実装開始&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/Web%E3%82%92%E6%94%AF%E3%81%88%E3%82%8B%E6%8A%80%E8%A1%93-HTTP%E3%80%81URI%E3%80%81HTML%E3%80%81%E3%81%9D%E3%81%97%E3%81%A6REST-WEB-PRESS-plus/dp/4774142042&#34;&gt;Webを支える技術&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/Web%E3%82%92%E6%94%AF%E3%81%88%E3%82%8B%E6%8A%80%E8%A1%93-HTTP%E3%80%81URI%E3%80%81HTML%E3%80%81%E3%81%9D%E3%81%97%E3%81%A6REST-WEB-PRESS-plus/dp/4774142042&#34; target=&#34;_blank&#34; &gt;Webを支える技術&lt;/a&gt;
+
 をよんだ&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;設計のアウトプットをしたかったんですが特にアプリのアイディアとかもなかったので Twitter のクローンアプリを作りました。&lt;/p&gt;
@@ -963,15 +1022,18 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 &lt;ul&gt;
 &lt;li&gt;Scala の勉強をはじめた&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://scala-text.github.io/scala_text/&#34;&gt;scala-text&lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;https://scala-text.github.io/scala_text/&#34; target=&#34;_blank&#34; &gt;scala-text&lt;/a&gt;
+
 や
-&lt;a href=&#34;https://github.com/kyu08/tour-of-scala&#34;&gt;tour of scala&lt;/a&gt;
+&lt;a href=&#34;https://github.com/kyu08/tour-of-scala&#34; target=&#34;_blank&#34; &gt;tour of scala&lt;/a&gt;
+
 とかをやりました。&lt;/p&gt;
 &lt;p&gt;TypeScriptと比較して、型まわりの機能が多かったり(共変、非変のあたりとか)ビルトインのメソッドが多かったりして、学習コストはあるけどちゃんと学んだら堅牢で表現力豊かなコードがかけそうだな〜という印象。&lt;/p&gt;
 &lt;p&gt;コップ本も買いましたが途中まで読んで積んじゃってます。再開したい。&lt;/p&gt;
 &lt;h2 id=&#34;10月&#34;&gt;10月&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/dp/B00GRKD6XU/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1&#34;&gt;Evans本&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/dp/B00GRKD6XU/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1&#34; target=&#34;_blank&#34; &gt;Evans本&lt;/a&gt;
+
 をよんだ&lt;/li&gt;
 &lt;li&gt;Vim に入門したけど2日で心がおれた&lt;/li&gt;
 &lt;/ul&gt;
@@ -993,7 +1055,8 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 &lt;p&gt;わりと広く浅く学べたのでこれからがっつり学ぶ必要が出てきたときの土台となってくれれば&amp;hellip;と期待しています。。&lt;/p&gt;
 &lt;p&gt;Next.js に入門しました。今まで component が増えてくると辛みが増していましたが component を&lt;code&gt;/pages&lt;/code&gt;と&lt;code&gt;/component&lt;/code&gt;に配置するやり方が読みやすさ的にも書きやすさ的にもいいなと感じました。&lt;/p&gt;
 &lt;p&gt;あとは Vercel へのデプロイが簡単すぎて感動しました。&lt;/p&gt;
-&lt;p&gt;詳しくは&lt;a href=&#34;https://blog.kyu08.com/posts/constructed-blog&#34;&gt;こちら&lt;/a&gt;をご覧ください。&lt;/p&gt;
+&lt;p&gt;詳しくは&lt;a href=&#34;https://blog.kyu08.com/posts/constructed-blog&#34; target=&#34;_blank&#34; &gt;こちら&lt;/a&gt;
+をご覧ください。&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;最後まで読んでくださりありがとうございます。&lt;/p&gt;
 &lt;p&gt;あと4ヶ月でエンジニアとしてのキャリアがスタートするのでそこまで頑張って力を高めていちはやく技術力で会社に貢献できるようになりたいです。&lt;/p&gt;
