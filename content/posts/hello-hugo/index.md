@@ -135,6 +135,7 @@ To add an extended head section, please create
 それぞれ記事にした。
 
 - [hugo-theme-terminal でOGPに任意の画像を設定する方法](/posts/hugo-theme-terminal-ogp-config)
+- [GitHub Pagesでデプロイのたびにカスタムドメインの設定が消える問題の解決方法](/posts/github-pages-custom-domain)
 
 ## 実際の運用はこんな感じ
 1. 記事作成用のブランチを作成
