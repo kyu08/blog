@@ -130,7 +130,11 @@ To add an extended head section, please create
 - `watch`オプションがあるので`hugo serve -w`を実行するとホットリロードが有効になるので捗る
 
 ## ハマったところ
-長くなりそうなので別途記事にする予定
+~~長くなりそうなので別途記事にする予定~~
+
+それぞれ記事にした。
+
+- [hugo-theme-terminal でOGPに任意の画像を設定する方法](/posts/hugo-theme-terminal-ogp-config)
 
 ## 実際の運用はこんな感じ
 1. 記事作成用のブランチを作成
