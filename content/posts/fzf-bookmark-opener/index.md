@@ -1,5 +1,5 @@
 +++
-title = "yamlに定義したbookmarkをfzfで選択してブラウザで開くくんを作った"
+title = "yamlに定義したbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った"
 date = "2023-02-23T01:15:48+09:00"
 author = "kyu08"
 authorTwitter = "kyu08_" #do not include @
@@ -14,7 +14,7 @@ color = "" #color from the theme settings
 +++
 
 ## つくったもの
-yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くくんを作った。
+yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った。
 
 [https://github.com/kyu08/fzf-bookmark-opener](https://github.com/kyu08/fzf-bookmark-opener)
 
