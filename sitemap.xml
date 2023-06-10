@@ -2,22 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.kyu08.com/tags/blog/</loc>
-    <lastmod>2023-06-10T02:02:33+09:00</lastmod>
-  </url><url>
     <loc>https://blog.kyu08.com/</loc>
+    <lastmod>2023-06-10T23:14:42+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/github-pages/</loc>
+    <lastmod>2023-06-10T23:14:42+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/github-pages-custom-domain/</loc>
+    <lastmod>2023-06-10T23:14:42+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/</loc>
+    <lastmod>2023-06-10T23:14:42+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/</loc>
+    <lastmod>2023-06-10T23:14:42+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/blog/</loc>
     <lastmod>2023-06-10T02:02:33+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/hugo/</loc>
     <lastmod>2023-06-10T02:02:33+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/hugo-theme-terminal-ogp-config/</loc>
-    <lastmod>2023-06-10T02:02:33+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/posts/</loc>
-    <lastmod>2023-06-10T02:02:33+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/</loc>
     <lastmod>2023-06-10T02:02:33+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/create-gif/</loc>

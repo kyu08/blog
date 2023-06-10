@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+    <title>GitHub Pagesでデプロイのたびにカスタムドメインの設定が消える問題の解決方法 :: blog.kyu08.com</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="困っていたこと GitHub Actions経由でGitHubPagesにデプロイするたびにカスタムドメインの設定が消えてしまい、デプロイ先がカスタムドメ" />
+<meta name="keywords" content="GitHub Pages" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://blog.kyu08.com/posts/github-pages-custom-domain/" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BDQ408J45J', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/styles.css">
+
+
+
+<link rel="stylesheet" href="https://blog.kyu08.com/style.css">
+
+
+
+  <link rel="shortcut icon" href="https://blog.kyu08.com/favicon.ico">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="kyu08_" />
+
+
+
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="GitHub Pagesでデプロイのたびにカスタムドメインの設定が消える問題の解決方法">
+<meta property="og:description" content="困っていたこと GitHub Actions経由でGitHubPagesにデプロイするたびにカスタムドメインの設定が消えてしまい、デプロイ先がカスタムドメ" />
+<meta property="og:url" content="https://blog.kyu08.com/posts/github-pages-custom-domain/" />
+<meta property="og:site_name" content="blog.kyu08.com" />
+
+  
+  
+  <meta property="og:image" content="https://blog.kyu08.com/cover.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2023-06-10 23:14:42 &#43;0900 &#43;0900" />
+
+
+
+
+
+
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ . }}');
+</script>
+
+
+
+
+</head>
+<body class="orange">
+
+
+<div class="container headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    blog.kyu08.com
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/about" >About</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://blog.kyu08.com/posts/github-pages-custom-domain/">GitHub Pagesでデプロイのたびにカスタムドメインの設定が消える問題の解決方法</a>
+  </h1>
+  <div class="post-meta">
+    
+      <time class="post-date">
+        2023-06-10 ::
+        
+          [Updated :: 2023-06-10]
+        
+      </time>
+    
+    
+      <span class="post-author">kyu08</span>
+    
+    
+      <span class="post-reading-time">:: 1 min read (249 words)</span>
+    
+  </div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://blog.kyu08.com/tags/github-pages/">GitHub Pages</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="https://blog.kyu08.com/cover.png"
+    class="post-cover"
+    alt="GitHub Pagesでデプロイのたびにカスタムドメインの設定が消える問題の解決方法"
+    title="Cover Image" />
+
+
+  
+    <div class="table-of-contents">
+      <h2>
+        目次
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#困っていたこと">困っていたこと</a></li>
+    <li><a href="#解決方法">解決方法</a></li>
+    <li><a href="#まとめ">まとめ</a></li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <h2 id="困っていたこと">困っていたこと<a href="#困っていたこと" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li>GitHub Actions経由でGitHubPagesにデプロイするたびにカスタムドメインの設定が消えてしまい、デプロイ先がカスタムドメインから<code>https://&lt;username&gt;.github.io/&lt;repository&gt;</code>に戻ってしまう</li>
+</ul>
+<h2 id="解決方法">解決方法<a href="#解決方法" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p><a href="https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-add-cname-file-cname" target="_blank" >ドキュメント</a>
+にある通り、<code>cname</code>オプションを追加する必要があった。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">deploy</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">deploy</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-22.04</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">submodules</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">fetch-depth</span>: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Setup Hugo</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-hugo@v2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#34;0.112.5&#34;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">extended</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">hugo</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-gh-pages@v3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">github_token</span>: <span style="color:#ae81ff">${{ secrets.GITHUB_TOKEN }}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">publish_dir</span>: <span style="color:#ae81ff">./public</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e"># これが抜けていた</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">cname</span>: <span style="color:#ae81ff">blog.kyu08.com</span>
+</span></span></code></pre></div><h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>ドキュメントちゃんと読むの大事</p>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="https://blog.kyu08.com/posts/hugo-theme-terminal-ogp-config/">
+                <span class="button__text">hugo-theme-terminal でOGPに任意の画像を設定する方法</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>blog.kyu08.com</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

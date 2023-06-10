@@ -143,6 +143,8 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://blog.kyu08.com/posts/hugo-theme-terminal-ogp-config&#34; &gt;hugo-theme-terminal でOGPに任意の画像を設定する方法&lt;/a&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.kyu08.com/posts/github-pages-custom-domain&#34; &gt;GitHub Pagesでデプロイのたびにカスタムドメインの設定が消える問題の解決方法&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;実際の運用はこんな感じ&#34;&gt;実際の運用はこんな感じ&lt;/h2&gt;
 &lt;ol&gt;
