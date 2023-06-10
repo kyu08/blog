@@ -9,14 +9,14 @@
     <copyright>blog.kyu08.com</copyright>
     <lastBuildDate>Thu, 23 Feb 2023 01:15:48 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>yamlに定義したbookmarkをfzfで選択してブラウザで開くくんを作った</title>
+      <title>yamlに定義したbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った</title>
       <link>https://blog.kyu08.com/posts/fzf-bookmark-opener/</link>
       <pubDate>Thu, 23 Feb 2023 01:15:48 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/fzf-bookmark-opener/</guid>
-      <description>つくったもの yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くくんを作った。 https://github.com/kyu08/fzf-bookmark-opener こんな感じで動く。 コードの話 コード自体は</description>
+      <description>つくったもの yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った。 https://github.com/kyu08/fzf-bookmark-opener こんな感じで動く。 コードの</description>
       <content>&lt;h2 id=&#34;つくったもの&#34;&gt;つくったもの&lt;/h2&gt;
-&lt;p&gt;yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くくんを作った。&lt;/p&gt;
+&lt;p&gt;yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-bookmark-opener&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/fzf-bookmark-opener&lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;こんな感じで動く。&lt;/p&gt;
