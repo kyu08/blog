@@ -16,7 +16,7 @@ color: ""
 ---
 
 ## 困っていたこと
-- GitHub Actions経由でGitHubPagesにデプロイするたびにカスタムドメインの設定が消えてしまい、デプロイ先がカスタムドメインから`https://<username>.github.io/<repository>`に戻ってしまう
+- GitHub Actions経由でGitHub Pagesにデプロイするたびにカスタムドメインの設定が消えてしまい、デプロイ先がカスタムドメインから`https://<username>.github.io/<repository>`に戻ってしまう
 
 ## 解決方法
 [ドキュメント](https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-add-cname-file-cname)にある通り、`cname`オプションを追加する必要があった。
