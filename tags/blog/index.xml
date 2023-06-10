@@ -7,7 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sat, 10 Jun 2023 01:26:52 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Jun 2023 02:02:33 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo-theme-terminal でOGPに任意の画像を設定する方法</title>
+      <link>https://blog.kyu08.com/posts/hugo-theme-terminal-ogp-config/</link>
+      <pubDate>Sat, 10 Jun 2023 02:02:33 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/posts/hugo-theme-terminal-ogp-config/</guid>
+      <description>hugo-theme-terminal でOGPの設定に少し詰まったのでやったことを書いておく。 前提 hugo version: hugo v0.112.5+extended darwin/arm64 困り 筆者はカバー画像を記事一覧・記事詳細画面に表示したくない、かつO</description>
+      <content>&lt;p&gt;&lt;a href=&#34;https://github.com/panr/hugo-theme-terminal&#34; target=&#34;_blank&#34; &gt;hugo-theme-terminal&lt;/a&gt;
+ でOGPの設定に少し詰まったのでやったことを書いておく。&lt;/p&gt;
+&lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;hugo version: &lt;code&gt;hugo v0.112.5+extended darwin/arm64&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;困り&#34;&gt;困り&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;筆者はカバー画像を記事一覧・記事詳細画面に表示したくない、かつOGPは全共通の画像を使いたい&lt;/li&gt;
+&lt;li&gt;hugo-theme-terminal では任意の画像をOGPだけに設定することができない。（カバー画像をOGPとすることはできる）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;やったこと&#34;&gt;やったこと&lt;/h2&gt;
+&lt;p&gt;多少ハッキーな方法ではあるが以下の方法で実現した。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;各記事のFront Matterに&lt;code&gt;cover: &amp;quot;${OGP_URL}&amp;quot;&lt;/code&gt;指定(&lt;code&gt;archetypes&lt;/code&gt;にテンプレートとして書いておくと便利)&lt;/li&gt;
+&lt;li&gt;以下のCSSを追加&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;post-cover&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;display&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;none&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
     <item>
       <title>ブログ用にGifでキャプチャを作る時にやっていること</title>
       <link>https://blog.kyu08.com/posts/create-gif/</link>
