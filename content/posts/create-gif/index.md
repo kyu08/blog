@@ -3,7 +3,7 @@ title: "ブログ用にGifでキャプチャを作る時にやっていること
 tags: ["blog"]
 keywords: ["blog", "gif"]
 
-cover: "https://blog.kyu08.com/cover.png"
+cover: "https://blog.kyu08.com/cover.webp"
 description: ""
 date: 2023-06-10T01:26:52+09:00
 author: "kyu08"
@@ -27,11 +27,11 @@ color: "" #color from the theme settings
 ![keycastr.gif](keycastr.gif)
 
 ### 2. Kapでいい感じに範囲を選んで録画開始ボタンを押す
-![select-window.png](select-window.png)
+![select-window.webp](select-window.webp)
 
 ### 3. いい感じのサイズで保存(重要)
 (あとから圧縮しようとすると思いのほか大変なのでサイズを小さくしたい場合はいい感じのサイズにするのを忘れない)
-![select-size.png](select-size.png)
+![select-size.webp](select-size.webp)
 
 
 ## おわりに

@@ -17,14 +17,14 @@ color: ""
 
 NuPhy Air60を買ったので簡単にレビューする
 
-![nuphy-air60.jpg](nuphy-air60.jpg)
+![nuphy-air60.webp](nuphy-air60.webp)
 
 ## 買った理由
 普段は7sProを使っているが出社のときに持っていくのが大変だったり尊師スタイルで作業したりしずらかったりするので出社用・家での尊師スタイル用にキーボードを探していた。
 
 コンパクトなキーボードが好みなので60%で探したいたところNuPhy Air60を見つけ、社の先輩がAir75を使っていたので少し触らせてもらったところ打鍵感がいい感じだったので購入を決めた。
 
-![sonshi.JPG](sonshi.JPG)
+![sonshi.webp](sonshi.webp)
 
 ## NuPhy Air60のいいところ
 ### (macのキーボードと比べて)打ちやすい
@@ -38,21 +38,21 @@ macの付属キーボードのような薄いタイプよりもメカニカル�
 ### デザインがかわいい
 かわいい
 
-![nuphy-air60-2.jpg](nuphy-air60-2.jpg)
+![nuphy-air60-2.webp](nuphy-air60-2.webp)
 
 ### コンパクト
 60%なのでそれはそうという感じだがコンパクトで使いやすい。(65%のキーボードは一番右の列を間違って押してしまいがちなのでつらい)
 
 ちなみに持ち歩く際はバード電子から発売されている [HHKBスマートケース2](https://www.pfu.ricoh.com/direct/hhkb/hhkb-option/detail_smartcase2.html) に入れて持ち運んでいる。ぴったりフィットしている。
 
-![with-cover.jpg](with-cover.jpg)
+![with-cover.webp](with-cover.webp)
 
 ## 気になったポイント
 唯一惜しいと思ったのはキーキャップがフラットで傾斜がついてないこと（軽く調べた感じロープロファイルだと傾斜がついてないのがスタンダードっぽいのでNuPhy Air60特有の微妙なところかと言われると微妙ではある）
 
 普段はスカルプチャードなキーキャップ[^1]を7sProに装着して使っているのでなかなか慣れない & 若干手が疲れる。(とはいえmacのキーボードよりははるかに打ちやすい)
 
-![keycaps.JPG](keycaps.JPG)
+![keycaps.webp](keycaps.webp)
 
 ## まとめ
 NuPhy Air60は打鍵感がよく持ち運びもしやすくてとても気に入っている。

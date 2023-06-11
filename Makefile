@@ -14,3 +14,7 @@ run-watch:
 .PHONY: run-ignore-cache
 run-ignore-cache:
 	hugo serve --ignoreCache
+
+.PHONY: compress-to-webp
+compress-to-webp:
+	@./compress-to-webp.sh
