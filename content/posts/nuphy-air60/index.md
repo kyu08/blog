@@ -5,7 +5,7 @@ keywords: ["NuPhy", "ガジェット", "キーボード"]
 
 cover: "https://blog.kyu08.com/cover.png"
 description: ""
-date: 2023-06-10T23:27:54+09:00
+date: 2023-06-11T23:27:54+09:00
 author: "kyu08"
 authorTwitter: "kyu08_"
 draft: false
