@@ -7,11 +7,76 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sat, 10 Jun 2023 23:27:54 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Jul 2023 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ちょうぜつ本を読んだ</title>
+      <link>https://blog.kyu08.com/posts/chozetsu-bon/</link>
+      <pubDate>Sun, 16 Jul 2023 00:00:00 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/posts/chozetsu-bon/</guid>
+      <description>田中ひさてるさんの『ちょうぜつソフトウェア設計入門――PHPで理解するオブジェクト指向の活用』が話題になっていたので読んでみた。 全体を通して</description>
+      <content>&lt;p&gt;田中ひさてるさんの『ちょうぜつソフトウェア設計入門――PHPで理解するオブジェクト指向の活用』が話題になっていたので読んでみた。&lt;/p&gt;
+&lt;p&gt;全体を通して平易な日本語で書かれていたのとコード例が豊富だったので理解しやすくてよかった。&lt;/p&gt;
+&lt;p&gt;以下学びを簡単にまとめていく。&lt;/p&gt;
+&lt;h2 id=&#34;第2章-パッケージ原則&#34;&gt;第2章 パッケージ原則&lt;/h2&gt;
+&lt;p&gt;より変更に強いパッケージ設計にするために注意すべき点として&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;パッケージの凝集性を高める&lt;/li&gt;
+&lt;li&gt;より安定度が高い(=抽象度が高い)パッケージに依存する&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;などがある。&lt;/p&gt;
+&lt;p&gt;また、&lt;strong&gt;凝集性の低さを表すシグナル&lt;/strong&gt;として&lt;strong&gt;そのパッケージが変更される理由が複数あること&lt;/strong&gt;・&lt;strong&gt;1つの変更の際に変更対象となるパッケージが複数あること&lt;/strong&gt;(それぞれ同じ?)が挙げられる。&lt;/p&gt;
+&lt;p&gt;「抽象」については以下のように説明されていた。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;抽象クラスやインターフェイスなど実装詳細を自身から排除したもの&lt;/li&gt;
+&lt;li&gt;上記のような詳細を持たないものだけに依存するロジック&lt;/li&gt;
+&lt;li&gt;固有の業務にも特定技術にも関係しない時刻や配列などの汎用概念とその操作&lt;/li&gt;
+&lt;li&gt;プログラミング言語そのものや言語標準ライブラリと同等レベルの業界標準&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第3章-オブジェクト指向&#34;&gt;第3章 オブジェクト指向&lt;/h2&gt;
+&lt;h3 id=&#34;いい抽象を見つけるには&#34;&gt;いい抽象を見つけるには&lt;/h3&gt;
+&lt;p&gt;具体的な例を分析してそれらから抽象を見つけることで期待値の高い抽象を発見することができる。&lt;/p&gt;
+&lt;p&gt;逆に先に&lt;strong&gt;ひとりよがりの哲学をこねくり回して現実をかえりみない抽象化を先行させた&lt;/strong&gt;場合は、&lt;strong&gt;役に立たない概念に縛られる無駄が起きやすくなる。&lt;/strong&gt;（ペットショップのシステムなのに「Cat には野良猫もいるかもしれない。必ずしも Pet ではないかも&amp;hellip;…」みたいなことを考えてしまうのは明らかに無駄）（抽象化においてもYAGNIが重要っぽい）&lt;/p&gt;
+&lt;p&gt;無限の可能性に向かって発散してしまわず、いかに可能性を削ぎ落として最小サイズで実際に起こりうるバリエーションをカバーできるかが汎化のポイント。&lt;/p&gt;
+&lt;p&gt;そういう意味でもドメインやビジネスの状況を理解しておくことはプロダクトの将来を考慮しながら設計するために必要なんだろうなと思った。&lt;/p&gt;
+&lt;h3 id=&#34;多態性がなくても役立つ&#34;&gt;「多」態性がなくても役立つ&lt;/h3&gt;
+&lt;p&gt;抽象と具象は必ずしも1対多の関係である必要はない。&lt;/p&gt;
+&lt;p&gt;具象と抽象に分けておくことで先に大枠を安定させることができるため、設計の見通しがつきやすくなる。&lt;/p&gt;
+&lt;p&gt;また、具象の数が複数になったときに対応しやすいというメリットもある。&lt;/p&gt;
+&lt;p&gt;これまで「抽象と具象が1対1対応なケースはわざわざDIする必要はないのでは」と思っていたが上記のメリットがあるので積極的にDIしていこうと思った。&lt;/p&gt;
+&lt;h2 id=&#34;第5章-オブジェクト指向原則-solid&#34;&gt;第5章 オブジェクト指向原則 SOLID&lt;/h2&gt;
+&lt;h3 id=&#34;5-2-単一責任原則single-responsibility-principlesrp&#34;&gt;5-2 単一責任原則(Single Responsibility Principle(SRP))&lt;/h3&gt;
+&lt;p&gt;クラスと責務は1対1対応すべき、という指針。&lt;/p&gt;
+&lt;h4 id=&#34;単一の責務のみつけかた&#34;&gt;単一の責務のみつけかた&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;クラスの利用者がどんなときに別のクラスや新しいバージョンに交換したいと思うかを想像する。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;実際に起こりそうな交換要求への想像が責務(= クラスのカバー範囲)を見極めるヒントになる。&lt;/p&gt;
+&lt;p&gt;たとえば記事クラスが存在し記事の入稿および購読というユースケースがある例では以下のように考えることができる。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ニュース記事を書く人の事情が変わったけれど、購読ユーザーには従来どおりのサービスを提供したい。逆に、入稿はそのまま、購読ユーザーへのサービスを拡張したい。そんなニーズが起きるのは容易に想像できます。入稿と購読のそれぞれを互いに影響を与えない独立したクラスとしておき、いつでも気兼ねなく別の実装に交換できる単位としておく方が、後で便利に決まっています。なので、ニュース記事管理の場合は、「入稿」と「購読」が、それぞれひとつの責務になります。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;5-3-開放閉鎖原則open-close-principle&#34;&gt;5-3 開放閉鎖原則(Open Close Principle)&lt;/h3&gt;
+&lt;p&gt;拡張に対してオープン、変更にたいしてクローズドであるべき、という指針。&lt;/p&gt;
+&lt;p&gt;これは書籍内で紹介されていたコード例がわかりやすかった。&lt;/p&gt;
+&lt;p&gt;あとはどこが変化する仕様なのかを考えるために一度要件を抽象化してみる方法が紹介されていた。こちらもコード例が示されていたのでイメージが湧きやすかった。&lt;/p&gt;
+&lt;h2 id=&#34;第7章-依存性注入&#34;&gt;第7章 依存性注入&lt;/h2&gt;
+&lt;p&gt;オブジェクトが使う機能の実体を得る際その解決を自力で行わず、常に外部から与えるようにすべき、という設計方針。&lt;/p&gt;
+&lt;p&gt;依存性注入を行うメリットの1つは生成の責務と使用の責務を分けられる点がある。&lt;/p&gt;
+&lt;p&gt;また、テスト容易性とDIについては以下のような記述があった。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;単体テストしやすいクラスであることと、DI可能なクラスであるということには、正の相関があります。DIを単に「単体テストのためにやること」といった目的観で考えるのは視野狭窄ではあるのですが、単体テストがアーキテクチャへの気づきの手段として、とても有用なのは間違いありません。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;テストが書きずらかったら設計を疑ってみるのも一つの手かもしれない。&lt;/p&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;よく聞くSOLID原則もやっとちゃんと理解できたし依存性注入に対する理解も深まったので今後に活かしていきたい。&lt;/p&gt;
+</content>
+    </item>
+    
     <item>
       <title>NuPhy Air60を買った</title>
       <link>https://blog.kyu08.com/posts/nuphy-air60/</link>
-      <pubDate>Sat, 10 Jun 2023 23:27:54 +0900</pubDate>
+      <pubDate>Sun, 11 Jun 2023 23:27:54 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/nuphy-air60/</guid>
       <description>NuPhy Air60を買ったので簡単にレビューする 買った理由 普段は7sProを使っているが出社のときに持っていくのが大変だったり尊師スタイルで作業し</description>
