@@ -3,13 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.kyu08.com/</loc>
-    <lastmod>2023-07-16T00:00:00+09:00</lastmod>
+    <lastmod>2023-07-17T14:21:29+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/go/</loc>
+    <lastmod>2023-07-17T14:21:29+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/hello-go-static-analisys/</loc>
+    <lastmod>2023-07-17T14:21:29+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/</loc>
-    <lastmod>2023-07-16T00:00:00+09:00</lastmod>
+    <lastmod>2023-07-17T14:21:29+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/</loc>
-    <lastmod>2023-07-16T00:00:00+09:00</lastmod>
+    <lastmod>2023-07-17T14:21:29+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/%E9%9D%99%E7%9A%84%E8%A7%A3%E6%9E%90/</loc>
+    <lastmod>2023-07-17T14:21:29+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/chozetsu-bon/</loc>
     <lastmod>2023-07-16T00:00:00+09:00</lastmod>
@@ -64,9 +73,6 @@
   </url><url>
     <loc>https://blog.kyu08.com/tags/rust/</loc>
     <lastmod>2023-03-31T01:15:48+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/go/</loc>
-    <lastmod>2023-02-23T01:15:48+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/fzf-bookmark-opener/</loc>
     <lastmod>2023-02-23T01:15:48+09:00</lastmod>
