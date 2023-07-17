@@ -1,14 +1,4 @@
-## よく使いそうなコマンド
-- 記事作成
-```shell
-make new
-```
+## ⚠️NOTE
+clone直後に一度`make init`を実行する必要がある
 
-- ローカルでの確認
-```shell
-# キャッシュを無視して起動
-make run-ignore-cache
-
-# watch modeで起動
-make run-watch
-```
+あとは`Makefile`参照のこと
