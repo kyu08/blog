@@ -18,3 +18,5 @@ Go Elm TypeScript Neovim tmux Rustが好きな3年目エンジニャーです。
 GitHub: [kyu08](https://github.com/kyu08)
 
 Twitter: [@kyu08_](https://twitter.com/kyu08_)
+
+ブログの誤字や誤情報については [このブログのリポジトリ](https://github.com/kyu08/blog/issues) でも受け付けています。
