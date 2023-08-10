@@ -7,7 +7,49 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Mon, 17 Jul 2023 14:21:29 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Aug 2023 01:32:27 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OSSに初めてPRを送ってマージされた話</title>
+      <link>https://blog.kyu08.com/posts/my-first-oss-contribution/</link>
+      <pubDate>Fri, 11 Aug 2023 01:32:27 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/posts/my-first-oss-contribution/</guid>
+      <description>個人開発のプロジェクトで使えそうなGitHub Actionsを物色していたところちょうど自分でも修正できそうな箇所があったのでPRを送ってみ</description>
+      <content>&lt;p&gt;個人開発のプロジェクトで使えそうなGitHub Actionsを物色していたところちょうど自分でも修正できそうな箇所があったのでPRを送ってみたところ無事にマージしてもらうことができた。&lt;/p&gt;
+&lt;p&gt;実際にマージされたPRはこちら。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/mislav/bump-homebrew-formula-action/pull/57&#34; target=&#34;_blank&#34; &gt;https://github.com/mislav/bump-homebrew-formula-action/pull/57&lt;/a&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;prの作成&#34;&gt;PRの作成&lt;/h2&gt;
+&lt;p&gt;修正内容としては非推奨となった&lt;code&gt;set-output&lt;/code&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;をenvironment filesに置き換えるという簡単なもの。
+ちょうど業務で同様の修正を行っていたので特に詰まることなく修正できた。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;diff.webp&#34; alt=&#34;diff.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;修正内容はたった1行だったが、非同期だし時差もあるしでコミュニケーションの往復が増えることはお互い避けたいはずなのでできるだけ一発でマージしてもらえるように丁寧に背景や動作確認のログを書いた。(自分としても早くマージしてもらえた方が嬉しいし)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;pr.webp&#34; alt=&#34;pr.webp&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;若干ソワソワしながら過ごしていると&#34;&gt;若干ソワソワしながら過ごしていると&lt;/h2&gt;
+&lt;p&gt;PRを送った1日後には見事マージしてもらえた。念願の初OSS contribution！やったね！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;approve.webp&#34; alt=&#34;approve.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;2.2kものrepositoryで使われてるworkflowのcontributorsに自分のアイコンが載るのは結構嬉しい。(自分のプロジェクト&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;でも利用し始めたタイミングだったのでちゃっかりUsed byにもアイコンが載っているｗ)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;contributors.webp&#34; alt=&#34;contributors.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;commit logに載っている様子。嬉しい。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;commit-log.webp&#34; alt=&#34;commit-log.webp&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ということで&#34;&gt;ということで&lt;/h2&gt;
+&lt;p&gt;これからもOSSコミュニティへの貢献やっていくぞ〜！&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/&#34; target=&#34;_blank&#34; &gt;https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/&lt;/a&gt;
+&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/fzf-make&lt;/a&gt;
+&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
     <item>
       <title>Goの静的解析に入門した</title>
       <link>https://blog.kyu08.com/posts/hello-go-static-analisys/</link>
