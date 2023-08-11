@@ -7,7 +7,65 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Fri, 11 Aug 2023 01:32:27 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/oss/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Aug 2023 01:35:48 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/oss/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHub Sponsorsを通してNeovimに寄付をした</title>
+      <link>https://blog.kyu08.com/posts/sponsored-neovim/</link>
+      <pubDate>Fri, 11 Aug 2023 01:35:48 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/posts/sponsored-neovim/</guid>
+      <description>Neovimに対してGitHub Sponsorsを通してOne-time1の寄付をしたという話。 Neovimには仕事・趣味のプロジェクトなど</description>
+      <content>&lt;p&gt;Neovimに対してGitHub Sponsorsを通してOne-time&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;の寄付をしたという話。&lt;/p&gt;
+&lt;p&gt;Neovimには仕事・趣味のプロジェクトなど自分が行うすべての開発に収まらずちょっとしたタスク管理やブログ執筆などあらゆる場面でとにかくお世話になっている。&lt;/p&gt;
+&lt;p&gt;なんでもカスタマイズしたくなってしまうこだわりの強い自分には非常にあっていて数多のプラグインを使って快適に開発を行っている。&lt;/p&gt;
+&lt;p&gt;大変お世話になっているOSSプロジェクトなのでいつかPRで貢献したいな〜と思いつつ何の気なしにNeovimのリポジトリを眺めていたら「そういえばGitHub Sponsorsでの金銭的な支援も立派なcontributionじゃん！」と思ったのでとりあえず寄付することにした。&lt;/p&gt;
+&lt;h2 id=&#34;案外あっさりできた&#34;&gt;案外あっさりできた&lt;/h2&gt;
+&lt;p&gt;今回はひとまずOne-timeで20$だけ寄付してみることにした。&lt;/p&gt;
+&lt;p&gt;初めてGitHub Sponsorsを使ってみたが必要なのは&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;請求先住所の入力&lt;/li&gt;
+&lt;li&gt;クレジットカード情報の入力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;くらいだったので5分もかからずにできた。&lt;/p&gt;
+&lt;p&gt;手続きが完了するとこんな感じでSponsorsに自分のアイコンが表示される。(嬉しい)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;sponsors.webp&#34; alt=&#34;sponsors.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;さらには自分のプロフィール画面にNeovimのアイコンが表示される。組織の一員感がでて地味にいいですねこれ。(結構嬉しい)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;github-profile.webp&#34; alt=&#34;github-profile.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;日頃から「OSSにお世話になっている分コードを書いて恩返ししたい&amp;hellip;。けどなかなかすぐに解決できそうなissueも見当たらない&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;」みたいなことを思っていたのでまずは寄付という形でOSSに貢献できてよかった。&lt;/p&gt;
+&lt;p&gt;今後はPRでもOSSコミュニティに貢献していくぞという気持ちになった。&lt;/p&gt;
+&lt;h2 id=&#34;と思っていた矢先&#34;&gt;と思っていた矢先&lt;/h2&gt;
+&lt;p&gt;個人開発のプロジェクトで使えそうなGitHub Actionsを物色していたところ早速自分でも修正できそうな箇所があったのでOSSに初めてPRを送ってみた。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/mislav/bump-homebrew-formula-action/pull/57&#34; target=&#34;_blank&#34; &gt;https://github.com/mislav/bump-homebrew-formula-action/pull/57&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;その時の記事はこちら。 &lt;a href=&#34;../my-first-oss-contribution&#34; &gt;OSSに初めてPRを送ってマージされた話&lt;/a&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;今後&#34;&gt;今後&lt;/h2&gt;
+&lt;p&gt;Neovimの話に戻るが冷静にもし自分がJetBrainsのIDEユーザーだったら毎年ライセンスを購入するのは厭わないだろうにNeovimを使い倒させてもらっている自分が今回のOne-timeの寄付だけじゃ全然足りなくね？という気持ちになった。&lt;/p&gt;
+&lt;p&gt;なのでこれからはJetBrainsのライセンスと同じくらいの額(10$/monthくらい？)はmonthlyで寄付していこうと思う。&lt;/p&gt;
+&lt;p&gt;いずれはPRでもNeovimに貢献していきたいが、直近のPRを軽くみた感じluaやCが書けた方がよさそうだった。&lt;/p&gt;
+&lt;p&gt;自分が今一番書ける言語はGoなので何かGoを使ったOSSに貢献できないかな〜と思っていたところ自分がよく使っているTUIのgit clientであるLazygit&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;がGo製でかつドキュメントも整っていた&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;のでまずはコードリーディングからチャレンジしてみようと思う。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;定期的な寄付ではなく、一度きりの寄付&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;一時期Good First Issueを漁りまくったりしてみたが、typo修正やUT追加などの一部を除いてはプロジェクトについての理解が浅い状態で貢献できそうなissueはあまり見当たらなかった。やはり全体のアーキテクチャや実際の動作を理解した上でなんらかのissueに取り組むのがいいんだろうなと思ったので腰を据えて特定のプロジェクトへのcontributionを狙っていこうと考えを改めた。&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/jesseduffield/lazygit&#34; target=&#34;_blank&#34; &gt;https://github.com/jesseduffield/lazygit&lt;/a&gt;
+&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/jesseduffield/lazygit/blob/master/CONTRIBUTING.md&#34; target=&#34;_blank&#34; &gt;CONTRIBUTING.md&lt;/a&gt;
+のようなドキュメントが整備されているだけでなく、authorのjesseさんが実際にLazygitに機能を追加する様子を収めた動画も公開されていたりと貢献に対してかなりオープンな印象&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
     <item>
       <title>OSSに初めてPRを送ってマージされた話</title>
       <link>https://blog.kyu08.com/posts/my-first-oss-contribution/</link>

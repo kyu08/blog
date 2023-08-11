@@ -7,11 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Fri, 11 Aug 2023 01:32:27 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Aug 2023 01:35:48 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Neovim</title>
+      <link>https://blog.kyu08.com/tags/neovim/</link>
+      <pubDate>Fri, 11 Aug 2023 01:35:48 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/neovim/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
     <item>
       <title>OSS</title>
       <link>https://blog.kyu08.com/tags/oss/</link>
-      <pubDate>Fri, 11 Aug 2023 01:32:27 +0900</pubDate>
+      <pubDate>Fri, 11 Aug 2023 01:35:48 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/tags/oss/</guid>
       <description></description>
@@ -134,16 +144,6 @@
       <pubDate>Fri, 31 Mar 2023 01:15:48 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/tags/rust/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>Neovim</title>
-      <link>https://blog.kyu08.com/tags/neovim/</link>
-      <pubDate>Sun, 05 Feb 2023 01:15:48 +0900</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/neovim/</guid>
       <description></description>
       <content></content>
     </item>
