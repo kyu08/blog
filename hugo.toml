@@ -1,7 +1,7 @@
 baseURL = 'https://blog.kyu08.com'
 title = 'blog.kyu08.com'
 theme = "terminal"
-paginate = 10
+paginate = 1000
 languageCode = "ja"
 defaultContentLanguage = "ja"
 hasCJKLanguage = true
