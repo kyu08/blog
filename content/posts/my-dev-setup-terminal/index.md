@@ -189,7 +189,7 @@ iTerm2からの乗り換えでしたが満足できるだけの速度になり�
 
 [https://github.com/zatchheems/tokyo-night-alacritty-theme](https://github.com/zatchheems/tokyo-night-alacritty-theme)
 
-![tokyonight](tokyonight.png)
+![tokyonight](tokyonight.webp)
 
 Alacrittyにはタブ機能がなくタブ的な機能を実現するためにはtmuxなどのターミナルマルチプレクサを利用する必要があるため筆者はtmuxを利用しています。
 設定・プラグインなどは後述しますが、tmuxの操作感も好みなので割と満足しています。
@@ -208,7 +208,7 @@ Alacrittyにはタブ機能がなくタブ的な機能を実現するために�
 
 を表示するようにしています。
 
-![tmux-status-line](tmux-status-line.png)
+![tmux-status-line](tmux-status-line.webp)
 
 普段の開発ではプロジェクトごとにウィンドウを開き、必要に応じて切り替える運用にしています。
 

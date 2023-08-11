@@ -2,7 +2,7 @@
 title = "Elm で固定長配列が扱えるライブラリ elm-static-array を触ってみた"
 date = "2021-12-17T01:15:48+09:00"
 author = "kyu08"
-authorTwitter = "kyu08_" #do not include @
+authorTwitter = "kyu08_"
 cover = "https://blog.kyu08.com/cover.png"
 tags = ["Elm"]
 keywords = ["", ""]
@@ -34,7 +34,7 @@ ordinaryArray : Array String
 
 各プレイヤーの試合毎のスコアを記録して合計を表示するだけの簡単なアプリケーションです。(※実際には順位点やトビ賞の計算などもやっていますがここでは割愛)
 
-![jan-log-demo.png](jan-log-demo.png)
+![jan-log-demo.web](jan-log-demo.webp)
 
 ここで **参加者の名前** および **その試合のスコア** を `Array String` として扱おうとすると以下のようになります。
 

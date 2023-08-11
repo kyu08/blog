@@ -95,9 +95,9 @@ Rustを触る前に持っていた印象は「コンパイルが通りずらく�
 テスト実行に [https://github.com/nextest-rs/nextest](nextest-rs/nextest) を使ってみたがテスト結果が見やすくて便利だった。
 
 `cargo run`の結果
-![cargo run](cargo-run.png)
+![cargo run](cargo-run.webp)
 
 `cargo nextest run`の結果
-![cargo nextest run](nextest-run.png)
+![cargo nextest run](nextest-run.webp)
 
 カラフルで見やすい。
