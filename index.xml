@@ -496,7 +496,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;こんな感じで動く。地味に楽。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;make-new.gif&#34; alt=&#34;make-new.gif&#34;&gt;&lt;/p&gt;
 &lt;p&gt;ちなみにデプロイは1分くらいで完了するのでサクサク反映できて嬉しい。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;deploy.png&#34; alt=&#34;deploy.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;deploy.webp&#34; alt=&#34;deploy.webp&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
 &lt;p&gt;色々追加したい機能はあるけどとりあえず最低限の機能はできたのでヨシ！とする。&lt;/p&gt;
 &lt;p&gt;ブログたくさん書くぞ〜&lt;/p&gt;
@@ -620,9 +620,9 @@
 &lt;p&gt;テスト実行に &lt;a href=&#34;nextest-rs/nextest&#34; &gt;https://github.com/nextest-rs/nextest&lt;/a&gt;
  を使ってみたがテスト結果が見やすくて便利だった。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;cargo run&lt;/code&gt;の結果
-&lt;img src=&#34;cargo-run.png&#34; alt=&#34;cargo run&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;cargo-run.webp&#34; alt=&#34;cargo run&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;cargo nextest run&lt;/code&gt;の結果
-&lt;img src=&#34;nextest-run.png&#34; alt=&#34;cargo nextest run&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;nextest-run.webp&#34; alt=&#34;cargo nextest run&#34;&gt;&lt;/p&gt;
 &lt;p&gt;カラフルで見やすい。&lt;/p&gt;
 </content>
     </item>
@@ -972,7 +972,7 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;p&gt;カラースキームはTokyo Nightを利用しています。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/zatchheems/tokyo-night-alacritty-theme&#34; target=&#34;_blank&#34; &gt;https://github.com/zatchheems/tokyo-night-alacritty-theme&lt;/a&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;tokyonight.png&#34; alt=&#34;tokyonight&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tokyonight.webp&#34; alt=&#34;tokyonight&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Alacrittyにはタブ機能がなくタブ的な機能を実現するためにはtmuxなどのターミナルマルチプレクサを利用する必要があるため筆者はtmuxを利用しています。
 設定・プラグインなどは後述しますが、tmuxの操作感も好みなので割と満足しています。&lt;/p&gt;
 &lt;p&gt;他にもRust製のターミナルとしてWarp, Weztermなどがありますが筆者の環境ではWarpはNeovimのcolorschemeの反映がうまくできず、Weztermは画面の再描画まわりの不具合が多少あったため、採用しませんでした。(Warp便利そうだしみやすいので使いたかった)&lt;/p&gt;
@@ -987,7 +987,7 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;li&gt;現在時刻&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;を表示するようにしています。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;tmux-status-line.png&#34; alt=&#34;tmux-status-line&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tmux-status-line.webp&#34; alt=&#34;tmux-status-line&#34;&gt;&lt;/p&gt;
 &lt;p&gt;普段の開発ではプロジェクトごとにウィンドウを開き、必要に応じて切り替える運用にしています。&lt;/p&gt;
 &lt;h3 id=&#34;ウィンドウの切り替え&#34;&gt;ウィンドウの切り替え&lt;/h3&gt;
 &lt;p&gt;筆者はふだんプロジェクトごとのウィンドウに加えてmemo用のウィンドウ・dotfiles用のウィンドウなども開いており、常時ウィンドウが15前後あります。筆者は簡単なタスク管理もmemo用ウィンドウに立ち上げたNeovim内で行っているため、ウィンドウの切り替えを頻繁に行います。&lt;/p&gt;
@@ -1125,7 +1125,7 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;どんな場面で使ったか&#34;&gt;どんな場面で使ったか&lt;/h2&gt;
 &lt;p&gt;趣味で開発している麻雀の点数集計アプリで使いました。&lt;/p&gt;
 &lt;p&gt;各プレイヤーの試合毎のスコアを記録して合計を表示するだけの簡単なアプリケーションです。(※実際には順位点やトビ賞の計算などもやっていますがここでは割愛)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;jan-log-demo.png&#34; alt=&#34;jan-log-demo.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;jan-log-demo.webp&#34; alt=&#34;jan-log-demo.web&#34;&gt;&lt;/p&gt;
 &lt;p&gt;ここで &lt;strong&gt;参加者の名前&lt;/strong&gt; および &lt;strong&gt;その試合のスコア&lt;/strong&gt; を &lt;code&gt;Array String&lt;/code&gt; として扱おうとすると以下のようになります。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Players&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Array&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;String&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;

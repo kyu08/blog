@@ -94,9 +94,9 @@
 &lt;p&gt;テスト実行に &lt;a href=&#34;nextest-rs/nextest&#34; &gt;https://github.com/nextest-rs/nextest&lt;/a&gt;
  を使ってみたがテスト結果が見やすくて便利だった。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;cargo run&lt;/code&gt;の結果
-&lt;img src=&#34;cargo-run.png&#34; alt=&#34;cargo run&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;cargo-run.webp&#34; alt=&#34;cargo run&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;cargo nextest run&lt;/code&gt;の結果
-&lt;img src=&#34;nextest-run.png&#34; alt=&#34;cargo nextest run&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;nextest-run.webp&#34; alt=&#34;cargo nextest run&#34;&gt;&lt;/p&gt;
 &lt;p&gt;カラフルで見やすい。&lt;/p&gt;
 </content>
     </item>

@@ -217,7 +217,7 @@
 &lt;p&gt;カラースキームはTokyo Nightを利用しています。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/zatchheems/tokyo-night-alacritty-theme&#34; target=&#34;_blank&#34; &gt;https://github.com/zatchheems/tokyo-night-alacritty-theme&lt;/a&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;tokyonight.png&#34; alt=&#34;tokyonight&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tokyonight.webp&#34; alt=&#34;tokyonight&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Alacrittyにはタブ機能がなくタブ的な機能を実現するためにはtmuxなどのターミナルマルチプレクサを利用する必要があるため筆者はtmuxを利用しています。
 設定・プラグインなどは後述しますが、tmuxの操作感も好みなので割と満足しています。&lt;/p&gt;
 &lt;p&gt;他にもRust製のターミナルとしてWarp, Weztermなどがありますが筆者の環境ではWarpはNeovimのcolorschemeの反映がうまくできず、Weztermは画面の再描画まわりの不具合が多少あったため、採用しませんでした。(Warp便利そうだしみやすいので使いたかった)&lt;/p&gt;
@@ -232,7 +232,7 @@
 &lt;li&gt;現在時刻&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;を表示するようにしています。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;tmux-status-line.png&#34; alt=&#34;tmux-status-line&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tmux-status-line.webp&#34; alt=&#34;tmux-status-line&#34;&gt;&lt;/p&gt;
 &lt;p&gt;普段の開発ではプロジェクトごとにウィンドウを開き、必要に応じて切り替える運用にしています。&lt;/p&gt;
 &lt;h3 id=&#34;ウィンドウの切り替え&#34;&gt;ウィンドウの切り替え&lt;/h3&gt;
 &lt;p&gt;筆者はふだんプロジェクトごとのウィンドウに加えてmemo用のウィンドウ・dotfiles用のウィンドウなども開いており、常時ウィンドウが15前後あります。筆者は簡単なタスク管理もmemo用ウィンドウに立ち上げたNeovim内で行っているため、ウィンドウの切り替えを頻繁に行います。&lt;/p&gt;
