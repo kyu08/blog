@@ -15,8 +15,11 @@ color = "" #color from the theme settings
 
 Go Elm TypeScript Neovim tmux Rustが好きな3年目エンジニャーです。ご連絡はTwitterまで。
 
-GitHub: [kyu08](https://github.com/kyu08)
-
-Twitter: [@kyu08_](https://twitter.com/kyu08_)
+|site|account|
+|---|---|
+|GitHub|[kyu08](https://github.com/kyu08)|
+|Twitter|[@kyu08_](https://twitter.com/kyu08_)|
+|bsky|[@kyu08.bsky.social](https://bsky.app/profile/kyu08.bsky.social)|
+|misskey|[@kyu08](https://misskey.io/@kyu08)|
 
 ブログの誤字や誤情報については [このブログのリポジトリ](https://github.com/kyu08/blog/issues) でも受け付けています。
