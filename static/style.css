@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
 
-@font-face{
-  font-family: 'JetBrains Mono';
-  src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2'),
-  url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 * {
   --color-gray: #808080;
 
@@ -22,7 +14,7 @@
   text-rendering: optimizeLegibility;
   overflow-wrap: break-word;
   box-sizing: border-box;
-  font-family: "JetBrains Mono", 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 html,
