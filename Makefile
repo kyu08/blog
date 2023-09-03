@@ -6,6 +6,7 @@ init:
 new:
 	@read -p "post id: " id; \
 	hugo new "posts/$${id}/index.md"
+	# TODO: imageを${ID}.pngに書き換える？
 
 .PHONY: run-watch
 run-watch:
