@@ -14,8 +14,9 @@
       <pubDate>Tue, 12 Sep 2023 00:12:17 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/develop-go-runtime-using-1.21/</guid>
-      <description>Goのruntimeのコード（具体的にはgo/src/cmd/compile配下）を読むために必要な手順があったのでメモ代わりに書いておく。</description>
-      <content>&lt;p&gt;Goのruntimeのコード（具体的には&lt;code&gt;go/src/cmd/compile&lt;/code&gt;配下）を読むために必要な手順があったのでメモ代わりに書いておく。neovimでしか確認していないが他のエディタでもきっと同じような感じなはず。&lt;/p&gt;
+      <description>gc(go compiler)のコード（具体的にはgo/src/cmd/compile 配下）を読むために必要な手順があったのでメモ代わりに書いておく。</description>
+      <content>&lt;p&gt;gc(go compiler)のコード（具体的には&lt;a href=&#34;https://github.com/golang/go/tree/master/src/cmd/compile&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;go/src/cmd/compile&lt;/code&gt;&lt;/a&gt;
+配下）を読むために必要な手順があったのでメモ代わりに書いておく。neovimでしか確認していないが他のエディタでもきっと同じような感じなはず。&lt;/p&gt;
 &lt;h2 id=&#34;packagesload-error-err-exit-status-2-stderr-panic-runtime-error-index-out-of-range--1--goroutine-1-running-cmdgointernallistcollectdepserrors&#34;&gt;&lt;code&gt;packages.Load error: err: exit status 2: stderr: panic: runtime error: index out of range [-1]  goroutine 1 [running]: cmd/go/internal/list.collectDepsErrors...&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;というエラーを出力してLSPが停止する。go1.21.0のバグだった模様。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/golang/go/issues/61816&#34; target=&#34;_blank&#34; &gt;https://github.com/golang/go/issues/61816&lt;/a&gt;
