@@ -15,7 +15,7 @@ hideComments: true
 color: ""
 ---
 
-Goのruntimeのコード（具体的には`go/src/cmd/compile`配下）を読むために必要な手順があったのでメモ代わりに書いておく。neovimでしか確認していないが他のエディタでもきっと同じような感じなはず。
+gc(go compiler)のコード（具体的には[`go/src/cmd/compile`](https://github.com/golang/go/tree/master/src/cmd/compile)配下）を読むために必要な手順があったのでメモ代わりに書いておく。neovimでしか確認していないが他のエディタでもきっと同じような感じなはず。
 
 
 ## `packages.Load error: err: exit status 2: stderr: panic: runtime error: index out of range [-1]  goroutine 1 [running]: cmd/go/internal/list.collectDepsErrors...`
