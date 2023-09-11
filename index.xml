@@ -7,7 +7,46 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Fri, 11 Aug 2023 01:35:48 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Sep 2023 00:12:17 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go/src/cmdでLSPが動作するようにするメモ</title>
+      <link>https://blog.kyu08.com/posts/develop-go-runtime-using-1.21/</link>
+      <pubDate>Tue, 12 Sep 2023 00:12:17 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/posts/develop-go-runtime-using-1.21/</guid>
+      <description>Goのruntimeのコード（具体的にはgo/src/cmd/compile配下）を読むために必要な手順があったのでメモ代わりに書いておく。</description>
+      <content>&lt;p&gt;Goのruntimeのコード（具体的には&lt;code&gt;go/src/cmd/compile&lt;/code&gt;配下）を読むために必要な手順があったのでメモ代わりに書いておく。neovimでしか確認していないが他のエディタでもきっと同じような感じなはず。&lt;/p&gt;
+&lt;h2 id=&#34;packagesload-error-err-exit-status-2-stderr-panic-runtime-error-index-out-of-range--1--goroutine-1-running-cmdgointernallistcollectdepserrors&#34;&gt;&lt;code&gt;packages.Load error: err: exit status 2: stderr: panic: runtime error: index out of range [-1]  goroutine 1 [running]: cmd/go/internal/list.collectDepsErrors...&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;というエラーを出力してLSPが停止する。go1.21.0のバグだった模様。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/golang/go/issues/61816&#34; target=&#34;_blank&#34; &gt;https://github.com/golang/go/issues/61816&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;ローカルのgoをgo1.21.1に上げることでエラーが解決した。&lt;/p&gt;
+&lt;h2 id=&#34;error-loading-workspace-folders-expected-1-got-0-failed-to-load-view-for-filepathtorepogosrccmd-err-exit-status-1-stderr-go-downloading-go122-darwinarm64-go-download-go122-for-darwinarm64-toolchain-not-available&#34;&gt;&lt;code&gt;Error loading workspace folders (expected 1, got 0) failed to load view for file:///path/to/repo/go/src/cmd: err: exit status 1: stderr: go: downloading go1.22 (darwin/arm64) go: download go1.22 for darwin/arm64: toolchain not available&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;src/cmd/go.mod&lt;/code&gt; の &lt;code&gt;go 1.22&lt;/code&gt;を&lt;code&gt;go 1.21.0&lt;/code&gt;に書き換えることで解決した。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;diff --git a/src/cmd/go.mod b/src/cmd/go.mod
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;index 1eaad916ff..da12b2adff 100644
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;--- a/src/cmd/go.mod
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+++ b/src/cmd/go.mod
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;@@ -1,6 +1,6 @@
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt; module cmd
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-go 1.22
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+go 1.21.0
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; require (
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  github.com/google/pprof v0.0.0-20230811205829-9131a7e9cc17
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;this-file-is-within-module--which-is-not-included-in-your-workspace-to-fix-this-problem-you-can-add-a-gowork-file-that-uses-this-directory-see-the-documentation-for-more-information-on-setting-up-your-workspace-httpsgithubcomgolangtoolsblobmastergoplsdocworkspacemd&#34;&gt;&lt;code&gt;This file is within module &amp;quot;.&amp;quot;, which is not included in your workspace. To fix this problem, you can add a go.work file that uses this directory. See the documentation for more information on setting up your workspace: https://github.com/golang/tools/blob/master/gopls/doc/workspace.md.&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;リンク先のドキュメントの手順に従って&lt;code&gt;go.work&lt;/code&gt;を作成する。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;// src/cmd ディレクトリで
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;go work init
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;go work use ./compile
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;ということで&#34;&gt;ということで&lt;/h2&gt;
+&lt;p&gt;無事LSPを動作させることができた。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;running-lsp-on-go-runtime-repository.webp&#34; alt=&#34;running-lsp-on-go-runtime-repository.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;これでgo本体のコードがサクサク読めるぞー。&lt;/p&gt;
+</content>
+    </item>
+    
     <item>
       <title>GitHub Sponsorsを通してNeovimに寄付をした</title>
       <link>https://blog.kyu08.com/posts/sponsored-neovim/</link>
