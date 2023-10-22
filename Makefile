@@ -5,6 +5,7 @@ init:
 .PHONY: new
 new:
 	@read -p "post id: " id; \
+	git checkout -b "$${id}"; \
 	hugo new "posts/$${id}/index.md"
 
 .PHONY: run-watch
