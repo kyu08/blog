@@ -7,7 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Tue, 12 Sep 2023 00:12:17 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Oct 2023 19:26:39 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHubで自分がOSSに送ったPR一覧を表示するやつ</title>
+      <link>https://blog.kyu08.com/posts/github-pr-list/</link>
+      <pubDate>Sun, 22 Oct 2023 19:26:39 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/posts/github-pr-list/</guid>
+      <description>稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ったPR一覧</description>
+      <content>&lt;p&gt;稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ったPR一覧」を表示する方法)&lt;/p&gt;
+&lt;h2 id=&#34;tldr&#34;&gt;tl;dr&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/pulls&#34; target=&#34;_blank&#34; &gt;https://github.com/pulls&lt;/a&gt;
+ でクエリに&lt;code&gt;is:pr archived:false is:closed author:${user_name} is:public -org:${user_name}&lt;/code&gt;を指定して検索する。(openなPRを含めるかなど細かいところはお好みで)&lt;/p&gt;
+&lt;p&gt;たとえば筆者の場合は&lt;code&gt;is:pr archived:false is:closed author:kyu08 is:public -org:kyu08&lt;/code&gt;という感じ。&lt;/p&gt;
+&lt;p&gt;こんな感じで表示される。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;pulls.webp&#34; alt=&#34;pulls&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;余談&#34;&gt;余談&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;orgを所属組織とかに絞って検索すれば仕事の振り返りとかにも使えそう。&lt;/li&gt;
+&lt;li&gt;他にも &lt;a href=&#34;https://github.com/pulls/review-requested&#34; target=&#34;_blank&#34; &gt;https://github.com/pulls/review-requested&lt;/a&gt;
+ にいくと自分がレビュワーとしてアサインされているPR一覧が見れて便利だったりする。ターミナル上で同じようなことをやりたい人は &lt;a href=&#34;https://github.com/dlvhdr/gh-dash&#34; target=&#34;_blank&#34; &gt;dlvhdr/gh-dash&lt;/a&gt;
+ とかもオススメかもしれない。&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
     <item>
       <title>go/src/cmdでLSPが動作するようにするメモ</title>
       <link>https://blog.kyu08.com/posts/develop-go-runtime-using-1.21/</link>
