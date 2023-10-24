@@ -7,7 +7,53 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sun, 22 Oct 2023 19:26:39 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Oct 2023 20:00:41 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>採用基準 を読んだ</title>
+      <link>https://blog.kyu08.com/posts/saiyo-kijun/</link>
+      <pubDate>Sun, 22 Oct 2023 20:00:41 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/posts/saiyo-kijun/</guid>
+      <description>概要 McKinsey &amp;amp; Company出身の伊賀泰代さんがリーダーシップについて書いた『採用基準 地頭より論理的思考力より大切なもの』を読んだ。ちょうど「リー</description>
+      <content>&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
+&lt;p&gt;McKinsey &amp;amp; Company出身の伊賀泰代さんがリーダーシップについて書いた『採用基準 地頭より論理的思考力より大切なもの』を読んだ。ちょうど「リーダーシップとは」みたいなことが気になっていたので読んでみた。&lt;/p&gt;
+&lt;p&gt;コンサルティングファームでの出来事を中心に書かれているが、ITベンチャーでエンジニアとして働く自分にも参考になる点が多かったように思う。&lt;/p&gt;
+&lt;h2 id=&#34;学び&#34;&gt;学び&lt;/h2&gt;
+&lt;h3 id=&#34;思考力とは&#34;&gt;思考力とは&lt;/h3&gt;
+&lt;p&gt;思考力とは以下の3つの要素からなる。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;思考スキル&lt;/li&gt;
+&lt;li&gt;思考意欲&lt;/li&gt;
+&lt;li&gt;思考体力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;このうち思考スキルはトレーニングなどで向上させることができるが、思考意欲と思考体力は一朝一夕で身につけることが難しいため筆者は面接時によく見ているらしい。&lt;/p&gt;
+&lt;p&gt;この部分を読むまで思考力といえば思考スキルや思考体力が主だと思っていたので思考意欲という概念は自分には目新しかった。&lt;/p&gt;
+&lt;h3 id=&#34;リーダーシップが全員に必要な理由&#34;&gt;リーダーシップが全員に必要な理由&lt;/h3&gt;
+&lt;p&gt;多くの欧米企業が社員全員にリーダーシップを求める理由が書かれていたので引用する。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;マッキンゼーをはじめとする外資系企業の多くでは、すべての社員に高いレベルのリーダーシップを求めます。アメリカの場合は、大学や大学院の入学判定に使われる小論文でも、過去のリーダーシップ体験は常に問われる最重要項目です。(中略)全員がリーダーシップをもつ組織は、一部の人だけがリーダーシップをもつ組織より、圧倒的に高い成果を出しやすいのです。だから学校も企業も、欧米では（もしくは外資系企業では）全員にリーダーシップ体験を求めるのです。(中略)リーダーシップのある人は、「成果を出すこと」を「自説が採用されること」よりも優先します。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;「全員がリーダーシップを持つ組織」と聞くと「全員自分の意見ばかり主張していては物事が前に進まないのでは&amp;hellip;?」と考えてしまいがちだが、ここではリーダーシップを「チームの使命を達成するために、必要なことをやる人」と定義している。&lt;/p&gt;
+&lt;p&gt;たしかにそう聞くと多角的な視点からよりよい意思決定ができそうな気がしてくる。チーム・組織の全員がリーダーシップを体現することができれば指示待ちが起こらず、生産性が高まりそうだなと感じた。&lt;/p&gt;
+&lt;h3 id=&#34;バリューを出す&#34;&gt;バリューを出す&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;まずは自分自身が期待されている(あるいは期待以上の)バリューを出すことでリーダーが最もこだわるべき成果の重要性を理解したりやそれにこだわる姿勢を身につけることができる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ポジションをとる&#34;&gt;ポジションをとる&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;自分はどう思うのか。情報を揃えて周りに判断を仰いでばかりではいつまでも指示待ち人間を脱することはできない。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;自分の仕事のリーダーは自分&#34;&gt;自分の仕事のリーダーは自分&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;組織図を考える時に上司が上、メンバーが下というように考えるよりは自分を中心に捉えてその周りに他のメンバーや上司やその上司などが放射状に位置していると考える。&lt;/li&gt;
+&lt;li&gt;上司に決めて貰えばいいと考えるのではなく周りの人をどううまく使って自分の仕事を進めるかを考えることが大切。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;組織の全員がリーダーシップを体現することの嬉しさを知れたのが自分にとっては大きな収穫だった。&lt;/p&gt;
+&lt;p&gt;成果を意識してやっていく。&lt;/p&gt;
+</content>
+    </item>
+    
     <item>
       <title>GitHubで自分がOSSに送ったPR一覧を表示するやつ</title>
       <link>https://blog.kyu08.com/posts/github-pr-list/</link>
