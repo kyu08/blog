@@ -6,7 +6,7 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="ThePrimeagen/harpoon というNeovimプラグインを使ってみたので気になっている人の参考になればと思い感想を書いてみる。 できること 1. ファイルをマーク :lua requi" />
+<meta name="description" content="ThePrimeagen/harpoon というNeovimプラグインを使ってみたので気になっている人の参考になればと思い感想を書いてみる。 できること ファイルをマークしてquick" />
 <meta name="keywords" content="neovim, plugin" />
 
   <meta name="robots" content="noodp" />
@@ -58,7 +58,7 @@ if (!doNotTrack) {
 <meta property="og:locale" content="ja" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="ThePrimeagen/harpoon を使ってみた">
-<meta property="og:description" content="ThePrimeagen/harpoon というNeovimプラグインを使ってみたので気になっている人の参考になればと思い感想を書いてみる。 できること 1. ファイルをマーク :lua requi" />
+<meta property="og:description" content="ThePrimeagen/harpoon というNeovimプラグインを使ってみたので気になっている人の参考になればと思い感想を書いてみる。 できること ファイルをマークしてquick" />
 <meta property="og:url" content="https://blog.kyu08.com/posts/harpoon-review/" />
 <meta property="og:site_name" content="blog.kyu08.com" />
 
@@ -164,7 +164,7 @@ if (!doNotTrack) {
       <span class="post-author">kyu08</span>
     
     
-      <span class="post-reading-time">:: 2 min read (901 words)</span>
+      <span class="post-reading-time">:: 2 min read (980 words)</span>
     
   </div>
 
@@ -193,8 +193,8 @@ if (!doNotTrack) {
   <ul>
     <li><a href="#できること">できること</a>
       <ul>
-        <li><a href="#1-ファイルをマーク">1. ファイルをマーク</a></li>
-        <li><a href="#2-ファイルを開く">2. ファイルを開く</a></li>
+        <li><a href="#1-ファイルをマークして">1. ファイルをマークして</a></li>
+        <li><a href="#2-quick_menuからファイルを開く">2. quick_menuからファイルを開く</a></li>
       </ul>
     </li>
     <li><a href="#嬉しさ">嬉しさ</a></li>
@@ -218,10 +218,11 @@ if (!doNotTrack) {
         <p><a href="https://github.com/ThePrimeagen/harpoon" target="_blank" >ThePrimeagen/harpoon</a>
 というNeovimプラグインを使ってみたので気になっている人の参考になればと思い感想を書いてみる。</p>
 <h2 id="できること">できること<a href="#できること" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<h3 id="1-ファイルをマーク">1. ファイルをマーク<a href="#1-ファイルをマーク" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>ファイルをマークしてquick_menu(マークしたファイルの一覧)からファイルを開くことができる。操作している様子は以下の通り。</p>
+<h3 id="1-ファイルをマークして">1. ファイルをマークして<a href="#1-ファイルをマークして" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p><code>:lua require(&quot;harpoon.mark&quot;).add_file()</code>を実行してファイルをマーク</p>
 <p><img src="add-file.gif" alt="add-file"></p>
-<h3 id="2-ファイルを開く">2. ファイルを開く<a href="#2-ファイルを開く" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="2-quick_menuからファイルを開く">2. quick_menuからファイルを開く<a href="#2-quick_menuからファイルを開く" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p><code>:lua require(&quot;harpoon.ui&quot;).toggle_quick_menu()</code>を実行してマークしたファイル一覧からファイルを開く</p>
 <p><img src="toggle-quick-menu.gif" alt="toggle-quick-menu"></p>
 <p>機能は他にもありそう<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>だが筆者はこの機能しか使ってないので割愛。</p>
@@ -235,7 +236,7 @@ if (!doNotTrack) {
 <img src="saved-quick-menu.gif" alt="saved-quick-menu"></p>
 <h3 id="2-自由に編集できる-quick_menu">2. 自由に編集できる quick_menu<a href="#2-自由に編集できる-quick_menu" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p>作者自身もお気に入りと言及しているが<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>quick_menuは純粋なテキストなので自由に編集することができる。</p>
-<p>つまりこんな感じで<code>dd</code> -&gt; <code>y</code>のようなコマンドで自由に削除したり順番を入れ替えたりすることができる。普段のvimの操作感で扱えるのでとても直感的で使いやすくて嬉しい。</p>
+<p>つまりこんな感じで<code>dd</code> -&gt; <code>y</code>のようなコマンドで自由に順番を入れ替えたり削除したりすることができる。普段のvimの操作感で扱えるのでとても直感的で使いやすくて嬉しい。</p>
 <p>quick_menuを自由に編集している様子<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>
 <img src="editable-quick-menu.gif" alt="editable-quick-menu"></p>
 <h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
