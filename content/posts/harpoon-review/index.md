@@ -18,12 +18,14 @@ color: ""
 [ThePrimeagen/harpoon](https://github.com/ThePrimeagen/harpoon)というNeovimプラグインを使ってみたので気になっている人の参考になればと思い感想を書いてみる。
 
 ## できること
-### 1. ファイルをマーク
+ファイルをマークしてquick_menu(マークしたファイルの一覧)からファイルを開くことができる。操作している様子は以下の通り。
+
+### 1. ファイルをマークして
 `:lua require("harpoon.mark").add_file()`を実行してファイルをマーク
 
 ![add-file](add-file.gif)
 
-### 2. ファイルを開く
+### 2. quick_menuからファイルを開く
 `:lua require("harpoon.ui").toggle_quick_menu()`を実行してマークしたファイル一覧からファイルを開く
 
 ![toggle-quick-menu](toggle-quick-menu.gif)
@@ -46,7 +48,7 @@ LSPが不調だったりしてNeovimを再起動することがたまにある�
 ### 2. 自由に編集できる quick_menu
 作者自身もお気に入りと言及しているが[^2]quick_menuは純粋なテキストなので自由に編集することができる。
 
-つまりこんな感じで`dd` -> `y`のようなコマンドで自由に削除したり順番を入れ替えたりすることができる。普段のvimの操作感で扱えるのでとても直感的で使いやすくて嬉しい。
+つまりこんな感じで`dd` -> `y`のようなコマンドで自由に順番を入れ替えたり削除したりすることができる。普段のvimの操作感で扱えるのでとても直感的で使いやすくて嬉しい。
 
 quick_menuを自由に編集している様子[^3]
 ![editable-quick-menu](editable-quick-menu.gif)
