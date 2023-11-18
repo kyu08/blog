@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sun, 22 Oct 2023 20:00:41 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Nov 2023 00:20:13 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>neovim</title>
+      <link>https://blog.kyu08.com/tags/neovim/</link>
+      <pubDate>Sat, 18 Nov 2023 00:20:13 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/neovim/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>plugin</title>
+      <link>https://blog.kyu08.com/tags/plugin/</link>
+      <pubDate>Sat, 18 Nov 2023 00:20:13 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/plugin/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
     <item>
       <title>読書ログ</title>
       <link>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</link>
@@ -24,16 +44,6 @@
       <pubDate>Sun, 22 Oct 2023 19:26:39 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/tags/github/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>Neovim</title>
-      <link>https://blog.kyu08.com/tags/neovim/</link>
-      <pubDate>Fri, 11 Aug 2023 01:35:48 +0900</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/neovim/</guid>
       <description></description>
       <content></content>
     </item>
