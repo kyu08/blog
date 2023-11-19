@@ -3,7 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.kyu08.com/</loc>
-    <lastmod>2023-11-18T00:20:13+09:00</lastmod>
+    <lastmod>2023-11-19T10:41:50+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/</loc>
+    <lastmod>2023-11-19T10:41:50+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/</loc>
+    <lastmod>2023-11-19T10:41:50+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/how-world-class-engineers-think/</loc>
+    <lastmod>2023-11-19T10:41:50+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</loc>
+    <lastmod>2023-11-19T10:41:50+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/neovim/</loc>
     <lastmod>2023-11-18T00:20:13+09:00</lastmod>
@@ -11,19 +23,10 @@
     <loc>https://blog.kyu08.com/tags/plugin/</loc>
     <lastmod>2023-11-18T00:20:13+09:00</lastmod>
   </url><url>
-    <loc>https://blog.kyu08.com/posts/</loc>
-    <lastmod>2023-11-18T00:20:13+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/</loc>
-    <lastmod>2023-11-18T00:20:13+09:00</lastmod>
-  </url><url>
     <loc>https://blog.kyu08.com/posts/harpoon-review/</loc>
     <lastmod>2023-11-18T00:20:13+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/saiyo-kijun/</loc>
-    <lastmod>2023-10-22T20:00:41+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</loc>
     <lastmod>2023-10-22T20:00:41+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/github/</loc>
