@@ -590,8 +590,20 @@
       <pubDate>Sat, 10 Jun 2023 01:26:52 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/create-gif/</guid>
-      <description>ブログ用によくGifをつくるので自分用の備忘録代わりに手順を記しておく。 前提 macOS Kap がインストールされていること Keycastr がインストールされていること 手</description>
+      <description>ブログ用によくGifをつくるので自分用の備忘録代わりに手順を記しておく。 追記(2023/11/29) 下記の方法だと生成後のgifに格子模様の</description>
       <content>&lt;p&gt;ブログ用によくGifをつくるので自分用の備忘録代わりに手順を記しておく。&lt;/p&gt;
+&lt;h2 id=&#34;追記20231129&#34;&gt;追記(2023/11/29)&lt;/h2&gt;
+&lt;p&gt;下記の方法だと生成後のgifに格子模様のようなものが入ってしまうので以下の記事で紹介されているffmpegを使った方法を使うようにしたところ綺麗なgifが生成できるようになった。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://qiita.com/takasp/items/65d1d0d90073bcfc4873&#34; target=&#34;_blank&#34; &gt;Mac で GIF 画像を作る技術 - Qiita&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;動画内で使用している色を最適化するために、パレット画像を生成します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i input.mov -vf &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;palettegen&amp;#34;&lt;/span&gt; -y palette.png
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;GIF 画像を出力します。
+サンプルでは、-r オプションでフレームレートを 24 に設定しています。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i input.mov -i palette.png -r &lt;span style=&#34;color:#ae81ff&#34;&gt;24&lt;/span&gt; -y output.gif
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;追記ここまで&lt;/p&gt;
 &lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;macOS&lt;/li&gt;
