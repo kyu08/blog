@@ -6,7 +6,7 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ったPR一覧" />
+<meta name="description" content="稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ってマージさ" />
 <meta name="keywords" content="GitHub" />
 
   <meta name="robots" content="noodp" />
@@ -58,7 +58,7 @@ if (!doNotTrack) {
 <meta property="og:locale" content="ja" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="GitHubで自分がOSSに送ったPR一覧を表示するやつ">
-<meta property="og:description" content="稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ったPR一覧" />
+<meta property="og:description" content="稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ってマージさ" />
 <meta property="og:url" content="https://blog.kyu08.com/posts/github-pr-list/" />
 <meta property="og:site_name" content="blog.kyu08.com" />
 
@@ -164,7 +164,7 @@ if (!doNotTrack) {
       <span class="post-author">kyu08</span>
     
     
-      <span class="post-reading-time">:: 1 min read (314 words)</span>
+      <span class="post-reading-time">:: 1 min read (238 words)</span>
     
   </div>
 
@@ -197,12 +197,13 @@ if (!doNotTrack) {
   
 
   <div class="post-content"><div>
-        <p>稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ったPR一覧」を表示する方法)</p>
+        <p>稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ってマージされたPR一覧」を表示する方法)</p>
 <h2 id="tldr">tl;dr<a href="#tldr" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p><a href="https://github.com/pulls" target="_blank" >https://github.com/pulls</a>
- でクエリに<code>is:pr archived:false is:closed author:${user_name} is:public -org:${user_name}</code>を指定して検索する。(openなPRを含めるかなど細かいところはお好みで)</p>
-<p>たとえば筆者の場合は<code>is:pr archived:false is:closed author:kyu08 is:public -org:kyu08</code>という感じ。</p>
-<p>こんな感じで表示される。</p>
+ でクエリに</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>is:pr archived:false is:closed author:@me is:public -user:@me
+</span></span></code></pre></div><p>を指定して検索するとこんな感じで表示される。</p>
 <p><img src="pulls.webp" alt="pulls"></p>
 <h2 id="余談">余談<a href="#余談" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>

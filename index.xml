@@ -190,13 +190,14 @@
       <pubDate>Sun, 22 Oct 2023 19:26:39 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/github-pr-list/</guid>
-      <description>稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ったPR一覧</description>
-      <content>&lt;p&gt;稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ったPR一覧」を表示する方法)&lt;/p&gt;
+      <description>稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ってマージさ</description>
+      <content>&lt;p&gt;稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ってマージされたPR一覧」を表示する方法)&lt;/p&gt;
 &lt;h2 id=&#34;tldr&#34;&gt;tl;dr&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/pulls&#34; target=&#34;_blank&#34; &gt;https://github.com/pulls&lt;/a&gt;
- でクエリに&lt;code&gt;is:pr archived:false is:closed author:${user_name} is:public -org:${user_name}&lt;/code&gt;を指定して検索する。(openなPRを含めるかなど細かいところはお好みで)&lt;/p&gt;
-&lt;p&gt;たとえば筆者の場合は&lt;code&gt;is:pr archived:false is:closed author:kyu08 is:public -org:kyu08&lt;/code&gt;という感じ。&lt;/p&gt;
-&lt;p&gt;こんな感じで表示される。&lt;/p&gt;
+ でクエリに&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;is:pr archived:false is:closed author:@me is:public -user:@me
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;を指定して検索するとこんな感じで表示される。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;pulls.webp&#34; alt=&#34;pulls&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;余談&#34;&gt;余談&lt;/h2&gt;
 &lt;ul&gt;
