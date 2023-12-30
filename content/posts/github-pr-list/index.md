@@ -15,14 +15,17 @@ hideComments: true
 color: ""
 ---
 
-稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ったPR一覧」を表示する方法)
+稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ってマージされたPR一覧」を表示する方法)
 
 ## tl;dr
-https://github.com/pulls でクエリに`is:pr archived:false is:closed author:${user_name} is:public -org:${user_name}`を指定して検索する。(openなPRを含めるかなど細かいところはお好みで)
+https://github.com/pulls でクエリに
 
-たとえば筆者の場合は`is:pr archived:false is:closed author:kyu08 is:public -org:kyu08`という感じ。
+```shell
 
-こんな感じで表示される。
+is:pr archived:false is:closed author:@me is:public -user:@me
+
+```
+を指定して検索するとこんな感じで表示される。
 
 ![pulls](pulls.webp)
 
