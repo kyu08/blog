@@ -122,7 +122,7 @@ Neovim自体はOSSなので無償で利用できるわけだが、あるときNe
 
 [ktr0731/go-fuzzyfinder](https://github.com/ktr0731/go-fuzzyfinder)のおかげで100行程度のコードでやりたいことが実現できて大変助かった。
 
-#### 買ってよかったもの
+### 買ってよかったもの
 - Nuphy Air60 v2
 - klack
 - コアラマットレスのマットレス
