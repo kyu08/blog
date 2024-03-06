@@ -2,10 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.kyu08.com/posts/looking-back-on-2023/</loc>
-    <lastmod>2023-12-30T00:03:17+09:00</lastmod>
-  </url><url>
     <loc>https://blog.kyu08.com/</loc>
+    <lastmod>2024-03-07T00:27:45+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/</loc>
+    <lastmod>2024-03-07T00:27:45+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/</loc>
+    <lastmod>2024-03-07T00:27:45+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/better-programmer/</loc>
+    <lastmod>2024-03-07T00:27:45+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</loc>
+    <lastmod>2024-03-07T00:27:45+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/looking-back-on-2023/</loc>
     <lastmod>2023-12-30T00:03:17+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/fzf-make/</loc>
@@ -17,19 +29,10 @@
     <loc>https://blog.kyu08.com/tags/oss/</loc>
     <lastmod>2023-12-30T00:03:17+09:00</lastmod>
   </url><url>
-    <loc>https://blog.kyu08.com/posts/</loc>
-    <lastmod>2023-12-30T00:03:17+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/</loc>
-    <lastmod>2023-12-30T00:03:17+09:00</lastmod>
-  </url><url>
     <loc>https://blog.kyu08.com/tags/%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A/</loc>
     <lastmod>2023-12-30T00:03:17+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/how-world-class-engineers-think/</loc>
-    <lastmod>2023-11-19T10:41:50+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</loc>
     <lastmod>2023-11-19T10:41:50+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/plugin/</loc>
