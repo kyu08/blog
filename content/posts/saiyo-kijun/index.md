@@ -11,7 +11,7 @@ authorTwitter: "kyu08_"
 draft: false
 showFullContent: false
 readingTime: true
-hideComments: true
+hideComments: false
 color: ""
 ---
 
