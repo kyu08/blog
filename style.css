@@ -86,3 +86,7 @@ article.on-list {
 .headings--one-size h1:not(first-child), .headings--one-size h2:not(first-child), .headings--one-size h3:not(first-child), .headings--one-size h4:not(first-child), .headings--one-size h5:not(first-child), .headings--one-size h6:not(first-child) {
   margin-top: 20px;
 }
+
+.pagination__title {
+  margin: 20px 0 20px;
+}
