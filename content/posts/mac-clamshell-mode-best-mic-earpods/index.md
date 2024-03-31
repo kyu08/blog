@@ -21,7 +21,7 @@ color: ""
 - 机ができるだけスッキリするのが好きなので画像のようにMacをクラムシェルモードで使っている
     - Macのマイクは使えないのでAirPods Proをマイクとして使っている
 
-![desk-without-earpods.jpg](desk-without-earpods.jpg)
+![desk-without-earpods.webp](desk-without-earpods.webp)
 
 ## 課題
 同僚に話しかけられた時には
@@ -37,6 +37,6 @@ EarPods(AirPodsではなく)を買ってMacに常時接続しておくことで�
 
 これにより話しかけられてから1秒弱くらいで話せる状態にできるようになった。
 
-![desk-with-earpods.jpg](desk-with-earpods.jpg)
+![desk-with-earpods.webp](desk-with-earpods.webp)
 
 特に音質が悪かったり声が聞きずらいみたいなFBはもらっていないので今のところ特に問題はなさそう。
