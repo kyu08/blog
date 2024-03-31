@@ -1,5 +1,5 @@
 ---
-title: "GitHub Issuesをサイトのコメント欄として活用できるutterancesをこのブログに導入した"
+title: "GitHub Issuesをサイトのコメント欄として活用できるutterancesを導入した"
 tags: ["blog"]
 keywords: ["blog", "utterances"]
 
