@@ -2,16 +2,16 @@
 <html lang="ja">
 <head>
   
-    <title>GitHub Issuesをサイトのコメント欄として活用できるutterancesをこのブログに導入した :: blog.kyu08.com</title>
+    <title>クラムシェルでMacを使っているとき用のマイクとしてEarPodsを買った :: blog.kyu08.com</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="このブログにコメント欄を設置した。 utterance/utterances というGitHubのIssuesへのコメントを記事のコメント欄として使えるようにしてくれるOSSのツール" />
-<meta name="keywords" content="blog, utterances" />
+<meta name="description" content="前提 社でバーチャルオフィスツールとしてGatherを使っており、就業中は基本的にずっとログインしているため急に話しかけられることがある 普段は" />
+<meta name="keywords" content="デスク環境, ガジェット" />
 
   <meta name="robots" content="noodp" />
 
-<link rel="canonical" href="https://blog.kyu08.com/posts/add-comment-section-to-this-blog/" />
+<link rel="canonical" href="https://blog.kyu08.com/posts/mac-clamshell-mode-best-mic-earpods/" />
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
@@ -57,9 +57,9 @@ if (!doNotTrack) {
 
 <meta property="og:locale" content="ja" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="GitHub Issuesをサイトのコメント欄として活用できるutterancesをこのブログに導入した">
-<meta property="og:description" content="このブログにコメント欄を設置した。 utterance/utterances というGitHubのIssuesへのコメントを記事のコメント欄として使えるようにしてくれるOSSのツール" />
-<meta property="og:url" content="https://blog.kyu08.com/posts/add-comment-section-to-this-blog/" />
+<meta property="og:title" content="クラムシェルでMacを使っているとき用のマイクとしてEarPodsを買った">
+<meta property="og:description" content="前提 社でバーチャルオフィスツールとしてGatherを使っており、就業中は基本的にずっとログインしているため急に話しかけられることがある 普段は" />
+<meta property="og:url" content="https://blog.kyu08.com/posts/mac-clamshell-mode-best-mic-earpods/" />
 <meta property="og:site_name" content="blog.kyu08.com" />
 
   
@@ -70,7 +70,7 @@ if (!doNotTrack) {
 <meta property="og:image:height" content="627">
 
 
-  <meta property="article:published_time" content="2024-03-17 22:06:40 &#43;0900 &#43;0900" />
+  <meta property="article:published_time" content="2024-03-31 00:00:38 &#43;0900 &#43;0900" />
 
 
 
@@ -151,12 +151,12 @@ if (!doNotTrack) {
     
 <article class="post">
   <h1 class="post-title">
-    <a href="https://blog.kyu08.com/posts/add-comment-section-to-this-blog/">GitHub Issuesをサイトのコメント欄として活用できるutterancesをこのブログに導入した</a>
+    <a href="https://blog.kyu08.com/posts/mac-clamshell-mode-best-mic-earpods/">クラムシェルでMacを使っているとき用のマイクとしてEarPodsを買った</a>
   </h1>
   <div class="post-meta">
     
       <time class="post-date">
-        2024-03-17 ::
+        2024-03-31 ::
         
       </time>
     
@@ -164,21 +164,23 @@ if (!doNotTrack) {
       <span class="post-author">kyu08</span>
     
     
-      <span class="post-reading-time">:: 1 min read (309 words)</span>
+      <span class="post-reading-time">:: 1 min read (487 words)</span>
     
   </div>
 
   
     <span class="post-tags">
       
-      #<a href="https://blog.kyu08.com/tags/blog/">blog</a>&nbsp;
+      #<a href="https://blog.kyu08.com/tags/%E3%83%87%E3%82%B9%E3%82%AF%E7%92%B0%E5%A2%83/">デスク環境</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/tags/%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88/">ガジェット</a>&nbsp;
       
     </span>
   
   
   <img src="https://blog.kyu08.com/cover.png"
     class="post-cover"
-    alt="GitHub Issuesをサイトのコメント欄として活用できるutterancesをこのブログに導入した"
+    alt="クラムシェルでMacを使っているとき用のマイクとしてEarPodsを買った"
     title="Cover Image" />
 
 
@@ -187,37 +189,44 @@ if (!doNotTrack) {
       <h2>
         目次
       </h2>
-      <nav id="TableOfContents"></nav>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前提">前提</a></li>
+    <li><a href="#課題">課題</a></li>
+    <li><a href="#解決策">解決策</a></li>
+  </ul>
+</nav>
     </div>
   
 
   <div class="post-content"><div>
-        <p>このブログにコメント欄を設置した。</p>
-<p><a href="https://github.com/utterance/utterances" target="_blank" >utterance/utterances</a>
-というGitHubのIssuesへのコメントを記事のコメント欄として使えるようにしてくれるOSSのツールを使っている。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
-<p>導入に必要だったのは</p>
-<ol>
-<li>コメント用のリポジトリ作成<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></li>
-<li><a href="https://utteranc.es/" target="_blank" >https://utteranc.es/</a>
-でscriptタグを生成</li>
-<li>生成したタグをブログに埋め込む</li>
-</ol>
-<p>だけだったので10分くらいでできて大変お手軽だった。</p>
-<p>(自分はこのブログのリポジトリのissueをコメント用に使いたくなかったのでそれ用のリポジトリを作成したが、もし既存のリポジトリを使う場合は<code>1.</code>は不要)</p>
-<p>ぜひご自由にコメントを残していってください。</p>
-<div class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1">
-<p><a href="https://blog.orhun.dev/" target="_blank" >https://blog.orhun.dev/</a>
-で使われていていいなと思ったのでこのブログでも導入してみた。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+        <h2 id="前提">前提<a href="#前提" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li>社でバーチャルオフィスツールとしてGatherを使っており、就業中は基本的にずっとログインしているため急に話しかけられることがある
+<ul>
+<li>普段はマイクをオフにしておき、話しかけられた時だけONにしている</li>
+</ul>
 </li>
-<li id="fn:2">
-<p><a href="https://github.com/kyu08/blog-comments" target="_blank" >https://github.com/kyu08/blog-comments</a>
-&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li>机ができるだけスッキリするのが好きなので画像のようにMacをクラムシェルモードで使っている
+<ul>
+<li>Macのマイクは使えないのでAirPods Proをマイクとして使っている</li>
+</ul>
 </li>
+</ul>
+<p><img src="desk-without-earpods.jpg" alt="desk-without-earpods.jpg"></p>
+<h2 id="課題">課題<a href="#課題" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>同僚に話しかけられた時には</p>
+<ol>
+<li>AirPods Proを装着</li>
+<li>BluetoothでMacに接続されるのを待つ</li>
+<li>GatherのマイクをONにする</li>
 </ol>
-</div>
+<p>という手順が必要なのだが、AirPods Proの接続を待つ必要があるので話かけられた相手を待たせてしまう。(話しかけられてから話せるようになるまでだいたい5秒くらい)</p>
+<h2 id="解決策">解決策<a href="#解決策" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>EarPods(AirPodsではなく)を買ってMacに常時接続しておくことで話しかけられたらGatherのマイクをONにするだけで話せるようにした。</p>
+<p>これにより話しかけられてから1秒弱くらいで話せる状態にできるようになった。</p>
+<p><img src="desk-with-earpods.jpg" alt="desk-with-earpods.jpg"></p>
+<p>特に音質が悪かったり声が聞きずらいみたいなFBはもらっていないので今のところ特に問題はなさそう。</p>
 
       </div></div>
 
@@ -230,17 +239,10 @@ if (!doNotTrack) {
     </div>
     <div class="pagination__buttons">
         
-        <span class="button previous">
-            <a href="https://blog.kyu08.com/posts/mac-clamshell-mode-best-mic-earpods/">
-                <span class="button__icon">←</span>
-                <span class="button__text">クラムシェルでMacを使っているとき用のマイクとしてEarPodsを買った</span>
-            </a>
-        </span>
-        
         
         <span class="button next">
-            <a href="https://blog.kyu08.com/posts/better-programmer/">
-                <span class="button__text">ベタープログラマ を読んだ</span>
+            <a href="https://blog.kyu08.com/posts/add-comment-section-to-this-blog/">
+                <span class="button__text">GitHub Issuesをサイトのコメント欄として活用できるutterancesをこのブログに導入した</span>
                 <span class="button__icon">→</span>
             </a>
         </span>
