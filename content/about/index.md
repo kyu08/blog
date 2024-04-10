@@ -1,19 +1,19 @@
-+++
-title = "About Me"
-date = "2023-06-06T01:15:48+09:00"
-author = "kyu08"
-authorTwitter = "kyu08_" #do not include @
-cover = "https://blog.kyu08.com/cover.png"
-tags = []
-keywords = ["", ""]
-description = ""
-showFullContent = false
-readingTime = true
-hideComments = false
-color = "" #color from the theme settings
-+++
+---
+title: "About Me"
+date: "2023-06-06T01:15:48+09:00"
+author: "kyu08"
+authorTwitter: "kyu08_" #do not include @
+cover: "https://blog.kyu08.com/cover.png"
+tags: []
+keywords: ["", ""]
+description: ""
+showFullContent: false
+readingTime: true
+hideComments: false
+color: "" #color from the theme settings
+---
 
-Go Elm TypeScript Neovim tmux Rustが好きな3年目エンジニャーです。ご連絡はTwitterまで。
+Go Elm TypeScript Neovim tmux Rust CLI が好きな4年目エンジニャーです。ご連絡はTwitterまで。
 
 |site|account|
 |---|---|
