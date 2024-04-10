@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sun, 31 Mar 2024 00:00:38 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Apr 2024 23:12:22 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>tmux-fzfを使ってwindow切り替えをできるようにする手順</title>
+      <link>https://blog.kyu08.com/posts/tmux-fzf-window/</link>
+      <pubDate>Wed, 10 Apr 2024 23:12:22 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/posts/tmux-fzf-window/</guid>
+      <description>これはなに こんな感じでtmuxでwindowをfzfで切り替えられるようにするための設定方法 手順 .tmux.confに以下を追記 set -g @plugin &amp;#39;tmux-plugins/tpm&amp;#39; # す</description>
+      <content>&lt;h2 id=&#34;これはなに&#34;&gt;これはなに&lt;/h2&gt;
+&lt;p&gt;こんな感じでtmuxでwindowをfzfで切り替えられるようにするための設定方法&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kyu08.com/posts/my-dev-setup-terminal/tmux-fzf.gif&#34; alt=&#34;https://blog.kyu08.com/posts/my-dev-setup-terminal/tmux-fzf.gif&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;手順&#34;&gt;手順&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;.tmux.conf&lt;/code&gt;に以下を追記&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-tmux&#34; data-lang=&#34;tmux&#34;&gt;set -g @plugin &amp;#39;tmux-plugins/tpm&amp;#39; # すでにある場合は不要
+set -g @plugin &amp;#39;sainnhe/tmux-fzf&amp;#39;
+bind-key &amp;#34;space&amp;#34; run-shell -b &amp;#34;${HOME}/.tmux/plugins/tmux-fzf/scripts/window.sh switch&amp;#34; # `prefix + space`で起動
+
+run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;prefix + I&lt;/code&gt;でtpm経由でプラグインをインストール(&lt;code&gt;prefix + i&lt;/code&gt;ではないので注意)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    </item>
+    
     <item>
       <title>クラムシェルでMacを使っているとき用のマイクとしてEarPodsを買った</title>
       <link>https://blog.kyu08.com/posts/mac-clamshell-mode-best-mic-earpods/</link>
