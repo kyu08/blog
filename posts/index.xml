@@ -7,7 +7,102 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Wed, 10 Apr 2024 23:12:22 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 May 2024 15:32:42 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS50.jpでCSに入門した</title>
+      <link>https://blog.kyu08.com/posts/cs50-jp/</link>
+      <pubDate>Sun, 12 May 2024 15:32:42 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/posts/cs50-jp/</guid>
+      <description>CS50.jp の気になっていたトピックを学んでみたので振り返っておく。 CS50.jpとは CS50.jp の説明はサイトから引用する。 このページは、ハーバード大学 CS50 の日</description>
+      <content>&lt;p&gt;&lt;a href=&#34;https://cs50.jp/&#34; target=&#34;_blank&#34; &gt;CS50.jp&lt;/a&gt;
+の気になっていたトピックを学んでみたので振り返っておく。&lt;/p&gt;
+&lt;h2 id=&#34;cs50jpとは&#34;&gt;CS50.jpとは&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cs50.jp/&#34; target=&#34;_blank&#34; &gt;CS50.jp&lt;/a&gt;
+の説明はサイトから引用する。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;このページは、ハーバード大学 CS50 の日本語版翻訳プロジェクトのページです。当サイトのドメインに掲載されているコンテンツは、Creative Commons ライセンスが適用されています。個人利用のほか、非営利に限って教材として利用することができます。&lt;/p&gt;
+&lt;p&gt;（中略）&lt;/p&gt;
+&lt;p&gt;ハーバード大学の CS50x は、コンピュータサイエンスとプログラミング技術を紹介するコースで、プログラミングの経験の有無にかかわらず、経験者と未経験者の両方を対象としています。David J. Malan が担当するエントリーレベルのコースである CS50x では、アルゴリズム的に考え、問題を効率的に解決する方法を学びます。テーマは、抽象化、アルゴリズム、データ構造、カプセル化、リソース管理、セキュリティ、ソフトウェアエンジニアリング、ウェブ開発など。言語は C、Python、SQL、JavaScript に加え、CSS と HTML を使用します。問題集は、生物学、暗号、金融、科学捜査、ゲームなどの実世界の領域からヒントを得ています。CS50x の学内版である CS50 は、ハーバード大学で最大のコースです。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;カリキュラムは次のような構成になっている。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Week0 Scratch&lt;/li&gt;
+&lt;li&gt;Week1 C&lt;/li&gt;
+&lt;li&gt;Week2 Arrays&lt;/li&gt;
+&lt;li&gt;Week3 Algorithms&lt;/li&gt;
+&lt;li&gt;Week4 Memory&lt;/li&gt;
+&lt;li&gt;Week5 Data Structures&lt;/li&gt;
+&lt;li&gt;Week6 Python&lt;/li&gt;
+&lt;li&gt;Week7 SQL&lt;/li&gt;
+&lt;li&gt;Week8 HTML, CSS, JavaScript&lt;/li&gt;
+&lt;li&gt;Week9 Flask&lt;/li&gt;
+&lt;li&gt;Week10 Ethics&lt;/li&gt;
+&lt;li&gt;Security&lt;/li&gt;
+&lt;li&gt;Artificial Intelligence&lt;/li&gt;
+&lt;li&gt;Final Project&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;各章はレジュメと課題で構成されている。&lt;/p&gt;
+&lt;p&gt;課題を解いてコードを提出するとリモート環境でテストが実行され結果を確認することができる。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;check50.webp&#34; alt=&#34;check50&#34;&gt;&lt;/p&gt;
+&lt;p&gt;正直にいうと日本語訳がなかったら取り組もうと思わなかったと思うのでCS50.jpの翻訳コントリビュータであるCODEGYM社には感謝してもしきれない。本当にありがとうございます。&lt;/p&gt;
+&lt;h2 id=&#34;そもそもなぜcsを勉強しているか&#34;&gt;そもそもなぜCSを勉強しているか&lt;/h2&gt;
+&lt;p&gt;前提として筆者について補足しておくと筆者は電気系の学部・大学院を卒業しておりコンピューターサイエンスのバックグラウンドを持っていない。（かつSaaS企業でソフトウェアエンジニアとして働き初めて現在4年目）&lt;/p&gt;
+&lt;p&gt;「〜という分野に精通して自分の業務パフォーマンスを向上させる」のような明確な目的意識はないがおおむね以下のような理由でやっている。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CSの知識を習得することでソフトウェアエンジニアとして見える世界がどう変わるのか知りたい&lt;/li&gt;
+&lt;li&gt;普段触っている技術の裏側を理解することでよりよい選択ができたり、より素早い問題解決ができるのではないか、という仮説がある&lt;/li&gt;
+&lt;li&gt;知的好奇心を満たすことができて単純に楽しい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;やったこと&#34;&gt;やったこと&lt;/h2&gt;
+&lt;p&gt;Week6 Python以降は自分にとって大きな学びはなさそうだったのでWeek5 Data Structuresの課題（Lab &amp;amp; Problem Set）までを取り組んだ。2024/3/8~2024/5/3まで平日夜や土日の時間を使って取り組んだ。&lt;/p&gt;
+&lt;p&gt;自分のメモ用のリポジトリは以下。（解いた課題のコードも載っているのでネタバレ（？）注意）&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/cs50&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/cs50&lt;/a&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;学びや得たもの&#34;&gt;学びや得たもの&lt;/h2&gt;
+&lt;h3 id=&#34;csの基礎&#34;&gt;CSの基礎&lt;/h3&gt;
+&lt;p&gt;CSの基礎の導入部分くらいには触れることができたと思う。たとえばこのあたり。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ASCIIとは&lt;/li&gt;
+&lt;li&gt;Cで記述したプログラムが実行可能になるまでの流れ&lt;/li&gt;
+&lt;li&gt;アルゴリズム
+&lt;ul&gt;
+&lt;li&gt;O記法とΩ記法&lt;/li&gt;
+&lt;li&gt;代表的なソートアルゴリズム&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;データ構造
+&lt;ul&gt;
+&lt;li&gt;連結リスト(課題ではダイレクトチェイニング法を用いた連結リストを使ってハッシュテーブルを実装した)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ただ、各週の講義動画は1.5hくらいのボリュームなのであくまでそれぞれのトピックの序章（または序章の導入部分）くらいの内容だとは思う。&lt;/p&gt;
+&lt;h3 id=&#34;c言語の基礎&#34;&gt;C言語の基礎&lt;/h3&gt;
+&lt;p&gt;あとはWeek1 ~ Week5までの課題はすべてC言語で課されたのだが、C言語の経験が得られたのは自分にとって貴重だった。(各Weekの課題が2~3問あり合計で14問の課題をC言語で解いた。)&lt;/p&gt;
+&lt;p&gt;特に&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;文字列の扱い（終端文字）&lt;/li&gt;
+&lt;li&gt;数値型のオーバーフロー&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;あたりが印象に残っている。（課題を解いていてこれらに起因するバグに何度か悩まされた）&lt;/p&gt;
+&lt;p&gt;C言語を触ることで現在自分がよく触っている言語であるGoやRustがいかに便利かを思い知った。&lt;/p&gt;
+&lt;p&gt;あとはC言語で書かれたOSSやサンプルコードの理解を多少は深めやすくなったので今後の学習・調査の助けになってくれそう。&lt;/p&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;全体感としてはCSの勉強をやっていく上での基礎的な知識を学ぶことができ、今後の学習の足がかりになってくれそうだったので取り組んでみてよかった。あとはC言語の経験が得られてよかった。&lt;/p&gt;
+&lt;p&gt;やはり新しい分野や言語を習得するには時間を投資して手を動かすのが自分にはあっているように思った。引き続きやっていき。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;テストケースは&lt;a href=&#34;https://github.com/cs50/problems&#34; target=&#34;_blank&#34; &gt;cs50/problems&lt;/a&gt;
+にあるので参考にしながら課題を進めた。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
     <item>
       <title>tmux-fzfを使ってwindow切り替えをできるようにする手順</title>
       <link>https://blog.kyu08.com/posts/tmux-fzf-window/</link>
