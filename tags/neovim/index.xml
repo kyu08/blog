@@ -17,6 +17,15 @@
       <description>問題 ここ数日Neovimを使っていると、Process failed to start: too many open files: &amp;quot;/opt/homebrew/bin/git&amp;quot;といっ</description>
       <content>&lt;h2 id=&#34;問題&#34;&gt;問題&lt;/h2&gt;
 &lt;p&gt;ここ数日Neovimを使っていると、&lt;code&gt;Process failed to start: too many open files: &amp;quot;/opt/homebrew/bin/git&amp;quot;&lt;/code&gt;といったエラーとともにプラグインが動作しなくなることがあり困っていた。&lt;/p&gt;
+&lt;p&gt;記憶にある範囲だと&lt;a href=&#34;https://github.com/nvim-telescope/telescope.nvim&#34; target=&#34;_blank&#34; &gt;nvim-telescope/telescope.nvim&lt;/a&gt;
+や&lt;a href=&#34;https://github.com/akinsho/toggleterm.nvim&#34; target=&#34;_blank&#34; &gt;akinsho/toggleterm.nvim&lt;/a&gt;
+を使っているときにこのエラーが起きることが多かった印象。&lt;/p&gt;
+&lt;h2 id=&#34;筆者の環境&#34;&gt;筆者の環境&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ nvim --version
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;NVIM v0.9.5
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Build type: Release
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;LuaJIT 2.1.1703358377
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;利用しているプラグインは後述。&lt;/p&gt;
 &lt;h2 id=&#34;回避策&#34;&gt;回避策&lt;/h2&gt;
 &lt;p&gt;この記事にしたがってファイルを作成したところエラーが出なくなった。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://qiita.com/sou_lab/items/1ca051a1f3b906a23dc8&#34; target=&#34;_blank&#34; &gt;https://qiita.com/sou_lab/items/1ca051a1f3b906a23dc8&lt;/a&gt;

@@ -164,7 +164,7 @@ if (!doNotTrack) {
       <span class="post-author">kyu08</span>
     
     
-      <span class="post-reading-time">:: 2 min read (786 words)</span>
+      <span class="post-reading-time">:: 2 min read (906 words)</span>
     
   </div>
 
@@ -190,6 +190,7 @@ if (!doNotTrack) {
       <nav id="TableOfContents">
   <ul>
     <li><a href="#問題">問題</a></li>
+    <li><a href="#筆者の環境">筆者の環境</a></li>
     <li><a href="#回避策">回避策</a></li>
     <li><a href="#参考">参考</a></li>
   </ul>
@@ -200,6 +201,15 @@ if (!doNotTrack) {
   <div class="post-content"><div>
         <h2 id="問題">問題<a href="#問題" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>ここ数日Neovimを使っていると、<code>Process failed to start: too many open files: &quot;/opt/homebrew/bin/git&quot;</code>といったエラーとともにプラグインが動作しなくなることがあり困っていた。</p>
+<p>記憶にある範囲だと<a href="https://github.com/nvim-telescope/telescope.nvim" target="_blank" >nvim-telescope/telescope.nvim</a>
+や<a href="https://github.com/akinsho/toggleterm.nvim" target="_blank" >akinsho/toggleterm.nvim</a>
+を使っているときにこのエラーが起きることが多かった印象。</p>
+<h2 id="筆者の環境">筆者の環境<a href="#筆者の環境" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ nvim --version
+</span></span><span style="display:flex;"><span>NVIM v0.9.5
+</span></span><span style="display:flex;"><span>Build type: Release
+</span></span><span style="display:flex;"><span>LuaJIT 2.1.1703358377
+</span></span></code></pre></div><p>利用しているプラグインは後述。</p>
 <h2 id="回避策">回避策<a href="#回避策" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>この記事にしたがってファイルを作成したところエラーが出なくなった。</p>
 <p><a href="https://qiita.com/sou_lab/items/1ca051a1f3b906a23dc8" target="_blank" >https://qiita.com/sou_lab/items/1ca051a1f3b906a23dc8</a>
