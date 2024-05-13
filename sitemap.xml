@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.kyu08.com/posts/mac-too-many-open-files/</loc>
+    <lastmod>2024-05-13T13:11:01+09:00</lastmod>
+  </url><url>
     <loc>https://blog.kyu08.com/</loc>
-    <lastmod>2024-05-12T15:32:42+09:00</lastmod>
+    <lastmod>2024-05-13T13:11:01+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/neovim/</loc>
+    <lastmod>2024-05-13T13:11:01+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/</loc>
+    <lastmod>2024-05-13T13:11:01+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/</loc>
+    <lastmod>2024-05-13T13:11:01+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/cs/</loc>
     <lastmod>2024-05-12T15:32:42+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/cs50-jp/</loc>
-    <lastmod>2024-05-12T15:32:42+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/posts/</loc>
-    <lastmod>2024-05-12T15:32:42+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/</loc>
     <lastmod>2024-05-12T15:32:42+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/tmux/</loc>
@@ -51,9 +57,6 @@
     <lastmod>2023-12-30T00:03:17+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/fzf-make/</loc>
-    <lastmod>2023-12-30T00:03:17+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/neovim/</loc>
     <lastmod>2023-12-30T00:03:17+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/oss/</loc>
