@@ -16,8 +16,19 @@ color: ""
 ---
 
 ## 問題
-
 ここ数日Neovimを使っていると、`Process failed to start: too many open files: "/opt/homebrew/bin/git"`といったエラーとともにプラグインが動作しなくなることがあり困っていた。
+
+記憶にある範囲だと[nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)や[akinsho/toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)を使っているときにこのエラーが起きることが多かった印象。
+
+## 筆者の環境
+```sh
+$ nvim --version
+NVIM v0.9.5
+Build type: Release
+LuaJIT 2.1.1703358377
+```
+
+利用しているプラグインは後述。
 
 ## 回避策
 
