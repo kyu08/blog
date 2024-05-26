@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Mon, 13 May 2024 13:11:01 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 May 2024 00:48:56 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>アジャイル</title>
+      <link>https://blog.kyu08.com/tags/%E3%82%A2%E3%82%B8%E3%83%A3%E3%82%A4%E3%83%AB/</link>
+      <pubDate>Sun, 26 May 2024 00:48:56 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/%E3%82%A2%E3%82%B8%E3%83%A3%E3%82%A4%E3%83%AB/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>読書メモ</title>
+      <link>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%A1%E3%83%A2/</link>
+      <pubDate>Sun, 26 May 2024 00:48:56 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%A1%E3%83%A2/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
     <item>
       <title>neovim</title>
       <link>https://blog.kyu08.com/tags/neovim/</link>
