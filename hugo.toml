@@ -92,3 +92,7 @@ googleAnalytics = "G-BDQ408J45J"
         identifier = "about"
         name = "About"
         url = "/about"
+      [[languages.ja.menu.main]]
+        identifier = "rss"
+        name = "RSS"
+        url = "/index.xml"
