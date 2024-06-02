@@ -9,13 +9,13 @@
     <copyright>blog.kyu08.com</copyright>
     <lastBuildDate>Sun, 26 May 2024 00:48:56 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>いちばんやさしいアジャイル開発の教本 を読んだ</title>
+      <title>『いちばんやさしいアジャイル開発の教本』 を読んだ</title>
       <link>https://blog.kyu08.com/posts/ichiban-yasashii-agile-no-kyouhon/</link>
       <pubDate>Sun, 26 May 2024 00:48:56 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/ichiban-yasashii-agile-no-kyouhon/</guid>
-      <description>2024/4からチーム異動してスクラムを実践しているチームに移ったのでアジャイル・スクラムのインプットをしたいと思い、「いちばんやさしいアジ</description>
-      <content>&lt;p&gt;2024/4からチーム異動してスクラムを実践しているチームに移ったのでアジャイル・スクラムのインプットをしたいと思い、「いちばんやさしいアジャイル開発の教本」を読んだ。&lt;/p&gt;
+      <description>2024/4からチーム異動してスクラムを実践しているチームに移ったのでアジャイル・スクラムのインプットをしたいと思い、『いちばんやさしいアジ</description>
+      <content>&lt;p&gt;2024/4からチーム異動してスクラムを実践しているチームに移ったのでアジャイル・スクラムのインプットをしたいと思い、『いちばんやさしいアジャイル開発の教本』を読んだ。&lt;/p&gt;
 &lt;p&gt;本書を読んで自分なりに勉強になったことをLessonごとに書いていく。（カッコ内の&lt;code&gt;Pxx&lt;/code&gt;はページを表す）&lt;/p&gt;
 &lt;h2 id=&#34;lesson6-アジャイル開発とは何かp28-31&#34;&gt;Lesson6. アジャイル開発とは何か（P28-31）&lt;/h2&gt;
 &lt;p&gt;「継続的に改善することが前提」なので逆にいえば作りたいものが決まっているならばアジャイル開発を採用するメリットは薄いかもしれない。&lt;/p&gt;
@@ -64,7 +64,7 @@
 &lt;p&gt;&lt;code&gt;図表22-2&lt;/code&gt;が示すように自己組織化チームとはひとことでいうと「自走できるチーム」です。自分たちがなぜここにいるのかを理解し、またお互いの得意分野がわかっているため自分たちで最適なフォーメーションを組みながらビジョンへと向かっていきます。リーダーの意思決定を待つことなく自己修復的に課題を解決していく。それが自己組織化チームの底力です。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;self-organizing-team.webp&#34; alt=&#34;self-organizing-team.webp&#34;&gt;
-「いちばんやさしいアジャイル開発の教本」P76より引用&lt;/p&gt;
+『いちばんやさしいアジャイル開発の教本』P76より引用&lt;/p&gt;
 &lt;p&gt;チームの振り返りなんかでも、「どうすれば自己組織化チームに近付けるか」という観点で考えてみてもいいかもしれない。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;自己組織化チームにおいて情報共有は重要な要素&lt;/p&gt;
@@ -396,13 +396,13 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     </item>
     
     <item>
-      <title>ベタープログラマ を読んだ</title>
+      <title>『ベタープログラマ』 を読んだ</title>
       <link>https://blog.kyu08.com/posts/better-programmer/</link>
       <pubDate>Thu, 07 Mar 2024 00:27:45 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/better-programmer/</guid>
-      <description>ベタープログラマ を読んだので自分的に刺さった点をまとめる。 6章 航路を航行する 新たなメンバーが開発チームに参加する際にどのようにすれば速やかに</description>
-      <content>&lt;p&gt;ベタープログラマ を読んだので自分的に刺さった点をまとめる。&lt;/p&gt;
+      <description>『ベタープログラマ』 を読んだので自分的に刺さった点をまとめる。 6章 航路を航行する 新たなメンバーが開発チームに参加する際にどのようにすれば速や</description>
+      <content>&lt;p&gt;『ベタープログラマ』 を読んだので自分的に刺さった点をまとめる。&lt;/p&gt;
 &lt;h2 id=&#34;6章-航路を航行する&#34;&gt;6章 航路を航行する&lt;/h2&gt;
 &lt;p&gt;新たなメンバーが開発チームに参加する際にどのようにすれば速やかに生産的になることができるかについての章。&lt;/p&gt;
 &lt;p&gt;最善な策はすでにプロジェクトへの理解があるメンバーに導いてもらうこと。もしそれができなければ次のようなことを調べるとよい。&lt;/p&gt;
@@ -804,13 +804,13 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     </item>
     
     <item>
-      <title>世界一流エンジニアの思考法 を読んだ</title>
+      <title>『世界一流エンジニアの思考法』 を読んだ</title>
       <link>https://blog.kyu08.com/posts/how-world-class-engineers-think/</link>
       <pubDate>Sun, 19 Nov 2023 10:41:50 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/how-world-class-engineers-think/</guid>
-      <description>Microsoftのエンジニアとしてアメリカで働いている牛尾剛さんが優秀な同僚から学んだ思考法について書いた著書「世界一流エンジニアの思考法</description>
-      <content>&lt;p&gt;Microsoftのエンジニアとしてアメリカで働いている牛尾剛さんが優秀な同僚から学んだ思考法について書いた著書「世界一流エンジニアの思考法」を読んだので学びになったトピックについて簡単に書こうと思う。&lt;/p&gt;
+      <description>Microsoftのエンジニアとしてアメリカで働いている牛尾剛さんが優秀な同僚から学んだ思考法について書いた著書『世界一流エンジニアの思考法</description>
+      <content>&lt;p&gt;Microsoftのエンジニアとしてアメリカで働いている牛尾剛さんが優秀な同僚から学んだ思考法について書いた著書『世界一流エンジニアの思考法』を読んだので学びになったトピックについて簡単に書こうと思う。&lt;/p&gt;
 &lt;h2 id=&#34;頭がよくても理解には時間がかかる&#34;&gt;頭がよくても「理解」には時間がかかる&lt;/h2&gt;
 &lt;p&gt;ある若くて優秀な同僚が新しいプロジェクトに参加するときにアーキテクチャの説明ビデオを「難しいので何回も見直している」と言っていたのに対して著者が衝撃を受けたというエピソードが紹介されていた。&lt;/p&gt;
 &lt;p&gt;なかなか他人の作業過程を観察する機会もないのでついつい「優秀な人は複雑な物事でも一瞬で理解してしまうのだろう」と想像してしまいがちだが、&lt;strong&gt;Microsoftの凄腕エンジニアでも理解に時間がかかることがある&lt;/strong&gt;という実例を知り、何だかとても励まされた気分になった。&lt;/p&gt;
@@ -934,7 +934,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     </item>
     
     <item>
-      <title>採用基準 を読んだ</title>
+      <title>『採用基準 地頭より論理的思考力より大切なもの』 を読んだ</title>
       <link>https://blog.kyu08.com/posts/saiyo-kijun/</link>
       <pubDate>Sun, 22 Oct 2023 20:00:41 +0900</pubDate>
       
@@ -1187,7 +1187,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     </item>
     
     <item>
-      <title>ちょうぜつ本を読んだ</title>
+      <title>『ちょうぜつソフトウェア設計入門――PHPで理解するオブジェクト指向の活用』を読んだ</title>
       <link>https://blog.kyu08.com/posts/chozetsu-bon/</link>
       <pubDate>Sun, 16 Jul 2023 00:00:00 +0900</pubDate>
       

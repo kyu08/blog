@@ -9,13 +9,13 @@
     <copyright>blog.kyu08.com</copyright>
     <lastBuildDate>Sun, 26 May 2024 00:48:56 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/%E3%82%A2%E3%82%B8%E3%83%A3%E3%82%A4%E3%83%AB/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>いちばんやさしいアジャイル開発の教本 を読んだ</title>
+      <title>『いちばんやさしいアジャイル開発の教本』 を読んだ</title>
       <link>https://blog.kyu08.com/posts/ichiban-yasashii-agile-no-kyouhon/</link>
       <pubDate>Sun, 26 May 2024 00:48:56 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/ichiban-yasashii-agile-no-kyouhon/</guid>
-      <description>2024/4からチーム異動してスクラムを実践しているチームに移ったのでアジャイル・スクラムのインプットをしたいと思い、「いちばんやさしいアジ</description>
-      <content>&lt;p&gt;2024/4からチーム異動してスクラムを実践しているチームに移ったのでアジャイル・スクラムのインプットをしたいと思い、「いちばんやさしいアジャイル開発の教本」を読んだ。&lt;/p&gt;
+      <description>2024/4からチーム異動してスクラムを実践しているチームに移ったのでアジャイル・スクラムのインプットをしたいと思い、『いちばんやさしいアジ</description>
+      <content>&lt;p&gt;2024/4からチーム異動してスクラムを実践しているチームに移ったのでアジャイル・スクラムのインプットをしたいと思い、『いちばんやさしいアジャイル開発の教本』を読んだ。&lt;/p&gt;
 &lt;p&gt;本書を読んで自分なりに勉強になったことをLessonごとに書いていく。（カッコ内の&lt;code&gt;Pxx&lt;/code&gt;はページを表す）&lt;/p&gt;
 &lt;h2 id=&#34;lesson6-アジャイル開発とは何かp28-31&#34;&gt;Lesson6. アジャイル開発とは何か（P28-31）&lt;/h2&gt;
 &lt;p&gt;「継続的に改善することが前提」なので逆にいえば作りたいものが決まっているならばアジャイル開発を採用するメリットは薄いかもしれない。&lt;/p&gt;
@@ -64,7 +64,7 @@
 &lt;p&gt;&lt;code&gt;図表22-2&lt;/code&gt;が示すように自己組織化チームとはひとことでいうと「自走できるチーム」です。自分たちがなぜここにいるのかを理解し、またお互いの得意分野がわかっているため自分たちで最適なフォーメーションを組みながらビジョンへと向かっていきます。リーダーの意思決定を待つことなく自己修復的に課題を解決していく。それが自己組織化チームの底力です。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;self-organizing-team.webp&#34; alt=&#34;self-organizing-team.webp&#34;&gt;
-「いちばんやさしいアジャイル開発の教本」P76より引用&lt;/p&gt;
+『いちばんやさしいアジャイル開発の教本』P76より引用&lt;/p&gt;
 &lt;p&gt;チームの振り返りなんかでも、「どうすれば自己組織化チームに近付けるか」という観点で考えてみてもいいかもしれない。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;自己組織化チームにおいて情報共有は重要な要素&lt;/p&gt;
