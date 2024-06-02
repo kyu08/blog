@@ -22,4 +22,8 @@ compress-to-webp:
 
 .PHONY: lint
 lint:
-	npx textlint --fix  ./content/posts/**/*.md
+	npx textlint ./content/posts/**/*.md
+
+.PHONY: lint-fix
+lint-fix:
+	npx textlint --fix ./content/posts/**/*.md

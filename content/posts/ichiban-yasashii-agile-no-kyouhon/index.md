@@ -1,7 +1,7 @@
 ---
 title: "『いちばんやさしいアジャイル開発の教本』 を読んだ"
-tags: ["読書メモ", "アジャイル"]
-keywords: ["読書メモ", "アジャイル"]
+tags: ["読書ログ", "アジャイル"]
+keywords: ["読書ログ", "アジャイル"]
 
 cover: "https://blog.kyu08.com/cover.png"
 description: ""
