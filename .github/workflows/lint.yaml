@@ -1,0 +1,30 @@
+name: textlint
+on: 
+  pull_request:
+jobs:
+  textlint:
+    name: textlint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        # with:
+        #   submodules: true
+      - name: Setup Node/npm
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: textlint-github-check
+        uses: tsuyoshicho/action-textlint@v3
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-check
+          textlint_flags: "."
+          level: 'error'
+      - name: textlint-github-pr-review
+        uses: tsuyoshicho/action-textlint@v3
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
+          textlint_flags: "."
+          level: 'error'

@@ -4,8 +4,8 @@ date = "2020-12-31T01:15:48+09:00"
 author = "kyu08"
 authorTwitter = "kyu08_" #do not include @
 cover = "https://blog.kyu08.com/cover.png"
-tags = ["雑記", "振り返り"]
-keywords = ["", ""]
+tags =["雑記", "振り返り"]
+keywords =["", ""]
 description = ""
 showFullContent = false
 readingTime = true
@@ -36,7 +36,7 @@ N予備校の"サーバーサイドプログラミング入門"と"実践サー�
 動くコードが載ってるだけでなく割と詳しめに背景となる知識を解説してあってかなりわかりやすかったです。自分も書いたコードの背景や実装の根拠をしっかりと語れるようになりたい...。
 
 ## 4月
-本選考インターンでつくった WebApp のリファクタリングをしました。
+本選考インターンでつくったWebAppのリファクタリングをしました。
 あとはTypeScriptの勉強をはじめました。やったことは
 - [TypeScript HANDBOOK](https://www.typescriptlang.org/docs/handbook/intro.html)
 - [TypeScript DeepDive](https://typescript-jp.gitbook.io/deep-dive/)
@@ -44,15 +44,15 @@ N予備校の"サーバーサイドプログラミング入門"と"実践サー�
 あたりです。始めて静的型付けの言語に触れて表現力の豊かさを感じました。わかりやすさと堅牢さが得られそう...、エディタがいろいろ教えてくれるので開発効率も上がりそう...などと感じました。
 
 ## 5月
-- CLI の todo アプリを Node.js(TypeScript) でつくった
+- CLIのtodoアプリをNode.js(TypeScript) でつくった
 - 読みかけだったリーダブルコードをよんだ
-- Repository パターンを実装してみた
+- Repositoryパターンを実装してみた
 
-CLI の todo アプリは CLI で TODOを確認したくなったのと TypeScript　で何か作ってみたくなったので作って [npm で公開しました。](https://www.npmjs.com/package/great-todo-cli)
+CLIのtodoアプリはCLIでTODOを確認したくなったのとTypeScriptで何か作ってみたくなったので作って [npm で公開しました。](https://www.npmjs.com/package/great-todo-cli)
 
 責務の分離を意識して書いたので今までよりは見通しの良いコードを書けたと思っています。
 
-あとははじめて Webpack の設定を書いて、`create-react-app` の便利さを感じました。(今まで`create-react-app`が何をしてくれているのかわかってなかった...)
+あとははじめてWebpackの設定を書いて、`create-react-app` の便利さを感じました。(今まで`create-react-app`が何をしてくれているのかわかってなかった...)
 
 ## 6月
 - [オブジェクト指向設計実践ガイド　～Rubyでわかる 進化しつづける柔軟なアプリケーションの育て方](https://www.amazon.co.jp/dp/B01L8SEVYI/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)
@@ -64,7 +64,7 @@ CLI の todo アプリは CLI で TODOを確認したくなったのと TypeScri
 
 6月はたくさん本を読みました。毎日作業を始める前に1時間本を読むスタイルが自分にあっている感じでした。
 
-Ruby の OOP 本は
+RubyのOOP本は
 - 単一責任で設計しよう
 - 依存関係をちゃんと管理しよう
 
@@ -75,11 +75,11 @@ Ruby の OOP 本は
 ↑の2冊を読んだ上で成瀬さんのDDD本を読んだのでスムーズに理解できました。我ながら結構いい感じの流れでDDD(の入り)を学んでいけた感じがしています。(あと成瀬さんの本がわかりやすすぎた...。とてもおすすめです！)
 
 ## 7月
-- Twitter のクローンアプリの設計 & フロントエンドの実装開始
+- Twitterのクローンアプリの設計 & フロントエンドの実装開始
 - [Webを支える技術](https://www.amazon.co.jp/Web%E3%82%92%E6%94%AF%E3%81%88%E3%82%8B%E6%8A%80%E8%A1%93-HTTP%E3%80%81URI%E3%80%81HTML%E3%80%81%E3%81%9D%E3%81%97%E3%81%A6REST-WEB-PRESS-plus/dp/4774142042)
 をよんだ
 
-設計のアウトプットをしたかったんですが特にアプリのアイディアとかもなかったので Twitter のクローンアプリを作りました。
+設計のアウトプットをしたかったんですが特にアプリのアイディアとかもなかったのでTwitterのクローンアプリを作りました。
 
 事前に
 - 要件定義
@@ -92,18 +92,18 @@ Ruby の OOP 本は
 
 ## 8月
 - 応用情報の勉強をはじめた
-- Twitter のクローンアプリのバックエンドの実装
+- Twitterのクローンアプリのバックエンドの実装
 
 大学・大学院で情報系を学んでいる&学んできた人たちに少しでも追いつきたいと思い応用情報を受けることにしました。(資格がとれるからというより試験があって合否があった方が頑張れるので...)
 
-友達と毎日1時間くらい Udemy の動画をみる形で応用情報の勉強をやっていきました。(動画自体は40時間くらい)
+友達と毎日1時間くらいUdemyの動画をみる形で応用情報の勉強をやっていきました。(動画自体は40時間くらい)
 
-Udemy で試験範囲を一通り学んだあとは、試験前2週間程度で過去問10回分を3周くらいしました。
+Udemyで試験範囲を一通り学んだあとは、試験前2週間程度で過去問10回分を3周くらいしました。
 
 午前問題はわりとはやくから安定して7割以上とれてたのでよかったんですが午後問題が6割前後しか解けなくてずっと不安でした...。
 
 ## 9月
-- Scala の勉強をはじめた
+- Scalaの勉強をはじめた
 
 [scala-text](https://scala-text.github.io/scala_text/)
 や
@@ -117,22 +117,22 @@ TypeScriptと比較して、型まわりの機能が多かったり(共変、非
 ## 10月
 - [Evans本](https://www.amazon.co.jp/dp/B00GRKD6XU/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)
 をよんだ
-- Vim に入門したけど2日で心がおれた
+- Vimに入門したけど2日で心がおれた
 
 Evans本を読みました。成瀬さんのDDD本を読んでから望んだので前半はわりと理解できましたが後半はサッパリでした...。🤔
 
-IntelliJ ちょっと重いなあ...ということで NeoVim に入門してみましたが Plugin がなかなかうまく動かなかったりして IntelliJ でやってることができる状態にするのめっちゃ大変やん...となり挫折しました。
+IntelliJちょっと重いなあ...ということでNeoVimに入門してみましたがPluginがなかなかうまく動かなかったりしてIntelliJでやってることができる状態にするのめっちゃ大変やん...となり挫折しました。
 
 ## 11月
-- Scala x PlayFramework で簡単なAPIサーバをつくった
+- Scala x PlayFrameworkで簡単なAPIサーバをつくった
 
 学会準備のためあまり勉強できず、、
 
-ScalikeJDBC の使い方が難しくて詰まった。あと Scala の`implicit`がむずい。 
+ScalikeJDBCの使い方が難しくて詰まった。あとScalaの`implicit`がむずい。 
 
 ## 12月
 - 応用情報受かった
-- このブログを Next.js でつくった
+- このブログをNext.jsでつくった
 
 応用情報受かりました！🎉
 
@@ -140,9 +140,9 @@ ScalikeJDBC の使い方が難しくて詰まった。あと Scala の`implicit`
 
 わりと広く浅く学べたのでこれからがっつり学ぶ必要が出てきたときの土台となってくれれば...と期待しています。。
 
-Next.js に入門しました。今まで component が増えてくると辛みが増していましたが component を`/pages`と`/component`に配置するやり方が読みやすさ的にも書きやすさ的にもいいなと感じました。
+Next.jsに入門しました。今までcomponentが増えてくると辛みが増していましたがcomponentを`/pages`と`/component`に配置するやり方が読みやすさ的にも書きやすさ的にもいいなと感じました。
 
-あとは Vercel へのデプロイが簡単すぎて感動しました。
+あとはVercelへのデプロイが簡単すぎて感動しました。
 
 詳しくは[こちら](https://blog.kyu08.com/posts/constructed-blog)をご覧ください。
 
