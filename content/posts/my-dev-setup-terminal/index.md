@@ -1,11 +1,11 @@
 +++
-title = "開発の効率化のためにやっていること ターミナル編"
+title = "開発の効率化のためにやっていることターミナル編"
 date = "2022-12-15T01:15:48+09:00"
 author = "kyu08"
 authorTwitter = "kyu08_" #do not include @
 cover = "https://blog.kyu08.com/cover.png"
-tags = ["開発環境", "ターミナル", "zsh", "cli"]
-keywords = ["", ""]
+tags =["開発環境", "ターミナル", "zsh", "cli"]
+keywords =["", ""]
 description = ""
 showFullContent = false
 readingTime = true
@@ -25,7 +25,7 @@ color = "" #color from the theme settings
 シェルはzshを使っています。 一時期fishも使っていましたが、環境移行のコストが低かったりPOSIX準拠だったりするメリットに旨味を感じてzshに乗り換えました。
 
 ### よく使うalias
-zshでは`alias hoge='echo hoge'`のように記述することでaliasを定義することができます。
+zshでは`alias hoge='echo hoge'`のように記述することでaliasを定義できます。
 
 ここでは筆者がよく使うaliasをいくつか紹介します。
 
@@ -129,7 +129,7 @@ fi
 export FZF_DEFAULT_OPTS='--color=fg+:11 --height 70% --reverse --exit-0 --multi'
 ```
 
-これを実際に使うとこんな感じになります。ファジーファインダーを利用して効率的にディレクトリ移動することができます。
+これを実際に使うとこんな感じになります。ファジーファインダーを利用して効率的にディレクトリ移動できます。
 
 ![cdr](fzf-cdr.gif)
 
@@ -240,7 +240,7 @@ sainnhe/tmux-fzfはファジーファインダーで効率的にtmuxを操作す
 などが可能です。
 
 筆者はウィンドウ管理機能の中のウィンドウの切り替え機能を使っています。
-sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
+sainnhe/tmux-fzfを使うようにしたことでウィンドウ切り替えを
 1. `prefix` + `prefix`  でtmux-fzfのウィンドウ一覧を表示
 1. 目的のウィンドウ名の一部を入力
 1. 選択する
