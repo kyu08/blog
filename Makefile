@@ -19,3 +19,7 @@ run-ignore-cache:
 .PHONY: compress-to-webp
 compress-to-webp:
 	@./compress-to-webp.sh
+
+.PHONY: lint
+lint:
+	npx textlint --fix  ./content/posts/**/*.md
