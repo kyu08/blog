@@ -35,8 +35,8 @@
 &lt;p&gt;(一度Neovimを閉じてもマークしたファイルが保持されている様子。)
 &lt;img src=&#34;saved-quick-menu.gif&#34; alt=&#34;saved-quick-menu&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;2-自由に編集できる-quick_menu&#34;&gt;2. 自由に編集できる quick_menu&lt;/h3&gt;
-&lt;p&gt;作者自身もお気に入りと言及しているが&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;quick_menuは純粋なテキストなので自由に編集することができる。&lt;/p&gt;
-&lt;p&gt;つまりこんな感じで&lt;code&gt;dd&lt;/code&gt; -&amp;gt; &lt;code&gt;y&lt;/code&gt;のようなコマンドで自由に順番を入れ替えたり削除したりすることができる。普段のvimの操作感で扱えるのでとても直感的で使いやすくて嬉しい。&lt;/p&gt;
+&lt;p&gt;作者自身もお気に入りと言及しているが&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;quick_menuは純粋なテキストなので自由に編集できる。&lt;/p&gt;
+&lt;p&gt;つまりこんな感じで&lt;code&gt;dd&lt;/code&gt; -&amp;gt; &lt;code&gt;y&lt;/code&gt;のようなコマンドで自由に順番を入れ替えたり削除したりできる。普段のvimの操作感で扱えるのでとても直感的で使いやすくて嬉しい。&lt;/p&gt;
 &lt;p&gt;quick_menuを自由に編集している様子&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;
 &lt;img src=&#34;editable-quick-menu.gif&#34; alt=&#34;editable-quick-menu&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;

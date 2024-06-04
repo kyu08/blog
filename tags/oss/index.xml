@@ -14,10 +14,10 @@
       <pubDate>Sat, 30 Dec 2023 00:03:17 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/looking-back-on-2023/</guid>
-      <description>趣味 OSS貢献 今年は初めてOSS貢献1をすることができた年でもあった。2023年に行った貢献を種類ごとにリポジトリごとでまとめたものが以下。</description>
+      <description>趣味 OSS貢献 今年は初めてOSS貢献1をできた年でもあった。2023年に行った貢献を種類ごとにリポジトリごとでまとめたものが以下。2 ドキュメ</description>
       <content>&lt;h2 id=&#34;趣味&#34;&gt;趣味&lt;/h2&gt;
 &lt;h3 id=&#34;oss貢献&#34;&gt;OSS貢献&lt;/h3&gt;
-&lt;p&gt;今年は初めてOSS貢献&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;をすることができた年でもあった。2023年に行った貢献を種類ごとにリポジトリごとでまとめたものが以下。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;今年は初めてOSS貢献&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;をできた年でもあった。2023年に行った貢献を種類ごとにリポジトリごとでまとめたものが以下。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;h4 id=&#34;ドキュメント関連&#34;&gt;ドキュメント関連&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;ratatui-org/website
@@ -110,7 +110,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;2023年8月以降で20個のPRをマージしてもらうことができた！ほとんどが簡単なPRだったとはいえ感謝してもらえることも多かったので単純に嬉しかった。&lt;/p&gt;
-&lt;p&gt;一定数OSSに貢献することができたのは嬉しいが、ドキュメントやCIの修正など比較的ハードルが低めの貢献が多かったのも事実。&lt;/p&gt;
+&lt;p&gt;一定数OSSに貢献できたのは嬉しいが、ドキュメントやCIの修正など比較的ハードルが低めの貢献が多かったのも事実。&lt;/p&gt;
 &lt;p&gt;流石にOSSにPRを出すことには慣れてきたので2024年は上記のような貢献もしつつ何らかのOSSのアプリケーションコードへの貢献もしていきたい。&lt;/p&gt;
 &lt;p&gt;OSSメンテナ観点では、どのプロジェクトのメンテナも非常に紳士的で優しく接してくれる方が多かったので自分も見習っていきたい。特にRustコミュニティは初心者を歓迎する雰囲気があり、PRを送った際の体験がとてもよかったので真似したい。&lt;/p&gt;
 &lt;h3 id=&#34;rustを書き始めた&#34;&gt;Rustを書き始めた&lt;/h3&gt;
@@ -129,14 +129,14 @@
 &lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;kyu08/fzf-make&lt;/a&gt;
 &lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;h3 id=&#34;fzf-makeを公開した&#34;&gt;fzf-makeを公開した&lt;/h3&gt;
-&lt;p&gt;こんな感じでMakefileに定義したtargetを曖昧検索で絞り込んで実行できるツールを作った。プレビューウィンドウがあるのが地味に便利なポイントでtargetの内容を確認しつつ実行することができる。&lt;/p&gt;
+&lt;p&gt;こんな感じでMakefileに定義したtargetを曖昧検索で絞り込んで実行できるツールを作った。プレビューウィンドウがあるのが地味に便利なポイントでtargetの内容を確認しつつ実行できる。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Rustの理解を深めるのと自分の普段の作業を効率化したくて作ったがその両方が割と達成できているので満足している。特に所有権やスマートポインタに関しては&lt;a href=&#34;https://doc.rust-jp.rs/book-ja/&#34; target=&#34;_blank&#34; &gt;The Rust Programming Language&lt;/a&gt;
 を読んだときにはイマイチ理解できなかったが実際に自分でコードを書いてコンパイラに指摘されてコードを修正することで理解を深めることができた。&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;最初は身近な人に紹介して使ってもらったりしていたが、ある日面識のない日本人の開発者の方がバグ報告issue&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;を立ててくれて、インターネットの向こう側の人に自分のアイディアが届いて気に入ってもらえて、しかもわざわざバグ報告をしてくれたという事実がとても嬉しかった。&lt;/p&gt;
 &lt;p&gt;当然個人の趣味開発なので副業などとは違い時給を得て開発しているわけではないが、ものづくりを通して他者に喜んでもらうということが自分にとって最高の喜びだとわかっただけでも非常に良い経験だった。自分がOSSコミュニティに貢献したいと考えているのも究極は「人に喜んで欲しいから」なのかもしれない。&lt;/p&gt;
-&lt;p&gt;その後も何人かの人がstarしてくれたりTwitter(現X)で言及してくれたり&lt;sup id=&#34;fnref:7&#34;&gt;&lt;a href=&#34;#fn:7&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;7&lt;/a&gt;&lt;/sup&gt;、issueを立ててくれたり、時にはPRを送ってくれたりして自分が書いたツールを通して海外のエンジニアとも交流することができたのは自分にとって非常に刺激的だった。&lt;/p&gt;
-&lt;p&gt;これから開発したい機能や修正したいバグはまだまだあるので来年以降も引き続き開発を続けていきたい。Homebrewをはじめ、いくつかのパッケージマネージャでインストールすることができるのでぜひ使ってみてください。あとスターくれると大変嬉しいです！よろしくお願いします！&lt;/p&gt;
+&lt;p&gt;その後も何人かの人がstarしてくれたりTwitter(現X)で言及してくれたり&lt;sup id=&#34;fnref:7&#34;&gt;&lt;a href=&#34;#fn:7&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;7&lt;/a&gt;&lt;/sup&gt;、issueを立ててくれたり、時にはPRを送ってくれたりして自分が書いたツールを通して海外のエンジニアとも交流できたのは自分にとって非常に刺激的だった。&lt;/p&gt;
+&lt;p&gt;これから開発したい機能や修正したいバグはまだまだあるので来年以降も引き続き開発を続けていきたい。Homebrewをはじめ、いくつかのパッケージマネージャでインストールできるのでぜひ使ってみてください。あとスターくれると大変嬉しいです！よろしくお願いします！&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;kyu08/fzf-make&lt;/a&gt;
 &lt;/p&gt;
 &lt;h3 id=&#34;neovimへの寄付&#34;&gt;Neovimへの寄付&lt;/h3&gt;

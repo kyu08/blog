@@ -41,7 +41,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;このように個人を尊重し、対話をしながらチームの課題と全員で向き合うことで相互理解が進み、それぞれが異なる立場からの視点を得ることができます。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;盲目的にプロセスやツールに従うのではなく、個人との対話をして相互理解を深めることでチームが強くなる。そのようなチームでは信頼関係があり情報共有が活発に行われるため問題が起きても迅速にリカバリーすることができる。&lt;/p&gt;
+&lt;p&gt;盲目的にプロセスやツールに従うのではなく、個人との対話をして相互理解を深めることでチームが強くなる。そのようなチームでは信頼関係があり情報共有が活発に行われるため問題が起きても迅速にリカバリーできる。&lt;/p&gt;
 &lt;h2 id=&#34;lesson18-動くソフトウェアp68&#34;&gt;Lesson.18 動くソフトウェア（P68）&lt;/h2&gt;
 &lt;p&gt;アジャイルソフトウェア開発宣言の &lt;strong&gt;「包括的なドキュメントよりも動くソフトウェアを」&lt;/strong&gt; について書いた章。&lt;/p&gt;
 &lt;p&gt;ソフトウェア開発においては課題とその解決方法を仮説として立て、実際にリリースして検証するという流れで開発を進めることが多い。&lt;/p&gt;
@@ -235,7 +235,7 @@
 &lt;li&gt;Final Project&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;各章はレジュメと課題で構成されている。&lt;/p&gt;
-&lt;p&gt;課題を解いてコードを提出するとリモート環境でテストが実行され結果を確認することができる。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;課題を解いてコードを提出するとリモート環境でテストが実行され結果を確認できる。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;check50.webp&#34; alt=&#34;check50&#34;&gt;&lt;/p&gt;
 &lt;p&gt;正直にいうと日本語訳がなかったら取り組もうと思わなかったと思うのでCS50.jpの翻訳コントリビュータであるCODEGYM社には感謝してもしきれない。本当にありがとうございます。&lt;/p&gt;
 &lt;h2 id=&#34;そもそもなぜcsを勉強しているか&#34;&gt;そもそもなぜCSを勉強しているか&lt;/h2&gt;
@@ -355,7 +355,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
 &lt;p&gt;EarPods(AirPodsではなく)を買ってMacに常時接続しておくことで話しかけられたらGatherのマイクをONにするだけで話せるようにした。&lt;/p&gt;
 &lt;p&gt;これにより話しかけられてから1秒弱くらいで話せる状態にできるようになった。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;desk-with-earpods.webp&#34; alt=&#34;desk-with-earpods.webp&#34;&gt;&lt;/p&gt;
-&lt;p&gt;特に音質が悪かったり声が聞きずらいみたいなFBはもらっていないので今のところ特に問題はなさそう。&lt;/p&gt;
+&lt;p&gt;特に音質が悪かったり声が聞きづらいみたいなFBはもらっていないので今のところ特に問題はなさそう。&lt;/p&gt;
 </content>
     </item>
     
@@ -401,8 +401,8 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
       <pubDate>Thu, 07 Mar 2024 00:27:45 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/better-programmer/</guid>
-      <description>『ベタープログラマ』 を読んだので自分的に刺さった点をまとめる。 6章 航路を航行する 新たなメンバーが開発チームに参加する際にどのようにすれば速や</description>
-      <content>&lt;p&gt;『ベタープログラマ』 を読んだので自分的に刺さった点をまとめる。&lt;/p&gt;
+      <description>『ベタープログラマ』を読んだので自分的に刺さった点をまとめる。 6章 航路を航行する 新たなメンバーが開発チームに参加する際にどのようにすれば速や</description>
+      <content>&lt;p&gt;『ベタープログラマ』を読んだので自分的に刺さった点をまとめる。&lt;/p&gt;
 &lt;h2 id=&#34;6章-航路を航行する&#34;&gt;6章 航路を航行する&lt;/h2&gt;
 &lt;p&gt;新たなメンバーが開発チームに参加する際にどのようにすれば速やかに生産的になることができるかについての章。&lt;/p&gt;
 &lt;p&gt;最善な策はすでにプロジェクトへの理解があるメンバーに導いてもらうこと。もしそれができなければ次のようなことを調べるとよい。&lt;/p&gt;
@@ -414,7 +414,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
 &lt;li&gt;一般的でないツールにビルドが依存していないか&lt;/li&gt;
 &lt;li&gt;コード自身に適切で簡単なドキュメンテーションがあるか&lt;/li&gt;
 &lt;li&gt;手作業なしで1つのコマンドでビルドを行うことができか&lt;/li&gt;
-&lt;li&gt;コードの一部に取り組んでいるときにその部分だけをビルドすることができるか&lt;/li&gt;
+&lt;li&gt;コードの一部に取り組んでいるときにその部分だけをビルドできるか&lt;/li&gt;
 &lt;li&gt;ビルド中に潜在的な問題を曖昧にしているかもしれない無数の警告が出ていないか&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;テスト&#34;&gt;テスト&lt;/h4&gt;
@@ -456,7 +456,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
 &lt;li&gt;それらの階層がきれいに分離されているか&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;上記を実施すれば素早くプロジェクトについて把握することができる。
+&lt;p&gt;上記を実施すれば素早くプロジェクトについて把握できる。
 では実際にプロジェクトに取り組む際にはどのようにすればいいか。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;やってみて学ぶ
@@ -513,7 +513,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;自分達で決めた&lt;/strong&gt;規則が必要です。私達が所有権を持つ規則です。特定のチームにおける文化、およびうまく開発できる方法を定めている規則です。これらは、大きくて、扱いにくい厳しい規則である必要はありません。新たなチームメンバーがすぐに一緒に開発できるように、単純なものでよいです。つまり、それらは単なる方法やプロセスよりも詳しく何かを記述している規則であったり、コーディング文化を記述している規則だったりします。すなわち、&lt;strong&gt;チームで優れた選手になるための方法を記述している規則です。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;この &lt;strong&gt;「チームで優れた選手になるための方法を記述している規則です。」&lt;/strong&gt; という部分が特にいいなと思った。チームメンバーとして活躍する方法が言語化されていることで、新しいメンバーが素早く立ち上がることができるだけでなく、すでにチームに所属しているメンバーもことあるごとに立ち返ることができて、方向性がずれかけてもうまく軌道修正することができるなどのメリットがありそう。&lt;/p&gt;
+&lt;p&gt;この &lt;strong&gt;「チームで優れた選手になるための方法を記述している規則です。」&lt;/strong&gt; という部分が特にいいなと思った。チームメンバーとして活躍する方法が言語化されていることで、新しいメンバーが素早く立ち上がることができるだけでなく、すでにチームに所属しているメンバーもことあるごとに立ち返ることができて、方向性がずれかけてもうまく軌道修正できるなどのメリットがありそう。&lt;/p&gt;
 &lt;p&gt;個人的にチームで共通理解を持つことでチームの方向性がうまく揃い、軌道修正もしやすかった経験を部活のときにしたのでこの章の内容はとても腹落ちした。&lt;/p&gt;
 &lt;h2 id=&#34;18章-変わらないものはない&#34;&gt;18章 変わらないものはない&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -563,10 +563,10 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
       <pubDate>Sat, 30 Dec 2023 00:03:17 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/looking-back-on-2023/</guid>
-      <description>趣味 OSS貢献 今年は初めてOSS貢献1をすることができた年でもあった。2023年に行った貢献を種類ごとにリポジトリごとでまとめたものが以下。</description>
+      <description>趣味 OSS貢献 今年は初めてOSS貢献1をできた年でもあった。2023年に行った貢献を種類ごとにリポジトリごとでまとめたものが以下。2 ドキュメ</description>
       <content>&lt;h2 id=&#34;趣味&#34;&gt;趣味&lt;/h2&gt;
 &lt;h3 id=&#34;oss貢献&#34;&gt;OSS貢献&lt;/h3&gt;
-&lt;p&gt;今年は初めてOSS貢献&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;をすることができた年でもあった。2023年に行った貢献を種類ごとにリポジトリごとでまとめたものが以下。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;今年は初めてOSS貢献&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;をできた年でもあった。2023年に行った貢献を種類ごとにリポジトリごとでまとめたものが以下。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;h4 id=&#34;ドキュメント関連&#34;&gt;ドキュメント関連&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;ratatui-org/website
@@ -659,7 +659,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;2023年8月以降で20個のPRをマージしてもらうことができた！ほとんどが簡単なPRだったとはいえ感謝してもらえることも多かったので単純に嬉しかった。&lt;/p&gt;
-&lt;p&gt;一定数OSSに貢献することができたのは嬉しいが、ドキュメントやCIの修正など比較的ハードルが低めの貢献が多かったのも事実。&lt;/p&gt;
+&lt;p&gt;一定数OSSに貢献できたのは嬉しいが、ドキュメントやCIの修正など比較的ハードルが低めの貢献が多かったのも事実。&lt;/p&gt;
 &lt;p&gt;流石にOSSにPRを出すことには慣れてきたので2024年は上記のような貢献もしつつ何らかのOSSのアプリケーションコードへの貢献もしていきたい。&lt;/p&gt;
 &lt;p&gt;OSSメンテナ観点では、どのプロジェクトのメンテナも非常に紳士的で優しく接してくれる方が多かったので自分も見習っていきたい。特にRustコミュニティは初心者を歓迎する雰囲気があり、PRを送った際の体験がとてもよかったので真似したい。&lt;/p&gt;
 &lt;h3 id=&#34;rustを書き始めた&#34;&gt;Rustを書き始めた&lt;/h3&gt;
@@ -678,14 +678,14 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
 &lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;kyu08/fzf-make&lt;/a&gt;
 &lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;h3 id=&#34;fzf-makeを公開した&#34;&gt;fzf-makeを公開した&lt;/h3&gt;
-&lt;p&gt;こんな感じでMakefileに定義したtargetを曖昧検索で絞り込んで実行できるツールを作った。プレビューウィンドウがあるのが地味に便利なポイントでtargetの内容を確認しつつ実行することができる。&lt;/p&gt;
+&lt;p&gt;こんな感じでMakefileに定義したtargetを曖昧検索で絞り込んで実行できるツールを作った。プレビューウィンドウがあるのが地味に便利なポイントでtargetの内容を確認しつつ実行できる。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Rustの理解を深めるのと自分の普段の作業を効率化したくて作ったがその両方が割と達成できているので満足している。特に所有権やスマートポインタに関しては&lt;a href=&#34;https://doc.rust-jp.rs/book-ja/&#34; target=&#34;_blank&#34; &gt;The Rust Programming Language&lt;/a&gt;
 を読んだときにはイマイチ理解できなかったが実際に自分でコードを書いてコンパイラに指摘されてコードを修正することで理解を深めることができた。&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;最初は身近な人に紹介して使ってもらったりしていたが、ある日面識のない日本人の開発者の方がバグ報告issue&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;を立ててくれて、インターネットの向こう側の人に自分のアイディアが届いて気に入ってもらえて、しかもわざわざバグ報告をしてくれたという事実がとても嬉しかった。&lt;/p&gt;
 &lt;p&gt;当然個人の趣味開発なので副業などとは違い時給を得て開発しているわけではないが、ものづくりを通して他者に喜んでもらうということが自分にとって最高の喜びだとわかっただけでも非常に良い経験だった。自分がOSSコミュニティに貢献したいと考えているのも究極は「人に喜んで欲しいから」なのかもしれない。&lt;/p&gt;
-&lt;p&gt;その後も何人かの人がstarしてくれたりTwitter(現X)で言及してくれたり&lt;sup id=&#34;fnref:7&#34;&gt;&lt;a href=&#34;#fn:7&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;7&lt;/a&gt;&lt;/sup&gt;、issueを立ててくれたり、時にはPRを送ってくれたりして自分が書いたツールを通して海外のエンジニアとも交流することができたのは自分にとって非常に刺激的だった。&lt;/p&gt;
-&lt;p&gt;これから開発したい機能や修正したいバグはまだまだあるので来年以降も引き続き開発を続けていきたい。Homebrewをはじめ、いくつかのパッケージマネージャでインストールすることができるのでぜひ使ってみてください。あとスターくれると大変嬉しいです！よろしくお願いします！&lt;/p&gt;
+&lt;p&gt;その後も何人かの人がstarしてくれたりTwitter(現X)で言及してくれたり&lt;sup id=&#34;fnref:7&#34;&gt;&lt;a href=&#34;#fn:7&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;7&lt;/a&gt;&lt;/sup&gt;、issueを立ててくれたり、時にはPRを送ってくれたりして自分が書いたツールを通して海外のエンジニアとも交流できたのは自分にとって非常に刺激的だった。&lt;/p&gt;
+&lt;p&gt;これから開発したい機能や修正したいバグはまだまだあるので来年以降も引き続き開発を続けていきたい。Homebrewをはじめ、いくつかのパッケージマネージャでインストールできるのでぜひ使ってみてください。あとスターくれると大変嬉しいです！よろしくお願いします！&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;kyu08/fzf-make&lt;/a&gt;
 &lt;/p&gt;
 &lt;h3 id=&#34;neovimへの寄付&#34;&gt;Neovimへの寄付&lt;/h3&gt;
@@ -864,7 +864,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
 &lt;li&gt;学習によって自分の生産性を向上させることがしずらい&lt;/li&gt;
 &lt;li&gt;残業前提で成果を出すため再現性が低い&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;ということだと思う。残業しすぎないことで学習の時間を確保したり、開発プロセスの改善やスコープの調整によってうまく成果を出せるようにすることができていることが重要なのだと思う。&lt;/p&gt;
+&lt;p&gt;ということだと思う。残業しすぎないことで学習の時間を確保したり、開発プロセスの改善やスコープの調整によってうまく成果を出せるようにできていることが重要なのだと思う。&lt;/p&gt;
 &lt;p&gt;ときには多少残業をしないと厳しいこともあると思うし個人としても残業を1秒もしたくないというほどでもないのでこういう取り入れ方にしてみようと思った。&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;というわけでマインドセットだけでなく具体的なプラクティスの面でも大いに参考になる内容が多かったのでとても勉強になったので折に触れてまた読み返したい。気になった方はぜひ読んでみてください。&lt;/p&gt;
@@ -898,8 +898,8 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
 &lt;p&gt;(一度Neovimを閉じてもマークしたファイルが保持されている様子。)
 &lt;img src=&#34;saved-quick-menu.gif&#34; alt=&#34;saved-quick-menu&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;2-自由に編集できる-quick_menu&#34;&gt;2. 自由に編集できる quick_menu&lt;/h3&gt;
-&lt;p&gt;作者自身もお気に入りと言及しているが&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;quick_menuは純粋なテキストなので自由に編集することができる。&lt;/p&gt;
-&lt;p&gt;つまりこんな感じで&lt;code&gt;dd&lt;/code&gt; -&amp;gt; &lt;code&gt;y&lt;/code&gt;のようなコマンドで自由に順番を入れ替えたり削除したりすることができる。普段のvimの操作感で扱えるのでとても直感的で使いやすくて嬉しい。&lt;/p&gt;
+&lt;p&gt;作者自身もお気に入りと言及しているが&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;quick_menuは純粋なテキストなので自由に編集できる。&lt;/p&gt;
+&lt;p&gt;つまりこんな感じで&lt;code&gt;dd&lt;/code&gt; -&amp;gt; &lt;code&gt;y&lt;/code&gt;のようなコマンドで自由に順番を入れ替えたり削除したりできる。普段のvimの操作感で扱えるのでとても直感的で使いやすくて嬉しい。&lt;/p&gt;
 &lt;p&gt;quick_menuを自由に編集している様子&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;
 &lt;img src=&#34;editable-quick-menu.gif&#34; alt=&#34;editable-quick-menu&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
@@ -939,9 +939,9 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
       <pubDate>Sun, 22 Oct 2023 20:00:41 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/saiyo-kijun/</guid>
-      <description>概要 McKinsey &amp;amp; Company出身の伊賀泰代さんがリーダーシップについて書いた『採用基準 地頭より論理的思考力より大切なもの』を読んだ。ちょうど「リー</description>
+      <description>概要 McKinsey &amp;amp; Company出身の伊賀泰代さんがリーダーシップについて書いた『採用基準地頭より論理的思考力より大切なもの』を読んだ。ちょうど「リー</description>
       <content>&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
-&lt;p&gt;McKinsey &amp;amp; Company出身の伊賀泰代さんがリーダーシップについて書いた『採用基準 地頭より論理的思考力より大切なもの』を読んだ。ちょうど「リーダーシップとは」みたいなことが気になっていたので読んでみた。&lt;/p&gt;
+&lt;p&gt;McKinsey &amp;amp; Company出身の伊賀泰代さんがリーダーシップについて書いた『採用基準地頭より論理的思考力より大切なもの』を読んだ。ちょうど「リーダーシップとは」みたいなことが気になっていたので読んでみた。&lt;/p&gt;
 &lt;p&gt;コンサルティングファームでの出来事を中心に書かれているが、ITベンチャーでエンジニアとして働く自分にも参考になる点が多かったように思う。&lt;/p&gt;
 &lt;h2 id=&#34;学び&#34;&gt;学び&lt;/h2&gt;
 &lt;h3 id=&#34;思考力とは&#34;&gt;思考力とは&lt;/h3&gt;
@@ -959,7 +959,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
 &lt;p&gt;マッキンゼーをはじめとする外資系企業の多くでは、すべての社員に高いレベルのリーダーシップを求めます。アメリカの場合は、大学や大学院の入学判定に使われる小論文でも、過去のリーダーシップ体験は常に問われる最重要項目です。(中略)全員がリーダーシップをもつ組織は、一部の人だけがリーダーシップをもつ組織より、圧倒的に高い成果を出しやすいのです。だから学校も企業も、欧米では（もしくは外資系企業では）全員にリーダーシップ体験を求めるのです。(中略)リーダーシップのある人は、「成果を出すこと」を「自説が採用されること」よりも優先します。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;「全員がリーダーシップを持つ組織」と聞くと「全員自分の意見ばかり主張していては物事が前に進まないのでは&amp;hellip;?」と考えてしまいがちだが、ここではリーダーシップを「チームの使命を達成するために、必要なことをやる人」と定義している。&lt;/p&gt;
-&lt;p&gt;たしかにそう聞くと多角的な視点からよりよい意思決定ができそうな気がしてくる。チーム・組織の全員がリーダーシップを体現することができれば指示待ちが起こらず、生産性が高まりそうだなと感じた。&lt;/p&gt;
+&lt;p&gt;たしかにそう聞くと多角的な視点からよりよい意思決定ができそうな気がしてくる。チーム・組織の全員がリーダーシップを体現できれば指示待ちが起こらず、生産性が高まりそうだなと感じた。&lt;/p&gt;
 &lt;h3 id=&#34;バリューを出す&#34;&gt;バリューを出す&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;まずは自分自身が期待されている(あるいは期待以上の)バリューを出すことでリーダーが最もこだわるべき成果の重要性を理解したりやそれにこだわる姿勢を身につけることができる。&lt;/li&gt;
@@ -1215,8 +1215,8 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;第3章-オブジェクト指向&#34;&gt;第3章 オブジェクト指向&lt;/h2&gt;
 &lt;h3 id=&#34;いい抽象を見つけるには&#34;&gt;いい抽象を見つけるには&lt;/h3&gt;
-&lt;p&gt;具体的な例を分析してそれらから抽象を見つけることで期待値の高い抽象を発見することができる。&lt;/p&gt;
-&lt;p&gt;逆に先に&lt;strong&gt;ひとりよがりの哲学をこねくり回して現実をかえりみない抽象化を先行させた&lt;/strong&gt;場合は、&lt;strong&gt;役に立たない概念に縛られる無駄が起きやすくなる。&lt;/strong&gt;（ペットショップのシステムなのに「Cat には野良猫もいるかもしれない。必ずしも Pet ではないかも&amp;hellip;…」みたいなことを考えてしまうのは明らかに無駄）（抽象化においてもYAGNIが重要っぽい）&lt;/p&gt;
+&lt;p&gt;具体的な例を分析してそれらから抽象を見つけることで期待値の高い抽象を発見できる。&lt;/p&gt;
+&lt;p&gt;逆に先に&lt;strong&gt;ひとりよがりの哲学をこねくり回して現実をかえりみない抽象化を先行させた&lt;/strong&gt;場合は、&lt;strong&gt;役に立たない概念に縛られる無駄が起きやすくなる。&lt;/strong&gt;（ペットショップのシステムなのに「Catには野良猫もいるかもしれない。必ずしもPetではないかも&amp;hellip;…」みたいなことを考えてしまうのは明らかに無駄）（抽象化においてもYAGNIが重要っぽい）&lt;/p&gt;
 &lt;p&gt;無限の可能性に向かって発散してしまわず、いかに可能性を削ぎ落として最小サイズで実際に起こりうるバリエーションをカバーできるかが汎化のポイント。&lt;/p&gt;
 &lt;p&gt;そういう意味でもドメインやビジネスの状況を理解しておくことはプロダクトの将来を考慮しながら設計するために必要なんだろうなと思った。&lt;/p&gt;
 &lt;h3 id=&#34;多態性がなくても役立つ&#34;&gt;「多」態性がなくても役立つ&lt;/h3&gt;
@@ -1245,7 +1245,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
 &lt;blockquote&gt;
 &lt;p&gt;単体テストしやすいクラスであることと、DI可能なクラスであるということには、正の相関があります。DIを単に「単体テストのためにやること」といった目的観で考えるのは視野狭窄ではあるのですが、単体テストがアーキテクチャへの気づきの手段として、とても有用なのは間違いありません。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;テストが書きずらかったら設計を疑ってみるのも一つの手かもしれない。&lt;/p&gt;
+&lt;p&gt;テストが書きずらかったら設計を疑ってみるのも1つの手かもしれない。&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;よく聞くSOLID原則もやっとちゃんと理解できたし依存性注入に対する理解も深まったので今後に活かしていきたい。&lt;/p&gt;
 </content>
@@ -1366,7 +1366,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
 &lt;h2 id=&#34;困り&#34;&gt;困り&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;筆者はカバー画像を記事一覧・記事詳細画面に表示したくない、かつOGPは全共通の画像を使いたい&lt;/li&gt;
-&lt;li&gt;hugo-theme-terminal では任意の画像をOGPだけに設定することができない。（カバー画像をOGPとすることはできる）&lt;/li&gt;
+&lt;li&gt;hugo-theme-terminalでは任意の画像をOGPだけに設定できない。（カバー画像をOGPとすることはできる）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;やったこと&#34;&gt;やったこと&lt;/h2&gt;
 &lt;p&gt;多少ハッキーな方法ではあるが以下の方法で実現した。&lt;/p&gt;
@@ -1879,7 +1879,7 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
     </item>
     
     <item>
-      <title>開発の効率化のためにやっていること ターミナル編</title>
+      <title>開発の効率化のためにやっていることターミナル編</title>
       <link>https://blog.kyu08.com/posts/my-dev-setup-terminal/</link>
       <pubDate>Thu, 15 Dec 2022 01:15:48 +0900</pubDate>
       
@@ -1893,7 +1893,7 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;h2 id=&#34;シェル&#34;&gt;シェル&lt;/h2&gt;
 &lt;p&gt;シェルはzshを使っています。 一時期fishも使っていましたが、環境移行のコストが低かったりPOSIX準拠だったりするメリットに旨味を感じてzshに乗り換えました。&lt;/p&gt;
 &lt;h3 id=&#34;よく使うalias&#34;&gt;よく使うalias&lt;/h3&gt;
-&lt;p&gt;zshでは&lt;code&gt;alias hoge=&#39;echo hoge&#39;&lt;/code&gt;のように記述することでaliasを定義することができます。&lt;/p&gt;
+&lt;p&gt;zshでは&lt;code&gt;alias hoge=&#39;echo hoge&#39;&lt;/code&gt;のように記述することでaliasを定義できます。&lt;/p&gt;
 &lt;p&gt;ここでは筆者がよく使うaliasをいくつか紹介します。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias m&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;MEMODIR=~/code/memo; cd $MEMODIR; FILE=$MEMODIR/$(date +%Y%m%d).md; if [ ! -e $FILE ]; then echo &amp;#34;# todo \n\n# done\n&amp;#34; &amp;gt;&amp;gt; $FILE; fi; nvim $FILE&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;日毎に&lt;code&gt;yyyymmdd.md&lt;/code&gt;形式の名前のファイルを作成してvimで開く。
@@ -1961,7 +1961,7 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# fzfの設定&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;export FZF_DEFAULT_OPTS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;--color=fg+:11 --height 70% --reverse --exit-0 --multi&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これを実際に使うとこんな感じになります。ファジーファインダーを利用して効率的にディレクトリ移動することができます。&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これを実際に使うとこんな感じになります。ファジーファインダーを利用して効率的にディレクトリ移動できます。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;fzf-cdr.gif&#34; alt=&#34;cdr&#34;&gt;&lt;/p&gt;
 &lt;p&gt;やっていることは以下です。&lt;/p&gt;
 &lt;ol&gt;
@@ -2044,7 +2044,7 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;/ul&gt;
 &lt;p&gt;などが可能です。&lt;/p&gt;
 &lt;p&gt;筆者はウィンドウ管理機能の中のウィンドウの切り替え機能を使っています。
-sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを&lt;/p&gt;
+sainnhe/tmux-fzfを使うようにしたことでウィンドウ切り替えを&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;prefix&lt;/code&gt; + &lt;code&gt;prefix&lt;/code&gt;  でtmux-fzfのウィンドウ一覧を表示&lt;/li&gt;
 &lt;li&gt;目的のウィンドウ名の一部を入力&lt;/li&gt;
@@ -2100,7 +2100,7 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 &lt;p&gt;これは相手の立場に立ってみれば当然で、質問をしたのにその答えがなかなか返ってこないと「結局何がいいたいんだ？」となってしまう。&lt;/p&gt;
 &lt;p&gt;とは言いつつも、自分自身も自分の思考が整理できていない時は特にだらだらと喋ってしまいがちなので、そういう時はいいチャンスだと思って一旦思考を整理するようにしたい。&lt;/p&gt;
 &lt;h3 id=&#34;仮説を持って行動する&#34;&gt;仮説を持って行動する&lt;/h3&gt;
-&lt;p&gt;1 から 10 まで調査しきっていては時間が足りない。最低限の調査をして仮説を立てたら、検証 -&amp;gt; 仮説の修正 のループを高速で回していくことで限られた時間で精度の高い結論を導くことができる。&lt;/p&gt;
+&lt;p&gt;1から10まで調査しきっていては時間が足りない。最低限の調査をして仮説を立てたら、検証 -&amp;gt; 仮説の修正のループを高速で回していくことで限られた時間で精度の高い結論を導くことができる。&lt;/p&gt;
 &lt;p&gt;仮説思考を身につける第1歩として、仮説を持つクセをつけるためにあらゆる事象に対して「自分はどう思うのか」「なぜそう思うのか」というスタンスを持つことを心がけたい。&lt;/p&gt;
 &lt;h3 id=&#34;重要なことに時間を使う&#34;&gt;重要なことに時間を使う&lt;/h3&gt;
 &lt;p&gt;使える時間は限られているので費用対効果を常に意識して時間の使い方を決める。&lt;/p&gt;
@@ -2115,8 +2115,8 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 &lt;/ul&gt;
 &lt;p&gt;を明確にするように心がけたい。&lt;/p&gt;
 &lt;h3 id=&#34;quick-and-dirty&#34;&gt;Quick and Dirty&lt;/h3&gt;
-&lt;p&gt;3日間かけて100% のアウトプットを出すのではなく、まずは3時間で 30% のアウトプットをだすべき。&lt;/p&gt;
-&lt;p&gt;こまめにアウトプットを行ってフィードバックを得ることができれば間違った方向に進んでしまって時間を浪費する前に軌道修正することができる。&lt;/p&gt;
+&lt;p&gt;3日間かけて100% のアウトプットを出すのではなく、まずは3時間で30% のアウトプットをだすべき。&lt;/p&gt;
+&lt;p&gt;こまめにアウトプットを行ってフィードバックを得ることができれば間違った方向に進んでしまって時間を浪費する前に軌道修正できる。&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;この本を読んだことの収穫としては、自分の中でぼんやりと課題感としてあった&lt;/p&gt;
 &lt;ul&gt;
@@ -2136,16 +2136,16 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
     </item>
     
     <item>
-      <title>Elm で固定長配列が扱えるライブラリ elm-static-array を触ってみた</title>
+      <title>Elmで固定長配列が扱えるライブラリelm-static-arrayを触ってみた</title>
       <link>https://blog.kyu08.com/posts/2021121217-elm-static-array/</link>
       <pubDate>Fri, 17 Dec 2021 01:15:48 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/2021121217-elm-static-array/</guid>
-      <description>Elm で固定長配列を扱うためのライブラリ elm-static-array を触ってみたので感じたことを書いていきます。 elm-static-array とは elm-static-array は Elm で固定長配列を扱うためのライブラリです。 配列の</description>
-      <content>&lt;p&gt;Elm で固定長配列を扱うためのライブラリ elm-static-array を触ってみたので感じたことを書いていきます。&lt;/p&gt;
+      <description>Elmで固定長配列を扱うためのライブラリelm-static-arrayを触ってみたので感じたことを書いていきます。 elm-static-array とは elm-static-array はElmで固定長</description>
+      <content>&lt;p&gt;Elmで固定長配列を扱うためのライブラリelm-static-arrayを触ってみたので感じたことを書いていきます。&lt;/p&gt;
 &lt;h2 id=&#34;elm-static-array-とは&#34;&gt;elm-static-array とは&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/&#34; target=&#34;_blank&#34; &gt;elm-static-array&lt;/a&gt;
- は Elm で固定長配列を扱うためのライブラリです。&lt;/p&gt;
+ はElmで固定長配列を扱うためのライブラリです。&lt;/p&gt;
 &lt;p&gt;配列の長さを型で表現できることが特徴です。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- StaticArray&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- 長さ 4 の配列&lt;/span&gt;
@@ -2161,8 +2161,8 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Players&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Array&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;String&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Points&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Array&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;String&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これではあらゆる長さの配列をとることができてしまいますが、仕様上どちらも長さ 4 もしくは 5 の配列しかとることはありません。
-そこで elm-static-array を使って配列の長さの情報を型で表現しました。&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これではあらゆる長さの配列をとることができてしまいますが、仕様上どちらも長さ4もしくは5の配列しかとることはありません。
+そこでelm-static-arrayを使って配列の長さの情報を型で表現しました。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Players&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Players4&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;StaticArray&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Index&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Four&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Player&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Players5&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;StaticArray&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Index&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Five&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Player&lt;/span&gt;)
@@ -2173,15 +2173,15 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ここからは実際に使ってみて感じたことを書いていきます。&lt;/p&gt;
 &lt;h2 id=&#34;elm-static-array-を使うことで得られるメリット&#34;&gt;elm-static-array を使うことで得られるメリット&lt;/h2&gt;
 &lt;h3 id=&#34;メリット仕様を型で表現しやすい&#34;&gt;メリット①：仕様を型で表現しやすい&lt;/h3&gt;
-&lt;p&gt;上でも触れましたが、長さが 4 もしく 5 の &lt;code&gt;Point&lt;/code&gt; の配列は elm-static-array を使うと以下のように定義できます。&lt;/p&gt;
+&lt;p&gt;上でも触れましたが、長さが4もしく5の &lt;code&gt;Point&lt;/code&gt; の配列はelm-static-arrayを使うと以下のように定義できます。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Points&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Points4&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;StaticArray&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Index&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Four&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Point&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Points5&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;StaticArray&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Index&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Five&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Point&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;elm-static-array を使うことで型に配列の長さの情報を持たせることができるため、&lt;strong&gt;仕様を型で表現しやすくなり&lt;/strong&gt;コードの可読性向上に繋がります。&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;elm-static-arrayを使うことで型に配列の長さの情報を持たせることができるため、&lt;strong&gt;仕様を型で表現しやすくなり&lt;/strong&gt;コードの可読性向上に繋がります。&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;また、それにともなって &lt;strong&gt;仕様上ありえない状態が存在できないコードを書きやすくなる&lt;/strong&gt;ため&lt;strong&gt;バグの可能性を減らす&lt;/strong&gt; ことができます。&lt;/p&gt;
-&lt;p&gt;たとえば以下の &lt;code&gt;isDefaultRound&lt;/code&gt;関数 は引数に取った値がデフォルト値かどうかを判定する関数です。&lt;/p&gt;
+&lt;p&gt;たとえば以下の &lt;code&gt;isDefaultRound&lt;/code&gt;関数は引数に取った値がデフォルト値かどうかを判定する関数です。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Round&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Round4&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Round4Value&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Round5&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Round5Value&lt;/span&gt;
@@ -2210,8 +2210,8 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;Round5&lt;/span&gt; _ &lt;span style=&#34;color:#a6e22e&#34;&gt;-&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            round &lt;span style=&#34;color:#a6e22e&#34;&gt;==&lt;/span&gt; initRound&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;仕様上 &lt;code&gt;Points&lt;/code&gt; の長さは 4 もしくは 5 になるのですが、elm-static-array を使って書くと &lt;code&gt;isDefaultRound&lt;/code&gt;関数 のパターンマッチの中では仕様上ありえる値の分岐だけを扱えばいいことがわかると思います。&lt;/p&gt;
-&lt;p&gt;これを elm-static-array を使わずに書いた場合は以下のように仕様上ありえないパターンを扱う必要があります。&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;仕様上 &lt;code&gt;Points&lt;/code&gt; の長さは4もしくは5になるのですが、elm-static-arrayを使って書くと &lt;code&gt;isDefaultRound&lt;/code&gt;関数のパターンマッチの中では仕様上ありえる値の分岐だけを扱えばいいことがわかると思います。&lt;/p&gt;
+&lt;p&gt;これをelm-static-arrayを使わずに書いた場合は以下のように仕様上ありえないパターンを扱う必要があります。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;isDefaultRound &lt;span style=&#34;color:#a6e22e&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Round&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Bool&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;isDefaultRound round &lt;span style=&#34;color:#a6e22e&#34;&gt;=&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Array&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt;length round&lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt;points &lt;span style=&#34;color:#66d9ef&#34;&gt;of&lt;/span&gt;
@@ -2223,9 +2223,9 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        _ &lt;span style=&#34;color:#a6e22e&#34;&gt;-&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;False&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;elm-static-array を使うことで仕様上ありえないパターンを扱う必要がなくなりバグの可能性を減らすことができます。&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;elm-static-arrayを使うことで仕様上ありえないパターンを扱う必要がなくなりバグの可能性を減らすことができます。&lt;/p&gt;
 &lt;h3 id=&#34;メリット配列の要素を取得する際に-maybe-をハンドリングする必要がない&#34;&gt;メリット②：配列の要素を取得する際に &lt;code&gt;Maybe&lt;/code&gt; をハンドリングする必要がない&lt;/h3&gt;
-&lt;p&gt;配列の要素を取得する際も通常の Array との違いを感じることができます。&lt;/p&gt;
+&lt;p&gt;配列の要素を取得する際も通常のArrayとの違いを感じることができます。&lt;/p&gt;
 &lt;p&gt;以下は配列の要素を取得する &lt;code&gt;get&lt;/code&gt; 関数の型定義です。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- 通常の配列&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;get &lt;span style=&#34;color:#a6e22e&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Array&lt;/span&gt; a &lt;span style=&#34;color:#a6e22e&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Maybe&lt;/span&gt; a
@@ -2233,20 +2233,20 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- StaticArray&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;get &lt;span style=&#34;color:#a6e22e&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Index&lt;/span&gt; n &lt;span style=&#34;color:#a6e22e&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;StaticArray&lt;/span&gt; n a &lt;span style=&#34;color:#a6e22e&#34;&gt;-&amp;gt;&lt;/span&gt; a
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;注目すべきは &lt;strong&gt;返り値の型&lt;/strong&gt; です。&lt;/p&gt;
-&lt;p&gt;通常の配列では要素の型が &lt;code&gt;a&lt;/code&gt; である配列の要素を取得する際の返り値の型が &lt;code&gt;Maybe a&lt;/code&gt; になりますが、 elm-static-array では返り値の型が &lt;code&gt;a&lt;/code&gt; になります。
+&lt;p&gt;通常の配列では要素の型が &lt;code&gt;a&lt;/code&gt; である配列の要素を取得する際の返り値の型が &lt;code&gt;Maybe a&lt;/code&gt; になりますが、 elm-static-arrayでは返り値の型が &lt;code&gt;a&lt;/code&gt; になります。
 これにより &lt;strong&gt;&lt;code&gt;Maybe&lt;/code&gt; をハンドリングする必要がなくなるためよりシンプルに記述できます。&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;懸念点&#34;&gt;懸念点&lt;/h2&gt;
 &lt;p&gt;逆に懸念だと感じたのは以下の2つです。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Array に定義されているすべての関数が定義されているわけではない&lt;/li&gt;
-&lt;li&gt;elm-static-array の書き方に慣れるまでは時間がかかる&lt;/li&gt;
+&lt;li&gt;Arrayに定義されているすべての関数が定義されているわけではない&lt;/li&gt;
+&lt;li&gt;elm-static-arrayの書き方に慣れるまでは時間がかかる&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;それぞれ補足していきます。&lt;/p&gt;
 &lt;h3 id=&#34;懸念array-に定義されているすべての関数が定義されているわけではない&#34;&gt;懸念①：Array に定義されているすべての関数が定義されているわけではない&lt;/h3&gt;
-&lt;p&gt;Array に生えている関数が StaticArray には生えてなかったりするので、都度 Array に変換して処理をした上で再度 StaticArray に変換する、というような工程が必要になる場面がありました。StaticArray には最小限の関数しか定義されていないので例えば &lt;code&gt;filter&lt;/code&gt; や &lt;code&gt;foldl(foldr)&lt;/code&gt; などは一度 Array などに変換し、処理してから再度 StaticArray に変換しなおす必要がありました。&lt;/p&gt;
-&lt;p&gt;以下は StaticArray を Array に変換して filter して StaticArray に戻すコード例です。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;StaticArray.fromList&lt;/code&gt; が head と tail を引数に取るため若干コード量が増えてしまいます。&lt;/p&gt;
-&lt;p&gt;head の要素を取り出す際に Nothing をハンドリングしなければならないのがちょっと億劫ですね。(もちろんコンパイラは StaticArray から変換された Array であることなど知るよしもないので仕方ないのですが)&lt;/p&gt;
+&lt;p&gt;Arrayに生えている関数がStaticArrayには生えてなかったりするので、都度Arrayに変換して処理をした上で再度StaticArrayに変換する、というような工程が必要になる場面がありました。StaticArrayには最小限の関数しか定義されていないので例えば &lt;code&gt;filter&lt;/code&gt; や &lt;code&gt;foldl(foldr)&lt;/code&gt; などは一度Arrayなどに変換し、処理してから再度StaticArrayに変換しなおす必要がありました。&lt;/p&gt;
+&lt;p&gt;以下はStaticArrayをArrayに変換してfilterしてStaticArrayに戻すコード例です。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;StaticArray.fromList&lt;/code&gt; がheadとtailを引数に取るため若干コード量が増えてしまいます。&lt;/p&gt;
+&lt;p&gt;headの要素を取り出す際にNothingをハンドリングしなければならないのがちょっと億劫ですね。(もちろんコンパイラはStaticArrayから変換されたArrayであることなど知るよしもないので仕方ないのですが)&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;filterStaticArray &lt;span style=&#34;color:#a6e22e&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;StaticArray&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Index&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Four&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;String&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;StaticArray&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Index&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Four&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;String&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;filterStaticArray staticArray &lt;span style=&#34;color:#a6e22e&#34;&gt;=&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt;
@@ -2271,23 +2271,23 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        head
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        tail
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;懸念staticarray-の書き方に慣れるまでは時間がかかる&#34;&gt;懸念②：StaticArray の書き方に慣れるまでは時間がかかる&lt;/h3&gt;
-&lt;p&gt;たとえばインデックスを指定して StaticArray の要素を取得する get 関数を使おうと&lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/StaticArray#get&#34; target=&#34;_blank&#34; &gt;ドキュメント&lt;/a&gt;
+&lt;p&gt;たとえばインデックスを指定してStaticArrayの要素を取得するget関数を使おうと&lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/StaticArray#get&#34; target=&#34;_blank&#34; &gt;ドキュメント&lt;/a&gt;
 を見ると、下記のような記述があります。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- Gets an element of the array. Note that it only possible if the index is in bound. Therefore eliminating Off-by-one errors.&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;get &lt;span style=&#34;color:#a6e22e&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Index&lt;/span&gt; n &lt;span style=&#34;color:#a6e22e&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;StaticArray&lt;/span&gt; n a &lt;span style=&#34;color:#a6e22e&#34;&gt;-&amp;gt;&lt;/span&gt; a
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;自分のElm力の乏しさのせいではありますがドキュメントに具体的なコード例が示されていないこともあり、動かすまでにそれなりの試行錯誤が必要でした。(当時は GitHub で検索しても引っ掛からずに絶望していましたが、検索の仕方が悪かっただけだということに執筆時に気付きました。)
-実際には以下のような使い方をする必要があります。ちゃんと動くコードを書くのに　1h くらい費やしてしまいました。&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;自分のElm力の乏しさのせいではありますがドキュメントに具体的なコード例が示されていないこともあり、動かすまでにそれなりの試行錯誤が必要でした。(当時はGitHubで検索しても引っ掛からずに絶望していましたが、検索の仕方が悪かっただけだということに執筆時に気付きました。)
+実際には以下のような使い方をする必要があります。ちゃんと動くコードを書くのに1hくらい費やしてしまいました。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;head &lt;span style=&#34;color:#a6e22e&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Element&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;head &lt;span style=&#34;color:#a6e22e&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;StaticArray&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt;get (&lt;span style=&#34;color:#66d9ef&#34;&gt;Index&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt;fromModBy &lt;span style=&#34;color:#66d9ef&#34;&gt;Length&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt;four &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) someStaticArray
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;まとめると、 &lt;strong&gt;多少の手間が必要になる&lt;/strong&gt; ということかなと思います。
-このあたりが elm-static-array の作者が &lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/&#34; target=&#34;_blank&#34; &gt;README&lt;/a&gt;
+このあたりがelm-static-arrayの作者が &lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/&#34; target=&#34;_blank&#34; &gt;README&lt;/a&gt;
  の中で以下のように言っている所以かなと感じました。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Construction is a bit slower (should be neglectable for most cases).&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;ただ逆に言えばネガティブに感じたのは上記のそれくらいで、基本的にはメリットの方が大きく感じたためこれからも必要であれば使っていきたいと思っています。&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
-&lt;p&gt;Elm で固定長配列を扱うためのライブラリ elm-static-array を触った感想を書いてみました。&lt;/p&gt;
+&lt;p&gt;Elmで固定長配列を扱うためのライブラリelm-static-arrayを触った感想を書いてみました。&lt;/p&gt;
 &lt;p&gt;仕様を型で表現しやすくなるという点に魅力を感じたので今後も必要なケースでは積極的に使っていきたいと思います。&lt;/p&gt;
 &lt;p&gt;また、ひさびさに個人開発をして、なかなか時間が取れずコードの意図や全体像をよく忘れたりするので個人開発においても可読性が高かったり意図の伝わりやすいコードを書くことの重要性が身に染みました。&lt;/p&gt;
 &lt;p&gt;時間がなかなかとれないからこそ質の高いコードを意識的に書いていきたいなと思います。&lt;/p&gt;
@@ -2329,7 +2329,7 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 &lt;p&gt;はじめて仮想環境をつかってssh接続しながら開発しました。&lt;/p&gt;
 &lt;p&gt;動くコードが載ってるだけでなく割と詳しめに背景となる知識を解説してあってかなりわかりやすかったです。自分も書いたコードの背景や実装の根拠をしっかりと語れるようになりたい&amp;hellip;。&lt;/p&gt;
 &lt;h2 id=&#34;4月&#34;&gt;4月&lt;/h2&gt;
-&lt;p&gt;本選考インターンでつくった WebApp のリファクタリングをしました。
+&lt;p&gt;本選考インターンでつくったWebAppのリファクタリングをしました。
 あとはTypeScriptの勉強をはじめました。やったことは&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.typescriptlang.org/docs/handbook/intro.html&#34; target=&#34;_blank&#34; &gt;TypeScript HANDBOOK&lt;/a&gt;
@@ -2340,14 +2340,14 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 &lt;p&gt;あたりです。始めて静的型付けの言語に触れて表現力の豊かさを感じました。わかりやすさと堅牢さが得られそう&amp;hellip;、エディタがいろいろ教えてくれるので開発効率も上がりそう&amp;hellip;などと感じました。&lt;/p&gt;
 &lt;h2 id=&#34;5月&#34;&gt;5月&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;CLI の todo アプリを Node.js(TypeScript) でつくった&lt;/li&gt;
+&lt;li&gt;CLIのtodoアプリをNode.js(TypeScript) でつくった&lt;/li&gt;
 &lt;li&gt;読みかけだったリーダブルコードをよんだ&lt;/li&gt;
-&lt;li&gt;Repository パターンを実装してみた&lt;/li&gt;
+&lt;li&gt;Repositoryパターンを実装してみた&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;CLI の todo アプリは CLI で TODOを確認したくなったのと TypeScript　で何か作ってみたくなったので作って &lt;a href=&#34;https://www.npmjs.com/package/great-todo-cli&#34; target=&#34;_blank&#34; &gt;npm で公開しました。&lt;/a&gt;
+&lt;p&gt;CLIのtodoアプリはCLIでTODOを確認したくなったのとTypeScriptで何か作ってみたくなったので作って &lt;a href=&#34;https://www.npmjs.com/package/great-todo-cli&#34; target=&#34;_blank&#34; &gt;npm で公開しました。&lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;責務の分離を意識して書いたので今までよりは見通しの良いコードを書けたと思っています。&lt;/p&gt;
-&lt;p&gt;あとははじめて Webpack の設定を書いて、&lt;code&gt;create-react-app&lt;/code&gt; の便利さを感じました。(今まで&lt;code&gt;create-react-app&lt;/code&gt;が何をしてくれているのかわかってなかった&amp;hellip;)&lt;/p&gt;
+&lt;p&gt;あとははじめてWebpackの設定を書いて、&lt;code&gt;create-react-app&lt;/code&gt; の便利さを感じました。(今まで&lt;code&gt;create-react-app&lt;/code&gt;が何をしてくれているのかわかってなかった&amp;hellip;)&lt;/p&gt;
 &lt;h2 id=&#34;6月&#34;&gt;6月&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/dp/B01L8SEVYI/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1&#34; target=&#34;_blank&#34; &gt;オブジェクト指向設計実践ガイド　～Rubyでわかる 進化しつづける柔軟なアプリケーションの育て方&lt;/a&gt;
@@ -2361,7 +2361,7 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 をよんだ&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;6月はたくさん本を読みました。毎日作業を始める前に1時間本を読むスタイルが自分にあっている感じでした。&lt;/p&gt;
-&lt;p&gt;Ruby の OOP 本は&lt;/p&gt;
+&lt;p&gt;RubyのOOP本は&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;単一責任で設計しよう&lt;/li&gt;
 &lt;li&gt;依存関係をちゃんと管理しよう&lt;/li&gt;
@@ -2371,12 +2371,12 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 &lt;p&gt;↑の2冊を読んだ上で成瀬さんのDDD本を読んだのでスムーズに理解できました。我ながら結構いい感じの流れでDDD(の入り)を学んでいけた感じがしています。(あと成瀬さんの本がわかりやすすぎた&amp;hellip;。とてもおすすめです！)&lt;/p&gt;
 &lt;h2 id=&#34;7月&#34;&gt;7月&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Twitter のクローンアプリの設計 &amp;amp; フロントエンドの実装開始&lt;/li&gt;
+&lt;li&gt;Twitterのクローンアプリの設計 &amp;amp; フロントエンドの実装開始&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/Web%E3%82%92%E6%94%AF%E3%81%88%E3%82%8B%E6%8A%80%E8%A1%93-HTTP%E3%80%81URI%E3%80%81HTML%E3%80%81%E3%81%9D%E3%81%97%E3%81%A6REST-WEB-PRESS-plus/dp/4774142042&#34; target=&#34;_blank&#34; &gt;Webを支える技術&lt;/a&gt;
 
 をよんだ&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;設計のアウトプットをしたかったんですが特にアプリのアイディアとかもなかったので Twitter のクローンアプリを作りました。&lt;/p&gt;
+&lt;p&gt;設計のアウトプットをしたかったんですが特にアプリのアイディアとかもなかったのでTwitterのクローンアプリを作りました。&lt;/p&gt;
 &lt;p&gt;事前に&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;要件定義&lt;/li&gt;
@@ -2388,15 +2388,15 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 &lt;h2 id=&#34;8月&#34;&gt;8月&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;応用情報の勉強をはじめた&lt;/li&gt;
-&lt;li&gt;Twitter のクローンアプリのバックエンドの実装&lt;/li&gt;
+&lt;li&gt;Twitterのクローンアプリのバックエンドの実装&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;大学・大学院で情報系を学んでいる&amp;amp;学んできた人たちに少しでも追いつきたいと思い応用情報を受けることにしました。(資格がとれるからというより試験があって合否があった方が頑張れるので&amp;hellip;)&lt;/p&gt;
-&lt;p&gt;友達と毎日1時間くらい Udemy の動画をみる形で応用情報の勉強をやっていきました。(動画自体は40時間くらい)&lt;/p&gt;
-&lt;p&gt;Udemy で試験範囲を一通り学んだあとは、試験前2週間程度で過去問10回分を3周くらいしました。&lt;/p&gt;
+&lt;p&gt;友達と毎日1時間くらいUdemyの動画をみる形で応用情報の勉強をやっていきました。(動画自体は40時間くらい)&lt;/p&gt;
+&lt;p&gt;Udemyで試験範囲を一通り学んだあとは、試験前2週間程度で過去問10回分を3周くらいしました。&lt;/p&gt;
 &lt;p&gt;午前問題はわりとはやくから安定して7割以上とれてたのでよかったんですが午後問題が6割前後しか解けなくてずっと不安でした&amp;hellip;。&lt;/p&gt;
 &lt;h2 id=&#34;9月&#34;&gt;9月&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Scala の勉強をはじめた&lt;/li&gt;
+&lt;li&gt;Scalaの勉強をはじめた&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href=&#34;https://scala-text.github.io/scala_text/&#34; target=&#34;_blank&#34; &gt;scala-text&lt;/a&gt;
 
@@ -2411,26 +2411,26 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 &lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/dp/B00GRKD6XU/ref=dp-kindle-redirect?_encoding=UTF8&amp;amp;btkr=1&#34; target=&#34;_blank&#34; &gt;Evans本&lt;/a&gt;
 
 をよんだ&lt;/li&gt;
-&lt;li&gt;Vim に入門したけど2日で心がおれた&lt;/li&gt;
+&lt;li&gt;Vimに入門したけど2日で心がおれた&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Evans本を読みました。成瀬さんのDDD本を読んでから望んだので前半はわりと理解できましたが後半はサッパリでした&amp;hellip;。🤔&lt;/p&gt;
-&lt;p&gt;IntelliJ ちょっと重いなあ&amp;hellip;ということで NeoVim に入門してみましたが Plugin がなかなかうまく動かなかったりして IntelliJ でやってることができる状態にするのめっちゃ大変やん&amp;hellip;となり挫折しました。&lt;/p&gt;
+&lt;p&gt;IntelliJちょっと重いなあ&amp;hellip;ということでNeoVimに入門してみましたがPluginがなかなかうまく動かなかったりしてIntelliJでやってることができる状態にするのめっちゃ大変やん&amp;hellip;となり挫折しました。&lt;/p&gt;
 &lt;h2 id=&#34;11月&#34;&gt;11月&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Scala x PlayFramework で簡単なAPIサーバをつくった&lt;/li&gt;
+&lt;li&gt;Scala x PlayFrameworkで簡単なAPIサーバをつくった&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;学会準備のためあまり勉強できず、、&lt;/p&gt;
-&lt;p&gt;ScalikeJDBC の使い方が難しくて詰まった。あと Scala の&lt;code&gt;implicit&lt;/code&gt;がむずい。&lt;/p&gt;
+&lt;p&gt;ScalikeJDBCの使い方が難しくて詰まった。あとScalaの&lt;code&gt;implicit&lt;/code&gt;がむずい。&lt;/p&gt;
 &lt;h2 id=&#34;12月&#34;&gt;12月&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;応用情報受かった&lt;/li&gt;
-&lt;li&gt;このブログを Next.js でつくった&lt;/li&gt;
+&lt;li&gt;このブログをNext.jsでつくった&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;応用情報受かりました！🎉&lt;/p&gt;
 &lt;p&gt;午後が結構不安だったのでめちゃめちゃ嬉しかったです。(午前78%, 午後62.5%だった)&lt;/p&gt;
 &lt;p&gt;わりと広く浅く学べたのでこれからがっつり学ぶ必要が出てきたときの土台となってくれれば&amp;hellip;と期待しています。。&lt;/p&gt;
-&lt;p&gt;Next.js に入門しました。今まで component が増えてくると辛みが増していましたが component を&lt;code&gt;/pages&lt;/code&gt;と&lt;code&gt;/component&lt;/code&gt;に配置するやり方が読みやすさ的にも書きやすさ的にもいいなと感じました。&lt;/p&gt;
-&lt;p&gt;あとは Vercel へのデプロイが簡単すぎて感動しました。&lt;/p&gt;
+&lt;p&gt;Next.jsに入門しました。今までcomponentが増えてくると辛みが増していましたがcomponentを&lt;code&gt;/pages&lt;/code&gt;と&lt;code&gt;/component&lt;/code&gt;に配置するやり方が読みやすさ的にも書きやすさ的にもいいなと感じました。&lt;/p&gt;
+&lt;p&gt;あとはVercelへのデプロイが簡単すぎて感動しました。&lt;/p&gt;
 &lt;p&gt;詳しくは&lt;a href=&#34;https://blog.kyu08.com/posts/constructed-blog&#34; target=&#34;_blank&#34; &gt;こちら&lt;/a&gt;
 をご覧ください。&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
@@ -2441,12 +2441,12 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
     </item>
     
     <item>
-      <title>Next.js Vercel で Blog をつくった</title>
+      <title>Next.js VercelでBlogをつくった</title>
       <link>https://blog.kyu08.com/posts/20201227-built-blog/</link>
       <pubDate>Sun, 27 Dec 2020 01:15:48 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/20201227-built-blog/</guid>
-      <description>急にブログが書きたくなったのでつくった。 使った技術 Next.js TypeScript Vercel 感想 Vercel めっちゃ楽 Syntax Highlight できてうれしい const age: number = 1 // こんなかんじ これからやりたいこと header footer つ</description>
+      <description>急にブログが書きたくなったのでつくった。 使った技術 Next.js TypeScript Vercel 感想 Vercelめっちゃ楽 Syntax Highlightできてうれしい const age: number = 1 // こんなかんじ</description>
       <content>&lt;p&gt;急にブログが書きたくなったのでつくった。&lt;/p&gt;
 &lt;h2 id=&#34;使った技術&#34;&gt;使った技術&lt;/h2&gt;
 &lt;ul&gt;
@@ -2456,16 +2456,16 @@ sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを
 &lt;/ul&gt;
 &lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Vercel めっちゃ楽&lt;/li&gt;
-&lt;li&gt;Syntax Highlight できてうれしい&lt;/li&gt;
+&lt;li&gt;Vercelめっちゃ楽&lt;/li&gt;
+&lt;li&gt;Syntax Highlightできてうれしい&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-typescript&#34; data-lang=&#34;typescript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;age&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;number&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// こんなかんじ
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;これからやりたいこと&#34;&gt;これからやりたいこと&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;header footer つくる&lt;/li&gt;
+&lt;li&gt;header footerつくる&lt;/li&gt;
 &lt;li&gt;独自ドメイン取得&lt;/li&gt;
 &lt;li&gt;全体的に見た目をまともにする&lt;/li&gt;
-&lt;li&gt;記事一覧ページに 書いた日時・タグも表示する&lt;/li&gt;
+&lt;li&gt;記事一覧ページに書いた日時・タグも表示する&lt;/li&gt;
 &lt;li&gt;簡単な自己紹介&lt;/li&gt;
 &lt;li&gt;各種SNSへのリンク&lt;/li&gt;
 &lt;li&gt;存在しないリンクへアクセスされたら記事一覧に戻す&lt;/li&gt;

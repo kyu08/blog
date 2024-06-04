@@ -93,7 +93,7 @@
     </item>
     
     <item>
-      <title>開発の効率化のためにやっていること ターミナル編</title>
+      <title>開発の効率化のためにやっていることターミナル編</title>
       <link>https://blog.kyu08.com/posts/my-dev-setup-terminal/</link>
       <pubDate>Thu, 15 Dec 2022 01:15:48 +0900</pubDate>
       
@@ -107,7 +107,7 @@
 &lt;h2 id=&#34;シェル&#34;&gt;シェル&lt;/h2&gt;
 &lt;p&gt;シェルはzshを使っています。 一時期fishも使っていましたが、環境移行のコストが低かったりPOSIX準拠だったりするメリットに旨味を感じてzshに乗り換えました。&lt;/p&gt;
 &lt;h3 id=&#34;よく使うalias&#34;&gt;よく使うalias&lt;/h3&gt;
-&lt;p&gt;zshでは&lt;code&gt;alias hoge=&#39;echo hoge&#39;&lt;/code&gt;のように記述することでaliasを定義することができます。&lt;/p&gt;
+&lt;p&gt;zshでは&lt;code&gt;alias hoge=&#39;echo hoge&#39;&lt;/code&gt;のように記述することでaliasを定義できます。&lt;/p&gt;
 &lt;p&gt;ここでは筆者がよく使うaliasをいくつか紹介します。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias m&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;MEMODIR=~/code/memo; cd $MEMODIR; FILE=$MEMODIR/$(date +%Y%m%d).md; if [ ! -e $FILE ]; then echo &amp;#34;# todo \n\n# done\n&amp;#34; &amp;gt;&amp;gt; $FILE; fi; nvim $FILE&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;日毎に&lt;code&gt;yyyymmdd.md&lt;/code&gt;形式の名前のファイルを作成してvimで開く。
@@ -175,7 +175,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# fzfの設定&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;export FZF_DEFAULT_OPTS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;--color=fg+:11 --height 70% --reverse --exit-0 --multi&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これを実際に使うとこんな感じになります。ファジーファインダーを利用して効率的にディレクトリ移動することができます。&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これを実際に使うとこんな感じになります。ファジーファインダーを利用して効率的にディレクトリ移動できます。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;fzf-cdr.gif&#34; alt=&#34;cdr&#34;&gt;&lt;/p&gt;
 &lt;p&gt;やっていることは以下です。&lt;/p&gt;
 &lt;ol&gt;
@@ -258,7 +258,7 @@
 &lt;/ul&gt;
 &lt;p&gt;などが可能です。&lt;/p&gt;
 &lt;p&gt;筆者はウィンドウ管理機能の中のウィンドウの切り替え機能を使っています。
-sainnhe/tmux-fzf を使うようにしたことでウィンドウ切り替えを&lt;/p&gt;
+sainnhe/tmux-fzfを使うようにしたことでウィンドウ切り替えを&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;prefix&lt;/code&gt; + &lt;code&gt;prefix&lt;/code&gt;  でtmux-fzfのウィンドウ一覧を表示&lt;/li&gt;
 &lt;li&gt;目的のウィンドウ名の一部を入力&lt;/li&gt;
