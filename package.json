@@ -9,6 +9,7 @@
   "license": "MIT",
   "devDependencies": {
     "textlint": "^14.0.4",
+    "textlint-filter-rule-comments": "^1.2.2",
     "textlint-rule-preset-ja-spacing": "^2.4.3",
     "textlint-rule-preset-ja-technical-writing": "^10.0.1"
   }
