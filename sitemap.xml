@@ -2,22 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.kyu08.com/posts/technical-writing-book/</loc>
+    <lastmod>2024-06-06T00:21:05+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/</loc>
+    <lastmod>2024-06-06T00:21:05+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/</loc>
+    <lastmod>2024-06-06T00:21:05+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/</loc>
+    <lastmod>2024-06-06T00:21:05+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</loc>
+    <lastmod>2024-06-06T00:21:05+09:00</lastmod>
+  </url><url>
     <loc>https://blog.kyu08.com/posts/ichiban-yasashii-agile-no-kyouhon/</loc>
     <lastmod>2024-05-26T00:48:56+09:00</lastmod>
   </url><url>
-    <loc>https://blog.kyu08.com/</loc>
-    <lastmod>2024-05-26T00:48:56+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/posts/</loc>
-    <lastmod>2024-05-26T00:48:56+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/</loc>
-    <lastmod>2024-05-26T00:48:56+09:00</lastmod>
-  </url><url>
     <loc>https://blog.kyu08.com/tags/%E3%82%A2%E3%82%B8%E3%83%A3%E3%82%A4%E3%83%AB/</loc>
-    <lastmod>2024-05-26T00:48:56+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%A1%E3%83%A2/</loc>
     <lastmod>2024-05-26T00:48:56+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/mac-too-many-open-files/</loc>
@@ -57,9 +60,6 @@
     <lastmod>2024-03-17T22:06:40+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/better-programmer/</loc>
-    <lastmod>2024-03-07T00:27:45+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</loc>
     <lastmod>2024-03-07T00:27:45+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/looking-back-on-2023/</loc>

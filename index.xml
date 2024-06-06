@@ -7,7 +7,86 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sun, 26 May 2024 00:48:56 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Jun 2024 00:21:05 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>『読み手につたわる文章 - テクニカルライティング』を読んだ</title>
+      <link>https://blog.kyu08.com/posts/technical-writing-book/</link>
+      <pubDate>Thu, 06 Jun 2024 00:21:05 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/posts/technical-writing-book/</guid>
+      <description>技術書典で購入した『読み手につたわる文章 - テクニカルライティング』を読んだので学びになったトピックについて書く。 「知らない」と書けない（P1</description>
+      <content>&lt;p&gt;技術書典で購入した『読み手につたわる文章 - テクニカルライティング』を読んだので学びになったトピックについて書く。&lt;/p&gt;
+&lt;h2 id=&#34;知らないと書けないp14&#34;&gt;「知らない」と書けない（P14）&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;こんなふうに、自転車という対象物に対する知識があれば、パーツの位置をすべて暗記していなくても自ずと正しい自転車の絵が描けるようになります。 &lt;strong&gt;必要なものは絵心やセンスではなく知識なのです。&lt;/strong&gt; 逆に言えば、対象物を知らないと上手な絵は描けません。&lt;/p&gt;
+&lt;p&gt;そして自分が対象物を思っていたより「知らない」ということに、我々は気付いていないことが多いのです。上手な絵は、対象物のことを知らないと描けません。それと同じように、分かりやすい実用文は、文章力のあるなし以前に &lt;strong&gt;対象物をよく知らないと書けない&lt;/strong&gt; のです。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;文字にすると当たり前のことのように感じるが、ブログを書いているとよく実感する。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;技術的な内容であれば、当然対象を理解していないと書けないし、自分の考えでさえもいざ言語化しようと思うとなかなか筆が進まないことが多い。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;そうした場合にはまず自分が何を言いたいのかを整理して理解するようにしている。&lt;/p&gt;
+&lt;h2 id=&#34;いつまでに何をしてほしいのか書こうp25&#34;&gt;いつまでに何をしてほしいのか書こう（P25）&lt;/h2&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;何の食べ物だか言わずにいきなり「食べて! ほら食べて!」とスプーンを差し出されると、「え、怖い。なになになに?」となって、とても素直に口を開く気にはなれませんし、食べたところで猜疑心で味もよく分かりません。そんなときは「初めて作ったプリンが思いのほか美味しくできたので一口食べて感想を教えてほしい」というように、どういう意図で読み手に何をして欲しいと思っているのかを先に説明してあげる必要があります。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;引用部分の前に書かれていた例示のエピソードがわかりすぎて無限に頷いてしまった。認知負荷が高い文章を読むのはいつだって辛い。&lt;/p&gt;
+&lt;p&gt;報告なのでただ把握だけしておいて欲しいのか相談がしたいので意見を求めているのかなど、読み手に求めるアクションを明示すると読み手の認知負荷が低くて良さそう。&lt;/p&gt;
+&lt;p&gt;結局伝えたいことが伝わらないことには意味がないので書いて満足、ではなくドキュメントを書くことの目的を見失わないようにしていきたい。&lt;/p&gt;
+&lt;h2 id=&#34;文書構造や文章量が適切だと分かりやすい&#34;&gt;文書構造や文章量が適切だと分かりやすい&lt;/h2&gt;
+&lt;h3 id=&#34;221-大枠から始めてだんだん細かくしていこうp26&#34;&gt;2.2.1 大枠から始めてだんだん細かくしていこう（P26）&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;文章で何かを説明するときには、先に大枠を理解してもらい、それから段々細かい 内容にしていくという順番を意識しましょう。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以前上司にレビューで指摘してもらって以来意識するようになった。&lt;/p&gt;
+&lt;p&gt;コンテキストを共有していない人とコミュニケーションを取る時は特に重要だと感じている。自分と相手が持っている情報の差分を埋めるように情報を提示できるとスムーズにコミュニケーションを取れる印象がある。&lt;/p&gt;
+&lt;h3 id=&#34;既知から未知に繋ごうp28&#34;&gt;既知から未知に繋ごう（P28）&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;文章を書くとき、「大枠から詳細へ」の他に意識すべきもう1つの順番は「既知から未知へ」です。
+技術ドキュメントを読んでいても、最初から知らない単語や知らない概念ばかりが次から次へと出てくると、「知らないことについて説明してくれているけど、その説明がまず分からない」という状態になります。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;あまり意識したことがなかった。&lt;/p&gt;
+&lt;p&gt;一度にまとまった情報量を記述したい時にはこのあたりまで意識して書くと認知負荷が減ってよさそう。&lt;/p&gt;
+&lt;h2 id=&#34;再利用しやすい文章にする&#34;&gt;再利用しやすい文章にする&lt;/h2&gt;
+&lt;h3 id=&#34;242-並列はナカグロで書かないp34&#34;&gt;2.4.2 並列はナカグロ（・）で書かない（P34）&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;文章の中で並列を表そうとして「ホーム・検索・マイページ・ヘルプのタブは非表示にできません」のようにナカグロ(・)を使っていると、再利用されて箇条書きになったときに、次のような見た目になることがあります。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;着せかえの設定時、以下の機能は非表示にしたり、見た目を変更したりできません。
+・ホーム・検索・マイページ・ヘルプのタブ
+・トレンドワード機能
+・ID連携機能
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;p&gt;対策として、最初から箇条書きにしておくか、読点を使うといいとのこと。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;いつもどう書くか迷っていたが&lt;code&gt;・&lt;/code&gt;で並列関係を表現すると上記のデメリットがあるので読点を使うようにしてみようと思う。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;244-リンクテキストをこちらにしないp35&#34;&gt;2.4.4 リンクテキストを「こちら」にしない（P35）&lt;/h3&gt;
+&lt;p&gt;リンク切れになったときやテキストだけコピーされたときにリンク先がどこを指しているのかわからなくなるため、以下のようにどういったページなのかも含めて書くのがいいとのこと。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;また「詳しくは&lt;a href=&#34;https://blog.kyu08.com/BankCodeAPI/reference/&#34; &gt;Shops APIのAPIリファレンス&lt;/a&gt;
+をご覧ください」&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;また、読み手としてもリンクを踏む前にどんなページへ飛ばされるのかわかるというメリットも紹介されていた。&lt;/p&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;具体的な知見が理由とセットで書いてあってとても勉強になった。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;チームで仕事をする上で認知負荷を下げる工夫の重要性を日々感じるのでこれから意識的に実践していきたい。&lt;/p&gt;
+&lt;p&gt;紹介したトピック以外にもたくさんの知見が紹介されていたので気になった方はこちらからぜひ購入してみてください。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://techbookfest.org/product/3t8AGqtB65jsPtPhx6m5fr&#34; target=&#34;_blank&#34; &gt;読み手につたわる文章 - テクニカルライティング - 技術書典マーケット&lt;/a&gt;
+&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;余談だがちゃんと理由まで書かれているとスムーズに理解できるのでちゃんと背景や理由を説明するのは重要だと感じた。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
     <item>
       <title>『いちばんやさしいアジャイル開発の教本』 を読んだ</title>
       <link>https://blog.kyu08.com/posts/ichiban-yasashii-agile-no-kyouhon/</link>
