@@ -292,9 +292,28 @@ func Map(f *os.File, prot, flags int) (MMap, error)
 
 並行処理を使うことで小さい規模のI/Oの効率化は十分に行えるが、select属はC10K問題と呼ばれる、万の単位の入出力を効率よく扱うための手法として有効。
 
+## 第11章 コマンドシェル101
+シェルとは、ユーザーがコンピューターを操作するために使う接点となるシステムにおいてコンピューターシステムの殻（shell）となるプログラムのこと。
+
+### シェルがないシステム
+Distrolessと呼ばれるコンテナイメージはシェルがないため、セキュリティホールをついてシステムに侵入されることがない。[^5]（当然攻撃の脅威がゼロになるわけではない）
+
+### シェルがコマンドを起動するまで
+シェルがコマンドを起動するまでには次のようなことを行っている。
+
+1. ユーザーの入力を受け付ける
+1. 入力されたテキストの分解
+1. コマンドと引数の前処理
+1. 実行ファイルの探索
+1. ワイルドカードの展開
+1. プロセスの起動
+
+
+「11.5.3 コマンドと引数の前処理」で紹介されていたが、`$(which nvim)`と同様に`` `which nvim` ``でもコマンドの実行結果を変数に代入することができるのは知らなかった。
+
 
 [^1]: Neovimでのデバッガの環境構築は [nvim-dapでGolangのデバッグ環境構築](https://zenn.dev/saito9/articles/32c57f776dc369) を参考にした
 [^2]: `Sysfd`の定義はgolang/go/src/internal/poll/fd_unix.go#L23(https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23) にある。
 [^3]: `io.Pipe`の使いどころに関しては [Go言語のio.Pipeでファイルを効率よくアップロードする方法](https://medium.com/eureka-engineering/file-uploads-in-go-with-io-pipe-75519dfa647b) が大変参考になった。
 [^4]: cf. [kyu08/go-system-programming/4-channel/unbufferedchannel/main.go#L8](https://github.com/kyu08/go-system-programming/blob/b9da4a0ce759b2df4ce884ab61248fb893b60bef/4-channel/unbufferedchannel/main.go#L8)
-
+[^5]: Distrolessに対して、「コンテナイメージが軽量になる」以外のメリットを感じていなかったが書かれている通りセキュリティ面でもメリットがあると気付いた。
