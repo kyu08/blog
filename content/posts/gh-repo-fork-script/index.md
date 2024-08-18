@@ -17,9 +17,9 @@ color: ""
 
 ## モチベーション
 <!-- textlint-disable ja-technical-writing/no-doubled-joshi -->
-GitHubにホストされているOSSにPRを出す時にforkしてからローカルにcloneするが、ブラウザのforkボタンを使ってforkすると時間がかかることが多い。
+GitHubにホストされているOSSにPRを出す時にforkしてからローカルにcloneするが、ブラウザのforkボタンを使ってforkすると時間がかかることが多くストレスに感じていた。
 <!-- textlint-enable ja-technical-writing/no-doubled-joshi -->
-そのため、CLIでワンコマンドでforkとcloneをできるようにした。
+そのためCLI上でforkとcloneを行うスクリプトを書いた。
 
 これまでの手順は以下のような手順が必要だった。
 
