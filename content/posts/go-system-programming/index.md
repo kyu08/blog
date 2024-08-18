@@ -15,6 +15,12 @@ hideComments: false
 color: ""
 ---
 
+『Goならわかるシステムプログラミング 第2版』を一通り読んだので感想や学んだことをまとめておく。
+
+低レイヤに興味がある方にはとてもおすすめなので買って読んでみてください。
+
+https://www.lambdanote.com/products/go-2
+
 # 第1章 Go言語で覗くシステムプログラミングの世界
 - デバッガを使って`fmt.Println`の動作をシステムコールまで追った。[^1]
 - 当然だがデバッガを使うと変数の中身に何が入ってるかがわかって便利。
@@ -357,6 +363,9 @@ https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4
 - カレントのディレクトリはルートに移動
 - フォークしてからブートプロセスのinitを親に設定し、実際の親はすぐに終了
 - 標準入出力も起動時のものから切り離される(通常は`dev/null`に設定される)
+
+## 第13章 シグナルによるプロセス間の通信
+
 
 [^1]: Neovimでのデバッガの環境構築は [nvim-dapでGolangのデバッグ環境構築](https://zenn.dev/saito9/articles/32c57f776dc369) を参考にした
 [^2]: `Sysfd`の定義はgolang/go/src/internal/poll/fd_unix.go#L23(https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23) にある。
