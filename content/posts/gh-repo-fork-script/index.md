@@ -16,7 +16,10 @@ color: ""
 ---
 
 ## モチベーション
-GitHubにホストされているOSSにPRを出す時にforkしてからローカルにcloneするが、ブラウザのforkボタンを使ってforkすると時間がかかることが多いのでCLIでワンコマンドでforkとcloneをできるようにした。
+<!-- textlint-disable ja-technical-writing/no-doubled-joshi -->
+GitHubにホストされているOSSにPRを出す時にforkしてからローカルにcloneするが、ブラウザのforkボタンを使ってforkすると時間がかかることが多い。
+<!-- textlint-enable ja-technical-writing/no-doubled-joshi -->
+そのため、CLIでワンコマンドでforkとcloneをできるようにした。
 
 これまでの手順は以下のような手順が必要だった。
 
@@ -46,7 +49,7 @@ alias gf=git-fork-clone
 ```
 
 ## 前提
-`gh`コマンドがインストールされていること
+`gh`コマンドがインストールされていること。
 
 ## 使い方
 
