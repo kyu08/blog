@@ -75,7 +75,10 @@ From github.com:cli/cli
 ✓ Cloned fork
 ```
 
-`git-fork-clone https://github.com/cli/cli/pulls` や `git-fork-clone cli/cli` のような形式でも動く。
+以下のような形式でも動く。
+
+- `git-fork-clone https://github.com/cli/cli/pulls`
+- `git-fork-clone cli/cli`
 
 ## まとめ
 また人類のOSS貢献力を加速させてしまいました。
