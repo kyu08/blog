@@ -22,7 +22,7 @@ https://github.com/pulls でクエリに
 
 ```shell
 
-is:pr archived:false is:closed author:@me is:public -user:@me
+is:pr archived:false is:closed author:@me is:public -user:@me created:2024-01-01..2024-12-31 
 
 ```
 を指定して検索するとこんな感じで表示される。
