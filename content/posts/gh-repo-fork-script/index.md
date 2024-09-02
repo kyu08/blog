@@ -43,7 +43,7 @@ function git-fork-clone() {
     echo "🐙 ${REPO} will be forked and cloned.\\n"
     # -- 以降のオプションはgit cloneに渡される
     # See: https://cli.github.com/manual/gh_repo_fork
-    gh repo fork ${REPO} --default-branch-only --clone=true -- --depth=1
+    gh repo fork ${REPO} --default-branch-only --clone=true -- --filter=blob:none
 }
 alias gf=git-fork-clone
 ```
