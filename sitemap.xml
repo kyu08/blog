@@ -3,22 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.kyu08.com/</loc>
-    <lastmod>2024-08-18T15:52:01+09:00</lastmod>
+    <lastmod>2024-09-03T00:54:12+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/cli/</loc>
-    <lastmod>2024-08-18T15:52:01+09:00</lastmod>
+    <lastmod>2024-09-03T00:54:12+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/gh-sync-remote-and-pull/</loc>
+    <lastmod>2024-09-03T00:54:12+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/github/</loc>
-    <lastmod>2024-08-18T15:52:01+09:00</lastmod>
+    <lastmod>2024-09-03T00:54:12+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/</loc>
-    <lastmod>2024-08-18T15:52:01+09:00</lastmod>
+    <lastmod>2024-09-03T00:54:12+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/</loc>
-    <lastmod>2024-08-18T15:52:01+09:00</lastmod>
+    <lastmod>2024-09-03T00:54:12+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/zsh/</loc>
-    <lastmod>2024-08-18T15:52:01+09:00</lastmod>
+    <lastmod>2024-09-03T00:54:12+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/gh-repo-fork-script/</loc>
     <lastmod>2024-08-18T15:52:01+09:00</lastmod>

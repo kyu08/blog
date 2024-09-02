@@ -164,6 +164,53 @@ if (!doNotTrack) {
     
       <article class="post on-list">
         <h1 class="post-title">
+          <a href="https://blog.kyu08.com/posts/gh-sync-remote-and-pull/">forkしたrepositoryのremoteを最新化しつつローカルにpullするスクリプトを書いた</a>
+        </h1>
+        <div class="post-meta">
+          
+            <time class="post-date">
+              2024-09-03 ::
+            </time>
+          
+          
+            <span class="post-author">kyu08</span>
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+            #<a href="https://blog.kyu08.com/tags/github/">GitHub</a>&nbsp;
+            
+            #<a href="https://blog.kyu08.com/tags/cli/">cli</a>&nbsp;
+            
+            #<a href="https://blog.kyu08.com/tags/zsh/">zsh</a>&nbsp;
+            
+          </span>
+        
+
+        
+  <img src="https://blog.kyu08.com/cover.png"
+    class="post-cover"
+    alt="forkしたrepositoryのremoteを最新化しつつローカルにpullするスクリプトを書いた"
+    title="Cover Image" />
+
+
+        <div class="post-content">
+          
+            tl;dr # forkをのremoteを更新しつつ、ローカルリポジトリを最新にする function git-sync() { REPO=$(git remote get-url origin | sed -E &#39;s%.+github.com/(.*).git$%\1%&#39;) echo &#34;🔄 Syncing ${REPO}...\\n&#34; gh repo sync ${REPO} &amp;&amp; git pull } alias gsy=git-sync 嬉しさ も
+          
+        </div>
+
+        
+          <div>
+            <a class="read-more button" href="/posts/gh-sync-remote-and-pull/">Read more →</a>
+          </div>
+        
+      </article>
+    
+      <article class="post on-list">
+        <h1 class="post-title">
           <a href="https://blog.kyu08.com/posts/gh-repo-fork-script/">ブラウザからforkすると遅いのでCLIからfork &amp; cloneするスクリプトを書いた</a>
         </h1>
         <div class="post-meta">

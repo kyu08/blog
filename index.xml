@@ -7,7 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sun, 18 Aug 2024 15:52:01 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Sep 2024 00:54:12 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>forkしたrepositoryのremoteを最新化しつつローカルにpullするスクリプトを書いた</title>
+      <link>https://blog.kyu08.com/posts/gh-sync-remote-and-pull/</link>
+      <pubDate>Tue, 03 Sep 2024 00:54:12 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/posts/gh-sync-remote-and-pull/</guid>
+      <description>tl;dr # forkをのremoteを更新しつつ、ローカルリポジトリを最新にする function git-sync() { REPO=$(git remote get-url origin | sed -E &amp;#39;s%.+github.com/(.*).git$%\1%&amp;#39;) echo &amp;#34;🔄 Syncing ${REPO}...\\n&amp;#34; gh repo sync ${REPO} &amp;amp;&amp;amp; git pull } alias gsy=git-sync 嬉しさ も</description>
+      <content>&lt;h2 id=&#34;tldr&#34;&gt;tl;dr&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# forkをのremoteを更新しつつ、ローカルリポジトリを最新にする&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; git-sync&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    REPO&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;git remote get-url origin | sed -E &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s%.+github.com/(.*).git$%\1%&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;🔄 Syncing &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;REPO&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;...\\n&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    gh repo sync &lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;REPO&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git pull
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias gsy&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;git-sync
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;嬉しさ&#34;&gt;嬉しさ&lt;/h2&gt;
+&lt;p&gt;もともとは以下の2ステップだったが前述のスクリプトを使うと1ステップにまとめることができる。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ブラウザで&lt;code&gt;Sync fork &amp;gt; Update branch&lt;/code&gt;をクリック&lt;/li&gt;
+&lt;li&gt;ローカルで&lt;code&gt;git pull&lt;/code&gt;を実行&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    </item>
+    
     <item>
       <title>ブラウザからforkすると遅いのでCLIからfork &amp; cloneするスクリプトを書いた</title>
       <link>https://blog.kyu08.com/posts/gh-repo-fork-script/</link>
