@@ -239,7 +239,7 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;🐙 </span><span style="color:#e6db74">${</span>REPO<span style="color:#e6db74">}</span><span style="color:#e6db74"> will be forked and cloned.\\n&#34;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e"># -- 以降のオプションはgit cloneに渡される</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e"># See: https://cli.github.com/manual/gh_repo_fork</span>
-</span></span><span style="display:flex;"><span>    gh repo fork <span style="color:#e6db74">${</span>REPO<span style="color:#e6db74">}</span> --default-branch-only --clone<span style="color:#f92672">=</span>true -- --depth<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    gh repo fork <span style="color:#e6db74">${</span>REPO<span style="color:#e6db74">}</span> --default-branch-only --clone<span style="color:#f92672">=</span>true -- --filter<span style="color:#f92672">=</span>blob:none
 </span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>alias gf<span style="color:#f92672">=</span>git-fork-clone
 </span></span></code></pre></div><h2 id="前提">前提<a href="#前提" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
