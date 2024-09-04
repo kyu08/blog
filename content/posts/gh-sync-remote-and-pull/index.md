@@ -15,9 +15,13 @@ hideComments: false
 color: ""
 ---
 
+## 前提
+- `gh`コマンドがインストールされていること
+- デフォルトブランチにいること
+
 ## tl;dr
 ```bash
-# forkをのremoteを更新しつつ、ローカルリポジトリを最新にする
+# forkしたrepositoryのremoteを更新しつつpullする
 function git-sync() {
     REPO=$(git remote get-url origin | sed -E 's%.+github.com/(.*).git$%\1%')
     echo "🔄 Syncing ${REPO}...\\n"
