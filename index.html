@@ -209,7 +209,7 @@ if (!doNotTrack) {
 
         <div class="post-content">
           
-            tl;dr # forkをのremoteを更新しつつ、ローカルリポジトリを最新にする function git-sync() { REPO=$(git remote get-url origin | sed -E &#39;s%.+github.com/(.*).git$%\1%&#39;) echo &#34;🔄 Syncing ${REPO}...\\n&#34; gh repo sync ${REPO} &amp;&amp; git pull } alias gsy=git-sync 嬉しさ も
+            前提 ghコマンドがインストールされていること デフォルトブランチにいること tl;dr # forkしたrepositoryのremoteを更新しつつpul
           
         </div>
 

@@ -6,7 +6,7 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="tl;dr # forkをのremoteを更新しつつ、ローカルリポジトリを最新にする function git-sync() { REPO=$(git remote get-url origin | sed -E &amp;#39;s%.&#43;github.com/(.*).git$%\1%&amp;#39;) echo &amp;#34;🔄 Syncing ${REPO}...\\n&amp;#34; gh repo sync ${REPO} &amp;amp;&amp;amp; git pull } alias gsy=git-sync 嬉しさ も" />
+<meta name="description" content="前提 ghコマンドがインストールされていること デフォルトブランチにいること tl;dr # forkしたrepositoryのremoteを更新しつつpul" />
 <meta name="keywords" content="GitHub, cli, zsh" />
 
   <meta name="robots" content="noodp" />
@@ -58,7 +58,7 @@ if (!doNotTrack) {
 <meta property="og:locale" content="ja" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="forkしたrepositoryのremoteを最新化しつつローカルにpullするスクリプトを書いた">
-<meta property="og:description" content="tl;dr # forkをのremoteを更新しつつ、ローカルリポジトリを最新にする function git-sync() { REPO=$(git remote get-url origin | sed -E &amp;#39;s%.&#43;github.com/(.*).git$%\1%&amp;#39;) echo &amp;#34;🔄 Syncing ${REPO}...\\n&amp;#34; gh repo sync ${REPO} &amp;amp;&amp;amp; git pull } alias gsy=git-sync 嬉しさ も" />
+<meta property="og:description" content="前提 ghコマンドがインストールされていること デフォルトブランチにいること tl;dr # forkしたrepositoryのremoteを更新しつつpul" />
 <meta property="og:url" content="https://blog.kyu08.com/posts/gh-sync-remote-and-pull/" />
 <meta property="og:site_name" content="blog.kyu08.com" />
 
@@ -174,7 +174,7 @@ if (!doNotTrack) {
       <span class="post-author">kyu08</span>
     
     
-      <span class="post-reading-time">:: 1 min read (153 words)</span>
+      <span class="post-reading-time">:: 1 min read (190 words)</span>
     
   </div>
 
@@ -203,6 +203,7 @@ if (!doNotTrack) {
       </h2>
       <nav id="TableOfContents">
   <ul>
+    <li><a href="#前提">前提</a></li>
     <li><a href="#tldr">tl;dr</a></li>
     <li><a href="#嬉しさ">嬉しさ</a></li>
   </ul>
@@ -211,8 +212,13 @@ if (!doNotTrack) {
   
 
   <div class="post-content"><div>
-        <h2 id="tldr">tl;dr<a href="#tldr" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># forkをのremoteを更新しつつ、ローカルリポジトリを最新にする</span>
+        <h2 id="前提">前提<a href="#前提" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li><code>gh</code>コマンドがインストールされていること</li>
+<li>デフォルトブランチにいること</li>
+</ul>
+<h2 id="tldr">tl;dr<a href="#tldr" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># forkしたrepositoryのremoteを更新しつつpullする</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> git-sync<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>    REPO<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>git remote get-url origin | sed -E <span style="color:#e6db74">&#39;s%.+github.com/(.*).git$%\1%&#39;</span><span style="color:#66d9ef">)</span>
 </span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;🔄 Syncing </span><span style="color:#e6db74">${</span>REPO<span style="color:#e6db74">}</span><span style="color:#e6db74">...\\n&#34;</span>
