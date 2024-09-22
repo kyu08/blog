@@ -84,9 +84,50 @@ Spannerテーブルの行は`PRIMARY_KEY`によって辞書順に並べかえら
 
 ![spanner-sharding.webp](spanner-sharding.webp)
 
+## [スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/schema-design?hl=ja#ordering_timestamp-based_keys)
+次のような場合はキー列をタイムスタンプ降順に格納することでホットスポットを回避する。
 
+- 最新の履歴を読み取る際、履歴にインターリーブ テーブルを使用しており、親行を読み取る場合
+- 連続したエントリを日付の新しい順に読み込む場合に、いつまで日付をさかのぼるか不明なとき
 
-<!-- ## [スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/schema-design?hl=ja#ordering_timestamp-based_keys) -->
+```sql
+CREATE TABLE UserAccessLog (
+UserId     INT64 NOT NULL,
+LastAccess TIMESTAMP NOT NULL,
+...
+) PRIMARY KEY (UserId, LastAccess DESC);
+```
+
+筆者はこれまでこのようなケースでは`UserAccessLog`テーブルにUUIDを付与し`LastAccess`降順なインデックスを作成することで対応することが多かった。この方法は選択肢として持てていなかったので必要になったら思い出せるとよさそう。
+
+このケースはアクセスログなのでWRITE頻度が高いテーブルを想定していると思われる。インデックスで対応する方式と比較するとWRITEコストを下げることができる点でメリットがありそう。
+
+と思っていたら続きにそのパターンの実装方法も書かれていた。
+
+### 値が単調に増加または減少する列へのインターリーブされたインデックスの使用
+
+次のようなテーブルがあるとする。
+
+```sql
+CREATE TABLE Users (
+UserId     INT64 NOT NULL,
+LastAccess TIMESTAMP,
+...
+) PRIMARY KEY (UserId);
+```
+
+<!-- textlint-disable ja-technical-writing/sentence-length -->
+このテーブルに対して次のような(インターリーブされていない && 最初のキーが単調増加する)インデックスを作成した場合、`LastAccess`は単調増加する値なので最後のスプリットにホットスポットが発生してしまう。
+<!-- textlint-disable ja-technical-writing/sentence-length -->
+```sql
+CREATE NULL_FILTERED INDEX UsersByLastAccess ON Users(LastAccess);
+```
+
+このようなケースでは次のような対処が考えられる。
+
+1. インデックスに`ShardId`を追加する
+1. インデックスをインターリーブする
+
 <!---->
 <!-- ## [セカンダリ インデックス  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja#add-index) -->
 <!---->
