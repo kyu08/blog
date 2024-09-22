@@ -128,11 +128,41 @@ CREATE NULL_FILTERED INDEX UsersByLastAccess ON Users(LastAccess);
 1. インデックスに`ShardId`を追加する
 1. インデックスをインターリーブする
 
-<!---->
-<!-- ## [セカンダリ インデックス  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja#add-index) -->
-<!---->
-<!-- ## [What DBAs need to know about Cloud Spanner: Keys and indexes | Google Cloud Blog](https://cloud.google.com/blog/products/gcp/what-dbas-need-to-know-about-cloud-spanner-part-1-keys-and-indexes/?hl=en) -->
-<!---->
+## [セカンダリ インデックス  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja#add-index)
+- Spannerではセカンダリインデックスに次のデータが格納される。
+    - ベーステーブルのすべてのキー列
+    - インデックスに含まれるすべての列
+    - `STORING`句で指定されたすべての列
+
+## NULL値の並び替え順
+SpannerではNULLを最小値として扱うため昇順の場合はNULLが先頭に、降順の場合は末尾に並ぶ。
+
+## 末尾のレコードの取得
+次のようなクエリを実行する場合は結果をすばやく取得することができる。これはSpannerがテーブルの行を`PRIMARY_KEY`によって辞書順に並べかえるため。
+
+```sql
+-- テーブル定義
+CREATE TABLE Songs (
+    SongId INT64 NOT NULL,
+    ...
+) PRIMARY KEY (SongId);
+
+-- クエリ
+SELECT SongId FROM Songs LIMIT 1;
+```
+
+しかしSpannerではテーブル全体をスキャンしないと列の最大値を取得することができないため次のようなクエリはすばやく結果を返さない。
+
+```sql
+SELECT SongId FROM Songs ORDER BY SongId DESC LIMIT 1;
+```
+
+このようなケースでは次のようにPK降順のインデックスを明示的に作成することで読み取りパフォーマンスを向上させることができる。
+
+```sql
+CREATE INDEX SongIdDesc On Songs(SongId DESC);
+```
+
 <!-- ## [Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com](https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/) -->
 <!-- <!-- TODO: 本当に現在と異なりそうかチェック --> -->
 <!---->
