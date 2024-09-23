@@ -3,7 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.kyu08.com/</loc>
-    <lastmod>2024-09-23T10:44:54+09:00</lastmod>
+    <lastmod>2024-09-24T00:02:46+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/renew-oss-sponsoring/</loc>
+    <lastmod>2024-09-24T00:02:46+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/oss/</loc>
+    <lastmod>2024-09-24T00:02:46+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/</loc>
+    <lastmod>2024-09-24T00:02:46+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/rust/</loc>
+    <lastmod>2024-09-24T00:02:46+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/</loc>
+    <lastmod>2024-09-24T00:02:46+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/tui/</loc>
+    <lastmod>2024-09-24T00:02:46+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/cloud-spanner/</loc>
     <lastmod>2024-09-23T10:44:54+09:00</lastmod>
@@ -12,12 +30,6 @@
     <lastmod>2024-09-23T10:44:54+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/google-cloud/</loc>
-    <lastmod>2024-09-23T10:44:54+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/posts/</loc>
-    <lastmod>2024-09-23T10:44:54+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/</loc>
     <lastmod>2024-09-23T10:44:54+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/cli/</loc>
@@ -90,9 +102,6 @@
     <lastmod>2023-12-30T00:03:17+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/fzf-make/</loc>
-    <lastmod>2023-12-30T00:03:17+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/oss/</loc>
     <lastmod>2023-12-30T00:03:17+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A/</loc>
@@ -168,9 +177,6 @@
     <lastmod>2023-06-06T01:15:48+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/fzf-make/</loc>
-    <lastmod>2023-03-31T01:15:48+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/rust/</loc>
     <lastmod>2023-03-31T01:15:48+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/fzf-bookmark-opener/</loc>
