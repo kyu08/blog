@@ -387,8 +387,15 @@ SELECT a.AlbumTitle FROM Albums a
 WHERE STARTS_WITH(a.AlbumTitle, @prefix);
 ```
 
-<!-- ## [クエリ実行プラン  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja) -->
-<!---->
+## [クエリ実行プラン  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja)
+CPUの消費量が多いクエリの場合、実行計画は30日間保存されている。
+
+確認方法は以下。
+
+[サンプリングされたクエリプランを表示する](https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries)
+
+クエリごとにレイテンシや返された行数、スキャン行数の平均値や実行回数確認することができるためチューニングの際にかなり便利そう。
+
 <!-- ## [Cloud Spanner における各種トランザクションの使い分け](https://zenn.dev/google_cloud_jp/articles/15d34df66becfe) -->
 <!---->
 
