@@ -315,8 +315,78 @@ Spannerのレプリカセットの構成については次の記事が非常に�
 
 [Cloud Spanner におけるトランザクションのロックについて](https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner)
 
-<!-- ## [SQL のベスト プラクティス  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja#optimize-scans) -->
-<!---->
+## [SQL のベスト プラクティス  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja#optimize-scans)
+
+### クエリパラメータの使用
+クエリパラメータを使用することで次のメリットがある。
+
+- **キャッシュが容易になるためクエリのパフォーマンスが向上する**
+- 文字列の値をエスケープする必要がないため構文エラーのリスクが減る
+- SQLインジェクションを防ぐことができる
+
+### 範囲キーのルックアップを最適化する
+
+キーのリストが短く、連続していない場合は次のように`IN UNNEST`を使用する。
+
+```sql
+SELECT *
+FROM Table AS t
+WHERE t.Key IN UNNEST (@KeyList)
+```
+
+キーのリストが連続して範囲内である場合には次のように下限と上限を設定する。`[@min, @max]`の範囲をすべてスキャンするため効率的にスキャンできる。
+
+```sql
+SELECT *
+FROM Table AS t
+WHERE t.Key BETWEEN @min AND @max
+```
+
+### 結合を最適化する
+
+#### 可能な限りインターリーブされたテーブルのデータを主キーによって結合する
+
+インターリーブされた子行とそのルート行は同じスプリットに格納されることが保証されているためローカルで結合することができ、効率的に結合できるため。
+
+#### 結合の順序を強制する
+
+Spanner側の最適化によって結合順序が変更され（この場合は`Singers JOIN Albums`と記述したが`Albums JOIN Singers`の順序に変更されたケース）パフォーマンスが低下した場合などは`FORCE_JOIN_ORDER`ヒントを使用することで結合順序を強制することができる。
+
+```sql
+SELECT *
+FROM Singers AS s JOIN@{FORCE_JOIN_ORDER=TRUE} Albums AS a
+ON s.SingerId = a.Singerid
+WHERE s.LastName LIKE '%x%' AND a.AlbumTitle LIKE '%love%';
+```
+
+#### JOINアルゴリズムを指定する
+次のように`JOIN_METHOD`ヒントを使用することでJOINアルゴリズムを指定することができる。
+
+```sql
+SELECT *
+FROM Singers s JOIN@{JOIN_METHOD=HASH_JOIN} Albums AS a
+ON a.SingerId = a.SingerId
+```
+
+JOINアルゴリズムについては次の記事が詳しい。
+
+[Cloud Spannerのパフォーマンスチューニングの勘所](https://zenn.dev/facengineer/articles/cc0cab5c7e9a1c#join%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0)
+
+### `LIKE`の代わりに`STARTS_WITH`を使用する
+Spannerはパラメータ化された`LIKE`パターンを実行時まで評価しないのですべての行を読み取ったうえで`LIKE`式で評価し、一致しない行を除外するためパフォーマンスが悪い。
+
+適切なインデックスが作成されている場合は`LIKE`の代わりに`STARTS_WITH`を使用するとSpannerはクエリ実行プランをより効率的に最適化することができる。
+
+```sql
+-- 非推奨
+SELECT a.AlbumTitle FROM Albums a
+WHERE a.AlbumTitle LIKE @like_clause;
+
+-- 推奨
+SELECT a.AlbumTitle FROM Albums a
+WHERE STARTS_WITH(a.AlbumTitle, @prefix);
+```
+
 <!-- ## [クエリ実行プラン  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja) -->
 <!---->
 <!-- ## [Cloud Spanner における各種トランザクションの使い分け](https://zenn.dev/google_cloud_jp/articles/15d34df66becfe) -->
