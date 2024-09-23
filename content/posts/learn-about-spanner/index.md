@@ -134,10 +134,10 @@ CREATE NULL_FILTERED INDEX UsersByLastAccess ON Users(LastAccess);
     - インデックスに含まれるすべての列
     - `STORING`句で指定されたすべての列
 
-## NULL値の並び替え順
+### NULL値の並び替え順
 SpannerではNULLを最小値として扱うため昇順の場合はNULLが先頭に、降順の場合は末尾に並ぶ。
 
-## 末尾のレコードの取得
+### 末尾のレコードの取得
 次のようなクエリを実行する場合は結果をすばやく取得することができる。これはSpannerがテーブルの行を`PRIMARY_KEY`によって辞書順に並べかえるため。
 
 ```sql
@@ -163,11 +163,130 @@ SELECT SongId FROM Songs ORDER BY SongId DESC LIMIT 1;
 CREATE INDEX SongIdDesc On Songs(SongId DESC);
 ```
 
-<!-- ## [Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com](https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/) -->
-<!-- <!-- TODO: 本当に現在と異なりそうかチェック --> -->
-<!---->
-<!-- タイムスタンプ順に並んだレコードをいかに効率よく挿入、取得するかについての解説記事。2018年5月の記事なので現在とは異なる可能性があるため注意。 -->
-<!---->
+## [Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com](https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/)
+
+タイムスタンプ順に並んだレコードをいかに効率よく挿入、取得するかについての解説記事。
+
+### レコードの挿入時
+次のようにCompanyID、UserID、Timestampの3つのキーを持つログテーブルがあるとする。
+
+| CompanyId(PK) | UserId(PK) | Timestamp(PK) | LogEntry |
+| --- | --- | --- | --- |
+| Acme | 15b7bd1f-8473 | 2018-05-01T15:16:03.386257Z | |
+
+このスキーマにしたがって単純にデータを挿入していくとユーザー数が多い企業があるとホットスポットが発生してしまう。
+
+そのための次のような疑似コードで表現できる`EntryShardId`を用いることで挿入時のホットスポットを回避できる。
+
+```python
+entryShardId = hash(CompanyId + timestamp) % num_shards
+```
+
+### レコードの読み取り時
+次のようなインデックスを追加する。
+
+```sql
+CREATE INDEX LogEntriesByCompany ON LogEntries(EntryShardId, CompanyId, Timestamp)
+```
+
+
+そして以下のようなクエリを実行する。
+
+```sql
+SELECT CompanyId, UserId, Timestamp, LogEntry
+FROM LogEntries@{FORCE_INDEX=LogEntriesByCompany}
+   WHERE CompanyId = 'Acme'
+   AND EntryShardId BETWEEN 0 AND 9
+   AND Timestamp > '2018-05-01T15:14:10.386257Z'
+   AND Timestamp < '2018-05-01T15:16:10.386257Z'
+ORDER BY Timestamp DESC;
+```
+
+こうすることでインデックスを使って10個の論理シャードから条件にあったレコードを効率よく取得することができる。
+
+### 余談
+前章のクエリのWHERE句内で以下のように`CompanyId, EntryShardId`の順で指定していたので正しくインデックスが使えるのか気になったので試してみた。
+
+```sql
+   WHERE CompanyId = 'Acme'
+   AND EntryShardId BETWEEN 0 AND 9
+```
+
+#### 準備
+
+任意のGoogle CloudプロジェクトでSpannerインスタンスを作成し、以下のDDLを実行してテーブルとインデックスを作成する。
+
+```sql
+CREATE TABLE LogEntries (
+  CompanyId STRING(36) NOT NULL,
+  UserId STRING(36) NOT NULL,
+  Timestamp TIMESTAMP NOT NULL,
+  EntryShardId INT64 NOT NULL,
+  LogEntry STRING(MAX) NOT NULL,
+) PRIMARY KEY (CompanyId, UserId, Timestamp);
+CREATE INDEX LogEntriesByCompany ON LogEntries(EntryShardId, CompanyId, Timestamp);
+```
+
+次にテストデータをINSERTする。
+
+| 項目 | 条件 |
+| --- | --- |
+| シャード数 | 10 |
+| Companyの数 | 5 |
+| 従業員数 | 20 |
+
+上記の条件で合計1000レコードを挿入するINSERT文を作成した。（スクリプトは[こちら](https://gist.github.com/kyu08/a751344fd76d4e50208164378a822dc1
+)）
+
+
+#### クエリの実行
+これに対して次の2つのクエリを実行し、実行計画を確認した。
+
+```sql
+-- 記事で紹介されていたクエリ
+SELECT
+  CompanyId,
+  UserId,
+  Timestamp,
+  LogEntry
+FROM
+  LogEntries@{FORCE_INDEX=LogEntriesByCompany}
+WHERE
+  CompanyId = 'amazon'
+  AND EntryShardId BETWEEN 0 AND 9
+  AND Timestamp > '2023-01-01T00:00:00.386257Z'
+  AND Timestamp < '2023-01-01T00:00:05.386257Z'
+ORDER BY
+  Timestamp DESC;
+```
+
+```sql
+-- CompanyId, EntryShardIdの順番を逆にしてみたクエリ
+SELECT
+  CompanyId,
+  UserId,
+  Timestamp,
+  LogEntry
+FROM
+  LogEntries@{FORCE_INDEX=LogEntriesByCompany}
+WHERE
+  EntryShardId BETWEEN 0 AND 9
+  AND CompanyId = 'amazon'
+  AND Timestamp > '2023-01-01T00:00:00.386257Z'
+  AND Timestamp < '2023-01-01T00:00:05.386257Z'
+ORDER BY
+  Timestamp DESC;
+```
+
+#### 結果
+結論からいうとどちらのクエリでも同様にインデックスを利用できていた。おそらくSpannerのオプティマイザがいい感じに判断してくれていうと思われる。以下が実際の実行計画。
+
+記事で紹介されていたクエリ
+![original.webp](original.webp)
+
+CompanyId, EntryShardIdの順番を逆にしてみたクエリ
+![swap.webp](swap.webp)
+
 <!-- ## [Spanner の読み取りと書き込みのライフサイクル  |  Google Cloud](https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja) -->
 <!---->
 <!-- ## [SQL のベスト プラクティス  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja#optimize-scans) -->
