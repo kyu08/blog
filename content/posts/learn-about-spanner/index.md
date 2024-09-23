@@ -5,7 +5,7 @@ keywords: ["Google Cloud", "Cloud Spanner"]
 
 cover: "https://blog.kyu08.com/cover.png"
 description: ""
-date: 2024-09-21T19:44:54+09:00
+date: 2024-09-23T10:44:54+09:00
 author: "kyu08"
 authorTwitter: "kyu08_"
 draft: false
@@ -15,7 +15,7 @@ hideComments: false
 color: ""
 ---
 
-普段業務でCloud Spannerを使っているが、雰囲気で使っている自覚が大いにあるのでちゃんと公式ドキュメントを読んで知らなかったことを自分用のメモとしてまとめてみる。
+普段業務でCloud Spannerを使っているが、雰囲気で使っている自覚が大いにあるのでドキュメントやブログを読んで知らなかったことを自分用のメモとしてまとめてみる。
 
 ## [Spanner のスキーマ設計の最適化  |  Google Cloud](https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja#tradeoffs_of_locality)
 - キー定義とインターリーブの2つはスケーラビリティに大きな影響を与える
@@ -396,8 +396,10 @@ CPUの消費量が多いクエリの場合、実行計画は30日間保存され
 
 クエリごとにレイテンシや返された行数、スキャン行数の平均値や実行回数確認することができるためチューニングの際にかなり便利そう。
 
-<!-- ## [Cloud Spanner における各種トランザクションの使い分け](https://zenn.dev/google_cloud_jp/articles/15d34df66becfe) -->
-<!---->
+## まとめ
+Spannerの気持ちが少しわかった。これまで漫然とドキュメントを読んで頭に入らなかったり記憶が定着しなかったりしたが、ブログにアウトプットしながら読むと理解度も定着度も（モチベーションも）上がるのでやってよかった。
+
+次はCloud Runとも仲良くなりたい。
 
 [^1]: ①ルートテーブル②インターリーブされたテーブル③インターリーブの子を持たない通常のテーブルの3種類だと思い込んでいたが③は①として扱われるようだ。
 
