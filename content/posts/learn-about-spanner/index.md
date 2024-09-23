@@ -287,8 +287,34 @@ ORDER BY
 CompanyId, EntryShardIdの順番を逆にしてみたクエリ
 ![swap.webp](swap.webp)
 
-<!-- ## [Spanner の読み取りと書き込みのライフサイクル  |  Google Cloud](https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja) -->
-<!---->
+## [Cloud Spanner におけるトランザクションのロックについて](https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner)
+
+> Spanner におけるトランザクションのロックの粒度は、セル、つまり行と列の交点となります。
+
+なのでREADの範囲(行および列)を最小限にすることでロック範囲を最小限にすることができる。
+
+他には複数のトランザクションが同時に実行された際の優先度について詳しく解説してあった。
+
+## [Spanner の読み取りと書き込みのライフサイクル  |  Google Cloud](https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja)
+Spannerのレプリカセットの構成については次の記事が非常にわかりやすい。
+
+[Cloud Spannerのスプリット分散をわかった気になる](https://zenn.dev/facengineer/articles/bca8790087b0e4)
+
+読み込みおよび書き込み時のロックの取り方について詳しく解説されていた。
+
+### 読み取り専用トランザクション
+- ロックを取得せずに実行できるため高速
+- ステイル読み込みを使用できる場合はより高速にすることができる（他のオペレーションに与えるパフォーマンス影響も抑えることができる）
+    - Spannerはレプリカへの同期を10秒ごとに行っているため、10秒以上前のデータをステイル読み込みできる場合は読み取りのスループットをさらに高めることができる。
+
+### 読み取り / 書き込みトランザクション
+- 読み取った行に対して共有ロックを取得する
+- 書き込む行に対して排他ロックを取得する
+
+ちなみに複数のトランザクションが同時に実行された場合の挙動については次の記事が詳しかった。
+
+[Cloud Spanner におけるトランザクションのロックについて](https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner)
+
 <!-- ## [SQL のベスト プラクティス  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja#optimize-scans) -->
 <!---->
 <!-- ## [クエリ実行プラン  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja) -->
