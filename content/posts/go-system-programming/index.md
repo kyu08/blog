@@ -387,6 +387,206 @@ https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4
 ### goroutineのメリット
 大量のクライアントからのリクエストを効率よく捌きたいとき（いわゆるC10K）に、クライアントごとに1つのgoroutineを割り当てたとしても少ないメモリ消費量で処理できる（前述の通りgoroutineは起動時の初期スタックメモリのサイズが小さいため）
 
+## 第15章 並行・並列処理の手法と設計のパターン
+### 代表的な並行・並列処理の手法
+- マルチプロセス
+- イベント駆動
+- マルチスレッド
+- ストリーミング・プロセッシング
+
+### イベント駆動
+- 主に並列化ではなく並行処理のために使われる。
+- I/Oバウンドなプログラムで用いられる。
+- OSに依頼したデータ受信の仕事が終わるたびにコールバックが返ってくる仕組み。
+- 単体ではCPUを使いこなしにくい点が欠点。
+
+### マルチスレッド
+- 同じメモリ空間内で多くのCPUが同時に実行するための仕組み
+    - Linuxではプロセスもスレッドもカーネル上は同じ構造体として表現されている。親のプロセスとメモリ空間を共有していなければプロセス、共有していればスレッド。
+- 利点はCPUのパフォーマンスを引き出すことができる点。
+- 欠点はプロセスほどではないが、OSのスレッドの場合は比較的大きなスタックメモリ（1~2MB）を必要とし、起動時間もややかかる。そのためスレッドプールを作っておき、必要になったらすぐ使えるようにする、ということが行なわれている。
+
+
+### Goにおける並行・並列処理のパターン集
+アムダールの法則: 並列化を導入するとどれだけ効率が改善するかを表す数式
+
+```
+S(N) = 1 / ((1 - P) + P/N)
+```
+ここで`P`は並列化できる仕事の割合、`N`は並列数である。
+
+P = 0.5, N = ∞のとき、S(N) = 2倍になり、P = 0.9, N = ∞のとき、S(N) = 10倍になる。このことからもわかるように、並列数よりも並列化できるタスクの割合が支配的になる。
+
+Pを改善するためのアイディアとして次のような手法が考えられる。
+
+- 同期処理を非同期にする
+- 非同期にしたものを同期化する
+- タスク生成と処理を分ける（Producer-Consumerパターン）
+- 開始した順で処理する（チャネルのチャネル）
+- タスク処理が詰まったら待機（バックプレッシャー）
+- 並列なForループ
+- 決まった数のgoroutineでタスクを消化する（ワーカープール）
+- 依存関係のあるタスクを表現する（Future/Promise）
+- イベントの流れを定義する（ReactiveX）
+- 自立した複数のシステムで協調動作（アクターモデル）
+
+
+#### 同期 -> 非同期化
+I/O処理などの重いタスクを非同期化する
+
+#### 非同期 -> 同期化
+非同期化したタスクはどこかで同期化する必要がある。そのための一番簡単な手法がチャネル。
+
+#### タスク生成と処理を分ける（Producer-Consumerパターン）
+GoではチャネルでProducerとConsumerを接続することで簡単に実現できる。
+
+#### 開始した順で処理する（チャネルのチャネル）
+チャネルを用いると複数の処理を終了した順に取り出すことができる。
+```go
+// 終了した順に書き出し
+// チャネルに結果が投入された順に処理される
+func writeToConn(responses chan *http.Response, conn net.Conn) {
+	defer conn.Close()
+	// 順番に取り出す
+	for response := range responses {
+		response.Write(conn)
+	}
+}
+```
+
+チャネルのチャネルを使うと処理を開始した順で処理をすることができる。
+```go
+// 開始した順に書き出し
+// チャネルにチャネルを入れた(開始した)順に処理される
+func writeToConn(sessionResponses chan chan *http.Response, conn net.Conn) {
+	defer conn.Close()
+	// 順番に取り出す
+	for sessionResponse := range sessionResponses {
+		// 選択された仕事が終わるまで待つ response := <-sessionResponse response.Write(conn)
+	}
+}
+```
+
+#### タスク処理が詰まったら待機（バックプレッシャー）
+以下のようなバッファ付きチャネルを使うことで実現できる。
+```go
+tasks := make(chan string, 10)
+```
+
+#### 並列Forループ
+- forループ内の処理をgoroutineで実行することでループ処理を並列化することができる。
+- ループ内部の処理が小さすぎるとオーバーヘッドのほうが大きくなり効率が上がらないことがあるので注意が必要。
+
+#### 決まった数のgoroutineでタスクを消化する（ワーカープール）
+- 特にCPUバウンドな処理ではCPUのコア数以上にgoroutineを作ってもスループットは上がらないため、CPUコア数分のワーカーを作成してタスクを消化するのが効果的な場合がある。
+
+#### 依存関係のあるタスクを表現する（Future/Promise）
+Futureを`chan string`で表現すると、必要なデータが揃ったらタスクを逐次実行することができる。
+
+後続の処理に結果を引き継ぎたいが、処理自体は可能な限り非同期で実行したい場合に有効そう。
+
+```go
+func readFile(path string) chan string {
+	// ファイルを読み込み、その結果を返すFutureを返す
+	promise := make(chan string)
+	go func() {
+		content, err := os.ReadFile(path)
+		if err != nil {
+			fmt.Printf("read error %s\n", err.Error())
+			close(promise)
+		} else {
+			// 約束を果たした
+			promise <- string(content)
+		}
+	}()
+	return promise
+}
+
+func printFunc(futureSource chan string) chan []string { 
+    // 文字列中の関数一覧を返すFutureを返す
+	promise := make(chan []string)
+	go func() {
+		var result []string
+		// futureが解決するまで待って実行
+		for _, line := range strings.Split(<-futureSource, "\n") {
+			if strings.HasPrefix(line, "func ") {
+				result = append(result, line)
+			}
+		}
+		// 約束を果たした
+		promise <- result
+	}()
+	return promise
+}
+
+func main() {
+	futureSource := readFile("main.go")
+	futureFuncs := printFunc(futureSource)
+	fmt.Println(strings.Join(<-futureFuncs, "\n"))
+}
+```
+
+また、次のような構造体を定義することで上記のFutureの値を複数回読み取ることができる。（上記の実装ではバッファなしチャネルを使っているので複数回受信してしまうと処理がブロックされてしまう）
+```go
+type StringFuture struct {
+	receiver chan string
+	cache    string
+}
+
+func NewStringFuture() (*StringFuture, chan string) {
+	f := &StringFuture{
+		receiver: make(chan string),
+	}
+	return f, f.receiver
+}
+
+func (f *StringFuture) Get() string {
+	r, ok := <-f.receiver
+	if ok {
+		close(f.receiver)
+		f.cache = r
+	}
+	return f.cache
+}
+
+func (f *StringFuture) Close() {
+	close(f.receiver)
+}
+```
+
+#### イベントの流れを定義する：ReactiveX
+ここでは[RxGo](https://github.com/ReactiveX/RxGo)を使ってイベントの流れを定義する方法が紹介されていた。
+まずこのようにwatcherを定義する。
+```go
+watcher := observer.Observer{
+    NextHandler: func(item any) {
+        line := item.(string)
+        if strings.HasPrefix(line, "func ") {
+            fmt.Println(line)
+        }
+    },
+    ErrHandler: func(err error) {
+        fmt.Printf("Encountered error: %v\n", err)
+    },
+    DoneHandler: func() {
+        fmt.Println("Done!")
+    },
+}
+```
+以下のようにすると`NextHandler`に登録された関数に`line`が渡される。
+```go
+emitter <- line
+```
+そして次のようにすると`ErrHandler`に登録された関数が呼ばれる。
+```go
+emitter <- err
+```
+
+渡ってきた値に応じて処理を分岐させたく、かつ何度も同一のイベントが発生するケースではこの方法を使うとスッキリ書けていいかもしれない。
+
+#### 自律した複数のシステムで協調動作：アクターモデル
+- アクターと呼ばれる自律した多数のコンピューターが協調して動作するというモデル。
+- 各アクターは別のアクターから送られてくるメッセージを受け取る**メッセージボックス**を持つ。
 
 [^1]: Neovimでのデバッガの環境構築は [nvim-dapでGolangのデバッグ環境構築](https://zenn.dev/saito9/articles/32c57f776dc369) を参考にした
 [^2]: `Sysfd`の定義はgolang/go/src/internal/poll/fd_unix.go#L23(https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23) にある。
