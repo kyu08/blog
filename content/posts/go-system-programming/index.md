@@ -364,8 +364,50 @@ https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4
 - フォークしてからブートプロセスのinitを親に設定し、実際の親はすぐに終了
 - 標準入出力も起動時のものから切り離される(通常は`dev/null`に設定される)
 
-<!-- ## 第13章 シグナルによるプロセス間の通信 -->
-<!-- TODO: いったん飛ばしたのであとで読む -->
+## 第13章 シグナルによるプロセス間の通信
+シグナルには主に2つの用途がある。
+
+- **プロセス間通信**: カーネルが仲介してあるプロセスから別のプロセスへとシグナルを送るケース。自分自身にシグナルを送ることもできる。
+- **ソフトウェア割り込み**: システムで発生したイベントがシグナルとしてプロセスに送られる。シグナルを受け取ったプロセスは現在置くなっているタスクを中断してあらかじめ登録しておいた処理を実行する。
+
+システムコールはユーザー空間で動作しているプロセスからカーネル空間にはたらきかけるためのインターフェースだが、その逆方向がシグナルだと考えることができる。
+
+- システムコールでは最大7つほどの引数を指定できるのに対し、ソフトウェア割り込みとしてのシグナルで送信できるのはその種類のみ。
+- プロセスは受け取ったシグナルを無視するか補足して処理する。
+
+### シグナルのハンドラを書く
+Goでは次のように`signal.NotifyContext()`を使ってシグナルを受け取ることができる。
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os/signal"
+	"syscall"
+	"time"
+)
+
+func main() {
+	ctx := context.Background()
+	sigctx, cancel := signal.NotifyContext(ctx, syscall.SIGINT, syscall.SIGTERM)
+	defer cancel()
+	toctx, cancel2 := context.WithTimeout(ctx, time.Second*5)
+	defer cancel2()
+
+	select {
+	case <-sigctx.Done():
+		fmt.Println("signal")
+	case <-toctx.Done():
+		fmt.Println("timeout")
+	}
+}
+```
+
+KubernetesやDockerでは外からタスクを終了させるとき、まずSIGTERMをアプリケーションに対して送信する。(SIGTERM: `kill()`システムコールや`kill`コマンドがデフォルトで送信するシグナル。プロセスを終了させるもの)
+
+(GoアプリケーションのGraceful Shutdownの実装例でSIGTERMをハンドリングするのをよく見るのはだからか、と納得した。)
 
 ## 第14章 Go言語と並列処理
 ### 並行処理と並列処理の違い
@@ -587,6 +629,9 @@ emitter <- err
 #### 自律した複数のシステムで協調動作：アクターモデル
 - アクターと呼ばれる自律した多数のコンピューターが協調して動作するというモデル。
 - 各アクターは別のアクターから送られてくるメッセージを受け取る**メッセージボックス**を持つ。
+
+## 第16章 Go言語のメモリ管理
+
 
 [^1]: Neovimでのデバッガの環境構築は [nvim-dapでGolangのデバッグ環境構築](https://zenn.dev/saito9/articles/32c57f776dc369) を参考にした
 [^2]: `Sysfd`の定義はgolang/go/src/internal/poll/fd_unix.go#L23(https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23) にある。
