@@ -9,7 +9,11 @@
     "preset-ja-technical-writing": {
       "sentence-length": {
         "max": 150
-      }
+      },
+      "no-doubled-joshi": false,
+      "max-kanji-continuous-len": false,
+      "ja-no-mixed-period": false,
+      "no-mix-dearu-desumasu": false
     }
   }
 }
