@@ -633,7 +633,97 @@ emitter <- err
 - 各アクターは別のアクターから送られてくるメッセージを受け取る**メッセージボックス**を持つ。
 
 ## 第16章 Go言語のメモリ管理
+### 仮想メモリ
+現代のOSではプロセスはメモリを読み書きするのに物理的なアドレスを直接扱うのではなく、プロセスごとに仮想的なメモリアドレス空間があり、それを使ってメモリにアクセスしている。この仮想的なメモリアドレス空間のことを仮想メモリという。
 
+仮想メモリのアドレスから実際の物理メモリにアクセスするために**ページテーブル**というデータ構造が使われる。**ページ**とはメモリを管理する単位のこと。
+
+仮想メモリのおかげで実際の保存領域が飛び飛びになっていたとしてもプロセスからはフラットなメモリ領域が確保されているように見える。
+
+仮想メモリは物理メモリのアドレスと1対1対応しているわけではなく、物理メモリのあるアドレスが複数の仮想メモリから参照されることもある。こうすることで共有ライブラリなどを複数のプロセスで利用でき省メモリになる。
+
+### OSカーネルがプロセスのメモリを確保するまで
+- プロセスは起動時にOSからメモリをもらう。OSはプロセスごとに仮想メモリの領域を確保する。
+- ユーザーのメモリ空間は大きく3つの連続したメモリ領域に分かれる。3つの領域の間の空きスペース分はメモリの確保が行われない。
+    ```
+    | ①プログラム + 静的データ | ヒープとして使われる領域 | ②共有ライブラリ |      | ③スタックなど |
+    小さいアドレス                                                                大きいアドレス -> 
+    ```
+
+### スタック
+関数を呼ぶとリターンアドレスや新しい関数のための作業メモリ領域として**スタックフレーム**と呼ばれるメモリ領域が確保される。
+
+スタックフレームはスレッドごとにあらかじめ確保されているメモリブロックに対して順番に追加したり削除されたりされるだけなので割当のコストはほぼゼロ。
+
+### Go言語でのスタックとヒープの使い分け
+Go言語では変数のデータをヒープに置くかスタックに置くかはコンパイラが自動的に判断する。以下はその一部。
+
+- `new`で初期化してもその関数内でしか利用されなければスタックに確保される。
+- ローカル変数として宣言してもそのポインタを他の関数に渡したり、関数の返り値として返すような場合にはヒープに確保される。
+
+Go言語でメモリがスタックとヒープのどちらに確保されるかを知りたい場合にはビルド時に`-gcflags -m`を渡すことで確認できる。
+
+ということで次のコードを使って上記の挙動を確認してみる。
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	strValue := "Hello, World!" // スタックに確保される(関数内でしか利用されていないため)
+	_ = strValue + ""
+
+	strPtr := new(string) // スタックに確保される(関数内でしか利用されていないため)
+	_ = *strPtr + ""
+
+	strPtr2 := new(string) // ヒープに確保される(他の関数に渡されているため)
+	receiveStrPtr(strPtr2)
+
+	strPtrFromFunc := returnStrPtr() // スタックに確保される(関数内でしか利用されていないため)
+	_ = *strPtrFromFunc + ""
+}
+
+func receiveStrPtr(argStrPtr *string) {
+	fmt.Printf("argStrPtr: %v\n", argStrPtr)
+}
+
+func returnStrPtr() *string {
+	str := "Hello, World!" // ヒープに確保される(関数の返り値として返されているため)
+	return &str
+}
+```
+
+`-gcflags -m`をつけてビルドしてみると次のようになりコードコメント通り、`strPtr2`と`str`がヒープに確保されていることがわかった。
+
+```sh
+$ go build -gcflags -m main.go
+# command-line-arguments
+./main.go:19:6: can inline receiveStrPtr
+./main.go:23:6: can inline returnStrPtr
+./main.go:13:15: inlining call to receiveStrPtr
+./main.go:15:32: inlining call to returnStrPtr
+./main.go:13:15: inlining call to fmt.Printf
+./main.go:20:12: inlining call to fmt.Printf
+./main.go:7:15: strValue + "" does not escape
+./main.go:9:15: new(string) does not escape
+./main.go:10:14: *strPtr + "" does not escape
+./main.go:12:16: new(string) escapes to heap
+./main.go:13:15: ... argument does not escape
+./main.go:16:22: *strPtrFromFunc + "" does not escape
+./main.go:19:20: leaking param: argStrPtr
+./main.go:20:12: ... argument does not escape
+./main.go:24:2: moved to heap: str
+```
+
+### ガベージコレクタ
+Goをはじめとして多くの言語ではマークアンドスイープという方式が採用されている。
+
+マークアンドスイープ方式では、まずメモリの領域をスキャンして必要なデータか否かをマークしていき、次のフェーズで不要なものを削除する。
+
+マークアンドスイープ方式では、不要なメモリを削除する間にプログラム全体を停止する必要がある。（これをストップザワールドと呼ぶ）
+
+Goではバージョンを重ねる事にストップザワールドの時間の短縮化が進んでいる。
 
 [^1]: Neovimでのデバッガの環境構築は [nvim-dapでGolangのデバッグ環境構築](https://zenn.dev/saito9/articles/32c57f776dc369) を参考にした
 [^2]: `Sysfd`の定義はgolang/go/src/internal/poll/fd_unix.go#L23(https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23) にある。
