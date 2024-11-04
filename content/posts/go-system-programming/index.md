@@ -38,8 +38,7 @@ https://www.lambdanote.com/products/go-2
 
 複数のファイル`f1`, `f2`を`os.Create()`する処理をデバッガーで追ってみたところ、それぞれファイルディスクリプタの値が`3`, `4`[^2]となっておりファイルディスクリプタの値が`3`からインクリメントされる様子を確認できた。
 
-<!-- TODO: 画像をローカルに保存してリンクを貼る -->
-![](https://github.com/kyu08/go-system-programming/assets/49891479/5552c07a-44e0-4ae0-8d82-f79f383392c5)
+![delve-neovim.webp](delve-neovim.webp)
 
 ## 第3章 低レベルアクセスへの入口1：io.Reader
 ### エンディアン変換
