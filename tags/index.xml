@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Tue, 24 Sep 2024 00:02:46 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Nov 2024 21:42:30 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS</title>
+      <link>https://blog.kyu08.com/tags/cs/</link>
+      <pubDate>Sun, 03 Nov 2024 21:42:30 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/cs/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>https://blog.kyu08.com/tags/go/</link>
+      <pubDate>Sun, 03 Nov 2024 21:42:30 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/go/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
     <item>
       <title>OSS</title>
       <link>https://blog.kyu08.com/tags/oss/</link>
@@ -119,16 +139,6 @@
     </item>
     
     <item>
-      <title>CS</title>
-      <link>https://blog.kyu08.com/tags/cs/</link>
-      <pubDate>Sun, 12 May 2024 15:32:42 +0900</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/cs/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
       <title>tmux</title>
       <link>https://blog.kyu08.com/tags/tmux/</link>
       <pubDate>Wed, 10 Apr 2024 23:12:22 +0900</pubDate>
@@ -204,16 +214,6 @@
       <pubDate>Sat, 18 Nov 2023 00:20:13 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/tags/plugin/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>Go</title>
-      <link>https://blog.kyu08.com/tags/go/</link>
-      <pubDate>Mon, 17 Jul 2023 14:21:29 +0900</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/go/</guid>
       <description></description>
       <content></content>
     </item>
