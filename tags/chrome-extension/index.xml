@@ -14,17 +14,10 @@
       <pubDate>Fri, 13 Dec 2024 00:00:00 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/chrome-extensions-for-dev-2024/</guid>
-      <description>本記事はUnipos Advent Calendar 2024 の13日目の記事です。 本記事では使ってみて便利だったChrome拡張を紹介します。 Stylus Stylus ユーザー定義のCSSを手軽に</description>
+      <description>本記事はUnipos Advent Calendar 2024 の13日目の記事です。 本記事では使ってみて便利だったChrome拡張を紹介します。 Notion Sidebar Tamer Notion Sidebar Tamer Notionのサイド</description>
       <content>&lt;p&gt;本記事は&lt;a href=&#34;https://qiita.com/advent-calendar/2024/unipos&#34; target=&#34;_blank&#34; &gt;Unipos Advent Calendar 2024&lt;/a&gt;
 の13日目の記事です。&lt;/p&gt;
 &lt;p&gt;本記事では使ってみて便利だったChrome拡張を紹介します。&lt;/p&gt;
-&lt;h2 id=&#34;stylus&#34;&gt;Stylus&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=ja&#34; target=&#34;_blank&#34; &gt;Stylus&lt;/a&gt;
-&lt;/p&gt;
-&lt;p&gt;ユーザー定義のCSSを手軽に適用できるChrome拡張です。&lt;/p&gt;
-&lt;p&gt;筆者の使い方としては&lt;a href=&#34;https://blog.kyu08.com/posts/refine-notion-gantt-chart/&#34; target=&#34;_blank&#34; &gt;Notionのガントチャートを見やすくしたり&lt;/a&gt;
-、GitHubのUIの幅を大きくしたりしています。&lt;/p&gt;
-&lt;p&gt;特にPR上で実行計画を見る際に便利です。&lt;/p&gt;
 &lt;h2 id=&#34;notion-sidebar-tamer&#34;&gt;Notion Sidebar Tamer&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://chromewebstore.google.com/detail/notion-sidebar-tamer/kkjflddbknmcnjodgeobojmdacilodlb?hl=ja&#34; target=&#34;_blank&#34; &gt;Notion Sidebar Tamer&lt;/a&gt;
 &lt;/p&gt;
@@ -36,6 +29,18 @@
 &lt;p&gt;&lt;img src=&#34;notion-sidebar-tamer-before.gif&#34; alt=&#34;notion-sidebar-tamer-before.gif&#34;&gt;&lt;/p&gt;
 &lt;p&gt;そこでNotion Sidebar Tamerを使うとカーソルをサイドバー付近に移動してもサイドバーが表示されなくなります。やったね！&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;notion-sidebar-tamer-after.gif&#34; alt=&#34;notion-sidebar-tamer-after.gif&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;google-search-results-shortcuts&#34;&gt;Google search results shortcuts&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://chromewebstore.google.com/detail/google%E6%A4%9C%E7%B4%A2%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88/dchaandmcifgjemlhiekookpgjmkcelg&#34; target=&#34;_blank&#34; &gt;Google search results shortcuts&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Google検索結果のページでキーボードショートカットを使えるようにするChrome拡張です。&lt;/p&gt;
+&lt;p&gt;筆者がよく使うのは以下です。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;↑: 1つ上の検索結果に移動&lt;/li&gt;
+&lt;li&gt;↓: 1つ下の検索結果に移動&lt;/li&gt;
+&lt;li&gt;Enter: 選択中の検索結果を開く&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以下のような操作がキーボードだけでできるようになります。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;google-search-results-shortcuts.gif&#34; alt=&#34;google-search-results-shortcuts.gif&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;vimium&#34;&gt;Vimium&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://chromewebstore.google.com/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=ja&#34; target=&#34;_blank&#34; &gt;Vimium&lt;/a&gt;
 &lt;/p&gt;
@@ -56,6 +61,13 @@
 &lt;p&gt;フォーカスできるテキストボックスが1つの場合はその要素にフォーカスが当たり、複数の場合はタブで切り替えることができます。
 これまではマウスを使ってフォーカスを当てていましたがこれを知ってからマウスへの依存をより下げることができました。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;vimium-gi.gif&#34; alt=&#34;vimium-gi.gif&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;stylus&#34;&gt;Stylus&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=ja&#34; target=&#34;_blank&#34; &gt;Stylus&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;ユーザー定義のCSSを手軽に適用できるChrome拡張です。&lt;/p&gt;
+&lt;p&gt;筆者の使い方としては&lt;a href=&#34;https://blog.kyu08.com/posts/refine-notion-gantt-chart/&#34; target=&#34;_blank&#34; &gt;Notionのガントチャートを見やすくしたり&lt;/a&gt;
+、GitHubのUIの幅を大きくしたりしています。&lt;/p&gt;
+&lt;p&gt;特にPR上で実行計画を見る際に便利です。&lt;/p&gt;
 &lt;h2 id=&#34;gcp-console-colorize&#34;&gt;GCP console colorize&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://chromewebstore.google.com/detail/gcp-console-colorize/higjahjicmccalicmgfpokdmooopdhej?hl=ja&#34; target=&#34;_blank&#34; &gt;GCP console colorize&lt;/a&gt;
 &lt;/p&gt;
@@ -79,18 +91,6 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;google-search-results-shortcuts&#34;&gt;Google search results shortcuts&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://chromewebstore.google.com/detail/google%E6%A4%9C%E7%B4%A2%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88/dchaandmcifgjemlhiekookpgjmkcelg&#34; target=&#34;_blank&#34; &gt;Google search results shortcuts&lt;/a&gt;
-&lt;/p&gt;
-&lt;p&gt;Google検索結果のページでキーボードショートカットを使えるようにするChrome拡張です。&lt;/p&gt;
-&lt;p&gt;筆者がよく使うのは以下です。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;↑: 1つ上の検索結果に移動&lt;/li&gt;
-&lt;li&gt;↓: 1つ下の検索結果に移動&lt;/li&gt;
-&lt;li&gt;Enter: 選択中の検索結果を開く&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;以下のような操作がキーボードだけでできるようになります。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;google-search-results-shortcuts.gif&#34; alt=&#34;google-search-results-shortcuts.gif&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;lttm&#34;&gt;LTTM&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://chromewebstore.google.com/detail/lttm/jdidcgkdggndpodjbipodfefnpgjooeh&#34; target=&#34;_blank&#34; &gt;LTTM&lt;/a&gt;
 &lt;/p&gt;
