@@ -100,10 +100,10 @@ Google Cloudのプロジェクトごとにヘッダーの色を変更するChrom
 
 以下のようにプロジェクトごとに色を分けておくとうっかり間違って操作することを防ぎやすくなります。（環境ごとに適切な権限管理をするのは前提として）
 
-| 環境      | イメージ画像                                                        |
-| ---       | ---                                                                 |
-| project-a | ![gcp-console-colorize-red.png](gcp-console-colorize-red.png)       |
-| project-b | ![gcp-console-colorize-yellow.png](gcp-console-colorize-yellow.png) |
+| 環境      | イメージ画像                                                          |
+| ---       | ---                                                                   |
+| project-a | ![gcp-console-colorize-red.webp](gcp-console-colorize-red.webp)       |
+| project-b | ![gcp-console-colorize-yellow.webp](gcp-console-colorize-yellow.webp) |
 
 ## LTTM
 [LTTM](https://chromewebstore.google.com/detail/lttm/jdidcgkdggndpodjbipodfefnpgjooeh)
