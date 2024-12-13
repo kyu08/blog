@@ -15,7 +15,7 @@ hideComments: false
 color: ""
 ---
 
-本記事は[Unipos Advent Calendar 2024](https://qiita.com/advent-calendar/2024/unipos)の14日目の記事です。
+本記事は[Unipos Advent Calendar 2024](https://qiita.com/advent-calendar/2024/unipos)の13日目の記事です。
 
 本記事では使ってみて便利だったChrome拡張を紹介します。
 
