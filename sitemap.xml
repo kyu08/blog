@@ -3,21 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.kyu08.com/</loc>
-    <lastmod>2024-11-08T23:34:37+09:00</lastmod>
+    <lastmod>2024-12-13T00:00:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/chrome-extension/</loc>
-    <lastmod>2024-11-08T23:34:37+09:00</lastmod>
+    <lastmod>2024-12-13T00:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/</loc>
+    <lastmod>2024-12-13T00:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/</loc>
+    <lastmod>2024-12-13T00:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/chrome-extensions-for-dev-2024/</loc>
+    <lastmod>2024-12-13T00:00:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/notion/</loc>
     <lastmod>2024-11-08T23:34:37+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/refine-notion-gantt-chart/</loc>
-    <lastmod>2024-11-08T23:34:37+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/posts/</loc>
-    <lastmod>2024-11-08T23:34:37+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/</loc>
     <lastmod>2024-11-08T23:34:37+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/go-system-programming/</loc>
