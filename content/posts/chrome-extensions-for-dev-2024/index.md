@@ -19,15 +19,6 @@ color: ""
 
 本記事では使ってみて便利だったChrome拡張を紹介します。
 
-## Stylus 
-[Stylus](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=ja)
-
-ユーザー定義のCSSを手軽に適用できるChrome拡張です。
-
-筆者の使い方としては[Notionのガントチャートを見やすくしたり](https://blog.kyu08.com/posts/refine-notion-gantt-chart/)、GitHubのUIの幅を大きくしたりしています。
-
-特にPR上で実行計画を見る際に便利です。
-
 ## Notion Sidebar Tamer
 [Notion Sidebar Tamer](https://chromewebstore.google.com/detail/notion-sidebar-tamer/kkjflddbknmcnjodgeobojmdacilodlb?hl=ja)
 
@@ -46,6 +37,21 @@ Notionのサイドバーにマウスカーソルが近づいたときにサイ�
 そこでNotion Sidebar Tamerを使うとカーソルをサイドバー付近に移動してもサイドバーが表示されなくなります。やったね！
 
 ![notion-sidebar-tamer-after.gif](notion-sidebar-tamer-after.gif)
+
+## Google search results shortcuts
+[Google search results shortcuts](https://chromewebstore.google.com/detail/google%E6%A4%9C%E7%B4%A2%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88/dchaandmcifgjemlhiekookpgjmkcelg)
+
+Google検索結果のページでキーボードショートカットを使えるようにするChrome拡張です。
+
+筆者がよく使うのは以下です。
+
+- ↑: 1つ上の検索結果に移動
+- ↓: 1つ下の検索結果に移動
+- Enter: 選択中の検索結果を開く
+
+以下のような操作がキーボードだけでできるようになります。[^2]
+
+![google-search-results-shortcuts.gif](google-search-results-shortcuts.gif)
 
 ## Vimium
 [Vimium](https://chromewebstore.google.com/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=ja)
@@ -78,6 +84,15 @@ gi      focus the first (or n-th) text input box on the page. Use <tab> to cycle
 
 ![vimium-gi.gif](vimium-gi.gif)
 
+## Stylus 
+[Stylus](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=ja)
+
+ユーザー定義のCSSを手軽に適用できるChrome拡張です。
+
+筆者の使い方としては[Notionのガントチャートを見やすくしたり](https://blog.kyu08.com/posts/refine-notion-gantt-chart/)、GitHubのUIの幅を大きくしたりしています。
+
+特にPR上で実行計画を見る際に便利です。
+
 ## GCP console colorize
 [GCP console colorize](https://chromewebstore.google.com/detail/gcp-console-colorize/higjahjicmccalicmgfpokdmooopdhej?hl=ja)
 
@@ -89,21 +104,6 @@ Google Cloudのプロジェクトごとにヘッダーの色を変更するChrom
 | ---       | ---                                                                 |
 | project-a | ![gcp-console-colorize-red.png](gcp-console-colorize-red.png)       |
 | project-b | ![gcp-console-colorize-yellow.png](gcp-console-colorize-yellow.png) |
-
-## Google search results shortcuts
-[Google search results shortcuts](https://chromewebstore.google.com/detail/google%E6%A4%9C%E7%B4%A2%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88/dchaandmcifgjemlhiekookpgjmkcelg)
-
-Google検索結果のページでキーボードショートカットを使えるようにするChrome拡張です。
-
-筆者がよく使うのは以下です。
-
-- ↑: 1つ上の検索結果に移動
-- ↓: 1つ下の検索結果に移動
-- Enter: 選択中の検索結果を開く
-
-以下のような操作がキーボードだけでできるようになります。[^2]
-
-![google-search-results-shortcuts.gif](google-search-results-shortcuts.gif)
 
 ## LTTM
 [LTTM](https://chromewebstore.google.com/detail/lttm/jdidcgkdggndpodjbipodfefnpgjooeh)
