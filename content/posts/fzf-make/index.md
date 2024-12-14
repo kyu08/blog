@@ -1,17 +1,20 @@
-+++
-title = "Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった"
-date = "2023-03-31T01:15:48+09:00"
-author = "kyu08"
-authorTwitter = "kyu08_" #do not include @
-cover = "https://blog.kyu08.com/cover.png"
-tags =["rust", "cli"]
-keywords =["", ""]
-description = ""
-showFullContent = false
-readingTime = true
-hideComments = false
-color = "" #color from the theme settings
-+++
+---
+title: "Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった"
+date: "2023-03-31T01:15:48+09:00"
+author: "kyu08"
+authorTwitter: "kyu08_" #do not include @
+cover: "https://blog.kyu08.com/cover.png"
+tags: ["rust", "cli"]
+keywords: ["", ""]
+description: ""
+showFullContent: false
+readingTime: true
+hideComments: false
+color: "" #color from the theme settings
+---
+
+> # (2024/12/14追記) 内容を更新した紹介記事をZennに投稿しました。
+> [[make,pnpm,yarnに対応]タスクランナーのコマンドをfuzzy finder形式で選択できるCLIツール fzf-makeの紹介](https://zenn.dev/kyu08/articles/974fd8bc25c303)
 
 Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった。
 
