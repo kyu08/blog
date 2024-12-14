@@ -115,8 +115,13 @@
       <pubDate>Fri, 31 Mar 2023 01:15:48 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/fzf-make/</guid>
-      <description>Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった。 https://github.com/kyu08/fzf-make こんな感じで動く。 fzf-makeがや</description>
-      <content>&lt;p&gt;Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった。&lt;/p&gt;
+      <description>(2024/12/14追記) 内容を更新した紹介記事をZennに投稿しました。 [make,pnpm,yarnに対応]タスクランナーのコマンドを</description>
+      <content>&lt;blockquote&gt;
+&lt;h1 id=&#34;20241214追記-内容を更新した紹介記事をzennに投稿しました&#34;&gt;(2024/12/14追記) 内容を更新した紹介記事をZennに投稿しました。&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://zenn.dev/kyu08/articles/974fd8bc25c303&#34; target=&#34;_blank&#34; &gt;[make,pnpm,yarnに対応]タスクランナーのコマンドをfuzzy finder形式で選択できるCLIツール fzf-makeの紹介&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/fzf-make&lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;こんな感じで動く。&lt;/p&gt;
