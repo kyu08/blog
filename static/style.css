@@ -79,6 +79,14 @@ h3 {
   display: none;
 }
 
+p > img {
+  border: none;
+}
+
+th, td {
+  border: 2px solid var(--accent)
+}
+
 article.on-list > .post-content,
 article.on-list > .post-title::after {
   display: none;
