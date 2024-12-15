@@ -36,7 +36,7 @@ googleAnalytics = "G-BDQ408J45J"
   # showLastUpdated = true
 
   # set a custom favicon (default is a `themeColor` square)
-  favicon = "favicon.ico"
+  favicon = "favicon.png"
 
   # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
   # updatedDatePrefix = "Updated"
