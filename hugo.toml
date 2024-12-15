@@ -1,98 +1,178 @@
+# paginate = 1000
+# defaultContentLanguage = "ja"
+# googleAnalytics = "G-BDQ408J45J"
+
 baseURL = 'https://blog.kyu08.com'
 title = 'blog.kyu08.com'
-theme = "terminal"
-paginate = 1000
-languageCode = "ja"
-defaultContentLanguage = "ja"
+disqusShortname = ""
+enableGitInfo = true
+enableRobotsTXT = true
 hasCJKLanguage = true
-googleAnalytics = "G-BDQ408J45J"
+languageCode = "ja"
+rssLimit = 10
+theme = "hugo-texify3"
+
+[pagination]
+pagerSize = 1000
+
+[taxonomies]
+tags = "tags"
+categories = "categories"
 
 [params]
-  # dir name of your main content (default is `content/posts`).
-  # the list of set content will show up on your index page (baseurl).
-  contentTypeName = "posts"
+title = 'blog.kyu08.com'
+author = "kyu08"
+description = "blog.kyu08.com"
+# TODO: edit
+# footnote = """
+# Powered by  <a class=link href=https://gohugo.io target=_blank rel=noopener>Hugo</a> | 
+# Theme <a class=link href=https://github.com/michaelneuper/hugo-texify3 target=_blank rel=noopener>TeXify3</a>
+# """
+customCSS = []
+customJS = []
+# TODO: edit
+dateFormat = "2 January 2006"
+emphasisWithDots = true
+toc = true
+rootFontSize = "105%"
+math = true
+enableDuckDuckGoSearchBox = false
+numberedSubtitles = false
 
-  # ["orange", "blue", "red", "green", "pink"]
-  themeColor = "orange"
+  # [params.commentEngine]
+  # code = """
+  # <script src="https://giscus.app/client.js"
+  #       data-repo="michaelneuper/website"
+  #       data-repo-id="R_kgDOIjPNaQ"
+  #       data-category="General"
+  #       data-category-id="DIC_kwDOIjPNac4CaklA"
+  #       data-mapping="pathname"
+  #       data-strict="0"
+  #       data-reactions-enabled="1"
+  #       data-emit-metadata="0"
+  #       data-input-position="top"
+  #       data-theme=""
+  #       data-lang="en"
+  #       data-loading="lazy"
+  #       crossorigin="anonymous"
+  #       async>
+  # </script>
+  # """
+  #
+  # [params.buymeacoffee]
+  # code = """
+  # <script async data-name="BMC-Widget" 
+  #       data-cfasync="true" 
+  #       src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" 
+  #       data-id="michaelneuper" 
+  #       data-description="Like what I do? Buy me a coffee!" 
+  #       data-message="" 
+  #       data-color="#d79921" 
+  #       data-position="Right" 
+  #       data-x_margin="18" 
+  #       data-y_margin="18"
+  #       crossorigin="anonymous">
+  # </script>
+  # """
 
-  # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
-  # show selector to switch language
-  showLanguageSelector = false
+  [params.sharingbuttons]
+  facebook = true
+  twitter = true
+  email = true
+  linkedin = true
+  reddit = true
+  whatsapp = true
+  hackernews = true
+  telegram = false
 
-  # set theme to full screen width
-  fullWidthTheme = false
+# Old
 
-  # center theme with default width
-  centerTheme = false
-
-  # if your resource directory contains an image called `cover.(jpg|png|webp)`,
-  # then the file will be used as a cover automatically.
-  # With this option you don't have to put the `cover` param in a front-matter.
-  autoCover = false
-
-  # set post to show the last updated
-  # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
-  # showLastUpdated = true
-
-  # set a custom favicon (default is a `themeColor` square)
-  favicon = "favicon.ico"
-
-  # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
-  # updatedDatePrefix = "Updated"
-
-  # set all headings to their default size (depending on browser settings)
-  # oneHeadingSize = true # default
-
-  # whether to show a page's estimated reading time
-  # readingTime = false # default
-
-  # whether to show a table of contents
-  # can be overridden in a page's front-matter
-  Toc = true
-
-  # set title for the table of contents
-  # can be overridden in a page's front-matter
-  TocTitle = "目次"
-
-[params.twitter]
-  # set Twitter handles for Twitter cards
-  # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
-  # do not include @
-  creator = "kyu08_"
-  site = ""
-
-[languages]
-  [languages.ja]
-    languageName = "Japanese"
-    title = "blog.kyu08.com"
-    copyright = "blog.kyu08.com"
-
-    [languages.ja.params]
-      keywords = ""
-      words = "words"
-      owner = "kyu08"
-      olderPosts = "Older posts"
-      minuteReadingTime = "min read"
-      subtitle = "blog.kyu08.com"
-      menuMore = "Show more"
-      missingContentMessage = "Page not found..."
-      readMore = "Read more"
-      readOtherPosts = "Read other posts"
-      newerPosts = "Newer posts"
-      missingBackButtonLabel = "Back to home page"
-
-
-    [languages.ja.params.logo]
-      logoText = "blog.kyu08.com"
-      logoHomeLink = "/"
-
-    [languages.ja.menu]
-      [[languages.ja.menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/about"
-      [[languages.ja.menu.main]]
-        identifier = "rss"
-        name = "RSS"
-        url = "/index.xml"
+# [params]
+#   # dir name of your main content (default is `content/posts`).
+#   # the list of set content will show up on your index page (baseurl).
+#   contentTypeName = "posts"
+#
+#   # ["orange", "blue", "red", "green", "pink"]
+#   themeColor = "orange"
+#
+#   # if you set this to 0, only submenu trigger will be visible
+#   showMenuItems = 2
+#   # show selector to switch language
+#   showLanguageSelector = false
+#
+#   # set theme to full screen width
+#   fullWidthTheme = false
+#
+#   # center theme with default width
+#   centerTheme = false
+#
+#   # if your resource directory contains an image called `cover.(jpg|png|webp)`,
+#   # then the file will be used as a cover automatically.
+#   # With this option you don't have to put the `cover` param in a front-matter.
+#   autoCover = false
+#
+#   # set post to show the last updated
+#   # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
+#   # showLastUpdated = true
+#
+#   # set a custom favicon (default is a `themeColor` square)
+#   favicon = "favicon.ico"
+#
+#   # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
+#   # updatedDatePrefix = "Updated"
+#
+#   # set all headings to their default size (depending on browser settings)
+#   # oneHeadingSize = true # default
+#
+#   # whether to show a page's estimated reading time
+#   # readingTime = false # default
+#
+#   # whether to show a table of contents
+#   # can be overridden in a page's front-matter
+#   Toc = true
+#
+#   # set title for the table of contents
+#   # can be overridden in a page's front-matter
+#   TocTitle = "目次"
+#
+# [params.twitter]
+#   # set Twitter handles for Twitter cards
+#   # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
+#   # do not include @
+#   creator = "kyu08_"
+#   site = ""
+#
+# [languages]
+#   [languages.ja]
+#     languageName = "Japanese"
+#     title = "blog.kyu08.com"
+#     copyright = "blog.kyu08.com"
+#
+#     [languages.ja.params]
+#       keywords = ""
+#       words = "words"
+#       owner = "kyu08"
+#       olderPosts = "Older posts"
+#       minuteReadingTime = "min read"
+#       subtitle = "blog.kyu08.com"
+#       menuMore = "Show more"
+#       missingContentMessage = "Page not found..."
+#       readMore = "Read more"
+#       readOtherPosts = "Read other posts"
+#       newerPosts = "Newer posts"
+#       missingBackButtonLabel = "Back to home page"
+#
+#
+#     [languages.ja.params.logo]
+#       logoText = "blog.kyu08.com"
+#       logoHomeLink = "/"
+#
+#     [languages.ja.menu]
+#       [[languages.ja.menu.main]]
+#         identifier = "about"
+#         name = "About"
+#         url = "/about"
+#       [[languages.ja.menu.main]]
+#         identifier = "rss"
+#         name = "RSS"
+#         url = "/index.xml"
