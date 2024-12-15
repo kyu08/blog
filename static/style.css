@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
 
+
+:root {
+  --background: #222129;
+  --foreground: #eceae5;
+  --accent: #ffa86a;
+}
+
 * {
   --color-gray: #808080;
 
@@ -15,6 +22,10 @@
   overflow-wrap: break-word;
   box-sizing: border-box;
   font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: none;
 }
 
 html,
@@ -90,3 +101,4 @@ article.on-list {
 .pagination__title {
   margin: 20px 0 20px;
 }
+
