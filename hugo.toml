@@ -36,7 +36,7 @@ googleAnalytics = "G-BDQ408J45J"
   # showLastUpdated = true
 
   # set a custom favicon (default is a `themeColor` square)
-  favicon = "favicon.ico"
+  favicon = "favicon.png"
 
   # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
   # updatedDatePrefix = "Updated"
@@ -54,6 +54,7 @@ googleAnalytics = "G-BDQ408J45J"
   # set title for the table of contents
   # can be overridden in a page's front-matter
   TocTitle = "目次"
+  dateFormat = "2006/01/02"
 
 [params.twitter]
   # set Twitter handles for Twitter cards
@@ -81,7 +82,6 @@ googleAnalytics = "G-BDQ408J45J"
       readOtherPosts = "Read other posts"
       newerPosts = "Newer posts"
       missingBackButtonLabel = "Back to home page"
-
 
     [languages.ja.params.logo]
       logoText = "blog.kyu08.com"
