@@ -82,7 +82,6 @@ googleAnalytics = "G-BDQ408J45J"
       newerPosts = "Newer posts"
       missingBackButtonLabel = "Back to home page"
 
-
     [languages.ja.params.logo]
       logoText = "blog.kyu08.com"
       logoHomeLink = "/"
