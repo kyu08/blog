@@ -28,22 +28,56 @@ if (!doNotTrack) {
 
 
 
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
 
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
   
-  <link rel="stylesheet" href="https://blog.kyu08.com/styles.css">
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/post.min.d551b54605ea87772c5eb05bf68219699a011687df301682a1006e8811253df9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
 
 
 
 <link rel="stylesheet" href="https://blog.kyu08.com/style.css">
 
 
-
-  <link rel="shortcut icon" href="https://blog.kyu08.com/favicon.ico">
-
+<link rel="shortcut icon" href="https://blog.kyu08.com/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/apple-touch-icon.png">
 
 
 <meta name="twitter:card" content="summary" />
@@ -98,10 +132,10 @@ if (!doNotTrack) {
 
 
 </head>
-<body class="orange">
+<body>
 
 
-<div class="container headings--one-size">
+<div class="container">
 
   <header class="header">
   <div class="header__inner">
@@ -163,20 +197,9 @@ if (!doNotTrack) {
   <h1 class="post-title">
     <a href="https://blog.kyu08.com/posts/hello-hugo/">このブログをhugoで作り直した</a>
   </h1>
-  <div class="post-meta">
-    
-      <time class="post-date">
-        2023-06-07 ::
-        
-      </time>
-    
-    
-      <span class="post-author">kyu08</span>
-    
-    
-      <span class="post-reading-time">:: 4 min read (1842 words)</span>
-    
-  </div>
+  <div class="post-meta"><time class="post-date">2023/06/07</time>
+      
+    <span class="post-reading-time">4 min read (1842 words)</span></div>
 
   
     <span class="post-tags">
@@ -218,7 +241,7 @@ if (!doNotTrack) {
 
   <div class="post-content"><div>
         <p>もともとこのブログはNext.js + Vercelの構成で作られていたが色々と辛くなってしまったのでお手軽にブログが作れそうなhugo + GitHub Pagesの構成に移行した。</p>
-<h2 id="動機">動機<a href="#動機" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="動機">動機<a href="#動機" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>もともとNext.jsを触ってみたかったのでNext.jsで書いたでブログを運営していた。</p>
 <p>このときのディレクトリ構成が以下のような感じになっていて、画像はrepositoryにアップロードして(PRのコメント欄とかに画像を貼って取得した<code>https://user-images.githubusercontent.com/xxxxx</code>のようなURLを使って)それをマークダウンから呼び出していた。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root/
@@ -243,7 +266,7 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>  └ ...
 </span></span></code></pre></div><p>で、それをやろうとしたがどうにもうまく画像を読み込むことができなかった。(当然悪いのはNext.jsではなく1000億%自分の技術力のNASAです)</p>
 <p>ちゃんとNext.js(やJSのツールチェイン周り)のお勉強をすればNextでもできたと思うが当面JS関連の技術を触る予定もないしブログの管理にそこまで時間をかけたい気持ちもなかったので諦めてhugoに移行することにした。</p>
-<h2 id="やったこと">やったこと<a href="#やったこと" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="やったこと">やったこと<a href="#やったこと" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <ul>
 <li>テーマ選定(<a href="https://github.com/panr/hugo-theme-terminal" target="_blank" >panr/hugo-theme-terminal</a>
 を選択した)</li>
@@ -254,7 +277,7 @@ if (!doNotTrack) {
 <li>GA4導入</li>
 </ul>
 <p>以下部分的に補足する。</p>
-<h3 id="デプロイの自動化">デプロイの自動化<a href="#デプロイの自動化" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="デプロイの自動化">デプロイの自動化<a href="#デプロイの自動化" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>以下のようなyamlを<code>.github/workflows/deploy.yaml</code>として配置するとmainへのpush時に自動でデプロイが行われる。</p>
 <p>カスタムドメインに指定したい場合は<code>cname</code>を指定しないとデプロイのたびにカスタムドメインが404になってしまうので注意。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">deploy</span>
@@ -288,7 +311,7 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>          <span style="color:#f92672">github_token</span>: <span style="color:#ae81ff">${{ secrets.GITHUB_TOKEN }}</span>
 </span></span><span style="display:flex;"><span>          <span style="color:#f92672">publish_dir</span>: <span style="color:#ae81ff">./public</span>
 </span></span><span style="display:flex;"><span>          <span style="color:#f92672">cname</span>: <span style="color:#ae81ff">blog.kyu08.com</span> <span style="color:#75715e"># カスタムドメインの設定をしていない場合は不要</span>
-</span></span></code></pre></div><h3 id="ga4の導入">GA4の導入<a href="#ga4の導入" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+</span></span></code></pre></div><h3 id="ga4の導入">GA4の導入<a href="#ga4の導入" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p><a href="https://maku77.github.io/p/zxk6pat/" target="_blank" >こちらの記事</a>
 を参考に進めたらできた。</p>
 <p>1点だけ注意が必要なのはpartialsの扱いがthemeによって異なる(っぽい)こと。</p>
@@ -299,17 +322,17 @@ if (!doNotTrack) {
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">`layouts/partials/extended_head.html` in your Hugo directory.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">--&gt;</span>
 </span></span></code></pre></div><p>とのことだった<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>ので<code>layouts/partials/extended_head.html</code>にタグの設定を記述した。</p>
-<h2 id="着手--公開まででかかった時間">着手 ~ 公開まででかかった時間<a href="#着手--公開まででかかった時間" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="着手--公開まででかかった時間">着手 ~ 公開まででかかった時間<a href="#着手--公開まででかかった時間" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>たぶん6hくらい。</p>
 <p>数箇所詰まったがドキュメントや先人のブログのおかげですぐに解決できた。</p>
 <p>おそらくミニマムな状態(カスタムドメイン設定なし, テーマのデザインをそのまま利用, GA4なしなどなど)なら1hもかからずに公開までできると思う。</p>
-<h2 id="hugoのいいところ">hugoのいいところ<a href="#hugoのいいところ" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="hugoのいいところ">hugoのいいところ<a href="#hugoのいいところ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <ul>
 <li>既存のテーマを利用すると手軽に色々できる(TOC, シンタックスハイライト, 脚注などなど)。とにかくお手軽なのが最高。基本的にはテーマを選んで記事を書いてデプロイすればブログが公開できてしまうのですごい。</li>
 <li>ドキュメント・themeのソースコードを読めば大抵解決する</li>
 <li><code>watch</code>オプションがあるので<code>hugo serve -w</code>を実行するとホットリロードが有効になるので捗る</li>
 </ul>
-<h2 id="ハマったところ">ハマったところ<a href="#ハマったところ" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="ハマったところ">ハマったところ<a href="#ハマったところ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p><del>長くなりそうなので別途記事にする予定</del></p>
 <p>それぞれ記事にした。</p>
 <ul>
@@ -318,7 +341,7 @@ if (!doNotTrack) {
 <li><a href="/posts/github-pages-custom-domain" >GitHub Pagesでデプロイのたびにカスタムドメインの設定が消える問題の解決方法</a>
 </li>
 </ul>
-<h2 id="実際の運用はこんな感じ">実際の運用はこんな感じ<a href="#実際の運用はこんな感じ" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="実際の運用はこんな感じ">実際の運用はこんな感じ<a href="#実際の運用はこんな感じ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <ol>
 <li>記事作成用のブランチを作成</li>
 <li>記事を作成</li>
@@ -334,7 +357,7 @@ if (!doNotTrack) {
 <p><img src="make-new.gif" alt="make-new.gif"></p>
 <p>ちなみにデプロイは1分くらいで完了するのでサクサク反映できて嬉しい。</p>
 <p><img src="deploy.webp" alt="deploy.webp"></p>
-<h2 id="おわりに">おわりに<a href="#おわりに" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="おわりに">おわりに<a href="#おわりに" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>色々追加したい機能はあるけどとりあえず最低限の機能はできたのでヨシ！とする。</p>
 <p>ブログたくさん書くぞ〜</p>
 <p>感想はtwitterとかで呟いたりリプしてくれたりすると跳んで喜びます。</p>
@@ -357,29 +380,27 @@ if (!doNotTrack) {
   
     
 <div class="pagination">
-    <div class="pagination__title">
-        <span class="pagination__title-h">Read other posts</span>
-        <hr />
-    </div>
-    <div class="pagination__buttons">
-        
-        <span class="button previous">
-            <a href="https://blog.kyu08.com/posts/create-gif/">
-                <span class="button__icon">←</span>
-                <span class="button__text">ブログ用にGifでキャプチャを作る時にやっていること</span>
-            </a>
-        </span>
-        
-        
-        <span class="button next">
-            <a href="https://blog.kyu08.com/posts/fzf-make/">
-                <span class="button__text">Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった</span>
-                <span class="button__icon">→</span>
-            </a>
-        </span>
-        
-    </div>
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="https://blog.kyu08.com/posts/create-gif/" class="button inline prev">
+        ブログ用にGifでキャプチャを作る時にやっていること
+      </a>
+    
+    
+      ::
+    
+    
+      <a href="https://blog.kyu08.com/posts/fzf-make/" class="button inline next">
+        Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった
+      </a>
+    
+  </div>
 </div>
+
 
   
 

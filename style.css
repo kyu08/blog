@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
 
+
+:root {
+  --background: #222129;
+  --foreground: #eceae5;
+  --accent: #ffa86a;
+}
+
 * {
   --color-gray: #808080;
 
@@ -17,10 +24,14 @@
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  text-transform: none;
+}
+
 html,
 body {
-  padding: 15px;
-  max-width: 800px;
+  /* padding: 15px; */
+  max-width: 1200px;
   margin: 0;
   margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -56,7 +67,7 @@ img {
 h2 {
   border-bottom: solid 2px var(--color-gray);
   padding-bottom: 4px;
-  margin: 30px 0;
+  /* margin: 30px 0; */
 }
 
 h3 {
@@ -66,6 +77,14 @@ h3 {
 
 .post-cover, a.read-more {
   display: none;
+}
+
+p > img {
+  border: none;
+}
+
+th, td {
+  border: 2px solid var(--accent)
 }
 
 article.on-list > .post-content,
@@ -79,7 +98,7 @@ article.on-list > .post-title {
 }
 
 article.on-list {
-  margin: 0 auto;
+  margin: 4px auto;
   padding: 0;
 }
 

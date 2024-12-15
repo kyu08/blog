@@ -28,22 +28,56 @@ if (!doNotTrack) {
 
 
 
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
 
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
   
-  <link rel="stylesheet" href="https://blog.kyu08.com/styles.css">
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/post.min.d551b54605ea87772c5eb05bf68219699a011687df301682a1006e8811253df9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
 
 
 
 <link rel="stylesheet" href="https://blog.kyu08.com/style.css">
 
 
-
-  <link rel="shortcut icon" href="https://blog.kyu08.com/favicon.ico">
-
+<link rel="shortcut icon" href="https://blog.kyu08.com/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/apple-touch-icon.png">
 
 
 <meta name="twitter:card" content="summary" />
@@ -98,10 +132,10 @@ if (!doNotTrack) {
 
 
 </head>
-<body class="orange">
+<body>
 
 
-<div class="container headings--one-size">
+<div class="container">
 
   <header class="header">
   <div class="header__inner">
@@ -163,20 +197,9 @@ if (!doNotTrack) {
   <h1 class="post-title">
     <a href="https://blog.kyu08.com/posts/harpoon-review/">ThePrimeagen/harpoon を使ってみた</a>
   </h1>
-  <div class="post-meta">
-    
-      <time class="post-date">
-        2023-11-18 ::
-        
-      </time>
-    
-    
-      <span class="post-author">kyu08</span>
-    
-    
-      <span class="post-reading-time">:: 2 min read (970 words)</span>
-    
-  </div>
+  <div class="post-meta"><time class="post-date">2023/11/18</time>
+      
+    <span class="post-reading-time">2 min read (970 words)</span></div>
 
   
     <span class="post-tags">
@@ -227,34 +250,34 @@ if (!doNotTrack) {
   <div class="post-content"><div>
         <p><a href="https://github.com/ThePrimeagen/harpoon" target="_blank" >ThePrimeagen/harpoon</a>
 というNeovimプラグインを使ってみたので気になっている人の参考になればと思い感想を書いてみる。</p>
-<h2 id="できること">できること<a href="#できること" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="できること">できること<a href="#できること" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>ファイルをマークしてquick_menu(マークしたファイルの一覧)からファイルを開くことができる。操作している様子は以下の通り。</p>
-<h3 id="1-ファイルをマークして">1. ファイルをマークして<a href="#1-ファイルをマークして" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="1-ファイルをマークして">1. ファイルをマークして<a href="#1-ファイルをマークして" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p><code>:lua require(&quot;harpoon.mark&quot;).add_file()</code>を実行してファイルをマーク</p>
 <p><img src="add-file.gif" alt="add-file"></p>
-<h3 id="2-quick_menuからファイルを開く">2. quick_menuからファイルを開く<a href="#2-quick_menuからファイルを開く" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="2-quick_menuからファイルを開く">2. quick_menuからファイルを開く<a href="#2-quick_menuからファイルを開く" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p><code>:lua require(&quot;harpoon.ui&quot;).toggle_quick_menu()</code>を実行してマークしたファイル一覧からファイルを開く</p>
 <p><img src="toggle-quick-menu.gif" alt="toggle-quick-menu"></p>
 <p>機能は他にもありそう<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>だが筆者はこの機能しか使ってないので割愛。</p>
-<h2 id="嬉しさ">嬉しさ<a href="#嬉しさ" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="嬉しさ">嬉しさ<a href="#嬉しさ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>個人開発などファイル数が少ないプロジェクトだとそこまで効果を感じないが業務では(当然だが)一定数のファイルがあり、かつ定義ジャンプを繰り返しているとバッファにはたくさんファイルが存在しているのでtelescopeなどのfuzzy-finderプラグインを使ったとしてもファイルの行き来には多少時間がかかってしまっていた。</p>
 <p>harpoonの導入によってファイルの行き来が爆速になってかなり作業効率が爆上がりした。</p>
-<h2 id="推しポイント">推しポイント<a href="#推しポイント" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<h3 id="1-マークしたファイルが一度エディタを閉じても保持される">1. マークしたファイルが一度エディタを閉じても保持される<a href="#1-マークしたファイルが一度エディタを閉じても保持される" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h2 id="推しポイント">推しポイント<a href="#推しポイント" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="1-マークしたファイルが一度エディタを閉じても保持される">1. マークしたファイルが一度エディタを閉じても保持される<a href="#1-マークしたファイルが一度エディタを閉じても保持される" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>LSPが不調だったりしてNeovimを再起動することがたまにあるので地味に便利。</p>
 <p>(一度Neovimを閉じてもマークしたファイルが保持されている様子。)
 <img src="saved-quick-menu.gif" alt="saved-quick-menu"></p>
-<h3 id="2-自由に編集できる-quick_menu">2. 自由に編集できる quick_menu<a href="#2-自由に編集できる-quick_menu" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="2-自由に編集できる-quick_menu">2. 自由に編集できる quick_menu<a href="#2-自由に編集できる-quick_menu" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>作者自身もお気に入りと言及しているが<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>quick_menuは純粋なテキストなので自由に編集できる。</p>
 <p>つまりこんな感じで<code>dd</code> -&gt; <code>y</code>のようなコマンドで自由に順番を入れ替えたり削除したりできる。普段のvimの操作感で扱えるのでとても直感的で使いやすくて嬉しい。</p>
 <p>quick_menuを自由に編集している様子<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>
 <img src="editable-quick-menu.gif" alt="editable-quick-menu"></p>
-<h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>気になった方はぜひ試してみてください。</p>
 <p>インストール方法はこちら</p>
 <p><a href="https://github.com/ThePrimeagen/harpoon?tab=readme-ov-file#-installation" target="_blank" >https://github.com/ThePrimeagen/harpoon?tab=readme-ov-file#-installation</a>
 </p>
-<h4 id="余談">余談<a href="#余談" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<h4 id="余談">余談<a href="#余談" class="hanchor" ariaLabel="Anchor">#</a> </h4>
 <p>そういえばThePrimeagenの好きな動画があるので貼っておく。</p>
 <p><a href="https://www.youtube.com/watch?v=nMHxdz-N7EU" target="_blank" >https://www.youtube.com/watch?v=nMHxdz-N7EU</a>
 </p>
@@ -283,29 +306,27 @@ if (!doNotTrack) {
   
     
 <div class="pagination">
-    <div class="pagination__title">
-        <span class="pagination__title-h">Read other posts</span>
-        <hr />
-    </div>
-    <div class="pagination__buttons">
-        
-        <span class="button previous">
-            <a href="https://blog.kyu08.com/posts/how-world-class-engineers-think/">
-                <span class="button__icon">←</span>
-                <span class="button__text">『世界一流エンジニアの思考法』 を読んだ</span>
-            </a>
-        </span>
-        
-        
-        <span class="button next">
-            <a href="https://blog.kyu08.com/posts/saiyo-kijun/">
-                <span class="button__text">『採用基準 地頭より論理的思考力より大切なもの』 を読んだ</span>
-                <span class="button__icon">→</span>
-            </a>
-        </span>
-        
-    </div>
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="https://blog.kyu08.com/posts/how-world-class-engineers-think/" class="button inline prev">
+        『世界一流エンジニアの思考法』 を読んだ
+      </a>
+    
+    
+      ::
+    
+    
+      <a href="https://blog.kyu08.com/posts/saiyo-kijun/" class="button inline next">
+        『採用基準 地頭より論理的思考力より大切なもの』 を読んだ
+      </a>
+    
+  </div>
 </div>
+
 
   
 

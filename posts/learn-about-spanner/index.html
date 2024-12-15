@@ -28,22 +28,56 @@ if (!doNotTrack) {
 
 
 
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
 
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
   
-  <link rel="stylesheet" href="https://blog.kyu08.com/styles.css">
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/post.min.d551b54605ea87772c5eb05bf68219699a011687df301682a1006e8811253df9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
 
 
 
 <link rel="stylesheet" href="https://blog.kyu08.com/style.css">
 
 
-
-  <link rel="shortcut icon" href="https://blog.kyu08.com/favicon.ico">
-
+<link rel="shortcut icon" href="https://blog.kyu08.com/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/apple-touch-icon.png">
 
 
 <meta name="twitter:card" content="summary" />
@@ -98,10 +132,10 @@ if (!doNotTrack) {
 
 
 </head>
-<body class="orange">
+<body>
 
 
-<div class="container headings--one-size">
+<div class="container">
 
   <header class="header">
   <div class="header__inner">
@@ -163,20 +197,9 @@ if (!doNotTrack) {
   <h1 class="post-title">
     <a href="https://blog.kyu08.com/posts/learn-about-spanner/">Cloud Spanner について知らなかったことを書く</a>
   </h1>
-  <div class="post-meta">
-    
-      <time class="post-date">
-        2024-09-23 ::
-        
-      </time>
-    
-    
-      <span class="post-author">kyu08</span>
-    
-    
-      <span class="post-reading-time">:: 12 min read (5790 words)</span>
-    
-  </div>
+  <div class="post-meta"><time class="post-date">2024/09/23</time>
+      
+    <span class="post-reading-time">12 min read (5790 words)</span></div>
 
   
     <span class="post-tags">
@@ -260,30 +283,30 @@ if (!doNotTrack) {
 <li>キー定義とインターリーブの2つはスケーラビリティに大きな影響を与える</li>
 <li>Spannerにはルートテーブルとインターリーブされたテーブルの2種類のテーブルがある。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></li>
 </ul>
-<h3 id="テーブルレイアウト">テーブルレイアウト<a href="#テーブルレイアウト" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="テーブルレイアウト">テーブルレイアウト<a href="#テーブルレイアウト" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>Spannerテーブルの行は<code>PRIMARY_KEY</code>によって辞書順に並べかえられる。したがって以下の特性を示す。</p>
 <ul>
 <li>辞書順のテーブルスキャンは効率的</li>
 <li>十分に近い行は同じディスクブロックに格納され、一緒に読み込まれてキャッシュされる</li>
 </ul>
 <p>各Spannerレプリカ内のデータは<code>スプリット</code>と<code>ブロック</code>という2つの物理階層レベルで編成される。</p>
-<h3 id="インターリーブ">インターリーブ<a href="#インターリーブ" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="インターリーブ">インターリーブ<a href="#インターリーブ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>ルートテーブルの各行をルート行と呼び、インターリーブされたテーブルの各行を子行と呼ぶ。ルート行とそのすべての子孫のコレクションは行ツリーと呼ばれる。</p>
 <!-- raw HTML omitted -->
 <p>行ツリー内のオペレーションは他のスプリットとの通信を必要としないケースが多いため基本的には効率性が高い。ただし子行にホットスポットがある場合Spannerはホットスポットの行とそれ以降の子行を分離するためにスプリット境界を追加しようとする。そのため必ずしも効率性が高いという保証はない。</p>
 <!-- raw HTML omitted -->
-<h3 id="局所性のトレードオフ">局所性のトレードオフ<a href="#局所性のトレードオフ" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="局所性のトレードオフ">局所性のトレードオフ<a href="#局所性のトレードオフ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>以下の理由で局所性を高めることが重要。</p>
 <ul>
 <li>通信するサーバが多いほど一時的にビジー状態のサーバに遭遇する可能性が高くなり、レイテンシの増加につながる。</li>
 <li>複数のスプリットにまたがるトランザクションは二層コミットの特性によってCPUコストとレイテンシがわずかに増加する。</li>
 </ul>
-<h3 id="局所性の勘所">局所性の勘所<a href="#局所性の勘所" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="局所性の勘所">局所性の勘所<a href="#局所性の勘所" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <ul>
 <li>分散DBである以上、一定レベルの二層コミットや非ローカルデータオペレーションは避けられない。</li>
 <li>すべてのオペレーションの局所性を完璧にするのではなく最も重要なルートエンティティと最も一般的なアクセスパターンについて必要な局所性を実現することが重要。その他のオペレーションについてはそのままにすることを推奨。</li>
 </ul>
-<h3 id="インデックスのオプション">インデックスのオプション<a href="#インデックスのオプション" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="インデックスのオプション">インデックスのオプション<a href="#インデックスのオプション" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <!-- raw HTML omitted -->
 <ul>
 <li>デフォルトではインターリーブされていないインデックスを作成されるが、インターリーブされたインデックスを作成することもできる。
@@ -301,14 +324,14 @@ if (!doNotTrack) {
 <li>検索範囲が単一のエンティティのときは<strong>常に</strong>インターリーブされたインデックスを使用する。</li>
 <li>逆にデータベース内のどこからでも行を検索する必要がある場合はインターリーブされていないインデックスを使用する。</li>
 </ul>
-<h3 id="storing">STORING<a href="#storing" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="storing">STORING<a href="#storing" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>要求されたすべてのデータがインデックス自体に含まれる場合、<code>STORING</code>句を使用してインデックスを作成することができる。これによりベーステーブルと結合することなくクエリを完了できるためより効率的に結果を取得することができる。</p>
 <p>現在はインデックスキーは16個、合計サイズが6KiBまでに制限されているため、<code>STORING</code>句を使用することで任意のインデックスに対してデータを格納することができる。</p>
 <p>つまり<code>STORING</code>を使用すると<strong>WRITEコストおよびストレージコストの上昇</strong>と引き換えに<strong>READコストを削減</strong>できる。</p>
 <p>また、ドキュメントでは<code>STORING</code>の便利な応用例として<code>NULL_FILTERED</code>インデックスとの併用を紹介している。それについてはこちらの記事が大変詳しいので参照されたい。</p>
 <p><a href="https://zenn.dev/facengineer/articles/15e7a68fcc2fad" target="_blank" >Cloud SpannerのNull Filtered INDEXの用途を考察する 〜サブタイプ実装〜</a>
 </p>
-<h3 id="アンチパターン">アンチパターン<a href="#アンチパターン" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="アンチパターン">アンチパターン<a href="#アンチパターン" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>ルートテーブルをタイムスタンプ順にしてしまうとテーブルの最後に巨大なホットスポットが生まれてしまう。</p>
 <p>タイムスタンプ順に並んだレコードが必要な場合は以下の対策が有効。</p>
 <ol>
@@ -332,7 +355,7 @@ if (!doNotTrack) {
 </span></span></code></pre></div><p>筆者はこれまでこのようなケースでは<code>UserAccessLog</code>テーブルにUUIDを付与し<code>LastAccess</code>降順なインデックスを作成することで対応することが多かった。この方法は選択肢として持てていなかったので必要になったら思い出せるとよさそう。</p>
 <p>このケースはアクセスログなのでWRITE頻度が高いテーブルを想定していると思われる。インデックスで対応する方式と比較するとWRITEコストを下げることができる点でメリットがありそう。</p>
 <p>と思っていたら続きにそのパターンの実装方法も書かれていた。</p>
-<h3 id="値が単調に増加または減少する列へのインターリーブされたインデックスの使用">値が単調に増加または減少する列へのインターリーブされたインデックスの使用<a href="#値が単調に増加または減少する列へのインターリーブされたインデックスの使用" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="値が単調に増加または減少する列へのインターリーブされたインデックスの使用">値が単調に増加または減少する列へのインターリーブされたインデックスの使用<a href="#値が単調に増加または減少する列へのインターリーブされたインデックスの使用" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>次のようなテーブルがあるとする。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> Users (
 </span></span><span style="display:flex;"><span>UserId     INT64 <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
@@ -359,9 +382,9 @@ if (!doNotTrack) {
 </ul>
 </li>
 </ul>
-<h3 id="null値の並び替え順">NULL値の並び替え順<a href="#null値の並び替え順" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="null値の並び替え順">NULL値の並び替え順<a href="#null値の並び替え順" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>Spannerでは<code>NULL</code>を最小値として扱う。そのため昇順の場合は<code>NULL</code>が先頭に、降順の場合は末尾に並ぶ。</p>
-<h3 id="末尾のレコードの取得">末尾のレコードの取得<a href="#末尾のレコードの取得" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="末尾のレコードの取得">末尾のレコードの取得<a href="#末尾のレコードの取得" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>次のようなクエリを実行する場合は結果をすばやく取得することができる。これはSpannerがテーブルの行を<code>PRIMARY_KEY</code>によって辞書順に並べかえるため。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- テーブル定義
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> Songs (
@@ -378,7 +401,7 @@ if (!doNotTrack) {
 </span></span></code></pre></div><h2 id="sharding-of-timestamp-ordered-data-in-cloud-spanner---googblogscomhttpswwwgoogblogscomsharding-of-timestamp-ordered-data-in-cloud-spanner"><a href="https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/" target="_blank" >Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com</a>
 </h2>
 <p>タイムスタンプ順に並んだレコードをいかに効率よく挿入、取得するかについての解説記事。</p>
-<h3 id="レコードの挿入時">レコードの挿入時<a href="#レコードの挿入時" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="レコードの挿入時">レコードの挿入時<a href="#レコードの挿入時" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>次のようにCompanyID、UserID、Timestampの3つのキーを持つログテーブルがあるとする。</p>
 <table>
 <thead>
@@ -401,7 +424,7 @@ if (!doNotTrack) {
 <p>このスキーマにしたがって単純にデータを挿入していくとユーザー数が多い企業があるとホットスポットが発生してしまう。</p>
 <p>そのための次のような疑似コードで表現できる<code>EntryShardId</code>を用いることで挿入時のホットスポットを回避できる。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>entryShardId <span style="color:#f92672">=</span> hash(CompanyId <span style="color:#f92672">+</span> timestamp) <span style="color:#f92672">%</span> num_shards
-</span></span></code></pre></div><h3 id="レコードの読み取り時">レコードの読み取り時<a href="#レコードの読み取り時" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+</span></span></code></pre></div><h3 id="レコードの読み取り時">レコードの読み取り時<a href="#レコードの読み取り時" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>次のようなインデックスを追加する。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">INDEX</span> LogEntriesByCompany <span style="color:#66d9ef">ON</span> LogEntries(EntryShardId, CompanyId, <span style="color:#66d9ef">Timestamp</span>)
 </span></span></code></pre></div><p>そして以下のようなクエリを実行する。</p>
@@ -413,11 +436,11 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> <span style="color:#66d9ef">Timestamp</span> <span style="color:#f92672">&lt;</span> <span style="color:#e6db74">&#39;2018-05-01T15:16:10.386257Z&#39;</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> <span style="color:#66d9ef">Timestamp</span> <span style="color:#66d9ef">DESC</span>;
 </span></span></code></pre></div><p>こうすることでインデックスを使って10個の論理シャードから条件にあったレコードを効率よく取得することができる。</p>
-<h3 id="余談">余談<a href="#余談" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="余談">余談<a href="#余談" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>前章のクエリのWHERE句内で以下のように<code>CompanyId, EntryShardId</code>の順で指定していたので正しくインデックスが使えるのか気になったので試してみた。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>   <span style="color:#66d9ef">WHERE</span> CompanyId <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Acme&#39;</span>
 </span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> EntryShardId <span style="color:#66d9ef">BETWEEN</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">AND</span> <span style="color:#ae81ff">9</span>
-</span></span></code></pre></div><h4 id="準備">準備<a href="#準備" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+</span></span></code></pre></div><h4 id="準備">準備<a href="#準備" class="hanchor" ariaLabel="Anchor">#</a> </h4>
 <p>任意のGoogle CloudプロジェクトでSpannerインスタンスを作成し、以下のDDLを実行してテーブルとインデックスを作成する。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> LogEntries (
 </span></span><span style="display:flex;"><span>  CompanyId STRING(<span style="color:#ae81ff">36</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
@@ -452,7 +475,7 @@ if (!doNotTrack) {
 </table>
 <p>上記の条件で合計1000レコードを挿入するINSERT文を作成した。（スクリプトは<a href="https://gist.github.com/kyu08/a751344fd76d4e50208164378a822dc1" target="_blank" >こちら</a>
 ）</p>
-<h4 id="クエリの実行">クエリの実行<a href="#クエリの実行" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<h4 id="クエリの実行">クエリの実行<a href="#クエリの実行" class="hanchor" ariaLabel="Anchor">#</a> </h4>
 <p>これに対して次の2つのクエリを実行し、実行計画を確認した。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- 記事で紹介されていたクエリ
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span>
@@ -484,7 +507,7 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">AND</span> <span style="color:#66d9ef">Timestamp</span> <span style="color:#f92672">&lt;</span> <span style="color:#e6db74">&#39;2023-01-01T00:00:05.386257Z&#39;</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Timestamp</span> <span style="color:#66d9ef">DESC</span>;
-</span></span></code></pre></div><h4 id="結果">結果<a href="#結果" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+</span></span></code></pre></div><h4 id="結果">結果<a href="#結果" class="hanchor" ariaLabel="Anchor">#</a> </h4>
 <p>結論からいうとどちらのクエリでも同様にインデックスを利用できていた。おそらくSpannerのオプティマイザがいい感じに判断してくれていると思われる。以下が実際の実行計画。</p>
 <p>記事で紹介されていたクエリ
 <img src="original.webp" alt="original.webp"></p>
@@ -503,7 +526,7 @@ if (!doNotTrack) {
 <p><a href="https://zenn.dev/facengineer/articles/bca8790087b0e4" target="_blank" >Cloud Spannerのスプリット分散をわかった気になる</a>
 </p>
 <p>読み込みおよび書き込み時のロックの取り方について詳しく解説されていた。</p>
-<h3 id="読み取り専用トランザクション">読み取り専用トランザクション<a href="#読み取り専用トランザクション" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="読み取り専用トランザクション">読み取り専用トランザクション<a href="#読み取り専用トランザクション" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <ul>
 <li>ロックを取得せずに実行できるため高速</li>
 <li>ステイル読み込みを使用できる場合はより高速にすることができる（他のオペレーションに与えるパフォーマンス影響も抑えることができる）
@@ -512,7 +535,7 @@ if (!doNotTrack) {
 </ul>
 </li>
 </ul>
-<h3 id="読み取り--書き込みトランザクション">読み取り / 書き込みトランザクション<a href="#読み取り--書き込みトランザクション" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="読み取り--書き込みトランザクション">読み取り / 書き込みトランザクション<a href="#読み取り--書き込みトランザクション" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <ul>
 <li>読み取った行に対して共有ロックを取得する</li>
 <li>書き込む行に対して排他ロックを取得する</li>
@@ -522,14 +545,14 @@ if (!doNotTrack) {
 </p>
 <h2 id="sql-のベスト-プラクティス--spanner--google-cloudhttpscloudgooglecomspannerdocssql-best-practiceshljaoptimize-scans"><a href="https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja#optimize-scans" target="_blank" >SQL のベスト プラクティス  |  Spanner  |  Google Cloud</a>
 </h2>
-<h3 id="クエリパラメータの使用">クエリパラメータの使用<a href="#クエリパラメータの使用" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="クエリパラメータの使用">クエリパラメータの使用<a href="#クエリパラメータの使用" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>クエリパラメータを使用することで次のメリットがある。</p>
 <ul>
 <li><strong>キャッシュが容易になるためクエリのパフォーマンスが向上する</strong></li>
 <li>文字列の値をエスケープする必要がないため構文エラーのリスクが減る</li>
 <li>SQLインジェクションを防ぐことができる</li>
 </ul>
-<h3 id="範囲キーのルックアップを最適化する">範囲キーのルックアップを最適化する<a href="#範囲キーのルックアップを最適化する" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="範囲キーのルックアップを最適化する">範囲キーのルックアップを最適化する<a href="#範囲キーのルックアップを最適化する" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>キーのリストが短く、連続していない場合は次のように<code>IN UNNEST</code>を使用する。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#66d9ef">Table</span> <span style="color:#66d9ef">AS</span> t
@@ -538,16 +561,16 @@ if (!doNotTrack) {
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#66d9ef">Table</span> <span style="color:#66d9ef">AS</span> t
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> t.<span style="color:#66d9ef">Key</span> <span style="color:#66d9ef">BETWEEN</span> <span style="color:#f92672">@</span><span style="color:#66d9ef">min</span> <span style="color:#66d9ef">AND</span> <span style="color:#f92672">@</span><span style="color:#66d9ef">max</span>
-</span></span></code></pre></div><h3 id="結合を最適化する">結合を最適化する<a href="#結合を最適化する" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
-<h4 id="可能な限りインターリーブされたテーブルのデータを主キーによって結合する">可能な限りインターリーブされたテーブルのデータを主キーによって結合する<a href="#可能な限りインターリーブされたテーブルのデータを主キーによって結合する" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+</span></span></code></pre></div><h3 id="結合を最適化する">結合を最適化する<a href="#結合を最適化する" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h4 id="可能な限りインターリーブされたテーブルのデータを主キーによって結合する">可能な限りインターリーブされたテーブルのデータを主キーによって結合する<a href="#可能な限りインターリーブされたテーブルのデータを主キーによって結合する" class="hanchor" ariaLabel="Anchor">#</a> </h4>
 <p>インターリーブされた子行とそのルート行は基本的に同じスプリットに格納されるためローカルで結合することができ、効率的に結合できるため。</p>
-<h4 id="結合の順序を強制する">結合の順序を強制する<a href="#結合の順序を強制する" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<h4 id="結合の順序を強制する">結合の順序を強制する<a href="#結合の順序を強制する" class="hanchor" ariaLabel="Anchor">#</a> </h4>
 <p>Spanner側の最適化によって結合順序が変更され（この場合は<code>Singers JOIN Albums</code>と記述したが<code>Albums JOIN Singers</code>の順序に変更されたケース）パフォーマンスが低下した場合などは<code>FORCE_JOIN_ORDER</code>ヒントを使用することで結合順序を強制することができる。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Singers <span style="color:#66d9ef">AS</span> s <span style="color:#66d9ef">JOIN</span><span style="color:#f92672">@</span><span style="color:#960050;background-color:#1e0010">{</span>FORCE_JOIN_ORDER<span style="color:#f92672">=</span><span style="color:#66d9ef">TRUE</span><span style="color:#960050;background-color:#1e0010">}</span> Albums <span style="color:#66d9ef">AS</span> a
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">ON</span> s.SingerId <span style="color:#f92672">=</span> a.Singerid
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> s.LastName <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;%x%&#39;</span> <span style="color:#66d9ef">AND</span> a.AlbumTitle <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;%love%&#39;</span>;
-</span></span></code></pre></div><h4 id="joinアルゴリズムを指定する">JOINアルゴリズムを指定する<a href="#joinアルゴリズムを指定する" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+</span></span></code></pre></div><h4 id="joinアルゴリズムを指定する">JOINアルゴリズムを指定する<a href="#joinアルゴリズムを指定する" class="hanchor" ariaLabel="Anchor">#</a> </h4>
 <p>次のように<code>JOIN_METHOD</code>ヒントを使用することでJOINアルゴリズムを指定することができる。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Singers s <span style="color:#66d9ef">JOIN</span><span style="color:#f92672">@</span><span style="color:#960050;background-color:#1e0010">{</span>JOIN_METHOD<span style="color:#f92672">=</span>HASH_JOIN<span style="color:#960050;background-color:#1e0010">}</span> Albums <span style="color:#66d9ef">AS</span> a
@@ -555,7 +578,7 @@ if (!doNotTrack) {
 </span></span></code></pre></div><p>JOINアルゴリズムについては次の記事が詳しい。</p>
 <p><a href="https://zenn.dev/facengineer/articles/cc0cab5c7e9a1c#join%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" target="_blank" >Cloud Spannerのパフォーマンスチューニングの勘所</a>
 </p>
-<h3 id="likeの代わりにstarts_withを使用する"><code>LIKE</code>の代わりに<code>STARTS_WITH</code>を使用する<a href="#likeの代わりにstarts_withを使用する" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="likeの代わりにstarts_withを使用する"><code>LIKE</code>の代わりに<code>STARTS_WITH</code>を使用する<a href="#likeの代わりにstarts_withを使用する" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>Spannerはパラメータ化された<code>LIKE</code>パターンを実行時まで評価しないのですべての行を読み取ったうえで<code>LIKE</code>式で評価し、一致しない行を除外するためパフォーマンスが悪い。</p>
 <p>適切なインデックスが作成されている場合は<code>LIKE</code>の代わりに<code>STARTS_WITH</code>を使用するとSpannerはクエリ実行プランをより効率的に最適化することができる。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- 非推奨
@@ -572,7 +595,7 @@ if (!doNotTrack) {
 <p><a href="https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries" target="_blank" >サンプリングされたクエリプランを表示する</a>
 </p>
 <p>クエリごとにレイテンシや返された行数、スキャン行数の平均値や実行回数確認することができるためチューニングの際にかなり便利そう。</p>
-<h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>Spannerの気持ちが少しわかった。すごく強引にまとめると以下のようなポイントが重要そう。</p>
 <ul>
 <li>ホットスポットに注意する</li>
@@ -596,29 +619,27 @@ if (!doNotTrack) {
   
     
 <div class="pagination">
-    <div class="pagination__title">
-        <span class="pagination__title-h">Read other posts</span>
-        <hr />
-    </div>
-    <div class="pagination__buttons">
-        
-        <span class="button previous">
-            <a href="https://blog.kyu08.com/posts/renew-oss-sponsoring/">
-                <span class="button__icon">←</span>
-                <span class="button__text">GitHub Sponsorsの寄付先にratatuiを追加した</span>
-            </a>
-        </span>
-        
-        
-        <span class="button next">
-            <a href="https://blog.kyu08.com/posts/gh-sync-remote-and-pull/">
-                <span class="button__text">forkしたrepositoryのremoteを最新化しつつローカルにpullするスクリプトを書いた</span>
-                <span class="button__icon">→</span>
-            </a>
-        </span>
-        
-    </div>
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="https://blog.kyu08.com/posts/renew-oss-sponsoring/" class="button inline prev">
+        GitHub Sponsorsの寄付先にratatuiを追加した
+      </a>
+    
+    
+      ::
+    
+    
+      <a href="https://blog.kyu08.com/posts/gh-sync-remote-and-pull/" class="button inline next">
+        forkしたrepositoryのremoteを最新化しつつローカルにpullするスクリプトを書いた
+      </a>
+    
+  </div>
 </div>
+
 
   
 

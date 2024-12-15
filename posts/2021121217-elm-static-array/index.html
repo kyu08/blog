@@ -28,22 +28,56 @@ if (!doNotTrack) {
 
 
 
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
 
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
   
-  <link rel="stylesheet" href="https://blog.kyu08.com/styles.css">
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/post.min.d551b54605ea87772c5eb05bf68219699a011687df301682a1006e8811253df9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
 
 
 
 <link rel="stylesheet" href="https://blog.kyu08.com/style.css">
 
 
-
-  <link rel="shortcut icon" href="https://blog.kyu08.com/favicon.ico">
-
+<link rel="shortcut icon" href="https://blog.kyu08.com/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/apple-touch-icon.png">
 
 
 <meta name="twitter:card" content="summary" />
@@ -98,10 +132,10 @@ if (!doNotTrack) {
 
 
 </head>
-<body class="orange">
+<body>
 
 
-<div class="container headings--one-size">
+<div class="container">
 
   <header class="header">
   <div class="header__inner">
@@ -163,20 +197,9 @@ if (!doNotTrack) {
   <h1 class="post-title">
     <a href="https://blog.kyu08.com/posts/2021121217-elm-static-array/">Elmで固定長配列が扱えるライブラリelm-static-arrayを触ってみた</a>
   </h1>
-  <div class="post-meta">
-    
-      <time class="post-date">
-        2021-12-17 ::
-        
-      </time>
-    
-    
-      <span class="post-author">kyu08</span>
-    
-    
-      <span class="post-reading-time">:: 6 min read (2635 words)</span>
-    
-  </div>
+  <div class="post-meta"><time class="post-date">2021/12/17</time>
+      
+    <span class="post-reading-time">6 min read (2635 words)</span></div>
 
   
     <span class="post-tags">
@@ -221,7 +244,7 @@ if (!doNotTrack) {
 
   <div class="post-content"><div>
         <p>Elmで固定長配列を扱うためのライブラリelm-static-arrayを触ってみたので感じたことを書いていきます。</p>
-<h2 id="elm-static-array-とは">elm-static-array とは<a href="#elm-static-array-とは" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="elm-static-array-とは">elm-static-array とは<a href="#elm-static-array-とは" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p><a href="https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/" target="_blank" >elm-static-array</a>
  はElmで固定長配列を扱うためのライブラリです。</p>
 <p>配列の長さを型で表現できることが特徴です。</p>
@@ -231,7 +254,7 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">-- 通常の Array</span>
 </span></span><span style="display:flex;"><span>ordinaryArray <span style="color:#a6e22e">:</span> <span style="color:#66d9ef">Array</span> <span style="color:#66d9ef">String</span>
-</span></span></code></pre></div><h2 id="どんな場面で使ったか">どんな場面で使ったか<a href="#どんな場面で使ったか" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+</span></span></code></pre></div><h2 id="どんな場面で使ったか">どんな場面で使ったか<a href="#どんな場面で使ったか" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>趣味で開発している麻雀の点数集計アプリで使いました。</p>
 <p>各プレイヤーの試合毎のスコアを記録して合計を表示するだけの簡単なアプリケーションです。(※実際には順位点やトビ賞の計算などもやっていますがここでは割愛)</p>
 <p><img src="jan-log-demo.webp" alt="jan-log-demo.web"></p>
@@ -249,8 +272,8 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">=</span> <span style="color:#66d9ef">Points4</span> (<span style="color:#66d9ef">StaticArray</span> <span style="color:#66d9ef">Index</span><span style="color:#a6e22e">.</span><span style="color:#66d9ef">Four</span> <span style="color:#66d9ef">Point</span>)
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">|</span> <span style="color:#66d9ef">Points5</span> (<span style="color:#66d9ef">StaticArray</span> <span style="color:#66d9ef">Index</span><span style="color:#a6e22e">.</span><span style="color:#66d9ef">Five</span> <span style="color:#66d9ef">Point</span>)
 </span></span></code></pre></div><p>ここからは実際に使ってみて感じたことを書いていきます。</p>
-<h2 id="elm-static-array-を使うことで得られるメリット">elm-static-array を使うことで得られるメリット<a href="#elm-static-array-を使うことで得られるメリット" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<h3 id="メリット仕様を型で表現しやすい">メリット①：仕様を型で表現しやすい<a href="#メリット仕様を型で表現しやすい" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h2 id="elm-static-array-を使うことで得られるメリット">elm-static-array を使うことで得られるメリット<a href="#elm-static-array-を使うことで得られるメリット" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="メリット仕様を型で表現しやすい">メリット①：仕様を型で表現しやすい<a href="#メリット仕様を型で表現しやすい" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>上でも触れましたが、長さが4もしく5の <code>Point</code> の配列はelm-static-arrayを使うと以下のように定義できます。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elm" data-lang="elm"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#66d9ef">Points</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">=</span> <span style="color:#66d9ef">Points4</span> (<span style="color:#66d9ef">StaticArray</span> <span style="color:#66d9ef">Index</span><span style="color:#a6e22e">.</span><span style="color:#66d9ef">Four</span> <span style="color:#66d9ef">Point</span>)
@@ -302,7 +325,7 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>        _ <span style="color:#a6e22e">-&gt;</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">False</span>
 </span></span></code></pre></div><p>elm-static-arrayを使うことで仕様上ありえないパターンを扱う必要がなくなりバグの可能性を減らすことができます。</p>
-<h3 id="メリット配列の要素を取得する際に-maybe-をハンドリングする必要がない">メリット②：配列の要素を取得する際に <code>Maybe</code> をハンドリングする必要がない<a href="#メリット配列の要素を取得する際に-maybe-をハンドリングする必要がない" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="メリット配列の要素を取得する際に-maybe-をハンドリングする必要がない">メリット②：配列の要素を取得する際に <code>Maybe</code> をハンドリングする必要がない<a href="#メリット配列の要素を取得する際に-maybe-をハンドリングする必要がない" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>配列の要素を取得する際も通常のArrayとの違いを感じることができます。</p>
 <p>以下は配列の要素を取得する <code>get</code> 関数の型定義です。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elm" data-lang="elm"><span style="display:flex;"><span><span style="color:#75715e">-- 通常の配列</span>
@@ -313,14 +336,14 @@ if (!doNotTrack) {
 </span></span></code></pre></div><p>注目すべきは <strong>返り値の型</strong> です。</p>
 <p>通常の配列では要素の型が <code>a</code> である配列の要素を取得する際の返り値の型が <code>Maybe a</code> になりますが、 elm-static-arrayでは返り値の型が <code>a</code> になります。
 これにより <strong><code>Maybe</code> をハンドリングする必要がなくなるためよりシンプルに記述できます。</strong></p>
-<h2 id="懸念点">懸念点<a href="#懸念点" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="懸念点">懸念点<a href="#懸念点" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>逆に懸念だと感じたのは以下の2つです。</p>
 <ul>
 <li>Arrayに定義されているすべての関数が定義されているわけではない</li>
 <li>elm-static-arrayの書き方に慣れるまでは時間がかかる</li>
 </ul>
 <p>それぞれ補足していきます。</p>
-<h3 id="懸念array-に定義されているすべての関数が定義されているわけではない">懸念①：Array に定義されているすべての関数が定義されているわけではない<a href="#懸念array-に定義されているすべての関数が定義されているわけではない" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="懸念array-に定義されているすべての関数が定義されているわけではない">懸念①：Array に定義されているすべての関数が定義されているわけではない<a href="#懸念array-に定義されているすべての関数が定義されているわけではない" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>Arrayに生えている関数がStaticArrayには生えてなかったりするので、都度Arrayに変換して処理をした上で再度StaticArrayに変換する、というような工程が必要になる場面がありました。StaticArrayには最小限の関数しか定義されていないので例えば <code>filter</code> や <code>foldl(foldr)</code> などは一度Arrayなどに変換し、処理してから再度StaticArrayに変換しなおす必要がありました。</p>
 <p>以下はStaticArrayをArrayに変換してfilterしてStaticArrayに戻すコード例です。</p>
 <p><code>StaticArray.fromList</code> がheadとtailを引数に取るため若干コード量が増えてしまいます。</p>
@@ -348,7 +371,7 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Length</span><span style="color:#a6e22e">.</span>four
 </span></span><span style="display:flex;"><span>        head
 </span></span><span style="display:flex;"><span>        tail
-</span></span></code></pre></div><h3 id="懸念staticarray-の書き方に慣れるまでは時間がかかる">懸念②：StaticArray の書き方に慣れるまでは時間がかかる<a href="#懸念staticarray-の書き方に慣れるまでは時間がかかる" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+</span></span></code></pre></div><h3 id="懸念staticarray-の書き方に慣れるまでは時間がかかる">懸念②：StaticArray の書き方に慣れるまでは時間がかかる<a href="#懸念staticarray-の書き方に慣れるまでは時間がかかる" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>たとえばインデックスを指定してStaticArrayの要素を取得するget関数を使おうと<a href="https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/StaticArray#get" target="_blank" >ドキュメント</a>
 を見ると、下記のような記述があります。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elm" data-lang="elm"><span style="display:flex;"><span><span style="color:#75715e">-- Gets an element of the array. Note that it only possible if the index is in bound. Therefore eliminating Off-by-one errors.</span>
@@ -364,7 +387,7 @@ if (!doNotTrack) {
 <p>Construction is a bit slower (should be neglectable for most cases).</p>
 </blockquote>
 <p>ただ逆に言えばネガティブに感じたのは上記のそれくらいで、基本的にはメリットの方が大きく感じたためこれからも必要であれば使っていきたいと思っています。</p>
-<h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>Elmで固定長配列を扱うためのライブラリelm-static-arrayを触った感想を書いてみました。</p>
 <p>仕様を型で表現しやすくなるという点に魅力を感じたので今後も必要なケースでは積極的に使っていきたいと思います。</p>
 <p>また、ひさびさに個人開発をして、なかなか時間が取れずコードの意図や全体像をよく忘れたりするので個人開発においても可読性が高かったり意図の伝わりやすいコードを書くことの重要性が身に染みました。</p>
@@ -375,29 +398,27 @@ if (!doNotTrack) {
   
     
 <div class="pagination">
-    <div class="pagination__title">
-        <span class="pagination__title-h">Read other posts</span>
-        <hr />
-    </div>
-    <div class="pagination__buttons">
-        
-        <span class="button previous">
-            <a href="https://blog.kyu08.com/posts/consultant/">
-                <span class="button__icon">←</span>
-                <span class="button__text">『コンサル一年目が学ぶこと』を読んだ</span>
-            </a>
-        </span>
-        
-        
-        <span class="button next">
-            <a href="https://blog.kyu08.com/posts/20211203-introduce/">
-                <span class="button__text">自己紹介</span>
-                <span class="button__icon">→</span>
-            </a>
-        </span>
-        
-    </div>
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="https://blog.kyu08.com/posts/consultant/" class="button inline prev">
+        『コンサル一年目が学ぶこと』を読んだ
+      </a>
+    
+    
+      ::
+    
+    
+      <a href="https://blog.kyu08.com/posts/20211203-introduce/" class="button inline next">
+        自己紹介
+      </a>
+    
+  </div>
 </div>
+
 
   
 

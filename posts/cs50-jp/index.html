@@ -28,22 +28,56 @@ if (!doNotTrack) {
 
 
 
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
 
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
   
-  <link rel="stylesheet" href="https://blog.kyu08.com/styles.css">
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/post.min.d551b54605ea87772c5eb05bf68219699a011687df301682a1006e8811253df9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
 
 
 
 <link rel="stylesheet" href="https://blog.kyu08.com/style.css">
 
 
-
-  <link rel="shortcut icon" href="https://blog.kyu08.com/favicon.ico">
-
+<link rel="shortcut icon" href="https://blog.kyu08.com/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/apple-touch-icon.png">
 
 
 <meta name="twitter:card" content="summary" />
@@ -98,10 +132,10 @@ if (!doNotTrack) {
 
 
 </head>
-<body class="orange">
+<body>
 
 
-<div class="container headings--one-size">
+<div class="container">
 
   <header class="header">
   <div class="header__inner">
@@ -163,20 +197,9 @@ if (!doNotTrack) {
   <h1 class="post-title">
     <a href="https://blog.kyu08.com/posts/cs50-jp/">CS50.jpでCSに入門した</a>
   </h1>
-  <div class="post-meta">
-    
-      <time class="post-date">
-        2024-05-12 ::
-        
-      </time>
-    
-    
-      <span class="post-author">kyu08</span>
-    
-    
-      <span class="post-reading-time">:: 4 min read (1877 words)</span>
-    
-  </div>
+  <div class="post-meta"><time class="post-date">2024/05/12</time>
+      
+    <span class="post-reading-time">4 min read (1877 words)</span></div>
 
   
     <span class="post-tags">
@@ -217,7 +240,7 @@ if (!doNotTrack) {
   <div class="post-content"><div>
         <p><a href="https://cs50.jp/" target="_blank" >CS50.jp</a>
 の気になっていたトピックを学んでみたので振り返っておく。</p>
-<h2 id="cs50jpとは">CS50.jpとは<a href="#cs50jpとは" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="cs50jpとは">CS50.jpとは<a href="#cs50jpとは" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p><a href="https://cs50.jp/" target="_blank" >CS50.jp</a>
 の説明はサイトから引用する。</p>
 <blockquote>
@@ -246,7 +269,7 @@ if (!doNotTrack) {
 <p>課題を解いてコードを提出するとリモート環境でテストが実行され結果を確認できる。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <p><img src="check50.webp" alt="check50"></p>
 <p>正直にいうと日本語訳がなかったら取り組もうと思わなかったと思うのでCS50.jpの翻訳コントリビュータであるCODEGYM社には感謝してもしきれない。本当にありがとうございます。</p>
-<h2 id="そもそもなぜcsを勉強しているか">そもそもなぜCSを勉強しているか<a href="#そもそもなぜcsを勉強しているか" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="そもそもなぜcsを勉強しているか">そもそもなぜCSを勉強しているか<a href="#そもそもなぜcsを勉強しているか" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>前提として筆者について補足しておくと筆者は電気系の学部・大学院を卒業しておりコンピューターサイエンスのバックグラウンドを持っていない。（かつSaaS企業でソフトウェアエンジニアとして働き初めて現在4年目）</p>
 <p>「〜という分野に精通して自分の業務パフォーマンスを向上させる」のような明確な目的意識はないがおおむね以下のような理由でやっている。</p>
 <ul>
@@ -254,13 +277,13 @@ if (!doNotTrack) {
 <li>普段触っている技術の裏側を理解することでよりよい選択ができたり、より素早い問題解決ができるのではないか、という仮説がある</li>
 <li>知的好奇心を満たすことができて単純に楽しい</li>
 </ul>
-<h2 id="やったこと">やったこと<a href="#やったこと" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="やったこと">やったこと<a href="#やったこと" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>Week6 Python以降は自分にとって大きな学びはなさそうだったのでWeek5 Data Structuresの課題（Lab &amp; Problem Set）までを取り組んだ。2024/3/8~2024/5/3まで平日夜や土日の時間を使って取り組んだ。</p>
 <p>自分のメモ用のリポジトリは以下。（解いた課題のコードも載っているのでネタバレ（？）注意）</p>
 <p><a href="https://github.com/kyu08/cs50" target="_blank" >https://github.com/kyu08/cs50</a>
 </p>
-<h2 id="学びや得たもの">学びや得たもの<a href="#学びや得たもの" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<h3 id="csの基礎">CSの基礎<a href="#csの基礎" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h2 id="学びや得たもの">学びや得たもの<a href="#学びや得たもの" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="csの基礎">CSの基礎<a href="#csの基礎" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>CSの基礎の導入部分くらいには触れることができたと思う。たとえばこのあたり。</p>
 <ul>
 <li>ASCIIとは</li>
@@ -278,7 +301,7 @@ if (!doNotTrack) {
 </li>
 </ul>
 <p>ただ、各週の講義動画は1.5hくらいのボリュームなのであくまでそれぞれのトピックの序章（または序章の導入部分）くらいの内容だとは思う。</p>
-<h3 id="c言語の基礎">C言語の基礎<a href="#c言語の基礎" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="c言語の基礎">C言語の基礎<a href="#c言語の基礎" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>あとはWeek1 ~ Week5までの課題はすべてC言語で課されたのだが、C言語の経験が得られたのは自分にとって貴重だった。(各Weekの課題が2~3問あり合計で14問の課題をC言語で解いた。)</p>
 <p>特に</p>
 <ul>
@@ -288,7 +311,7 @@ if (!doNotTrack) {
 <p>あたりが印象に残っている。（課題を解いていてこれらに起因するバグに何度か悩まされた）</p>
 <p>C言語を触ることで現在自分がよく触っている言語であるGoやRustがいかに便利かを思い知った。</p>
 <p>あとはC言語で書かれたOSSやサンプルコードの理解を多少は深めやすくなったので今後の学習・調査の助けになってくれそう。</p>
-<h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>全体感としてはCSの勉強をやっていく上での基礎的な知識を学ぶことができ、今後の学習の足がかりになってくれそうだったので取り組んでみてよかった。あとはC言語の経験が得られてよかった。</p>
 <p>やはり新しい分野や言語を習得するには時間を投資して手を動かすのが自分にはあっているように思った。引き続きやっていき。</p>
 <div class="footnotes" role="doc-endnotes">
@@ -306,29 +329,27 @@ if (!doNotTrack) {
   
     
 <div class="pagination">
-    <div class="pagination__title">
-        <span class="pagination__title-h">Read other posts</span>
-        <hr />
-    </div>
-    <div class="pagination__buttons">
-        
-        <span class="button previous">
-            <a href="https://blog.kyu08.com/posts/mac-too-many-open-files/">
-                <span class="button__icon">←</span>
-                <span class="button__text">`Process failed to start: too many open files: &#34;/opt/homebrew/bin/git&#34;`というエラーが出てNeovimのプラグインが動作しなくなる問題の回避策</span>
-            </a>
-        </span>
-        
-        
-        <span class="button next">
-            <a href="https://blog.kyu08.com/posts/tmux-fzf-window/">
-                <span class="button__text">tmux-fzfを使ってwindow切り替えをできるようにする手順</span>
-                <span class="button__icon">→</span>
-            </a>
-        </span>
-        
-    </div>
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="https://blog.kyu08.com/posts/mac-too-many-open-files/" class="button inline prev">
+        `Process failed to start: too many open files: &#34;/opt/homebrew/bin/git&#34;`というエラーが出てNeovimのプラグインが動作しなくなる問題の回避策
+      </a>
+    
+    
+      ::
+    
+    
+      <a href="https://blog.kyu08.com/posts/tmux-fzf-window/" class="button inline next">
+        tmux-fzfを使ってwindow切り替えをできるようにする手順
+      </a>
+    
+  </div>
 </div>
+
 
   
 

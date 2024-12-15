@@ -28,22 +28,56 @@ if (!doNotTrack) {
 
 
 
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
 
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
   
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
   
-  <link rel="stylesheet" href="https://blog.kyu08.com/styles.css">
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/post.min.d551b54605ea87772c5eb05bf68219699a011687df301682a1006e8811253df9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
 
 
 
 <link rel="stylesheet" href="https://blog.kyu08.com/style.css">
 
 
-
-  <link rel="shortcut icon" href="https://blog.kyu08.com/favicon.ico">
-
+<link rel="shortcut icon" href="https://blog.kyu08.com/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/apple-touch-icon.png">
 
 
 <meta name="twitter:card" content="summary" />
@@ -98,10 +132,10 @@ if (!doNotTrack) {
 
 
 </head>
-<body class="orange">
+<body>
 
 
-<div class="container headings--one-size">
+<div class="container">
 
   <header class="header">
   <div class="header__inner">
@@ -163,20 +197,9 @@ if (!doNotTrack) {
   <h1 class="post-title">
     <a href="https://blog.kyu08.com/posts/my-dev-setup-terminal/">開発の効率化のためにやっていることターミナル編</a>
   </h1>
-  <div class="post-meta">
-    
-      <time class="post-date">
-        2022-12-15 ::
-        
-      </time>
-    
-    
-      <span class="post-author">kyu08</span>
-    
-    
-      <span class="post-reading-time">:: 7 min read (3072 words)</span>
-    
-  </div>
+  <div class="post-meta"><time class="post-date">2022/12/15</time>
+      
+    <span class="post-reading-time">7 min read (3072 words)</span></div>
 
   
     <span class="post-tags">
@@ -232,9 +255,9 @@ if (!doNotTrack) {
 <p>この記事では筆者が開発の効率化のために行っている工夫や使っているツールなどについて紹介します。
 「他にもこんなツールあるよ！」「こんな設定おすすめだよ！」などなどありましたらtwitterとかで教えてもらえると助かります。</p>
 <p>今回はターミナル編です！</p>
-<h2 id="シェル">シェル<a href="#シェル" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="シェル">シェル<a href="#シェル" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>シェルはzshを使っています。 一時期fishも使っていましたが、環境移行のコストが低かったりPOSIX準拠だったりするメリットに旨味を感じてzshに乗り換えました。</p>
-<h3 id="よく使うalias">よく使うalias<a href="#よく使うalias" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="よく使うalias">よく使うalias<a href="#よく使うalias" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>zshでは<code>alias hoge='echo hoge'</code>のように記述することでaliasを定義できます。</p>
 <p>ここでは筆者がよく使うaliasをいくつか紹介します。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>alias m<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;MEMODIR=~/code/memo; cd $MEMODIR; FILE=$MEMODIR/$(date +%Y%m%d).md; if [ ! -e $FILE ]; then echo &#34;# todo \n\n# done\n&#34; &gt;&gt; $FILE; fi; nvim $FILE&#39;</span>
@@ -274,7 +297,7 @@ if (!doNotTrack) {
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>alias finder<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;open -a Finder ./&#39;</span>
 </span></span></code></pre></div><p>現在いるディレクトをfinderで開くコマンド</p>
 <p>ごく稀に使う。</p>
-<h3 id="ディレクトリ移動">ディレクトリ移動<a href="#ディレクトリ移動" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="ディレクトリ移動">ディレクトリ移動<a href="#ディレクトリ移動" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>zshにはcdrという、移動したことがあるディレクトリを自動的に保持してくれる機能があります。</p>
 <p>これをいい感じにファジーファインダーから呼び出すスクリプトを公開して下さっている方がいたのでありがたく使わせてもらっています。</p>
 <p><a href="https://www.rasukarusan.com/entry/2018/08/14/083000" target="_blank" >https://www.rasukarusan.com/entry/2018/08/14/083000</a>
@@ -311,7 +334,7 @@ if (!doNotTrack) {
 <li>移動したいディレクトリのパスの一部を入力</li>
 <li>候補から移動したいディレクトリを選択する</li>
 </ol>
-<h3 id="コマンド履歴検索">コマンド履歴検索<a href="#コマンド履歴検索" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="コマンド履歴検索">コマンド履歴検索<a href="#コマンド履歴検索" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>実行したコマンドの履歴についてもfzfを使って絞り込みを行うようにしています。</p>
 <p>これもスクリプトを公開して下さっている方がいたのでありがたく使わせてもらっています。</p>
 <p><a href="https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/" target="_blank" >https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/</a>
@@ -324,7 +347,7 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>zle -N <span style="color:#66d9ef">select</span>-history
 </span></span><span style="display:flex;"><span>bindkey <span style="color:#e6db74">&#39;^r&#39;</span> <span style="color:#66d9ef">select</span>-history
 </span></span></code></pre></div><p><img src="command-history.gif" alt="command-history"></p>
-<h2 id="git操作">Git操作<a href="#git操作" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="git操作">Git操作<a href="#git操作" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>Git操作のほとんどはGitのTUIクライアントであるLazygitを使っています。</p>
 <p><a href="https://github.com/jesseduffield/lazygit" target="_blank" >https://github.com/jesseduffield/lazygit</a>
 </p>
@@ -335,7 +358,7 @@ if (!doNotTrack) {
 <p>ちなみに筆者はkdheepak/lazygit.nvimというプラグインを使ってNeovim上からLazygitを呼び出しています。</p>
 <p><a href="https://github.com/kdheepak/lazygit.nvim" target="_blank" >https://github.com/kdheepak/lazygit.nvim</a>
 </p>
-<h2 id="ターミナルエミュレータ">ターミナルエミュレータ<a href="#ターミナルエミュレータ" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="ターミナルエミュレータ">ターミナルエミュレータ<a href="#ターミナルエミュレータ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>筆者はターミナルエミュレータ(以下ターミナル)としてAlacrittyを使っています。</p>
 <p><a href="https://github.com/alacritty/alacritty" target="_blank" >https://github.com/alacritty/alacritty</a>
 </p>
@@ -349,11 +372,11 @@ if (!doNotTrack) {
 <p>Alacrittyにはタブ機能がなくタブ的な機能を実現するためにはtmuxなどのターミナルマルチプレクサを利用する必要があるため筆者はtmuxを利用しています。
 設定・プラグインなどは後述しますが、tmuxの操作感も好みなので割と満足しています。</p>
 <p>他にもRust製のターミナルとしてWarp, Weztermなどがありますが筆者の環境ではWarpはNeovimのcolorschemeの反映がうまくできず、Weztermは画面の再描画まわりの不具合が多少あったため、採用しませんでした。(Warp便利そうだしみやすいので使いたかった)</p>
-<h2 id="ターミナルのタブ管理">ターミナルのタブ管理<a href="#ターミナルのタブ管理" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="ターミナルのタブ管理">ターミナルのタブ管理<a href="#ターミナルのタブ管理" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>前述の通りAlacrittyにはタブ機能がないため、tmuxを使ってターミナルのタブ管理を行っています。</p>
 <p><a href="https://github.com/tmux/tmux" target="_blank" >https://github.com/tmux/tmux</a>
 </p>
-<h3 id="ステータスラインの表示">ステータスラインの表示<a href="#ステータスラインの表示" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="ステータスラインの表示">ステータスラインの表示<a href="#ステータスラインの表示" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>ステータスラインは比較的シンプルにしていて、</p>
 <ul>
 <li>ウィンドウ一覧</li>
@@ -362,7 +385,7 @@ if (!doNotTrack) {
 <p>を表示するようにしています。</p>
 <p><img src="tmux-status-line.webp" alt="tmux-status-line"></p>
 <p>普段の開発ではプロジェクトごとにウィンドウを開き、必要に応じて切り替える運用にしています。</p>
-<h3 id="ウィンドウの切り替え">ウィンドウの切り替え<a href="#ウィンドウの切り替え" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h3 id="ウィンドウの切り替え">ウィンドウの切り替え<a href="#ウィンドウの切り替え" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>筆者はふだんプロジェクトごとのウィンドウに加えてmemo用のウィンドウ・dotfiles用のウィンドウなども開いており、常時ウィンドウが15前後あります。筆者は簡単なタスク管理もmemo用ウィンドウに立ち上げたNeovim内で行っているため、ウィンドウの切り替えを頻繁に行います。</p>
 <p>以前まではウィンドウ切り替えを</p>
 <ol>
@@ -394,7 +417,7 @@ sainnhe/tmux-fzfを使うようにしたことでウィンドウ切り替えを<
 </ol>
 <p>という手順でできるようになりました。文字にすると違いが伝わりづらいですが、ファジーファインダーを使ってウィンドウの選択を行うことができるようになったことでキーのタイプ数や切り替えの際の脳の負荷を大幅に減らすことができました。</p>
 <p><img src="tmux-fzf.gif" alt="tmux-fzf"></p>
-<h2 id="おわりに">おわりに<a href="#おわりに" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h2 id="おわりに">おわりに<a href="#おわりに" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>ここまで読んでくださってありがとうございました。</p>
 <p>需要がありそうだったら</p>
 <ul>
@@ -409,29 +432,27 @@ sainnhe/tmux-fzfを使うようにしたことでウィンドウ切り替えを<
   
     
 <div class="pagination">
-    <div class="pagination__title">
-        <span class="pagination__title-h">Read other posts</span>
-        <hr />
-    </div>
-    <div class="pagination__buttons">
-        
-        <span class="button previous">
-            <a href="https://blog.kyu08.com/posts/learn-design-pattern/">
-                <span class="button__icon">←</span>
-                <span class="button__text">デザインパターンをひととおり眺めた感想</span>
-            </a>
-        </span>
-        
-        
-        <span class="button next">
-            <a href="https://blog.kyu08.com/posts/consultant/">
-                <span class="button__text">『コンサル一年目が学ぶこと』を読んだ</span>
-                <span class="button__icon">→</span>
-            </a>
-        </span>
-        
-    </div>
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="https://blog.kyu08.com/posts/learn-design-pattern/" class="button inline prev">
+        デザインパターンをひととおり眺めた感想
+      </a>
+    
+    
+      ::
+    
+    
+      <a href="https://blog.kyu08.com/posts/consultant/" class="button inline next">
+        『コンサル一年目が学ぶこと』を読んだ
+      </a>
+    
+  </div>
 </div>
+
 
   
 
