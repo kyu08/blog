@@ -23,44 +23,44 @@ color: ""
 
 > Abstract
 > 
->    To reduce the likelihood of conflict and confusion, a few top level
->    domain names are reserved for use in private testing, as examples in
->    documentation, and the like.  In addition, a few second level domain
->    names reserved for use as examples are documented.
+> To reduce the likelihood of conflict and confusion, a few top level
+> domain names are reserved for use in private testing, as examples in
+> documentation, and the like.  In addition, a few second level domain
+> names reserved for use as examples are documented.
 
 - 対立や混乱を減らす目的でいくつかのTLD名が予約されている。用途はプライベートなテスト用、ドキュメントでの例示用など。
 - 上記に加えて例示用にいくつかのSecond Level Domain Namesが予約されている。
 
 ## 予約されたTop Level Domain Names
->   There is a need for top level domain (TLD) names that can be used for
->   creating names which, without fear of conflicts with current or
->   future actual TLD names in the global DNS, can be used for private
->   testing of existing DNS related code, examples in documentation, DNS
->   related experimentation, invalid DNS names, or other similar uses.
+> There is a need for top level domain (TLD) names that can be used for
+> creating names which, without fear of conflicts with current or
+> future actual TLD names in the global DNS, can be used for private
+> testing of existing DNS related code, examples in documentation, DNS
+> related experimentation, invalid DNS names, or other similar uses.
 
 DNSのプライベートテスト用やドキュメントなどの目的で使用できるTLD名が必要であるとのこと。（DNSへの解像度がとても低いので具体的にどんなテストが行われるのかの想像はついていない...）[^1]
 
->   To safely satisfy these needs, four domain names are reserved as
->   listed and described below.
+> To safely satisfy these needs, four domain names are reserved as
+> listed and described below.
 >
->                   .test
->                .example
->                .invalid
->              .localhost
+>                 .test
+>              .example
+>              .invalid
+>            .localhost
 >
->      ".test" is recommended for use in testing of current or new DNS
->      related code.
+>    ".test" is recommended for use in testing of current or new DNS
+>    related code.
 >
->      ".example" is recommended for use in documentation or as examples.
+>    ".example" is recommended for use in documentation or as examples.
 >
->      ".invalid" is intended for use in online construction of domain
->      names that are sure to be invalid and which it is obvious at a
->      glance are invalid.
+>    ".invalid" is intended for use in online construction of domain
+>    names that are sure to be invalid and which it is obvious at a
+>    glance are invalid.
 >
->      The ".localhost" TLD has traditionally been statically defined in
->      host DNS implementations as having an A record pointing to the
->      loop back IP address and is reserved for such use.  Any other use
->      would conflict with widely deployed code which assumes this use.
+>    The ".localhost" TLD has traditionally been statically defined in
+>    host DNS implementations as having an A record pointing to the
+>    loop back IP address and is reserved for such use.  Any other use
+>    would conflict with widely deployed code which assumes this use.
 
 上記のニーズを満たすために、次の4つのTLD名が予約されている。
 
@@ -80,15 +80,16 @@ DNSのプライベートテスト用やドキュメントなどの目的で使�
 これらのTLD名は見たことはあったがRFCとして明示されていることは知らなかった。
 
 ## 予約されたSecond Level Domain Names
-> ### 3. Reserved Example Second Level Domain Names
+
+> 3 Reserved Example Second Level Domain Names
 > 
->    The Internet Assigned Numbers Authority (IANA) also currently has the
->    following second level domain names reserved which can be used as
->    examples.
+> The Internet Assigned Numbers Authority (IANA) also currently has the
+> following second level domain names reserved which can be used as
+> examples.
 > 
->         example.com
->         example.net
->         example.org
+>      example.com
+>      example.net
+>      example.org
 
 `example.com`以外にも`example.net`と`example.org`が予約されていることは知らなかった。
 
