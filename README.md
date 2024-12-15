@@ -3,9 +3,9 @@
 > 
 > あとは`Makefile`参照のこと
 
+## 必要なツールのインストール
 ```sh
-brew install hugo
-brew install sass/sass/sass # コレ不要かも
-npm install postcss-cli
+brew install hugo # hugo v0.115.1 darwin/arm64 BuildDate=unknown
+brew install sass/sass/sass # 1.83.0
+npm ci
 ```
-
