@@ -43,25 +43,21 @@ related experimentation, invalid DNS names, or other similar uses.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;To safely satisfy these needs, four domain names are reserved as
 listed and described below.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;              .test
-           .example
-           .invalid
-         .localhost
-
- &amp;quot;.test&amp;quot; is recommended for use in testing of current or new DNS
- related code.
-
- &amp;quot;.example&amp;quot; is recommended for use in documentation or as examples.
-
- &amp;quot;.invalid&amp;quot; is intended for use in online construction of domain
- names that are sure to be invalid and which it is obvious at a
- glance are invalid.
-
- The &amp;quot;.localhost&amp;quot; TLD has traditionally been statically defined in
- host DNS implementations as having an A record pointing to the
- loop back IP address and is reserved for such use.  Any other use
- would conflict with widely deployed code which assumes this use.
+&lt;pre&gt;&lt;code&gt;            .test
+         .example
+         .invalid
+       .localhost
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&amp;ldquo;.test&amp;rdquo; is recommended for use in testing of current or new DNS
+related code.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;.example&amp;rdquo; is recommended for use in documentation or as examples.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;.invalid&amp;rdquo; is intended for use in online construction of domain
+names that are sure to be invalid and which it is obvious at a
+glance are invalid.&lt;/p&gt;
+&lt;p&gt;The &amp;ldquo;.localhost&amp;rdquo; TLD has traditionally been statically defined in
+host DNS implementations as having an A record pointing to the
+loop back IP address and is reserved for such use.  Any other use
+would conflict with widely deployed code which assumes this use.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;上記のニーズを満たすために、次の4つのTLD名が予約されている。&lt;/p&gt;
 &lt;ul&gt;
@@ -80,13 +76,13 @@ listed and described below.&lt;/p&gt;
 &lt;p&gt;これらのTLD名は見たことはあったがRFCとして明示されていることは知らなかった。&lt;/p&gt;
 &lt;h2 id=&#34;予約されたsecond-level-domain-names&#34;&gt;予約されたSecond Level Domain Names&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;h3 id=&#34;3-reserved-example-second-level-domain-names&#34;&gt;3. Reserved Example Second Level Domain Names&lt;/h3&gt;
+&lt;p&gt;3 Reserved Example Second Level Domain Names&lt;/p&gt;
 &lt;p&gt;The Internet Assigned Numbers Authority (IANA) also currently has the
 following second level domain names reserved which can be used as
 examples.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;    example.com
-    example.net
-    example.org
+&lt;pre&gt;&lt;code&gt; example.com
+ example.net
+ example.org
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;code&gt;example.com&lt;/code&gt;以外にも&lt;code&gt;example.net&lt;/code&gt;と&lt;code&gt;example.org&lt;/code&gt;が予約されていることは知らなかった。&lt;/p&gt;

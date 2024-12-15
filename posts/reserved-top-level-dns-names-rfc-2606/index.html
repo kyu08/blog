@@ -224,11 +224,7 @@ if (!doNotTrack) {
   <ul>
     <li><a href="#rfc-2606の概要">RFC 2606の概要</a></li>
     <li><a href="#予約されたtop-level-domain-names">予約されたTop Level Domain Names</a></li>
-    <li><a href="#予約されたsecond-level-domain-names">予約されたSecond Level Domain Names</a>
-      <ul>
-        <li><a href="#3-reserved-example-second-level-domain-names">3. Reserved Example Second Level Domain Names</a></li>
-      </ul>
-    </li>
+    <li><a href="#予約されたsecond-level-domain-names">予約されたSecond Level Domain Names</a></li>
     <li><a href="#著作権表示">著作権表示</a></li>
     <li><a href="#感想">感想</a></li>
   </ul>
@@ -265,25 +261,21 @@ related experimentation, invalid DNS names, or other similar uses.</p>
 <blockquote>
 <p>To safely satisfy these needs, four domain names are reserved as
 listed and described below.</p>
-<pre><code>              .test
-           .example
-           .invalid
-         .localhost
-
- &quot;.test&quot; is recommended for use in testing of current or new DNS
- related code.
-
- &quot;.example&quot; is recommended for use in documentation or as examples.
-
- &quot;.invalid&quot; is intended for use in online construction of domain
- names that are sure to be invalid and which it is obvious at a
- glance are invalid.
-
- The &quot;.localhost&quot; TLD has traditionally been statically defined in
- host DNS implementations as having an A record pointing to the
- loop back IP address and is reserved for such use.  Any other use
- would conflict with widely deployed code which assumes this use.
+<pre><code>            .test
+         .example
+         .invalid
+       .localhost
 </code></pre>
+<p>&ldquo;.test&rdquo; is recommended for use in testing of current or new DNS
+related code.</p>
+<p>&ldquo;.example&rdquo; is recommended for use in documentation or as examples.</p>
+<p>&ldquo;.invalid&rdquo; is intended for use in online construction of domain
+names that are sure to be invalid and which it is obvious at a
+glance are invalid.</p>
+<p>The &ldquo;.localhost&rdquo; TLD has traditionally been statically defined in
+host DNS implementations as having an A record pointing to the
+loop back IP address and is reserved for such use.  Any other use
+would conflict with widely deployed code which assumes this use.</p>
 </blockquote>
 <p>上記のニーズを満たすために、次の4つのTLD名が予約されている。</p>
 <ul>
@@ -302,13 +294,13 @@ listed and described below.</p>
 <p>これらのTLD名は見たことはあったがRFCとして明示されていることは知らなかった。</p>
 <h2 id="予約されたsecond-level-domain-names">予約されたSecond Level Domain Names<a href="#予約されたsecond-level-domain-names" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <blockquote>
-<h3 id="3-reserved-example-second-level-domain-names">3. Reserved Example Second Level Domain Names<a href="#3-reserved-example-second-level-domain-names" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>3 Reserved Example Second Level Domain Names</p>
 <p>The Internet Assigned Numbers Authority (IANA) also currently has the
 following second level domain names reserved which can be used as
 examples.</p>
-<pre><code>    example.com
-    example.net
-    example.org
+<pre><code> example.com
+ example.net
+ example.org
 </code></pre>
 </blockquote>
 <p><code>example.com</code>以外にも<code>example.net</code>と<code>example.org</code>が予約されていることは知らなかった。</p>
