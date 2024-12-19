@@ -16,7 +16,7 @@ googleAnalytics = "G-BDQ408J45J"
   themeColor = "orange"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
+  showMenuItems = 4
   # show selector to switch language
   showLanguageSelector = false
 
@@ -56,6 +56,11 @@ googleAnalytics = "G-BDQ408J45J"
   TocTitle = "目次"
   dateFormat = "2006/01/02"
 
+  # ここに指定したタグは一覧ページに表示されない
+  # tags/{ExcludeTag}/へのリンクを追加して技術に関係ない記事の表示場所
+  # を分ける目的で使う想定。
+  ExcludeTag = "diary"
+
 [params.twitter]
   # set Twitter handles for Twitter cards
   # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
@@ -92,6 +97,10 @@ googleAnalytics = "G-BDQ408J45J"
         identifier = "about"
         name = "About"
         url = "/about"
+      [[languages.ja.menu.main]]
+        identifier = "diary"
+        name = "diary"
+        url = "/tags/diary/"
       [[languages.ja.menu.main]]
         identifier = "rss"
         name = "RSS"
