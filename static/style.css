@@ -87,6 +87,10 @@ th, td {
   border: 2px solid var(--accent)
 }
 
+article.post > div.post-meta {
+  margin-top: 8px;
+}
+
 article.on-list > .post-content,
 article.on-list > .post-title::after {
   display: none;
