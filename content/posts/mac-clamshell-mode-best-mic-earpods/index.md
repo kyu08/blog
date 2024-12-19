@@ -1,6 +1,6 @@
 ---
 title: "クラムシェルでMacを使っているとき用のマイクとしてEarPodsを買った"
-tags: ["デスク環境", "ガジェット"]
+tags: ["デスク環境", "ガジェット", "diary"]
 keywords: ["デスク環境", "ガジェット"]
 
 cover: "https://blog.kyu08.com/cover.png"

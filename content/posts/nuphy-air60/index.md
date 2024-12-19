@@ -1,6 +1,6 @@
 ---
 title: "NuPhy Air60を買った"
-tags: ["NuPhy", "ガジェット", "キーボード"]
+tags: ["NuPhy", "ガジェット", "キーボード", "diary"]
 keywords: ["NuPhy", "ガジェット", "キーボード"]
 
 cover: "https://blog.kyu08.com/cover.png"
