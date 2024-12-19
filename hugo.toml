@@ -94,14 +94,16 @@ googleAnalytics = "G-BDQ408J45J"
 
     [languages.ja.menu]
       [[languages.ja.menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/about"
-      [[languages.ja.menu.main]]
         identifier = "diary"
-        name = "diary"
+        # menuの並び順が辞書順になるのでprefixとして`_`付与している(あとはRustの未使用の変数みたいなノリもあるとかないとか)
+        # 他の候補: Life Log / Side Notes / Misc / Personal Notes / Journal
+        name = "_misc"
         url = "/tags/diary/"
       [[languages.ja.menu.main]]
+        identifier = "about"
+        name = "about"
+        url = "/about"
+      [[languages.ja.menu.main]]
         identifier = "rss"
-        name = "RSS"
+        name = "rss"
         url = "/index.xml"
