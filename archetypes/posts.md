@@ -1,7 +1,6 @@
 ---
 title: ""
-tags: ["", ""]
-keywords: ["", ""]
+tags: []
 
 cover: "https://blog.kyu08.com/cover.png"
 description: ""
