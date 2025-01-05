@@ -4,7 +4,7 @@
     "comments": true
   },
   "rules": {
-    "preset-ja-spacing": true,
+    "preset-ja-spacing": false,
     "preset-ja-technical-writing": true,
     "preset-ja-technical-writing": {
       "sentence-length": {
