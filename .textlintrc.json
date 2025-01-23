@@ -4,7 +4,7 @@
     "comments": true
   },
   "rules": {
-    "preset-ja-spacing": true,
+    "preset-ja-spacing": false,
     "preset-ja-technical-writing": true,
     "preset-ja-technical-writing": {
       "sentence-length": {
@@ -13,6 +13,7 @@
       "no-doubled-joshi": false,
       "max-kanji-continuous-len": false,
       "ja-no-mixed-period": false,
+      "max-comma": false,
       "no-mix-dearu-desumasu": false
     }
   }
