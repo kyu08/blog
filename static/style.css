@@ -118,6 +118,10 @@ ul {
   margin-top: 30px;
 }
 
+ol {
+  margin-bottom: 0px;
+}
+
 blockquote {
   position: relative;
   border-left: 2px solid var(--color-gray);
