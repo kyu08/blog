@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sun, 06 Apr 2025 18:50:34 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Apr 2025 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS</title>
+      <link>https://blog.kyu08.com/tags/cs/</link>
+      <pubDate>Wed, 30 Apr 2025 00:00:00 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/cs/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>読書ログ</title>
+      <link>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</link>
+      <pubDate>Wed, 30 Apr 2025 00:00:00 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
     <item>
       <title>diary</title>
       <link>https://blog.kyu08.com/tags/diary/</link>
@@ -84,16 +104,6 @@
       <pubDate>Fri, 08 Nov 2024 23:34:37 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/tags/notion/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>CS</title>
-      <link>https://blog.kyu08.com/tags/cs/</link>
-      <pubDate>Sun, 03 Nov 2024 21:42:30 +0900</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/cs/</guid>
       <description></description>
       <content></content>
     </item>
@@ -184,16 +194,6 @@
       <pubDate>Tue, 03 Sep 2024 00:54:12 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/tags/zsh/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>読書ログ</title>
-      <link>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</link>
-      <pubDate>Thu, 06 Jun 2024 00:21:05 +0900</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</guid>
       <description></description>
       <content></content>
     </item>

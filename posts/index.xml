@@ -7,7 +7,898 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sun, 06 Apr 2025 18:50:34 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Apr 2025 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>『コンピュータシステムの理論と実装 第2版』を読んだ</title>
+      <link>https://blog.kyu08.com/posts/nand2tetris/</link>
+      <pubDate>Wed, 30 Apr 2025 00:00:00 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/posts/nand2tetris/</guid>
+      <description>『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は## 学び、得た経験 までジャンプして</description>
+      <content>&lt;p&gt;『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は&lt;a href=&#34;#%e5%ad%a6%e3%81%b3%e5%be%97%e3%81%9f%e7%b5%8c%e9%a8%93&#34; &gt;## 学び、得た経験&lt;/a&gt;
+までジャンプしてください。&lt;/p&gt;
+&lt;h2 id=&#34;本書の構成&#34;&gt;本書の構成&lt;/h2&gt;
+&lt;p&gt;本書はnand2tetrisという通称の通り、NANDゲートからスタートして、CPUやコンパイラやOSなどを実装し、最終的にはそのプラットフォーム上でテトリス(のようなアプリケーション)&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;が動くところまで実装するという内容のコースになっている。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;roadmap.webp&#34; alt=&#34;roadmap&#34;&gt;
+&lt;a href=&#34;https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view&lt;/a&gt;
+ P3より引用&lt;/p&gt;
+&lt;p&gt;上図のとおりだが、大まかな流れとしては以下。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;NANDゲートを使ってnot, and, orなどの基本的なチップを実装&lt;/li&gt;
+&lt;li&gt;加算機やALUを実装&lt;/li&gt;
+&lt;li&gt;レジスタ、RAM、Program Counterを実装&lt;/li&gt;
+&lt;li&gt;Memory、CPU、Computerを実装&lt;/li&gt;
+&lt;li&gt;アセンブラを実装(機械語の記号表現をバイナリ表現に変換する)&lt;/li&gt;
+&lt;li&gt;仮想マシンを実装&lt;/li&gt;
+&lt;li&gt;コンパイラを実装&lt;/li&gt;
+&lt;li&gt;OSを実装&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;各章末に課題とそれをパスしたことを確認するテストがある。基本的にはテストコードを使って動作確認ができるようになっているため、自分の実装が合ってるかを機械的に確認できるようになっており、手を動かしながら理解を深めやすいようになっている。&lt;/p&gt;
+&lt;p&gt;参考までに各章の実装に用いる言語を記しておく。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;章&lt;/th&gt;
+&lt;th&gt;実装言語&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;第1章 ブール論理&lt;/td&gt;
+&lt;td&gt;HDL(Hardware Description Languageの略で論理回路の構造を記述できる言語)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;第2章 ブール算術&lt;/td&gt;
+&lt;td&gt;HDL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;第3章 メモリ&lt;/td&gt;
+&lt;td&gt;HDL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;第4章 機械語&lt;/td&gt;
+&lt;td&gt;アセンブリ言語(Hackプラットフォーム独自の仕様)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;第5章 コンピュータアーキテクチャ&lt;/td&gt;
+&lt;td&gt;HDL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;第6章 アセンブラ&lt;/td&gt;
+&lt;td&gt;任意の言語&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;第7章 仮想マシンI：処理&lt;/td&gt;
+&lt;td&gt;任意の言語&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;第8章 仮想マシンII：制御&lt;/td&gt;
+&lt;td&gt;任意の言語&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;第9章 高水準言語&lt;/td&gt;
+&lt;td&gt;Jack言語(本書で実装するJavaライクな独自言語)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;第10章 コンパイラI：構文解析&lt;/td&gt;
+&lt;td&gt;任意の言語&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;第11章 コンパイラII：コード生成&lt;/td&gt;
+&lt;td&gt;任意の言語&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;第12章 OS&lt;/td&gt;
+&lt;td&gt;Jack言語&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;第6章 ~ 第8章と第10章 ~ 第11章は決められた入出力を持つCLIツールを書けばいいので任意の言語で書くことができる。筆者はRustで実装した。特にEnumとパターンマッチのおかげで構文解析関連の処理が書きやすかった。&lt;/p&gt;
+&lt;p&gt;ここからは各章の学びを簡単に書いていく。&lt;/p&gt;
+&lt;h2 id=&#34;第1章-ブール論理&#34;&gt;第1章 ブール論理&lt;/h2&gt;
+&lt;p&gt;NANDを使って以下の論理回路をHDLを使って実装した。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;not&lt;/li&gt;
+&lt;li&gt;and&lt;/li&gt;
+&lt;li&gt;or&lt;/li&gt;
+&lt;li&gt;xor&lt;/li&gt;
+&lt;li&gt;マルチプレクサ&lt;/li&gt;
+&lt;li&gt;デマルチプレクサ&lt;/li&gt;
+&lt;li&gt;not(16bit)&lt;/li&gt;
+&lt;li&gt;and(16bit)&lt;/li&gt;
+&lt;li&gt;or(16bit)&lt;/li&gt;
+&lt;li&gt;マルチプレクサ(16bit)&lt;/li&gt;
+&lt;li&gt;8入力or&lt;/li&gt;
+&lt;li&gt;4入力マルチプレクサ(16bit)&lt;/li&gt;
+&lt;li&gt;8入力マルチプレクサ(16bit)&lt;/li&gt;
+&lt;li&gt;4入力デマルチプレクサ&lt;/li&gt;
+&lt;li&gt;8入力デマルチプレクサ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;マルチプレクサの実装に悩んだがいい感じの実装を思いついたときの爽快感がすごかった。&lt;/p&gt;
+&lt;p&gt;真理値表を丁寧めに書きながら進めた結果マルチプレクサの実装以外はそこまで悩まなかった。&lt;/p&gt;
+&lt;h2 id=&#34;第2章-ブール算術&#34;&gt;第2章 ブール算術&lt;/h2&gt;
+&lt;p&gt;以下の論理回路を作成した。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;半加算器&lt;/li&gt;
+&lt;li&gt;全加算器&lt;/li&gt;
+&lt;li&gt;16bit同士の加算&lt;/li&gt;
+&lt;li&gt;16bitの入力に1をインクリメントする回路&lt;/li&gt;
+&lt;li&gt;ALU(Arithmetic Logic Unit: 算術論理演算装置)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;学び:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;内部ピンにインデックスアクセスするには次のように書く必要がある。
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-hdl&#34; data-lang=&#34;hdl&#34;&gt;Mux16(a=calculateResult, b=notCalculateResult, sel=no, out=out, out[0..7]=out0To7, out[8..15]=out8To15, out[15]=ng);
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;愚直な実装をしている箇所があったが、Mux16でスマートに書き直せることを知って感動した。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;第3章-メモリ&#34;&gt;第3章 メモリ&lt;/h2&gt;
+&lt;p&gt;この章では、DFF(Data Flip-Flop)を用いて1-bit registerを作成し、それを組み合わせて16-bit registerを作成し、さらにそれを組み合わせてRAMを作成した。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;from-dff-to-ram.webp&#34; alt=&#34;from-dff-to-ram.webp&#34;&gt;
+&lt;a href=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&lt;/a&gt;
+ P47より引用&lt;/p&gt;
+&lt;p&gt;読み書き可能なメモリを作成したことで、コンピュータを作っている感が強まってきた。&lt;/p&gt;
+&lt;p&gt;作成した回路は具体的には以下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Register(1bit)&lt;/li&gt;
+&lt;li&gt;Register(16bit)&lt;/li&gt;
+&lt;li&gt;RAM(8bit)&lt;/li&gt;
+&lt;li&gt;RAM(64bit)&lt;/li&gt;
+&lt;li&gt;ProgramCounter&lt;/li&gt;
+&lt;li&gt;RAM(512bit)&lt;/li&gt;
+&lt;li&gt;RAM(4K-bit)&lt;/li&gt;
+&lt;li&gt;RAM(16K-bit)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;学びメモ&#34;&gt;学びメモ&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;第2章までは時間に依存しない回路のみを扱っていたがこの章では過去の状態を保持する回路を作成した。&lt;/li&gt;
+&lt;li&gt;ここでは時間をクロックという単位で区切って扱う。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;非同期チップ(組み合わせチップ)&lt;/strong&gt;: 入力値の組み合わせのみに反応し時間の進行には影響を受けない&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;同期チップ(順序チップ)&lt;/strong&gt;: 以前の時間単位での変化に対応する用に設計されたチップ&lt;/li&gt;
+&lt;li&gt;同期チップを利用することでシステム内のチップ間で信号が伝播するのにかかる時間を無視できる。&lt;/li&gt;
+&lt;li&gt;ただしクロックサイクルは「システム内のチップ間で信号が伝播するのにかかる時間の最大値」と「1チップ内で最も処理時間がかかる演算を完了するのにかかる時間」の合計値よりも大きく設定する必要がある。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;DFFは&lt;code&gt;out(t+1) = in(t)&lt;/code&gt;で表される出力を持つ。DFFを用いることで過去の状態を論理回路上で表現できる。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;dff.webp&#34; alt=&#34;dff.webp&#34;&gt;
+&lt;a href=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&lt;/a&gt;
+ P41より引用&lt;/p&gt;
+&lt;p&gt;次のようにマルチプレクサとDFFを組み合わせることで1-bit registerを作成できる。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-hdl&#34; data-lang=&#34;hdl&#34;&gt;CHIP Bit {
+    IN in, load;
+    OUT out;
+
+    PARTS:
+    Mux(a=dffOut, b=in, sel=load, out=mux);
+    DFF(in=mux, out=out, out=dffOut);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;1-bit registerは時刻&lt;code&gt;t&lt;/code&gt;において&lt;code&gt;load&lt;/code&gt;ビットがアサートされると&lt;code&gt;out(t+1)&lt;/code&gt;が&lt;code&gt;in(t)&lt;/code&gt;の値になり、アサートされていない場合は&lt;code&gt;out(t+1)&lt;/code&gt;は&lt;code&gt;out(t)&lt;/code&gt;の値になる。換言するとレジスタを利用することで過去の状態を保持できる。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;1-bit-register.webp&#34; alt=&#34;1-bit-register.webp&#34;&gt;
+&lt;a href=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&lt;/a&gt;
+ P25より引用&lt;/p&gt;
+&lt;h2 id=&#34;第4章-機械語&#34;&gt;第4章 機械語&lt;/h2&gt;
+&lt;p&gt;第4章では以下のプログラムを機械語で書いた。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;掛け算を行うプログラム&lt;/li&gt;
+&lt;li&gt;キーボードが押されているときだけ画面を黒くするプログラム&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;機械語&#34;&gt;機械語&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;ハードウェアプラットフォームが実行するように設計されている基本的な命令セット&lt;/li&gt;
+&lt;li&gt;高水準言語は表現力やプラットフォーム間の互換性を目標に設計される一方で機械語は特定のハードウェアで直接実行され、そのハードウェアを完全に制御できるように設計されている。&lt;/li&gt;
+&lt;li&gt;機械語は決められた形式に従い&lt;strong&gt;プロセッサ&lt;/strong&gt;と&lt;strong&gt;レジスタ&lt;/strong&gt;を用いて&lt;strong&gt;メモリ&lt;/strong&gt;を操作するように設計されている。&lt;/li&gt;
+&lt;li&gt;バイナリ形式、記号形式の2パターンで記述できる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;メモリ&#34;&gt;メモリ&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;データや命令を保存するハードウェアデバイス。各セルは&lt;strong&gt;メモリ位置&lt;/strong&gt;や&lt;strong&gt;メモリレジスタ&lt;/strong&gt;と呼ばれ、それぞれ固有の&lt;strong&gt;アドレス&lt;/strong&gt;を持つ。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;プロセッサ&#34;&gt;プロセッサ&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;プロセッサは&lt;strong&gt;中央演算装置(CPU)&lt;/strong&gt; と呼ばれ、あらかじめ決められた基本的な命令セットを実行できる。&lt;/li&gt;
+&lt;li&gt;プロセッサは選択されたレジスタとメモリ位置からデータを取り出し、選択されたレジスタとメモリ位置に出力を書き込む。&lt;/li&gt;
+&lt;li&gt;プロセッサは&lt;strong&gt;ALU&lt;/strong&gt;と&lt;strong&gt;レジスタ&lt;/strong&gt;、&lt;strong&gt;バイナリ命令の解析と実行を可能にする論理ゲート&lt;/strong&gt;によって構成される。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;レジスタ&#34;&gt;レジスタ&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;プロセッサとメモリはそれぞれ独立したチップとして実装されており一方から他方へデータを移すには比較的時間がかかる。そのためほとんどのプロセッサにはいくつかのレジスタが備わっており、高速なローカルメモリとして機能する。&lt;/li&gt;
+&lt;li&gt;CPUに存在するレジスタは2つのタイプに分類される。
+&lt;ul&gt;
+&lt;li&gt;データを保持する&lt;strong&gt;データレジスタ(Dレジスタ)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;アドレスを保持する&lt;strong&gt;アドレスレジスタ(Aレジスタ)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;hackコンピュータのアーキテクチャ&#34;&gt;Hackコンピュータのアーキテクチャ&lt;/h3&gt;
+&lt;p&gt;Hackコンピュータは以下のようなアーキテクチャを持つ。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;hack-computer-architecture.webp&#34; alt=&#34;hack-computer-architecture.webp&#34;&gt;
+&lt;a href=&#34;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&lt;/a&gt;
+ P23より引用&lt;/p&gt;
+&lt;h3 id=&#34;アセンブラの役割&#34;&gt;アセンブラの役割&lt;/h3&gt;
+&lt;p&gt;機械語はバイナリ形式、記号形式の2パターンで記述できると書いたが、記号形式で&lt;code&gt;@x&lt;/code&gt;のように変数を宣言した場合にその変数を実際のメモリのどこに置くかを知るのが&lt;strong&gt;アセンブラ&lt;/strong&gt;である。アセンブラのおかげで記号形式のプログラム側は実装詳細を意識することなく変数を初期化、利用できる。&lt;/p&gt;
+&lt;h3 id=&#34;命令タイプ&#34;&gt;命令タイプ&lt;/h3&gt;
+&lt;p&gt;Hack言語には2つの命令タイプがある。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;A命令&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;A命令はAレジスタに15ビットの値を設定する。&lt;/li&gt;
+&lt;li&gt;A命令は1ビットのオペコード + 15ビットの値で構成される。(Hack機械語ではA命令のオペコードは&lt;code&gt;0&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;A命令は3つの目的で使用される。
+&lt;ul&gt;
+&lt;li&gt;プログラムによってコンピュータに定数を入力する&lt;/li&gt;
+&lt;li&gt;Aレジスタのアドレスを設定することでその次のC命令でRAMレジスタを操作できる&lt;/li&gt;
+&lt;li&gt;Aレジスタにジャンプ先のアドレスを設定することでその次のC命令でジャンプを実行できる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;C命令&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;C命令では次の3つを指定する。
+&lt;ul&gt;
+&lt;li&gt;どういう計算をするか(comp)&lt;/li&gt;
+&lt;li&gt;計算された値をどこに保存するか(dest)&lt;/li&gt;
+&lt;li&gt;次に何をするか(jump)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Hack機械語では一番左端の1ビットが1&lt;/li&gt;
+&lt;li&gt;C命令は次のような形式で構成される。&lt;code&gt;111accccccdddjjj&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;111: 先頭の1がオペコードで、左から2,3ビット目は使用されないが慣例として&lt;code&gt;1&lt;/code&gt;が設定されている。&lt;/li&gt;
+&lt;li&gt;a: ALUへの入力がAレジスタからの値化Mからの値か決定する(1ビット)&lt;/li&gt;
+&lt;li&gt;c: compフィールド。(6ビット)ALUに対して計算内容を指定する。&lt;/li&gt;
+&lt;li&gt;d: destフィールド。(3ビット)計算結果の値をどこに保存するかを表現する。左から順にDレジスタ、Aレジスタ、&lt;code&gt;RAM[A]&lt;/code&gt;に値を保存するかを表現する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;the-hack-language-specification.webp&#34; alt=&#34;the-hack-language-specification&#34;&gt;
+&lt;a href=&#34;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&lt;/a&gt;
+ P129より引用&lt;/p&gt;
+&lt;h3 id=&#34;外部デバイス&#34;&gt;外部デバイス&lt;/h3&gt;
+&lt;p&gt;Hackのハードウェアプラットフォームでは画面とキーボードの2つの外部デバイスに接続できる。どちらのデバイスも&lt;strong&gt;メモリマップ&lt;/strong&gt;を通してコンピュータと会話する。(メモリの中に画面とキーボード用のメモリ領域があり、そこに画面の各ピクセルの値や押下されているキーのキーコードが格納される。)&lt;/p&gt;
+&lt;h3 id=&#34;hackプログラムの例&#34;&gt;Hackプログラムの例&lt;/h3&gt;
+&lt;p&gt;以下は掛け算を行うHackプログラムのソースコード。(Hackアーキテクチャで動作する機械語で書かれている) ハードウェアの構成要素を理解しながら手続き型チックに記述する必要があるため難しかったが理解が進んだ。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-asm&#34; data-lang=&#34;asm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 0に対して(R0-1)回R1を足すことで掛け算を実現する
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// n = 0
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;n&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;M&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// R2 = 0
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;R2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;M&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;LOOP&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// if n == R0 then goto END
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;n&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;D&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;M&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;R0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;D&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;D-M&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;END&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;D&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;JEQ
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// R2 += R1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;R2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;D&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;M&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;R1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;D&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;D&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;M&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// R2 = D
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;R2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;M&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;D&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// n++
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;n&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;M&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;M&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// go to LOOP
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;LOOP&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;JMP
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;END&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;END&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;JMP
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;第5章-コンピュータアーキテクチャ&#34;&gt;第5章 コンピュータアーキテクチャ&lt;/h2&gt;
+&lt;p&gt;第5章では、これまでの章で作成した論理回路を組み合わせてついに1つの汎用コンピュータを作成する。このコンピュータは第4章に登場した機械語のプログラムを実行できる。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ノイマン型アーキテクチャ&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;CPUがメモリデバイスと相互作用する。&lt;/li&gt;
+&lt;li&gt;入力デバイスからデータを受け取り出力デバイスへデータを送信する。&lt;/li&gt;
+&lt;li&gt;コンピュータのメモリに保存されるデータはコンピュータが計算したデータだけではなくコンピュータに何を行うべきかを指示する「命令」も含まれる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;メモリ&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;物理的にはアドレス指定可能な固定サイズの&lt;strong&gt;レジスタ&lt;/strong&gt;の並びで、それぞれが固有のアドレスを持つ。&lt;/li&gt;
+&lt;li&gt;概念的にはアドレス空間はデータと命令の保存という2つの役割を果たす。&lt;/li&gt;
+&lt;li&gt;ランダムに選択されたメモリレジスタに瞬時に到達できるという要件からRandom Access Memoryと呼ばれている。
+&lt;ul&gt;
+&lt;li&gt;たしかにRAMはレジスタの木構造になっていたのである程度大きいRAMでも少ないホップ数で指定したレジスタにアクセスできそうだ。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;データ専用のメモリ領域を&lt;strong&gt;データメモリ&lt;/strong&gt;、命令専用のメモリ領域を&lt;strong&gt;命令メモリ&lt;/strong&gt;と呼ぶ。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CPU&lt;/strong&gt;:
+&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;CPUは現在読み込まれているプログラムの命令を実行する。&lt;/li&gt;
+&lt;li&gt;各命令はCPUに対して以下を指示する。
+&lt;ul&gt;
+&lt;li&gt;どの計算を実行するか&lt;/li&gt;
+&lt;li&gt;どのレジスタにアクセスするか&lt;/li&gt;
+&lt;li&gt;次のどの命令をフェッチして実行するか&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CPUはこれらのタスクを&lt;strong&gt;ALU&lt;/strong&gt;、&lt;strong&gt;レジスタ&lt;/strong&gt;、&lt;strong&gt;制御ユニット&lt;/strong&gt;を使って実行する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;第5章の課題ではこれまでの章で作成した論理回路を組み合わせて以下を作成した。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Memory&lt;/li&gt;
+&lt;li&gt;CPU&lt;/li&gt;
+&lt;li&gt;Computer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;正直CPUの実装、デバッグがはかなり大変だったが公式が提供してくれているテストツールとデバッガのおかげで効率的にバグを見つけることができた。&lt;/p&gt;
+&lt;p&gt;こんな感じで各ピンの出力や期待する結果とのdiffを比較的見やすい形式で表示してくれるのでありがたかった。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;cpu-debug.webp&#34; alt=&#34;cpu-debug.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;ここで作成したCPUの回路は次のようなもの。ここではヒントとして大まかな回路設計が与えられておりそれを参考にしつつ足りない部分を埋めていく形で実装を進めた。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;cpu-implementation.webp&#34; alt=&#34;cpu-implementation.webp&#34;&gt;
+&lt;a href=&#34;https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view&lt;/a&gt;
+ P31より引用&lt;/p&gt;
+&lt;h2 id=&#34;第6章-アセンブラ&#34;&gt;第6章 アセンブラ&lt;/h2&gt;
+&lt;p&gt;第6章では第5章で書いた機械語の記号表現をバイナリ表現に変換するアセンブラを開発する。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;変数やラベルのアドレス管理を行うために&lt;strong&gt;シンボルテーブル&lt;/strong&gt;を利用する。シンボルテーブルには以下のような情報が格納される。
+&lt;ul&gt;
+&lt;li&gt;ラベルの位置 e.g. &lt;code&gt;(LOOP)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;変数のアドレス e.g. &lt;code&gt;@i&lt;/code&gt;(Hack機械語では変数は16以降のアドレスに順に割り当てられる)&lt;/li&gt;
+&lt;li&gt;定義済みシンボルのアドレス e.g. &lt;code&gt;@SCREEN&lt;/code&gt;, &lt;code&gt;@KBD&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;シンボル処理&#34;&gt;シンボル処理&lt;/h3&gt;
+&lt;p&gt;アセンブリプログラムではシンボルが定義される前にシンボルラベルを使用できる。(goto命令の行き先を指定するのに利用する)&lt;/p&gt;
+&lt;p&gt;この挙動も考慮しつつバイナリを生成するには&lt;strong&gt;2パス・アセンブラ&lt;/strong&gt;と呼ばれる手法を用いる。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第1パス: シンボルテーブルを作成しすべてのラベルシンボルをテーブルに追加する。&lt;/li&gt;
+&lt;li&gt;第2パス: 変数シンボルを処理し、シンボルテーブルを使用してバイナリコードを生成する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;第6章からは好きな言語で実装できるのでRustで実装した。構文解析系はenumがある言語だと書きやすくて良い。&lt;/p&gt;
+&lt;h2 id=&#34;第7章-仮想マシンi処理&#34;&gt;第7章 仮想マシンI：処理&lt;/h2&gt;
+&lt;p&gt;第7章ではVM変換器の一部を実装した。第8章で残りの部分を実装してVM変換器が完成する。ここまでの課題の中では一番大変で丸3日かかった。&lt;/p&gt;
+&lt;h3 id=&#34;hackプラットフォームのvmアーキテクチャとその利点&#34;&gt;HackプラットフォームのVMアーキテクチャとその利点&lt;/h3&gt;
+&lt;p&gt;Hackプラットフォームにおいて、Hackプログラムは2段階コンパイルによって機械語に変換される。(更にその後アセンブラが機械語(記号表現)を機械語(バイナリ表現)に変換する)&lt;/p&gt;
+
+&lt;pre class=&#34;mermaid&#34;&gt;    graph LR
+    A[Jackコード&lt;br&gt;e.g. Foo.jack] --&gt;|コンパイラが変換| B[&#34;VMコード(中間コード)&lt;br&gt;e.g. Foo.vm&#34;]
+    B --&gt;|VM変換器が変換| C[&#34;機械語(記号表現)&lt;br&gt;e.g. Foo.asm&#34;]
+    C --&gt;|アセンブラが変換| D[&#34;機械語(バイナリ表現)&lt;br&gt;e.g. Foo.hack&#34;]
+&lt;/pre&gt;
+
+&lt;p&gt;中間コードは&lt;strong&gt;仮想マシン(Virtual Machine; VM)&lt;/strong&gt; と呼ばれる抽象化されたコンピュータ上で実行されるように設計されている。&lt;/p&gt;
+&lt;p&gt;高水準言語のプログラムを直接機械語に変換する方式だとハードウェアプラットフォームごとにコンパイラを作成する必要がある。この場合、コンパイラはソース言語(高水準言語)とターゲット言語(機械語)の両方に依存するためそれぞれの変更に追従する必要がある。&lt;/p&gt;
+&lt;p&gt;2段階でコンパイルする方式を採用するとコンパイラはソース言語の詳細に、VM変換器はターゲット言語の詳細にのみ依存するため&lt;strong&gt;変更への追従コストを下げることができる。&lt;/strong&gt;
+この方式ではコンパイラはハードウェアプラットフォームによらず利用することができ、ハードウェアごとにVM変換器さえ実装すればよい。そのため&lt;strong&gt;クロスプラットフォーム対応が比較的容易になる&lt;/strong&gt;という利点がある。&lt;/p&gt;
+&lt;p&gt;VMフレームワークは上記の利点の代償として&lt;strong&gt;効率性が低下する&lt;/strong&gt;という欠点がある。2段階の変換プロセスで生成するコードは直接コンパイルで生成するコードよりも冗長なことが多く、効率性が落ちる。&lt;/p&gt;
+&lt;h3 id=&#34;vm言語の設計&#34;&gt;VM言語の設計&lt;/h3&gt;
+&lt;p&gt;VM言語の設計にはバランスが重要で以下の要求を同時に満たす必要がある。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;高水準側からの要求: 高水準言語のコードを表現できるだけの表現力と構造性を持たなければならない&lt;/li&gt;
+&lt;li&gt;低水準側からの要求: VMコードから生成される機械語がコンパクトで効率的になるようにVMコードは十分に低水準でなければならない&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;このような一見矛盾するような要件を&lt;strong&gt;スタックマシン&lt;/strong&gt;が解決する。スタックマシンに基づく中間のVM言語を用いることで&lt;strong&gt;高水準言語の表現力&lt;/strong&gt;と&lt;strong&gt;低水準言語の効率性&lt;/strong&gt;という相反する要求を満たすことができる。&lt;/p&gt;
+&lt;h3 id=&#34;スタックマシンの挙動&#34;&gt;スタックマシンの挙動&lt;/h3&gt;
+&lt;p&gt;スタックマシンの中心は&lt;strong&gt;スタック&lt;/strong&gt;と呼ばれるLIFOのデータ構造にある。ここではいくつかの操作について説明する。(ここではスタックは下方向に成長するように記述する)&lt;/p&gt;
+&lt;h4 id=&#34;push操作の例&#34;&gt;push操作の例&lt;/h4&gt;
+
+&lt;pre class=&#34;mermaid&#34;&gt;graph LR
+    A[Stack: empty] --&gt;|push 10| B[Stack:&lt;br&gt;10]
+&lt;/pre&gt;
+
+&lt;p&gt;pushを行うとスタックの先頭に値が追加される。スタックでは&lt;strong&gt;SP(スタックポインタ)&lt;/strong&gt; という値を使ってスタックの先頭位置を保持している。SPはpush操作を行う際に値を追加する領域を指し示している。スタックのメモリアドレスが&lt;code&gt;0&lt;/code&gt;からスタートすると仮定すると今回の例ではアドレス&lt;code&gt;0&lt;/code&gt;に値がpushされたときにSPの値が&lt;code&gt;0&lt;/code&gt;から&lt;code&gt;1&lt;/code&gt;になる。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;アドレス&lt;/th&gt;
+&lt;th&gt;値&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;pre class=&#34;mermaid&#34;&gt;graph LR
+    A[Stack: empty] --&gt;|push 10| B[Stack:&lt;br&gt;10]
+    B --&gt;|push 20| C[Stack:&lt;br&gt;10&lt;br&gt;20]
+&lt;/pre&gt;
+
+&lt;p&gt;push操作を行うとスタックの先頭に値が追加される。このときSPの値は&lt;code&gt;1&lt;/code&gt;から&lt;code&gt;2&lt;/code&gt;になる。(補足:ここではSPは0-originとする)&lt;/p&gt;
+&lt;h4 id=&#34;pop操作の例&#34;&gt;pop操作の例&lt;/h4&gt;
+
+&lt;pre class=&#34;mermaid&#34;&gt;graph LR
+    A[Stack:&lt;br&gt;42] --&gt;|pop local 0| B[&#34;Stack: empty&lt;br&gt;local[0] = 42&#34;]
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;pop segment_name index&lt;/code&gt;と記述するとスタックの先頭の値を取り除き、指定したメモリセグメント、インデックスの位置に値を書き込む。&lt;/p&gt;
+&lt;p&gt;pop操作はスタックの先頭の値を取り除く。&lt;/p&gt;
+&lt;h4 id=&#34;算術演算addの例&#34;&gt;算術演算(add)の例&lt;/h4&gt;
+
+&lt;pre class=&#34;mermaid&#34;&gt;graph LR
+    A[Stack: empty] --&gt;|push 10| B[Stack:&lt;br&gt;10]
+    B --&gt;|push 20| C[Stack:&lt;br&gt;10&lt;br&gt;20]
+    C --&gt;|add| D[Stack:&lt;br&gt;30]
+&lt;/pre&gt;
+
+&lt;p&gt;算術演算の例として&lt;code&gt;x+y&lt;/code&gt;を行うケースを考える。&lt;/p&gt;
+&lt;p&gt;この処理は次のような流れで行われる。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;スタックからオペランド&lt;code&gt;x&lt;/code&gt;, &lt;code&gt;y&lt;/code&gt;をpopする&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;x+y&lt;/code&gt;を計算する&lt;/li&gt;
+&lt;li&gt;計算結果をスタックにpushする&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre class=&#34;mermaid&#34;&gt;graph LR
+    A[Stack:&lt;br&gt;10&lt;br&gt;20] --&gt;|pop y=20| B[Stack:&lt;br&gt;10]
+    B --&gt;|pop x=10| C[Stack: empty]
+    C --&gt;|push x+y=30| D[Stack:&lt;br&gt;30]
+&lt;/pre&gt;
+
+&lt;p&gt;この方法を拡張することで一般的な算術演算をスタックマシンで評価できる。&lt;/p&gt;
+&lt;p&gt;第7章では、以下の演算子を実装した。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;push&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pop&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;算術演算子
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;add&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sub&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;neg&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;eq&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gt&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lt&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;and&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;or&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;not&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;仮想メモリセグメント&#34;&gt;仮想メモリセグメント&lt;/h3&gt;
+&lt;p&gt;ここで実装するVMにはシンボル変数は存在しない。そのかわりに変数は&lt;code&gt;static&lt;/code&gt;, &lt;code&gt;local&lt;/code&gt;, &lt;code&gt;argument&lt;/code&gt;, &lt;code&gt;this&lt;/code&gt;, &lt;code&gt;that&lt;/code&gt;, &lt;code&gt;pointer&lt;/code&gt;, &lt;code&gt;temp&lt;/code&gt;のような名前を持つ&lt;strong&gt;仮想セグメント&lt;/strong&gt;の要素として表現される。たとえばコンパイラは高水準言語プログラムで見つかった最初のスタティック変数を&lt;code&gt;static 0&lt;/code&gt;に、その次に見つかったスタティック変数を&lt;code&gt;static 1&lt;/code&gt;に、というように変換する。&lt;/p&gt;
+&lt;p&gt;ここでのVM実装では以下のような仮想メモリセグメントを持つ。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名前&lt;/th&gt;
+&lt;th&gt;場所&lt;/th&gt;
+&lt;th&gt;使用法&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;SP&lt;/td&gt;
+&lt;td&gt;RAM[0]&lt;/td&gt;
+&lt;td&gt;スタックポインタ：スタック最上位の次のメモリアドレス&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LCL&lt;/td&gt;
+&lt;td&gt;RAM[1]&lt;/td&gt;
+&lt;td&gt;localセグメントのベースアドレス&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ARG&lt;/td&gt;
+&lt;td&gt;RAM[2]&lt;/td&gt;
+&lt;td&gt;argumentセグメントのベースアドレス&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;THIS&lt;/td&gt;
+&lt;td&gt;RAM[3]&lt;/td&gt;
+&lt;td&gt;thisセグメントのベースアドレス&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;THAT&lt;/td&gt;
+&lt;td&gt;RAM[4]&lt;/td&gt;
+&lt;td&gt;thatセグメントのベースアドレス&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;TEMP&lt;/td&gt;
+&lt;td&gt;RAM[5-12]&lt;/td&gt;
+&lt;td&gt;tempセグメントを保持&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;R13, R14, R15&lt;/td&gt;
+&lt;td&gt;RAM[13-15]&lt;/td&gt;
+&lt;td&gt;VM変換器が生成するアセンブリコードに変数が必要な場合、これらのレジスタを使用可能&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;P175より引用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;LCL&lt;/code&gt;, &lt;code&gt;ARG&lt;/code&gt;, &lt;code&gt;THIS&lt;/code&gt;, &lt;code&gt;THAT&lt;/code&gt;には各セグメントのベースアドレスが格納されている。たとえば次のように指定されていた場合、&lt;code&gt;pop this 2&lt;/code&gt;はスタックの先頭の値を&lt;code&gt;RAM[2202]&lt;/code&gt;に書き込む。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;アドレス&lt;/th&gt;
+&lt;th&gt;値&lt;/th&gt;
+&lt;th&gt;備考&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;256&lt;/td&gt;
+&lt;td&gt;SP&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;2000&lt;/td&gt;
+&lt;td&gt;LCL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;2100&lt;/td&gt;
+&lt;td&gt;ARG&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;2200&lt;/td&gt;
+&lt;td&gt;THIS&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;2300&lt;/td&gt;
+&lt;td&gt;THAT&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;vm変換器の動作例&#34;&gt;VM変換器の動作例&lt;/h3&gt;
+&lt;p&gt;例として実際の変換例を示す。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-vm&#34; data-lang=&#34;vm&#34;&gt;push constant 7
+push constant 8
+add
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;今回作成した実装では上記のvmコードは次のようなアセンブリコードに変換される。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-asm&#34; data-lang=&#34;asm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// init
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@256&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;D&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;A&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;SP&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;M&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;D&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// body
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// push
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@7&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;D&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;A&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;SP&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;A&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;M&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;M&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;D&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;SP&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;M&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;M&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// push
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@8&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;D&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;A&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;SP&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;A&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;M&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;M&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;D&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;SP&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;M&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;M&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// add
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;SP&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;A&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;M&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;A&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;A-1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;A&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;A-1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;D&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;M&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;SP&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;A&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;M&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;A&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;A-1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;D&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;D&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;M&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;SP&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;A&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;M&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;A&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;A-1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;A&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;A-1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;M&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;SP&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;A&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;M&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;A&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;A-1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;M&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;SP&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;M&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;M-1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;M&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;M-1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;SP&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;A&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;M&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;M&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;D&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;SP&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;M&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;M&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// end
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;END&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;END&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;JMP
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;VM変換器の実装はハードウェアの構造を意識しながらだいぶ手続き的なコードを書く必要があるので大変だった。(記述量も多いしミスるポイントも多い。)&lt;/p&gt;
+&lt;p&gt;現代のおいては低レイヤを隠蔽してくれる便利な仕組みがあるおかげでソフトウェアエンジニアが少ない記述量でアプリケーションを動かすことができていることを実感した。&lt;/p&gt;
+&lt;p&gt;ただ、隠蔽されているからこそ自主的に潜っていかないと構造の理解を深めるのが難しかったりするので引き続きやっていきたい。&lt;/p&gt;
+&lt;h2 id=&#34;第8章-仮想マシンii制御&#34;&gt;第8章 仮想マシンII：制御&lt;/h2&gt;
+&lt;p&gt;第7章では&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;push&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pop&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;算術演算子
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;add&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sub&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;neg&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;eq&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gt&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lt&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;and&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;or&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;not&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以下の演算子を実装したが、第8章では以下の演算子を実装し、VM変換器を完成させた。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;label&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;goTo&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ifGoTo&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;call&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;function&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;return&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;これを実装することで次の操作が可能になりよりプログラムっぽい処理を行えるようになる。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;任意のラベル位置へのジャンプ&lt;/li&gt;
+&lt;li&gt;if分岐&lt;/li&gt;
+&lt;li&gt;関数の宣言と呼び出し&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;関数の呼び出しcall&#34;&gt;関数の呼び出し(&lt;code&gt;call&lt;/code&gt;)&lt;/h3&gt;
+&lt;p&gt;Hackプラットフォームにおいては&lt;code&gt;call {function_name}&lt;/code&gt;コマンドを使って関数呼び出しを行う。&lt;/p&gt;
+&lt;p&gt;スタックを利用することで関数の呼び出しと戻り値の取得をシンプルに行うことができる。&lt;/p&gt;
+&lt;p&gt;ここでは&lt;code&gt;func_a&lt;/code&gt;から&lt;code&gt;func_b&lt;/code&gt;を呼び出すシナリオを例に関数呼び出しをスタックで実現する際の操作を説明する。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;(&lt;code&gt;func_a&lt;/code&gt;から&lt;code&gt;func_b&lt;/code&gt;を呼び出す)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;func_a&lt;/code&gt;の以下の呼び出し側の情報をスタックにpush(これらの情報は&lt;strong&gt;フレーム&lt;/strong&gt;と呼ばれる)(画像の灰色の部分)
+&lt;ol&gt;
+&lt;li&gt;リターンアドレス(: &lt;code&gt;func_b&lt;/code&gt;の呼び出しが完了して&lt;code&gt;return&lt;/code&gt;する際に戻るアドレス)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;func_a&lt;/code&gt;のLCLセグメントのベースアドレス&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;func_a&lt;/code&gt;のARGセグメントのベースアドレス&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;func_a&lt;/code&gt;のTHISセグメントのベースアドレス&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;func_a&lt;/code&gt;のTHATセグメントのベースアドレス&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;ARG, LCLセグメントの値を更新&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;func_b&lt;/code&gt;のコマンドが定義されているアドレスにジャンプ&lt;/li&gt;
+&lt;li&gt;リターンアドレスラベルをコードに挿入&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;call.webp&#34; alt=&#34;call.webp&#34;&gt;
+&lt;a href=&#34;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&lt;/a&gt;
+ P58より引用&lt;/p&gt;
+&lt;h3 id=&#34;関数からのreturnreturn&#34;&gt;関数からのreturn(&lt;code&gt;return&lt;/code&gt;)&lt;/h3&gt;
+&lt;p&gt;呼び出された関数の終了は&lt;code&gt;return&lt;/code&gt;コマンドで行う。このコマンドが呼ばれることで呼び出し側に処理が戻る。&lt;/p&gt;
+&lt;p&gt;ここでは&lt;code&gt;func_a&lt;/code&gt;から&lt;code&gt;func_b&lt;/code&gt;を呼び出した際に&lt;code&gt;func_b&lt;/code&gt;から&lt;code&gt;func_a&lt;/code&gt;に戻るシナリオを例にスタックの操作を説明する。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;frameのアドレスを一時変数に格納&lt;/li&gt;
+&lt;li&gt;リターンアドレスを一時変数に格納&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ARG&lt;/code&gt;に返り値を格納&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SP&lt;/code&gt;を&lt;code&gt;ARG+1&lt;/code&gt;に設定&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;THAT&lt;/code&gt;, &lt;code&gt;THIS&lt;/code&gt;, &lt;code&gt;ARG&lt;/code&gt;, &lt;code&gt;LCL&lt;/code&gt;を復元&lt;/li&gt;
+&lt;li&gt;リターンアドレスにジャンプ&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;return.webp&#34; alt=&#34;return.webp&#34;&gt;
+&lt;a href=&#34;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&lt;/a&gt;
+ P73より引用&lt;/p&gt;
+&lt;h2 id=&#34;第9章-高水準言語&#34;&gt;第9章 高水準言語&lt;/h2&gt;
+&lt;p&gt;第10章、第11章でコンパイラを実装するJackの言語仕様を解説した章。&lt;/p&gt;
+&lt;p&gt;Javaに近い感じの文法。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Main&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   function &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      var Array a&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      var &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; length&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      var &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; sum&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      let length &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Keyboard&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;readInt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;How many numbers? &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      let a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Array&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;new&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;length&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;// constructs the array
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;     
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      let i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; length&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         let a&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;i&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Keyboard&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;readInt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Enter a number: &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         let sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sum &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; a&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;i&lt;span style=&#34;color:#f92672&#34;&gt;];&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         let i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt; Output&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;printString&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;The average is &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt; Output&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;printInt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;sum &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; length&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;第10章-コンパイラi構文解析&#34;&gt;第10章 コンパイラI：構文解析&lt;/h2&gt;
+&lt;p&gt;第10章の内容に入る前にJackのソースコードが実行可能な形式になるまでの流れをおさらいしておく。&lt;/p&gt;
+
+&lt;pre class=&#34;mermaid&#34;&gt;    graph LR
+    A[Jackコード&lt;br&gt;e.g. Foo.jack] --&gt;|コンパイラが変換| B[&#34;VMコード(中間コード)&lt;br&gt;e.g. Foo.vm&#34;]
+    B --&gt;|VM変換器が変換| C[&#34;機械語(記号表現)&lt;br&gt;e.g. Foo.asm&#34;]
+    C --&gt;|アセンブラが変換| D[&#34;機械語(バイナリ表現)&lt;br&gt;e.g. Foo.hack&#34;]
+&lt;/pre&gt;
+
+&lt;p&gt;Jackコンパイラは構文解析器とコード生成器からなり構文解析器はトークナイザとパーサ&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;からなる。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;compiler-roadmap.webp&#34; alt=&#34;compiler-roadmap&#34;&gt;
+&lt;a href=&#34;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&lt;/a&gt;
+ P4より引用&lt;/p&gt;
+&lt;p&gt;トークナイザはソースコードをトークンと呼ばれる「プログラムにおいて意味を持つコードの最小単位」に変換する処理を担う。&lt;/p&gt;
+&lt;p&gt;トークンのような表現に変換してからパースを行うことでプログラムの複雑性を軽減することができる。&lt;/p&gt;
+&lt;p&gt;例として以下のJack言語のコードのトークン列をXMLで表記すると以下のようになる。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Main&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; test&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    function &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt; Output&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;printString&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello world!&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;class&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;keyword&amp;gt;&lt;/span&gt; class &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/keyword&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;identifier&amp;gt;&lt;/span&gt; Main &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/identifier&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;symbol&amp;gt;&lt;/span&gt; { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/symbol&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;classVarDec&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;keyword&amp;gt;&lt;/span&gt; static &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/keyword&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;keyword&amp;gt;&lt;/span&gt; boolean &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/keyword&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;identifier&amp;gt;&lt;/span&gt; test &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/identifier&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;symbol&amp;gt;&lt;/span&gt; ; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/symbol&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/classVarDec&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;subroutineDec&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;keyword&amp;gt;&lt;/span&gt; function &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/keyword&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;keyword&amp;gt;&lt;/span&gt; void &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/keyword&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;identifier&amp;gt;&lt;/span&gt; main &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/identifier&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;symbol&amp;gt;&lt;/span&gt; ( &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/symbol&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;parameterList&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/parameterList&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;symbol&amp;gt;&lt;/span&gt; ) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/symbol&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;subroutineBody&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;symbol&amp;gt;&lt;/span&gt; { &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/symbol&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;statements&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;doStatement&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;keyword&amp;gt;&lt;/span&gt; do &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/keyword&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;identifier&amp;gt;&lt;/span&gt; Output &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/identifier&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;symbol&amp;gt;&lt;/span&gt; . &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/symbol&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;identifier&amp;gt;&lt;/span&gt; printString &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/identifier&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;symbol&amp;gt;&lt;/span&gt; ( &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/symbol&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;expressionList&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;expression&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;term&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;stringConstant&amp;gt;&lt;/span&gt; Hello world! &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/stringConstant&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/term&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/expression&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/expressionList&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;symbol&amp;gt;&lt;/span&gt; ) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/symbol&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;symbol&amp;gt;&lt;/span&gt; ; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/symbol&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/doStatement&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;returnStatement&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;keyword&amp;gt;&lt;/span&gt; return &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/keyword&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;symbol&amp;gt;&lt;/span&gt; ; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/symbol&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/returnStatement&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/statements&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;symbol&amp;gt;&lt;/span&gt; } &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/symbol&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/subroutineBody&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/subroutineDec&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;symbol&amp;gt;&lt;/span&gt; } &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/symbol&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/class&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;パーサはトークン列を言語の構文ルールに照らし合わせその構造を構文上の要素に変換する処理を担う。&lt;/p&gt;
+&lt;p&gt;ここでは再帰下降構文解析というアルゴリズムを使って構文解析を行った。&lt;/p&gt;
+&lt;p&gt;ちなみに、Jack言語の構文は次のように定義されている。簡単な部類の言語とはいえ実装量はこれまでの課題と比べると多めだった。趣味でCコンパイラを書く人をたまにTwitterで見かけたりするがすごいなぁという気持ちになった。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;jack-grammer.webp&#34; alt=&#34;jack-grammer&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;第11章-コンパイラiiコード生成&#34;&gt;第11章 コンパイラII：コード生成&lt;/h2&gt;
+&lt;p&gt;第11章では、コード生成器を実装する。具体的には構文解析した結果をもとにVMコードを生成する。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;compiler-roadmap.webp&#34; alt=&#34;compiler-roadmap&#34;&gt;
+&lt;a href=&#34;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&lt;/a&gt;
+ P4より引用&lt;/p&gt;
+&lt;p&gt;一般的には&lt;strong&gt;ソースコードをVMコードに変換する層をフロントエンド&lt;/strong&gt;、&lt;strong&gt;VMコードを機械語に変換する層をバックエンド&lt;/strong&gt;と呼ぶらしい。本書では第10章と第11章の内容がフロントエンドに、第6章~第8章の内容がバックエンドに該当する、と言えそう。&lt;/p&gt;
+&lt;h3 id=&#34;シンボルテーブル&#34;&gt;シンボルテーブル&lt;/h3&gt;
+&lt;p&gt;コンパイラが&lt;code&gt;let y = foo(x);&lt;/code&gt;のような文に遭遇するたびに&lt;code&gt;x&lt;/code&gt;, &lt;code&gt;y&lt;/code&gt;が何を表しているのかを知る必要がある。&lt;/p&gt;
+&lt;p&gt;Jackではクラススコープとサブルーチンスコープの2つのスコープがある。クラススコープの変数にはフィールド変数、スタティック変数の2種類があり、サブルーチンスコープの変数にはローカル変数、引数の2種類がある。&lt;/p&gt;
+&lt;p&gt;ここではこれらの変数の情報は&lt;strong&gt;シンボルテーブル&lt;/strong&gt;と呼ばれるデータ構造に格納することで管理する手法が紹介されていた。シンボルテーブルは変数の名前、型、スコープ、種類、インデックスを保持する。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;symbol-table.webp&#34; alt=&#34;symbol-table&#34;&gt;
+&lt;a href=&#34;https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view&lt;/a&gt;
+ P6より引用&lt;/p&gt;
+&lt;p&gt;Jackではクラススコープとサブルーチンスコープの2つのスコープがあるのでそれぞれ別のシンボルテーブルを保持する必要がある。Jackでは内側のスコープが外側のスコープよりも優先されるため、コンパイラは&lt;code&gt;x&lt;/code&gt;という変数に出会ったときにまずサブルーチンスコープのシンボルテーブルを検索し、見つからなければクラススコープのシンボルテーブルを検索する。&lt;/p&gt;
+&lt;h3 id=&#34;コンストラクタのコンパイル&#34;&gt;コンストラクタのコンパイル&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;特定のクラス型の変数を宣言する。e.g. &lt;code&gt;var Point p&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;クラスのコンストラクタを呼び出して実際にインスタンス化する。 e.g. &lt;code&gt;let p = Point.new(2, 3)&lt;/code&gt;
+&lt;ol&gt;
+&lt;li&gt;新しい&lt;code&gt;Point&lt;/code&gt;インスタンスを表現するために必要な2ワード分のメモリブロックをヒープ上に確保する&lt;/li&gt;
+&lt;li&gt;確保された2ワードがコンストラクタの引数として与えられた&lt;code&gt;2&lt;/code&gt;と&lt;code&gt;3&lt;/code&gt;で初期化される&lt;/li&gt;
+&lt;li&gt;pに新しく確保したメモリブロックのベースアドレスを割り当てる&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;実装自体が難しいというケースは少なかったが、純粋にVM変換器の仕様を忘れて思い出すのに時間がかかったりしたので可能な方は時間を開けずにやると思い出しにかかるコストを減らせておすすめです。&lt;/p&gt;
+&lt;h2 id=&#34;第12章-os&#34;&gt;第12章 OS&lt;/h2&gt;
+&lt;p&gt;第12章では最小限のOSを実装した。&lt;/p&gt;
+&lt;p&gt;ここではOSは以下の役割を果たす。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ハードウェア操作の抽象化&lt;/li&gt;
+&lt;li&gt;Jack言語でよく使われる処理を関数/メソッドとして提供&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;それぞれ具体的には次のようなクラスによって実現されている。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ハードウェア操作の抽象化
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Output&lt;/code&gt;クラス: &lt;code&gt;printString&lt;/code&gt;, &lt;code&gt;println&lt;/code&gt;などのスクリーンへのテキストの書き込み処理を提供&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Screen&lt;/code&gt;クラス: &lt;code&gt;drawLine&lt;/code&gt;, &lt;code&gt;drawCircle&lt;/code&gt;などのスクリーンへの図形の書き込みを処理を提供&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Keyboard&lt;/code&gt;クラス: &lt;code&gt;keyPressed&lt;/code&gt;, &lt;code&gt;readLine&lt;/code&gt;などのキーボードからの入力の読み取り処理を提供&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Memory&lt;/code&gt;クラス: &lt;code&gt;alloc&lt;/code&gt;, &lt;code&gt;deAlloc&lt;/code&gt;, &lt;code&gt;peek&lt;/code&gt;, &lt;code&gt;poke&lt;/code&gt;などのメモリアクセス処理を提供&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Sys&lt;/code&gt;クラス: プログラム実行に必要な処理の提供&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Jack言語でよく使われる処理を関数/メソッドとして提供
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Math&lt;/code&gt;クラス: &lt;code&gt;abs&lt;/code&gt;, &lt;code&gt;devide&lt;/code&gt;などの基本的な算術演算を提供&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;String&lt;/code&gt;クラス: 文字列データ型と&lt;code&gt;length&lt;/code&gt;, &lt;code&gt;setCharAt&lt;/code&gt;などの関連処理を提供&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Array&lt;/code&gt;クラス: 配列の初期化とメモリの解放を行う機能を提供&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;この章ではこれまでまったく意識したことがなかったメモリ操作によってハードウェアを制御するという経験が得られた。クラスインスタンスの初期化のためにメモリから任意の大きさの空き領域を探して確保する処理や、2点の座標が与えられたときにそれらを結ぶ直線をスクリーン上に描画する処理など。想像に難くない通り、基本的にかなり泥臭い実装が多かったがその泥臭さを吸収するための層でもあるので仕方ないとは思う。&lt;/p&gt;
+&lt;p&gt;その過程でメモリ操作やビットを扱う処理に少し慣れられたのは大きな収穫の1つだった。普段のWeb開発ではbit演算やメモリ操作をする機会はなかなかないので貴重な経験だった。&lt;/p&gt;
+&lt;p&gt;軽く調べた感じでは、現実世界では(Linuxでは)システムコールやデバイスドライバがそれらを担っているらしい。&lt;/p&gt;
+&lt;p&gt;実装に関しては整数型のオーバーフローが原因で数時間費やしてしまった。&lt;a href=&#34;https://blog.kyu08.com/posts/cs50-jp/#%E5%AD%A6%E3%81%B3%E3%82%84%E5%BE%97%E3%81%9F%E3%82%82%E3%81%AE&#34; target=&#34;_blank&#34; &gt;CS50でC言語で課題を解いていたときも同様のハマり&lt;/a&gt;
+があったのであるあるかもしれない。普段書いている言語は簡単にオーバーフローしなかったり場合によっては静的解析で指摘してくれたりするのでなかなか気付くことができなかった。&lt;/p&gt;
+&lt;h2 id=&#34;学び得た経験&#34;&gt;学び、得た経験&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;普段はWebアプリケーションばかり触っているので、それよりも数段下のレイヤーの解像度を上げることができた。今後新しい知識の習得やトラブルシューティングがスムーズになるといいなと思う。
+&lt;ul&gt;
+&lt;li&gt;あとは普段触っているソフトウェア、ハードウェアの仕組みを知ることができて純粋に楽しかった。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;難しい概念に出会ったときに「順を追って理解を整理したり、労を惜しまずに手を動かしていけばきっと体得できるはず」という感覚を持てるようになった。
+&lt;ul&gt;
+&lt;li&gt;自分のコンピュータサイエンスの知識と経験が薄いのもあり、本書を通して未知の概念とのたくさんの出会いがあった。&lt;/li&gt;
+&lt;li&gt;まったく知らない概念でも、順を追って理解を進めて手を動かすことで知識を自分のものにすることができた。その過程で未知の技術に対する恐れや及び腰になる感覚が減った。&lt;/li&gt;
+&lt;li&gt;余談だが、大学受験のときにセンター試験の数2Bで一見すると難しそうな問題が出ることが多いように感じていて「いけるいける難しくない落ち着いて考えればわかる」と何回も念じながら問題文を読んでいたのを思い出した。「難しそう」と考えるよりも「わかりそう」とか「なんかいけそう」みたいな方向性のマインドを持っていたほうがパフォーマンスも高くなるなーと改めて思うなどした。&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;難しい課題も小さい部分に分割して段階的に進めるとうまくいくことを実感できた。
+&lt;ul&gt;
+&lt;li&gt;0からコンパイラを実装するのは気が引けるが、仕組みを理解していくつかの部品に分解して進めることで、複雑なソフトウェアを着実に構築する経験を得ることができた。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;コンパイラやアセンブラの実装で泥臭い処理をたくさん書いたおかげで泥臭さへの耐性が多少ついた。そもそも複雑なものは実装も複雑になりうるのでそういうケースでは特に実装力が大事だなーと思うなどした。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
+&lt;p&gt;『Goならわかるシステムプログラミング』を読んでからかなり気になっていた本だったので無事完走できてよかった。&lt;/p&gt;
+&lt;p&gt;最近のテーマであるCS力の強化をまた一歩進めることができた。&lt;/p&gt;
+&lt;p&gt;次は&lt;a href=&#34;https://www.sbcr.jp/product/4815618599/&#34; target=&#34;_blank&#34; &gt;『体験しながら学ぶ ネットワーク技術入門』&lt;/a&gt;
+でネットワークの理解を深めていこうかなと思う。&lt;/p&gt;
+&lt;p&gt;あとはソフトスキル系でいうと&lt;a href=&#34;https://www.oreilly.co.jp/books/9784814401116/&#34; target=&#34;_blank&#34; &gt;『エンジニアリングチームのリード術-―Googleに学ぶインディビジュアルコントリビューターとマネージャーのための実践ガイド』&lt;/a&gt;
+も良さそうなので読んでみようと思う。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;実際はテトリスではなく別のブロック崩しのようなゲームではある&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;Twitterを見ているとパーザと表記する流派も存在する模様&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;近い話が&lt;a href=&#34;https://blog.3qe.us/entry/2025/01/15/194843&#34; target=&#34;_blank&#34; &gt;何かがそれほど得意でなくても、世の中の平均よりは得意だと思っておいたほうがよい - Lambdaカクテル&lt;/a&gt;
+で綺麗に言語化されている。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
     <item>
       <title>IQUNIX Magi65を買った</title>
       <link>https://blog.kyu08.com/posts/magi65/</link>
