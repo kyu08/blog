@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Tue, 20 May 2025 14:22:40 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 May 2025 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>cargoプロジェクトで依存関係を継続的に管理する</title>
       <link>https://blog.kyu08.com/posts/manage-cargo-dependencies/</link>
-      <pubDate>Tue, 20 May 2025 14:22:40 +0900</pubDate>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/manage-cargo-dependencies/</guid>
       <description>OSSに依存するプロジェクトでは依存しているライブラリのライセンス表記が必要になることがある。（体感的にはほとんどのライブラリはライセンス表</description>
