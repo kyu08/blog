@@ -7,7 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Wed, 30 Apr 2025 22:49:03 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 May 2025 14:22:40 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cargo</title>
+      <link>https://blog.kyu08.com/tags/cargo/</link>
+      <pubDate>Tue, 20 May 2025 14:22:40 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/cargo/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>OSS</title>
+      <link>https://blog.kyu08.com/tags/oss/</link>
+      <pubDate>Tue, 20 May 2025 14:22:40 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/oss/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>rust</title>
+      <link>https://blog.kyu08.com/tags/rust/</link>
+      <pubDate>Tue, 20 May 2025 14:22:40 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/rust/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
     <item>
       <title>diary</title>
       <link>https://blog.kyu08.com/tags/diary/</link>
@@ -134,26 +164,6 @@
       <pubDate>Sun, 03 Nov 2024 21:42:30 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/tags/go/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>OSS</title>
-      <link>https://blog.kyu08.com/tags/oss/</link>
-      <pubDate>Tue, 24 Sep 2024 00:02:46 +0900</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/oss/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>rust</title>
-      <link>https://blog.kyu08.com/tags/rust/</link>
-      <pubDate>Tue, 24 Sep 2024 00:02:46 +0900</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/rust/</guid>
       <description></description>
       <content></content>
     </item>
