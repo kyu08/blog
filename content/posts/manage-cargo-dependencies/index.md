@@ -60,7 +60,9 @@ detect-unused-dependencies: tool-detect-unused-dependencies
 	cargo machete
 ```
 
-<!-- todo: 動いてる様子の画像を貼る -->
+以下は不必要な依存関係として`tempfile`が検出されている様子。
+
+![cargo-machete](cargo-machete.webp)
 
 ### how(CI)
 以下のようなyamlを定義しておくと不要な依存関係がある場合にCIが落ちてくれる。
@@ -127,8 +129,9 @@ check-licenses: tool-check-licenses
 	cargo deny check licenses
 ```
 
-<!-- todo: スクショをはる -->
+許可していないライセンスのライブラリに依存していることがわかると以下のようなエラーが出力される。
 
+![cargo-deny.webp](cargo-deny.webp)
 
 ### how(CI)
 以下のようなyamlを定義しておくと不要な依存関係があるとCIが落ちてくれる。
