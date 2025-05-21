@@ -207,7 +207,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2025/05/21</time>
       
-    <span class="post-reading-time">7 min read (3013 words)</span></div>
+    <span class="post-reading-time">6 min read (2982 words)</span></div>
 
   
     <span class="post-tags">
@@ -305,7 +305,8 @@ if (!doNotTrack) {
 <p>ある程度の期間開発を続けていると以前追加した依存関係が不要になったことに気付かずに<code>cargo.toml</code>の<code>dependencies</code>や<code>dev-dependencies</code>に残ったままになることがある。
 不要な依存関係が残ったままになっているとrenovateやdependabotによるバージョン更新の手間が不必要に増えてしまうのでPRの時点で気付けるようにしたい。</p>
 <h3 id="what">what<a href="#what" class="hanchor" ariaLabel="Anchor">#</a> </h3>
-<p>cargo-macheteを使って<code>cargo.toml</code>に記述されている依存関係のうち、プロジェクトが実際には依存していない依存関係を検出する。</p>
+<p><a href="https://github.com/bnjbvr/cargo-machete" target="_blank" >cargo-machete</a>
+を使って<code>cargo.toml</code>に記述されている依存関係のうち、プロジェクトが実際には依存していない依存関係を検出する。</p>
 <h3 id="howローカル">how(ローカル)<a href="#howローカル" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>以下のようなmake targetを定義しておくと<code>make detect-unused-dependencies</code>で不要な依存関係を検出できる。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-makefile" data-lang="makefile"><span style="display:flex;"><span><span style="color:#a6e22e">.PHONY</span><span style="color:#f92672">:</span> tool-detect-unused-dependencies
@@ -340,7 +341,8 @@ if (!doNotTrack) {
 <p>筆者は<code>fzf-make</code>をより自由に利用してほしいと考えているためMITライセンスでプロジェクトを公開したい。
 コピーレフトのライセンスに依存してしまうとライセンス変更を余儀なくされるため、コピーレフトのライブラリに依存することを避けたい。</p>
 <h3 id="what-1">what<a href="#what-1" class="hanchor" ariaLabel="Anchor">#</a> </h3>
-<p><code>cargo-deny</code>は依存関係のlint機能を提供する。<code>fzf-make</code>では、<code>cargo deny check licenses</code>を用いてホワイトリストに登録したライセンス以外のライセンスが依存ライブラリに含まれていないか検証している。</p>
+<p><a href="https://github.com/EmbarkStudios/cargo-deny" target="_blank" >cargo-deny</a>
+は依存関係のlint機能を提供する。<code>fzf-make</code>では、<code>cargo deny check licenses</code>を用いてホワイトリストに登録したライセンス以外のライセンスが依存ライブラリに含まれていないか検証している。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#75715e"># deny.toml</span>
 </span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">licenses</span>]
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">allow</span> = [
@@ -399,7 +401,8 @@ if (!doNotTrack) {
 <p>また、本来は依存ライブラリの依存ライブラリを再帰的にチェックしてすべてのライセンス表記をすべきなのだと思うが、手作業でそれをする気にはなれなかったので直接依存しているライブラリのライセンスしか表記できていなかった。</p>
 <p>これらの課題を<code>cargo-about</code>を用いることで解決できそうだったので導入してみた。</p>
 <h3 id="what-2">what<a href="#what-2" class="hanchor" ariaLabel="Anchor">#</a> </h3>
-<p><code>cargo-about</code>は依存ライブラリのライセンス表記ファイルを自動生成する機能を提供する。</p>
+<p><a href="https://github.com/EmbarkStudios/cargo-about" target="_blank" >cargo-about</a>
+は依存ライブラリのライセンス表記ファイルを自動生成する機能を提供する。</p>
 <p>以下のようなテンプレートを用意し、<code>cargo about generate about.hbs &gt; CREDITS.html</code>を実行すると<code>CREDITS.html</code>にライセンス表記を出力してくれる。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">head</span>&gt;
