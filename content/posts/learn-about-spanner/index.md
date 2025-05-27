@@ -17,7 +17,8 @@ color: ""
 
 普段業務でCloud Spannerを使っているが、雰囲気で使っている自覚が大いにあるのでドキュメントやブログを読んで知らなかったことを自分用のメモとしてまとめてみる。
 
-## [Spanner のスキーマ設計の最適化  |  Google Cloud](https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja#tradeoffs_of_locality)
+## Spanner のスキーマ設計の最適化  |  Google Cloud 
+[Spanner のスキーマ設計の最適化  |  Google Cloud](https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja)
 - キー定義とインターリーブの2つはスケーラビリティに大きな影響を与える
 - Spannerにはルートテーブルとインターリーブされたテーブルの2種類のテーブルがある。[^1]
 
@@ -83,7 +84,9 @@ Spannerテーブルの行は`PRIMARY_KEY`によって辞書順に並べかえら
 
 ![spanner-sharding.webp](spanner-sharding.webp)
 
-## [スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/schema-design?hl=ja#ordering_timestamp-based_keys)
+## スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud 
+[スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/schema-design?hl=ja)
+
 次のような場合はキー列をタイムスタンプ降順に格納することでホットスポットを回避する。
 
 - 最新の履歴を読み取る際、履歴にインターリーブ テーブルを使用しており、親行を読み取る場合
@@ -127,7 +130,9 @@ CREATE NULL_FILTERED INDEX UsersByLastAccess ON Users(LastAccess);
 1. インデックスに`ShardId`を追加する
 1. （そもそも）インデックスをインターリーブする
 
-## [セカンダリ インデックス  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja#add-index)
+## セカンダリ インデックス  |  Spanner  |  Google Cloud
+[セカンダリ インデックス  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja)
+
 - Spannerではセカンダリインデックスに次のデータが格納される。
     - ベーステーブルのすべてのキー列
     - インデックスに含まれるすべての列
@@ -162,7 +167,8 @@ SELECT SongId FROM Songs ORDER BY SongId DESC LIMIT 1;
 CREATE INDEX SongIdDesc On Songs(SongId DESC);
 ```
 
-## [Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com](https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/)
+## Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com
+[Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com](https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/)
 
 タイムスタンプ順に並んだレコードをいかに効率よく挿入、取得するかについての解説記事。
 
@@ -286,7 +292,8 @@ ORDER BY
 CompanyId, EntryShardIdの順番を逆にしてみたクエリ
 ![swap.webp](swap.webp)
 
-## [Cloud Spanner におけるトランザクションのロックについて](https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner)
+## Cloud Spanner におけるトランザクションのロックについて
+[Cloud Spanner におけるトランザクションのロックについて](https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner)
 
 > Spanner におけるトランザクションのロックの粒度は、セル、つまり行と列の交点となります。
 
@@ -294,7 +301,9 @@ CompanyId, EntryShardIdの順番を逆にしてみたクエリ
 
 他には複数のトランザクションが同時に実行された際の優先度について詳しく解説してあった。
 
-## [Spanner の読み取りと書き込みのライフサイクル  |  Google Cloud](https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja)
+## Spanner の読み取りと書き込みのライフサイクル  |  Google Cloud
+[Spanner の読み取りと書き込みのライフサイクル  |  Google Cloud](https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja)
+
 Spannerのレプリカセットの構成については次の記事が非常にわかりやすい。
 
 [Cloud Spannerのスプリット分散をわかった気になる](https://zenn.dev/facengineer/articles/bca8790087b0e4)
@@ -314,7 +323,8 @@ Spannerのレプリカセットの構成については次の記事が非常に�
 
 [Cloud Spanner におけるトランザクションのロックについて](https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner)
 
-## [SQL のベスト プラクティス  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja#optimize-scans)
+## SQL のベスト プラクティス  |  Spanner  |  Google Cloud
+[SQL のベスト プラクティス  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja)
 
 ### クエリパラメータの使用
 クエリパラメータを使用することで次のメリットがある。
@@ -386,7 +396,9 @@ SELECT a.AlbumTitle FROM Albums a
 WHERE STARTS_WITH(a.AlbumTitle, @prefix);
 ```
 
-## [クエリ実行プラン  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja)
+## クエリ実行プラン  |  Spanner  |  Google Cloud
+[クエリ実行プラン  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja)
+
 CPUの消費量が多いクエリの場合、実行計画は30日間保存されている。
 
 確認方法は以下。
