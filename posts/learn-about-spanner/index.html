@@ -207,7 +207,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2024/09/23</time>
       
-    <span class="post-reading-time">12 min read (5790 words)</span></div>
+    <span class="post-reading-time">12 min read (5924 words)</span></div>
 
   
     <span class="post-tags">
@@ -232,7 +232,7 @@ if (!doNotTrack) {
       </h2>
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#spanner-のスキーマ設計の最適化--google-cloudhttpscloudgooglecomspannerdocswhitepapersoptimizing-schema-designhljatradeoffs_of_locality"><a href="https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja#tradeoffs_of_locality">Spanner のスキーマ設計の最適化  |  Google Cloud</a></a>
+    <li><a href="#spanner-のスキーマ設計の最適化--google-cloud">Spanner のスキーマ設計の最適化  |  Google Cloud</a>
       <ul>
         <li><a href="#テーブルレイアウト">テーブルレイアウト</a></li>
         <li><a href="#インターリーブ">インターリーブ</a></li>
@@ -243,32 +243,32 @@ if (!doNotTrack) {
         <li><a href="#アンチパターン">アンチパターン</a></li>
       </ul>
     </li>
-    <li><a href="#スキーマ設計のベスト-プラクティス--spanner--google-cloudhttpscloudgooglecomspannerdocsschema-designhljaordering_timestamp-based_keys"><a href="https://cloud.google.com/spanner/docs/schema-design?hl=ja#ordering_timestamp-based_keys">スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud</a></a>
+    <li><a href="#スキーマ設計のベスト-プラクティス--spanner--google-cloud">スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud</a>
       <ul>
         <li><a href="#値が単調に増加または減少する列へのインターリーブされたインデックスの使用">値が単調に増加または減少する列へのインターリーブされたインデックスの使用</a></li>
       </ul>
     </li>
-    <li><a href="#セカンダリ-インデックス--spanner--google-cloudhttpscloudgooglecomspannerdocssecondary-indexeshljaadd-index"><a href="https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja#add-index">セカンダリ インデックス  |  Spanner  |  Google Cloud</a></a>
+    <li><a href="#セカンダリ-インデックス--spanner--google-cloud">セカンダリ インデックス  |  Spanner  |  Google Cloud</a>
       <ul>
         <li><a href="#null値の並び替え順">NULL値の並び替え順</a></li>
         <li><a href="#末尾のレコードの取得">末尾のレコードの取得</a></li>
       </ul>
     </li>
-    <li><a href="#sharding-of-timestamp-ordered-data-in-cloud-spanner---googblogscomhttpswwwgoogblogscomsharding-of-timestamp-ordered-data-in-cloud-spanner"><a href="https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/">Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com</a></a>
+    <li><a href="#sharding-of-timestamp-ordered-data-in-cloud-spanner---googblogscom">Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com</a>
       <ul>
         <li><a href="#レコードの挿入時">レコードの挿入時</a></li>
         <li><a href="#レコードの読み取り時">レコードの読み取り時</a></li>
         <li><a href="#余談">余談</a></li>
       </ul>
     </li>
-    <li><a href="#cloud-spanner-におけるトランザクションのロックについてhttpscloudgooglecomblogjaproductsdatabasestransaction-locking-in-cloud-spanner"><a href="https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner">Cloud Spanner におけるトランザクションのロックについて</a></a></li>
-    <li><a href="#spanner-の読み取りと書き込みのライフサイクル--google-cloudhttpscloudgooglecomspannerdocswhitepaperslife-of-reads-and-writeshlja"><a href="https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja">Spanner の読み取りと書き込みのライフサイクル  |  Google Cloud</a></a>
+    <li><a href="#cloud-spanner-におけるトランザクションのロックについて">Cloud Spanner におけるトランザクションのロックについて</a></li>
+    <li><a href="#spanner-の読み取りと書き込みのライフサイクル--google-cloud">Spanner の読み取りと書き込みのライフサイクル  |  Google Cloud</a>
       <ul>
         <li><a href="#読み取り専用トランザクション">読み取り専用トランザクション</a></li>
         <li><a href="#読み取り--書き込みトランザクション">読み取り / 書き込みトランザクション</a></li>
       </ul>
     </li>
-    <li><a href="#sql-のベスト-プラクティス--spanner--google-cloudhttpscloudgooglecomspannerdocssql-best-practiceshljaoptimize-scans"><a href="https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja#optimize-scans">SQL のベスト プラクティス  |  Spanner  |  Google Cloud</a></a>
+    <li><a href="#sql-のベスト-プラクティス--spanner--google-cloud">SQL のベスト プラクティス  |  Spanner  |  Google Cloud</a>
       <ul>
         <li><a href="#クエリパラメータの使用">クエリパラメータの使用</a></li>
         <li><a href="#範囲キーのルックアップを最適化する">範囲キーのルックアップを最適化する</a></li>
@@ -276,7 +276,7 @@ if (!doNotTrack) {
         <li><a href="#likeの代わりにstarts_withを使用する"><code>LIKE</code>の代わりに<code>STARTS_WITH</code>を使用する</a></li>
       </ul>
     </li>
-    <li><a href="#クエリ実行プラン--spanner--google-cloudhttpscloudgooglecomspannerdocsquery-execution-planshlja"><a href="https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja">クエリ実行プラン  |  Spanner  |  Google Cloud</a></a></li>
+    <li><a href="#クエリ実行プラン--spanner--google-cloud">クエリ実行プラン  |  Spanner  |  Google Cloud</a></li>
     <li><a href="#まとめ">まとめ</a></li>
   </ul>
 </nav>
@@ -285,8 +285,9 @@ if (!doNotTrack) {
 
   <div class="post-content"><div>
         <p>普段業務でCloud Spannerを使っているが、雰囲気で使っている自覚が大いにあるのでドキュメントやブログを読んで知らなかったことを自分用のメモとしてまとめてみる。</p>
-<h2 id="spanner-のスキーマ設計の最適化--google-cloudhttpscloudgooglecomspannerdocswhitepapersoptimizing-schema-designhljatradeoffs_of_locality"><a href="https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja#tradeoffs_of_locality" target="_blank" >Spanner のスキーマ設計の最適化  |  Google Cloud</a>
-</h2>
+<h2 id="spanner-のスキーマ設計の最適化--google-cloud">Spanner のスキーマ設計の最適化  |  Google Cloud<a href="#spanner-のスキーマ設計の最適化--google-cloud" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><a href="https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja" target="_blank" >Spanner のスキーマ設計の最適化  |  Google Cloud</a>
+</p>
 <ul>
 <li>キー定義とインターリーブの2つはスケーラビリティに大きな影響を与える</li>
 <li>Spannerにはルートテーブルとインターリーブされたテーブルの2種類のテーブルがある。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></li>
@@ -348,8 +349,9 @@ if (!doNotTrack) {
 </ol>
 <p>この例ではPKに<code>ShardId</code>(0~N-1)を追加する方法を紹介している。</p>
 <p><img src="spanner-sharding.webp" alt="spanner-sharding.webp"></p>
-<h2 id="スキーマ設計のベスト-プラクティス--spanner--google-cloudhttpscloudgooglecomspannerdocsschema-designhljaordering_timestamp-based_keys"><a href="https://cloud.google.com/spanner/docs/schema-design?hl=ja#ordering_timestamp-based_keys" target="_blank" >スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud</a>
-</h2>
+<h2 id="スキーマ設計のベスト-プラクティス--spanner--google-cloud">スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud<a href="#スキーマ設計のベスト-プラクティス--spanner--google-cloud" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><a href="https://cloud.google.com/spanner/docs/schema-design?hl=ja" target="_blank" >スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud</a>
+</p>
 <p>次のような場合はキー列をタイムスタンプ降順に格納することでホットスポットを回避する。</p>
 <ul>
 <li>最新の履歴を読み取る際、履歴にインターリーブ テーブルを使用しており、親行を読み取る場合</li>
@@ -379,8 +381,9 @@ if (!doNotTrack) {
 <li>インデックスに<code>ShardId</code>を追加する</li>
 <li>（そもそも）インデックスをインターリーブする</li>
 </ol>
-<h2 id="セカンダリ-インデックス--spanner--google-cloudhttpscloudgooglecomspannerdocssecondary-indexeshljaadd-index"><a href="https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja#add-index" target="_blank" >セカンダリ インデックス  |  Spanner  |  Google Cloud</a>
-</h2>
+<h2 id="セカンダリ-インデックス--spanner--google-cloud">セカンダリ インデックス  |  Spanner  |  Google Cloud<a href="#セカンダリ-インデックス--spanner--google-cloud" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><a href="https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja" target="_blank" >セカンダリ インデックス  |  Spanner  |  Google Cloud</a>
+</p>
 <ul>
 <li>Spannerではセカンダリインデックスに次のデータが格納される。
 <ul>
@@ -406,8 +409,9 @@ if (!doNotTrack) {
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> SongId <span style="color:#66d9ef">FROM</span> Songs <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> SongId <span style="color:#66d9ef">DESC</span> <span style="color:#66d9ef">LIMIT</span> <span style="color:#ae81ff">1</span>;
 </span></span></code></pre></div><p>このようなケースでは次のようにPK降順のインデックスを明示的に作成することで読み取りパフォーマンスを向上させることができる。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">INDEX</span> SongIdDesc <span style="color:#66d9ef">On</span> Songs(SongId <span style="color:#66d9ef">DESC</span>);
-</span></span></code></pre></div><h2 id="sharding-of-timestamp-ordered-data-in-cloud-spanner---googblogscomhttpswwwgoogblogscomsharding-of-timestamp-ordered-data-in-cloud-spanner"><a href="https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/" target="_blank" >Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com</a>
-</h2>
+</span></span></code></pre></div><h2 id="sharding-of-timestamp-ordered-data-in-cloud-spanner---googblogscom">Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com<a href="#sharding-of-timestamp-ordered-data-in-cloud-spanner---googblogscom" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><a href="https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/" target="_blank" >Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com</a>
+</p>
 <p>タイムスタンプ順に並んだレコードをいかに効率よく挿入、取得するかについての解説記事。</p>
 <h3 id="レコードの挿入時">レコードの挿入時<a href="#レコードの挿入時" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>次のようにCompanyID、UserID、Timestampの3つのキーを持つログテーブルがあるとする。</p>
@@ -521,15 +525,17 @@ if (!doNotTrack) {
 <img src="original.webp" alt="original.webp"></p>
 <p>CompanyId, EntryShardIdの順番を逆にしてみたクエリ
 <img src="swap.webp" alt="swap.webp"></p>
-<h2 id="cloud-spanner-におけるトランザクションのロックについてhttpscloudgooglecomblogjaproductsdatabasestransaction-locking-in-cloud-spanner"><a href="https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner" target="_blank" >Cloud Spanner におけるトランザクションのロックについて</a>
-</h2>
+<h2 id="cloud-spanner-におけるトランザクションのロックについて">Cloud Spanner におけるトランザクションのロックについて<a href="#cloud-spanner-におけるトランザクションのロックについて" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><a href="https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner" target="_blank" >Cloud Spanner におけるトランザクションのロックについて</a>
+</p>
 <blockquote>
 <p>Spanner におけるトランザクションのロックの粒度は、セル、つまり行と列の交点となります。</p>
 </blockquote>
 <p>なのでREAD, WRITEの範囲(行および列)を最小限にすることでロック範囲を最小限にすることができる。結果として他のトランザクションに与えるパフォーマンス影響を最小限にすることができる。</p>
 <p>他には複数のトランザクションが同時に実行された際の優先度について詳しく解説してあった。</p>
-<h2 id="spanner-の読み取りと書き込みのライフサイクル--google-cloudhttpscloudgooglecomspannerdocswhitepaperslife-of-reads-and-writeshlja"><a href="https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja" target="_blank" >Spanner の読み取りと書き込みのライフサイクル  |  Google Cloud</a>
-</h2>
+<h2 id="spanner-の読み取りと書き込みのライフサイクル--google-cloud">Spanner の読み取りと書き込みのライフサイクル  |  Google Cloud<a href="#spanner-の読み取りと書き込みのライフサイクル--google-cloud" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><a href="https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja" target="_blank" >Spanner の読み取りと書き込みのライフサイクル  |  Google Cloud</a>
+</p>
 <p>Spannerのレプリカセットの構成については次の記事が非常にわかりやすい。</p>
 <p><a href="https://zenn.dev/facengineer/articles/bca8790087b0e4" target="_blank" >Cloud Spannerのスプリット分散をわかった気になる</a>
 </p>
@@ -551,8 +557,9 @@ if (!doNotTrack) {
 <p>ちなみに複数のトランザクションが同時に実行された場合の挙動については次の記事が詳しかった。</p>
 <p><a href="https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner" target="_blank" >Cloud Spanner におけるトランザクションのロックについて</a>
 </p>
-<h2 id="sql-のベスト-プラクティス--spanner--google-cloudhttpscloudgooglecomspannerdocssql-best-practiceshljaoptimize-scans"><a href="https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja#optimize-scans" target="_blank" >SQL のベスト プラクティス  |  Spanner  |  Google Cloud</a>
-</h2>
+<h2 id="sql-のベスト-プラクティス--spanner--google-cloud">SQL のベスト プラクティス  |  Spanner  |  Google Cloud<a href="#sql-のベスト-プラクティス--spanner--google-cloud" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><a href="https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja" target="_blank" >SQL のベスト プラクティス  |  Spanner  |  Google Cloud</a>
+</p>
 <h3 id="クエリパラメータの使用">クエリパラメータの使用<a href="#クエリパラメータの使用" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>クエリパラメータを使用することで次のメリットがある。</p>
 <ul>
@@ -596,8 +603,9 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span><span style="color:#75715e">-- 推奨
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> a.AlbumTitle <span style="color:#66d9ef">FROM</span> Albums a
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> STARTS_WITH(a.AlbumTitle, <span style="color:#f92672">@</span><span style="color:#66d9ef">prefix</span>);
-</span></span></code></pre></div><h2 id="クエリ実行プラン--spanner--google-cloudhttpscloudgooglecomspannerdocsquery-execution-planshlja"><a href="https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja" target="_blank" >クエリ実行プラン  |  Spanner  |  Google Cloud</a>
-</h2>
+</span></span></code></pre></div><h2 id="クエリ実行プラン--spanner--google-cloud">クエリ実行プラン  |  Spanner  |  Google Cloud<a href="#クエリ実行プラン--spanner--google-cloud" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><a href="https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja" target="_blank" >クエリ実行プラン  |  Spanner  |  Google Cloud</a>
+</p>
 <p>CPUの消費量が多いクエリの場合、実行計画は30日間保存されている。</p>
 <p>確認方法は以下。</p>
 <p><a href="https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries" target="_blank" >サンプリングされたクエリプランを表示する</a>
