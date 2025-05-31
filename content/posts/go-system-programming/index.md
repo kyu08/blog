@@ -1,6 +1,6 @@
 ---
 title: "『Goならわかるシステムプログラミング 第2版』を読んだ"
-tags: ["Go", "CS"]
+tags: ["Go", "CS", "読書ログ"]
 keywords: ["Go", "CS"]
 
 cover: "https://blog.kyu08.com/cover.png"
