@@ -8,6 +8,8 @@ TARGET=$(find ./content/posts -type d | fzf --prompt="Select a directory: " --pr
 # webpに変換
 for file in $TARGET/*.{jpg,jpeg,png,JPG,JPEG,PNG};
   do if [[ "$file" != *"*.png" && "$file" != *"*.jpg" && "$file" != *"*.jpeg" && "$file" != *"*.PNG" && "$file" != *"*.JPG" && "$file" != *"*.JPEG" ]]; then
-    cwebp -metadata all "$file" -o "${file%.*}.webp"
+    # NOTE: imagemagickのインストールが必要
+    # -auto-orientをつけないと画像の向きが正しくならないことがある
+    magick "$file" -auto-orient -format webp "${file%.*}.webp"
   fi;
 done
