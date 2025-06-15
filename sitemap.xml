@@ -3,7 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.kyu08.com/</loc>
-    <lastmod>2025-05-21T00:00:00+09:00</lastmod>
+    <lastmod>2025-06-15T14:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/elixir/</loc>
+    <lastmod>2025-06-15T14:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/elm/</loc>
+    <lastmod>2025-06-15T14:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/f#/</loc>
+    <lastmod>2025-06-15T14:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/ocaml/</loc>
+    <lastmod>2025-06-15T14:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/</loc>
+    <lastmod>2025-06-15T14:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/rust/</loc>
+    <lastmod>2025-06-15T14:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/</loc>
+    <lastmod>2025-06-15T14:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/fp-matsuri-2025/</loc>
+    <lastmod>2025-06-15T14:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</loc>
+    <lastmod>2025-06-15T14:00:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/cargo/</loc>
     <lastmod>2025-05-21T00:00:00+09:00</lastmod>
@@ -12,15 +39,6 @@
     <lastmod>2025-05-21T00:00:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/oss/</loc>
-    <lastmod>2025-05-21T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/posts/</loc>
-    <lastmod>2025-05-21T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/rust/</loc>
-    <lastmod>2025-05-21T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/</loc>
     <lastmod>2025-05-21T00:00:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/diary/</loc>
@@ -250,9 +268,6 @@
   </url><url>
     <loc>https://blog.kyu08.com/tags/%E5%95%8F%E9%A1%8C%E8%A7%A3%E6%B1%BA/</loc>
     <lastmod>2021-12-26T01:15:48+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/elm/</loc>
-    <lastmod>2021-12-17T01:15:48+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/2021121217-elm-static-array/</loc>
     <lastmod>2021-12-17T01:15:48+09:00</lastmod>

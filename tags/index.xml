@@ -7,7 +7,67 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Wed, 21 May 2025 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Jun 2025 14:00:00 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Elixir</title>
+      <link>https://blog.kyu08.com/tags/elixir/</link>
+      <pubDate>Sun, 15 Jun 2025 14:00:00 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/elixir/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>Elm</title>
+      <link>https://blog.kyu08.com/tags/elm/</link>
+      <pubDate>Sun, 15 Jun 2025 14:00:00 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/elm/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>F#</title>
+      <link>https://blog.kyu08.com/tags/f#/</link>
+      <pubDate>Sun, 15 Jun 2025 14:00:00 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/f#/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>Ocaml</title>
+      <link>https://blog.kyu08.com/tags/ocaml/</link>
+      <pubDate>Sun, 15 Jun 2025 14:00:00 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/ocaml/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>Rust</title>
+      <link>https://blog.kyu08.com/tags/rust/</link>
+      <pubDate>Sun, 15 Jun 2025 14:00:00 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/rust/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>勉強会</title>
+      <link>https://blog.kyu08.com/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</link>
+      <pubDate>Sun, 15 Jun 2025 14:00:00 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
     <item>
       <title>cargo</title>
       <link>https://blog.kyu08.com/tags/cargo/</link>
@@ -24,16 +84,6 @@
       <pubDate>Wed, 21 May 2025 00:00:00 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/tags/oss/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>rust</title>
-      <link>https://blog.kyu08.com/tags/rust/</link>
-      <pubDate>Wed, 21 May 2025 00:00:00 +0900</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/rust/</guid>
       <description></description>
       <content></content>
     </item>
@@ -374,16 +424,6 @@
       <pubDate>Sun, 26 Dec 2021 01:15:48 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/tags/%E5%95%8F%E9%A1%8C%E8%A7%A3%E6%B1%BA/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>Elm</title>
-      <link>https://blog.kyu08.com/tags/elm/</link>
-      <pubDate>Fri, 17 Dec 2021 01:15:48 +0900</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/elm/</guid>
       <description></description>
       <content></content>
     </item>
