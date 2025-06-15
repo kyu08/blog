@@ -82,6 +82,8 @@ h3 {
 
 p > img {
   border: none;
+  display: block;
+  margin: 0 auto;
 }
 
 th, td {
