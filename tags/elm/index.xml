@@ -42,7 +42,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;関数型言語を採用し維持し継続する---松澤-有さん&#34;&gt;関数型言語を採用し、維持し、継続する - 松澤 有さん&lt;/h2&gt;
-&lt;p&gt;Siiibo証券株式会社のCTOである松澤さんによる自社プロダクトのフロントエンド、バックエンドの開発言語として関数型言語(Elm, Elixir)をなぜ採用したのか、いかにして維持し、継続しているかについての発表。実は主にこの発表を聞くために関数型まつりに参加したので良い発表を聞けてよかった。&lt;/p&gt;
+&lt;p&gt;Siiibo証券株式会社のCTOである松澤さんによる自社プロダクトのフロントエンド、バックエンドの開発言語として関数型言語(Elm, Elixir)をなぜ採用したのか、そしていかにして維持し、継続しているかについての発表。実は主にこの発表を聞くために関数型まつりに参加したので良い発表を聞けてよかった。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://zenn.dev/siiibo_tech/articles/adopting-fp-languages&#34; target=&#34;_blank&#34; &gt;https://zenn.dev/siiibo_tech/articles/adopting-fp-languages&lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;結局はラストマンシップを持って自分がなんとかするという気概が重要だという話が一番印象的だった。これは関数型言語を業務で書いているわけではない自分にも大いに参考になる話だと思っていて、結局どんな技術を採用したかやCTOかメンバーかなどにかかわらず、このラストマンシップを持っているエンジニアが多ければ多いほど開発組織は強固になるんだろうなと思った。&lt;/p&gt;
@@ -310,7 +310,7 @@
 &lt;p&gt;&lt;img src=&#34;jane-street.webp&#34; alt=&#34;jane-street&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;ノベルティ&#34;&gt;ノベルティ&lt;/h2&gt;
 &lt;p&gt;入場時にロゴ入りのトートバッグがもらえた。
-&lt;img src=&#34;bag-1.webp&#34; alt=&#34;bag&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;bag.webp&#34; alt=&#34;bag&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Nulabさんのノベルティのマイクロファイバークロス。実用的でありがたい。
 &lt;img src=&#34;nulab.webp&#34; alt=&#34;nulab&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
