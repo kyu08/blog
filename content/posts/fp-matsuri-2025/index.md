@@ -43,7 +43,7 @@ https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-hask
     - 式思考、宣言的、合成可能
         
 ## 関数型言語を採用し、維持し、継続する - 松澤 有さん
-Siiibo証券株式会社のCTOである松澤さんによる自社プロダクトのフロントエンド、バックエンドの開発言語として関数型言語(Elm, Elixir)をなぜ採用したのか、いかにして維持し、継続しているかについての発表。実は主にこの発表を聞くために関数型まつりに参加したので良い発表を聞けてよかった。
+Siiibo証券株式会社のCTOである松澤さんによる自社プロダクトのフロントエンド、バックエンドの開発言語として関数型言語(Elm, Elixir)をなぜ採用したのか、そしていかにして維持し、継続しているかについての発表。実は主にこの発表を聞くために関数型まつりに参加したので良い発表を聞けてよかった。
 
 https://zenn.dev/siiibo_tech/articles/adopting-fp-languages
 
@@ -246,7 +246,7 @@ Jane Streetのエンジニアの方にお聞きしたがJane Streetではフロ�
 
 ## ノベルティ
 入場時にロゴ入りのトートバッグがもらえた。
-![bag](bag-1.webp)
+![bag](bag.webp)
 
 Nulabさんのノベルティのマイクロファイバークロス。実用的でありがたい。
 ![nulab](nulab.webp)
