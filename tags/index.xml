@@ -7,7 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sun, 15 Jun 2025 14:00:00 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Jun 2025 23:38:21 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>diary</title>
+      <link>https://blog.kyu08.com/tags/diary/</link>
+      <pubDate>Thu, 19 Jun 2025 23:38:21 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/diary/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>Keychron</title>
+      <link>https://blog.kyu08.com/tags/keychron/</link>
+      <pubDate>Thu, 19 Jun 2025 23:38:21 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/keychron/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>ガジェット</title>
+      <link>https://blog.kyu08.com/tags/%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88/</link>
+      <pubDate>Thu, 19 Jun 2025 23:38:21 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
     <item>
       <title>Elixir</title>
       <link>https://blog.kyu08.com/tags/elixir/</link>
@@ -89,16 +119,6 @@
     </item>
     
     <item>
-      <title>diary</title>
-      <link>https://blog.kyu08.com/tags/diary/</link>
-      <pubDate>Wed, 30 Apr 2025 22:49:03 +0900</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/diary/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
       <title>NuPhy</title>
       <link>https://blog.kyu08.com/tags/nuphy/</link>
       <pubDate>Wed, 30 Apr 2025 22:49:03 +0900</pubDate>
@@ -114,16 +134,6 @@
       <pubDate>Wed, 30 Apr 2025 22:49:03 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/tags/%E3%82%AD%E3%83%BC%E3%82%AD%E3%83%A3%E3%83%83%E3%83%97/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>ガジェット</title>
-      <link>https://blog.kyu08.com/tags/%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88/</link>
-      <pubDate>Wed, 30 Apr 2025 22:49:03 +0900</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88/</guid>
       <description></description>
       <content></content>
     </item>
