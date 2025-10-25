@@ -86,6 +86,7 @@ h2, h3, h4, h5, h6 {
 h2 {
   border-bottom: solid 2px var(--color-gray);
   padding-bottom: 4px;
+  margin-bottom: 10px;
 }
 
 h3 {
@@ -139,9 +140,19 @@ article.on-list {
 
 ul {
   margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+ul ul {
+  margin-bottom: 0px;
 }
 
 ol {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+ol ol {
   margin-bottom: 0px;
 }
 
