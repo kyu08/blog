@@ -1,0 +1,45 @@
+name: deploy-preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.115.1"
+          extended: true
+
+      - name: Build
+        run: hugo --baseURL https://blog.kyu08.com/pr-${{ github.event.pull_request.number }}/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          destination_dir: pr-${{ github.event.pull_request.number }}
+          keep_files: true
+          cname: blog.kyu08.com
+
+      - name: Comment PR
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            ## プレビュー環境
+
+            プレビュー環境が更新されました。
+
+            URL: https://blog.kyu08.com/pr-${{ github.event.pull_request.number }}/
+
+            ※ デプロイ完了まで数分かかる場合があります。
