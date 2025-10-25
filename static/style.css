@@ -29,40 +29,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Markdown記号の表示 (h1は記事タイトルに使用されるため除外) */
-h2::before {
-  content: "##";
+h2::before, h3::before, h4::before, h5::before, h6::before {
   letter-spacing: -0.1em; /* #同士の間隔を狭める */
   color: var(--color-gray);
   margin-right: 6px;
 }
 
-h3::before {
-  content: "###";
-  letter-spacing: -0.1em; /* #同士の間隔を狭める */
-  color: var(--color-gray);
-  margin-right: 6px;
-}
-
-h4::before {
-  content: "####";
-  letter-spacing: -0.1em; /* #同士の間隔を狭める */
-  color: var(--color-gray);
-  margin-right: 6px;
-}
-
-h5::before {
-  content: "#####";
-  letter-spacing: -0.1em; /* #同士の間隔を狭める */
-  color: var(--color-gray);
-  margin-right: 6px;
-}
-
-h6::before {
-  content: "######";
-  letter-spacing: -0.1em; /* #同士の間隔を狭める */
-  color: var(--color-gray);
-  margin-right: 6px;
-}
+h2::before { content: "##"; }
+h3::before { content: "###"; }
+h4::before { content: "####"; }
+h5::before { content: "#####"; }
+h6::before { content: "######"; }
 
 html,
 body {
@@ -101,22 +78,18 @@ img {
   max-height: 600px;
 }
 
+h2, h3, h4, h5, h6 {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
 h2 {
   border-bottom: solid 2px var(--color-gray);
   padding-bottom: 4px;
-  margin-top: 20px;
-  margin-bottom: 0px;
 }
 
 h3 {
   padding-bottom: 4px;
-  margin-top: 20px;
-  margin-bottom: 0px;
-}
-
-h4, h5, h6 {
-  margin-top: 20px;
-  margin-bottom: 0px;
 }
 
 p {
