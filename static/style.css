@@ -28,6 +28,43 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: none;
 }
 
+/* Markdown記号の表示 */
+h1::before {
+  content: "# ";
+  color: var(--color-gray);
+  margin-right: 8px;
+}
+
+h2::before {
+  content: "## ";
+  color: var(--color-gray);
+  margin-right: 8px;
+}
+
+h3::before {
+  content: "### ";
+  color: var(--color-gray);
+  margin-right: 8px;
+}
+
+h4::before {
+  content: "#### ";
+  color: var(--color-gray);
+  margin-right: 8px;
+}
+
+h5::before {
+  content: "##### ";
+  color: var(--color-gray);
+  margin-right: 8px;
+}
+
+h6::before {
+  content: "###### ";
+  color: var(--color-gray);
+  margin-right: 8px;
+}
+
 html,
 body {
   /* padding: 15px; */
