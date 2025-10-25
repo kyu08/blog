@@ -32,31 +32,31 @@ h1, h2, h3, h4, h5, h6 {
 h2::before {
   content: "## ";
   color: var(--color-gray);
-  margin-right: 3px;
+  margin-right: 0;
 }
 
 h3::before {
   content: "### ";
   color: var(--color-gray);
-  margin-right: 3px;
+  margin-right: 0;
 }
 
 h4::before {
   content: "#### ";
   color: var(--color-gray);
-  margin-right: 3px;
+  margin-right: 0;
 }
 
 h5::before {
   content: "##### ";
   color: var(--color-gray);
-  margin-right: 3px;
+  margin-right: 0;
 }
 
 h6::before {
   content: "###### ";
   color: var(--color-gray);
-  margin-right: 3px;
+  margin-right: 0;
 }
 
 html,
