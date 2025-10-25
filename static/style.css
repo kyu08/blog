@@ -99,16 +99,19 @@ img {
 h2 {
   border-bottom: solid 2px var(--color-gray);
   padding-bottom: 4px;
-  margin: 15px 0;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
 h3 {
   padding-bottom: 4px;
-  margin: 15px 0;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
 h4, h5, h6 {
-  margin: 15px 0;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
 .post-cover, a.read-more {
