@@ -1,5 +1,5 @@
 ---
-title: "cargoプロジェクトで依存関係を継続的に管理する222"
+title: "cargoプロジェクトで依存関係を継続的に管理する"
 tags: ["cargo", "rust", "OSS"]
 
 cover: "https://blog.kyu08.com/cover.png"
