@@ -31,15 +31,27 @@ jobs:
           keep_files: true
           cname: blog.kyu08.com
 
-      - name: Comment PR
+      - name: Find Comment
+        uses: peter-evans/find-comment@v3
+        id: fc
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: プレビュー環境
+
+      - name: Create or update comment
         uses: peter-evans/create-or-update-comment@v3
         with:
+          comment-id: ${{ steps.fc.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
           body: |
             ## プレビュー環境
 
             プレビュー環境が更新されました。
 
-            URL: https://blog.kyu08.com/pr-${{ github.event.pull_request.number }}/
+            **URL:** https://blog.kyu08.com/pr-${{ github.event.pull_request.number }}/
+
+            **Commit:** [`${{ github.event.pull_request.head.sha }}`](${{ github.event.repository.html_url }}/commit/${{ github.event.pull_request.head.sha }})
 
             ※ デプロイ完了まで数分かかる場合があります。
+          edit-mode: replace
