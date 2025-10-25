@@ -28,13 +28,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: none;
 }
 
-/* Markdown記号の表示 */
-h1::before {
-  content: "# ";
-  color: var(--color-gray);
-  margin-right: 8px;
-}
-
+/* Markdown記号の表示 (h1は記事タイトルに使用されるため除外) */
 h2::before {
   content: "## ";
   color: var(--color-gray);
