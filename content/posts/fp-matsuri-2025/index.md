@@ -1,5 +1,5 @@
 ---
-title: "関数型まつり2025に参加し333た"
+title: "関数型まつり2025に参加した"
 tags: ["勉強会", "F#", "Rust", "Elm", "Elixir", "Ocaml" ]
 
 cover: "https://blog.kyu08.com/cover.png"
