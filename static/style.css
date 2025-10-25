@@ -148,11 +148,12 @@ ol {
 blockquote {
   position: relative;
   border-left: 2px solid var(--color-gray);
-  border-top: none;;
-  border-bottom: none;;
+  border-top: none;
+  border-bottom: none;
   margin: 0;
   padding: 10px 25px;
   color: var(--color-gray);
+  margin: 20px 0;
 }
 
 blockquote::before {
