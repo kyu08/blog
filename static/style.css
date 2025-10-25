@@ -30,33 +30,33 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Markdown記号の表示 (h1は記事タイトルに使用されるため除外) */
 h2::before {
-  content: "## ";
+  content: "##";
   color: var(--color-gray);
-  margin-right: 0;
+  margin-right: 2px;
 }
 
 h3::before {
-  content: "### ";
+  content: "###";
   color: var(--color-gray);
-  margin-right: 0;
+  margin-right: 2px;
 }
 
 h4::before {
-  content: "#### ";
+  content: "####";
   color: var(--color-gray);
-  margin-right: 0;
+  margin-right: 2px;
 }
 
 h5::before {
-  content: "##### ";
+  content: "#####";
   color: var(--color-gray);
-  margin-right: 0;
+  margin-right: 2px;
 }
 
 h6::before {
-  content: "###### ";
+  content: "######";
   color: var(--color-gray);
-  margin-right: 0;
+  margin-right: 2px;
 }
 
 html,
