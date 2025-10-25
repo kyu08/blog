@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+
+:root {
+  --background: #222129;
+  --foreground: #eceae5;
+  --accent: #ffa86a;
+}
+
+* {
+  --color-gray: #808080;
+
+  /* themeColorを切り替えたらここも切り替える */
+  /* orange */
+  --color-theme: #FFA86A; 
+  /* blue */
+  /* --color-theme: #23B0FFB3;  */
+
+  -webkit-font-feature-settings: "liga" on, "calt" on;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: none;
+}
+
+/* Markdown記号の表示 (h1は記事タイトルに使用されるため除外) */
+h2::before, h3::before, h4::before, h5::before, h6::before {
+  letter-spacing: -0.1em; /* #同士の間隔を狭める */
+  color: var(--color-gray);
+  margin-right: 6px;
+}
+
+h2::before { content: "##"; }
+h3::before { content: "###"; }
+h4::before { content: "####"; }
+h5::before { content: "#####"; }
+h6::before { content: "######"; }
+
+html,
+body {
+  /* padding: 15px; */
+  max-width: 1200px;
+  margin: 0;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: var(--color-theme);
+  text-decoration: none;
+}
+
+/* 記事末尾の「次の記事ボタン」「前の記事ボタン」のスタイル */
+.button.next,.button.previous{
+    border: 0;
+    max-width: 100%;
+}
+
+.button a {
+  background-color: var(--color-gray);
+  color: white;
+}
+
+code {
+  background-color: rgba(99,110,123,0.4);
+  border-radius: 8px;
+  padding: 0 8px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 600px;
+}
+
+h2, h3, h4, h5, h6 {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+h2 {
+  border-bottom: solid 2px var(--color-gray);
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  padding-bottom: 4px;
+}
+
+p {
+  margin-top: 5px;
+}
+
+.post-cover, a.read-more {
+  display: none;
+}
+
+p > img {
+  border: none;
+  display: block;
+  margin: 0 auto;
+}
+
+th, td {
+  border: 2px solid var(--accent)
+}
+
+article.post > div.post-meta {
+  margin-top: 8px;
+}
+
+article.on-list > .post-content,
+article.on-list > .post-title::after {
+  display: none;
+}
+
+article.on-list > .post-title {
+  padding-bottom: 0;
+  border: none;
+}
+
+article.on-list {
+  margin: 24px auto;
+  padding: 0;
+}
+
+.headings--one-size h1:not(first-child), .headings--one-size h2:not(first-child), .headings--one-size h3:not(first-child), .headings--one-size h4:not(first-child), .headings--one-size h5:not(first-child), .headings--one-size h6:not(first-child) {
+  margin-top: 20px;
+}
+
+.pagination__title {
+  margin: 20px 0 20px;
+}
+
+ul {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+ul ul {
+  margin-bottom: 0px;
+}
+
+ol {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+ol ol {
+  margin-bottom: 0px;
+}
+
+blockquote {
+  position: relative;
+  border-left: 2px solid var(--color-gray);
+  border-top: none;
+  border-bottom: none;
+  margin: 0;
+  padding: 10px 25px;
+  color: var(--color-gray);
+  margin: 20px 0;
+}
+
+blockquote::before {
+  display: none;
+}
