@@ -28,6 +28,14 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: none;
 }
 
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
 /* Markdown記号の表示 (h1は記事タイトルに使用されるため除外) */
 h2::before {
   content: "##";
