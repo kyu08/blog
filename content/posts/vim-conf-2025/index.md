@@ -14,11 +14,19 @@ hideComments: false
 color: ""
 ---
 
-2025年11月2日（日）にアキバプラザ・アキバホールで開催されたVimConf 2025 Smallに参加した。
+2025年11月2日（日）にアキバプラザ・アキバホールで開催された[VimConf 2025 Small](https://vimconf.org/2025/ja/)に参加した。
 
 ![vim-conf-2025.webp](vim-conf-2025.webp)
 
-<!-- TODO: 他によさげな写真があったら追加する -->
+こちらはノベルティ。食器とかお箸はたくさんあっても困らないのでありがたい。
+
+- お茶碗
+- お箸
+- コースター
+- 巾着
+- お茶
+
+![vim-conf-novelty.webp](vim-conf-novelty.webp)
 
 ## nvim-cmp retrospective: Exploring Completion and Facing FOSS Challenges
 hrsh7thさんによる発表。
