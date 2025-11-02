@@ -28,37 +28,33 @@ hrsh7thさんによる発表。
 - 大きなOSSプロジェクトをメンテすることになったことでの学び
 - もともとはユーザーのやりたいことと自分のやりたいことが合致していた。自分がやりたいことをやることで感謝してもらえていた。
     - あるときから自分のやりたいこととユーザーの要望が乖離してきた
-    - メンテナ目線
-        - コード品質を上げたい
-        - 実験的な新機能の追加
-    - ユーザー
-        - 安定した動作
+        - やりたいこと
+            - コード品質を上げたい
+            - 実験的な新機能の追加
+        - ユーザー
+            - 安定した動作
     - 結果モチベが下がった
     - 予期せずプロジェクトが大きくなって責任が芽生えた
-    - モチベが低いならコミュニティ主導にすればいいのでは？
-        - 直接あったこともない人をrepositoryに招待するのは危険だと感じた（サプライチェーンアタックも怖い）
+    - モチベが低いならコミュニティ主導にすればいいのでは？という意見も見るが...
+        - 直接話したこともない人をrepositoryに招待するのは危険だと感じた（ユーザー数も多いのでサプライチェーンアタックが怖い）
             - 実際に自分のプラグインのコピープラグインができて、そこにマルウェアが含まれていた（怖すぎる）
-        - 新メンテナのオンボーディングを頑張るのも大変
+        - 新メンテナのオンボーディングをサポートするのも大変
 - とはいえOSS開発は楽しい
     - nvim-cmpを公開して「これめっちゃ便利だね！」といってもらえたのはとても印象に残っている
     - 意図せず人気になってしまうと責任も生じる
 
 ## And Yet, Vim Survived: Thinking and Seeing in the Age of Code You Don't Write
-ありすえさんが発表がうますぎてその点でも勉強になった。自分がわかりやすいと思ったポイントは以下。
-
-- 論理構成が自然で理解しやすかった
-- 話す速度、スライドの情報量も多すぎなかったのでついていきやすかった
-- シンプルに滑舌が良かった
-- ユーモアを交えていて楽しかった
-
 ### Seeing Code: Where, What and Why
+以下の3stepに分けてコードを読んでいる。
+
 - Where - Seeing the flow
-- What - Seeing the structur
+- What - Seeing the structure
 - Why - Seeing the Reasoning
 
 ### Where - Seeing the Flow
 - File Jumps
     - `gf` / `gF` - open file under cursor
+    - これ知らなかった。`go test`の結果を見て失敗しているファイルに飛ぶときとか便利そう。
 - Search Jumps
     - `/`や`?`で検索し`n`でジャンプ
 - fall.nvim
@@ -69,28 +65,31 @@ hrsh7thさんによる発表。
 ### What - Seeing the structur
 - Window management
     - `<c-w>` + `s`/`v`/`h`/`j`/`k`/`l`
-    - `<c-w>` + `o`
+    - `<c-w>` + `o`: （複数ウィンドウを開いているときに実行すると）現在のウィンドウのみを表示する
         - nativeだと元の状態に戻れない
     - Goyoを使うと
-        - `<c-w>` + `o`をもう一度実行すると戻れる
-- file treeは知らないファイルを探すためにつかう
-- fuzzy finderは知っているファイルを開くためにつかう
+        - `<c-w>` + `o`をもう一度実行すると戻れる。
+- file treeは知らないファイルを探すために使う
+- fuzzy finderは知っているファイルを開くために使う
 
 ### Why - Seeing the Reasoning
 - git blameを活用してコードの背景を理解しながらコードを読む
 
+### 感想
+ありすえさんが発表がうますぎてその点でも勉強になった。自分がわかりやすいと思ったポイントは以下。
+
+- 論理構造が自然で理解しやすかった
+- 話す速度、スライドの情報量も多すぎなかったのでついていきやすかった
+- シンプルに滑舌が良かった
+- ユーモアを交えていて楽しかった
+
 ## Beyond Syntax Highlighting: Unlocking the Power of Tree-sitter in Neovim
-Sticky scrool by nvim-treesitter-contextよさそう
+https://github.com/atusy/treemonkey.nvim 便利そう
 
-https://github.com/atusy/treemonkey.nvim
-便利そう
-
-tree-sitterもっと深く理解したいなー（tree-sitter-justのメンテをできるようになりたい）
+tree-sitterをもっと深く理解したくなった（[趣味のプロジェクト](https://github.com/kyu08/fzf-make)で[IndianBoy42/tree-sitter-just](https://github.com/IndianBoy42/tree-sitter-just)に依存しているので自分もメンテに参加できるようになりたい）
 
 ## Designing Repeatable Edits: The Architecture of . in Vim
 Satoru Kitaguchiさんによるドットリピートの解説。
-
-便利なプラグインの情報を集めるのも楽しいが、たまにはちゃんとVimの機能を学ぶことでも日々のワークフローを効率化できそうだな〜と思った。
 
 - `.`でリピートできる操作
     - ノーマルモードから始まってバッファを編集し、ノーマルモードに戻ってくる
@@ -98,4 +97,6 @@ Satoru Kitaguchiさんによるドットリピートの解説。
 - `daw`, `ci"`などはリピートできる
 - Visual modeを含んだ操作などはリピートできない
     - Visual modeでは内部的には選択された文字数や行数しか保持されないため
+
+便利なプラグインの情報を集めるのも楽しいが、たまにはちゃんとVim自体の機能を学んだ方がかえって効率よく日々の操作を効率化できそうだな〜と思った。
 
