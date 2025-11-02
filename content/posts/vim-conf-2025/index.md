@@ -14,7 +14,9 @@ hideComments: false
 color: ""
 ---
 
-<!-- TODO: ここにintroをかく -->
+2025年11月2日（日）にアキバプラザ・アキバホールで開催されたVimConf 2025 Smallに参加した。
+
+
 <!-- TODO: ここに写真を貼る -->
 
 ## nvim-cmp retrospective: Exploring Completion and Facing FOSS Challenges
@@ -22,7 +24,7 @@ hrsh7thさんによる発表。
 
 ### Explore Completion
 - nvim-cmpのcmpって「シーエムピー」って読むんだ（「コンプ」って読んでた）
-- 補完プラグインってめちゃめちゃいろんなケースを考慮して作られているんだな...(全然詳しくないので薄い感想しか出せない)
+- 補完プラグインってめちゃめちゃいろんなケースを考慮して作られているんだな...（全然詳しくないので薄い感想しか出てこない）
 
 ### FOSS Challenges
 - 大きなOSSプロジェクトをメンテすることになったことでの学び
@@ -44,7 +46,6 @@ hrsh7thさんによる発表。
     - 意図せず人気になってしまうと責任も生じる
 
 ## And Yet, Vim Survived: Thinking and Seeing in the Age of Code You Don't Write
-### Seeing Code: Where, What and Why
 以下の3stepに分けてコードを読んでいる。
 
 - Where - Seeing the flow
@@ -54,21 +55,20 @@ hrsh7thさんによる発表。
 ### Where - Seeing the Flow
 - File Jumps
     - `gf` / `gF` - open file under cursor
-    - これ知らなかった。`go test`の結果を見て失敗しているファイルに飛ぶときとか便利そう。
+    - これ知らなかった。`go test`の結果を見て失敗しているファイルに飛ぶときとかに便利そう。
 - Search Jumps
     - `/`や`?`で検索し`n`でジャンプ
 - fall.nvim
-    - 検索で飛ぶのに比べて`<c-o>`で前の位置に戻れるので便利
+    - 検索で飛ぶのに比べて`<c-o>`で直前の位置に戻れるので便利
 - Quickfix
     - `]q` / `[q`でジャンプできる
 
-### What - Seeing the structur
+### What - Seeing the structure
 - Window management
     - `<c-w>` + `s`/`v`/`h`/`j`/`k`/`l`
     - `<c-w>` + `o`: （複数ウィンドウを開いているときに実行すると）現在のウィンドウのみを表示する
         - nativeだと元の状態に戻れない
-    - Goyoを使うと
-        - `<c-w>` + `o`をもう一度実行すると戻れる。
+    - goyo.vim[^1]を使うと`<c-w>` + `o`をもう一度実行するともとのウィンドウの状態に戻れる。
 - file treeは知らないファイルを探すために使う
 - fuzzy finderは知っているファイルを開くために使う
 
@@ -79,9 +79,9 @@ hrsh7thさんによる発表。
 ありすえさんが発表がうますぎてその点でも勉強になった。自分がわかりやすいと思ったポイントは以下。
 
 - 論理構造が自然で理解しやすかった
-- 話す速度、スライドの情報量も多すぎなかったのでついていきやすかった
+- 話す速度、スライドの情報量が多すぎなかったのでついていきやすかった
 - シンプルに滑舌が良かった
-- ユーモアを交えていて楽しかった
+- ユーモアを交えていて楽しく聞けた
 
 ## Beyond Syntax Highlighting: Unlocking the Power of Tree-sitter in Neovim
 https://github.com/atusy/treemonkey.nvim 便利そう
@@ -100,3 +100,11 @@ Satoru Kitaguchiさんによるドットリピートの解説。
 
 便利なプラグインの情報を集めるのも楽しいが、たまにはちゃんとVim自体の機能を学んだ方がかえって効率よく日々の操作を効率化できそうだな〜と思った。
 
+## LT
+ryoppippiさんの https://github.com/ryoppippi/nvim-in-the-loop がかなり便利そう。
+
+自分のVimの操作履歴を記録し、AIにどのようなキーマップを登録すると無駄な操作を減らせるかを分析させるというものらしい。
+
+
+
+[^1]: おそらくこれ https://github.com/junegunn/goyo.vim
