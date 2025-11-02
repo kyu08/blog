@@ -94,7 +94,7 @@ h3 {
 }
 
 p {
-  margin-top: 5px;
+  margin: 10px 0;
 }
 
 .post-cover, a.read-more {
@@ -139,8 +139,8 @@ article.on-list {
 }
 
 ul {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 ul ul {
@@ -148,8 +148,8 @@ ul ul {
 }
 
 ol {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 ol ol {
