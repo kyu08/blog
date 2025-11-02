@@ -17,6 +17,7 @@
       <description>2025年11月2日（日）にアキバプラザ・アキバホールで開催されたVimConf 2025 Smallに参加した。 nvim-cmp retrospective: Exploring Completion and Facing FOSS Challenges hrsh7thさんに</description>
       <content>&lt;p&gt;2025年11月2日（日）にアキバプラザ・アキバホールで開催されたVimConf 2025 Smallに参加した。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;vim-conf-2025.webp&#34; alt=&#34;vim-conf-2025.webp&#34;&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;nvim-cmp-retrospective-exploring-completion-and-facing-foss-challenges&#34;&gt;nvim-cmp retrospective: Exploring Completion and Facing FOSS Challenges&lt;/h2&gt;
 &lt;p&gt;hrsh7thさんによる発表。&lt;/p&gt;
 &lt;h3 id=&#34;explore-completion&#34;&gt;Explore Completion&lt;/h3&gt;
@@ -153,6 +154,8 @@
 &lt;p&gt;ryoppippiさんの &lt;a href=&#34;https://github.com/ryoppippi/nvim-in-the-loop&#34; target=&#34;_blank&#34; &gt;https://github.com/ryoppippi/nvim-in-the-loop&lt;/a&gt;
  がかなり便利そう。&lt;/p&gt;
 &lt;p&gt;自分のVimの操作履歴を記録し、AIにどのようなキーマップを登録すると無駄な操作を減らせるかを分析させるというものらしい。&lt;/p&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;TODO: かく&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
