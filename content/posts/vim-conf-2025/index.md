@@ -18,6 +18,8 @@ color: ""
 
 ![vim-conf-2025.webp](vim-conf-2025.webp)
 
+<!-- TODO: 他によさげな写真があったら追加する -->
+
 ## nvim-cmp retrospective: Exploring Completion and Facing FOSS Challenges
 hrsh7thさんによる発表。
 
@@ -108,6 +110,8 @@ ryoppippiさんの https://github.com/ryoppippi/nvim-in-the-loop がかなり便
 
 自分のVimの操作履歴を記録し、AIにどのようなキーマップを登録すると無駄な操作を減らせるかを分析させるというものらしい。
 
+## まとめ
 
+TODO: かく
 
 [^1]: おそらくこれ https://github.com/junegunn/goyo.vim
