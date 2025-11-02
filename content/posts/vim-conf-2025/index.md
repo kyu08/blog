@@ -45,6 +45,8 @@ hrsh7thさんによる発表。
     - 意図せず人気になってしまうと責任も生じる
 
 ## And Yet, Vim Survived: Thinking and Seeing in the Age of Code You Don't Write
+Λlisueさんによるコードリーディングに関する発表。
+
 以下の3stepに分けてコードを読んでいる。
 
 - Where - Seeing the flow
@@ -75,7 +77,7 @@ hrsh7thさんによる発表。
 - git blameを活用してコードの背景を理解しながらコードを読む
 
 ### 感想
-ありすえさんが発表がうますぎてその点でも勉強になった。このあたりのポイントが特に勉強になった。
+ありすえさんが発表がうますぎてその点でも勉強になった。特にこのあたりのポイントが勉強になった。
 
 - 論理構造が自然で理解しやすかった
 - 話す速度、スライドの情報量が多すぎなかったのでついていきやすかった
@@ -83,6 +85,8 @@ hrsh7thさんによる発表。
 - ユーモアを交えていて楽しく聞けた
 
 ## Beyond Syntax Highlighting: Unlocking the Power of Tree-sitter in Neovim
+atusyさんによるtree-sitterに関する発表。
+
 https://github.com/atusy/treemonkey.nvim 便利そう
 
 tree-sitterをもっと深く理解したくなった（[趣味のプロジェクト](https://github.com/kyu08/fzf-make)で[IndianBoy42/tree-sitter-just](https://github.com/IndianBoy42/tree-sitter-just)に依存しているので自分もメンテに参加できるようになりたい）
