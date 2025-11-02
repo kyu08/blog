@@ -14,10 +14,19 @@
       <pubDate>Sun, 02 Nov 2025 10:07:08 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/pr-237/posts/vim-conf-2025/</guid>
-      <description>2025年11月2日（日）にアキバプラザ・アキバホールで開催されたVimConf 2025 Smallに参加した。 nvim-cmp retrospective: Exploring Completion and Facing FOSS Challenges hrsh7thさんに</description>
-      <content>&lt;p&gt;2025年11月2日（日）にアキバプラザ・アキバホールで開催されたVimConf 2025 Smallに参加した。&lt;/p&gt;
+      <description>2025年11月2日（日）にアキバプラザ・アキバホールで開催されたVimConf 2025 Small に参加した。 こちらはノベルティ。食器とかお箸はたくさんあ</description>
+      <content>&lt;p&gt;2025年11月2日（日）にアキバプラザ・アキバホールで開催された&lt;a href=&#34;https://vimconf.org/2025/ja/&#34; target=&#34;_blank&#34; &gt;VimConf 2025 Small&lt;/a&gt;
+に参加した。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;vim-conf-2025.webp&#34; alt=&#34;vim-conf-2025.webp&#34;&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;こちらはノベルティ。食器とかお箸はたくさんあっても困らないのでありがたい。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;お茶碗&lt;/li&gt;
+&lt;li&gt;お箸&lt;/li&gt;
+&lt;li&gt;コースター&lt;/li&gt;
+&lt;li&gt;巾着&lt;/li&gt;
+&lt;li&gt;お茶&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;vim-conf-novelty.webp&#34; alt=&#34;vim-conf-novelty.webp&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;nvim-cmp-retrospective-exploring-completion-and-facing-foss-challenges&#34;&gt;nvim-cmp retrospective: Exploring Completion and Facing FOSS Challenges&lt;/h2&gt;
 &lt;p&gt;hrsh7thさんによる発表。&lt;/p&gt;
 &lt;h3 id=&#34;explore-completion&#34;&gt;Explore Completion&lt;/h3&gt;
