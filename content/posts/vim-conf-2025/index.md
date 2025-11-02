@@ -16,8 +16,7 @@ color: ""
 
 2025年11月2日（日）にアキバプラザ・アキバホールで開催されたVimConf 2025 Smallに参加した。
 
-
-<!-- TODO: ここに写真を貼る -->
+![vim-conf-2025.webp](vim-conf-2025.webp)
 
 ## nvim-cmp retrospective: Exploring Completion and Facing FOSS Challenges
 hrsh7thさんによる発表。
