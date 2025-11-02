@@ -35,9 +35,9 @@
 &lt;li&gt;補完プラグインってめちゃめちゃいろんなケースを考慮して作られているんだな&amp;hellip;（全然詳しくないので薄い感想しか出てこない）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;foss-challenges&#34;&gt;FOSS Challenges&lt;/h3&gt;
+&lt;p&gt;大きなOSSプロジェクトをメンテすることになったことでの学びの共有。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;大きなOSSプロジェクトをメンテすることになったことでの学び&lt;/li&gt;
-&lt;li&gt;もともとはユーザーのやりたいことと自分のやりたいことが合致していた。自分がやりたいことをやることで感謝してもらえていた。
+&lt;li&gt;もともとはユーザーが求めるものと自分のやりたいことが合致していた。自分がやりたいことをやることで感謝してもらえていた。
 &lt;ul&gt;
 &lt;li&gt;あるときから自分のやりたいこととユーザーの要望が乖離してきた
 &lt;ul&gt;
@@ -47,7 +47,7 @@
 &lt;li&gt;実験的な新機能を追加したい&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;ユーザー
+&lt;li&gt;ユーザーが求めること
 &lt;ul&gt;
 &lt;li&gt;安定した動作&lt;/li&gt;
 &lt;/ul&gt;
@@ -75,9 +75,13 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id=&#34;感想&#34;&gt;感想&lt;/h3&gt;
+&lt;p&gt;たくさんのユーザーを抱えるOSSのメンテ目線のリアルな心境を聞けてよかった。&lt;/p&gt;
+&lt;p&gt;大規模OSSのメンテナに憧れる気持ちもあるが、楽しいこともあればその分大変なこともあるんだろうな〜などと思った。（それはそう）&lt;/p&gt;
+&lt;p&gt;とはいえたくさんの開発者、プロジェクトに寄与するような大規模OSSメンテナへの憧れはあるのでコミットしたいOSSが見つかったら挑戦してみようと思う。&lt;/p&gt;
 &lt;h2 id=&#34;and-yet-vim-survived-thinking-and-seeing-in-the-age-of-code-you-dont-write&#34;&gt;And Yet, Vim Survived: Thinking and Seeing in the Age of Code You Don&amp;rsquo;t Write&lt;/h2&gt;
 &lt;p&gt;Λlisueさんによるコードリーディングに関する発表。&lt;/p&gt;
-&lt;p&gt;以下の3stepに分けてコードを読んでいる。&lt;/p&gt;
+&lt;p&gt;以下の3stepに分けてコードを読む。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Where - Seeing the flow&lt;/li&gt;
 &lt;li&gt;What - Seeing the structure&lt;/li&gt;
@@ -96,9 +100,9 @@
 &lt;li&gt;&lt;code&gt;/&lt;/code&gt;や&lt;code&gt;?&lt;/code&gt;で検索し&lt;code&gt;n&lt;/code&gt;でジャンプ&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;fall.nvim
+&lt;li&gt;fall.nvim(fuzzy finder)
 &lt;ul&gt;
-&lt;li&gt;検索で飛ぶのに比べて&lt;code&gt;&amp;lt;c-o&amp;gt;&lt;/code&gt;で直前の位置に戻れるので便利&lt;/li&gt;
+&lt;li&gt;検索して&lt;code&gt;n&lt;/code&gt;で飛ぶのに比べて&lt;code&gt;&amp;lt;c-o&amp;gt;&lt;/code&gt;で直前の位置に戻れるので便利&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Quickfix
@@ -127,13 +131,13 @@
 &lt;ul&gt;
 &lt;li&gt;git blameを活用してコードの背景を理解しながらコードを読む&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;感想&#34;&gt;感想&lt;/h3&gt;
+&lt;h3 id=&#34;感想-1&#34;&gt;感想&lt;/h3&gt;
 &lt;p&gt;ありすえさんが発表がうますぎてその点でも勉強になった。特にこのあたりのポイントが勉強になった。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;論理構造が自然で理解しやすかった&lt;/li&gt;
 &lt;li&gt;話す速度、スライドの情報量が多すぎなかったのでついていきやすかった&lt;/li&gt;
-&lt;li&gt;シンプルに滑舌が良かった&lt;/li&gt;
 &lt;li&gt;ユーモアを交えていて楽しく聞けた&lt;/li&gt;
+&lt;li&gt;シンプルに滑舌が良かった（わかんないけどマイクの使い方とかも違うんだろうか。なんかとにかく声が明瞭で聞き取りやすかった）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;beyond-syntax-highlighting-unlocking-the-power-of-tree-sitter-in-neovim&#34;&gt;Beyond Syntax Highlighting: Unlocking the Power of Tree-sitter in Neovim&lt;/h2&gt;
 &lt;p&gt;atusyさんによるtree-sitterに関する発表。&lt;/p&gt;
@@ -159,12 +163,15 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;便利なプラグインの情報を集めるのも楽しいが、たまにはちゃんとVim自体の機能を学んだ方がかえって効率よく日々の操作を効率化できそうだな〜と思った。&lt;/p&gt;
+&lt;p&gt;実践Vimを読みたい気持ちが芽生えた。（n回目）&lt;/p&gt;
 &lt;h2 id=&#34;lt&#34;&gt;LT&lt;/h2&gt;
 &lt;p&gt;ryoppippiさんの &lt;a href=&#34;https://github.com/ryoppippi/nvim-in-the-loop&#34; target=&#34;_blank&#34; &gt;https://github.com/ryoppippi/nvim-in-the-loop&lt;/a&gt;
  がかなり便利そう。&lt;/p&gt;
-&lt;p&gt;自分のVimの操作履歴を記録し、AIにどのようなキーマップを登録すると無駄な操作を減らせるかを分析させるというものらしい。&lt;/p&gt;
+&lt;p&gt;自分のVimの操作履歴を記録し、AIにどのようなキーマップを登録すると無駄な操作を減らせるかを分析させるというものらしい。すごい。&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
-&lt;p&gt;TODO: かく&lt;/p&gt;
+&lt;p&gt;学びや刺激を得られて良かった。発表内容もさることながらプレゼンが上手な方がいたり、（おそらく日本の方だけど）英語が上手な方がいたりもして、その意味でも刺激を得られた。&lt;/p&gt;
+&lt;p&gt;今回初参加なので他の回との比較はできないが全然Smallな感じがせず、満足感が高かった。（もしやSmallじゃない回は2トラックとかあったりする&amp;hellip;?）&lt;/p&gt;
+&lt;p&gt;運営の皆さん、登壇者の皆さんありがとうございました！&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;

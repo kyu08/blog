@@ -207,7 +207,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2025/11/02</time>
       
-    <span class="post-reading-time">4 min read (1750 words)</span></div>
+    <span class="post-reading-time">5 min read (2201 words)</span></div>
 
   
     <span class="post-tags">
@@ -238,6 +238,7 @@ if (!doNotTrack) {
       <ul>
         <li><a href="#explore-completion">Explore Completion</a></li>
         <li><a href="#foss-challenges">FOSS Challenges</a></li>
+        <li><a href="#感想">感想</a></li>
       </ul>
     </li>
     <li><a href="#and-yet-vim-survived-thinking-and-seeing-in-the-age-of-code-you-dont-write">And Yet, Vim Survived: Thinking and Seeing in the Age of Code You Don&rsquo;t Write</a>
@@ -245,7 +246,7 @@ if (!doNotTrack) {
         <li><a href="#where---seeing-the-flow">Where - Seeing the Flow</a></li>
         <li><a href="#what---seeing-the-structure">What - Seeing the structure</a></li>
         <li><a href="#why---seeing-the-reasoning">Why - Seeing the Reasoning</a></li>
-        <li><a href="#感想">感想</a></li>
+        <li><a href="#感想-1">感想</a></li>
       </ul>
     </li>
     <li><a href="#beyond-syntax-highlighting-unlocking-the-power-of-tree-sitter-in-neovim">Beyond Syntax Highlighting: Unlocking the Power of Tree-sitter in Neovim</a></li>
@@ -278,9 +279,9 @@ if (!doNotTrack) {
 <li>補完プラグインってめちゃめちゃいろんなケースを考慮して作られているんだな&hellip;（全然詳しくないので薄い感想しか出てこない）</li>
 </ul>
 <h3 id="foss-challenges">FOSS Challenges<a href="#foss-challenges" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>大きなOSSプロジェクトをメンテすることになったことでの学びの共有。</p>
 <ul>
-<li>大きなOSSプロジェクトをメンテすることになったことでの学び</li>
-<li>もともとはユーザーのやりたいことと自分のやりたいことが合致していた。自分がやりたいことをやることで感謝してもらえていた。
+<li>もともとはユーザーが求めるものと自分のやりたいことが合致していた。自分がやりたいことをやることで感謝してもらえていた。
 <ul>
 <li>あるときから自分のやりたいこととユーザーの要望が乖離してきた
 <ul>
@@ -290,7 +291,7 @@ if (!doNotTrack) {
 <li>実験的な新機能を追加したい</li>
 </ul>
 </li>
-<li>ユーザー
+<li>ユーザーが求めること
 <ul>
 <li>安定した動作</li>
 </ul>
@@ -318,9 +319,13 @@ if (!doNotTrack) {
 </ul>
 </li>
 </ul>
+<h3 id="感想">感想<a href="#感想" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>たくさんのユーザーを抱えるOSSのメンテ目線のリアルな心境を聞けてよかった。</p>
+<p>大規模OSSのメンテナに憧れる気持ちもあるが、楽しいこともあればその分大変なこともあるんだろうな〜などと思った。（それはそう）</p>
+<p>とはいえたくさんの開発者、プロジェクトに寄与するような大規模OSSメンテナへの憧れはあるのでコミットしたいOSSが見つかったら挑戦してみようと思う。</p>
 <h2 id="and-yet-vim-survived-thinking-and-seeing-in-the-age-of-code-you-dont-write">And Yet, Vim Survived: Thinking and Seeing in the Age of Code You Don&rsquo;t Write<a href="#and-yet-vim-survived-thinking-and-seeing-in-the-age-of-code-you-dont-write" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>Λlisueさんによるコードリーディングに関する発表。</p>
-<p>以下の3stepに分けてコードを読んでいる。</p>
+<p>以下の3stepに分けてコードを読む。</p>
 <ul>
 <li>Where - Seeing the flow</li>
 <li>What - Seeing the structure</li>
@@ -339,9 +344,9 @@ if (!doNotTrack) {
 <li><code>/</code>や<code>?</code>で検索し<code>n</code>でジャンプ</li>
 </ul>
 </li>
-<li>fall.nvim
+<li>fall.nvim(fuzzy finder)
 <ul>
-<li>検索で飛ぶのに比べて<code>&lt;c-o&gt;</code>で直前の位置に戻れるので便利</li>
+<li>検索して<code>n</code>で飛ぶのに比べて<code>&lt;c-o&gt;</code>で直前の位置に戻れるので便利</li>
 </ul>
 </li>
 <li>Quickfix
@@ -370,13 +375,13 @@ if (!doNotTrack) {
 <ul>
 <li>git blameを活用してコードの背景を理解しながらコードを読む</li>
 </ul>
-<h3 id="感想">感想<a href="#感想" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h3 id="感想-1">感想<a href="#感想-1" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>ありすえさんが発表がうますぎてその点でも勉強になった。特にこのあたりのポイントが勉強になった。</p>
 <ul>
 <li>論理構造が自然で理解しやすかった</li>
 <li>話す速度、スライドの情報量が多すぎなかったのでついていきやすかった</li>
-<li>シンプルに滑舌が良かった</li>
 <li>ユーモアを交えていて楽しく聞けた</li>
+<li>シンプルに滑舌が良かった（わかんないけどマイクの使い方とかも違うんだろうか。なんかとにかく声が明瞭で聞き取りやすかった）</li>
 </ul>
 <h2 id="beyond-syntax-highlighting-unlocking-the-power-of-tree-sitter-in-neovim">Beyond Syntax Highlighting: Unlocking the Power of Tree-sitter in Neovim<a href="#beyond-syntax-highlighting-unlocking-the-power-of-tree-sitter-in-neovim" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>atusyさんによるtree-sitterに関する発表。</p>
@@ -402,12 +407,15 @@ if (!doNotTrack) {
 </li>
 </ul>
 <p>便利なプラグインの情報を集めるのも楽しいが、たまにはちゃんとVim自体の機能を学んだ方がかえって効率よく日々の操作を効率化できそうだな〜と思った。</p>
+<p>実践Vimを読みたい気持ちが芽生えた。（n回目）</p>
 <h2 id="lt">LT<a href="#lt" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>ryoppippiさんの <a href="https://github.com/ryoppippi/nvim-in-the-loop" target="_blank" >https://github.com/ryoppippi/nvim-in-the-loop</a>
  がかなり便利そう。</p>
-<p>自分のVimの操作履歴を記録し、AIにどのようなキーマップを登録すると無駄な操作を減らせるかを分析させるというものらしい。</p>
+<p>自分のVimの操作履歴を記録し、AIにどのようなキーマップを登録すると無駄な操作を減らせるかを分析させるというものらしい。すごい。</p>
 <h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p>TODO: かく</p>
+<p>学びや刺激を得られて良かった。発表内容もさることながらプレゼンが上手な方がいたり、（おそらく日本の方だけど）英語が上手な方がいたりもして、その意味でも刺激を得られた。</p>
+<p>今回初参加なので他の回との比較はできないが全然Smallな感じがせず、満足感が高かった。（もしやSmallじゃない回は2トラックとかあったりする&hellip;?）</p>
+<p>運営の皆さん、登壇者の皆さんありがとうございました！</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
