@@ -66,6 +66,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;and-yet-vim-survived-thinking-and-seeing-in-the-age-of-code-you-dont-write&#34;&gt;And Yet, Vim Survived: Thinking and Seeing in the Age of Code You Don&amp;rsquo;t Write&lt;/h2&gt;
+&lt;p&gt;Λlisueさんによるコードリーディングに関する発表。&lt;/p&gt;
 &lt;p&gt;以下の3stepに分けてコードを読んでいる。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Where - Seeing the flow&lt;/li&gt;
@@ -117,7 +118,7 @@
 &lt;li&gt;git blameを活用してコードの背景を理解しながらコードを読む&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;感想&#34;&gt;感想&lt;/h3&gt;
-&lt;p&gt;ありすえさんが発表がうますぎてその点でも勉強になった。このあたりのポイントが特に勉強になった。&lt;/p&gt;
+&lt;p&gt;ありすえさんが発表がうますぎてその点でも勉強になった。特にこのあたりのポイントが勉強になった。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;論理構造が自然で理解しやすかった&lt;/li&gt;
 &lt;li&gt;話す速度、スライドの情報量が多すぎなかったのでついていきやすかった&lt;/li&gt;
@@ -125,6 +126,7 @@
 &lt;li&gt;ユーモアを交えていて楽しく聞けた&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;beyond-syntax-highlighting-unlocking-the-power-of-tree-sitter-in-neovim&#34;&gt;Beyond Syntax Highlighting: Unlocking the Power of Tree-sitter in Neovim&lt;/h2&gt;
+&lt;p&gt;atusyさんによるtree-sitterに関する発表。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/atusy/treemonkey.nvim&#34; target=&#34;_blank&#34; &gt;https://github.com/atusy/treemonkey.nvim&lt;/a&gt;
  便利そう&lt;/p&gt;
 &lt;p&gt;tree-sitterをもっと深く理解したくなった（&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;趣味のプロジェクト&lt;/a&gt;
