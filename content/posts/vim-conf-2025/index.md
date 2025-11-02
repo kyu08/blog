@@ -14,6 +14,9 @@ hideComments: false
 color: ""
 ---
 
+<!-- TODO: ここにintroをかく -->
+<!-- TODO: ここに写真を貼る -->
+
 ## nvim-cmp retrospective: Exploring Completion and Facing FOSS Challenges
 hrsh7thさんによる発表。
 
@@ -33,19 +36,20 @@ hrsh7thさんによる発表。
     - 結果モチベが下がった
     - 予期せずプロジェクトが大きくなって責任が芽生えた
     - モチベが低いならコミュニティ主導にすればいいのでは？
-        - 直接あったこともない人をrepositoryに招待するのは危険だと感じた(サプライチェーンアタックも怖い)
-            - 実際に自分のプラグインのコピープラグインができて、そこにマルウェアが含まれていた
-        - オンボーディングを頑張るのも大変
+        - 直接あったこともない人をrepositoryに招待するのは危険だと感じた（サプライチェーンアタックも怖い）
+            - 実際に自分のプラグインのコピープラグインができて、そこにマルウェアが含まれていた（怖すぎる）
+        - 新メンテナのオンボーディングを頑張るのも大変
 - とはいえOSS開発は楽しい
     - nvim-cmpを公開して「これめっちゃ便利だね！」といってもらえたのはとても印象に残っている
     - 意図せず人気になってしまうと責任も生じる
 
 ## And Yet, Vim Survived: Thinking and Seeing in the Age of Code You Don't Write
-- ありすえさん発表うますぎる
-    - 論理構成が自然で理解しやすかった
-    - 話す速度、スライドの内容量も適度だったのでついていきやすかった
-    - 滑舌が良かった
-    - ユーモアを交えていて楽しかった
+ありすえさんが発表がうますぎてその点でも勉強になった。自分がわかりやすいと思ったポイントは以下。
+
+- 論理構成が自然で理解しやすかった
+- 話す速度、スライドの情報量も多すぎなかったのでついていきやすかった
+- シンプルに滑舌が良かった
+- ユーモアを交えていて楽しかった
 
 ### Seeing Code: Where, What and Why
 - Where - Seeing the flow
@@ -54,25 +58,44 @@ hrsh7thさんによる発表。
 
 ### Where - Seeing the Flow
 - File Jumps
-    - gf / gF - open file under cursor
+    - `gf` / `gF` - open file under cursor
 - Search Jumps
-    - /や?で検索しnでジャンプ
+    - `/`や`?`で検索し`n`でジャンプ
 - fall.nvim
-    - 検索で飛ぶのに比べてc-oで前の位置に戻れるので便利
+    - 検索で飛ぶのに比べて`<c-o>`で前の位置に戻れるので便利
 - Quickfix
-    - ]q /[qでジャンプできる]
+    - `]q` / `[q`でジャンプできる
 
 ### What - Seeing the structur
 - Window management
-    - c-w s,v,hjkl
-    - c-w o
+    - `<c-w>` + `s`/`v`/`h`/`j`/`k`/`l`
+    - `<c-w>` + `o`
         - nativeだと元の状態に戻れない
     - Goyoを使うと
-        - c-w oをもう一度実行すると戻れる
+        - `<c-w>` + `o`をもう一度実行すると戻れる
 - file treeは知らないファイルを探すためにつかう
 - fuzzy finderは知っているファイルを開くためにつかう
 
 ### Why - Seeing the Reasoning
 - git blameを活用してコードの背景を理解しながらコードを読む
 
+## Beyond Syntax Highlighting: Unlocking the Power of Tree-sitter in Neovim
+Sticky scrool by nvim-treesitter-contextよさそう
+
+https://github.com/atusy/treemonkey.nvim
+便利そう
+
+tree-sitterもっと深く理解したいなー（tree-sitter-justのメンテをできるようになりたい）
+
+## Designing Repeatable Edits: The Architecture of . in Vim
+Satoru Kitaguchiさんによるドットリピートの解説。
+
+便利なプラグインの情報を集めるのも楽しいが、たまにはちゃんとVimの機能を学ぶことでも日々のワークフローを効率化できそうだな〜と思った。
+
+- `.`でリピートできる操作
+    - ノーマルモードから始まってバッファを編集し、ノーマルモードに戻ってくる
+    - undoツリー上のlast-change nodeを再実行している = 直前の編集チャンクを再適用する
+- `daw`, `ci"`などはリピートできる
+- Visual modeを含んだ操作などはリピートできない
+    - Visual modeでは内部的には選択された文字数や行数しか保持されないため
 
