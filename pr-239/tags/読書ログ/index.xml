@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sat, 04 Oct 2025 17:21:10 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-239/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Oct 2025 08:21:10 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-239/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>『Tidy First?』を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/tidy-first/</link>
-      <pubDate>Sat, 04 Oct 2025 17:21:10 +0900</pubDate>
+      <pubDate>Sat, 04 Oct 2025 08:21:10 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/tidy-first/</guid>
       <description>『Tidy First? 』を読んだ。 勉強になったところをまとめる。 「整頓」という概念 整頓はリファクタリングのサブセットだ。整頓は可愛くてふわふわした小さ</description>
@@ -118,7 +118,7 @@
     <item>
       <title>『コンピュータシステムの理論と実装 第2版』を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/nand2tetris/</link>
-      <pubDate>Wed, 30 Apr 2025 00:00:00 +0900</pubDate>
+      <pubDate>Tue, 29 Apr 2025 15:00:00 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/nand2tetris/</guid>
       <description>『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は## 学び、得た経験 までジャンプして</description>
@@ -1009,7 +1009,7 @@ add
     <item>
       <title>『Goならわかるシステムプログラミング 第2版』を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/go-system-programming/</link>
-      <pubDate>Sun, 03 Nov 2024 21:42:30 +0900</pubDate>
+      <pubDate>Sun, 03 Nov 2024 12:42:30 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/go-system-programming/</guid>
       <description>『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11</description>
@@ -1843,7 +1843,7 @@ add
     <item>
       <title>『読み手につたわる文章 - テクニカルライティング』を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/technical-writing-book/</link>
-      <pubDate>Thu, 06 Jun 2024 00:21:05 +0900</pubDate>
+      <pubDate>Wed, 05 Jun 2024 15:21:05 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/technical-writing-book/</guid>
       <description>技術書典で購入した『読み手につたわる文章 - テクニカルライティング』を読んだので学びになったトピックについて書く。 1.2 「知らない」と書けない（P</description>
@@ -1924,7 +1924,7 @@ add
     <item>
       <title>『いちばんやさしいアジャイル開発の教本』 を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/ichiban-yasashii-agile-no-kyouhon/</link>
-      <pubDate>Sun, 26 May 2024 00:48:56 +0900</pubDate>
+      <pubDate>Sat, 25 May 2024 15:48:56 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/ichiban-yasashii-agile-no-kyouhon/</guid>
       <description>2024/4からチーム異動してスクラムを実践しているチームに移ったのでアジャイル・スクラムのインプットをしたいと思い、『いちばんやさしいアジ</description>
@@ -2000,7 +2000,7 @@ add
     <item>
       <title>『ベタープログラマ』 を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/better-programmer/</link>
-      <pubDate>Thu, 07 Mar 2024 00:27:45 +0900</pubDate>
+      <pubDate>Wed, 06 Mar 2024 15:27:45 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/better-programmer/</guid>
       <description>『ベタープログラマ』を読んだので自分的に刺さった点をまとめる。 6章 航路を航行する 新たなメンバーが開発チームに参加する際にどのようにすれば速や</description>
@@ -2162,7 +2162,7 @@ add
     <item>
       <title>『世界一流エンジニアの思考法』 を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/how-world-class-engineers-think/</link>
-      <pubDate>Sun, 19 Nov 2023 10:41:50 +0900</pubDate>
+      <pubDate>Sun, 19 Nov 2023 01:41:50 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/how-world-class-engineers-think/</guid>
       <description>Microsoftのエンジニアとしてアメリカで働いている牛尾剛さんが優秀な同僚から学んだ思考法について書いた著書『世界一流エンジニアの思考法</description>
@@ -2230,7 +2230,7 @@ add
     <item>
       <title>『採用基準 地頭より論理的思考力より大切なもの』 を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/saiyo-kijun/</link>
-      <pubDate>Sun, 22 Oct 2023 20:00:41 +0900</pubDate>
+      <pubDate>Sun, 22 Oct 2023 11:00:41 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/saiyo-kijun/</guid>
       <description>概要 McKinsey &amp;amp; Company出身の伊賀泰代さんがリーダーシップについて書いた『採用基準地頭より論理的思考力より大切なもの』を読んだ。ちょうど「リー</description>
@@ -2276,7 +2276,7 @@ add
     <item>
       <title>『ちょうぜつソフトウェア設計入門――PHPで理解するオブジェクト指向の活用』を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/chozetsu-bon/</link>
-      <pubDate>Sun, 16 Jul 2023 00:00:00 +0900</pubDate>
+      <pubDate>Sat, 15 Jul 2023 15:00:00 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/chozetsu-bon/</guid>
       <description>田中ひさてるさんの『ちょうぜつソフトウェア設計入門――PHPで理解するオブジェクト指向の活用』が話題になっていたので読んでみた。 全体を通して</description>
@@ -2341,7 +2341,7 @@ add
     <item>
       <title>『コンサル一年目が学ぶこと』を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/consultant/</link>
-      <pubDate>Sun, 26 Dec 2021 01:15:48 +0900</pubDate>
+      <pubDate>Sat, 25 Dec 2021 16:15:48 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/consultant/</guid>
       <description>コンサル一年目が学ぶこと を読んだ。 何を期待して読んだのか これまで技術の勉強はしたことがあったが、社会人として普遍的なスキルである 問題解決能力</description>

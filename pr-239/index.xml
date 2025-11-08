@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sun, 02 Nov 2025 10:07:08 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-239/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Nov 2025 01:07:08 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-239/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>VimConf 2025 Smallに参加した</title>
       <link>https://blog.kyu08.com/pr-239/posts/vim-conf-2025/</link>
-      <pubDate>Sun, 02 Nov 2025 10:07:08 +0900</pubDate>
+      <pubDate>Sun, 02 Nov 2025 01:07:08 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/vim-conf-2025/</guid>
       <description>2025年11月2日（日）にアキバプラザ・アキバホールで開催されたVimConf 2025 Small に参加した。 こちらはノベルティ。食器とかお箸はたくさんあ</description>
@@ -189,7 +189,7 @@
     <item>
       <title>『Tidy First?』を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/tidy-first/</link>
-      <pubDate>Sat, 04 Oct 2025 17:21:10 +0900</pubDate>
+      <pubDate>Sat, 04 Oct 2025 08:21:10 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/tidy-first/</guid>
       <description>『Tidy First? 』を読んだ。 勉強になったところをまとめる。 「整頓」という概念 整頓はリファクタリングのサブセットだ。整頓は可愛くてふわふわした小さ</description>
@@ -296,7 +296,7 @@
     <item>
       <title>追いKeychron V4 Max</title>
       <link>https://blog.kyu08.com/pr-239/posts/second-keychron-v4-max/</link>
-      <pubDate>Thu, 28 Aug 2025 23:24:39 +0900</pubDate>
+      <pubDate>Thu, 28 Aug 2025 14:24:39 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/second-keychron-v4-max/</guid>
       <description>Keychron V4 Max を買った で紹介したV4 MAXはオフィス用のV4 MAXになった。あまりにも使い心地がいいので家用のV4 MAXを買い足した。 前回はキーキャ</description>
@@ -326,7 +326,7 @@
     <item>
       <title>Keychron V4 Max を買った</title>
       <link>https://blog.kyu08.com/pr-239/posts/keychron-v4-max/</link>
-      <pubDate>Thu, 19 Jun 2025 23:38:21 +0900</pubDate>
+      <pubDate>Thu, 19 Jun 2025 14:38:21 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/keychron-v4-max/</guid>
       <description>持ち運び用に軽めの60%メカニカルキーボードが欲しくなり、いくつか検討した結果、Keychron V4 Max(Barebone) を買った。 候補 持ち運び用として考えていた</description>
@@ -474,7 +474,7 @@
     <item>
       <title>関数型まつり2025に参加した</title>
       <link>https://blog.kyu08.com/pr-239/posts/fp-matsuri-2025/</link>
-      <pubDate>Sun, 15 Jun 2025 14:00:00 +0900</pubDate>
+      <pubDate>Sun, 15 Jun 2025 05:00:00 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/fp-matsuri-2025/</guid>
       <description>2025/06/14(土)、2025/06/15(日)に中野セントラルパークで行われた関数型まつり2025に参加した。 筆者はElmやRust</description>
@@ -798,7 +798,7 @@
     <item>
       <title>cargoプロジェクトで依存関係を継続的に管理する</title>
       <link>https://blog.kyu08.com/pr-239/posts/manage-cargo-dependencies/</link>
-      <pubDate>Wed, 21 May 2025 00:00:00 +0900</pubDate>
+      <pubDate>Tue, 20 May 2025 15:00:00 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/manage-cargo-dependencies/</guid>
       <description>OSSに依存するプロジェクトでは依存しているライブラリのライセンス表記が必要になることがある。（体感的にはほとんどのライブラリはライセンス表</description>
@@ -1068,7 +1068,7 @@
     <item>
       <title>傾斜付きロープロファイルキーキャップNuPhy Oblivionを買った</title>
       <link>https://blog.kyu08.com/pr-239/posts/oblivion-keycaps/</link>
-      <pubDate>Wed, 30 Apr 2025 22:49:03 +0900</pubDate>
+      <pubDate>Wed, 30 Apr 2025 13:49:03 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/oblivion-keycaps/</guid>
       <description>傾斜付きロープロファイルキーキャップであるNuPhy Oblivionを買った。 https://nuphy.com/collections/keycaps/products/oblivion 価格は送料込みで$53.98(8,000円)だった。注文から</description>
@@ -1109,7 +1109,7 @@
     <item>
       <title>『コンピュータシステムの理論と実装 第2版』を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/nand2tetris/</link>
-      <pubDate>Wed, 30 Apr 2025 00:00:00 +0900</pubDate>
+      <pubDate>Tue, 29 Apr 2025 15:00:00 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/nand2tetris/</guid>
       <description>『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は## 学び、得た経験 までジャンプして</description>
@@ -2000,7 +2000,7 @@ add
     <item>
       <title>IQUNIX Magi65を買った</title>
       <link>https://blog.kyu08.com/pr-239/posts/magi65/</link>
-      <pubDate>Sun, 06 Apr 2025 18:50:34 +0900</pubDate>
+      <pubDate>Sun, 06 Apr 2025 09:50:34 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/magi65/</guid>
       <description>ある日YouTube Shortsで流れてきて打鍵感と打鍵音がよさそうで気になっていたIQUNIX Magi65 を買ってみた。 画像は公式サイトより引用: Magi65</description>
@@ -2043,7 +2043,7 @@ add
     <item>
       <title>2024年を振り返る</title>
       <link>https://blog.kyu08.com/pr-239/posts/looking-back-on-2024/</link>
-      <pubDate>Sun, 29 Dec 2024 11:03:53 +0900</pubDate>
+      <pubDate>Sun, 29 Dec 2024 02:03:53 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/looking-back-on-2024/</guid>
       <description>年の瀬なので今年を振り返る。 OSS PRでの貢献 49件のPRを作成 1し43件のPRがマージされた。(4件がclosedで2件がopenのまま) 簡単</description>
@@ -2272,7 +2272,7 @@ add
     <item>
       <title>RFC 2606: Reserved Top Level DNS Namesを読んで知らなかったことを書く</title>
       <link>https://blog.kyu08.com/pr-239/posts/reserved-top-level-dns-names-rfc-2606/</link>
-      <pubDate>Mon, 16 Dec 2024 00:00:00 +0900</pubDate>
+      <pubDate>Sun, 15 Dec 2024 15:00:00 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/reserved-top-level-dns-names-rfc-2606/</guid>
       <description>本記事はUnipos Advent Calendar 2024 の16日目の記事です。 ふいに見かけたRFC 2606: Reserved Top Level DNS Names を読んでみたところ発見があったのでその内容をまとめてみようと</description>
@@ -2394,7 +2394,7 @@ English.&lt;/p&gt;
     <item>
       <title>ソフトウェアエンジニア目線で使ってみて便利だったChrome拡張を紹介する</title>
       <link>https://blog.kyu08.com/pr-239/posts/chrome-extensions-for-dev-2024/</link>
-      <pubDate>Fri, 13 Dec 2024 00:00:00 +0900</pubDate>
+      <pubDate>Thu, 12 Dec 2024 15:00:00 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/chrome-extensions-for-dev-2024/</guid>
       <description>本記事はUnipos Advent Calendar 2024 の13日目の記事です。 本記事では使ってみて便利だったChrome拡張を紹介します。 Stylus Stylus ユーザー定義のCSSを手軽に</description>
@@ -2507,7 +2507,7 @@ English.&lt;/p&gt;
     <item>
       <title>Notionのダークモードのガントチャートが見づらいのをChrome拡張で修正する方法</title>
       <link>https://blog.kyu08.com/pr-239/posts/refine-notion-gantt-chart/</link>
-      <pubDate>Fri, 08 Nov 2024 23:34:37 +0900</pubDate>
+      <pubDate>Fri, 08 Nov 2024 14:34:37 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/refine-notion-gantt-chart/</guid>
       <description>できること Notionのガントチャートが見づらいのをなんとかするスクリプト Before After 前提条件 NotionをChromium系のブラウザで利用してい</description>
@@ -2542,7 +2542,7 @@ English.&lt;/p&gt;
     <item>
       <title>『Goならわかるシステムプログラミング 第2版』を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/go-system-programming/</link>
-      <pubDate>Sun, 03 Nov 2024 21:42:30 +0900</pubDate>
+      <pubDate>Sun, 03 Nov 2024 12:42:30 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/go-system-programming/</guid>
       <description>『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11</description>
@@ -3376,7 +3376,7 @@ English.&lt;/p&gt;
     <item>
       <title>GitHub Sponsorsの寄付先にratatuiを追加した</title>
       <link>https://blog.kyu08.com/pr-239/posts/renew-oss-sponsoring/</link>
-      <pubDate>Tue, 24 Sep 2024 00:02:46 +0900</pubDate>
+      <pubDate>Mon, 23 Sep 2024 15:02:46 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/renew-oss-sponsoring/</guid>
       <description>OSSへの寄付の月予算を$10にした - laiso こちらの記事で寄付するOSSプロジェクトの選び方として次のような基準が紹介されていた。 寄付するプロジ</description>
@@ -3428,7 +3428,7 @@ English.&lt;/p&gt;
     <item>
       <title>Cloud Spanner について知らなかったことを書く</title>
       <link>https://blog.kyu08.com/pr-239/posts/learn-about-spanner/</link>
-      <pubDate>Mon, 23 Sep 2024 10:44:54 +0900</pubDate>
+      <pubDate>Mon, 23 Sep 2024 01:44:54 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/learn-about-spanner/</guid>
       <description>普段業務でCloud Spannerを使っているが、雰囲気で使っている自覚が大いにあるのでドキュメントやブログを読んで知らなかったことを自分用</description>
@@ -3783,7 +3783,7 @@ English.&lt;/p&gt;
     <item>
       <title>forkしたrepositoryのremoteを最新化しつつローカルにpullするスクリプトを書いた</title>
       <link>https://blog.kyu08.com/pr-239/posts/gh-sync-remote-and-pull/</link>
-      <pubDate>Tue, 03 Sep 2024 00:54:12 +0900</pubDate>
+      <pubDate>Mon, 02 Sep 2024 15:54:12 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/gh-sync-remote-and-pull/</guid>
       <description>前提 ghコマンドがインストールされていること デフォルトブランチにいること tl;dr # forkしたrepositoryのremoteを更新しつつpul</description>
@@ -3812,7 +3812,7 @@ English.&lt;/p&gt;
     <item>
       <title>ブラウザからforkすると遅いのでCLIからfork &amp; cloneするスクリプトを書いた</title>
       <link>https://blog.kyu08.com/pr-239/posts/gh-repo-fork-script/</link>
-      <pubDate>Sun, 18 Aug 2024 15:52:01 +0900</pubDate>
+      <pubDate>Sun, 18 Aug 2024 06:52:01 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/gh-repo-fork-script/</guid>
       <description>モチベーション GitHubにホストされているOSSにPRを出す時にforkしてからローカルにcloneするが、ブラウザのforkボタンを使っ</description>
@@ -3884,7 +3884,7 @@ English.&lt;/p&gt;
     <item>
       <title>『読み手につたわる文章 - テクニカルライティング』を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/technical-writing-book/</link>
-      <pubDate>Thu, 06 Jun 2024 00:21:05 +0900</pubDate>
+      <pubDate>Wed, 05 Jun 2024 15:21:05 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/technical-writing-book/</guid>
       <description>技術書典で購入した『読み手につたわる文章 - テクニカルライティング』を読んだので学びになったトピックについて書く。 1.2 「知らない」と書けない（P</description>
@@ -3965,7 +3965,7 @@ English.&lt;/p&gt;
     <item>
       <title>『いちばんやさしいアジャイル開発の教本』 を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/ichiban-yasashii-agile-no-kyouhon/</link>
-      <pubDate>Sun, 26 May 2024 00:48:56 +0900</pubDate>
+      <pubDate>Sat, 25 May 2024 15:48:56 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/ichiban-yasashii-agile-no-kyouhon/</guid>
       <description>2024/4からチーム異動してスクラムを実践しているチームに移ったのでアジャイル・スクラムのインプットをしたいと思い、『いちばんやさしいアジ</description>
@@ -4041,7 +4041,7 @@ English.&lt;/p&gt;
     <item>
       <title>`Process failed to start: too many open files: &#34;/opt/homebrew/bin/git&#34;`というエラーが出てNeovimのプラグインが動作しなくなる問題の回避策</title>
       <link>https://blog.kyu08.com/pr-239/posts/mac-too-many-open-files/</link>
-      <pubDate>Mon, 13 May 2024 13:11:01 +0900</pubDate>
+      <pubDate>Mon, 13 May 2024 04:11:01 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/mac-too-many-open-files/</guid>
       <description>問題 ここ数日Neovimを使っていると、Process failed to start: too many open files: &amp;quot;/opt/homebrew/bin/git&amp;quot;といっ</description>
@@ -4157,7 +4157,7 @@ English.&lt;/p&gt;
     <item>
       <title>CS50.jpでCSに入門した</title>
       <link>https://blog.kyu08.com/pr-239/posts/cs50-jp/</link>
-      <pubDate>Sun, 12 May 2024 15:32:42 +0900</pubDate>
+      <pubDate>Sun, 12 May 2024 06:32:42 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/cs50-jp/</guid>
       <description>CS50.jp の気になっていたトピックを学んでみたので振り返っておく。 CS50.jpとは CS50.jp の説明はサイトから引用する。 このページは、ハーバード大学 CS50 の日</description>
@@ -4252,7 +4252,7 @@ English.&lt;/p&gt;
     <item>
       <title>tmux-fzfを使ってwindow切り替えをできるようにする手順</title>
       <link>https://blog.kyu08.com/pr-239/posts/tmux-fzf-window/</link>
-      <pubDate>Wed, 10 Apr 2024 23:12:22 +0900</pubDate>
+      <pubDate>Wed, 10 Apr 2024 14:12:22 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/tmux-fzf-window/</guid>
       <description>これはなに こんな感じでtmuxでwindowをfzfで切り替えられるようにするための設定方法 手順 .tmux.confに以下を追記 set -g @plugin &amp;#39;tmux-plugins/tpm&amp;#39; # す</description>
@@ -4279,7 +4279,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     <item>
       <title>クラムシェルでMacを使っているとき用のマイクとしてEarPodsを買った</title>
       <link>https://blog.kyu08.com/pr-239/posts/mac-clamshell-mode-best-mic-earpods/</link>
-      <pubDate>Sun, 31 Mar 2024 00:00:38 +0900</pubDate>
+      <pubDate>Sat, 30 Mar 2024 15:00:38 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/mac-clamshell-mode-best-mic-earpods/</guid>
       <description>前提 社でバーチャルオフィスツールとしてGatherを使っており、就業中は基本的にずっとログインしているため急に話しかけられることがある 普段は</description>
@@ -4316,7 +4316,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     <item>
       <title>GitHub Issuesをサイトのコメント欄として活用できるutterancesを導入した</title>
       <link>https://blog.kyu08.com/pr-239/posts/add-comment-section-to-this-blog/</link>
-      <pubDate>Sun, 17 Mar 2024 22:06:40 +0900</pubDate>
+      <pubDate>Sun, 17 Mar 2024 13:06:40 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/add-comment-section-to-this-blog/</guid>
       <description>このブログにコメント欄を設置した。 utterance/utterances というGitHubのIssuesへのコメントを記事のコメント欄として使えるようにしてくれるOSSのツール</description>
@@ -4352,7 +4352,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     <item>
       <title>『ベタープログラマ』 を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/better-programmer/</link>
-      <pubDate>Thu, 07 Mar 2024 00:27:45 +0900</pubDate>
+      <pubDate>Wed, 06 Mar 2024 15:27:45 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/better-programmer/</guid>
       <description>『ベタープログラマ』を読んだので自分的に刺さった点をまとめる。 6章 航路を航行する 新たなメンバーが開発チームに参加する際にどのようにすれば速や</description>
@@ -4514,7 +4514,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     <item>
       <title>2023年を振り返る</title>
       <link>https://blog.kyu08.com/pr-239/posts/looking-back-on-2023/</link>
-      <pubDate>Sat, 30 Dec 2023 00:03:17 +0900</pubDate>
+      <pubDate>Fri, 29 Dec 2023 15:03:17 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/looking-back-on-2023/</guid>
       <description>趣味 OSS貢献 今年は初めてOSS貢献1をできた年でもあった。2023年に行った貢献を種類ごとにリポジトリごとでまとめたものが以下。2 ドキュメ</description>
@@ -4760,7 +4760,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     <item>
       <title>『世界一流エンジニアの思考法』 を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/how-world-class-engineers-think/</link>
-      <pubDate>Sun, 19 Nov 2023 10:41:50 +0900</pubDate>
+      <pubDate>Sun, 19 Nov 2023 01:41:50 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/how-world-class-engineers-think/</guid>
       <description>Microsoftのエンジニアとしてアメリカで働いている牛尾剛さんが優秀な同僚から学んだ思考法について書いた著書『世界一流エンジニアの思考法</description>
@@ -4828,7 +4828,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     <item>
       <title>ThePrimeagen/harpoon を使ってみた</title>
       <link>https://blog.kyu08.com/pr-239/posts/harpoon-review/</link>
-      <pubDate>Sat, 18 Nov 2023 00:20:13 +0900</pubDate>
+      <pubDate>Fri, 17 Nov 2023 15:20:13 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/harpoon-review/</guid>
       <description>ThePrimeagen/harpoon というNeovimプラグインを使ってみたので気になっている人の参考になればと思い感想を書いてみる。 できること ファイルをマークしてquick</description>
@@ -4890,7 +4890,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     <item>
       <title>『採用基準 地頭より論理的思考力より大切なもの』 を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/saiyo-kijun/</link>
-      <pubDate>Sun, 22 Oct 2023 20:00:41 +0900</pubDate>
+      <pubDate>Sun, 22 Oct 2023 11:00:41 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/saiyo-kijun/</guid>
       <description>概要 McKinsey &amp;amp; Company出身の伊賀泰代さんがリーダーシップについて書いた『採用基準地頭より論理的思考力より大切なもの』を読んだ。ちょうど「リー</description>
@@ -4936,7 +4936,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     <item>
       <title>GitHubで自分がOSSに送ったPR一覧を表示するやつ</title>
       <link>https://blog.kyu08.com/pr-239/posts/github-pr-list/</link>
-      <pubDate>Sun, 22 Oct 2023 19:26:39 +0900</pubDate>
+      <pubDate>Sun, 22 Oct 2023 10:26:39 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/github-pr-list/</guid>
       <description>稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ってマージさ</description>
@@ -4961,7 +4961,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     <item>
       <title>go/src/cmdでLSPが動作するようにするメモ</title>
       <link>https://blog.kyu08.com/pr-239/posts/develop-go-runtime-using-1.21/</link>
-      <pubDate>Tue, 12 Sep 2023 00:12:17 +0900</pubDate>
+      <pubDate>Mon, 11 Sep 2023 15:12:17 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/develop-go-runtime-using-1.21/</guid>
       <description>gc(go compiler)のコード（具体的にはgo/src/cmd/compile 配下）を読むために必要な手順があったのでメモ代わりに書いておく。</description>
@@ -5001,7 +5001,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     <item>
       <title>GitHub Sponsorsを通してNeovimに寄付をした</title>
       <link>https://blog.kyu08.com/pr-239/posts/sponsored-neovim/</link>
-      <pubDate>Fri, 11 Aug 2023 01:35:48 +0900</pubDate>
+      <pubDate>Thu, 10 Aug 2023 16:35:48 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/sponsored-neovim/</guid>
       <description>Neovimに対してGitHub Sponsorsを通してOne-time1の寄付をしたという話。 Neovimには仕事・趣味のプロジェクトなど</description>
@@ -5059,7 +5059,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     <item>
       <title>OSSに初めてPRを送ってマージされた話</title>
       <link>https://blog.kyu08.com/pr-239/posts/my-first-oss-contribution/</link>
-      <pubDate>Fri, 11 Aug 2023 01:32:27 +0900</pubDate>
+      <pubDate>Thu, 10 Aug 2023 16:32:27 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/my-first-oss-contribution/</guid>
       <description>個人開発のプロジェクトで使えそうなGitHub Actionsを物色していたところちょうど自分でも修正できそうな箇所があったのでPRを送ってみ</description>
@@ -5101,7 +5101,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     <item>
       <title>Goの静的解析に入門した</title>
       <link>https://blog.kyu08.com/pr-239/posts/hello-go-static-analisys/</link>
-      <pubDate>Mon, 17 Jul 2023 14:21:29 +0900</pubDate>
+      <pubDate>Mon, 17 Jul 2023 05:21:29 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/hello-go-static-analisys/</guid>
       <description>tenntenn Conference 2023 にスポンサーし、Goの静的解析を完全に理解した話 を読んでから静的解析が気になっていたのでこれをやってみた。 静的解析をはじめよう - Gop</description>
@@ -5143,7 +5143,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     <item>
       <title>『ちょうぜつソフトウェア設計入門――PHPで理解するオブジェクト指向の活用』を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/chozetsu-bon/</link>
-      <pubDate>Sun, 16 Jul 2023 00:00:00 +0900</pubDate>
+      <pubDate>Sat, 15 Jul 2023 15:00:00 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/chozetsu-bon/</guid>
       <description>田中ひさてるさんの『ちょうぜつソフトウェア設計入門――PHPで理解するオブジェクト指向の活用』が話題になっていたので読んでみた。 全体を通して</description>
@@ -5208,7 +5208,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     <item>
       <title>NuPhy Air60を買った</title>
       <link>https://blog.kyu08.com/pr-239/posts/nuphy-air60/</link>
-      <pubDate>Sun, 11 Jun 2023 23:27:54 +0900</pubDate>
+      <pubDate>Sun, 11 Jun 2023 14:27:54 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/nuphy-air60/</guid>
       <description>NuPhy Air60を買ったので簡単にレビューする 買った理由 普段は7sProを使っているが出社のときに持っていくのが大変だったり尊師スタイルで作業し</description>
@@ -5256,7 +5256,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     <item>
       <title>GitHub Pagesでデプロイのたびにカスタムドメインの設定が消える問題の解決方法</title>
       <link>https://blog.kyu08.com/pr-239/posts/github-pages-custom-domain/</link>
-      <pubDate>Sat, 10 Jun 2023 23:14:42 +0900</pubDate>
+      <pubDate>Sat, 10 Jun 2023 14:14:42 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/github-pages-custom-domain/</guid>
       <description>困っていたこと GitHub Actions経由でGitHub Pagesにデプロイするたびにカスタムドメインの設定が消えてしまい、デプロイ先がカスタムドメ</description>
@@ -5307,7 +5307,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     <item>
       <title>hugo-theme-terminal でOGPに任意の画像を設定する方法</title>
       <link>https://blog.kyu08.com/pr-239/posts/hugo-theme-terminal-ogp-config/</link>
-      <pubDate>Sat, 10 Jun 2023 02:02:33 +0900</pubDate>
+      <pubDate>Fri, 09 Jun 2023 17:02:33 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/hugo-theme-terminal-ogp-config/</guid>
       <description>hugo-theme-terminal でOGPの設定に少し詰まったのでやったことを書いておく。 前提 hugo version: hugo v0.112.5+extended darwin/arm64 困り 筆者はカバー画像を記事一覧・記事詳細画面に表示したくない、かつO</description>
@@ -5337,7 +5337,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     <item>
       <title>ブログ用にGifでキャプチャを作る時にやっていること</title>
       <link>https://blog.kyu08.com/pr-239/posts/create-gif/</link>
-      <pubDate>Sat, 10 Jun 2023 01:26:52 +0900</pubDate>
+      <pubDate>Fri, 09 Jun 2023 16:26:52 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/create-gif/</guid>
       <description>ブログ用によくGifをつくるので自分用の備忘録代わりに手順を記しておく。 追記(2023/11/29) 下記の方法だと生成後のgifに格子模様の</description>
@@ -5378,7 +5378,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     <item>
       <title>このブログをhugoで作り直した</title>
       <link>https://blog.kyu08.com/pr-239/posts/hello-hugo/</link>
-      <pubDate>Wed, 07 Jun 2023 22:25:41 +0900</pubDate>
+      <pubDate>Wed, 07 Jun 2023 13:25:41 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/hello-hugo/</guid>
       <description>もともとこのブログはNext.js + Vercelの構成で作られていたが色々と辛くなってしまったのでお手軽にブログが作れそうなhugo + GitHub Pa</description>
@@ -5663,7 +5663,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     <item>
       <title>yamlに定義したbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った</title>
       <link>https://blog.kyu08.com/pr-239/posts/fzf-bookmark-opener/</link>
-      <pubDate>Thu, 23 Feb 2023 01:15:48 +0900</pubDate>
+      <pubDate>Wed, 22 Feb 2023 16:15:48 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/fzf-bookmark-opener/</guid>
       <description>つくったもの yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った。 https://github.com/kyu08/fzf-bookmark-opener こんな感じで動く。 コードの</description>
@@ -5765,7 +5765,7 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
     <item>
       <title>Tmux&#43;NeovimでJetBrains IDEのScratchみたいな機能を実現している話</title>
       <link>https://blog.kyu08.com/pr-239/posts/tmux-neovim-scratch/</link>
-      <pubDate>Sun, 05 Feb 2023 01:15:48 +0900</pubDate>
+      <pubDate>Sat, 04 Feb 2023 16:15:48 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/tmux-neovim-scratch/</guid>
       <description>任意の構成のSandbox的な環境をTmuxのwindowとして用意するようにしたところターミナルから出ずにサクっと動作検証とかが行えてハッ</description>
@@ -5849,7 +5849,7 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
     <item>
       <title>デザインパターンをひととおり眺めた感想</title>
       <link>https://blog.kyu08.com/pr-239/posts/learn-design-pattern/</link>
-      <pubDate>Thu, 02 Feb 2023 01:15:48 +0900</pubDate>
+      <pubDate>Wed, 01 Feb 2023 16:15:48 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/learn-design-pattern/</guid>
       <description>ずっと気になってはいたが2つ~3つくらいしか知らなかったデザインパターンをやっと勉強する気になったのでこのサイトを一通り眺めてみた。 https://refactoring.guru/ja/design-patterns こちら</description>
@@ -5883,7 +5883,7 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
     <item>
       <title>開発の効率化のためにやっていることターミナル編</title>
       <link>https://blog.kyu08.com/pr-239/posts/my-dev-setup-terminal/</link>
-      <pubDate>Thu, 15 Dec 2022 01:15:48 +0900</pubDate>
+      <pubDate>Wed, 14 Dec 2022 16:15:48 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/my-dev-setup-terminal/</guid>
       <description>【この記事はUnipos Advent Calendar 2022 の記事です】 この記事では筆者が開発の効率化のために行っている工夫や使っているツールなどについて紹介します。 「他</description>
@@ -6069,7 +6069,7 @@ sainnhe/tmux-fzfを使うようにしたことでウィンドウ切り替えを&
     <item>
       <title>『コンサル一年目が学ぶこと』を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/consultant/</link>
-      <pubDate>Sun, 26 Dec 2021 01:15:48 +0900</pubDate>
+      <pubDate>Sat, 25 Dec 2021 16:15:48 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/consultant/</guid>
       <description>コンサル一年目が学ぶこと を読んだ。 何を期待して読んだのか これまで技術の勉強はしたことがあったが、社会人として普遍的なスキルである 問題解決能力</description>
@@ -6140,7 +6140,7 @@ sainnhe/tmux-fzfを使うようにしたことでウィンドウ切り替えを&
     <item>
       <title>Elmで固定長配列が扱えるライブラリelm-static-arrayを触ってみた</title>
       <link>https://blog.kyu08.com/pr-239/posts/2021121217-elm-static-array/</link>
-      <pubDate>Fri, 17 Dec 2021 01:15:48 +0900</pubDate>
+      <pubDate>Thu, 16 Dec 2021 16:15:48 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/2021121217-elm-static-array/</guid>
       <description>Elmで固定長配列を扱うためのライブラリelm-static-arrayを触ってみたので感じたことを書いていきます。 elm-static-array とは elm-static-array はElmで固定長</description>
@@ -6314,7 +6314,7 @@ sainnhe/tmux-fzfを使うようにしたことでウィンドウ切り替えを&
     <item>
       <title>2020年をかんたんに振り返る</title>
       <link>https://blog.kyu08.com/pr-239/posts/20201231-review-of-2020/</link>
-      <pubDate>Thu, 31 Dec 2020 01:15:48 +0900</pubDate>
+      <pubDate>Wed, 30 Dec 2020 16:15:48 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/20201231-review-of-2020/</guid>
       <description>このブログを作った動機でもある今年の振り返りを書いていきます。 今年はいろいろ大変な一年でしたが家にいる時間が増えた分たくさんやりたいことがで</description>
@@ -6445,7 +6445,7 @@ sainnhe/tmux-fzfを使うようにしたことでウィンドウ切り替えを&
     <item>
       <title>Next.js VercelでBlogをつくった</title>
       <link>https://blog.kyu08.com/pr-239/posts/20201227-built-blog/</link>
-      <pubDate>Sun, 27 Dec 2020 01:15:48 +0900</pubDate>
+      <pubDate>Sat, 26 Dec 2020 16:15:48 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/20201227-built-blog/</guid>
       <description>急にブログが書きたくなったのでつくった。 使った技術 Next.js TypeScript Vercel 感想 Vercelめっちゃ楽 Syntax Highlightできてうれしい const age: number = 1 // こんなかんじ</description>

@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Fri, 08 Nov 2024 23:34:37 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-239/tags/notion/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Nov 2024 14:34:37 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-239/tags/notion/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Notionのダークモードのガントチャートが見づらいのをChrome拡張で修正する方法</title>
       <link>https://blog.kyu08.com/pr-239/posts/refine-notion-gantt-chart/</link>
-      <pubDate>Fri, 08 Nov 2024 23:34:37 +0900</pubDate>
+      <pubDate>Fri, 08 Nov 2024 14:34:37 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/refine-notion-gantt-chart/</guid>
       <description>できること Notionのガントチャートが見づらいのをなんとかするスクリプト Before After 前提条件 NotionをChromium系のブラウザで利用してい</description>

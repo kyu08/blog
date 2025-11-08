@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Wed, 30 Apr 2025 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-239/tags/cs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Apr 2025 15:00:00 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-239/tags/cs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>『コンピュータシステムの理論と実装 第2版』を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/nand2tetris/</link>
-      <pubDate>Wed, 30 Apr 2025 00:00:00 +0900</pubDate>
+      <pubDate>Tue, 29 Apr 2025 15:00:00 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/nand2tetris/</guid>
       <description>『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は## 学び、得た経験 までジャンプして</description>
@@ -902,7 +902,7 @@ add
     <item>
       <title>『Goならわかるシステムプログラミング 第2版』を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/go-system-programming/</link>
-      <pubDate>Sun, 03 Nov 2024 21:42:30 +0900</pubDate>
+      <pubDate>Sun, 03 Nov 2024 12:42:30 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/go-system-programming/</guid>
       <description>『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11</description>
@@ -1736,7 +1736,7 @@ add
     <item>
       <title>CS50.jpでCSに入門した</title>
       <link>https://blog.kyu08.com/pr-239/posts/cs50-jp/</link>
-      <pubDate>Sun, 12 May 2024 15:32:42 +0900</pubDate>
+      <pubDate>Sun, 12 May 2024 06:32:42 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/cs50-jp/</guid>
       <description>CS50.jp の気になっていたトピックを学んでみたので振り返っておく。 CS50.jpとは CS50.jp の説明はサイトから引用する。 このページは、ハーバード大学 CS50 の日</description>

@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Tue, 03 Sep 2024 00:54:12 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-239/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Sep 2024 15:54:12 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-239/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>forkしたrepositoryのremoteを最新化しつつローカルにpullするスクリプトを書いた</title>
       <link>https://blog.kyu08.com/pr-239/posts/gh-sync-remote-and-pull/</link>
-      <pubDate>Tue, 03 Sep 2024 00:54:12 +0900</pubDate>
+      <pubDate>Mon, 02 Sep 2024 15:54:12 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/gh-sync-remote-and-pull/</guid>
       <description>前提 ghコマンドがインストールされていること デフォルトブランチにいること tl;dr # forkしたrepositoryのremoteを更新しつつpul</description>
@@ -40,7 +40,7 @@
     <item>
       <title>ブラウザからforkすると遅いのでCLIからfork &amp; cloneするスクリプトを書いた</title>
       <link>https://blog.kyu08.com/pr-239/posts/gh-repo-fork-script/</link>
-      <pubDate>Sun, 18 Aug 2024 15:52:01 +0900</pubDate>
+      <pubDate>Sun, 18 Aug 2024 06:52:01 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/gh-repo-fork-script/</guid>
       <description>モチベーション GitHubにホストされているOSSにPRを出す時にforkしてからローカルにcloneするが、ブラウザのforkボタンを使っ</description>
@@ -112,7 +112,7 @@
     <item>
       <title>GitHubで自分がOSSに送ったPR一覧を表示するやつ</title>
       <link>https://blog.kyu08.com/pr-239/posts/github-pr-list/</link>
-      <pubDate>Sun, 22 Oct 2023 19:26:39 +0900</pubDate>
+      <pubDate>Sun, 22 Oct 2023 10:26:39 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/github-pr-list/</guid>
       <description>稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ってマージさ</description>

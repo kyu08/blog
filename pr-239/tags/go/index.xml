@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sun, 03 Nov 2024 21:42:30 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-239/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Nov 2024 12:42:30 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-239/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>『Goならわかるシステムプログラミング 第2版』を読んだ</title>
       <link>https://blog.kyu08.com/pr-239/posts/go-system-programming/</link>
-      <pubDate>Sun, 03 Nov 2024 21:42:30 +0900</pubDate>
+      <pubDate>Sun, 03 Nov 2024 12:42:30 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/go-system-programming/</guid>
       <description>『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11</description>
@@ -845,7 +845,7 @@
     <item>
       <title>Goの静的解析に入門した</title>
       <link>https://blog.kyu08.com/pr-239/posts/hello-go-static-analisys/</link>
-      <pubDate>Mon, 17 Jul 2023 14:21:29 +0900</pubDate>
+      <pubDate>Mon, 17 Jul 2023 05:21:29 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/hello-go-static-analisys/</guid>
       <description>tenntenn Conference 2023 にスポンサーし、Goの静的解析を完全に理解した話 を読んでから静的解析が気になっていたのでこれをやってみた。 静的解析をはじめよう - Gop</description>
@@ -887,7 +887,7 @@
     <item>
       <title>yamlに定義したbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った</title>
       <link>https://blog.kyu08.com/pr-239/posts/fzf-bookmark-opener/</link>
-      <pubDate>Thu, 23 Feb 2023 01:15:48 +0900</pubDate>
+      <pubDate>Wed, 22 Feb 2023 16:15:48 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/fzf-bookmark-opener/</guid>
       <description>つくったもの yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った。 https://github.com/kyu08/fzf-bookmark-opener こんな感じで動く。 コードの</description>

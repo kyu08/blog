@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Wed, 10 Apr 2024 23:12:22 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-239/tags/%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Apr 2024 14:12:22 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-239/tags/%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>tmux-fzfを使ってwindow切り替えをできるようにする手順</title>
       <link>https://blog.kyu08.com/pr-239/posts/tmux-fzf-window/</link>
-      <pubDate>Wed, 10 Apr 2024 23:12:22 +0900</pubDate>
+      <pubDate>Wed, 10 Apr 2024 14:12:22 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/tmux-fzf-window/</guid>
       <description>これはなに こんな感じでtmuxでwindowをfzfで切り替えられるようにするための設定方法 手順 .tmux.confに以下を追記 set -g @plugin &amp;#39;tmux-plugins/tpm&amp;#39; # す</description>
@@ -38,7 +38,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     <item>
       <title>Tmux&#43;NeovimでJetBrains IDEのScratchみたいな機能を実現している話</title>
       <link>https://blog.kyu08.com/pr-239/posts/tmux-neovim-scratch/</link>
-      <pubDate>Sun, 05 Feb 2023 01:15:48 +0900</pubDate>
+      <pubDate>Sat, 04 Feb 2023 16:15:48 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/tmux-neovim-scratch/</guid>
       <description>任意の構成のSandbox的な環境をTmuxのwindowとして用意するようにしたところターミナルから出ずにサクっと動作検証とかが行えてハッ</description>
@@ -122,7 +122,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
     <item>
       <title>開発の効率化のためにやっていることターミナル編</title>
       <link>https://blog.kyu08.com/pr-239/posts/my-dev-setup-terminal/</link>
-      <pubDate>Thu, 15 Dec 2022 01:15:48 +0900</pubDate>
+      <pubDate>Wed, 14 Dec 2022 16:15:48 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/my-dev-setup-terminal/</guid>
       <description>【この記事はUnipos Advent Calendar 2022 の記事です】 この記事では筆者が開発の効率化のために行っている工夫や使っているツールなどについて紹介します。 「他</description>

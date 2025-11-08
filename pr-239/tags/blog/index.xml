@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sun, 17 Mar 2024 22:06:40 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-239/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Mar 2024 13:06:40 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-239/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GitHub Issuesをサイトのコメント欄として活用できるutterancesを導入した</title>
       <link>https://blog.kyu08.com/pr-239/posts/add-comment-section-to-this-blog/</link>
-      <pubDate>Sun, 17 Mar 2024 22:06:40 +0900</pubDate>
+      <pubDate>Sun, 17 Mar 2024 13:06:40 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/add-comment-section-to-this-blog/</guid>
       <description>このブログにコメント欄を設置した。 utterance/utterances というGitHubのIssuesへのコメントを記事のコメント欄として使えるようにしてくれるOSSのツール</description>
@@ -47,7 +47,7 @@
     <item>
       <title>hugo-theme-terminal でOGPに任意の画像を設定する方法</title>
       <link>https://blog.kyu08.com/pr-239/posts/hugo-theme-terminal-ogp-config/</link>
-      <pubDate>Sat, 10 Jun 2023 02:02:33 +0900</pubDate>
+      <pubDate>Fri, 09 Jun 2023 17:02:33 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/hugo-theme-terminal-ogp-config/</guid>
       <description>hugo-theme-terminal でOGPの設定に少し詰まったのでやったことを書いておく。 前提 hugo version: hugo v0.112.5+extended darwin/arm64 困り 筆者はカバー画像を記事一覧・記事詳細画面に表示したくない、かつO</description>
@@ -77,7 +77,7 @@
     <item>
       <title>ブログ用にGifでキャプチャを作る時にやっていること</title>
       <link>https://blog.kyu08.com/pr-239/posts/create-gif/</link>
-      <pubDate>Sat, 10 Jun 2023 01:26:52 +0900</pubDate>
+      <pubDate>Fri, 09 Jun 2023 16:26:52 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/create-gif/</guid>
       <description>ブログ用によくGifをつくるので自分用の備忘録代わりに手順を記しておく。 追記(2023/11/29) 下記の方法だと生成後のgifに格子模様の</description>

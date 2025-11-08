@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Mon, 17 Jul 2023 14:21:29 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-239/tags/%E9%9D%99%E7%9A%84%E8%A7%A3%E6%9E%90/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Jul 2023 05:21:29 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-239/tags/%E9%9D%99%E7%9A%84%E8%A7%A3%E6%9E%90/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Goの静的解析に入門した</title>
       <link>https://blog.kyu08.com/pr-239/posts/hello-go-static-analisys/</link>
-      <pubDate>Mon, 17 Jul 2023 14:21:29 +0900</pubDate>
+      <pubDate>Mon, 17 Jul 2023 05:21:29 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-239/posts/hello-go-static-analisys/</guid>
       <description>tenntenn Conference 2023 にスポンサーし、Goの静的解析を完全に理解した話 を読んでから静的解析が気になっていたのでこれをやってみた。 静的解析をはじめよう - Gop</description>
