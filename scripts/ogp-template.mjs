@@ -19,47 +19,47 @@ export function generateOgpTemplate({ title, date, tags, author = 'kyu08' }) {
         height: '630px',
         display: 'flex',
         flexDirection: 'column',
+        justifyContent: 'space-between',
         background: 'linear-gradient(135deg, #2d2d44 0%, #1a1a2e 100%)',
         padding: '60px',
         fontFamily: '"Noto Sans JP", sans-serif',
       },
       children: [
-        // Header - Blog name in orange box
-        {
-          type: 'div',
-          props: {
-            style: {
-              display: 'flex',
-              marginBottom: '50px',
-            },
-            children: [
-              {
-                type: 'div',
-                props: {
-                  style: {
-                    background: '#ff9d5c',
-                    color: '#1a1a2e',
-                    padding: '12px 28px',
-                    fontSize: '24px',
-                    fontWeight: '700',
-                  },
-                  children: 'blog.kyu08.com',
-                },
-              },
-            ],
-          },
-        },
-        // Main content - Title
+        // Top section - Header and Title
         {
           type: 'div',
           props: {
             style: {
               display: 'flex',
               flexDirection: 'column',
-              justifyContent: 'flex-start',
-              marginBottom: '70px',
             },
             children: [
+              // Header - Blog name in orange box
+              {
+                type: 'div',
+                props: {
+                  style: {
+                    display: 'flex',
+                    marginBottom: '50px',
+                  },
+                  children: [
+                    {
+                      type: 'div',
+                      props: {
+                        style: {
+                          background: '#ff9d5c',
+                          color: '#1a1a2e',
+                          padding: '12px 28px',
+                          fontSize: '24px',
+                          fontWeight: '700',
+                        },
+                        children: 'blog.kyu08.com',
+                      },
+                    },
+                  ],
+                },
+              },
+              // Title
               {
                 type: 'div',
                 props: {
@@ -70,7 +70,6 @@ export function generateOgpTemplate({ title, date, tags, author = 'kyu08' }) {
                     lineHeight: '1.3',
                     maxHeight: '340px',
                     overflow: 'hidden',
-                    display: '-webkit-box',
                   },
                   children: title,
                 },
