@@ -79,8 +79,8 @@ jobs:
 
           # コメントを更新または新規作成
           if [ -n "$COMMENT_ID" ]; then
-            # 既存のコメントを更新
-            echo -e "$COMMENT" | gh api -X PATCH "repos/${{ github.repository }}/issues/comments/${COMMENT_ID}" --input - -f body=@-
+            # 既存のコメントを更新（jqでJSON形式に変換）
+            printf '%b' "$COMMENT" | jq -Rs '{"body": .}' | gh api -X PATCH "repos/${{ github.repository }}/issues/comments/${COMMENT_ID}" --input -
           else
             # 新規コメントを作成
             echo -e "$COMMENT" | gh pr comment ${{ github.event.pull_request.number }} --body-file -
