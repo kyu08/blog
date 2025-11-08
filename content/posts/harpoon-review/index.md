@@ -3,7 +3,6 @@ title: "ThePrimeagen/harpoon を使ってみた"
 tags: ["neovim", "plugin"]
 keywords: ["neovim", "plugin"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2023-11-18T00:20:13+09:00
 author: "kyu08"

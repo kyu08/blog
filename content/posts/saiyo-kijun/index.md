@@ -3,7 +3,6 @@ title: "『採用基準 地頭より論理的思考力より大切なもの』 �
 tags: ["読書ログ"]
 keywords: ["読書ログ"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2023-10-22T20:00:41+09:00
 author: "kyu08"

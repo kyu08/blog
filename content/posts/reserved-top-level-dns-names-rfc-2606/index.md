@@ -3,7 +3,6 @@ title: "RFC 2606: Reserved Top Level DNS Namesを読んで知らなかったこ�
 tags: ["RFC"]
 keywords: ["RFC"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2024-12-16T00:00:00+09:00
 author: "kyu08"

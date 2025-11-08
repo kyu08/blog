@@ -3,7 +3,6 @@ title: "ソフトウェアエンジニア目線で使ってみて便利だった
 tags: ["Chrome Extension"]
 keywords: ["Chrome Extension"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2024-12-13T00:00:00+09:00
 author: "kyu08"

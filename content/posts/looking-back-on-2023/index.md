@@ -3,7 +3,6 @@ title: "2023年を振り返る"
 tags: ["振り返り", "neovim", "OSS", "fzf-make"]
 keywords: ["振り返り", "neovim", "OSS", "fzf-make"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2023-12-30T00:03:17+09:00
 author: "kyu08"

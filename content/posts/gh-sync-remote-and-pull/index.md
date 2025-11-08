@@ -3,7 +3,6 @@ title: "forkしたrepositoryのremoteを最新化しつつローカルにpullす
 tags: ["GitHub", "cli", "zsh"]
 keywords: ["GitHub", "cli", "zsh"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2024-09-03T00:54:12+09:00
 author: "kyu08"

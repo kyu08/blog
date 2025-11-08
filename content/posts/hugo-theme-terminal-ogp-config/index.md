@@ -3,7 +3,6 @@ title: "hugo-theme-terminal でOGPに任意の画像を設定する方法"
 tags: ["hugo", "blog"]
 keywords: ["hugo", "blog"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2023-06-10T02:02:33+09:00
 author: "kyu08"

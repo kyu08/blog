@@ -14,7 +14,6 @@ import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import matter from 'gray-matter';
-import toml from 'toml';
 import satori from 'satori';
 import { Resvg } from '@resvg/resvg-js';
 import { generateOgpTemplate } from './ogp-template.mjs';
@@ -47,22 +46,8 @@ async function getMarkdownFiles(dir) {
  * Front matterからメタデータを抽出
  */
 function extractMetadata(filePath, content) {
-  // フォーマットを自動検出（TOML: +++, YAML: ---）
-  const isTOML = content.trimStart().startsWith('+++');
-
-  const matterOptions = isTOML
-    ? {
-        engines: {
-          toml: toml.parse.bind(toml)
-        },
-        language: 'toml',
-        delimiters: '+++'
-      }
-    : {
-        // YAMLはデフォルトなのでオプション不要
-      };
-
-  const { data } = matter(content, matterOptions);
+  // YAML形式のfrontmatterを解析
+  const { data } = matter(content);
 
   // ファイル名からスラッグとディレクトリパスを取得
   const postDir = path.dirname(filePath);

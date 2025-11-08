@@ -3,7 +3,6 @@ title: "『読み手につたわる文章 - テクニカルライティング』
 tags: ["読書ログ"]
 keywords: ["読書ログ"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2024-06-06T00:21:05+09:00
 author: "kyu08"

@@ -3,7 +3,6 @@ title: "Notionのダークモードのガントチャートが見づらいのを
 tags: ["Notion", "Chrome Extension"]
 keywords: ["Notion", "Chrome Extension"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2024-11-08T23:34:37+09:00
 author: "kyu08"

@@ -3,7 +3,6 @@ title: "GitHub Sponsorsの寄付先にratatuiを追加した"
 tags: ["OSS", "rust", "tui"]
 keywords: ["OSS", "rust", "tui"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2024-09-24T00:02:46+09:00
 author: "kyu08"

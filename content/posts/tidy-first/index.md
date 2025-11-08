@@ -2,7 +2,6 @@
 title: "『Tidy First?』を読んだ"
 tags: ["読書ログ", "設計"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2025-10-04T17:21:10+09:00
 author: "kyu08"

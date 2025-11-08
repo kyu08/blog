@@ -2,7 +2,6 @@
 title: "cargoプロジェクトで依存関係を継続的に管理する"
 tags: ["cargo", "rust", "OSS"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2025-05-21T00:00:00+09:00
 author: "kyu08"

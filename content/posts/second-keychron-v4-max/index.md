@@ -2,7 +2,6 @@
 title: "追いKeychron V4 Max"
 tags: ["Keychron", "ガジェット", "diary"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2025-08-28T23:24:39+09:00
 author: "kyu08"

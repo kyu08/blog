@@ -2,7 +2,6 @@
 title: "2024年を振り返る"
 tags: ["振り返り"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2024-12-29T11:03:53+09:00
 author: "kyu08"

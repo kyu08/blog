@@ -3,7 +3,6 @@ title: "『ちょうぜつソフトウェア設計入門――PHPで理解する
 tags: ["読書ログ", "設計"]
 keywords: ["読書ログ", "設計"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2023-07-16T00:00:00+09:00
 author: "kyu08"

@@ -1,17 +1,17 @@
-+++
-title = "2020年をかんたんに振り返る"
-date = "2020-12-31T01:15:48+09:00"
-author = "kyu08"
-authorTwitter = "kyu08_" #do not include @
-cover = "https://blog.kyu08.com/cover.png"
-tags =["雑記", "振り返り"]
-keywords =["", ""]
-description = ""
-showFullContent = false
-readingTime = true
-hideComments = false
-color = "" #color from the theme settings
-+++
+---
+title: "2020年をかんたんに振り返る"
+date: 2020-12-31T01:15:48+09:00
+author: "kyu08"
+authorTwitter: "kyu08_"
+tags: ["雑記", "振り返り"]
+keywords: ["", ""]
+description: ""
+showFullContent: false
+readingTime: true
+hideComments: false
+color: ""
+draft: false
+---
 
 このブログを作った動機でもある今年の振り返りを書いていきます。
 

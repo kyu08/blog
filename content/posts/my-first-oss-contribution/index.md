@@ -3,7 +3,6 @@ title: "OSSに初めてPRを送ってマージされた話"
 tags: ["OSS"]
 keywords: ["OSS"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2023-08-11T01:32:27+09:00
 author: "kyu08"

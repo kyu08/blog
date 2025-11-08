@@ -3,7 +3,6 @@ title: "CS50.jpでCSに入門した"
 tags: ["CS"]
 keywords: ["CS"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2024-05-12T15:32:42+09:00
 author: "kyu08"

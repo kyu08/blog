@@ -3,7 +3,6 @@ title: "ブログ用にGifでキャプチャを作る時にやっていること
 tags: ["blog"]
 keywords: ["blog", "gif"]
 
-cover: "https://blog.kyu08.com/cover.webp"
 description: ""
 date: 2023-06-10T01:26:52+09:00
 author: "kyu08"

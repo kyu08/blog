@@ -3,7 +3,6 @@ title: "`Process failed to start: too many open files: \"/opt/homebrew/bin/git\"
 tags: ["neovim"]
 keywords: ["neovim"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2024-05-13T13:11:01+09:00
 author: "kyu08"

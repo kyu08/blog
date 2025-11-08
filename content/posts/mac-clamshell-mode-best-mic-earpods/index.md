@@ -3,7 +3,6 @@ title: "クラムシェルでMacを使っているとき用のマイクとして
 tags: ["デスク環境", "ガジェット", "diary"]
 keywords: ["デスク環境", "ガジェット"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2024-03-31T00:00:38+09:00
 author: "kyu08"

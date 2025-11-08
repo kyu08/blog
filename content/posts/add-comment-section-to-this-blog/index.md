@@ -3,7 +3,6 @@ title: "GitHub Issuesをサイトのコメント欄として活用できるutter
 tags: ["blog"]
 keywords: ["blog", "utterances"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2024-03-17T22:06:40+09:00
 author: "kyu08"

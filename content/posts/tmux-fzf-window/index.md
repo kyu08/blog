@@ -3,7 +3,6 @@ title: "tmux-fzfを使ってwindow切り替えをできるようにする手順"
 tags: ["tmux", "ターミナル"]
 keywords: ["tmux", "ターミナル"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2024-04-10T23:12:22+09:00
 author: "kyu08"

@@ -3,7 +3,6 @@ title: "Makefileに定義されたtargetをfzfで選択して実行するCLIツ�
 date: "2023-03-31T01:15:48+09:00"
 author: "kyu08"
 authorTwitter: "kyu08_" #do not include @
-cover: "https://blog.kyu08.com/cover.png"
 tags: ["rust", "cli"]
 keywords: ["", ""]
 description: ""

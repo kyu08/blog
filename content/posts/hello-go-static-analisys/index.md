@@ -3,7 +3,6 @@ title: "Goの静的解析に入門した"
 tags: ["Go", "静的解析"]
 keywords: ["Go", "静的解析"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2023-07-17T14:21:29+09:00
 author: "kyu08"

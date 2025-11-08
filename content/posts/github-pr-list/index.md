@@ -3,7 +3,6 @@ title: "GitHubで自分がOSSに送ったPR一覧を表示するやつ"
 tags: ["GitHub"]
 keywords: ["GitHub"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2023-10-22T19:26:39+09:00
 author: "kyu08"

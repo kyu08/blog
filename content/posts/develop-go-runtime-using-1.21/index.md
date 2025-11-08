@@ -3,7 +3,6 @@ title: "go/src/cmdでLSPが動作するようにするメモ"
 tags: []
 keywords: ["go", "neovim"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2023-09-12T00:12:17+09:00
 author: "kyu08"

@@ -2,7 +2,6 @@
 title: "『コンピュータシステムの理論と実装 第2版』を読んだ"
 tags: ["読書ログ", "CS"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2025-04-30T00:00:00+09:00
 author: "kyu08"

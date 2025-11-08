@@ -3,7 +3,6 @@ title: "自己紹介"
 date: "2021-12-03T01:15:48+09:00"
 author: "kyu08"
 authorTwitter: "kyu08_" #do not include @
-cover: "https://blog.kyu08.com/cover.png"
 tags: ["雑記", "diary"]
 keywords: ["", ""]
 description: ""

@@ -3,7 +3,6 @@ title: "『世界一流エンジニアの思考法』 を読んだ"
 tags: ["読書ログ"]
 keywords: ["読書ログ"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2023-11-19T10:41:50+09:00
 author: "kyu08"

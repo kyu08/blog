@@ -2,7 +2,6 @@
 title: "関数型まつり2025に参加した"
 tags: ["勉強会", "F#", "Rust", "Elm", "Elixir", "Ocaml" ]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2025-06-15T14:00:00+09:00
 author: "kyu08"

@@ -3,7 +3,6 @@ title: "ブラウザからforkすると遅いのでCLIからfork & cloneする�
 tags: ["GitHub", "cli", "zsh"]
 keywords: ["GitHub", "cli", "zsh"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2024-08-18T15:52:01+09:00
 author: "kyu08"

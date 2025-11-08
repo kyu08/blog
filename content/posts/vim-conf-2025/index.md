@@ -2,7 +2,6 @@
 title: "VimConf 2025 Smallに参加した"
 tags: ["勉強会", "vim", "neovim"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2025-11-02T10:07:08+09:00
 author: "kyu08"

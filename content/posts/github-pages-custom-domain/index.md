@@ -3,7 +3,6 @@ title: "GitHub Pagesでデプロイのたびにカスタムドメインの設定
 tags: ["GitHub Pages"]
 keywords: ["GitHub Pages"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2023-06-10T23:14:42+09:00
 author: "kyu08"

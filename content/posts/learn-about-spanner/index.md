@@ -3,7 +3,6 @@ title: "Cloud Spanner について知らなかったことを書く"
 tags: ["Google Cloud", "Cloud Spanner"]
 keywords: ["Google Cloud", "Cloud Spanner"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2024-09-23T10:44:54+09:00
 author: "kyu08"

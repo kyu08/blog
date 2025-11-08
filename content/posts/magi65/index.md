@@ -3,7 +3,6 @@ title: "IQUNIX Magi65を買った"
 tags: ["IQUNIX", "ガジェット", "キーボード", "diary"]
 keywords: ["IQUNIX", "ガジェット", "キーボード"]
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: 2025-04-06T18:50:34+09:00
 author: "kyu08"

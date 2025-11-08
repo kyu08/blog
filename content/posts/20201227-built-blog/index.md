@@ -1,17 +1,17 @@
-+++
-title = "Next.js VercelでBlogをつくった"
-date = "2020-12-27T01:15:48+09:00"
-author = "kyu08"
-authorTwitter = "kyu08_" #do not include @
-cover = "https://blog.kyu08.com/cover.png"
-tags =["TypeScript", "Next.js"]
-keywords =["", ""]
-description = ""
-showFullContent = false
-readingTime = true
-hideComments = false
-color = "" #color from the theme settings
-+++
+---
+title: "Next.js VercelでBlogをつくった"
+date: 2020-12-27T01:15:48+09:00
+author: "kyu08"
+authorTwitter: "kyu08_"
+tags: ["TypeScript", "Next.js"]
+keywords: ["", ""]
+description: ""
+showFullContent: false
+readingTime: true
+hideComments: false
+color: ""
+draft: false
+---
 
 急にブログが書きたくなったのでつくった。
 ## 使った技術
