@@ -79,76 +79,56 @@ export function generateOgpTemplate({ title, date, tags, author = 'kyu08' }) {
             ],
           },
         },
-        // Footer - Meta info
+        // Footer - Meta info (Author, Date, Tags in one line)
         {
           type: 'div',
           props: {
             style: {
               display: 'flex',
-              flexDirection: 'column',
-              gap: '16px',
+              gap: '20px',
+              alignItems: 'center',
+              flexWrap: 'wrap',
             },
             children: [
-              // Author and date
+              // Author
               {
                 type: 'div',
                 props: {
                   style: {
-                    display: 'flex',
-                    gap: '20px',
-                    alignItems: 'center',
+                    fontSize: '24px',
+                    color: '#ff9d5c',
+                    fontWeight: '700',
                   },
-                  children: [
-                    {
-                      type: 'div',
-                      props: {
-                        style: {
-                          fontSize: '24px',
-                          color: '#ff9d5c',
-                          fontWeight: '700',
-                        },
-                        children: `@${author}`,
-                      },
-                    },
-                    {
-                      type: 'div',
-                      props: {
-                        style: {
-                          fontSize: '24px',
-                          color: '#a0a0b0',
-                        },
-                        children: date,
-                      },
-                    },
-                  ],
+                  children: `@${author}`,
+                },
+              },
+              // Date
+              {
+                type: 'div',
+                props: {
+                  style: {
+                    fontSize: '24px',
+                    color: '#a0a0b0',
+                  },
+                  children: date,
                 },
               },
               // Tags
-              {
+              ...tags.map((tag) => ({
                 type: 'div',
                 props: {
                   style: {
-                    display: 'flex',
-                    gap: '12px',
-                    flexWrap: 'wrap',
+                    padding: '8px 20px',
+                    background: 'rgba(255, 157, 92, 0.15)',
+                    border: '2px solid #ff9d5c',
+                    borderRadius: '8px',
+                    fontSize: '18px',
+                    color: '#ff9d5c',
+                    fontWeight: '500',
                   },
-                  children: tags.map((tag) => ({
-                    type: 'div',
-                    props: {
-                      style: {
-                        padding: '8px 20px',
-                        background: 'rgba(255, 157, 92, 0.15)',
-                        border: '2px solid #ff9d5c',
-                        borderRadius: '8px',
-                        fontSize: '18px',
-                        color: '#ff9d5c',
-                        fontWeight: '500',
-                      },
-                      children: `#${tag}`,
-                    },
-                  })),
+                  children: `#${tag}`,
                 },
-              },
+              })),
             ],
           },
         },
