@@ -15,6 +15,9 @@ color: ''
 cover: cover.png
 ---
 
+{{< blogcard url="https://blog.kyu08.com/posts/tidy-first/" >}}
+{{< blogcard url="https://github.com/kyu08/blog/pull/244" >}}
+
 『[Tidy First?](https://www.oreilly.co.jp/books/9784814400911/)』を読んだ。
 
 勉強になったところをまとめる。
