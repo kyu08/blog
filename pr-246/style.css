@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+
+:root {
+  --background: #222129;
+  --foreground: #eceae5;
+  --accent: #ffa86a;
+}
+
+* {
+  --color-gray: #808080;
+
+  /* themeColorを切り替えたらここも切り替える */
+  /* orange */
+  --color-theme: #FFA86A; 
+  /* blue */
+  /* --color-theme: #23B0FFB3;  */
+
+  -webkit-font-feature-settings: "liga" on, "calt" on;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: none;
+}
+
+/* Markdown記号の表示 (h1は記事タイトルに使用されるため除外) */
+h2::before, h3::before, h4::before, h5::before, h6::before {
+  letter-spacing: -0.1em; /* #同士の間隔を狭める */
+  color: var(--color-gray);
+  margin-right: 6px;
+}
+
+h2::before { content: "##"; }
+h3::before { content: "###"; }
+h4::before { content: "####"; }
+h5::before { content: "#####"; }
+h6::before { content: "######"; }
+
+html,
+body {
+  /* padding: 15px; */
+  max-width: 1200px;
+  margin: 0;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: var(--color-theme);
+  text-decoration: none;
+}
+
+/* 記事末尾の「次の記事ボタン」「前の記事ボタン」のスタイル */
+.button.next,.button.previous{
+    border: 0;
+    max-width: 100%;
+}
+
+.button a {
+  background-color: var(--color-gray);
+  color: white;
+}
+
+code {
+  background-color: rgba(99,110,123,0.4);
+  border-radius: 8px;
+  padding: 0 8px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 600px;
+}
+
+h2, h3, h4, h5, h6 {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+h2 {
+  border-bottom: solid 2px var(--color-gray);
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  padding-bottom: 4px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+.post-cover, a.read-more {
+  display: none;
+}
+
+p > img {
+  border: none;
+  display: block;
+  margin: 0 auto;
+}
+
+th, td {
+  border: 2px solid var(--accent)
+}
+
+article.post > div.post-meta {
+  margin-top: 8px;
+}
+
+article.on-list > .post-content,
+article.on-list > .post-title::after {
+  display: none;
+}
+
+article.on-list > .post-title {
+  padding-bottom: 0;
+  border: none;
+}
+
+article.on-list {
+  margin: 24px auto;
+  padding: 0;
+}
+
+.headings--one-size h1:not(first-child), .headings--one-size h2:not(first-child), .headings--one-size h3:not(first-child), .headings--one-size h4:not(first-child), .headings--one-size h5:not(first-child), .headings--one-size h6:not(first-child) {
+  margin-top: 20px;
+}
+
+.pagination__title {
+  margin: 20px 0 20px;
+}
+
+ul {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+ul ul {
+  margin-bottom: 0px;
+}
+
+ol {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+ol ol {
+  margin-bottom: 0px;
+}
+
+blockquote {
+  position: relative;
+  border-left: 2px solid var(--color-gray);
+  border-top: none;
+  border-bottom: none;
+  margin: 0;
+  padding: 10px 25px;
+  color: var(--color-gray);
+  margin: 20px 0;
+}
+
+blockquote::before {
+  display: none;
+}
+
+/* ブログカード */
+.blogcard {
+  margin: 24px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blogcard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 168, 106, 0.2);
+}
+
+.blogcard-link {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: rgba(99, 110, 123, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+.blogcard-link:hover {
+  background-color: rgba(99, 110, 123, 0.3);
+}
+
+.blogcard-thumbnail {
+  flex-shrink: 0;
+  width: 200px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(99, 110, 123, 0.4);
+  overflow: hidden;
+}
+
+.blogcard-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  margin: 0;
+}
+
+.blogcard-thumbnail-placeholder {
+  color: var(--color-gray);
+}
+
+.blogcard-thumbnail-placeholder svg {
+  width: 48px;
+  height: 48px;
+}
+
+.blogcard-content {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.blogcard-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--foreground);
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.blogcard-description {
+  font-size: 14px;
+  color: var(--color-gray);
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.blogcard-url {
+  font-size: 12px;
+  color: var(--accent);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+  .blogcard-link {
+    flex-direction: column;
+  }
+
+  .blogcard-thumbnail {
+    width: 100%;
+    height: 180px;
+  }
+}
