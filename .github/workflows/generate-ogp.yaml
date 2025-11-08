@@ -3,6 +3,10 @@ name: Generate OGP Images
 on:
   pull_request:
 
+concurrency:
+  group: generate-ogp-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
 jobs:
   generate-ogp:
     runs-on: ubuntu-latest
@@ -15,7 +19,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
-          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
