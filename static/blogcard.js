@@ -165,12 +165,12 @@
   }
 
   // ページ読み込み時に自動取得設定のあるブログカードを処理
-  function initBlogCards() {
+  async function initBlogCards() {
     log('Initializing blog cards...');
     const cards = document.querySelectorAll('.blogcard[data-auto-fetch="true"]');
     log('Found', cards.length, 'blog cards with auto-fetch');
 
-    cards.forEach(async (card) => {
+    await Promise.all(Array.from(cards).map(async (card) => {
       const url = card.getAttribute('data-url');
       log('Processing card for URL:', url);
 
@@ -194,7 +194,7 @@
       if (ogpData) {
         updateBlogCard(card, ogpData);
       }
-    });
+    }));
   }
 
   // DOMContentLoaded後に初期化
