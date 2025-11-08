@@ -33,7 +33,7 @@ jobs:
         id: generation-check
         run: |
           # 生成後の差分をチェック
-          if ! git diff --exit-code content/posts/**/cover.png; then
+          if ! git diff --exit-code content/**/cover.png static/cover.png; then
             echo "has_changes=true" >> $GITHUB_OUTPUT
           else
             echo "has_changes=false" >> $GITHUB_OUTPUT
@@ -44,7 +44,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add content/posts/**/cover.png
+          git add content/**/cover.png static/cover.png
           git commit -m "chore: update OGP images"
           git push origin HEAD:${{ github.head_ref }}
 
@@ -85,7 +85,13 @@ jobs:
             IFS=',' read -ra FILES <<< "${{ steps.pr-check.outputs.files }}"
             for file in "${FILES[@]}"; do
               # ファイルパスから記事名を抽出
-              POST_NAME=$(echo "$file" | sed 's|content/posts/||' | sed 's|/cover.png||')
+              if [[ "$file" == "static/cover.png" ]]; then
+                POST_NAME="トップページ (Top Page)"
+              elif [[ "$file" == "content/about/cover.png" ]]; then
+                POST_NAME="aboutページ (About Page)"
+              else
+                POST_NAME=$(echo "$file" | sed 's|content/posts/||' | sed 's|/cover.png||')
+              fi
               IMAGE_URL="https://github.com/${{ github.repository }}/raw/${{ github.head_ref }}/${file}"
               COMMENT="${COMMENT}### ${POST_NAME}\n![${POST_NAME}](${IMAGE_URL})\n\n"
             done
