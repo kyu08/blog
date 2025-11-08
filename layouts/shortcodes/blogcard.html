@@ -1,0 +1,38 @@
+{{- $url := .Get "url" -}}
+{{- $title := .Get "title" -}}
+{{- $description := .Get "description" -}}
+{{- $image := .Get "image" -}}
+{{- $autoFetch := .Get "auto-fetch" | default "true" -}}
+
+{{- if not $url -}}
+  {{- errorf "blogcard shortcode requires 'url' parameter" -}}
+{{- end -}}
+
+{{- /* title/description/imageが指定されていない場合は自動取得を有効化 */ -}}
+{{- if and (not $title) (not $description) (not $image) -}}
+  {{- $autoFetch = "true" -}}
+{{- end -}}
+
+<div class="blogcard" data-url="{{ $url }}" data-auto-fetch="{{ $autoFetch }}">
+  <a href="{{ $url }}" target="_blank" rel="noopener noreferrer" class="blogcard-link">
+    {{- if $image -}}
+    <div class="blogcard-thumbnail">
+      <img src="{{ $image }}" alt="{{ $title | default $url }}" loading="lazy">
+    </div>
+    {{- else -}}
+    <div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div>
+    {{- end -}}
+    <div class="blogcard-content">
+      <div class="blogcard-title">{{ $title | default $url }}</div>
+      {{- if $description -}}
+      <div class="blogcard-description">{{ $description }}</div>
+      {{- end -}}
+      <div class="blogcard-url">{{ $url }}</div>
+    </div>
+  </a>
+</div>
