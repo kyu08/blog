@@ -73,15 +73,22 @@ jobs:
             COMMENT="${MARKER}\n## OGP画像に差分はありません\n\nOGP画像は最新の状態です。"
           fi
 
-          # 既存のコメントを検索
+          # 既存のコメントを検索（マーカーまたはタイトルで検索）
           COMMENT_ID=$(gh api "repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments" \
-            --jq '.[] | select(.body | contains("'"${MARKER}"'")) | .id' | head -1)
+            --jq '.[] | select(.body | contains("<!-- OGP_STATUS_COMMENT -->") or contains("## OGP画像が更新されました") or contains("## OGP画像に差分はありません")) | .id' | head -1)
+
+          echo "Found comment ID: $COMMENT_ID"
+          echo "Changed status: ${{ steps.git-check.outputs.changed }}"
 
           # コメントを更新または新規作成
           if [ -n "$COMMENT_ID" ]; then
             # 既存のコメントを更新（jqでJSON形式に変換）
+            echo "Updating existing comment..."
             printf '%b' "$COMMENT" | jq -Rs '{"body": .}' | gh api -X PATCH "repos/${{ github.repository }}/issues/comments/${COMMENT_ID}" --input -
+            echo "Comment updated successfully"
           else
             # 新規コメントを作成
+            echo "Creating new comment..."
             echo -e "$COMMENT" | gh pr comment ${{ github.event.pull_request.number }} --body-file -
+            echo "Comment created successfully"
           fi
