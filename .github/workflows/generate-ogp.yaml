@@ -1,0 +1,47 @@
+name: Generate OGP Images
+
+on:
+  workflow_dispatch: # 手動実行を許可
+  push:
+    branches:
+      - main
+    paths:
+      - 'content/posts/**/*.md'
+      - 'scripts/generate-ogp.mjs'
+      - 'scripts/ogp-template.mjs'
+
+jobs:
+  generate-ogp:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate OGP images
+        run: npm run generate-ogp
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code content/posts/**/cover.png || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push OGP images
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add content/posts/**/cover.png
+          git commit -m "chore: update OGP images"
+          git push

@@ -4,6 +4,13 @@
  */
 
 export function generateOgpTemplate({ title, date, tags, author = 'kyu08' }) {
+  // タイトルの長さに応じてフォントサイズを調整
+  const getTitleFontSize = (titleLength) => {
+    if (titleLength > 50) return '48px';
+    if (titleLength > 35) return '56px';
+    return '64px';
+  };
+
   return {
     type: 'div',
     props: {
@@ -23,7 +30,7 @@ export function generateOgpTemplate({ title, date, tags, author = 'kyu08' }) {
           props: {
             style: {
               display: 'flex',
-              marginBottom: '60px',
+              marginBottom: '50px',
             },
             children: [
               {
@@ -50,17 +57,21 @@ export function generateOgpTemplate({ title, date, tags, author = 'kyu08' }) {
               display: 'flex',
               flexDirection: 'column',
               flex: 1,
-              justifyContent: 'center',
+              justifyContent: 'flex-start',
+              paddingBottom: '40px',
             },
             children: [
               {
                 type: 'div',
                 props: {
                   style: {
-                    fontSize: '64px',
+                    fontSize: getTitleFontSize(title.length),
                     fontWeight: '700',
                     color: '#ffffff',
-                    lineHeight: '1.2',
+                    lineHeight: '1.3',
+                    maxHeight: '340px',
+                    overflow: 'hidden',
+                    display: '-webkit-box',
                   },
                   children: title,
                 },
