@@ -14,8 +14,32 @@
       <pubDate>Sat, 04 Oct 2025 08:21:10 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-246/posts/tidy-first/</guid>
-      <description>『Tidy First? 』を読んだ。 勉強になったところをまとめる。 「整頓」という概念 整頓はリファクタリングのサブセットだ。整頓は可愛くてふわふわした小さ</description>
-      <content>&lt;p&gt;『&lt;a href=&#34;https://www.oreilly.co.jp/books/9784814400911/&#34; target=&#34;_blank&#34; &gt;Tidy First?&lt;/a&gt;
+      <description>https://blog.kyu08.com/posts/tidy-first/https://blog.kyu08.com/posts/tidy-first/ https://github.com/kyu08/blog/pull/244https://github.com/kyu08/blog/pull/244 『Tidy First? 』を読んだ。 勉強になったところをまとめる。 「整頓」という概念 整頓はリファクタリングのサブセットだ。整頓は可愛くてふわふわした</description>
+      <content>&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://blog.kyu08.com/posts/tidy-first/&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://blog.kyu08.com/posts/tidy-first/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://blog.kyu08.com/posts/tidy-first/&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://blog.kyu08.com/posts/tidy-first/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/blog/pull/244&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/blog/pull/244&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/blog/pull/244&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/blog/pull/244&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;『&lt;a href=&#34;https://www.oreilly.co.jp/books/9784814400911/&#34; target=&#34;_blank&#34; &gt;Tidy First?&lt;/a&gt;
 』を読んだ。&lt;/p&gt;
 &lt;p&gt;勉強になったところをまとめる。&lt;/p&gt;
 &lt;h2 id=&#34;整頓という概念&#34;&gt;「整頓」という概念&lt;/h2&gt;
