@@ -49,22 +49,39 @@ jobs:
           git commit -m "chore: update OGP images"
           git push origin HEAD:${{ github.head_ref }}
 
-      - name: Comment PR with OGP images
-        if: steps.git-check.outputs.changed == 'true' && github.event_name == 'pull_request'
+      - name: Update or create PR comment with OGP status
+        if: github.event_name == 'pull_request'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          # コメント識別用マーカー
+          MARKER="<!-- OGP_STATUS_COMMENT -->"
+
           # コメント本文を作成
-          COMMENT="## OGP画像が更新されました\n\n"
+          if [ "${{ steps.git-check.outputs.changed }}" == "true" ]; then
+            COMMENT="${MARKER}\n## OGP画像が更新されました\n\n"
 
-          # 変更されたファイルごとに画像を表示
-          IFS=',' read -ra FILES <<< "${{ steps.git-check.outputs.files }}"
-          for file in "${FILES[@]}"; do
-            # ファイルパスから記事名を抽出
-            POST_NAME=$(echo "$file" | sed 's|content/posts/||' | sed 's|/cover.png||')
-            IMAGE_URL="https://github.com/${{ github.repository }}/raw/${{ github.head_ref }}/${file}"
-            COMMENT="${COMMENT}### ${POST_NAME}\n![${POST_NAME}](${IMAGE_URL})\n\n"
-          done
+            # 変更されたファイルごとに画像を表示
+            IFS=',' read -ra FILES <<< "${{ steps.git-check.outputs.files }}"
+            for file in "${FILES[@]}"; do
+              # ファイルパスから記事名を抽出
+              POST_NAME=$(echo "$file" | sed 's|content/posts/||' | sed 's|/cover.png||')
+              IMAGE_URL="https://github.com/${{ github.repository }}/raw/${{ github.head_ref }}/${file}"
+              COMMENT="${COMMENT}### ${POST_NAME}\n![${POST_NAME}](${IMAGE_URL})\n\n"
+            done
+          else
+            COMMENT="${MARKER}\n## OGP画像に差分はありません\n\nOGP画像は最新の状態です。"
+          fi
 
-          # PRにコメントを投稿
-          echo -e "$COMMENT" | gh pr comment ${{ github.event.pull_request.number }} --body-file -
+          # 既存のコメントを検索
+          COMMENT_ID=$(gh api "repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments" \
+            --jq '.[] | select(.body | contains("'"${MARKER}"'")) | .id' | head -1)
+
+          # コメントを更新または新規作成
+          if [ -n "$COMMENT_ID" ]; then
+            # 既存のコメントを更新
+            echo -e "$COMMENT" | gh api -X PATCH "repos/${{ github.repository }}/issues/comments/${COMMENT_ID}" --input - -f body=@-
+          else
+            # 新規コメントを作成
+            echo -e "$COMMENT" | gh pr comment ${{ github.event.pull_request.number }} --body-file -
+          fi
