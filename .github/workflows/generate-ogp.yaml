@@ -3,12 +3,6 @@ name: Generate OGP Images
 on:
   workflow_dispatch: # 手動実行を許可
   pull_request:
-    branches:
-      - main
-    paths:
-      - 'content/posts/**/*.md'
-      - 'scripts/generate-ogp.mjs'
-      - 'scripts/ogp-template.mjs'
 
 jobs:
   generate-ogp:
