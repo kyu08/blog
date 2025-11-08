@@ -1,6 +1,5 @@
 ---
 title: CS50.jpでCSに入門した
-
 tags:
   - CS
 keywords:
