@@ -213,8 +213,8 @@ blockquote::before {
 
 .blogcard-thumbnail {
   flex-shrink: 0;
-  width: 200px;
-  height: 120px;
+  width: 240px;
+  height: 144px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -241,7 +241,7 @@ blockquote::before {
 
 .blogcard-content {
   flex: 1;
-  padding: 16px;
+  padding: 16px 16px 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -263,7 +263,7 @@ blockquote::before {
 .blogcard-description {
   font-size: 14px;
   color: var(--color-gray);
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -287,6 +287,6 @@ blockquote::before {
 
   .blogcard-thumbnail {
     width: 100%;
-    height: 180px;
+    height: 200px;
   }
 }
