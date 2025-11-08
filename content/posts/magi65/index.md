@@ -1,5 +1,5 @@
 ---
-title: IQUNIX Magi65を買った
+title: IQUNIX Magi65を買った.
 tags:
   - IQUNIX
   - ガジェット
