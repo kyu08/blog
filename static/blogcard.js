@@ -157,7 +157,16 @@
     // 画像を更新
     if (ogpData.image && thumbnail) {
       thumbnail.classList.remove('blogcard-thumbnail-placeholder');
-      thumbnail.innerHTML = `<img src="${ogpData.image}" alt="${ogpData.title || ''}" loading="lazy">`;
+      // 既存の画像を削除
+      while (thumbnail.firstChild) {
+        thumbnail.removeChild(thumbnail.firstChild);
+      }
+      // 新しいimg要素を安全に作成
+      const img = document.createElement('img');
+      img.setAttribute('src', ogpData.image);
+      img.setAttribute('alt', ogpData.title || '');
+      img.setAttribute('loading', 'lazy');
+      thumbnail.appendChild(img);
       log('Image updated:', ogpData.image);
     } else {
       log('No image to update, ogpData.image:', ogpData.image);
