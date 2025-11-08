@@ -25,41 +25,41 @@ export function generateOgpTemplate({ title, date, tags, author = 'kyu08' }) {
         fontFamily: '"Noto Sans JP", sans-serif',
       },
       children: [
-        // Top section - Header and Title
+        // Header - Blog name in orange box
+        {
+          type: 'div',
+          props: {
+            style: {
+              display: 'flex',
+            },
+            children: [
+              {
+                type: 'div',
+                props: {
+                  style: {
+                    background: '#ff9d5c',
+                    color: '#1a1a2e',
+                    padding: '12px 28px',
+                    fontSize: '24px',
+                    fontWeight: '700',
+                  },
+                  children: 'blog.kyu08.com',
+                },
+              },
+            ],
+          },
+        },
+        // Middle section - Title (vertically centered)
         {
           type: 'div',
           props: {
             style: {
               display: 'flex',
               flexDirection: 'column',
+              flex: 1,
+              justifyContent: 'center',
             },
             children: [
-              // Header - Blog name in orange box
-              {
-                type: 'div',
-                props: {
-                  style: {
-                    display: 'flex',
-                    marginBottom: '50px',
-                  },
-                  children: [
-                    {
-                      type: 'div',
-                      props: {
-                        style: {
-                          background: '#ff9d5c',
-                          color: '#1a1a2e',
-                          padding: '12px 28px',
-                          fontSize: '24px',
-                          fontWeight: '700',
-                        },
-                        children: 'blog.kyu08.com',
-                      },
-                    },
-                  ],
-                },
-              },
-              // Title
               {
                 type: 'div',
                 props: {
@@ -98,50 +98,50 @@ export function generateOgpTemplate({ title, date, tags, author = 'kyu08' }) {
                     flexWrap: 'wrap',
                   },
                   children: [
-              // Author
-              {
-                type: 'div',
-                props: {
-                  style: {
-                    fontSize: '24px',
-                    color: '#ff9d5c',
-                    fontWeight: '700',
-                  },
-                  children: `@${author}`,
+                    // Author
+                    {
+                      type: 'div',
+                      props: {
+                        style: {
+                          fontSize: '24px',
+                          color: '#ff9d5c',
+                          fontWeight: '700',
+                        },
+                        children: `@${author}`,
+                      },
+                    },
+                    // Date
+                    {
+                      type: 'div',
+                      props: {
+                        style: {
+                          fontSize: '24px',
+                          color: '#a0a0b0',
+                        },
+                        children: date,
+                      },
+                    },
+                    // Tags
+                    ...tags.map((tag) => ({
+                      type: 'div',
+                      props: {
+                        style: {
+                          padding: '8px 20px',
+                          background: 'rgba(255, 157, 92, 0.15)',
+                          border: '2px solid #ff9d5c',
+                          borderRadius: '8px',
+                          fontSize: '18px',
+                          color: '#ff9d5c',
+                          fontWeight: '500',
+                        },
+                        children: `#${tag}`,
+                      },
+                    })),
+                  ],
                 },
               },
-              // Date
-              {
-                type: 'div',
-                props: {
-                  style: {
-                    fontSize: '24px',
-                    color: '#a0a0b0',
-                  },
-                  children: date,
-                },
-              },
-              // Tags
-              ...tags.map((tag) => ({
-                type: 'div',
-                props: {
-                  style: {
-                    padding: '8px 20px',
-                    background: 'rgba(255, 157, 92, 0.15)',
-                    border: '2px solid #ff9d5c',
-                    borderRadius: '8px',
-                    fontSize: '18px',
-                    color: '#ff9d5c',
-                    fontWeight: '500',
-                  },
-                  children: `#${tag}`,
-                },
-              })),
             ],
           },
-        },
-      ],
-    },
         },
       ],
     },
