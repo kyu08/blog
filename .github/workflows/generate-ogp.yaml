@@ -2,7 +2,7 @@ name: Generate OGP Images
 
 on:
   workflow_dispatch: # 手動実行を許可
-  push:
+  pull_request:
     branches:
       - main
     paths:
@@ -19,6 +19,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -44,4 +47,4 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add content/posts/**/cover.png
           git commit -m "chore: update OGP images"
-          git push
+          git push origin HEAD:${{ github.head_ref }}
