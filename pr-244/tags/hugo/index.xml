@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on blog.kyu08.com</title>
+    <link>https://blog.kyu08.com/pr-244/tags/hugo/</link>
+    <description>Recent content in hugo on blog.kyu08.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>blog.kyu08.com</copyright>
+    <lastBuildDate>Fri, 09 Jun 2023 17:02:33 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-244/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo-theme-terminal でOGPに任意の画像を設定する方法</title>
+      <link>https://blog.kyu08.com/pr-244/posts/hugo-theme-terminal-ogp-config/</link>
+      <pubDate>Fri, 09 Jun 2023 17:02:33 +0000</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-244/posts/hugo-theme-terminal-ogp-config/</guid>
+      <description>hugo-theme-terminal でOGPの設定に少し詰まったのでやったことを書いておく。 前提 hugo version: hugo v0.112.5+extended darwin/arm64 困り 筆者はカバー画像を記事一覧・記事詳細画面に表示したくない、かつO</description>
+      <content>&lt;p&gt;&lt;a href=&#34;https://github.com/panr/hugo-theme-terminal&#34; target=&#34;_blank&#34; &gt;hugo-theme-terminal&lt;/a&gt;
+ でOGPの設定に少し詰まったのでやったことを書いておく。&lt;/p&gt;
+&lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;hugo version: &lt;code&gt;hugo v0.112.5+extended darwin/arm64&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;困り&#34;&gt;困り&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;筆者はカバー画像を記事一覧・記事詳細画面に表示したくない、かつOGPは全共通の画像を使いたい&lt;/li&gt;
+&lt;li&gt;hugo-theme-terminalでは任意の画像をOGPだけに設定できない。（カバー画像をOGPとすることはできる）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;やったこと&#34;&gt;やったこと&lt;/h2&gt;
+&lt;p&gt;多少ハッキーな方法ではあるが以下の方法で実現した。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;各記事のFront Matterに&lt;code&gt;cover: &amp;quot;${OGP_URL}&amp;quot;&lt;/code&gt;指定(&lt;code&gt;archetypes&lt;/code&gt;にテンプレートとして書いておくと便利)&lt;/li&gt;
+&lt;li&gt;以下のCSSを追加&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;post-cover&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;display&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;none&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+    <item>
+      <title>このブログをhugoで作り直した</title>
+      <link>https://blog.kyu08.com/pr-244/posts/hello-hugo/</link>
+      <pubDate>Wed, 07 Jun 2023 13:25:41 +0000</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-244/posts/hello-hugo/</guid>
+      <description>もともとこのブログはNext.js + Vercelの構成で作られていたが色々と辛くなってしまったのでお手軽にブログが作れそうなhugo + GitHub Pa</description>
+      <content>&lt;p&gt;もともとこのブログはNext.js + Vercelの構成で作られていたが色々と辛くなってしまったのでお手軽にブログが作れそうなhugo + GitHub Pagesの構成に移行した。&lt;/p&gt;
+&lt;h2 id=&#34;動機&#34;&gt;動機&lt;/h2&gt;
+&lt;p&gt;もともとNext.jsを触ってみたかったのでNext.jsで書いたでブログを運営していた。&lt;/p&gt;
+&lt;p&gt;このときのディレクトリ構成が以下のような感じになっていて、画像はrepositoryにアップロードして(PRのコメント欄とかに画像を貼って取得した&lt;code&gt;https://user-images.githubusercontent.com/xxxxx&lt;/code&gt;のようなURLを使って)それをマークダウンから呼び出していた。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;root/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  ├ posts/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  │　├ post1.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  │　├ post2.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  │　└ post3.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  └ ...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ところがGitHubのrepositoryにアップした画像まわりの仕様が変わり&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;、それ以降private repositoryにアップした画像は認証付きになったため画像のホスト方法の変更が必要になった。&lt;/p&gt;
+&lt;p&gt;そこで管理のしやすさから以下のようにマークダウンと同一ディレクトリに画像を配置する方法にすることにした。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;root/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  ├ posts/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  │  ├ post1.md/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  │  │  ├ index.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  │  │  └ image.png
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  │  ├ post2.md/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  │  │  ├ index.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  │  │  └ image.png
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  │  └ post3.md/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  │     ├ index.md
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  │     └ image.png
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  └ ...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;で、それをやろうとしたがどうにもうまく画像を読み込むことができなかった。(当然悪いのはNext.jsではなく1000億%自分の技術力のNASAです)&lt;/p&gt;
+&lt;p&gt;ちゃんとNext.js(やJSのツールチェイン周り)のお勉強をすればNextでもできたと思うが当面JS関連の技術を触る予定もないしブログの管理にそこまで時間をかけたい気持ちもなかったので諦めてhugoに移行することにした。&lt;/p&gt;
+&lt;h2 id=&#34;やったこと&#34;&gt;やったこと&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;テーマ選定(&lt;a href=&#34;https://github.com/panr/hugo-theme-terminal&#34; target=&#34;_blank&#34; &gt;panr/hugo-theme-terminal&lt;/a&gt;
+を選択した)&lt;/li&gt;
+&lt;li&gt;フォントなどスタイルの調整&lt;/li&gt;
+&lt;li&gt;ファビコンの設定&lt;/li&gt;
+&lt;li&gt;デプロイの自動化&lt;/li&gt;
+&lt;li&gt;カスタムドメインの設定&lt;/li&gt;
+&lt;li&gt;GA4導入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以下部分的に補足する。&lt;/p&gt;
+&lt;h3 id=&#34;デプロイの自動化&#34;&gt;デプロイの自動化&lt;/h3&gt;
+&lt;p&gt;以下のようなyamlを&lt;code&gt;.github/workflows/deploy.yaml&lt;/code&gt;として配置するとmainへのpush時に自動でデプロイが行われる。&lt;/p&gt;
+&lt;p&gt;カスタムドメインに指定したい場合は&lt;code&gt;cname&lt;/code&gt;を指定しないとデプロイのたびにカスタムドメインが404になってしまうので注意。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;deploy&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;on&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;push&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;branches&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;main&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;jobs&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;deploy&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;runs-on&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ubuntu-latest&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# サポートされていないバージョンを指定するとGitHub Actionsがずっとrunningになるので注意&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;steps&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;actions/checkout@v2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;submodules&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;fetch-depth&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Setup Hugo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;peaceiris/actions-hugo@v2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;hugo-version&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0.112.5&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;extended&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Build&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;run&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;hugo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Deploy&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;peaceiris/actions-gh-pages@v3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;github_token&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;${{ secrets.GITHUB_TOKEN }}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;publish_dir&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;./public&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;cname&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;blog.kyu08.com&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# カスタムドメインの設定をしていない場合は不要&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;ga4の導入&#34;&gt;GA4の導入&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://maku77.github.io/p/zxk6pat/&#34; target=&#34;_blank&#34; &gt;こちらの記事&lt;/a&gt;
+を参考に進めたらできた。&lt;/p&gt;
+&lt;p&gt;1点だけ注意が必要なのはpartialsの扱いがthemeによって異なる(っぽい)こと。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/panr/hugo-theme-terminal&#34; target=&#34;_blank&#34; &gt;panr/hugo-theme-terminal&lt;/a&gt;
+では&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;To add an extended head section, please create
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;`layouts/partials/extended_head.html` in your Hugo directory.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;--&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;とのことだった&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;ので&lt;code&gt;layouts/partials/extended_head.html&lt;/code&gt;にタグの設定を記述した。&lt;/p&gt;
+&lt;h2 id=&#34;着手--公開まででかかった時間&#34;&gt;着手 ~ 公開まででかかった時間&lt;/h2&gt;
+&lt;p&gt;たぶん6hくらい。&lt;/p&gt;
+&lt;p&gt;数箇所詰まったがドキュメントや先人のブログのおかげですぐに解決できた。&lt;/p&gt;
+&lt;p&gt;おそらくミニマムな状態(カスタムドメイン設定なし, テーマのデザインをそのまま利用, GA4なしなどなど)なら1hもかからずに公開までできると思う。&lt;/p&gt;
+&lt;h2 id=&#34;hugoのいいところ&#34;&gt;hugoのいいところ&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;既存のテーマを利用すると手軽に色々できる(TOC, シンタックスハイライト, 脚注などなど)。とにかくお手軽なのが最高。基本的にはテーマを選んで記事を書いてデプロイすればブログが公開できてしまうのですごい。&lt;/li&gt;
+&lt;li&gt;ドキュメント・themeのソースコードを読めば大抵解決する&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;watch&lt;/code&gt;オプションがあるので&lt;code&gt;hugo serve -w&lt;/code&gt;を実行するとホットリロードが有効になるので捗る&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ハマったところ&#34;&gt;ハマったところ&lt;/h2&gt;
+&lt;p&gt;&lt;del&gt;長くなりそうなので別途記事にする予定&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;それぞれ記事にした。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.kyu08.com/pr-244/posts/hugo-theme-terminal-ogp-config&#34; &gt;hugo-theme-terminal でOGPに任意の画像を設定する方法&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.kyu08.com/pr-244/posts/github-pages-custom-domain&#34; &gt;GitHub Pagesでデプロイのたびにカスタムドメインの設定が消える問題の解決方法&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;実際の運用はこんな感じ&#34;&gt;実際の運用はこんな感じ&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;記事作成用のブランチを作成&lt;/li&gt;
+&lt;li&gt;記事を作成&lt;/li&gt;
+&lt;li&gt;PRを作成してmainにマージ&lt;/li&gt;
+&lt;li&gt;GitHub Actionsでビルド・デプロイが走る&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;2.記事を作成&lt;/code&gt;だけ軽く補足すると、Makefileに以下のようなターゲットを定義したので&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-Makefile&#34; data-lang=&#34;Makefile&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.PHONY&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; new
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;new&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	@read -p &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;post id: &amp;#34;&lt;/span&gt; id; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;	hugo new &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;posts/&lt;/span&gt;$$&lt;span style=&#34;color:#e6db74&#34;&gt;{id}/index.md&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;こんな感じで動く。地味に楽。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;make-new.gif&#34; alt=&#34;make-new.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;ちなみにデプロイは1分くらいで完了するのでサクサク反映できて嬉しい。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;deploy.webp&#34; alt=&#34;deploy.webp&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
+&lt;p&gt;色々追加したい機能はあるけどとりあえず最低限の機能はできたのでヨシ！とする。&lt;/p&gt;
+&lt;p&gt;ブログたくさん書くぞ〜&lt;/p&gt;
+&lt;p&gt;感想はtwitterとかで呟いたりリプしてくれたりすると跳んで喜びます。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.blog/changelog/2023-05-09-more-secure-private-attachments/&#34; target=&#34;_blank&#34; &gt;https://github.blog/changelog/2023-05-09-more-secure-private-attachments/&lt;/a&gt;
+&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/panr/hugo-theme-terminal/blob/9726b8d80658c6cf3c092c21484548aba6f64a68/layouts/partials/extended_head.html&#34; target=&#34;_blank&#34; &gt;https://github.com/panr/hugo-theme-terminal/blob/9726b8d80658c6cf3c092c21484548aba6f64a68/layouts/partials/extended_head.html&lt;/a&gt;
+&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
