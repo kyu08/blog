@@ -77,17 +77,27 @@ export function generateOgpTemplate({ title, date, tags, author = 'kyu08' }) {
             ],
           },
         },
-        // Footer - Meta info (Author, Date, Tags in one line)
+        // Footer wrapper with bottom spacing
         {
           type: 'div',
           props: {
             style: {
               display: 'flex',
-              gap: '20px',
-              alignItems: 'center',
-              flexWrap: 'wrap',
+              flexDirection: 'column',
+              marginBottom: '40px',
             },
             children: [
+              // Meta info (Author, Date, Tags in one line)
+              {
+                type: 'div',
+                props: {
+                  style: {
+                    display: 'flex',
+                    gap: '20px',
+                    alignItems: 'center',
+                    flexWrap: 'wrap',
+                  },
+                  children: [
               // Author
               {
                 type: 'div',
@@ -129,6 +139,9 @@ export function generateOgpTemplate({ title, date, tags, author = 'kyu08' }) {
               })),
             ],
           },
+        },
+      ],
+    },
         },
       ],
     },
