@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Fri, 13 Dec 2024 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/chrome-extension/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Dec 2024 15:00:00 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/chrome-extension/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ソフトウェアエンジニア目線で使ってみて便利だったChrome拡張を紹介する</title>
       <link>https://blog.kyu08.com/posts/chrome-extensions-for-dev-2024/</link>
-      <pubDate>Fri, 13 Dec 2024 00:00:00 +0900</pubDate>
+      <pubDate>Thu, 12 Dec 2024 15:00:00 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/posts/chrome-extensions-for-dev-2024/</guid>
       <description>本記事はUnipos Advent Calendar 2024 の13日目の記事です。 本記事では使ってみて便利だったChrome拡張を紹介します。 Stylus Stylus ユーザー定義のCSSを手軽に</description>
@@ -124,7 +124,7 @@
     <item>
       <title>Notionのダークモードのガントチャートが見づらいのをChrome拡張で修正する方法</title>
       <link>https://blog.kyu08.com/posts/refine-notion-gantt-chart/</link>
-      <pubDate>Fri, 08 Nov 2024 23:34:37 +0900</pubDate>
+      <pubDate>Fri, 08 Nov 2024 14:34:37 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/posts/refine-notion-gantt-chart/</guid>
       <description>できること Notionのガントチャートが見づらいのをなんとかするスクリプト Before After 前提条件 NotionをChromium系のブラウザで利用してい</description>

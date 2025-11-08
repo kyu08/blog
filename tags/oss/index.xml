@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Wed, 21 May 2025 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/oss/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 May 2025 15:00:00 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/oss/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>cargoプロジェクトで依存関係を継続的に管理する</title>
       <link>https://blog.kyu08.com/posts/manage-cargo-dependencies/</link>
-      <pubDate>Wed, 21 May 2025 00:00:00 +0900</pubDate>
+      <pubDate>Tue, 20 May 2025 15:00:00 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/posts/manage-cargo-dependencies/</guid>
       <description>OSSに依存するプロジェクトでは依存しているライブラリのライセンス表記が必要になることがある。（体感的にはほとんどのライブラリはライセンス表</description>
@@ -281,7 +281,7 @@
     <item>
       <title>GitHub Sponsorsの寄付先にratatuiを追加した</title>
       <link>https://blog.kyu08.com/posts/renew-oss-sponsoring/</link>
-      <pubDate>Tue, 24 Sep 2024 00:02:46 +0900</pubDate>
+      <pubDate>Mon, 23 Sep 2024 15:02:46 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/posts/renew-oss-sponsoring/</guid>
       <description>OSSへの寄付の月予算を$10にした - laiso こちらの記事で寄付するOSSプロジェクトの選び方として次のような基準が紹介されていた。 寄付するプロジ</description>
@@ -333,7 +333,7 @@
     <item>
       <title>2023年を振り返る</title>
       <link>https://blog.kyu08.com/posts/looking-back-on-2023/</link>
-      <pubDate>Sat, 30 Dec 2023 00:03:17 +0900</pubDate>
+      <pubDate>Fri, 29 Dec 2023 15:03:17 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/posts/looking-back-on-2023/</guid>
       <description>趣味 OSS貢献 今年は初めてOSS貢献1をできた年でもあった。2023年に行った貢献を種類ごとにリポジトリごとでまとめたものが以下。2 ドキュメ</description>
@@ -579,7 +579,7 @@
     <item>
       <title>GitHub Sponsorsを通してNeovimに寄付をした</title>
       <link>https://blog.kyu08.com/posts/sponsored-neovim/</link>
-      <pubDate>Fri, 11 Aug 2023 01:35:48 +0900</pubDate>
+      <pubDate>Thu, 10 Aug 2023 16:35:48 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/posts/sponsored-neovim/</guid>
       <description>Neovimに対してGitHub Sponsorsを通してOne-time1の寄付をしたという話。 Neovimには仕事・趣味のプロジェクトなど</description>
@@ -637,7 +637,7 @@
     <item>
       <title>OSSに初めてPRを送ってマージされた話</title>
       <link>https://blog.kyu08.com/posts/my-first-oss-contribution/</link>
-      <pubDate>Fri, 11 Aug 2023 01:32:27 +0900</pubDate>
+      <pubDate>Thu, 10 Aug 2023 16:32:27 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/posts/my-first-oss-contribution/</guid>
       <description>個人開発のプロジェクトで使えそうなGitHub Actionsを物色していたところちょうど自分でも修正できそうな箇所があったのでPRを送ってみ</description>

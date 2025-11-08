@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Mon, 16 Dec 2024 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/rfc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Dec 2024 15:00:00 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/rfc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RFC 2606: Reserved Top Level DNS Namesを読んで知らなかったことを書く</title>
       <link>https://blog.kyu08.com/posts/reserved-top-level-dns-names-rfc-2606/</link>
-      <pubDate>Mon, 16 Dec 2024 00:00:00 +0900</pubDate>
+      <pubDate>Sun, 15 Dec 2024 15:00:00 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/posts/reserved-top-level-dns-names-rfc-2606/</guid>
       <description>本記事はUnipos Advent Calendar 2024 の16日目の記事です。 ふいに見かけたRFC 2606: Reserved Top Level DNS Names を読んでみたところ発見があったのでその内容をまとめてみようと</description>

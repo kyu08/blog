@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sun, 02 Nov 2025 10:07:08 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/neovim/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Nov 2025 01:07:08 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/neovim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>VimConf 2025 Smallに参加した</title>
       <link>https://blog.kyu08.com/posts/vim-conf-2025/</link>
-      <pubDate>Sun, 02 Nov 2025 10:07:08 +0900</pubDate>
+      <pubDate>Sun, 02 Nov 2025 01:07:08 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/posts/vim-conf-2025/</guid>
       <description>2025年11月2日（日）にアキバプラザ・アキバホールで開催されたVimConf 2025 Small に参加した。 こちらはノベルティ。食器とかお箸はたくさんあ</description>
@@ -189,7 +189,7 @@
     <item>
       <title>`Process failed to start: too many open files: &#34;/opt/homebrew/bin/git&#34;`というエラーが出てNeovimのプラグインが動作しなくなる問題の回避策</title>
       <link>https://blog.kyu08.com/posts/mac-too-many-open-files/</link>
-      <pubDate>Mon, 13 May 2024 13:11:01 +0900</pubDate>
+      <pubDate>Mon, 13 May 2024 04:11:01 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/posts/mac-too-many-open-files/</guid>
       <description>問題 ここ数日Neovimを使っていると、Process failed to start: too many open files: &amp;quot;/opt/homebrew/bin/git&amp;quot;といっ</description>
@@ -305,7 +305,7 @@
     <item>
       <title>2023年を振り返る</title>
       <link>https://blog.kyu08.com/posts/looking-back-on-2023/</link>
-      <pubDate>Sat, 30 Dec 2023 00:03:17 +0900</pubDate>
+      <pubDate>Fri, 29 Dec 2023 15:03:17 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/posts/looking-back-on-2023/</guid>
       <description>趣味 OSS貢献 今年は初めてOSS貢献1をできた年でもあった。2023年に行った貢献を種類ごとにリポジトリごとでまとめたものが以下。2 ドキュメ</description>
@@ -551,7 +551,7 @@
     <item>
       <title>ThePrimeagen/harpoon を使ってみた</title>
       <link>https://blog.kyu08.com/posts/harpoon-review/</link>
-      <pubDate>Sat, 18 Nov 2023 00:20:13 +0900</pubDate>
+      <pubDate>Fri, 17 Nov 2023 15:20:13 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/posts/harpoon-review/</guid>
       <description>ThePrimeagen/harpoon というNeovimプラグインを使ってみたので気になっている人の参考になればと思い感想を書いてみる。 できること ファイルをマークしてquick</description>
@@ -613,7 +613,7 @@
     <item>
       <title>GitHub Sponsorsを通してNeovimに寄付をした</title>
       <link>https://blog.kyu08.com/posts/sponsored-neovim/</link>
-      <pubDate>Fri, 11 Aug 2023 01:35:48 +0900</pubDate>
+      <pubDate>Thu, 10 Aug 2023 16:35:48 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/posts/sponsored-neovim/</guid>
       <description>Neovimに対してGitHub Sponsorsを通してOne-time1の寄付をしたという話。 Neovimには仕事・趣味のプロジェクトなど</description>
@@ -671,7 +671,7 @@
     <item>
       <title>Tmux&#43;NeovimでJetBrains IDEのScratchみたいな機能を実現している話</title>
       <link>https://blog.kyu08.com/posts/tmux-neovim-scratch/</link>
-      <pubDate>Sun, 05 Feb 2023 01:15:48 +0900</pubDate>
+      <pubDate>Sat, 04 Feb 2023 16:15:48 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/posts/tmux-neovim-scratch/</guid>
       <description>任意の構成のSandbox的な環境をTmuxのwindowとして用意するようにしたところターミナルから出ずにサクっと動作検証とかが行えてハッ</description>

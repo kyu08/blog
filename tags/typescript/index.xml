@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sun, 27 Dec 2020 01:15:48 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Dec 2020 16:15:48 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Next.js VercelでBlogをつくった</title>
       <link>https://blog.kyu08.com/posts/20201227-built-blog/</link>
-      <pubDate>Sun, 27 Dec 2020 01:15:48 +0900</pubDate>
+      <pubDate>Sat, 26 Dec 2020 16:15:48 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/posts/20201227-built-blog/</guid>
       <description>急にブログが書きたくなったのでつくった。 使った技術 Next.js TypeScript Vercel 感想 Vercelめっちゃ楽 Syntax Highlightできてうれしい const age: number = 1 // こんなかんじ</description>
