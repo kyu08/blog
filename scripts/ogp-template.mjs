@@ -57,7 +57,7 @@ export function generateOgpTemplate({ title, date, tags, author = 'kyu08' }) {
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'flex-start',
-              marginBottom: '30px',
+              marginBottom: '50px',
             },
             children: [
               {
