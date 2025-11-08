@@ -32,7 +32,12 @@ jobs:
       - name: Check for changes
         id: git-check
         run: |
-          git diff --exit-code content/posts/**/cover.png || echo "changed=true" >> $GITHUB_OUTPUT
+          if ! git diff --exit-code content/posts/**/cover.png; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+            # 変更されたファイルのリストを取得
+            CHANGED_FILES=$(git diff --name-only content/posts/**/cover.png | tr '\n' ',' | sed 's/,$//')
+            echo "files=$CHANGED_FILES" >> $GITHUB_OUTPUT
+          fi
 
       - name: Commit and push OGP images
         if: steps.git-check.outputs.changed == 'true'
@@ -42,3 +47,23 @@ jobs:
           git add content/posts/**/cover.png
           git commit -m "chore: update OGP images"
           git push origin HEAD:${{ github.head_ref }}
+
+      - name: Comment PR with OGP images
+        if: steps.git-check.outputs.changed == 'true' && github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # コメント本文を作成
+          COMMENT="## OGP画像が更新されました\n\n"
+
+          # 変更されたファイルごとに画像を表示
+          IFS=',' read -ra FILES <<< "${{ steps.git-check.outputs.files }}"
+          for file in "${FILES[@]}"; do
+            # ファイルパスから記事名を抽出
+            POST_NAME=$(echo "$file" | sed 's|content/posts/||' | sed 's|/cover.png||')
+            IMAGE_URL="https://github.com/${{ github.repository }}/raw/${{ github.head_ref }}/${file}"
+            COMMENT="${COMMENT}### ${POST_NAME}\n![${POST_NAME}](${IMAGE_URL})\n\n"
+          done
+
+          # PRにコメントを投稿
+          echo -e "$COMMENT" | gh pr comment ${{ github.event.pull_request.number }} --body-file -
