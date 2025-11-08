@@ -12,75 +12,113 @@
     }
   }
 
+  // タイムアウト付きfetch
+  async function fetchWithTimeout(url, timeout = 5000) {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), timeout);
+
+    try {
+      const response = await fetch(url, { signal: controller.signal });
+      clearTimeout(timeoutId);
+      return response;
+    } catch (error) {
+      clearTimeout(timeoutId);
+      throw error;
+    }
+  }
+
+  // 複数のプロキシを試す
+  const PROXY_SERVICES = [
+    // corsproxy.io - 高速で信頼性が高い
+    (url) => `https://corsproxy.io/?${encodeURIComponent(url)}`,
+    // allOrigins - バックアップ
+    (url) => `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`,
+  ];
+
   // OGP情報を取得する関数
   async function fetchOGPData(url) {
     log('Fetching OGP data for:', url);
 
-    try {
-      // CORS制限を回避するため、alloriginsを使用
-      const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
-      log('Proxy URL:', proxyUrl);
+    for (let i = 0; i < PROXY_SERVICES.length; i++) {
+      const proxyUrl = PROXY_SERVICES[i](url);
+      log(`Trying proxy ${i + 1}/${PROXY_SERVICES.length}:`, proxyUrl);
 
-      const response = await fetch(proxyUrl);
+      try {
+        const response = await fetchWithTimeout(proxyUrl, 5000);
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const data = await response.json();
-      const html = data.contents;
-      log('HTML fetched, length:', html.length);
-
-      // HTMLパーサーを使用してOGPメタタグを抽出
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-
-      // OGPメタタグから情報を取得
-      const getMetaContent = (property) => {
-        const element = doc.querySelector(`meta[property="${property}"]`) ||
-                       doc.querySelector(`meta[name="${property}"]`);
-        return element ? element.getAttribute('content') : null;
-      };
-
-      // タイトルを取得（OGP > title要素の順）
-      const title = getMetaContent('og:title') ||
-                   doc.querySelector('title')?.textContent ||
-                   url;
-
-      // 説明を取得
-      const description = getMetaContent('og:description') ||
-                         getMetaContent('description') ||
-                         '';
-
-      // 画像を取得
-      let image = getMetaContent('og:image') || '';
-      log('Raw image URL:', image);
-
-      // 相対URLを絶対URLに変換
-      if (image && !image.startsWith('http')) {
-        const urlObj = new URL(url);
-        if (image.startsWith('//')) {
-          image = urlObj.protocol + image;
-        } else if (image.startsWith('/')) {
-          image = urlObj.origin + image;
-        } else {
-          image = urlObj.origin + '/' + image;
+        if (!response.ok) {
+          log(`Proxy ${i + 1} failed with status:`, response.status);
+          continue;
         }
-        log('Converted image URL:', image);
+
+        let html;
+        if (i === 0) {
+          // corsproxy.io returns HTML directly
+          html = await response.text();
+        } else if (i === 1) {
+          // allOrigins returns JSON
+          const data = await response.json();
+          html = data.contents;
+        }
+
+        log('HTML fetched, length:', html.length);
+
+        // HTMLパーサーを使用してOGPメタタグを抽出
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+
+        // OGPメタタグから情報を取得
+        const getMetaContent = (property) => {
+          const element = doc.querySelector(`meta[property="${property}"]`) ||
+                         doc.querySelector(`meta[name="${property}"]`);
+          return element ? element.getAttribute('content') : null;
+        };
+
+        // タイトルを取得（OGP > title要素の順）
+        const title = getMetaContent('og:title') ||
+                     doc.querySelector('title')?.textContent ||
+                     url;
+
+        // 説明を取得
+        const description = getMetaContent('og:description') ||
+                           getMetaContent('description') ||
+                           '';
+
+        // 画像を取得
+        let image = getMetaContent('og:image') || '';
+        log('Raw image URL:', image);
+
+        // 相対URLを絶対URLに変換
+        if (image && !image.startsWith('http')) {
+          const urlObj = new URL(url);
+          if (image.startsWith('//')) {
+            image = urlObj.protocol + image;
+          } else if (image.startsWith('/')) {
+            image = urlObj.origin + image;
+          } else {
+            image = urlObj.origin + '/' + image;
+          }
+          log('Converted image URL:', image);
+        }
+
+        const result = {
+          title: title.trim(),
+          description: description.trim(),
+          image: image
+        };
+
+        log('OGP data fetched successfully:', result);
+        return result;
+      } catch (error) {
+        log(`Proxy ${i + 1} error:`, error.message);
+        // Try next proxy
+        continue;
       }
-
-      const result = {
-        title: title.trim(),
-        description: description.trim(),
-        image: image
-      };
-
-      log('OGP data fetched:', result);
-      return result;
-    } catch (error) {
-      console.error('[BlogCard] Error fetching OGP data:', error);
-      return null;
     }
+
+    // All proxies failed
+    console.error('[BlogCard] All proxies failed to fetch OGP data for:', url);
+    return null;
   }
 
   // ブログカードを更新する関数
@@ -141,8 +179,18 @@
         return;
       }
 
+      // ローディング状態を追加
+      card.classList.add('loading');
+
       // OGP情報を取得して更新
+      const startTime = Date.now();
       const ogpData = await fetchOGPData(url);
+      const elapsedTime = Date.now() - startTime;
+      log(`Fetch completed in ${elapsedTime}ms`);
+
+      // ローディング状態を解除
+      card.classList.remove('loading');
+
       if (ogpData) {
         updateBlogCard(card, ogpData);
       }
