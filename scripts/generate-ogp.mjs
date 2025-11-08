@@ -22,7 +22,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const CONTENT_DIR = path.join(__dirname, '../content/posts');
-const OUTPUT_DIR = path.join(__dirname, '../static/og');
 
 /**
  * ディレクトリ内の全Markdownファイルを再帰的に取得
@@ -49,11 +48,13 @@ async function getMarkdownFiles(dir) {
 function extractMetadata(filePath, content) {
   const { data } = matter(content);
 
-  // ファイル名からスラッグを生成
-  const slug = path.basename(path.dirname(filePath));
+  // ファイル名からスラッグとディレクトリパスを取得
+  const postDir = path.dirname(filePath);
+  const slug = path.basename(postDir);
 
   return {
     slug,
+    postDir,
     title: data.title || 'Untitled',
     tags: data.tags || [],
     date: data.date
@@ -90,11 +91,11 @@ async function getFonts() {
   // @fontsource/noto-sans-jpからフォントファイルを読み込み
   const fontPath400 = path.join(
     __dirname,
-    '../node_modules/@fontsource/noto-sans-jp/files/noto-sans-jp-0-400-normal.woff'
+    '../node_modules/@fontsource/noto-sans-jp/files/noto-sans-jp-japanese-400-normal.woff'
   );
   const fontPath700 = path.join(
     __dirname,
-    '../node_modules/@fontsource/noto-sans-jp/files/noto-sans-jp-0-700-normal.woff'
+    '../node_modules/@fontsource/noto-sans-jp/files/noto-sans-jp-japanese-700-normal.woff'
   );
 
   const fontData400 = await fs.readFile(fontPath400);
@@ -145,11 +146,11 @@ async function generateOgpImage(metadata, fonts) {
     // SVGをPNGに変換
     const png = svgToPng(svg);
 
-    // ファイルに保存
-    const outputPath = path.join(OUTPUT_DIR, `${metadata.slug}.png`);
+    // 記事のディレクトリにcover.pngとして保存
+    const outputPath = path.join(metadata.postDir, 'cover.png');
     await fs.writeFile(outputPath, png);
 
-    console.log(`✅ Generated: ${metadata.slug}.png`);
+    console.log(`✅ Generated: ${metadata.slug}/cover.png`);
   } catch (error) {
     console.error(`❌ Failed to generate OGP for ${metadata.slug}:`, error);
   }
@@ -165,9 +166,6 @@ async function main() {
   console.log('📦 Loading fonts...');
   const fonts = await getFonts();
   console.log('✅ Fonts loaded\n');
-
-  // 出力ディレクトリを作成
-  await fs.mkdir(OUTPUT_DIR, { recursive: true });
 
   // Markdownファイルを取得
   const markdownFiles = await getMarkdownFiles(CONTENT_DIR);
