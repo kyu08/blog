@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on blog.kyu08.com</title>
+    <link>https://blog.kyu08.com/pr-242/tags/blog/</link>
+    <description>Recent content in blog on blog.kyu08.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>blog.kyu08.com</copyright>
+    <lastBuildDate>Sun, 17 Mar 2024 13:06:40 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-242/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHub Issuesをサイトのコメント欄として活用できるutterancesを導入した</title>
+      <link>https://blog.kyu08.com/pr-242/posts/add-comment-section-to-this-blog/</link>
+      <pubDate>Sun, 17 Mar 2024 13:06:40 +0000</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-242/posts/add-comment-section-to-this-blog/</guid>
+      <description>このブログにコメント欄を設置した。 utterance/utterances というGitHubのIssuesへのコメントを記事のコメント欄として使えるようにしてくれるOSSのツール</description>
+      <content>&lt;p&gt;このブログにコメント欄を設置した。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/utterance/utterances&#34; target=&#34;_blank&#34; &gt;utterance/utterances&lt;/a&gt;
+というGitHubのIssuesへのコメントを記事のコメント欄として使えるようにしてくれるOSSのツールを使っている。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;導入に必要だったのは&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;コメント用のリポジトリ作成&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://utteranc.es/&#34; target=&#34;_blank&#34; &gt;https://utteranc.es/&lt;/a&gt;
+でscriptタグを生成&lt;/li&gt;
+&lt;li&gt;生成したタグをブログに埋め込む&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;だけだったので10分くらいでできて大変お手軽だった。&lt;/p&gt;
+&lt;p&gt;(自分はこのブログのリポジトリのissueをコメント用に使いたくなかったのでそれ用のリポジトリを作成したが、もし既存のリポジトリを使う場合は&lt;code&gt;1.&lt;/code&gt;は不要)&lt;/p&gt;
+&lt;p&gt;ぜひご自由にコメントを残していってください。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.orhun.dev/&#34; target=&#34;_blank&#34; &gt;https://blog.orhun.dev/&lt;/a&gt;
+で使われていていいなと思ったのでこのブログでも導入してみた。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/blog-comments&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/blog-comments&lt;/a&gt;
+&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>hugo-theme-terminal でOGPに任意の画像を設定する方法</title>
+      <link>https://blog.kyu08.com/pr-242/posts/hugo-theme-terminal-ogp-config/</link>
+      <pubDate>Fri, 09 Jun 2023 17:02:33 +0000</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-242/posts/hugo-theme-terminal-ogp-config/</guid>
+      <description>hugo-theme-terminal でOGPの設定に少し詰まったのでやったことを書いておく。 前提 hugo version: hugo v0.112.5+extended darwin/arm64 困り 筆者はカバー画像を記事一覧・記事詳細画面に表示したくない、かつO</description>
+      <content>&lt;p&gt;&lt;a href=&#34;https://github.com/panr/hugo-theme-terminal&#34; target=&#34;_blank&#34; &gt;hugo-theme-terminal&lt;/a&gt;
+ でOGPの設定に少し詰まったのでやったことを書いておく。&lt;/p&gt;
+&lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;hugo version: &lt;code&gt;hugo v0.112.5+extended darwin/arm64&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;困り&#34;&gt;困り&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;筆者はカバー画像を記事一覧・記事詳細画面に表示したくない、かつOGPは全共通の画像を使いたい&lt;/li&gt;
+&lt;li&gt;hugo-theme-terminalでは任意の画像をOGPだけに設定できない。（カバー画像をOGPとすることはできる）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;やったこと&#34;&gt;やったこと&lt;/h2&gt;
+&lt;p&gt;多少ハッキーな方法ではあるが以下の方法で実現した。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;各記事のFront Matterに&lt;code&gt;cover: &amp;quot;${OGP_URL}&amp;quot;&lt;/code&gt;指定(&lt;code&gt;archetypes&lt;/code&gt;にテンプレートとして書いておくと便利)&lt;/li&gt;
+&lt;li&gt;以下のCSSを追加&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;post-cover&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;display&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;none&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+    <item>
+      <title>ブログ用にGifでキャプチャを作る時にやっていること</title>
+      <link>https://blog.kyu08.com/pr-242/posts/create-gif/</link>
+      <pubDate>Fri, 09 Jun 2023 16:26:52 +0000</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-242/posts/create-gif/</guid>
+      <description>ブログ用によくGifをつくるので自分用の備忘録代わりに手順を記しておく。 追記(2023/11/29) 下記の方法だと生成後のgifに格子模様の</description>
+      <content>&lt;p&gt;ブログ用によくGifをつくるので自分用の備忘録代わりに手順を記しておく。&lt;/p&gt;
+&lt;h2 id=&#34;追記20231129&#34;&gt;追記(2023/11/29)&lt;/h2&gt;
+&lt;p&gt;下記の方法だと生成後のgifに格子模様のようなものが入ってしまうので以下の記事で紹介されているffmpegを使った方法を使うようにしたところ綺麗なgifが生成できるようになった。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://qiita.com/takasp/items/65d1d0d90073bcfc4873&#34; target=&#34;_blank&#34; &gt;Mac で GIF 画像を作る技術 - Qiita&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;動画内で使用している色を最適化するために、パレット画像を生成します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i input.mov -vf &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;palettegen&amp;#34;&lt;/span&gt; -y palette.png
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;GIF 画像を出力します。
+サンプルでは、-r オプションでフレームレートを 24 に設定しています。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i input.mov -i palette.png -r &lt;span style=&#34;color:#ae81ff&#34;&gt;24&lt;/span&gt; -y output.gif
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;追記ここまで&lt;/p&gt;
+&lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;macOS&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://getkap.co/&#34; target=&#34;_blank&#34; &gt;Kap&lt;/a&gt;
+がインストールされていること&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/keycastr/keycastr&#34; target=&#34;_blank&#34; &gt;Keycastr&lt;/a&gt;
+がインストールされていること&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;手順&#34;&gt;手順&lt;/h2&gt;
+&lt;h3 id=&#34;1-keycastrを起動&#34;&gt;1. Keycastrを起動&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;keycastr.gif&#34; alt=&#34;keycastr.gif&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-kapでいい感じに範囲を選んで録画開始ボタンを押す&#34;&gt;2. Kapでいい感じに範囲を選んで録画開始ボタンを押す&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;select-window.webp&#34; alt=&#34;select-window.webp&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3-いい感じのサイズで保存重要&#34;&gt;3. いい感じのサイズで保存(重要)&lt;/h3&gt;
+&lt;p&gt;(あとから圧縮しようとすると思いのほか大変なのでサイズを小さくしたい場合はいい感じのサイズにするのを忘れない)
+&lt;img src=&#34;select-size.webp&#34; alt=&#34;select-size.webp&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
+&lt;p&gt;(いざ書いてみると書くほどでもなかった)&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
