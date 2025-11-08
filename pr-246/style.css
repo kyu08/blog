@@ -179,6 +179,19 @@ blockquote::before {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.blogcard.loading .blogcard-thumbnail-placeholder {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
 .blogcard:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(255, 168, 106, 0.2);
