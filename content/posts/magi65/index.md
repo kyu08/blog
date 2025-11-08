@@ -1,19 +1,25 @@
 ---
-title: "IQUNIX Magi65を買った"
-tags: ["IQUNIX", "ガジェット", "キーボード", "diary"]
-keywords: ["IQUNIX", "ガジェット", "キーボード"]
-
-cover: "https://blog.kyu08.com/cover.png"
-description: ""
-date: 2025-04-06T18:50:34+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: IQUNIX Magi65を買った
+tags:
+  - IQUNIX
+  - ガジェット
+  - キーボード
+  - diary
+keywords:
+  - IQUNIX
+  - ガジェット
+  - キーボード
+description: ''
+date: 2025-04-06T09:50:34.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
 toc: false
+cover: cover.png
 ---
 
 ある日YouTube Shortsで流れてきて打鍵感と打鍵音がよさそうで気になっていた[IQUNIX Magi65](https://iqunix.com/products/magi65)を買ってみた。

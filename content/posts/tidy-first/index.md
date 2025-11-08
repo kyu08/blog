@@ -1,17 +1,18 @@
 ---
-title: "『Tidy First?』を読んだ"
-tags: ["読書ログ", "設計"]
-
-cover: "https://blog.kyu08.com/cover.png"
-description: ""
-date: 2025-10-04T17:21:10+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: 『Tidy First?』を読んだ
+tags:
+  - 読書ログ
+  - 設計
+description: ''
+date: 2025-10-04T08:21:10.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 『[Tidy First?](https://www.oreilly.co.jp/books/9784814400911/)』を読んだ。

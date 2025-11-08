@@ -1,18 +1,19 @@
 ---
-title: "go/src/cmdでLSPが動作するようにするメモ"
+title: go/src/cmdでLSPが動作するようにするメモ
 tags: []
-keywords: ["go", "neovim"]
-
-cover: "https://blog.kyu08.com/cover.png"
-description: ""
-date: 2023-09-12T00:12:17+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+keywords:
+  - go
+  - neovim
+description: ''
+date: 2023-09-11T15:12:17.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 gc(go compiler)のコード（具体的には[`go/src/cmd/compile`](https://github.com/golang/go/tree/master/src/cmd/compile)配下）を読むために必要な手順があったのでメモ代わりに書いておく。neovimでしか確認していないが他のエディタでもきっと同じような感じなはず。

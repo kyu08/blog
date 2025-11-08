@@ -1,18 +1,22 @@
 ---
-title: "クラムシェルでMacを使っているとき用のマイクとしてEarPodsを買った"
-tags: ["デスク環境", "ガジェット", "diary"]
-keywords: ["デスク環境", "ガジェット"]
-
-cover: "https://blog.kyu08.com/cover.png"
-description: ""
-date: 2024-03-31T00:00:38+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: クラムシェルでMacを使っているとき用のマイクとしてEarPodsを買った
+tags:
+  - デスク環境
+  - ガジェット
+  - diary
+keywords:
+  - デスク環境
+  - ガジェット
+description: ''
+date: 2024-03-30T15:00:38.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 ## 前提

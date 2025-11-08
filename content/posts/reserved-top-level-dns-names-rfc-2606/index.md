@@ -1,18 +1,19 @@
 ---
-title: "RFC 2606: Reserved Top Level DNS Namesを読んで知らなかったことを書く"
-tags: ["RFC"]
-keywords: ["RFC"]
-
-cover: "https://blog.kyu08.com/cover.png"
-description: ""
-date: 2024-12-16T00:00:00+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: 'RFC 2606: Reserved Top Level DNS Namesを読んで知らなかったことを書く'
+tags:
+  - RFC
+keywords:
+  - RFC
+description: ''
+date: 2024-12-15T15:00:00.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 本記事は[Unipos Advent Calendar 2024](https://qiita.com/advent-calendar/2024/unipos)の16日目の記事です。

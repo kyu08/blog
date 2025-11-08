@@ -1,18 +1,21 @@
 ---
-title: "tmux-fzfを使ってwindow切り替えをできるようにする手順"
-tags: ["tmux", "ターミナル"]
-keywords: ["tmux", "ターミナル"]
-
-cover: "https://blog.kyu08.com/cover.png"
-description: ""
-date: 2024-04-10T23:12:22+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: tmux-fzfを使ってwindow切り替えをできるようにする手順
+tags:
+  - tmux
+  - ターミナル
+keywords:
+  - tmux
+  - ターミナル
+description: ''
+date: 2024-04-10T14:12:22.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 ## これはなに

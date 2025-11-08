@@ -1,18 +1,19 @@
 ---
-title: "OSSに初めてPRを送ってマージされた話"
-tags: ["OSS"]
-keywords: ["OSS"]
-
-cover: "https://blog.kyu08.com/cover.png"
-description: ""
-date: 2023-08-11T01:32:27+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: OSSに初めてPRを送ってマージされた話
+tags:
+  - OSS
+keywords:
+  - OSS
+description: ''
+date: 2023-08-10T16:32:27.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 個人開発のプロジェクトで使えそうなGitHub Actionsを物色していたところちょうど自分でも修正できそうな箇所があったのでPRを送ってみたところ無事にマージしてもらうことができた。

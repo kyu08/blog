@@ -1,18 +1,19 @@
 ---
-title: "CS50.jpでCSに入門した"
-tags: ["CS"]
-keywords: ["CS"]
-
-cover: "https://blog.kyu08.com/cover.png"
-description: ""
-date: 2024-05-12T15:32:42+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: CS50.jpでCSに入門した
+tags:
+  - CS
+keywords:
+  - CS
+description: ''
+date: 2024-05-12T06:32:42.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 [CS50.jp](https://cs50.jp/)の気になっていたトピックを学んでみたので振り返っておく。

@@ -1,17 +1,20 @@
 ---
-title: "このブログをhugoで作り直した"
-cover: "https://blog.kyu08.com/cover.png"
-tags: ["hugo"]
-keywords: ["", ""]
-description: ""
-date: 2023-06-07T22:25:41+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: このブログをhugoで作り直した
+tags:
+  - hugo
+keywords:
+  - ''
+  - ''
+description: ''
+date: 2023-06-07T13:25:41.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 もともとこのブログはNext.js + Vercelの構成で作られていたが色々と辛くなってしまったのでお手軽にブログが作れそうなhugo + GitHub Pagesの構成に移行した。

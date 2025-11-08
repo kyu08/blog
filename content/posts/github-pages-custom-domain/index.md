@@ -1,18 +1,19 @@
 ---
-title: "GitHub Pagesでデプロイのたびにカスタムドメインの設定が消える問題の解決方法"
-tags: ["GitHub Pages"]
-keywords: ["GitHub Pages"]
-
-cover: "https://blog.kyu08.com/cover.png"
-description: ""
-date: 2023-06-10T23:14:42+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: GitHub Pagesでデプロイのたびにカスタムドメインの設定が消える問題の解決方法
+tags:
+  - GitHub Pages
+keywords:
+  - GitHub Pages
+description: ''
+date: 2023-06-10T14:14:42.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 ## 困っていたこと

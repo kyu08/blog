@@ -1,17 +1,26 @@
-+++
-title = "Tmux+NeovimでJetBrains IDEのScratchみたいな機能を実現している話"
-date = "2023-02-05T01:15:48+09:00"
-author = "kyu08"
-authorTwitter = "kyu08_" #do not include @
-cover = "https://blog.kyu08.com/cover.png"
-tags =["開発環境", "ターミナル", "zsh", "cli", "Neovim", "Tmux"]
-keywords =["", ""]
-description = ""
-showFullContent = false
-readingTime = true
-hideComments = false
-color = "" #color from the theme settings
-+++
+---
+title: Tmux+NeovimでJetBrains IDEのScratchみたいな機能を実現している話
+date: 2023-02-04T16:15:48.000Z
+author: kyu08
+authorTwitter: kyu08_
+tags:
+  - 開発環境
+  - ターミナル
+  - zsh
+  - cli
+  - Neovim
+  - Tmux
+keywords:
+  - ''
+  - ''
+description: ''
+showFullContent: false
+readingTime: true
+hideComments: false
+color: ''
+draft: false
+cover: cover.png
+---
 
 任意の構成のSandbox的な環境をTmuxのwindowとして用意するようにしたところターミナルから出ずにサクっと動作検証とかが行えてハッピーになったよ、という記事。ここではvanillaなGoのプロジェクトの例を紹介しますが、お好みの構成でSandbox環境を作ってみてください。
 

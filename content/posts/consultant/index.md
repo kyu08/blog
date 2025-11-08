@@ -1,17 +1,23 @@
-+++
-title = "『コンサル一年目が学ぶこと』を読んだ"
-date = "2021-12-26T01:15:48+09:00"
-author = "kyu08"
-authorTwitter = "kyu08_" #do not include @
-cover = "https://blog.kyu08.com/cover.png"
-tags =["読書ログ", "ソフトスキル", "問題解決"]
-keywords =["", ""]
-description = ""
-showFullContent = false
-readingTime = true
-hideComments = false
-color = "" #color from the theme settings
-+++
+---
+title: 『コンサル一年目が学ぶこと』を読んだ
+date: 2021-12-25T16:15:48.000Z
+author: kyu08
+authorTwitter: kyu08_
+tags:
+  - 読書ログ
+  - ソフトスキル
+  - 問題解決
+keywords:
+  - ''
+  - ''
+description: ''
+showFullContent: false
+readingTime: true
+hideComments: false
+color: ''
+draft: false
+cover: cover.png
+---
 
 [コンサル一年目が学ぶこと](https://www.amazon.co.jp/%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%AB%E4%B8%80%E5%B9%B4%E7%9B%AE%E3%81%8C%E5%AD%A6%E3%81%B6%E3%81%93%E3%81%A8-%E5%A4%A7%E7%9F%B3%E5%93%B2%E4%B9%8B-ebook/dp/B00MA671WW/ref=sr_1_5?adgrpid=89884031168&gclid=CjwKCAiAhreNBhAYEiwAFGGKPLfeLxQ_KIeJv22itv63KSRBjnAb3p0hH0Q0JvgN6FzTeD2J6dcsQBoCs3QQAvD_BwE&hvadid=553974437471&hvdev=c&hvlocphy=1009307&hvnetw=g&hvqmt=e&hvrand=17984675329684059400&hvtargid=kwd-416077613251&hydadcr=27493_14478962&jp-ad-ap=0&keywords=%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%AB+%E4%B8%80+%E5%B9%B4+%E7%9B%AE+%E3%81%8C+%E5%AD%A6%E3%81%B6+%E3%81%93%E3%81%A8&qid=1638793971&sr=8-5) を読んだ。
 

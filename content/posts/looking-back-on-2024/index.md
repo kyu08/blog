@@ -1,17 +1,17 @@
 ---
-title: "2024年を振り返る"
-tags: ["振り返り"]
-
-cover: "https://blog.kyu08.com/cover.png"
-description: ""
-date: 2024-12-29T11:03:53+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: 2024年を振り返る
+tags:
+  - 振り返り
+description: ''
+date: 2024-12-29T02:03:53.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 年の瀬なので今年を振り返る。

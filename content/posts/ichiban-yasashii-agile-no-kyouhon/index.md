@@ -1,18 +1,21 @@
 ---
-title: "『いちばんやさしいアジャイル開発の教本』 を読んだ"
-tags: ["読書ログ", "アジャイル"]
-keywords: ["読書ログ", "アジャイル"]
-
-cover: "https://blog.kyu08.com/cover.png"
-description: ""
-date: 2024-05-26T00:48:56+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: 『いちばんやさしいアジャイル開発の教本』 を読んだ
+tags:
+  - 読書ログ
+  - アジャイル
+keywords:
+  - 読書ログ
+  - アジャイル
+description: ''
+date: 2024-05-25T15:48:56.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 2024/4からチーム異動してスクラムを実践しているチームに移ったのでアジャイル・スクラムのインプットをしたいと思い、『いちばんやさしいアジャイル開発の教本』を読んだ。

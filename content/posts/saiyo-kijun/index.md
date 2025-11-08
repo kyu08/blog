@@ -1,18 +1,19 @@
 ---
-title: "『採用基準 地頭より論理的思考力より大切なもの』 を読んだ"
-tags: ["読書ログ"]
-keywords: ["読書ログ"]
-
-cover: "https://blog.kyu08.com/cover.png"
-description: ""
-date: 2023-10-22T20:00:41+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: 『採用基準 地頭より論理的思考力より大切なもの』 を読んだ
+tags:
+  - 読書ログ
+keywords:
+  - 読書ログ
+description: ''
+date: 2023-10-22T11:00:41.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 ## 概要

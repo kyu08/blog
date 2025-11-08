@@ -1,18 +1,21 @@
 ---
-title: "GitHub Sponsorsを通してNeovimに寄付をした"
-tags: ["Neovim", "OSS"]
-keywords: ["Neovim", "OSS"]
-
-cover: "https://blog.kyu08.com/cover.png"
-description: ""
-date: 2023-08-11T01:35:48+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: GitHub Sponsorsを通してNeovimに寄付をした
+tags:
+  - Neovim
+  - OSS
+keywords:
+  - Neovim
+  - OSS
+description: ''
+date: 2023-08-10T16:35:48.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 Neovimに対してGitHub Sponsorsを通してOne-time[^1]の寄付をしたという話。

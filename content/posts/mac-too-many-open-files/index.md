@@ -1,18 +1,21 @@
 ---
-title: "`Process failed to start: too many open files: \"/opt/homebrew/bin/git\"`というエラーが出てNeovimのプラグインが動作しなくなる問題の回避策"
-tags: ["neovim"]
-keywords: ["neovim"]
-
-cover: "https://blog.kyu08.com/cover.png"
-description: ""
-date: 2024-05-13T13:11:01+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: >-
+  `Process failed to start: too many open files:
+  "/opt/homebrew/bin/git"`というエラーが出てNeovimのプラグインが動作しなくなる問題の回避策
+tags:
+  - neovim
+keywords:
+  - neovim
+description: ''
+date: 2024-05-13T04:11:01.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 ## 問題

@@ -1,18 +1,20 @@
 ---
-title: "GitHub Issuesをサイトのコメント欄として活用できるutterancesを導入した"
-tags: ["blog"]
-keywords: ["blog", "utterances"]
-
-cover: "https://blog.kyu08.com/cover.png"
-description: ""
-date: 2024-03-17T22:06:40+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: GitHub Issuesをサイトのコメント欄として活用できるutterancesを導入した
+tags:
+  - blog
+keywords:
+  - blog
+  - utterances
+description: ''
+date: 2024-03-17T13:06:40.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 このブログにコメント欄を設置した。

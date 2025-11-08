@@ -1,18 +1,24 @@
 ---
-title: "NuPhy Air60を買った"
-tags: ["NuPhy", "ガジェット", "キーボード", "diary"]
-keywords: ["NuPhy", "ガジェット", "キーボード"]
-
-cover: "https://blog.kyu08.com/cover.png"
-description: ""
-date: 2023-06-11T23:27:54+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: NuPhy Air60を買った
+tags:
+  - NuPhy
+  - ガジェット
+  - キーボード
+  - diary
+keywords:
+  - NuPhy
+  - ガジェット
+  - キーボード
+description: ''
+date: 2023-06-11T14:27:54.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 NuPhy Air60を買ったので簡単にレビューする

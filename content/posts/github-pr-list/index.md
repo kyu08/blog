@@ -1,18 +1,19 @@
 ---
-title: "GitHubで自分がOSSに送ったPR一覧を表示するやつ"
-tags: ["GitHub"]
-keywords: ["GitHub"]
-
-cover: "https://blog.kyu08.com/cover.png"
-description: ""
-date: 2023-10-22T19:26:39+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: GitHubで自分がOSSに送ったPR一覧を表示するやつ
+tags:
+  - GitHub
+keywords:
+  - GitHub
+description: ''
+date: 2023-10-22T10:26:39.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ってマージされたPR一覧」を表示する方法)

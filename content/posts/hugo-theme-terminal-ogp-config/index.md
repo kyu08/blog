@@ -1,18 +1,21 @@
 ---
-title: "hugo-theme-terminal でOGPに任意の画像を設定する方法"
-tags: ["hugo", "blog"]
-keywords: ["hugo", "blog"]
-
-cover: "https://blog.kyu08.com/cover.png"
-description: ""
-date: 2023-06-10T02:02:33+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: hugo-theme-terminal でOGPに任意の画像を設定する方法
+tags:
+  - hugo
+  - blog
+keywords:
+  - hugo
+  - blog
+description: ''
+date: 2023-06-09T17:02:33.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 [hugo-theme-terminal](https://github.com/panr/hugo-theme-terminal) でOGPの設定に少し詰まったのでやったことを書いておく。

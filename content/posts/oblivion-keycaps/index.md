@@ -1,18 +1,25 @@
 ---
-title: "傾斜付きロープロファイルキーキャップNuPhy Oblivionを買った"
-tags: ["NuPhy", "ガジェット", "キーキャップ", "diary"]
-keywords: ["NuPhy", "ガジェット", "キーキャップ", "diary"]
-
-cover: "https://blog.kyu08.com/cover.png"
-description: ""
-date: 2025-04-30T22:49:03+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: 傾斜付きロープロファイルキーキャップNuPhy Oblivionを買った
+tags:
+  - NuPhy
+  - ガジェット
+  - キーキャップ
+  - diary
+keywords:
+  - NuPhy
+  - ガジェット
+  - キーキャップ
+  - diary
+description: ''
+date: 2025-04-30T13:49:03.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 ![lets-unbox](lets-unbox.webp)

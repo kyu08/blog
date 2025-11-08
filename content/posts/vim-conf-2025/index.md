@@ -1,17 +1,19 @@
 ---
-title: "VimConf 2025 Smallに参加した"
-tags: ["勉強会", "vim", "neovim"]
-
-cover: "https://blog.kyu08.com/cover.png"
-description: ""
-date: 2025-11-02T10:07:08+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: VimConf 2025 Smallに参加した
+tags:
+  - 勉強会
+  - vim
+  - neovim
+description: ''
+date: 2025-11-02T01:07:08.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 2025年11月2日（日）にアキバプラザ・アキバホールで開催された[VimConf 2025 Small](https://vimconf.org/2025/ja/)に参加した。

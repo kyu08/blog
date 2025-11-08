@@ -1,18 +1,20 @@
 ---
-title: "ブログ用にGifでキャプチャを作る時にやっていること"
-tags: ["blog"]
-keywords: ["blog", "gif"]
-
-cover: "https://blog.kyu08.com/cover.webp"
-description: ""
-date: 2023-06-10T01:26:52+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: ブログ用にGifでキャプチャを作る時にやっていること
+tags:
+  - blog
+keywords:
+  - blog
+  - gif
+description: ''
+date: 2023-06-09T16:26:52.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: "" #color from the theme settings
+color: ''
+cover: cover.png
 ---
 
 ブログ用によくGifをつくるので自分用の備忘録代わりに手順を記しておく。

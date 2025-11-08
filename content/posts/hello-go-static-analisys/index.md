@@ -1,18 +1,21 @@
 ---
-title: "Goの静的解析に入門した"
-tags: ["Go", "静的解析"]
-keywords: ["Go", "静的解析"]
-
-cover: "https://blog.kyu08.com/cover.png"
-description: ""
-date: 2023-07-17T14:21:29+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: Goの静的解析に入門した
+tags:
+  - Go
+  - 静的解析
+keywords:
+  - Go
+  - 静的解析
+description: ''
+date: 2023-07-17T05:21:29.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 [tenntenn Conference 2023 にスポンサーし、Goの静的解析を完全に理解した話](https://zenn.dev/team_soda/articles/8e61219eab0fc8) を読んでから静的解析が気になっていたのでこれをやってみた。
