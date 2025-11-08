@@ -3,7 +3,7 @@
  * Satoriを使ってReact風のJSXでデザインを記述
  */
 
-export function generateOgpTemplate({ title, date, tags, author = 'kyu08' }) {
+export function generateOgpTemplate({ title, date, tags, author = 'kyu08', showDate = true, showTags = true }) {
   // タイトルの長さに応じてフォントサイズを調整
   const getTitleFontSize = (titleLength) => {
     if (titleLength > 50) return '48px';
@@ -110,8 +110,8 @@ export function generateOgpTemplate({ title, date, tags, author = 'kyu08' }) {
                         children: `@${author}`,
                       },
                     },
-                    // Date
-                    {
+                    // Date (conditional)
+                    ...(showDate && date ? [{
                       type: 'div',
                       props: {
                         style: {
@@ -120,9 +120,9 @@ export function generateOgpTemplate({ title, date, tags, author = 'kyu08' }) {
                         },
                         children: date,
                       },
-                    },
-                    // Tags
-                    ...tags.map((tag) => ({
+                    }] : []),
+                    // Tags (conditional)
+                    ...(showTags ? tags.map((tag) => ({
                       type: 'div',
                       props: {
                         style: {
@@ -136,7 +136,7 @@ export function generateOgpTemplate({ title, date, tags, author = 'kyu08' }) {
                         },
                         children: `#${tag}`,
                       },
-                    })),
+                    })) : []),
                   ],
                 },
               },

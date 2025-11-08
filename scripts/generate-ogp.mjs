@@ -158,6 +158,40 @@ async function generateOgpImage(metadata, fonts) {
 }
 
 /**
+ * 静的ページ用のOGP画像を生成
+ */
+async function generateStaticOgpImage({ title, outputPath, author = 'kyu08', showDate = false, showTags = false }, fonts) {
+  try {
+    // Satoriでレンダリング
+    const svg = await satori(
+      generateOgpTemplate({
+        title,
+        date: '',
+        tags: [],
+        author,
+        showDate,
+        showTags,
+      }),
+      {
+        width: 1200,
+        height: 630,
+        fonts,
+      }
+    );
+
+    // SVGをPNGに変換
+    const png = svgToPng(svg);
+
+    // 指定されたパスに保存
+    await fs.writeFile(outputPath, png);
+
+    console.log(`✅ Generated: ${path.relative(__dirname, outputPath)}`);
+  } catch (error) {
+    console.error(`❌ Failed to generate OGP for ${outputPath}:`, error);
+  }
+}
+
+/**
  * メイン処理
  */
 async function main() {
@@ -178,6 +212,27 @@ async function main() {
     const metadata = extractMetadata(filePath, content);
     await generateOgpImage(metadata, fonts);
   }
+
+  // 静的ページのOGP画像を生成
+  console.log('\n📄 Generating static page OGP images...\n');
+
+  // aboutページ用
+  await generateStaticOgpImage({
+    title: 'blog.kyu08.com',
+    outputPath: path.join(__dirname, '../content/about/cover.png'),
+    author: 'kyu08',
+    showDate: false,
+    showTags: false,
+  }, fonts);
+
+  // トップページ用
+  await generateStaticOgpImage({
+    title: 'blog.kyu08.com',
+    outputPath: path.join(__dirname, '../static/cover.png'),
+    author: 'kyu08',
+    showDate: false,
+    showTags: false,
+  }, fonts);
 
   console.log('\n✨ OGP image generation completed!');
 }
