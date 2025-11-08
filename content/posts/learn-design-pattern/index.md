@@ -1,16 +1,20 @@
 ---
-title: "デザインパターンをひととおり眺めた感想"
-date: 2023-02-02T01:15:48+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
-tags: ["設計"]
-keywords: ["", ""]
-description: ""
+title: デザインパターンをひととおり眺めた感想
+date: 2023-02-01T16:15:48.000Z
+author: kyu08
+authorTwitter: kyu08_
+tags:
+  - 設計
+keywords:
+  - ''
+  - ''
+description: ''
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
 draft: false
+cover: cover.png
 ---
 
 ずっと気になってはいたが2つ~3つくらいしか知らなかったデザインパターンをやっと勉強する気になったのでこのサイトを一通り眺めてみた。

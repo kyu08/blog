@@ -1,17 +1,21 @@
 ---
-title: "ThePrimeagen/harpoon を使ってみた"
-tags: ["neovim", "plugin"]
-keywords: ["neovim", "plugin"]
-
-description: ""
-date: 2023-11-18T00:20:13+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: ThePrimeagen/harpoon を使ってみた
+tags:
+  - neovim
+  - plugin
+keywords:
+  - neovim
+  - plugin
+description: ''
+date: 2023-11-17T15:20:13.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 [ThePrimeagen/harpoon](https://github.com/ThePrimeagen/harpoon)というNeovimプラグインを使ってみたので気になっている人の参考になればと思い感想を書いてみる。

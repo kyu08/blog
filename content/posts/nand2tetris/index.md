@@ -1,16 +1,18 @@
 ---
-title: "『コンピュータシステムの理論と実装 第2版』を読んだ"
-tags: ["読書ログ", "CS"]
-
-description: ""
-date: 2025-04-30T00:00:00+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: 『コンピュータシステムの理論と実装 第2版』を読んだ
+tags:
+  - 読書ログ
+  - CS
+description: ''
+date: 2025-04-29T15:00:00.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は[## 学び、得た経験](#学び得た経験)までジャンプしてください。

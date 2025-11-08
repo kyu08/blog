@@ -1,17 +1,19 @@
 ---
-title: "『読み手につたわる文章 - テクニカルライティング』を読んだ"
-tags: ["読書ログ"]
-keywords: ["読書ログ"]
-
-description: ""
-date: 2024-06-06T00:21:05+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: 『読み手につたわる文章 - テクニカルライティング』を読んだ
+tags:
+  - 読書ログ
+keywords:
+  - 読書ログ
+description: ''
+date: 2024-06-05T15:21:05.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 技術書典で購入した『読み手につたわる文章 - テクニカルライティング』を読んだので学びになったトピックについて書く。

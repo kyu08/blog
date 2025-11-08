@@ -1,15 +1,20 @@
 ---
-title: "Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった"
-date: "2023-03-31T01:15:48+09:00"
-author: "kyu08"
-authorTwitter: "kyu08_" #do not include @
-tags: ["rust", "cli"]
-keywords: ["", ""]
-description: ""
+title: Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった
+date: '2023-03-31T01:15:48+09:00'
+author: kyu08
+authorTwitter: kyu08_
+tags:
+  - rust
+  - cli
+keywords:
+  - ''
+  - ''
+description: ''
 showFullContent: false
 readingTime: true
 hideComments: false
-color: "" #color from the theme settings
+color: ''
+cover: cover.png
 ---
 
 > # (2024/12/14追記) 内容を更新した紹介記事をZennに投稿しました。

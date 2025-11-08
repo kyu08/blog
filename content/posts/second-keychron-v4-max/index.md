@@ -1,17 +1,20 @@
 ---
-title: "追いKeychron V4 Max"
-tags: ["Keychron", "ガジェット", "diary"]
-
-description: ""
-date: 2025-08-28T23:24:39+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: 追いKeychron V4 Max
+tags:
+  - Keychron
+  - ガジェット
+  - diary
+description: ''
+date: 2025-08-28T14:24:39.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
 toc: false
+cover: cover.png
 ---
 
 ![box.webp](box.webp)

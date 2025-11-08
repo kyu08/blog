@@ -1,16 +1,23 @@
 ---
-title: "開発の効率化のためにやっていることターミナル編"
-date: 2022-12-15T01:15:48+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
-tags: ["開発環境", "ターミナル", "zsh", "cli"]
-keywords: ["", ""]
-description: ""
+title: 開発の効率化のためにやっていることターミナル編
+date: 2022-12-14T16:15:48.000Z
+author: kyu08
+authorTwitter: kyu08_
+tags:
+  - 開発環境
+  - ターミナル
+  - zsh
+  - cli
+keywords:
+  - ''
+  - ''
+description: ''
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
 draft: false
+cover: cover.png
 ---
 
 

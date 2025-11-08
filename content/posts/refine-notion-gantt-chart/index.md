@@ -1,17 +1,21 @@
 ---
-title: "Notionのダークモードのガントチャートが見づらいのをChrome拡張で修正する方法"
-tags: ["Notion", "Chrome Extension"]
-keywords: ["Notion", "Chrome Extension"]
-
-description: ""
-date: 2024-11-08T23:34:37+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: Notionのダークモードのガントチャートが見づらいのをChrome拡張で修正する方法
+tags:
+  - Notion
+  - Chrome Extension
+keywords:
+  - Notion
+  - Chrome Extension
+description: ''
+date: 2024-11-08T14:34:37.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 ## できること

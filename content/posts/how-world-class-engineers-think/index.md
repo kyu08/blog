@@ -1,17 +1,19 @@
 ---
-title: "『世界一流エンジニアの思考法』 を読んだ"
-tags: ["読書ログ"]
-keywords: ["読書ログ"]
-
-description: ""
-date: 2023-11-19T10:41:50+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: 『世界一流エンジニアの思考法』 を読んだ
+tags:
+  - 読書ログ
+keywords:
+  - 読書ログ
+description: ''
+date: 2023-11-19T01:41:50.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 Microsoftのエンジニアとしてアメリカで働いている牛尾剛さんが優秀な同僚から学んだ思考法について書いた著書『世界一流エンジニアの思考法』を読んだので学びになったトピックについて簡単に書こうと思う。

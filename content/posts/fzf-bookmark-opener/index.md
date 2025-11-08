@@ -1,16 +1,21 @@
 ---
-title: "yamlに定義したbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った"
-date: 2023-02-23T01:15:48+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
-tags: ["Go", "cli"]
-keywords: ["", ""]
-description: ""
+title: yamlに定義したbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った
+date: 2023-02-22T16:15:48.000Z
+author: kyu08
+authorTwitter: kyu08_
+tags:
+  - Go
+  - cli
+keywords:
+  - ''
+  - ''
+description: ''
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
 draft: false
+cover: cover.png
 ---
 
 ## つくったもの

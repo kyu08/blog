@@ -1,17 +1,19 @@
 ---
-title: "『ベタープログラマ』 を読んだ"
-tags: ["読書ログ"]
-keywords: ["読書ログ"]
-
-description: ""
-date: 2024-03-07T00:27:45+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: 『ベタープログラマ』 を読んだ
+tags:
+  - 読書ログ
+keywords:
+  - 読書ログ
+description: ''
+date: 2024-03-06T15:27:45.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 『ベタープログラマ』を読んだので自分的に刺さった点をまとめる。

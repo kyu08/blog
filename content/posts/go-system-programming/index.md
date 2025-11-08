@@ -1,17 +1,22 @@
 ---
-title: "『Goならわかるシステムプログラミング 第2版』を読んだ"
-tags: ["Go", "CS", "読書ログ"]
-keywords: ["Go", "CS"]
-
-description: ""
-date: 2024-11-03T21:42:30+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: 『Goならわかるシステムプログラミング 第2版』を読んだ
+tags:
+  - Go
+  - CS
+  - 読書ログ
+keywords:
+  - Go
+  - CS
+description: ''
+date: 2024-11-03T12:42:30.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11/4でコミットした日数としてはおおよそ24日ほどだった。)

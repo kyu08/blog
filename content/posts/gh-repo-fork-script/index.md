@@ -1,17 +1,23 @@
 ---
-title: "ブラウザからforkすると遅いのでCLIからfork & cloneするスクリプトを書いた"
-tags: ["GitHub", "cli", "zsh"]
-keywords: ["GitHub", "cli", "zsh"]
-
-description: ""
-date: 2024-08-18T15:52:01+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: ブラウザからforkすると遅いのでCLIからfork & cloneするスクリプトを書いた
+tags:
+  - GitHub
+  - cli
+  - zsh
+keywords:
+  - GitHub
+  - cli
+  - zsh
+description: ''
+date: 2024-08-18T06:52:01.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 ## モチベーション

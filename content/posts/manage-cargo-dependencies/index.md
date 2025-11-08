@@ -1,16 +1,19 @@
 ---
-title: "cargoプロジェクトで依存関係を継続的に管理する"
-tags: ["cargo", "rust", "OSS"]
-
-description: ""
-date: 2025-05-21T00:00:00+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: cargoプロジェクトで依存関係を継続的に管理する
+tags:
+  - cargo
+  - rust
+  - OSS
+description: ''
+date: 2025-05-20T15:00:00.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 OSSに依存するプロジェクトでは依存しているライブラリのライセンス表記が必要になることがある。（体感的にはほとんどのライブラリはライセンス表記を求めているように思う）

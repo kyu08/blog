@@ -1,17 +1,23 @@
 ---
-title: "GitHub Sponsorsの寄付先にratatuiを追加した"
-tags: ["OSS", "rust", "tui"]
-keywords: ["OSS", "rust", "tui"]
-
-description: ""
-date: 2024-09-24T00:02:46+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: GitHub Sponsorsの寄付先にratatuiを追加した
+tags:
+  - OSS
+  - rust
+  - tui
+keywords:
+  - OSS
+  - rust
+  - tui
+description: ''
+date: 2024-09-23T15:02:46.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 [OSSへの寄付の月予算を$10にした - laiso](https://laiso.hatenablog.com/entry/2022/02/25/gihutown)

@@ -1,16 +1,20 @@
 ---
-title: "Elmで固定長配列が扱えるライブラリelm-static-arrayを触ってみた"
-date: 2021-12-17T01:15:48+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
-tags: ["Elm"]
-keywords: ["", ""]
-description: ""
+title: Elmで固定長配列が扱えるライブラリelm-static-arrayを触ってみた
+date: 2021-12-16T16:15:48.000Z
+author: kyu08
+authorTwitter: kyu08_
+tags:
+  - Elm
+keywords:
+  - ''
+  - ''
+description: ''
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
 draft: false
+cover: cover.png
 ---
 
 Elmで固定長配列を扱うためのライブラリelm-static-arrayを触ってみたので感じたことを書いていきます。

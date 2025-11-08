@@ -1,16 +1,19 @@
 ---
-title: "Keychron V4 Max を買った"
-tags: ["Keychron", "ガジェット", "diary"]
-
-description: ""
-date: 2025-06-19T23:38:21+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: Keychron V4 Max を買った
+tags:
+  - Keychron
+  - ガジェット
+  - diary
+description: ''
+date: 2025-06-19T14:38:21.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 持ち運び用に軽めの60%メカニカルキーボードが欲しくなり、いくつか検討した結果、[Keychron V4 Max(Barebone)](https://www.keychron.com/products/keychron-v4-max-qmk-via-wireless-custom-mechanical-keyboard?variant=41285926682713)を買った。

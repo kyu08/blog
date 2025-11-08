@@ -1,17 +1,19 @@
 ---
-title: "ソフトウェアエンジニア目線で使ってみて便利だったChrome拡張を紹介する"
-tags: ["Chrome Extension"]
-keywords: ["Chrome Extension"]
-
-description: ""
-date: 2024-12-13T00:00:00+09:00
-author: "kyu08"
-authorTwitter: "kyu08_"
+title: ソフトウェアエンジニア目線で使ってみて便利だったChrome拡張を紹介する
+tags:
+  - Chrome Extension
+keywords:
+  - Chrome Extension
+description: ''
+date: 2024-12-12T15:00:00.000Z
+author: kyu08
+authorTwitter: kyu08_
 draft: false
 showFullContent: false
 readingTime: true
 hideComments: false
-color: ""
+color: ''
+cover: cover.png
 ---
 
 本記事は[Unipos Advent Calendar 2024](https://qiita.com/advent-calendar/2024/unipos)の13日目の記事です。
