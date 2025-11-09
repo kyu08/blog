@@ -14,9 +14,8 @@
       <pubDate>Sat, 04 Oct 2025 08:21:10 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-246/posts/tidy-first/</guid>
-      <description>『Tidy First? 』を読んだ。 勉強になったところをまとめる。 「整頓」という概念 整頓はリファクタリングのサブセットだ。整頓は可愛くてふわふわした小さ</description>
-      <content>&lt;p&gt;『&lt;a href=&#34;https://www.oreilly.co.jp/books/9784814400911/&#34; target=&#34;_blank&#34; &gt;Tidy First?&lt;/a&gt;
-』を読んだ。&lt;/p&gt;
+      <description>『Tidy First?』を読んだ。 勉強になったところをまとめる。 「整頓」という概念 整頓はリファクタリングのサブセットだ。整頓は可愛くてふわふ</description>
+      <content>&lt;p&gt;『&lt;a href=&#34;https://www.oreilly.co.jp/books/9784814400911/&#34; target=&#34;_blank&#34; &gt;Tidy First?&lt;/a&gt;』を読んだ。&lt;/p&gt;
 &lt;p&gt;勉強になったところをまとめる。&lt;/p&gt;
 &lt;h2 id=&#34;整頓という概念&#34;&gt;「整頓」という概念&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -186,9 +185,19 @@
       <pubDate>Wed, 01 Feb 2023 16:15:48 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-246/posts/learn-design-pattern/</guid>
-      <description>ずっと気になってはいたが2つ~3つくらいしか知らなかったデザインパターンをやっと勉強する気になったのでこのサイトを一通り眺めてみた。 https://refactoring.guru/ja/design-patterns こちら</description>
+      <description>ずっと気になってはいたが2つ~3つくらいしか知らなかったデザインパターンをやっと勉強する気になったのでこのサイトを一通り眺めてみた。 https://refactoring.guru/ja/design-patternshttps://refactoring.guru/ja/design-patterns こちら</description>
       <content>&lt;p&gt;ずっと気になってはいたが2つ~3つくらいしか知らなかったデザインパターンをやっと勉強する気になったのでこのサイトを一通り眺めてみた。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://refactoring.guru/ja/design-patterns&#34; target=&#34;_blank&#34; &gt;https://refactoring.guru/ja/design-patterns&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://refactoring.guru/ja/design-patterns&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://refactoring.guru/ja/design-patterns&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://refactoring.guru/ja/design-patterns&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://refactoring.guru/ja/design-patterns&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;こちらのサイトは平易な文章とわかりやすい例で説明がされていて、各言語でのサンプルコードも載せてくれていたのでかなりサクサクと理解できてとてもよかった。(各パターンをC#, C++, Go, Java, php, Python, Ruby, Rust, Swift, TypeScriptで実装した例が紹介されていた)(すごい)&lt;/p&gt;
 &lt;h2 id=&#34;自分のデザインパターンとの向き合い方について&#34;&gt;自分のデザインパターンとの向き合い方について&lt;/h2&gt;
@@ -208,9 +217,7 @@
 &lt;/ul&gt;
 &lt;p&gt;いろんなところで言われていることだが、やはり責務の分離や単一責任の法則を意識することで変更しやすいコードにしていくことがよりよい設計に繋がることを再確認できた。&lt;/p&gt;
 &lt;p&gt;いいコードを書けるようになるにはこれらのことを意識しながら実際にコードを書いて実践していくことが重要だと思うのでたくさん試行錯誤していい感じのコード書き力を身につけていきたい。(とても経験豊富な先輩エンジニアも結局自分でサービスを運用して設計の失敗の痛みを感じるのが一番成長できる、というようなことを言っていた)&lt;/p&gt;
-&lt;p&gt;設計関連だと &lt;a href=&#34;https://www.amazon.co.jp/dp/4297127830&#34; target=&#34;_blank&#34; &gt;良いコード/悪いコードで学ぶ設計入門 ―保守しやすい 成長し続けるコードの書き方&lt;/a&gt;
- とか &lt;a href=&#34;https://www.amazon.co.jp/Clean-Architecture-%E9%81%94%E4%BA%BA%E3%81%AB%E5%AD%A6%E3%81%B6%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%AE%E6%A7%8B%E9%80%A0%E3%81%A8%E8%A8%AD%E8%A8%88-Robert-C-Martin/dp/4048930656&#34; target=&#34;_blank&#34; &gt;Clean Architecture&lt;/a&gt;
- とかも気になってるので読みたい。&lt;/p&gt;
+&lt;p&gt;設計関連だと &lt;a href=&#34;https://www.amazon.co.jp/dp/4297127830&#34; target=&#34;_blank&#34; &gt;良いコード/悪いコードで学ぶ設計入門 ―保守しやすい 成長し続けるコードの書き方&lt;/a&gt; とか &lt;a href=&#34;https://www.amazon.co.jp/Clean-Architecture-%E9%81%94%E4%BA%BA%E3%81%AB%E5%AD%A6%E3%81%B6%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%AE%E6%A7%8B%E9%80%A0%E3%81%A8%E8%A8%AD%E8%A8%88-Robert-C-Martin/dp/4048930656&#34; target=&#34;_blank&#34; &gt;Clean Architecture&lt;/a&gt; とかも気になってるので読みたい。&lt;/p&gt;
 </content>
     </item>
     

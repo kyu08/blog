@@ -6,7 +6,7 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は## 学び、得た経験 までジャンプして" />
+<meta name="description" content="『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は## 学び、得た経験までジャンプして" />
 <meta name="keywords" content="" />
 
   <meta name="robots" content="noodp" />
@@ -92,7 +92,7 @@ if (!doNotTrack) {
 <meta property="og:locale" content="ja" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="『コンピュータシステムの理論と実装 第2版』を読んだ">
-<meta property="og:description" content="『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は## 学び、得た経験 までジャンプして" />
+<meta property="og:description" content="『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は## 学び、得た経験までジャンプして" />
 <meta property="og:url" content="https://blog.kyu08.com/pr-246/posts/nand2tetris/" />
 <meta property="og:site_name" content="blog.kyu08.com" />
 
@@ -298,12 +298,21 @@ if (!doNotTrack) {
   
 
   <div class="post-content"><div>
-        <p>『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は<a href="#%e5%ad%a6%e3%81%b3%e5%be%97%e3%81%9f%e7%b5%8c%e9%a8%93" >## 学び、得た経験</a>
-までジャンプしてください。</p>
+        <p>『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は<a href="#%e5%ad%a6%e3%81%b3%e5%be%97%e3%81%9f%e7%b5%8c%e9%a8%93" >## 学び、得た経験</a>までジャンプしてください。</p>
 <h2 id="本書の構成">本書の構成<a href="#本書の構成" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>本書はnand2tetrisという通称の通り、NANDゲートからスタートして、CPUやコンパイラやOSなどを実装し、最終的にはそのプラットフォーム上でテトリス(のようなアプリケーション)<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>が動くところまで実装するという内容のコースになっている。</p>
 <p><img src="roadmap.webp" alt="roadmap">
-<a href="https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view" target="_blank" >https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view</a>
+<div class="blogcard" data-url="https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view</div><div class="blogcard-url">https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view</div>
+    </div>
+  </a>
+</div>
  P3より引用</p>
 <p>上図のとおりだが、大まかな流れとしては以下。</p>
 <ol>
@@ -418,7 +427,17 @@ if (!doNotTrack) {
 <h2 id="第3章-メモリ">第3章 メモリ<a href="#第3章-メモリ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>この章では、DFF(Data Flip-Flop)を用いて1-bit registerを作成し、それを組み合わせて16-bit registerを作成し、さらにそれを組み合わせてRAMを作成した。</p>
 <p><img src="from-dff-to-ram.webp" alt="from-dff-to-ram.webp">
-<a href="https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view" target="_blank" >https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view</a>
+<div class="blogcard" data-url="https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view</div><div class="blogcard-url">https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view</div>
+    </div>
+  </a>
+</div>
  P47より引用</p>
 <p>読み書き可能なメモリを作成したことで、コンピュータを作っている感が強まってきた。</p>
 <p>作成した回路は具体的には以下。</p>
@@ -443,7 +462,17 @@ if (!doNotTrack) {
 </ul>
 <p>DFFは<code>out(t+1) = in(t)</code>で表される出力を持つ。DFFを用いることで過去の状態を論理回路上で表現できる。</p>
 <p><img src="dff.webp" alt="dff.webp">
-<a href="https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view" target="_blank" >https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view</a>
+<div class="blogcard" data-url="https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view</div><div class="blogcard-url">https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view</div>
+    </div>
+  </a>
+</div>
  P41より引用</p>
 <p>次のようにマルチプレクサとDFFを組み合わせることで1-bit registerを作成できる。</p>
 <pre tabindex="0"><code class="language-hdl" data-lang="hdl">CHIP Bit {
@@ -456,7 +485,17 @@ if (!doNotTrack) {
 }
 </code></pre><p>1-bit registerは時刻<code>t</code>において<code>load</code>ビットがアサートされると<code>out(t+1)</code>が<code>in(t)</code>の値になり、アサートされていない場合は<code>out(t+1)</code>は<code>out(t)</code>の値になる。換言するとレジスタを利用することで過去の状態を保持できる。</p>
 <p><img src="1-bit-register.webp" alt="1-bit-register.webp">
-<a href="https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view" target="_blank" >https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view</a>
+<div class="blogcard" data-url="https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view</div><div class="blogcard-url">https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view</div>
+    </div>
+  </a>
+</div>
  P25より引用</p>
 <h2 id="第4章-機械語">第4章 機械語<a href="#第4章-機械語" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>第4章では以下のプログラムを機械語で書いた。</p>
@@ -494,7 +533,17 @@ if (!doNotTrack) {
 <h3 id="hackコンピュータのアーキテクチャ">Hackコンピュータのアーキテクチャ<a href="#hackコンピュータのアーキテクチャ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>Hackコンピュータは以下のようなアーキテクチャを持つ。</p>
 <p><img src="hack-computer-architecture.webp" alt="hack-computer-architecture.webp">
-<a href="https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view" target="_blank" >https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view</a>
+<div class="blogcard" data-url="https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view</div><div class="blogcard-url">https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view</div>
+    </div>
+  </a>
+</div>
  P23より引用</p>
 <h3 id="アセンブラの役割">アセンブラの役割<a href="#アセンブラの役割" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>機械語はバイナリ形式、記号形式の2パターンで記述できると書いたが、記号形式で<code>@x</code>のように変数を宣言した場合にその変数を実際のメモリのどこに置くかを知るのが<strong>アセンブラ</strong>である。アセンブラのおかげで記号形式のプログラム側は実装詳細を意識することなく変数を初期化、利用できる。</p>
@@ -536,7 +585,17 @@ if (!doNotTrack) {
 </li>
 </ul>
 <p><img src="the-hack-language-specification.webp" alt="the-hack-language-specification">
-<a href="https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view" target="_blank" >https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view</a>
+<div class="blogcard" data-url="https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view</div><div class="blogcard-url">https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view</div>
+    </div>
+  </a>
+</div>
  P129より引用</p>
 <h3 id="外部デバイス">外部デバイス<a href="#外部デバイス" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>Hackのハードウェアプラットフォームでは画面とキーボードの2つの外部デバイスに接続できる。どちらのデバイスも<strong>メモリマップ</strong>を通してコンピュータと会話する。(メモリの中に画面とキーボード用のメモリ領域があり、そこに画面の各ピクセルの値や押下されているキーのキーコードが格納される。)</p>
@@ -630,7 +689,17 @@ if (!doNotTrack) {
 <p><img src="cpu-debug.webp" alt="cpu-debug.webp"></p>
 <p>ここで作成したCPUの回路は次のようなもの。ここではヒントとして大まかな回路設計が与えられておりそれを参考にしつつ足りない部分を埋めていく形で実装を進めた。</p>
 <p><img src="cpu-implementation.webp" alt="cpu-implementation.webp">
-<a href="https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view" target="_blank" >https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view</a>
+<div class="blogcard" data-url="https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view</div><div class="blogcard-url">https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view</div>
+    </div>
+  </a>
+</div>
  P31より引用</p>
 <h2 id="第6章-アセンブラ">第6章 アセンブラ<a href="#第6章-アセンブラ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>第6章では第5章で書いた機械語の記号表現をバイナリ表現に変換するアセンブラを開発する。</p>
@@ -964,7 +1033,17 @@ add
 <li>リターンアドレスラベルをコードに挿入</li>
 </ol>
 <p><img src="call.webp" alt="call.webp">
-<a href="https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view" target="_blank" >https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view</a>
+<div class="blogcard" data-url="https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view</div><div class="blogcard-url">https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view</div>
+    </div>
+  </a>
+</div>
  P58より引用</p>
 <h3 id="関数からのreturnreturn">関数からのreturn(<code>return</code>)<a href="#関数からのreturnreturn" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>呼び出された関数の終了は<code>return</code>コマンドで行う。このコマンドが呼ばれることで呼び出し側に処理が戻る。</p>
@@ -978,7 +1057,17 @@ add
 <li>リターンアドレスにジャンプ</li>
 </ol>
 <p><img src="return.webp" alt="return.webp">
-<a href="https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view" target="_blank" >https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view</a>
+<div class="blogcard" data-url="https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view</div><div class="blogcard-url">https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view</div>
+    </div>
+  </a>
+</div>
  P73より引用</p>
 <h2 id="第9章-高水準言語">第9章 高水準言語<a href="#第9章-高水準言語" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>第10章、第11章でコンパイラを実装するJackの言語仕様を解説した章。</p>
@@ -1015,7 +1104,17 @@ add
 
 <p>Jackコンパイラは構文解析器とコード生成器からなり構文解析器はトークナイザとパーサ<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>からなる。</p>
 <p><img src="compiler-roadmap.webp" alt="compiler-roadmap">
-<a href="https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view" target="_blank" >https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view</a>
+<div class="blogcard" data-url="https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view</div><div class="blogcard-url">https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view</div>
+    </div>
+  </a>
+</div>
  P4より引用</p>
 <p>トークナイザはソースコードをトークンと呼ばれる「プログラムにおいて意味を持つコードの最小単位」に変換する処理を担う。</p>
 <p>トークンのような表現に変換してからパースを行うことでプログラムの複雑性を軽減することができる。</p>
@@ -1082,7 +1181,17 @@ add
 <h2 id="第11章-コンパイラiiコード生成">第11章 コンパイラII：コード生成<a href="#第11章-コンパイラiiコード生成" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>第11章では、コード生成器を実装する。具体的には構文解析した結果をもとにVMコードを生成する。</p>
 <p><img src="compiler-roadmap.webp" alt="compiler-roadmap">
-<a href="https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view" target="_blank" >https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view</a>
+<div class="blogcard" data-url="https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view</div><div class="blogcard-url">https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view</div>
+    </div>
+  </a>
+</div>
  P4より引用</p>
 <p>一般的には<strong>ソースコードをVMコードに変換する層をフロントエンド</strong>、<strong>VMコードを機械語に変換する層をバックエンド</strong>と呼ぶらしい。本書では第10章と第11章の内容がフロントエンドに、第6章~第8章の内容がバックエンドに該当する、と言えそう。</p>
 <h3 id="シンボルテーブル">シンボルテーブル<a href="#シンボルテーブル" class="hanchor" ariaLabel="Anchor">#</a> </h3>
@@ -1090,7 +1199,17 @@ add
 <p>Jackではクラススコープとサブルーチンスコープの2つのスコープがある。クラススコープの変数にはフィールド変数、スタティック変数の2種類があり、サブルーチンスコープの変数にはローカル変数、引数の2種類がある。</p>
 <p>ここではこれらの変数の情報は<strong>シンボルテーブル</strong>と呼ばれるデータ構造に格納することで管理する手法が紹介されていた。シンボルテーブルは変数の名前、型、スコープ、種類、インデックスを保持する。</p>
 <p><img src="symbol-table.webp" alt="symbol-table">
-<a href="https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view" target="_blank" >https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view</a>
+<div class="blogcard" data-url="https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view</div><div class="blogcard-url">https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view</div>
+    </div>
+  </a>
+</div>
  P6より引用</p>
 <p>Jackではクラススコープとサブルーチンスコープの2つのスコープがあるのでそれぞれ別のシンボルテーブルを保持する必要がある。Jackでは内側のスコープが外側のスコープよりも優先されるため、コンパイラは<code>x</code>という変数に出会ったときにまずサブルーチンスコープのシンボルテーブルを検索し、見つからなければクラススコープのシンボルテーブルを検索する。</p>
 <h3 id="コンストラクタのコンパイル">コンストラクタのコンパイル<a href="#コンストラクタのコンパイル" class="hanchor" ariaLabel="Anchor">#</a> </h3>
@@ -1134,8 +1253,7 @@ add
 <p>この章ではこれまでまったく意識したことがなかったメモリ操作によってハードウェアを制御するという経験が得られた。クラスインスタンスの初期化のためにメモリから任意の大きさの空き領域を探して確保する処理や、2点の座標が与えられたときにそれらを結ぶ直線をスクリーン上に描画する処理など。想像に難くない通り、基本的にかなり泥臭い実装が多かったがその泥臭さを吸収するための層でもあるので仕方ないとは思う。</p>
 <p>その過程でメモリ操作やビットを扱う処理に少し慣れられたのは大きな収穫の1つだった。普段のWeb開発ではbit演算やメモリ操作をする機会はなかなかないので貴重な経験だった。</p>
 <p>軽く調べた感じでは、現実世界では(Linuxでは)システムコールやデバイスドライバがそれらを担っているらしい。</p>
-<p>実装に関しては整数型のオーバーフローが原因で数時間費やしてしまった。<a href="https://blog.kyu08.com/posts/cs50-jp/#%E5%AD%A6%E3%81%B3%E3%82%84%E5%BE%97%E3%81%9F%E3%82%82%E3%81%AE" target="_blank" >CS50でC言語で課題を解いていたときも同様のハマり</a>
-があったのであるあるかもしれない。普段書いている言語は簡単にオーバーフローしなかったり場合によっては静的解析で指摘してくれたりするのでなかなか気付くことができなかった。</p>
+<p>実装に関しては整数型のオーバーフローが原因で数時間費やしてしまった。<a href="https://blog.kyu08.com/posts/cs50-jp/#%E5%AD%A6%E3%81%B3%E3%82%84%E5%BE%97%E3%81%9F%E3%82%82%E3%81%AE" target="_blank" >CS50でC言語で課題を解いていたときも同様のハマり</a>があったのであるあるかもしれない。普段書いている言語は簡単にオーバーフローしなかったり場合によっては静的解析で指摘してくれたりするのでなかなか気付くことができなかった。</p>
 <h2 id="学び得た経験">学び、得た経験<a href="#学び得た経験" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <ul>
 <li>普段はWebアプリケーションばかり触っているので、それよりも数段下のレイヤーの解像度を上げることができた。今後新しい知識の習得やトラブルシューティングがスムーズになるといいなと思う。
@@ -1160,10 +1278,8 @@ add
 <h2 id="おわりに">おわりに<a href="#おわりに" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>『Goならわかるシステムプログラミング』を読んでからかなり気になっていた本だったので無事完走できてよかった。</p>
 <p>最近のテーマであるCS力の強化をまた一歩進めることができた。</p>
-<p>次は<a href="https://www.sbcr.jp/product/4815618599/" target="_blank" >『体験しながら学ぶ ネットワーク技術入門』</a>
-でネットワークの理解を深めていこうかなと思う。</p>
-<p>あとはソフトスキル系でいうと<a href="https://www.oreilly.co.jp/books/9784814401116/" target="_blank" >『エンジニアリングチームのリード術-―Googleに学ぶインディビジュアルコントリビューターとマネージャーのための実践ガイド』</a>
-も良さそうなので読んでみようと思う。</p>
+<p>次は<a href="https://www.sbcr.jp/product/4815618599/" target="_blank" >『体験しながら学ぶ ネットワーク技術入門』</a>でネットワークの理解を深めていこうかなと思う。</p>
+<p>あとはソフトスキル系でいうと<a href="https://www.oreilly.co.jp/books/9784814401116/" target="_blank" >『エンジニアリングチームのリード術-―Googleに学ぶインディビジュアルコントリビューターとマネージャーのための実践ガイド』</a>も良さそうなので読んでみようと思う。</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -1174,8 +1290,7 @@ add
 <p>Twitterを見ているとパーザと表記する流派も存在する模様&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3">
-<p>近い話が<a href="https://blog.3qe.us/entry/2025/01/15/194843" target="_blank" >何かがそれほど得意でなくても、世の中の平均よりは得意だと思っておいたほうがよい - Lambdaカクテル</a>
-で綺麗に言語化されている。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>近い話が<a href="https://blog.3qe.us/entry/2025/01/15/194843" target="_blank" >何かがそれほど得意でなくても、世の中の平均よりは得意だと思っておいたほうがよい - Lambdaカクテル</a>で綺麗に言語化されている。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>

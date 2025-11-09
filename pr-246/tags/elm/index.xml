@@ -21,7 +21,17 @@
 &lt;p&gt;筆者はElmやRustの開発体験を気に入っており、Webアプリケーションのサーバーサイドを関数型言語で書くことに興味があったので参加してみた。&lt;/p&gt;
 &lt;h2 id=&#34;関数型言語テイスティング-haskell-scala-clojure-elixirを比べて味わう関数型プログラミングの旨さ---lagénorhynqueカマイルカさん&#34;&gt;関数型言語テイスティング: Haskell, Scala, Clojure, Elixirを比べて味わう関数型プログラミングの旨さ - lagénorhynque/カマイルカさん&lt;/h2&gt;
 &lt;p&gt;lagénorhynque/カマイルカさんによるHaskell, Scala, Clojure, Elixirの紹介と比較を行う発表。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-haskell-scala-clojure-elixir#p1&#34; target=&#34;_blank&#34; &gt;https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-haskell-scala-clojure-elixir#p1&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-haskell-scala-clojure-elixir#p1&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-haskell-scala-clojure-elixir#p1&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-haskell-scala-clojure-elixir#p1&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-haskell-scala-clojure-elixir#p1&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;部分適用や関数合成やパイプ演算子などElmで便利だった言語機能を思い出しながら聞いていた。&lt;/p&gt;
 &lt;p&gt;文法を見ていると、Elmの文法はかなりHaskellに近いようだった。(ML系と呼ばれるらしい)&lt;/p&gt;
@@ -43,7 +53,17 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;関数型言語を採用し維持し継続する---松澤-有さん&#34;&gt;関数型言語を採用し、維持し、継続する - 松澤 有さん&lt;/h2&gt;
 &lt;p&gt;Siiibo証券株式会社のCTOである松澤さんによる自社プロダクトのフロントエンド、バックエンドの開発言語として関数型言語(Elm, Elixir)をなぜ採用したのか、そしていかにして維持し、継続しているかについての発表。実は主にこの発表を聞くために関数型まつりに参加したので良い発表を聞けてよかった。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://zenn.dev/siiibo_tech/articles/adopting-fp-languages&#34; target=&#34;_blank&#34; &gt;https://zenn.dev/siiibo_tech/articles/adopting-fp-languages&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://zenn.dev/siiibo_tech/articles/adopting-fp-languages&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://zenn.dev/siiibo_tech/articles/adopting-fp-languages&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://zenn.dev/siiibo_tech/articles/adopting-fp-languages&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://zenn.dev/siiibo_tech/articles/adopting-fp-languages&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;結局はラストマンシップを持って自分がなんとかするという気概が重要だという話が一番印象的だった。これは関数型言語を業務で書いているわけではない自分にも大いに参考になる話だと思っていて、結局どんな技術を採用したかやCTOかメンバーかなどにかかわらず、このラストマンシップを持っているエンジニアが多ければ多いほど開発組織は強固になるんだろうなと思った。&lt;/p&gt;
 &lt;p&gt;また「アウトリーチを怠らなければ意外と世の中にちゃんと仲間はいる」ということをおっしゃっていて、使用言語がメインストリームであろうとなかろうと外部発信を通してコミュニティに貢献したり認知を獲得することの重要性を改めて感じた。やっていき。&lt;/p&gt;
@@ -157,8 +177,7 @@
 &lt;/li&gt;
 &lt;li&gt;リプレイス先の候補はGo, Rust, Haskell, Erlang, Elm
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://qiita.com/kikuyuta/items/96c3f91a850e9274b0e9&#34; target=&#34;_blank&#34; &gt;Elixir を使うようになった経緯 〜電力システム制御の現場から〜&lt;/a&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/kikuyuta/items/96c3f91a850e9274b0e9&#34; target=&#34;_blank&#34; &gt;Elixir を使うようになった経緯 〜電力システム制御の現場から〜&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -250,7 +269,17 @@
 &lt;p&gt;プログラマーが命令的なコーディングから関数型のコーディングへ移行する際のハードルを下げることを意識した設計になっているらしい。&lt;/p&gt;
 &lt;h2 id=&#34;マイクロサービス内で動くapiをfで書いている---ayato-pさん&#34;&gt;マイクロサービス内で動くAPIをF#で書いている - ayato-pさん&lt;/h2&gt;
 &lt;p&gt;ayato-pさんによるマイクロサービスの1サービスをF#で書く際の設計や悩みどころを紹介する発表。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://speakerdeck.com/ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru&#34; target=&#34;_blank&#34; &gt;https://speakerdeck.com/ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://speakerdeck.com/ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://speakerdeck.com/ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://speakerdeck.com/ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://speakerdeck.com/ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;ドメイン設計の際に容易にOptionを使わずにenumの別のvariantとして表現する、という考え方はRustなどでも活かせそうだと思った。別の概念であれば別の型として表現するのが大事そう。&lt;/p&gt;
 &lt;p&gt;以下メモ。&lt;/p&gt;
@@ -317,15 +346,13 @@
 &lt;p&gt;今は業務で関数型言語を使うことはないが、関数型言語の考え方を取り入れることで非関数型言語でもより良いコードを書けるようになると改めて感じた。&lt;/p&gt;
 &lt;p&gt;個人で初めてオフラインの勉強会/カンファレンスに参加したが普通に楽しかったのでまた行ってみようと思う。&lt;/p&gt;
 &lt;h2 id=&#34;つけ麺情報&#34;&gt;つけ麺情報&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://tabelog.com/tokyo/A1319/A131902/13115487&#34; target=&#34;_blank&#34; &gt;二代目えん寺&lt;/a&gt;
-がとても美味しかった。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://tabelog.com/tokyo/A1319/A131902/13115487&#34; target=&#34;_blank&#34; &gt;二代目えん寺&lt;/a&gt;がとても美味しかった。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;tsukemen.webp&#34; alt=&#34;tsukemen&#34;&gt;&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://sporto.github.io/elm-patterns/advanced/railway.html&#34; target=&#34;_blank&#34; &gt;Elm Patternsでも紹介されていた&lt;/a&gt;
-のを思い出した。改めて読み直してみよう。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sporto.github.io/elm-patterns/advanced/railway.html&#34; target=&#34;_blank&#34; &gt;Elm Patternsでも紹介されていた&lt;/a&gt;のを思い出した。改めて読み直してみよう。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
@@ -341,8 +368,7 @@
       <description>Elmで固定長配列を扱うためのライブラリelm-static-arrayを触ってみたので感じたことを書いていきます。 elm-static-array とは elm-static-array はElmで固定長</description>
       <content>&lt;p&gt;Elmで固定長配列を扱うためのライブラリelm-static-arrayを触ってみたので感じたことを書いていきます。&lt;/p&gt;
 &lt;h2 id=&#34;elm-static-array-とは&#34;&gt;elm-static-array とは&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/&#34; target=&#34;_blank&#34; &gt;elm-static-array&lt;/a&gt;
- はElmで固定長配列を扱うためのライブラリです。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/&#34; target=&#34;_blank&#34; &gt;elm-static-array&lt;/a&gt; はElmで固定長配列を扱うためのライブラリです。&lt;/p&gt;
 &lt;p&gt;配列の長さを型で表現できることが特徴です。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- StaticArray&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- 長さ 4 の配列&lt;/span&gt;
@@ -468,8 +494,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        head
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        tail
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;懸念staticarray-の書き方に慣れるまでは時間がかかる&#34;&gt;懸念②：StaticArray の書き方に慣れるまでは時間がかかる&lt;/h3&gt;
-&lt;p&gt;たとえばインデックスを指定してStaticArrayの要素を取得するget関数を使おうと&lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/StaticArray#get&#34; target=&#34;_blank&#34; &gt;ドキュメント&lt;/a&gt;
-を見ると、下記のような記述があります。&lt;/p&gt;
+&lt;p&gt;たとえばインデックスを指定してStaticArrayの要素を取得するget関数を使おうと&lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/StaticArray#get&#34; target=&#34;_blank&#34; &gt;ドキュメント&lt;/a&gt;を見ると、下記のような記述があります。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- Gets an element of the array. Note that it only possible if the index is in bound. Therefore eliminating Off-by-one errors.&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;get &lt;span style=&#34;color:#a6e22e&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Index&lt;/span&gt; n &lt;span style=&#34;color:#a6e22e&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;StaticArray&lt;/span&gt; n a &lt;span style=&#34;color:#a6e22e&#34;&gt;-&amp;gt;&lt;/span&gt; a
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;自分のElm力の乏しさのせいではありますがドキュメントに具体的なコード例が示されていないこともあり、動かすまでにそれなりの試行錯誤が必要でした。(当時はGitHubで検索しても引っ掛からずに絶望していましたが、検索の仕方が悪かっただけだということに執筆時に気付きました。)
@@ -477,8 +502,7 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;head &lt;span style=&#34;color:#a6e22e&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Element&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;head &lt;span style=&#34;color:#a6e22e&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;StaticArray&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt;get (&lt;span style=&#34;color:#66d9ef&#34;&gt;Index&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt;fromModBy &lt;span style=&#34;color:#66d9ef&#34;&gt;Length&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt;four &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) someStaticArray
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;まとめると、 &lt;strong&gt;多少の手間が必要になる&lt;/strong&gt; ということかなと思います。
-このあたりがelm-static-arrayの作者が &lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/&#34; target=&#34;_blank&#34; &gt;README&lt;/a&gt;
- の中で以下のように言っている所以かなと感じました。&lt;/p&gt;
+このあたりがelm-static-arrayの作者が &lt;a href=&#34;https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/&#34; target=&#34;_blank&#34; &gt;README&lt;/a&gt; の中で以下のように言っている所以かなと感じました。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Construction is a bit slower (should be neglectable for most cases).&lt;/p&gt;
 &lt;/blockquote&gt;

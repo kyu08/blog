@@ -18,10 +18,30 @@
       <content>&lt;p&gt;『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11/4でコミットした日数としてはおおよそ24日ほどだった。)&lt;/p&gt;
 &lt;p&gt;筆者は情報系の学部を出ておらず、CSなどの基礎知識があまりないので大変勉強になった。また、サンプルコードが豊富なので実際に自分のマシン上で動かしながら学ぶことができ解像度を上げながら理解を深めることができた。&lt;/p&gt;
 &lt;p&gt;低レイヤ、コンピューターサイエンスの学習に興味がある方にはとてもおすすめなのでぜひ買って読んでみてください。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.lambdanote.com/products/go-2&#34; target=&#34;_blank&#34; &gt;https://www.lambdanote.com/products/go-2&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.lambdanote.com/products/go-2&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://www.lambdanote.com/products/go-2&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://www.lambdanote.com/products/go-2&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.lambdanote.com/products/go-2&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;手元で実行したコードは以下のリポジトリにまとめた。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/go-system-programming&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/go-system-programming&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/go-system-programming&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/go-system-programming&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/go-system-programming&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/go-system-programming&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;以下読書メモ。&lt;/p&gt;
 &lt;h2 id=&#34;第1章-go言語で覗くシステムプログラミングの世界&#34;&gt;第1章 Go言語で覗くシステムプログラミングの世界&lt;/h2&gt;
@@ -162,8 +182,7 @@
 &lt;h3 id=&#34;goに組み込まれているtcpの機能netconnだけを使ってhttpによる通信を実現する&#34;&gt;Goに組み込まれているTCPの機能（&lt;code&gt;net.Conn&lt;/code&gt;）だけを使ってHTTPによる通信を実現する&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;net.Conn&lt;/code&gt;だけを使ってTCPソケットの初期化や通信の確立などの普段なら&lt;code&gt;net/http&lt;/code&gt;がやってくれている部分を実装した。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;http.ListenAndServe()&lt;/code&gt;のコードを読んでみたら、&lt;a href=&#34;https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/net/http/server.go#L3258&#34; target=&#34;_blank&#34; &gt;golang/go/src/net/http/server.go#L3258&lt;/a&gt;
-で本書のハンズオンと同じようにTCPソケットの初期化を行っていることを確認できた。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http.ListenAndServe()&lt;/code&gt;のコードを読んでみたら、&lt;a href=&#34;https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/net/http/server.go#L3258&#34; target=&#34;_blank&#34; &gt;golang/go/src/net/http/server.go#L3258&lt;/a&gt;で本書のハンズオンと同じようにTCPソケットの初期化を行っていることを確認できた。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;素朴な実装の速度改善&#34;&gt;素朴な実装の速度改善&lt;/h3&gt;
 &lt;ul&gt;
@@ -295,13 +314,11 @@
 &lt;/ol&gt;
 &lt;p&gt;アクティブな方式の方がコード量は少ないが監視対象が増えるとCPU負荷やIO負荷が増える。&lt;/p&gt;
 &lt;p&gt;パッシブな方式はファイルの変更検知が各OSでシステムコールやAPUIとして提供されている一方で環境ごとのコード差は大きくなる。&lt;/p&gt;
-&lt;p&gt;ここでは &lt;a href=&#34;https://github.com/fsnotify/fsnotify&#34; target=&#34;_blank&#34; &gt;fsnotify/fsnotify.v1&lt;/a&gt;
-を用いてファイルの変更検知プログラムを作成した。&lt;/p&gt;
+&lt;p&gt;ここでは &lt;a href=&#34;https://github.com/fsnotify/fsnotify&#34; target=&#34;_blank&#34; &gt;fsnotify/fsnotify.v1&lt;/a&gt;を用いてファイルの変更検知プログラムを作成した。&lt;/p&gt;
 &lt;p&gt;fsnotify.v1では、Linuxの場合はinotify系APIが、BSD系OSの場合はkqueueが使われている。&lt;/p&gt;
 &lt;h3 id=&#34;ファイルのメモリへのマッピングsyscallmmap&#34;&gt;ファイルのメモリへのマッピング（&lt;code&gt;syscall.Mmap()&lt;/code&gt;）&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;syscall.Mmap()&lt;/code&gt;を使うことでファイルの中身をそのままメモリ上に展開したり、メモリ上で書き換えた内容をそのままファイルに書き込むことができる。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/edsrzf/mmap-go&#34; target=&#34;_blank&#34; &gt;edsrzf/mmap-go&lt;/a&gt;
-では&lt;code&gt;mmap.Map()&lt;/code&gt;を使うことでファイルをメモリに展開できる。&lt;code&gt;mmap.Map()&lt;/code&gt;は次のようなシグネチャを持つ。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/edsrzf/mmap-go&#34; target=&#34;_blank&#34; &gt;edsrzf/mmap-go&lt;/a&gt;では&lt;code&gt;mmap.Map()&lt;/code&gt;を使うことでファイルをメモリに展開できる。&lt;code&gt;mmap.Map()&lt;/code&gt;は次のようなシグネチャを持つ。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Map&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;f&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;os&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;File&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;prot&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;flags&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;) (&lt;span style=&#34;color:#a6e22e&#34;&gt;MMap&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;error&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;2つ目の引数に次のような値を指定することでメモリ領域に対して許可する操作を設定できる。&lt;/p&gt;
 &lt;ul&gt;
@@ -361,8 +378,7 @@
 &lt;/ul&gt;
 &lt;h3 id=&#34;プロセスの出力に色づけをする&#34;&gt;プロセスの出力に色づけをする&lt;/h3&gt;
 &lt;p&gt;プロセスの出力に色をつけたい場合には&lt;strong&gt;ANSIエスケープシーケンス&lt;/strong&gt;を使うことができる。&lt;/p&gt;
-&lt;p&gt;自分が利用したことある&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;Rustの&lt;a href=&#34;https://crates.io/crates/colored&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;colored&lt;/code&gt;&lt;/a&gt;
-クレートも確認したところ実際にANSIエスケープシーケンスを使ってターミナルに色をつけていた。&lt;/p&gt;
+&lt;p&gt;自分が利用したことある&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;Rustの&lt;a href=&#34;https://crates.io/crates/colored&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;colored&lt;/code&gt;&lt;/a&gt;クレートも確認したところ実際にANSIエスケープシーケンスを使ってターミナルに色をつけていた。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#[cfg_attr(feature = &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;no-color&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;, ignore)]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#[test]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;compute_style_simple_fg_blue&lt;/span&gt;() {
@@ -370,7 +386,17 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        assert_eq!(blue, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;.blue().compute_style());
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811&#34; target=&#34;_blank&#34; &gt;https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811&lt;/a&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
  より&lt;/p&gt;
 &lt;p&gt;調べてみたところ&lt;code&gt;\x1B&lt;/code&gt;でも&lt;code&gt;\e&lt;/code&gt;でもエスケープシーケンスを表現できるらしい。&lt;sup id=&#34;fnref:7&#34;&gt;&lt;a href=&#34;#fn:7&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;7&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;h3 id=&#34;外部プロセスに対して自分が擬似端末だと詐称する&#34;&gt;外部プロセスに対して自分が擬似端末だと詐称する&lt;/h3&gt;
@@ -599,8 +625,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	close(&lt;span style=&#34;color:#a6e22e&#34;&gt;f&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;receiver&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;イベントの流れを定義するreactivex&#34;&gt;イベントの流れを定義する：ReactiveX&lt;/h4&gt;
-&lt;p&gt;ここでは&lt;a href=&#34;https://github.com/ReactiveX/RxGo&#34; target=&#34;_blank&#34; &gt;RxGo&lt;/a&gt;
-を使ってイベントの流れを定義する方法が紹介されていた。
+&lt;p&gt;ここでは&lt;a href=&#34;https://github.com/ReactiveX/RxGo&#34; target=&#34;_blank&#34; &gt;RxGo&lt;/a&gt;を使ってイベントの流れを定義する方法が紹介されていた。
 まずこのようにwatcherを定義する。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;watcher&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;observer&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Observer&lt;/span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;NextHandler&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;item&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;any&lt;/span&gt;) {
@@ -711,8 +736,7 @@
 &lt;p&gt;以下はWikipediaによるリンカーの説明。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;a computer program that takes one or more object files generated by a compiler or generated by an assembler and links them with libraries, generating an executable program or shared library&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Linker&#34; target=&#34;_blank&#34; &gt;Linker - Wikipedia&lt;/a&gt;
- から引用&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Linker&#34; target=&#34;_blank&#34; &gt;Linker - Wikipedia&lt;/a&gt; から引用&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;上記を翻訳すると「コンパイラまたはアセンブラによって生成された1つ以上のオブジェクトファイルをライブラリと結合し実行可能ファイルまたは共有ライブラリを生成するプログラム」といった感じだろうか。&lt;/p&gt;
 &lt;p&gt;OSはリンカーが生成した実行ファイルがシェルから起動されると、実行ファイルの内容をメモリに配置する。&lt;/p&gt;
@@ -801,41 +825,66 @@
 &lt;li&gt;Linuxで動かしながら学ぶTCP/IPネットワーク入門&lt;/li&gt;
 &lt;li&gt;体系的に学ぶ 安全なWebアプリケーションの作り方&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;あるいは、 &lt;a href=&#34;https://blog.ojisan.io/server-architecture-2023/#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9-vs-%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89&#34; target=&#34;_blank&#34; &gt;Webサーバーアーキテクチャ進化論2023 - blog.ojisan.io&lt;/a&gt;
-を参考に学習ロードマップを立ててみるのもいいかもしれない。&lt;/p&gt;
+&lt;p&gt;あるいは、 &lt;a href=&#34;https://blog.ojisan.io/server-architecture-2023/#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9-vs-%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89&#34; target=&#34;_blank&#34; &gt;Webサーバーアーキテクチャ進化論2023 - blog.ojisan.io&lt;/a&gt;を参考に学習ロードマップを立ててみるのもいいかもしれない。&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;Neovimでのデバッガの環境構築は &lt;a href=&#34;https://zenn.dev/saito9/articles/32c57f776dc369&#34; target=&#34;_blank&#34; &gt;nvim-dapでGolangのデバッグ環境構築&lt;/a&gt;
- を参考にした&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Neovimでのデバッガの環境構築は &lt;a href=&#34;https://zenn.dev/saito9/articles/32c57f776dc369&#34; target=&#34;_blank&#34; &gt;nvim-dapでGolangのデバッグ環境構築&lt;/a&gt; を参考にした&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:2&#34;&gt;
-&lt;p&gt;&lt;code&gt;Sysfd&lt;/code&gt;の定義はgolang/go/src/internal/poll/fd_unix.go#L23(&lt;a href=&#34;https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23&#34; target=&#34;_blank&#34; &gt;https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23&lt;/a&gt;
+&lt;p&gt;&lt;code&gt;Sysfd&lt;/code&gt;の定義はgolang/go/src/internal/poll/fd_unix.go#L23(&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 ) にある。&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:3&#34;&gt;
-&lt;p&gt;&lt;code&gt;io.Pipe&lt;/code&gt;の使いどころに関しては &lt;a href=&#34;https://medium.com/eureka-engineering/file-uploads-in-go-with-io-pipe-75519dfa647b&#34; target=&#34;_blank&#34; &gt;Go言語のio.Pipeでファイルを効率よくアップロードする方法&lt;/a&gt;
- が大変参考になった。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;io.Pipe&lt;/code&gt;の使いどころに関しては &lt;a href=&#34;https://medium.com/eureka-engineering/file-uploads-in-go-with-io-pipe-75519dfa647b&#34; target=&#34;_blank&#34; &gt;Go言語のio.Pipeでファイルを効率よくアップロードする方法&lt;/a&gt; が大変参考になった。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:4&#34;&gt;
-&lt;p&gt;cf. &lt;a href=&#34;https://github.com/kyu08/go-system-programming/blob/b9da4a0ce759b2df4ce884ab61248fb893b60bef/4-channel/unbufferedchannel/main.go#L8&#34; target=&#34;_blank&#34; &gt;kyu08/go-system-programming/4-channel/unbufferedchannel/main.go#L8&lt;/a&gt;
-&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;cf. &lt;a href=&#34;https://github.com/kyu08/go-system-programming/blob/b9da4a0ce759b2df4ce884ab61248fb893b60bef/4-channel/unbufferedchannel/main.go#L8&#34; target=&#34;_blank&#34; &gt;kyu08/go-system-programming/4-channel/unbufferedchannel/main.go#L8&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:5&#34;&gt;
 &lt;p&gt;Distrolessに対して「コンテナイメージが軽量になる」以外のメリットを感じていなかったが書かれている通りセキュリティ面でもメリットがあると気付いた。&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:6&#34;&gt;
-&lt;p&gt;fzf-makeの出力の一部に色を付けるために使っている。 &lt;a href=&#34;https://github.com/kyu08/fzf-make/blob/12789acd19bc24daa60ba7eb84973dab18fe7a52/src/usecase/execute_make_command.rs#L5&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/fzf-make/blob/12789acd19bc24daa60ba7eb84973dab18fe7a52/src/usecase/execute_make_command.rs#L5&lt;/a&gt;
+&lt;p&gt;fzf-makeの出力の一部に色を付けるために使っている。 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-make/blob/12789acd19bc24daa60ba7eb84973dab18fe7a52/src/usecase/execute_make_command.rs#L5&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/fzf-make/blob/12789acd19bc24daa60ba7eb84973dab18fe7a52/src/usecase/execute_make_command.rs#L5&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/fzf-make/blob/12789acd19bc24daa60ba7eb84973dab18fe7a52/src/usecase/execute_make_command.rs#L5&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-make/blob/12789acd19bc24daa60ba7eb84973dab18fe7a52/src/usecase/execute_make_command.rs#L5&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &amp;#160;&lt;a href=&#34;#fnref:6&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:7&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://ufcpp.net/blog/2023/12/escape-escape/&#34; target=&#34;_blank&#34; &gt;https://ufcpp.net/blog/2023/12/escape-escape/&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://ufcpp.net/blog/2023/12/escape-escape/&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://ufcpp.net/blog/2023/12/escape-escape/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://ufcpp.net/blog/2023/12/escape-escape/&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://ufcpp.net/blog/2023/12/escape-escape/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &amp;#160;&lt;a href=&#34;#fnref:7&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:8&#34;&gt;
-&lt;p&gt;仮想メモリ空間についてはκeenさんのこちらの記事がとてもわかりやすかった。&lt;a href=&#34;https://keens.github.io/blog/2017/04/30/memoritosutakkutohi_puto/&#34; target=&#34;_blank&#34; &gt;メモリとスタックとヒープとプログラミング言語&lt;/a&gt;
-&amp;#160;&lt;a href=&#34;#fnref:8&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;仮想メモリ空間についてはκeenさんのこちらの記事がとてもわかりやすかった。&lt;a href=&#34;https://keens.github.io/blog/2017/04/30/memoritosutakkutohi_puto/&#34; target=&#34;_blank&#34; &gt;メモリとスタックとヒープとプログラミング言語&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:8&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
@@ -849,10 +898,8 @@
       
       <guid>https://blog.kyu08.com/pr-246/posts/hello-go-static-analisys/</guid>
       <description>tenntenn Conference 2023 にスポンサーし、Goの静的解析を完全に理解した話 を読んでから静的解析が気になっていたのでこれをやってみた。 静的解析をはじめよう - Gop</description>
-      <content>&lt;p&gt;&lt;a href=&#34;https://zenn.dev/team_soda/articles/8e61219eab0fc8&#34; target=&#34;_blank&#34; &gt;tenntenn Conference 2023 にスポンサーし、Goの静的解析を完全に理解した話&lt;/a&gt;
- を読んでから静的解析が気になっていたのでこれをやってみた。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://golangtokyo.github.io/codelab/find-gophers/?index=codelab#0&#34; target=&#34;_blank&#34; &gt;静的解析をはじめよう - Gopherをさがせ！&lt;/a&gt;
-&lt;/p&gt;
+      <content>&lt;p&gt;&lt;a href=&#34;https://zenn.dev/team_soda/articles/8e61219eab0fc8&#34; target=&#34;_blank&#34; &gt;tenntenn Conference 2023 にスポンサーし、Goの静的解析を完全に理解した話&lt;/a&gt; を読んでから静的解析が気になっていたのでこれをやってみた。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://golangtokyo.github.io/codelab/find-gophers/?index=codelab#0&#34; target=&#34;_blank&#34; &gt;静的解析をはじめよう - Gopherをさがせ！&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;以下のようなソースコードから&lt;code&gt;Gopher&lt;/code&gt;型を探し出す簡単な解析スクリプトを通してGoでの静的解析の流れやASTの探索方法、型チェックを用いたより詳細な解析方法などを学べた。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;
@@ -876,7 +923,17 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;gopher&lt;/span&gt; = &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Gopher&lt;/span&gt;{&lt;span style=&#34;color:#a6e22e&#34;&gt;Gopher&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gopher&amp;#34;&lt;/span&gt;} &lt;span style=&#34;color:#75715e&#34;&gt;// ここ
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://golangtokyo.github.io/codelab/find-gophers/?index=codelab#2&#34; target=&#34;_blank&#34; &gt;https://golangtokyo.github.io/codelab/find-gophers/?index=codelab#2&lt;/a&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://golangtokyo.github.io/codelab/find-gophers/?index=codelab#2&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://golangtokyo.github.io/codelab/find-gophers/?index=codelab#2&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://golangtokyo.github.io/codelab/find-gophers/?index=codelab#2&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://golangtokyo.github.io/codelab/find-gophers/?index=codelab#2&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
  より&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;解説がかなり丁寧でわかりやすかったので静的解析初心者にはかなりありがたかった。&lt;/p&gt;
@@ -890,10 +947,20 @@
       <pubDate>Wed, 22 Feb 2023 16:15:48 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-246/posts/fzf-bookmark-opener/</guid>
-      <description>つくったもの yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った。 https://github.com/kyu08/fzf-bookmark-opener こんな感じで動く。 コードの</description>
+      <description>つくったもの yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った。 https://github.com/kyu08/fzf-bookmark-openerhttps://github.com/kyu08/fzf-bookmark-opener こんな感じで動く。 コードの</description>
       <content>&lt;h2 id=&#34;つくったもの&#34;&gt;つくったもの&lt;/h2&gt;
 &lt;p&gt;yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-bookmark-opener&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/fzf-bookmark-opener&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-bookmark-opener&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/fzf-bookmark-opener&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/fzf-bookmark-opener&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-bookmark-opener&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;こんな感じで動く。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/49891479/218272272-e693c10d-c810-458a-bf46-9c3a4a2fe45a.gif&#34; alt=&#34;demo&#34;&gt;&lt;/p&gt;
@@ -906,24 +973,31 @@
 &lt;li&gt;選択されたブックマークをブラウザで開く&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;ということをやっているだけである。(&lt;code&gt;main.go&lt;/code&gt;に120行弱だけという素朴なコード量)&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-bookmark-opener/blob/69313bf187dcfd6127efcf75e172a34fb9b8e05a/main.go#L38-L60&#34; target=&#34;_blank&#34; &gt;fzf-bookmark-opener/main.go at main · kyu08/fzf-bookmark-opener&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-bookmark-opener/blob/69313bf187dcfd6127efcf75e172a34fb9b8e05a/main.go#L38-L60&#34; target=&#34;_blank&#34; &gt;fzf-bookmark-opener/main.go at main · kyu08/fzf-bookmark-opener&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;この記述量で作れたのは間違いなくktr0731/go-fuzzyfinderのおかげでした。このライブラリのおかげでgoのコードからfzfを簡単に呼び出すことができました。というかなんならこのライブラリの存在を知ったので使ってみたくなってfzf-bookmark-openerを作ったみたいなとこもあります。ありがとうございます。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/ktr0731/go-fuzzyfinder&#34; target=&#34;_blank&#34; &gt;ktr0731/go-fuzzyfinder&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/ktr0731/go-fuzzyfinder&#34; target=&#34;_blank&#34; &gt;ktr0731/go-fuzzyfinder&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;ちゃっかりbrewでも公開してみた&#34;&gt;ちゃっかりbrewでも公開してみた&lt;/h2&gt;
 &lt;p&gt;brewでインストールできるに越したことはないだろうってことで、brewでも公開してみたが思いのほか簡単だった。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew tap kyu08/tap
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install kyu08/tap/fzf-bookmark-opener
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これだけでインストールできるので気になった方もそうでない方もぜひ。issueやPRもお待ちしています。(&lt;code&gt;go install&lt;/code&gt;でインストールしたい方はこちら(&lt;code&gt;go install github.com/kyu08/fzf-bookmark-opener@latest&lt;/code&gt;))&lt;/p&gt;
 &lt;p&gt;brew公開に関してはこちらのブログを参考にしたら30分弱でサクッと公開できた(想像より簡単だった)&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.rasukarusan.com/entry/2019/11/03/211338&#34; target=&#34;_blank&#34; &gt;https://www.rasukarusan.com/entry/2019/11/03/211338&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.rasukarusan.com/entry/2019/11/03/211338&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://www.rasukarusan.com/entry/2019/11/03/211338&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://www.rasukarusan.com/entry/2019/11/03/211338&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.rasukarusan.com/entry/2019/11/03/211338&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;詳細は↑の記事を読んでいただければわかるが、リリースにバイナリを含めて配布用のrepositoryを作るだけなので本当に簡単だったのでツールを配布したい人はぜひ。&lt;/p&gt;
 &lt;h2 id=&#34;ちゃっかりヘルパースクリプトも公開した&#34;&gt;ちゃっかりヘルパースクリプトも公開した&lt;/h2&gt;
 &lt;p&gt;現在お仕事ではGCPを使っているんですが、GCPのコンソールをプロジェクト、サービスを指定して直接開きたいことが多いのでプロジェクトのリストを渡すとGCPの主要なサービス(主観)のURL一覧をfzf-bookmark-openerの設定ファイルの形式で吐いてくれるスクリプトも公開した。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/gcp-url-generator&#34; target=&#34;_blank&#34; &gt;kyu08/gcp-url-generator&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/gcp-url-generator&#34; target=&#34;_blank&#34; &gt;kyu08/gcp-url-generator&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;project名のリストとregionを渡すとこういう文字列を吐いてくれるイメージ。(以下は出力の一部)(この例だとregionは関係ない)&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - &lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Home stg&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;url&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;https://console.cloud.google.com/home/dashboard?project=stg&amp;#39;&lt;/span&gt;
@@ -965,21 +1039,28 @@
 &lt;li&gt;Firebase Hosting&lt;/li&gt;
 &lt;li&gt;Firebase Remote Config&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;これで生成したURLをfzf-bookmark-openerに食わせるとお使いのGCPプロジェクトの特定のサービスがコマンドラインからサクッと開くことができる。(詳しくは&lt;a href=&#34;https://github.com/kyu08/gcp-url-generator&#34; target=&#34;_blank&#34; &gt;kyu08/gcp-url-generatorのREADME&lt;/a&gt;
-を参照)
+&lt;p&gt;これで生成したURLをfzf-bookmark-openerに食わせるとお使いのGCPプロジェクトの特定のサービスがコマンドラインからサクッと開くことができる。(詳しくは&lt;a href=&#34;https://github.com/kyu08/gcp-url-generator&#34; target=&#34;_blank&#34; &gt;kyu08/gcp-url-generatorのREADME&lt;/a&gt;を参照)
 こちらもissueやPRお待ちしてます。&lt;/p&gt;
 &lt;h2 id=&#34;余談1&#34;&gt;余談1&lt;/h2&gt;
 &lt;p&gt;Rustだとlotabout/skimを使うとktr0731/go-fuzzyfinderと同じようなことができるらしい。最近Rust熱が高まりに高まっている(Tour of Rustやり中)ので次に何かCLIでfzfなツールをつくるときは使ってみようと思う。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/lotabout/skim&#34; target=&#34;_blank&#34; &gt;lotabout/skim&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/lotabout/skim&#34; target=&#34;_blank&#34; &gt;lotabout/skim&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;[追記]
 Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;kyu08/fzf-make&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;kyu08/fzf-make&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;余談2&#34;&gt;余談2&lt;/h2&gt;
 &lt;p&gt;ふと気になってktr0731/go-fuzzyfinderをはじめとする依存ライブラリのライセンス表示はどうすればいいか気になって調べてみたところリポジトリに&lt;code&gt;NOTICES&lt;/code&gt;とか&lt;code&gt;CREDITS&lt;/code&gt;とか&lt;code&gt;ThirdPartyNotices&lt;/code&gt;みたいなファイルを置いてそこに依存ライブラリの著作権・ライセンス表示をするのが一般的なようだった。&lt;/p&gt;
 &lt;p&gt;手作業でやるのは辛いので自動生成ツールを探したところGoだとこれが使いやすそうだったので使ってみたけど簡単でとてもよかった。ありがたや&amp;hellip;。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/Songmu/gocredits&#34; target=&#34;_blank&#34; &gt;https://github.com/Songmu/gocredits&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/Songmu/gocredits&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/Songmu/gocredits&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/Songmu/gocredits&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/Songmu/gocredits&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;ktr0731/go-fuzzyfinderはいいぞ〜&lt;/p&gt;

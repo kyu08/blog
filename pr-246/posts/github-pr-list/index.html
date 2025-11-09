@@ -247,7 +247,17 @@ if (!doNotTrack) {
   <div class="post-content"><div>
         <p>稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ってマージされたPR一覧」を表示する方法)</p>
 <h2 id="tldr">tl;dr<a href="#tldr" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p><a href="https://github.com/pulls" target="_blank" >https://github.com/pulls</a>
+<p><div class="blogcard" data-url="https://github.com/pulls" data-auto-fetch="true">
+  <a href="https://github.com/pulls" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/pulls</div><div class="blogcard-url">https://github.com/pulls</div>
+    </div>
+  </a>
+</div>
  でクエリに</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>is:pr archived:false is:closed author:@me is:public -user:@me created:2024-01-01..2024-12-31 
@@ -256,9 +266,18 @@ if (!doNotTrack) {
 <h2 id="余談">余談<a href="#余談" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <ul>
 <li>orgを所属組織とかに絞って検索すれば仕事の振り返りとかにも使えそう。</li>
-<li>他にも <a href="https://github.com/pulls/review-requested" target="_blank" >https://github.com/pulls/review-requested</a>
- にいくと自分がレビュワーとしてアサインされているPR一覧が見れて便利だったりする。ターミナル上で同じようなことをやりたい人は <a href="https://github.com/dlvhdr/gh-dash" target="_blank" >dlvhdr/gh-dash</a>
- とかもオススメかもしれない。</li>
+<li>他にも <div class="blogcard" data-url="https://github.com/pulls/review-requested" data-auto-fetch="true">
+  <a href="https://github.com/pulls/review-requested" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/pulls/review-requested</div><div class="blogcard-url">https://github.com/pulls/review-requested</div>
+    </div>
+  </a>
+</div>
+ にいくと自分がレビュワーとしてアサインされているPR一覧が見れて便利だったりする。ターミナル上で同じようなことをやりたい人は <a href="https://github.com/dlvhdr/gh-dash" target="_blank" >dlvhdr/gh-dash</a> とかもオススメかもしれない。</li>
 </ul>
 
       </div></div>

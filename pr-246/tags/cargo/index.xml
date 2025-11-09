@@ -23,12 +23,9 @@
 &lt;h2 id=&#34;tldr&#34;&gt;tl;dr&lt;/h2&gt;
 &lt;p&gt;以下のチェックをCIで実行することでcargoプロジェクトの依存関係を継続的に省力で管理できる。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/bnjbvr/cargo-machete&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;cargo-machete&lt;/code&gt;&lt;/a&gt;
-: 不要な依存関係がないか&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/EmbarkStudios/cargo-deny&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;cargo-deny&lt;/code&gt;&lt;/a&gt;
-: 依存ライブラリに許容しないライセンスが含まれていないか&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/EmbarkStudios/cargo-about&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;cargo-about&lt;/code&gt;&lt;/a&gt;
-: リポジトリのライセンス表記ファイルに更新漏れがないか&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/bnjbvr/cargo-machete&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;cargo-machete&lt;/code&gt;&lt;/a&gt;: 不要な依存関係がないか&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/EmbarkStudios/cargo-deny&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;cargo-deny&lt;/code&gt;&lt;/a&gt;: 依存ライブラリに許容しないライセンスが含まれていないか&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/EmbarkStudios/cargo-about&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;cargo-about&lt;/code&gt;&lt;/a&gt;: リポジトリのライセンス表記ファイルに更新漏れがないか&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;それぞれ紹介する。なお、コード例はそれぞれ以下のランナーを想定している。&lt;/p&gt;
 &lt;table&gt;
@@ -54,8 +51,7 @@
 &lt;p&gt;ある程度の期間開発を続けていると以前追加した依存関係が不要になったことに気付かずに&lt;code&gt;cargo.toml&lt;/code&gt;の&lt;code&gt;dependencies&lt;/code&gt;や&lt;code&gt;dev-dependencies&lt;/code&gt;に残ったままになることがある。
 不要な依存関係が残ったままになっているとrenovateやdependabotによるバージョン更新の手間が不必要に増えてしまうのでPRの時点で気付けるようにしたい。&lt;/p&gt;
 &lt;h3 id=&#34;what&#34;&gt;what&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/bnjbvr/cargo-machete&#34; target=&#34;_blank&#34; &gt;cargo-machete&lt;/a&gt;
-を使って&lt;code&gt;cargo.toml&lt;/code&gt;に記述されている依存関係のうち、プロジェクトが実際には依存していない依存関係を検出する。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/bnjbvr/cargo-machete&#34; target=&#34;_blank&#34; &gt;cargo-machete&lt;/a&gt;を使って&lt;code&gt;cargo.toml&lt;/code&gt;に記述されている依存関係のうち、プロジェクトが実際には依存していない依存関係を検出する。&lt;/p&gt;
 &lt;h3 id=&#34;howローカル&#34;&gt;how(ローカル)&lt;/h3&gt;
 &lt;p&gt;以下のようなmake targetを定義しておくと&lt;code&gt;make detect-unused-dependencies&lt;/code&gt;で不要な依存関係を検出できる。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-makefile&#34; data-lang=&#34;makefile&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.PHONY&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; tool-detect-unused-dependencies
@@ -90,8 +86,7 @@
 &lt;p&gt;筆者は&lt;code&gt;fzf-make&lt;/code&gt;をより自由に利用してほしいと考えているためMITライセンスでプロジェクトを公開したい。
 コピーレフトのライセンスに依存してしまうとライセンス変更を余儀なくされるため、コピーレフトのライブラリに依存することを避けたい。&lt;/p&gt;
 &lt;h3 id=&#34;what-1&#34;&gt;what&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/EmbarkStudios/cargo-deny&#34; target=&#34;_blank&#34; &gt;cargo-deny&lt;/a&gt;
-は依存関係のlint機能を提供する。&lt;code&gt;fzf-make&lt;/code&gt;では、&lt;code&gt;cargo deny check licenses&lt;/code&gt;を用いてホワイトリストに登録したライセンス以外のライセンスが依存ライブラリに含まれていないか検証している。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/EmbarkStudios/cargo-deny&#34; target=&#34;_blank&#34; &gt;cargo-deny&lt;/a&gt;は依存関係のlint機能を提供する。&lt;code&gt;fzf-make&lt;/code&gt;では、&lt;code&gt;cargo deny check licenses&lt;/code&gt;を用いてホワイトリストに登録したライセンス以外のライセンスが依存ライブラリに含まれていないか検証している。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# deny.toml&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;licenses&lt;/span&gt;]
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;allow&lt;/span&gt; = [
@@ -150,8 +145,7 @@
 &lt;p&gt;また、本来は依存ライブラリの依存ライブラリを再帰的にチェックしてすべてのライセンス表記をすべきなのだと思うが、手作業でそれをする気にはなれなかったので直接依存しているライブラリのライセンスしか表記できていなかった。&lt;/p&gt;
 &lt;p&gt;これらの課題を&lt;code&gt;cargo-about&lt;/code&gt;を用いることで解決できそうだったので導入してみた。&lt;/p&gt;
 &lt;h3 id=&#34;what-2&#34;&gt;what&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/EmbarkStudios/cargo-about&#34; target=&#34;_blank&#34; &gt;cargo-about&lt;/a&gt;
-は依存ライブラリのライセンス表記ファイルを自動生成する機能を提供する。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/EmbarkStudios/cargo-about&#34; target=&#34;_blank&#34; &gt;cargo-about&lt;/a&gt;は依存ライブラリのライセンス表記ファイルを自動生成する機能を提供する。&lt;/p&gt;
 &lt;p&gt;以下のようなテンプレートを用意し、&lt;code&gt;cargo about generate about.hbs &amp;gt; CREDITS.html&lt;/code&gt;を実行すると&lt;code&gt;CREDITS.html&lt;/code&gt;にライセンス表記を出力してくれる。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
@@ -257,8 +251,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;This page lists the licenses of the projects used in fzf-make.&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これに関しては以下のissueを立ててみたので&lt;code&gt;cargo-about&lt;/code&gt;側と意見が一致したら修正するPRを送ってみようと思う。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/EmbarkStudios/cargo-about/issues/281&#34; target=&#34;_blank&#34; &gt;[Feature request] change &lt;code&gt;cargo about init&lt;/code&gt; to generate the statement including user&amp;rsquo;s project name.&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/EmbarkStudios/cargo-about/issues/281&#34; target=&#34;_blank&#34; &gt;[Feature request] change &lt;code&gt;cargo about init&lt;/code&gt; to generate the statement including user&amp;rsquo;s project name.&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
 &lt;p&gt;繰り返しの定型タスクをCIに任せることができたので開発により集中できるようになった。（趣味開発だと数ヶ月ぶりにコミットするとかもザラにあり、開発に必要なタスクを忘れがちなのでそういった意味でも自動化の範囲を増やすことができてよかった）&lt;/p&gt;
 &lt;p&gt;便利ツールをOSSとして公開してくれている人/企業に感謝しつつ利用するだけでなく自分にできる貢献はやっていきたい。&lt;/p&gt;
@@ -266,12 +259,10 @@
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;&lt;code&gt;fzf-make&lt;/code&gt;の紹介記事: &lt;a href=&#34;https://zenn.dev/kyu08/articles/974fd8bc25c303&#34; target=&#34;_blank&#34; &gt;[make,pnpm,yarn,justに対応]コマンドをfuzzy finder形式で選択できるCLIツール fzf-makeの紹介&lt;/a&gt;
-&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;fzf-make&lt;/code&gt;の紹介記事: &lt;a href=&#34;https://zenn.dev/kyu08/articles/974fd8bc25c303&#34; target=&#34;_blank&#34; &gt;[make,pnpm,yarn,justに対応]コマンドをfuzzy finder形式で選択できるCLIツール fzf-makeの紹介&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:2&#34;&gt;
-&lt;p&gt;そして実際に&lt;a href=&#34;https://github.com/search?q=%22This&amp;#43;page&amp;#43;lists&amp;#43;the&amp;#43;licenses&amp;#43;of&amp;#43;the&amp;#43;projects&amp;#43;used&amp;#43;in&amp;#43;cargo-about.%22&amp;amp;type=code&#34; target=&#34;_blank&#34; &gt;90件近くのプロジェクトで&lt;code&gt;cargo-about&lt;/code&gt;のままになっている。&lt;/a&gt;
-&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;そして実際に&lt;a href=&#34;https://github.com/search?q=%22This&amp;#43;page&amp;#43;lists&amp;#43;the&amp;#43;licenses&amp;#43;of&amp;#43;the&amp;#43;projects&amp;#43;used&amp;#43;in&amp;#43;cargo-about.%22&amp;amp;type=code&#34; target=&#34;_blank&#34; &gt;90件近くのプロジェクトで&lt;code&gt;cargo-about&lt;/code&gt;のままになっている。&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;

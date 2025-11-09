@@ -14,9 +14,8 @@
       <pubDate>Sat, 04 Oct 2025 08:21:10 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-246/posts/tidy-first/</guid>
-      <description>『Tidy First? 』を読んだ。 勉強になったところをまとめる。 「整頓」という概念 整頓はリファクタリングのサブセットだ。整頓は可愛くてふわふわした小さ</description>
-      <content>&lt;p&gt;『&lt;a href=&#34;https://www.oreilly.co.jp/books/9784814400911/&#34; target=&#34;_blank&#34; &gt;Tidy First?&lt;/a&gt;
-』を読んだ。&lt;/p&gt;
+      <description>『Tidy First?』を読んだ。 勉強になったところをまとめる。 「整頓」という概念 整頓はリファクタリングのサブセットだ。整頓は可愛くてふわふ</description>
+      <content>&lt;p&gt;『&lt;a href=&#34;https://www.oreilly.co.jp/books/9784814400911/&#34; target=&#34;_blank&#34; &gt;Tidy First?&lt;/a&gt;』を読んだ。&lt;/p&gt;
 &lt;p&gt;勉強になったところをまとめる。&lt;/p&gt;
 &lt;h2 id=&#34;整頓という概念&#34;&gt;「整頓」という概念&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -121,13 +120,22 @@
       <pubDate>Tue, 29 Apr 2025 15:00:00 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-246/posts/nand2tetris/</guid>
-      <description>『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は## 学び、得た経験 までジャンプして</description>
-      <content>&lt;p&gt;『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は&lt;a href=&#34;#%e5%ad%a6%e3%81%b3%e5%be%97%e3%81%9f%e7%b5%8c%e9%a8%93&#34; &gt;## 学び、得た経験&lt;/a&gt;
-までジャンプしてください。&lt;/p&gt;
+      <description>『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は## 学び、得た経験までジャンプして</description>
+      <content>&lt;p&gt;『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は&lt;a href=&#34;#%e5%ad%a6%e3%81%b3%e5%be%97%e3%81%9f%e7%b5%8c%e9%a8%93&#34; &gt;## 学び、得た経験&lt;/a&gt;までジャンプしてください。&lt;/p&gt;
 &lt;h2 id=&#34;本書の構成&#34;&gt;本書の構成&lt;/h2&gt;
 &lt;p&gt;本書はnand2tetrisという通称の通り、NANDゲートからスタートして、CPUやコンパイラやOSなどを実装し、最終的にはそのプラットフォーム上でテトリス(のようなアプリケーション)&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;が動くところまで実装するという内容のコースになっている。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;roadmap.webp&#34; alt=&#34;roadmap&#34;&gt;
-&lt;a href=&#34;https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view&lt;/a&gt;
+&lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
  P3より引用&lt;/p&gt;
 &lt;p&gt;上図のとおりだが、大まかな流れとしては以下。&lt;/p&gt;
 &lt;ol&gt;
@@ -242,7 +250,17 @@
 &lt;h2 id=&#34;第3章-メモリ&#34;&gt;第3章 メモリ&lt;/h2&gt;
 &lt;p&gt;この章では、DFF(Data Flip-Flop)を用いて1-bit registerを作成し、それを組み合わせて16-bit registerを作成し、さらにそれを組み合わせてRAMを作成した。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;from-dff-to-ram.webp&#34; alt=&#34;from-dff-to-ram.webp&#34;&gt;
-&lt;a href=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&lt;/a&gt;
+&lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
  P47より引用&lt;/p&gt;
 &lt;p&gt;読み書き可能なメモリを作成したことで、コンピュータを作っている感が強まってきた。&lt;/p&gt;
 &lt;p&gt;作成した回路は具体的には以下。&lt;/p&gt;
@@ -267,7 +285,17 @@
 &lt;/ul&gt;
 &lt;p&gt;DFFは&lt;code&gt;out(t+1) = in(t)&lt;/code&gt;で表される出力を持つ。DFFを用いることで過去の状態を論理回路上で表現できる。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;dff.webp&#34; alt=&#34;dff.webp&#34;&gt;
-&lt;a href=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&lt;/a&gt;
+&lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
  P41より引用&lt;/p&gt;
 &lt;p&gt;次のようにマルチプレクサとDFFを組み合わせることで1-bit registerを作成できる。&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-hdl&#34; data-lang=&#34;hdl&#34;&gt;CHIP Bit {
@@ -280,7 +308,17 @@
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;1-bit registerは時刻&lt;code&gt;t&lt;/code&gt;において&lt;code&gt;load&lt;/code&gt;ビットがアサートされると&lt;code&gt;out(t+1)&lt;/code&gt;が&lt;code&gt;in(t)&lt;/code&gt;の値になり、アサートされていない場合は&lt;code&gt;out(t+1)&lt;/code&gt;は&lt;code&gt;out(t)&lt;/code&gt;の値になる。換言するとレジスタを利用することで過去の状態を保持できる。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;1-bit-register.webp&#34; alt=&#34;1-bit-register.webp&#34;&gt;
-&lt;a href=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&lt;/a&gt;
+&lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
  P25より引用&lt;/p&gt;
 &lt;h2 id=&#34;第4章-機械語&#34;&gt;第4章 機械語&lt;/h2&gt;
 &lt;p&gt;第4章では以下のプログラムを機械語で書いた。&lt;/p&gt;
@@ -318,7 +356,17 @@
 &lt;h3 id=&#34;hackコンピュータのアーキテクチャ&#34;&gt;Hackコンピュータのアーキテクチャ&lt;/h3&gt;
 &lt;p&gt;Hackコンピュータは以下のようなアーキテクチャを持つ。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;hack-computer-architecture.webp&#34; alt=&#34;hack-computer-architecture.webp&#34;&gt;
-&lt;a href=&#34;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&lt;/a&gt;
+&lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
  P23より引用&lt;/p&gt;
 &lt;h3 id=&#34;アセンブラの役割&#34;&gt;アセンブラの役割&lt;/h3&gt;
 &lt;p&gt;機械語はバイナリ形式、記号形式の2パターンで記述できると書いたが、記号形式で&lt;code&gt;@x&lt;/code&gt;のように変数を宣言した場合にその変数を実際のメモリのどこに置くかを知るのが&lt;strong&gt;アセンブラ&lt;/strong&gt;である。アセンブラのおかげで記号形式のプログラム側は実装詳細を意識することなく変数を初期化、利用できる。&lt;/p&gt;
@@ -360,7 +408,17 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;the-hack-language-specification.webp&#34; alt=&#34;the-hack-language-specification&#34;&gt;
-&lt;a href=&#34;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&lt;/a&gt;
+&lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
  P129より引用&lt;/p&gt;
 &lt;h3 id=&#34;外部デバイス&#34;&gt;外部デバイス&lt;/h3&gt;
 &lt;p&gt;Hackのハードウェアプラットフォームでは画面とキーボードの2つの外部デバイスに接続できる。どちらのデバイスも&lt;strong&gt;メモリマップ&lt;/strong&gt;を通してコンピュータと会話する。(メモリの中に画面とキーボード用のメモリ領域があり、そこに画面の各ピクセルの値や押下されているキーのキーコードが格納される。)&lt;/p&gt;
@@ -454,7 +512,17 @@
 &lt;p&gt;&lt;img src=&#34;cpu-debug.webp&#34; alt=&#34;cpu-debug.webp&#34;&gt;&lt;/p&gt;
 &lt;p&gt;ここで作成したCPUの回路は次のようなもの。ここではヒントとして大まかな回路設計が与えられておりそれを参考にしつつ足りない部分を埋めていく形で実装を進めた。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;cpu-implementation.webp&#34; alt=&#34;cpu-implementation.webp&#34;&gt;
-&lt;a href=&#34;https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view&lt;/a&gt;
+&lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
  P31より引用&lt;/p&gt;
 &lt;h2 id=&#34;第6章-アセンブラ&#34;&gt;第6章 アセンブラ&lt;/h2&gt;
 &lt;p&gt;第6章では第5章で書いた機械語の記号表現をバイナリ表現に変換するアセンブラを開発する。&lt;/p&gt;
@@ -788,7 +856,17 @@ add
 &lt;li&gt;リターンアドレスラベルをコードに挿入&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img src=&#34;call.webp&#34; alt=&#34;call.webp&#34;&gt;
-&lt;a href=&#34;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&lt;/a&gt;
+&lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
  P58より引用&lt;/p&gt;
 &lt;h3 id=&#34;関数からのreturnreturn&#34;&gt;関数からのreturn(&lt;code&gt;return&lt;/code&gt;)&lt;/h3&gt;
 &lt;p&gt;呼び出された関数の終了は&lt;code&gt;return&lt;/code&gt;コマンドで行う。このコマンドが呼ばれることで呼び出し側に処理が戻る。&lt;/p&gt;
@@ -802,7 +880,17 @@ add
 &lt;li&gt;リターンアドレスにジャンプ&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img src=&#34;return.webp&#34; alt=&#34;return.webp&#34;&gt;
-&lt;a href=&#34;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&lt;/a&gt;
+&lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
  P73より引用&lt;/p&gt;
 &lt;h2 id=&#34;第9章-高水準言語&#34;&gt;第9章 高水準言語&lt;/h2&gt;
 &lt;p&gt;第10章、第11章でコンパイラを実装するJackの言語仕様を解説した章。&lt;/p&gt;
@@ -839,7 +927,17 @@ add
 
 &lt;p&gt;Jackコンパイラは構文解析器とコード生成器からなり構文解析器はトークナイザとパーサ&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;からなる。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;compiler-roadmap.webp&#34; alt=&#34;compiler-roadmap&#34;&gt;
-&lt;a href=&#34;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&lt;/a&gt;
+&lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
  P4より引用&lt;/p&gt;
 &lt;p&gt;トークナイザはソースコードをトークンと呼ばれる「プログラムにおいて意味を持つコードの最小単位」に変換する処理を担う。&lt;/p&gt;
 &lt;p&gt;トークンのような表現に変換してからパースを行うことでプログラムの複雑性を軽減することができる。&lt;/p&gt;
@@ -906,7 +1004,17 @@ add
 &lt;h2 id=&#34;第11章-コンパイラiiコード生成&#34;&gt;第11章 コンパイラII：コード生成&lt;/h2&gt;
 &lt;p&gt;第11章では、コード生成器を実装する。具体的には構文解析した結果をもとにVMコードを生成する。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;compiler-roadmap.webp&#34; alt=&#34;compiler-roadmap&#34;&gt;
-&lt;a href=&#34;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&lt;/a&gt;
+&lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
  P4より引用&lt;/p&gt;
 &lt;p&gt;一般的には&lt;strong&gt;ソースコードをVMコードに変換する層をフロントエンド&lt;/strong&gt;、&lt;strong&gt;VMコードを機械語に変換する層をバックエンド&lt;/strong&gt;と呼ぶらしい。本書では第10章と第11章の内容がフロントエンドに、第6章~第8章の内容がバックエンドに該当する、と言えそう。&lt;/p&gt;
 &lt;h3 id=&#34;シンボルテーブル&#34;&gt;シンボルテーブル&lt;/h3&gt;
@@ -914,7 +1022,17 @@ add
 &lt;p&gt;Jackではクラススコープとサブルーチンスコープの2つのスコープがある。クラススコープの変数にはフィールド変数、スタティック変数の2種類があり、サブルーチンスコープの変数にはローカル変数、引数の2種類がある。&lt;/p&gt;
 &lt;p&gt;ここではこれらの変数の情報は&lt;strong&gt;シンボルテーブル&lt;/strong&gt;と呼ばれるデータ構造に格納することで管理する手法が紹介されていた。シンボルテーブルは変数の名前、型、スコープ、種類、インデックスを保持する。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;symbol-table.webp&#34; alt=&#34;symbol-table&#34;&gt;
-&lt;a href=&#34;https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view&#34; target=&#34;_blank&#34; &gt;https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view&lt;/a&gt;
+&lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
  P6より引用&lt;/p&gt;
 &lt;p&gt;Jackではクラススコープとサブルーチンスコープの2つのスコープがあるのでそれぞれ別のシンボルテーブルを保持する必要がある。Jackでは内側のスコープが外側のスコープよりも優先されるため、コンパイラは&lt;code&gt;x&lt;/code&gt;という変数に出会ったときにまずサブルーチンスコープのシンボルテーブルを検索し、見つからなければクラススコープのシンボルテーブルを検索する。&lt;/p&gt;
 &lt;h3 id=&#34;コンストラクタのコンパイル&#34;&gt;コンストラクタのコンパイル&lt;/h3&gt;
@@ -958,8 +1076,7 @@ add
 &lt;p&gt;この章ではこれまでまったく意識したことがなかったメモリ操作によってハードウェアを制御するという経験が得られた。クラスインスタンスの初期化のためにメモリから任意の大きさの空き領域を探して確保する処理や、2点の座標が与えられたときにそれらを結ぶ直線をスクリーン上に描画する処理など。想像に難くない通り、基本的にかなり泥臭い実装が多かったがその泥臭さを吸収するための層でもあるので仕方ないとは思う。&lt;/p&gt;
 &lt;p&gt;その過程でメモリ操作やビットを扱う処理に少し慣れられたのは大きな収穫の1つだった。普段のWeb開発ではbit演算やメモリ操作をする機会はなかなかないので貴重な経験だった。&lt;/p&gt;
 &lt;p&gt;軽く調べた感じでは、現実世界では(Linuxでは)システムコールやデバイスドライバがそれらを担っているらしい。&lt;/p&gt;
-&lt;p&gt;実装に関しては整数型のオーバーフローが原因で数時間費やしてしまった。&lt;a href=&#34;https://blog.kyu08.com/posts/cs50-jp/#%E5%AD%A6%E3%81%B3%E3%82%84%E5%BE%97%E3%81%9F%E3%82%82%E3%81%AE&#34; target=&#34;_blank&#34; &gt;CS50でC言語で課題を解いていたときも同様のハマり&lt;/a&gt;
-があったのであるあるかもしれない。普段書いている言語は簡単にオーバーフローしなかったり場合によっては静的解析で指摘してくれたりするのでなかなか気付くことができなかった。&lt;/p&gt;
+&lt;p&gt;実装に関しては整数型のオーバーフローが原因で数時間費やしてしまった。&lt;a href=&#34;https://blog.kyu08.com/posts/cs50-jp/#%E5%AD%A6%E3%81%B3%E3%82%84%E5%BE%97%E3%81%9F%E3%82%82%E3%81%AE&#34; target=&#34;_blank&#34; &gt;CS50でC言語で課題を解いていたときも同様のハマり&lt;/a&gt;があったのであるあるかもしれない。普段書いている言語は簡単にオーバーフローしなかったり場合によっては静的解析で指摘してくれたりするのでなかなか気付くことができなかった。&lt;/p&gt;
 &lt;h2 id=&#34;学び得た経験&#34;&gt;学び、得た経験&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;普段はWebアプリケーションばかり触っているので、それよりも数段下のレイヤーの解像度を上げることができた。今後新しい知識の習得やトラブルシューティングがスムーズになるといいなと思う。
@@ -984,10 +1101,8 @@ add
 &lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
 &lt;p&gt;『Goならわかるシステムプログラミング』を読んでからかなり気になっていた本だったので無事完走できてよかった。&lt;/p&gt;
 &lt;p&gt;最近のテーマであるCS力の強化をまた一歩進めることができた。&lt;/p&gt;
-&lt;p&gt;次は&lt;a href=&#34;https://www.sbcr.jp/product/4815618599/&#34; target=&#34;_blank&#34; &gt;『体験しながら学ぶ ネットワーク技術入門』&lt;/a&gt;
-でネットワークの理解を深めていこうかなと思う。&lt;/p&gt;
-&lt;p&gt;あとはソフトスキル系でいうと&lt;a href=&#34;https://www.oreilly.co.jp/books/9784814401116/&#34; target=&#34;_blank&#34; &gt;『エンジニアリングチームのリード術-―Googleに学ぶインディビジュアルコントリビューターとマネージャーのための実践ガイド』&lt;/a&gt;
-も良さそうなので読んでみようと思う。&lt;/p&gt;
+&lt;p&gt;次は&lt;a href=&#34;https://www.sbcr.jp/product/4815618599/&#34; target=&#34;_blank&#34; &gt;『体験しながら学ぶ ネットワーク技術入門』&lt;/a&gt;でネットワークの理解を深めていこうかなと思う。&lt;/p&gt;
+&lt;p&gt;あとはソフトスキル系でいうと&lt;a href=&#34;https://www.oreilly.co.jp/books/9784814401116/&#34; target=&#34;_blank&#34; &gt;『エンジニアリングチームのリード術-―Googleに学ぶインディビジュアルコントリビューターとマネージャーのための実践ガイド』&lt;/a&gt;も良さそうなので読んでみようと思う。&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
@@ -998,8 +1113,7 @@ add
 &lt;p&gt;Twitterを見ているとパーザと表記する流派も存在する模様&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:3&#34;&gt;
-&lt;p&gt;近い話が&lt;a href=&#34;https://blog.3qe.us/entry/2025/01/15/194843&#34; target=&#34;_blank&#34; &gt;何かがそれほど得意でなくても、世の中の平均よりは得意だと思っておいたほうがよい - Lambdaカクテル&lt;/a&gt;
-で綺麗に言語化されている。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;近い話が&lt;a href=&#34;https://blog.3qe.us/entry/2025/01/15/194843&#34; target=&#34;_blank&#34; &gt;何かがそれほど得意でなくても、世の中の平均よりは得意だと思っておいたほうがよい - Lambdaカクテル&lt;/a&gt;で綺麗に言語化されている。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
@@ -1016,10 +1130,30 @@ add
       <content>&lt;p&gt;『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11/4でコミットした日数としてはおおよそ24日ほどだった。)&lt;/p&gt;
 &lt;p&gt;筆者は情報系の学部を出ておらず、CSなどの基礎知識があまりないので大変勉強になった。また、サンプルコードが豊富なので実際に自分のマシン上で動かしながら学ぶことができ解像度を上げながら理解を深めることができた。&lt;/p&gt;
 &lt;p&gt;低レイヤ、コンピューターサイエンスの学習に興味がある方にはとてもおすすめなのでぜひ買って読んでみてください。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.lambdanote.com/products/go-2&#34; target=&#34;_blank&#34; &gt;https://www.lambdanote.com/products/go-2&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.lambdanote.com/products/go-2&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://www.lambdanote.com/products/go-2&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://www.lambdanote.com/products/go-2&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.lambdanote.com/products/go-2&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;手元で実行したコードは以下のリポジトリにまとめた。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/go-system-programming&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/go-system-programming&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/go-system-programming&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/go-system-programming&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/go-system-programming&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/go-system-programming&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;以下読書メモ。&lt;/p&gt;
 &lt;h2 id=&#34;第1章-go言語で覗くシステムプログラミングの世界&#34;&gt;第1章 Go言語で覗くシステムプログラミングの世界&lt;/h2&gt;
@@ -1160,8 +1294,7 @@ add
 &lt;h3 id=&#34;goに組み込まれているtcpの機能netconnだけを使ってhttpによる通信を実現する&#34;&gt;Goに組み込まれているTCPの機能（&lt;code&gt;net.Conn&lt;/code&gt;）だけを使ってHTTPによる通信を実現する&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;net.Conn&lt;/code&gt;だけを使ってTCPソケットの初期化や通信の確立などの普段なら&lt;code&gt;net/http&lt;/code&gt;がやってくれている部分を実装した。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;http.ListenAndServe()&lt;/code&gt;のコードを読んでみたら、&lt;a href=&#34;https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/net/http/server.go#L3258&#34; target=&#34;_blank&#34; &gt;golang/go/src/net/http/server.go#L3258&lt;/a&gt;
-で本書のハンズオンと同じようにTCPソケットの初期化を行っていることを確認できた。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http.ListenAndServe()&lt;/code&gt;のコードを読んでみたら、&lt;a href=&#34;https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/net/http/server.go#L3258&#34; target=&#34;_blank&#34; &gt;golang/go/src/net/http/server.go#L3258&lt;/a&gt;で本書のハンズオンと同じようにTCPソケットの初期化を行っていることを確認できた。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;素朴な実装の速度改善&#34;&gt;素朴な実装の速度改善&lt;/h3&gt;
 &lt;ul&gt;
@@ -1293,13 +1426,11 @@ add
 &lt;/ol&gt;
 &lt;p&gt;アクティブな方式の方がコード量は少ないが監視対象が増えるとCPU負荷やIO負荷が増える。&lt;/p&gt;
 &lt;p&gt;パッシブな方式はファイルの変更検知が各OSでシステムコールやAPUIとして提供されている一方で環境ごとのコード差は大きくなる。&lt;/p&gt;
-&lt;p&gt;ここでは &lt;a href=&#34;https://github.com/fsnotify/fsnotify&#34; target=&#34;_blank&#34; &gt;fsnotify/fsnotify.v1&lt;/a&gt;
-を用いてファイルの変更検知プログラムを作成した。&lt;/p&gt;
+&lt;p&gt;ここでは &lt;a href=&#34;https://github.com/fsnotify/fsnotify&#34; target=&#34;_blank&#34; &gt;fsnotify/fsnotify.v1&lt;/a&gt;を用いてファイルの変更検知プログラムを作成した。&lt;/p&gt;
 &lt;p&gt;fsnotify.v1では、Linuxの場合はinotify系APIが、BSD系OSの場合はkqueueが使われている。&lt;/p&gt;
 &lt;h3 id=&#34;ファイルのメモリへのマッピングsyscallmmap&#34;&gt;ファイルのメモリへのマッピング（&lt;code&gt;syscall.Mmap()&lt;/code&gt;）&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;syscall.Mmap()&lt;/code&gt;を使うことでファイルの中身をそのままメモリ上に展開したり、メモリ上で書き換えた内容をそのままファイルに書き込むことができる。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/edsrzf/mmap-go&#34; target=&#34;_blank&#34; &gt;edsrzf/mmap-go&lt;/a&gt;
-では&lt;code&gt;mmap.Map()&lt;/code&gt;を使うことでファイルをメモリに展開できる。&lt;code&gt;mmap.Map()&lt;/code&gt;は次のようなシグネチャを持つ。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/edsrzf/mmap-go&#34; target=&#34;_blank&#34; &gt;edsrzf/mmap-go&lt;/a&gt;では&lt;code&gt;mmap.Map()&lt;/code&gt;を使うことでファイルをメモリに展開できる。&lt;code&gt;mmap.Map()&lt;/code&gt;は次のようなシグネチャを持つ。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Map&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;f&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;os&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;File&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;prot&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;flags&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;) (&lt;span style=&#34;color:#a6e22e&#34;&gt;MMap&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;error&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;2つ目の引数に次のような値を指定することでメモリ領域に対して許可する操作を設定できる。&lt;/p&gt;
 &lt;ul&gt;
@@ -1359,8 +1490,7 @@ add
 &lt;/ul&gt;
 &lt;h3 id=&#34;プロセスの出力に色づけをする&#34;&gt;プロセスの出力に色づけをする&lt;/h3&gt;
 &lt;p&gt;プロセスの出力に色をつけたい場合には&lt;strong&gt;ANSIエスケープシーケンス&lt;/strong&gt;を使うことができる。&lt;/p&gt;
-&lt;p&gt;自分が利用したことある&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;Rustの&lt;a href=&#34;https://crates.io/crates/colored&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;colored&lt;/code&gt;&lt;/a&gt;
-クレートも確認したところ実際にANSIエスケープシーケンスを使ってターミナルに色をつけていた。&lt;/p&gt;
+&lt;p&gt;自分が利用したことある&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;Rustの&lt;a href=&#34;https://crates.io/crates/colored&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;colored&lt;/code&gt;&lt;/a&gt;クレートも確認したところ実際にANSIエスケープシーケンスを使ってターミナルに色をつけていた。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#[cfg_attr(feature = &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;no-color&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;, ignore)]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#[test]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;compute_style_simple_fg_blue&lt;/span&gt;() {
@@ -1368,7 +1498,17 @@ add
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        assert_eq!(blue, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;.blue().compute_style());
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811&#34; target=&#34;_blank&#34; &gt;https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811&lt;/a&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
  より&lt;/p&gt;
 &lt;p&gt;調べてみたところ&lt;code&gt;\x1B&lt;/code&gt;でも&lt;code&gt;\e&lt;/code&gt;でもエスケープシーケンスを表現できるらしい。&lt;sup id=&#34;fnref:7&#34;&gt;&lt;a href=&#34;#fn:7&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;7&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;h3 id=&#34;外部プロセスに対して自分が擬似端末だと詐称する&#34;&gt;外部プロセスに対して自分が擬似端末だと詐称する&lt;/h3&gt;
@@ -1597,8 +1737,7 @@ add
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	close(&lt;span style=&#34;color:#a6e22e&#34;&gt;f&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;receiver&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;イベントの流れを定義するreactivex&#34;&gt;イベントの流れを定義する：ReactiveX&lt;/h4&gt;
-&lt;p&gt;ここでは&lt;a href=&#34;https://github.com/ReactiveX/RxGo&#34; target=&#34;_blank&#34; &gt;RxGo&lt;/a&gt;
-を使ってイベントの流れを定義する方法が紹介されていた。
+&lt;p&gt;ここでは&lt;a href=&#34;https://github.com/ReactiveX/RxGo&#34; target=&#34;_blank&#34; &gt;RxGo&lt;/a&gt;を使ってイベントの流れを定義する方法が紹介されていた。
 まずこのようにwatcherを定義する。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;watcher&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;observer&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Observer&lt;/span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;NextHandler&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;item&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;any&lt;/span&gt;) {
@@ -1709,8 +1848,7 @@ add
 &lt;p&gt;以下はWikipediaによるリンカーの説明。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;a computer program that takes one or more object files generated by a compiler or generated by an assembler and links them with libraries, generating an executable program or shared library&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Linker&#34; target=&#34;_blank&#34; &gt;Linker - Wikipedia&lt;/a&gt;
- から引用&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Linker&#34; target=&#34;_blank&#34; &gt;Linker - Wikipedia&lt;/a&gt; から引用&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;上記を翻訳すると「コンパイラまたはアセンブラによって生成された1つ以上のオブジェクトファイルをライブラリと結合し実行可能ファイルまたは共有ライブラリを生成するプログラム」といった感じだろうか。&lt;/p&gt;
 &lt;p&gt;OSはリンカーが生成した実行ファイルがシェルから起動されると、実行ファイルの内容をメモリに配置する。&lt;/p&gt;
@@ -1799,41 +1937,66 @@ add
 &lt;li&gt;Linuxで動かしながら学ぶTCP/IPネットワーク入門&lt;/li&gt;
 &lt;li&gt;体系的に学ぶ 安全なWebアプリケーションの作り方&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;あるいは、 &lt;a href=&#34;https://blog.ojisan.io/server-architecture-2023/#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9-vs-%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89&#34; target=&#34;_blank&#34; &gt;Webサーバーアーキテクチャ進化論2023 - blog.ojisan.io&lt;/a&gt;
-を参考に学習ロードマップを立ててみるのもいいかもしれない。&lt;/p&gt;
+&lt;p&gt;あるいは、 &lt;a href=&#34;https://blog.ojisan.io/server-architecture-2023/#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9-vs-%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89&#34; target=&#34;_blank&#34; &gt;Webサーバーアーキテクチャ進化論2023 - blog.ojisan.io&lt;/a&gt;を参考に学習ロードマップを立ててみるのもいいかもしれない。&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;Neovimでのデバッガの環境構築は &lt;a href=&#34;https://zenn.dev/saito9/articles/32c57f776dc369&#34; target=&#34;_blank&#34; &gt;nvim-dapでGolangのデバッグ環境構築&lt;/a&gt;
- を参考にした&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Neovimでのデバッガの環境構築は &lt;a href=&#34;https://zenn.dev/saito9/articles/32c57f776dc369&#34; target=&#34;_blank&#34; &gt;nvim-dapでGolangのデバッグ環境構築&lt;/a&gt; を参考にした&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:2&#34;&gt;
-&lt;p&gt;&lt;code&gt;Sysfd&lt;/code&gt;の定義はgolang/go/src/internal/poll/fd_unix.go#L23(&lt;a href=&#34;https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23&#34; target=&#34;_blank&#34; &gt;https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23&lt;/a&gt;
+&lt;p&gt;&lt;code&gt;Sysfd&lt;/code&gt;の定義はgolang/go/src/internal/poll/fd_unix.go#L23(&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 ) にある。&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:3&#34;&gt;
-&lt;p&gt;&lt;code&gt;io.Pipe&lt;/code&gt;の使いどころに関しては &lt;a href=&#34;https://medium.com/eureka-engineering/file-uploads-in-go-with-io-pipe-75519dfa647b&#34; target=&#34;_blank&#34; &gt;Go言語のio.Pipeでファイルを効率よくアップロードする方法&lt;/a&gt;
- が大変参考になった。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;io.Pipe&lt;/code&gt;の使いどころに関しては &lt;a href=&#34;https://medium.com/eureka-engineering/file-uploads-in-go-with-io-pipe-75519dfa647b&#34; target=&#34;_blank&#34; &gt;Go言語のio.Pipeでファイルを効率よくアップロードする方法&lt;/a&gt; が大変参考になった。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:4&#34;&gt;
-&lt;p&gt;cf. &lt;a href=&#34;https://github.com/kyu08/go-system-programming/blob/b9da4a0ce759b2df4ce884ab61248fb893b60bef/4-channel/unbufferedchannel/main.go#L8&#34; target=&#34;_blank&#34; &gt;kyu08/go-system-programming/4-channel/unbufferedchannel/main.go#L8&lt;/a&gt;
-&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;cf. &lt;a href=&#34;https://github.com/kyu08/go-system-programming/blob/b9da4a0ce759b2df4ce884ab61248fb893b60bef/4-channel/unbufferedchannel/main.go#L8&#34; target=&#34;_blank&#34; &gt;kyu08/go-system-programming/4-channel/unbufferedchannel/main.go#L8&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:5&#34;&gt;
 &lt;p&gt;Distrolessに対して「コンテナイメージが軽量になる」以外のメリットを感じていなかったが書かれている通りセキュリティ面でもメリットがあると気付いた。&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:6&#34;&gt;
-&lt;p&gt;fzf-makeの出力の一部に色を付けるために使っている。 &lt;a href=&#34;https://github.com/kyu08/fzf-make/blob/12789acd19bc24daa60ba7eb84973dab18fe7a52/src/usecase/execute_make_command.rs#L5&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/fzf-make/blob/12789acd19bc24daa60ba7eb84973dab18fe7a52/src/usecase/execute_make_command.rs#L5&lt;/a&gt;
+&lt;p&gt;fzf-makeの出力の一部に色を付けるために使っている。 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-make/blob/12789acd19bc24daa60ba7eb84973dab18fe7a52/src/usecase/execute_make_command.rs#L5&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/fzf-make/blob/12789acd19bc24daa60ba7eb84973dab18fe7a52/src/usecase/execute_make_command.rs#L5&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/fzf-make/blob/12789acd19bc24daa60ba7eb84973dab18fe7a52/src/usecase/execute_make_command.rs#L5&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-make/blob/12789acd19bc24daa60ba7eb84973dab18fe7a52/src/usecase/execute_make_command.rs#L5&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &amp;#160;&lt;a href=&#34;#fnref:6&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:7&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://ufcpp.net/blog/2023/12/escape-escape/&#34; target=&#34;_blank&#34; &gt;https://ufcpp.net/blog/2023/12/escape-escape/&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://ufcpp.net/blog/2023/12/escape-escape/&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://ufcpp.net/blog/2023/12/escape-escape/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://ufcpp.net/blog/2023/12/escape-escape/&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://ufcpp.net/blog/2023/12/escape-escape/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &amp;#160;&lt;a href=&#34;#fnref:7&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:8&#34;&gt;
-&lt;p&gt;仮想メモリ空間についてはκeenさんのこちらの記事がとてもわかりやすかった。&lt;a href=&#34;https://keens.github.io/blog/2017/04/30/memoritosutakkutohi_puto/&#34; target=&#34;_blank&#34; &gt;メモリとスタックとヒープとプログラミング言語&lt;/a&gt;
-&amp;#160;&lt;a href=&#34;#fnref:8&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;仮想メモリ空間についてはκeenさんのこちらの記事がとてもわかりやすかった。&lt;a href=&#34;https://keens.github.io/blog/2017/04/30/memoritosutakkutohi_puto/&#34; target=&#34;_blank&#34; &gt;メモリとスタックとヒープとプログラミング言語&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:8&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
@@ -1898,14 +2061,12 @@ add
 &lt;h3 id=&#34;244-リンクテキストをこちらにしないp35&#34;&gt;2.4.4 リンクテキストを「こちら」にしない（P35）&lt;/h3&gt;
 &lt;p&gt;リンク切れになったときやテキストだけコピーされたときにリンク先がどこを指しているのかわからなくなるため、以下のようにどういったページなのかも含めて書くのがいいとのこと。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;また「詳しくは&lt;a href=&#34;https://blog.kyu08.com/pr-246/BankCodeAPI/reference/&#34; &gt;Shops APIのAPIリファレンス&lt;/a&gt;
-をご覧ください」&lt;/p&gt;
+&lt;p&gt;また「詳しくは&lt;a href=&#34;https://blog.kyu08.com/pr-246/BankCodeAPI/reference/&#34; &gt;Shops APIのAPIリファレンス&lt;/a&gt;をご覧ください」&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;また、読み手としてもリンクを踏む前にどんなページへ飛ばされるのかわかるというメリットも紹介されていた。&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;具体的な知見が理由とセットで書いてあってとても勉強になった。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;チームで仕事をする上で認知負荷を下げる工夫の重要性を日々感じるのでこれから意識的に実践していきたい。&lt;/p&gt;
-&lt;p&gt;紹介したトピック以外にもたくさんの知見が紹介されていたので気になった方はこちらからぜひ購入してみてください。 &lt;a href=&#34;https://techbookfest.org/product/3t8AGqtB65jsPtPhx6m5fr&#34; target=&#34;_blank&#34; &gt;こちら&lt;/a&gt;
- &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;紹介したトピック以外にもたくさんの知見が紹介されていたので気になった方はこちらからぜひ購入してみてください。 &lt;a href=&#34;https://techbookfest.org/product/3t8AGqtB65jsPtPhx6m5fr&#34; target=&#34;_blank&#34; &gt;こちら&lt;/a&gt; &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
@@ -1913,8 +2074,7 @@ add
 &lt;p&gt;余談だがちゃんと理由まで書かれているとスムーズに理解できるのでちゃんと背景や理由を説明するのは重要だと感じた。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:2&#34;&gt;
-&lt;p&gt;冗談です。リンクテキストにはリンクの内容がわかるようなものにしましょう。購入はこちらから。 &lt;a href=&#34;https://techbookfest.org/product/3t8AGqtB65jsPtPhx6m5fr&#34; target=&#34;_blank&#34; &gt;読み手につたわる文章 - テクニカルライティング - 技術書典マーケット&lt;/a&gt;
-&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;冗談です。リンクテキストにはリンクの内容がわかるようなものにしましょう。購入はこちらから。 &lt;a href=&#34;https://techbookfest.org/product/3t8AGqtB65jsPtPhx6m5fr&#34; target=&#34;_blank&#34; &gt;読み手につたわる文章 - テクニカルライティング - 技術書典マーケット&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
@@ -2173,8 +2333,7 @@ add
 &lt;p&gt;新しい技術や概念の理解に時間がかかるとついつい仮想上の優秀な人と自分を比べて「はやくインプットしてはやくアウトプットを出さなければ」と焦るのをたまにやってしまうが「&lt;strong&gt;優秀な人でも物事を正確に理解するには時間がかかることもある&lt;/strong&gt;」という心持ちでいるだけで焦らず着実にインプットしていけそうだと感じた。&lt;/p&gt;
 &lt;p&gt;そうして「正確に理解している概念」が増えていくほど新しい概念を理解する速度も向上するはずなので焦らず地道に理解することに努めたい。（もちろん時間的制約があるケースもあるので一概には言えないが）&lt;/p&gt;
 &lt;p&gt;このトピックに関しては以下の記事にもあるのでもし気になったら読んでみて欲しい。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://note.com/simplearchitect/n/n388201603a28&#34; target=&#34;_blank&#34; &gt;プログラミングというより物事が出来るようになる思考法｜牛尾　剛&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://note.com/simplearchitect/n/n388201603a28&#34; target=&#34;_blank&#34; &gt;プログラミングというより物事が出来るようになる思考法｜牛尾　剛&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;完全に余談だが、優秀な人をリスペクトしすぎると「自分とあの人は違うしな・・・」と自分にはそういった人のような素晴らしいアウトプットは出せないという思い込みを持ってしまいがちなので自分を卑下せずかといって奢りもせずフラットな気持ちで自分を励ましまくっていきたい。&lt;/p&gt;
 &lt;h2 id=&#34;be-lazy怠惰であれ&#34;&gt;Be Lazy(怠惰であれ)&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;より少ない時間で価値を最大化する&lt;/strong&gt;という考え方。これを体現するために習慣として次が紹介されていた。&lt;/p&gt;
@@ -2345,8 +2504,7 @@ add
       
       <guid>https://blog.kyu08.com/pr-246/posts/consultant/</guid>
       <description>コンサル一年目が学ぶこと を読んだ。 何を期待して読んだのか これまで技術の勉強はしたことがあったが、社会人として普遍的なスキルである 問題解決能力</description>
-      <content>&lt;p&gt;&lt;a href=&#34;https://www.amazon.co.jp/%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%AB%E4%B8%80%E5%B9%B4%E7%9B%AE%E3%81%8C%E5%AD%A6%E3%81%B6%E3%81%93%E3%81%A8-%E5%A4%A7%E7%9F%B3%E5%93%B2%E4%B9%8B-ebook/dp/B00MA671WW/ref=sr_1_5?adgrpid=89884031168&amp;amp;gclid=CjwKCAiAhreNBhAYEiwAFGGKPLfeLxQ_KIeJv22itv63KSRBjnAb3p0hH0Q0JvgN6FzTeD2J6dcsQBoCs3QQAvD_BwE&amp;amp;hvadid=553974437471&amp;amp;hvdev=c&amp;amp;hvlocphy=1009307&amp;amp;hvnetw=g&amp;amp;hvqmt=e&amp;amp;hvrand=17984675329684059400&amp;amp;hvtargid=kwd-416077613251&amp;amp;hydadcr=27493_14478962&amp;amp;jp-ad-ap=0&amp;amp;keywords=%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%AB&amp;#43;%E4%B8%80&amp;#43;%E5%B9%B4&amp;#43;%E7%9B%AE&amp;#43;%E3%81%8C&amp;#43;%E5%AD%A6%E3%81%B6&amp;#43;%E3%81%93%E3%81%A8&amp;amp;qid=1638793971&amp;amp;sr=8-5&#34; target=&#34;_blank&#34; &gt;コンサル一年目が学ぶこと&lt;/a&gt;
- を読んだ。&lt;/p&gt;
+      <content>&lt;p&gt;&lt;a href=&#34;https://www.amazon.co.jp/%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%AB%E4%B8%80%E5%B9%B4%E7%9B%AE%E3%81%8C%E5%AD%A6%E3%81%B6%E3%81%93%E3%81%A8-%E5%A4%A7%E7%9F%B3%E5%93%B2%E4%B9%8B-ebook/dp/B00MA671WW/ref=sr_1_5?adgrpid=89884031168&amp;amp;gclid=CjwKCAiAhreNBhAYEiwAFGGKPLfeLxQ_KIeJv22itv63KSRBjnAb3p0hH0Q0JvgN6FzTeD2J6dcsQBoCs3QQAvD_BwE&amp;amp;hvadid=553974437471&amp;amp;hvdev=c&amp;amp;hvlocphy=1009307&amp;amp;hvnetw=g&amp;amp;hvqmt=e&amp;amp;hvrand=17984675329684059400&amp;amp;hvtargid=kwd-416077613251&amp;amp;hydadcr=27493_14478962&amp;amp;jp-ad-ap=0&amp;amp;keywords=%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%AB&amp;#43;%E4%B8%80&amp;#43;%E5%B9%B4&amp;#43;%E7%9B%AE&amp;#43;%E3%81%8C&amp;#43;%E5%AD%A6%E3%81%B6&amp;#43;%E3%81%93%E3%81%A8&amp;amp;qid=1638793971&amp;amp;sr=8-5&#34; target=&#34;_blank&#34; &gt;コンサル一年目が学ぶこと&lt;/a&gt; を読んだ。&lt;/p&gt;
 &lt;h2 id=&#34;何を期待して読んだのか&#34;&gt;何を期待して読んだのか&lt;/h2&gt;
 &lt;p&gt;これまで技術の勉強はしたことがあったが、社会人として普遍的なスキルである&lt;/p&gt;
 &lt;ul&gt;

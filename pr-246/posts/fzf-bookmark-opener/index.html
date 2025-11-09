@@ -6,7 +6,7 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="つくったもの yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った。 https://github.com/kyu08/fzf-bookmark-opener こんな感じで動く。 コードの" />
+<meta name="description" content="つくったもの yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った。 https://github.com/kyu08/fzf-bookmark-openerhttps://github.com/kyu08/fzf-bookmark-opener こんな感じで動く。 コードの" />
 <meta name="keywords" content=", " />
 
   <meta name="robots" content="noodp" />
@@ -92,7 +92,7 @@ if (!doNotTrack) {
 <meta property="og:locale" content="ja" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="yamlに定義したbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った">
-<meta property="og:description" content="つくったもの yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った。 https://github.com/kyu08/fzf-bookmark-opener こんな感じで動く。 コードの" />
+<meta property="og:description" content="つくったもの yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った。 https://github.com/kyu08/fzf-bookmark-openerhttps://github.com/kyu08/fzf-bookmark-opener こんな感じで動く。 コードの" />
 <meta property="og:url" content="https://blog.kyu08.com/pr-246/posts/fzf-bookmark-opener/" />
 <meta property="og:site_name" content="blog.kyu08.com" />
 
@@ -254,7 +254,17 @@ if (!doNotTrack) {
   <div class="post-content"><div>
         <h2 id="つくったもの">つくったもの<a href="#つくったもの" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った。</p>
-<p><a href="https://github.com/kyu08/fzf-bookmark-opener" target="_blank" >https://github.com/kyu08/fzf-bookmark-opener</a>
+<p><div class="blogcard" data-url="https://github.com/kyu08/fzf-bookmark-opener" data-auto-fetch="true">
+  <a href="https://github.com/kyu08/fzf-bookmark-opener" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/kyu08/fzf-bookmark-opener</div><div class="blogcard-url">https://github.com/kyu08/fzf-bookmark-opener</div>
+    </div>
+  </a>
+</div>
 </p>
 <p>こんな感じで動く。</p>
 <p><img src="https://user-images.githubusercontent.com/49891479/218272272-e693c10d-c810-458a-bf46-9c3a4a2fe45a.gif" alt="demo"></p>
@@ -267,24 +277,31 @@ if (!doNotTrack) {
 <li>選択されたブックマークをブラウザで開く</li>
 </ol>
 <p>ということをやっているだけである。(<code>main.go</code>に120行弱だけという素朴なコード量)</p>
-<p><a href="https://github.com/kyu08/fzf-bookmark-opener/blob/69313bf187dcfd6127efcf75e172a34fb9b8e05a/main.go#L38-L60" target="_blank" >fzf-bookmark-opener/main.go at main · kyu08/fzf-bookmark-opener</a>
-</p>
+<p><a href="https://github.com/kyu08/fzf-bookmark-opener/blob/69313bf187dcfd6127efcf75e172a34fb9b8e05a/main.go#L38-L60" target="_blank" >fzf-bookmark-opener/main.go at main · kyu08/fzf-bookmark-opener</a></p>
 <p>この記述量で作れたのは間違いなくktr0731/go-fuzzyfinderのおかげでした。このライブラリのおかげでgoのコードからfzfを簡単に呼び出すことができました。というかなんならこのライブラリの存在を知ったので使ってみたくなってfzf-bookmark-openerを作ったみたいなとこもあります。ありがとうございます。</p>
-<p><a href="https://github.com/ktr0731/go-fuzzyfinder" target="_blank" >ktr0731/go-fuzzyfinder</a>
-</p>
+<p><a href="https://github.com/ktr0731/go-fuzzyfinder" target="_blank" >ktr0731/go-fuzzyfinder</a></p>
 <h2 id="ちゃっかりbrewでも公開してみた">ちゃっかりbrewでも公開してみた<a href="#ちゃっかりbrewでも公開してみた" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>brewでインストールできるに越したことはないだろうってことで、brewでも公開してみたが思いのほか簡単だった。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>brew tap kyu08/tap
 </span></span><span style="display:flex;"><span>brew install kyu08/tap/fzf-bookmark-opener
 </span></span></code></pre></div><p>これだけでインストールできるので気になった方もそうでない方もぜひ。issueやPRもお待ちしています。(<code>go install</code>でインストールしたい方はこちら(<code>go install github.com/kyu08/fzf-bookmark-opener@latest</code>))</p>
 <p>brew公開に関してはこちらのブログを参考にしたら30分弱でサクッと公開できた(想像より簡単だった)</p>
-<p><a href="https://www.rasukarusan.com/entry/2019/11/03/211338" target="_blank" >https://www.rasukarusan.com/entry/2019/11/03/211338</a>
+<p><div class="blogcard" data-url="https://www.rasukarusan.com/entry/2019/11/03/211338" data-auto-fetch="true">
+  <a href="https://www.rasukarusan.com/entry/2019/11/03/211338" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://www.rasukarusan.com/entry/2019/11/03/211338</div><div class="blogcard-url">https://www.rasukarusan.com/entry/2019/11/03/211338</div>
+    </div>
+  </a>
+</div>
 </p>
 <p>詳細は↑の記事を読んでいただければわかるが、リリースにバイナリを含めて配布用のrepositoryを作るだけなので本当に簡単だったのでツールを配布したい人はぜひ。</p>
 <h2 id="ちゃっかりヘルパースクリプトも公開した">ちゃっかりヘルパースクリプトも公開した<a href="#ちゃっかりヘルパースクリプトも公開した" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>現在お仕事ではGCPを使っているんですが、GCPのコンソールをプロジェクト、サービスを指定して直接開きたいことが多いのでプロジェクトのリストを渡すとGCPの主要なサービス(主観)のURL一覧をfzf-bookmark-openerの設定ファイルの形式で吐いてくれるスクリプトも公開した。</p>
-<p><a href="https://github.com/kyu08/gcp-url-generator" target="_blank" >kyu08/gcp-url-generator</a>
-</p>
+<p><a href="https://github.com/kyu08/gcp-url-generator" target="_blank" >kyu08/gcp-url-generator</a></p>
 <p>project名のリストとregionを渡すとこういう文字列を吐いてくれるイメージ。(以下は出力の一部)(この例だとregionは関係ない)</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>  - <span style="color:#f92672">title</span>: <span style="color:#e6db74">&#39;Home stg&#39;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">url</span>: <span style="color:#e6db74">&#39;https://console.cloud.google.com/home/dashboard?project=stg&#39;</span>
@@ -326,21 +343,28 @@ if (!doNotTrack) {
 <li>Firebase Hosting</li>
 <li>Firebase Remote Config</li>
 </ul>
-<p>これで生成したURLをfzf-bookmark-openerに食わせるとお使いのGCPプロジェクトの特定のサービスがコマンドラインからサクッと開くことができる。(詳しくは<a href="https://github.com/kyu08/gcp-url-generator" target="_blank" >kyu08/gcp-url-generatorのREADME</a>
-を参照)
+<p>これで生成したURLをfzf-bookmark-openerに食わせるとお使いのGCPプロジェクトの特定のサービスがコマンドラインからサクッと開くことができる。(詳しくは<a href="https://github.com/kyu08/gcp-url-generator" target="_blank" >kyu08/gcp-url-generatorのREADME</a>を参照)
 こちらもissueやPRお待ちしてます。</p>
 <h2 id="余談1">余談1<a href="#余談1" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>Rustだとlotabout/skimを使うとktr0731/go-fuzzyfinderと同じようなことができるらしい。最近Rust熱が高まりに高まっている(Tour of Rustやり中)ので次に何かCLIでfzfなツールをつくるときは使ってみようと思う。</p>
-<p><a href="https://github.com/lotabout/skim" target="_blank" >lotabout/skim</a>
-</p>
+<p><a href="https://github.com/lotabout/skim" target="_blank" >lotabout/skim</a></p>
 <p>[追記]
 Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった。</p>
-<p><a href="https://github.com/kyu08/fzf-make" target="_blank" >kyu08/fzf-make</a>
-</p>
+<p><a href="https://github.com/kyu08/fzf-make" target="_blank" >kyu08/fzf-make</a></p>
 <h2 id="余談2">余談2<a href="#余談2" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>ふと気になってktr0731/go-fuzzyfinderをはじめとする依存ライブラリのライセンス表示はどうすればいいか気になって調べてみたところリポジトリに<code>NOTICES</code>とか<code>CREDITS</code>とか<code>ThirdPartyNotices</code>みたいなファイルを置いてそこに依存ライブラリの著作権・ライセンス表示をするのが一般的なようだった。</p>
 <p>手作業でやるのは辛いので自動生成ツールを探したところGoだとこれが使いやすそうだったので使ってみたけど簡単でとてもよかった。ありがたや&hellip;。</p>
-<p><a href="https://github.com/Songmu/gocredits" target="_blank" >https://github.com/Songmu/gocredits</a>
+<p><div class="blogcard" data-url="https://github.com/Songmu/gocredits" data-auto-fetch="true">
+  <a href="https://github.com/Songmu/gocredits" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/Songmu/gocredits</div><div class="blogcard-url">https://github.com/Songmu/gocredits</div>
+    </div>
+  </a>
+</div>
 </p>
 <h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>ktr0731/go-fuzzyfinderはいいぞ〜</p>

@@ -14,14 +14,23 @@
       <pubDate>Sun, 17 Mar 2024 13:06:40 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/pr-246/posts/add-comment-section-to-this-blog/</guid>
-      <description>このブログにコメント欄を設置した。 utterance/utterances というGitHubのIssuesへのコメントを記事のコメント欄として使えるようにしてくれるOSSのツール</description>
+      <description>このブログにコメント欄を設置した。 utterance/utterancesというGitHubのIssuesへのコメントを記事のコメント欄とし</description>
       <content>&lt;p&gt;このブログにコメント欄を設置した。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/utterance/utterances&#34; target=&#34;_blank&#34; &gt;utterance/utterances&lt;/a&gt;
-というGitHubのIssuesへのコメントを記事のコメント欄として使えるようにしてくれるOSSのツールを使っている。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/utterance/utterances&#34; target=&#34;_blank&#34; &gt;utterance/utterances&lt;/a&gt;というGitHubのIssuesへのコメントを記事のコメント欄として使えるようにしてくれるOSSのツールを使っている。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;導入に必要だったのは&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;コメント用のリポジトリ作成&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://utteranc.es/&#34; target=&#34;_blank&#34; &gt;https://utteranc.es/&lt;/a&gt;
+&lt;li&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://utteranc.es/&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://utteranc.es/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://utteranc.es/&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://utteranc.es/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 でscriptタグを生成&lt;/li&gt;
 &lt;li&gt;生成したタグをブログに埋め込む&lt;/li&gt;
 &lt;/ol&gt;
@@ -32,11 +41,31 @@
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.orhun.dev/&#34; target=&#34;_blank&#34; &gt;https://blog.orhun.dev/&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://blog.orhun.dev/&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://blog.orhun.dev/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://blog.orhun.dev/&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://blog.orhun.dev/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 で使われていていいなと思ったのでこのブログでも導入してみた。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:2&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/blog-comments&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/blog-comments&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/blog-comments&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/blog-comments&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/blog-comments&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/blog-comments&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -51,8 +80,7 @@
       
       <guid>https://blog.kyu08.com/pr-246/posts/hugo-theme-terminal-ogp-config/</guid>
       <description>hugo-theme-terminal でOGPの設定に少し詰まったのでやったことを書いておく。 前提 hugo version: hugo v0.112.5+extended darwin/arm64 困り 筆者はカバー画像を記事一覧・記事詳細画面に表示したくない、かつO</description>
-      <content>&lt;p&gt;&lt;a href=&#34;https://github.com/panr/hugo-theme-terminal&#34; target=&#34;_blank&#34; &gt;hugo-theme-terminal&lt;/a&gt;
- でOGPの設定に少し詰まったのでやったことを書いておく。&lt;/p&gt;
+      <content>&lt;p&gt;&lt;a href=&#34;https://github.com/panr/hugo-theme-terminal&#34; target=&#34;_blank&#34; &gt;hugo-theme-terminal&lt;/a&gt; でOGPの設定に少し詰まったのでやったことを書いておく。&lt;/p&gt;
 &lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;hugo version: &lt;code&gt;hugo v0.112.5+extended darwin/arm64&lt;/code&gt;&lt;/li&gt;
@@ -84,8 +112,7 @@
       <content>&lt;p&gt;ブログ用によくGifをつくるので自分用の備忘録代わりに手順を記しておく。&lt;/p&gt;
 &lt;h2 id=&#34;追記20231129&#34;&gt;追記(2023/11/29)&lt;/h2&gt;
 &lt;p&gt;下記の方法だと生成後のgifに格子模様のようなものが入ってしまうので以下の記事で紹介されているffmpegを使った方法を使うようにしたところ綺麗なgifが生成できるようになった。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://qiita.com/takasp/items/65d1d0d90073bcfc4873&#34; target=&#34;_blank&#34; &gt;Mac で GIF 画像を作る技術 - Qiita&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://qiita.com/takasp/items/65d1d0d90073bcfc4873&#34; target=&#34;_blank&#34; &gt;Mac で GIF 画像を作る技術 - Qiita&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;動画内で使用している色を最適化するために、パレット画像を生成します。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i input.mov -vf &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;palettegen&amp;#34;&lt;/span&gt; -y palette.png
@@ -97,10 +124,8 @@
 &lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;macOS&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://getkap.co/&#34; target=&#34;_blank&#34; &gt;Kap&lt;/a&gt;
-がインストールされていること&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/keycastr/keycastr&#34; target=&#34;_blank&#34; &gt;Keycastr&lt;/a&gt;
-がインストールされていること&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://getkap.co/&#34; target=&#34;_blank&#34; &gt;Kap&lt;/a&gt;がインストールされていること&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/keycastr/keycastr&#34; target=&#34;_blank&#34; &gt;Keycastr&lt;/a&gt;がインストールされていること&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;手順&#34;&gt;手順&lt;/h2&gt;
 &lt;h3 id=&#34;1-keycastrを起動&#34;&gt;1. Keycastrを起動&lt;/h3&gt;

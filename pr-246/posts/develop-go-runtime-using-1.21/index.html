@@ -6,7 +6,7 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="gc(go compiler)のコード（具体的にはgo/src/cmd/compile 配下）を読むために必要な手順があったのでメモ代わりに書いておく。" />
+<meta name="description" content="gc(go compiler)のコード（具体的にはgo/src/cmd/compile配下）を読むために必要な手順があったのでメモ代わりに書いておく。" />
 <meta name="keywords" content="go, neovim" />
 
   <meta name="robots" content="noodp" />
@@ -92,7 +92,7 @@ if (!doNotTrack) {
 <meta property="og:locale" content="ja" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="go/src/cmdでLSPが動作するようにするメモ">
-<meta property="og:description" content="gc(go compiler)のコード（具体的にはgo/src/cmd/compile 配下）を読むために必要な手順があったのでメモ代わりに書いておく。" />
+<meta property="og:description" content="gc(go compiler)のコード（具体的にはgo/src/cmd/compile配下）を読むために必要な手順があったのでメモ代わりに書いておく。" />
 <meta property="og:url" content="https://blog.kyu08.com/pr-246/posts/develop-go-runtime-using-1.21/" />
 <meta property="og:site_name" content="blog.kyu08.com" />
 
@@ -241,11 +241,20 @@ if (!doNotTrack) {
   
 
   <div class="post-content"><div>
-        <p>gc(go compiler)のコード（具体的には<a href="https://github.com/golang/go/tree/master/src/cmd/compile" target="_blank" ><code>go/src/cmd/compile</code></a>
-配下）を読むために必要な手順があったのでメモ代わりに書いておく。neovimでしか確認していないが他のエディタでもきっと同じような感じなはず。</p>
+        <p>gc(go compiler)のコード（具体的には<a href="https://github.com/golang/go/tree/master/src/cmd/compile" target="_blank" ><code>go/src/cmd/compile</code></a>配下）を読むために必要な手順があったのでメモ代わりに書いておく。neovimでしか確認していないが他のエディタでもきっと同じような感じなはず。</p>
 <h2 id="packagesload-error-err-exit-status-2-stderr-panic-runtime-error-index-out-of-range--1--goroutine-1-running-cmdgointernallistcollectdepserrors"><code>packages.Load error: err: exit status 2: stderr: panic: runtime error: index out of range [-1]  goroutine 1 [running]: cmd/go/internal/list.collectDepsErrors...</code><a href="#packagesload-error-err-exit-status-2-stderr-panic-runtime-error-index-out-of-range--1--goroutine-1-running-cmdgointernallistcollectdepserrors" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>というエラーを出力してLSPが停止する。go1.21.0のバグだった模様。</p>
-<p><a href="https://github.com/golang/go/issues/61816" target="_blank" >https://github.com/golang/go/issues/61816</a>
+<p><div class="blogcard" data-url="https://github.com/golang/go/issues/61816" data-auto-fetch="true">
+  <a href="https://github.com/golang/go/issues/61816" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/golang/go/issues/61816</div><div class="blogcard-url">https://github.com/golang/go/issues/61816</div>
+    </div>
+  </a>
+</div>
 </p>
 <p>ローカルのgoをgo1.21.1に上げることでエラーが解決した。</p>
 <h2 id="error-loading-workspace-folders-expected-1-got-0-failed-to-load-view-for-filepathtorepogosrccmd-err-exit-status-1-stderr-go-downloading-go122-darwinarm64-go-download-go122-for-darwinarm64-toolchain-not-available"><code>Error loading workspace folders (expected 1, got 0) failed to load view for file:///path/to/repo/go/src/cmd: err: exit status 1: stderr: go: downloading go1.22 (darwin/arm64) go: download go1.22 for darwin/arm64: toolchain not available</code><a href="#error-loading-workspace-folders-expected-1-got-0-failed-to-load-view-for-filepathtorepogosrccmd-err-exit-status-1-stderr-go-downloading-go122-darwinarm64-go-download-go122-for-darwinarm64-toolchain-not-available" class="hanchor" ariaLabel="Anchor">#</a> </h2>

@@ -6,7 +6,7 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="このブログにコメント欄を設置した。 utterance/utterances というGitHubのIssuesへのコメントを記事のコメント欄として使えるようにしてくれるOSSのツール" />
+<meta name="description" content="このブログにコメント欄を設置した。 utterance/utterancesというGitHubのIssuesへのコメントを記事のコメント欄とし" />
 <meta name="keywords" content="blog, utterances" />
 
   <meta name="robots" content="noodp" />
@@ -92,7 +92,7 @@ if (!doNotTrack) {
 <meta property="og:locale" content="ja" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="GitHub Issuesをサイトのコメント欄として活用できるutterancesを導入した">
-<meta property="og:description" content="このブログにコメント欄を設置した。 utterance/utterances というGitHubのIssuesへのコメントを記事のコメント欄として使えるようにしてくれるOSSのツール" />
+<meta property="og:description" content="このブログにコメント欄を設置した。 utterance/utterancesというGitHubのIssuesへのコメントを記事のコメント欄とし" />
 <meta property="og:url" content="https://blog.kyu08.com/pr-246/posts/add-comment-section-to-this-blog/" />
 <meta property="og:site_name" content="blog.kyu08.com" />
 
@@ -214,7 +214,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2024/03/17</time>
       
-    <span class="post-reading-time">1 min read (309 words)</span></div>
+    <span class="post-reading-time">1 min read (328 words)</span></div>
 
   
     <span class="post-tags">
@@ -241,12 +241,21 @@ if (!doNotTrack) {
 
   <div class="post-content"><div>
         <p>このブログにコメント欄を設置した。</p>
-<p><a href="https://github.com/utterance/utterances" target="_blank" >utterance/utterances</a>
-というGitHubのIssuesへのコメントを記事のコメント欄として使えるようにしてくれるOSSのツールを使っている。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p><a href="https://github.com/utterance/utterances" target="_blank" >utterance/utterances</a>というGitHubのIssuesへのコメントを記事のコメント欄として使えるようにしてくれるOSSのツールを使っている。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <p>導入に必要だったのは</p>
 <ol>
 <li>コメント用のリポジトリ作成<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></li>
-<li><a href="https://utteranc.es/" target="_blank" >https://utteranc.es/</a>
+<li><div class="blogcard" data-url="https://utteranc.es/" data-auto-fetch="true">
+  <a href="https://utteranc.es/" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://utteranc.es/</div><div class="blogcard-url">https://utteranc.es/</div>
+    </div>
+  </a>
+</div>
 でscriptタグを生成</li>
 <li>生成したタグをブログに埋め込む</li>
 </ol>
@@ -257,11 +266,31 @@ if (!doNotTrack) {
 <hr>
 <ol>
 <li id="fn:1">
-<p><a href="https://blog.orhun.dev/" target="_blank" >https://blog.orhun.dev/</a>
+<p><div class="blogcard" data-url="https://blog.orhun.dev/" data-auto-fetch="true">
+  <a href="https://blog.orhun.dev/" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://blog.orhun.dev/</div><div class="blogcard-url">https://blog.orhun.dev/</div>
+    </div>
+  </a>
+</div>
 で使われていていいなと思ったのでこのブログでも導入してみた。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2">
-<p><a href="https://github.com/kyu08/blog-comments" target="_blank" >https://github.com/kyu08/blog-comments</a>
+<p><div class="blogcard" data-url="https://github.com/kyu08/blog-comments" data-auto-fetch="true">
+  <a href="https://github.com/kyu08/blog-comments" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/kyu08/blog-comments</div><div class="blogcard-url">https://github.com/kyu08/blog-comments</div>
+    </div>
+  </a>
+</div>
 &#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>

@@ -214,7 +214,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2024/11/03</time>
       
-    <span class="post-reading-time">34 min read (16623 words)</span></div>
+    <span class="post-reading-time">34 min read (16582 words)</span></div>
 
   
     <span class="post-tags">
@@ -357,10 +357,30 @@ if (!doNotTrack) {
         <p>『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11/4でコミットした日数としてはおおよそ24日ほどだった。)</p>
 <p>筆者は情報系の学部を出ておらず、CSなどの基礎知識があまりないので大変勉強になった。また、サンプルコードが豊富なので実際に自分のマシン上で動かしながら学ぶことができ解像度を上げながら理解を深めることができた。</p>
 <p>低レイヤ、コンピューターサイエンスの学習に興味がある方にはとてもおすすめなのでぜひ買って読んでみてください。</p>
-<p><a href="https://www.lambdanote.com/products/go-2" target="_blank" >https://www.lambdanote.com/products/go-2</a>
+<p><div class="blogcard" data-url="https://www.lambdanote.com/products/go-2" data-auto-fetch="true">
+  <a href="https://www.lambdanote.com/products/go-2" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://www.lambdanote.com/products/go-2</div><div class="blogcard-url">https://www.lambdanote.com/products/go-2</div>
+    </div>
+  </a>
+</div>
 </p>
 <p>手元で実行したコードは以下のリポジトリにまとめた。</p>
-<p><a href="https://github.com/kyu08/go-system-programming" target="_blank" >https://github.com/kyu08/go-system-programming</a>
+<p><div class="blogcard" data-url="https://github.com/kyu08/go-system-programming" data-auto-fetch="true">
+  <a href="https://github.com/kyu08/go-system-programming" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/kyu08/go-system-programming</div><div class="blogcard-url">https://github.com/kyu08/go-system-programming</div>
+    </div>
+  </a>
+</div>
 </p>
 <p>以下読書メモ。</p>
 <h2 id="第1章-go言語で覗くシステムプログラミングの世界">第1章 Go言語で覗くシステムプログラミングの世界<a href="#第1章-go言語で覗くシステムプログラミングの世界" class="hanchor" ariaLabel="Anchor">#</a> </h2>
@@ -501,8 +521,7 @@ if (!doNotTrack) {
 <h3 id="goに組み込まれているtcpの機能netconnだけを使ってhttpによる通信を実現する">Goに組み込まれているTCPの機能（<code>net.Conn</code>）だけを使ってHTTPによる通信を実現する<a href="#goに組み込まれているtcpの機能netconnだけを使ってhttpによる通信を実現する" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <ul>
 <li><code>net.Conn</code>だけを使ってTCPソケットの初期化や通信の確立などの普段なら<code>net/http</code>がやってくれている部分を実装した。</li>
-<li><code>http.ListenAndServe()</code>のコードを読んでみたら、<a href="https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/net/http/server.go#L3258" target="_blank" >golang/go/src/net/http/server.go#L3258</a>
-で本書のハンズオンと同じようにTCPソケットの初期化を行っていることを確認できた。</li>
+<li><code>http.ListenAndServe()</code>のコードを読んでみたら、<a href="https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/net/http/server.go#L3258" target="_blank" >golang/go/src/net/http/server.go#L3258</a>で本書のハンズオンと同じようにTCPソケットの初期化を行っていることを確認できた。</li>
 </ul>
 <h3 id="素朴な実装の速度改善">素朴な実装の速度改善<a href="#素朴な実装の速度改善" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <ul>
@@ -634,13 +653,11 @@ if (!doNotTrack) {
 </ol>
 <p>アクティブな方式の方がコード量は少ないが監視対象が増えるとCPU負荷やIO負荷が増える。</p>
 <p>パッシブな方式はファイルの変更検知が各OSでシステムコールやAPUIとして提供されている一方で環境ごとのコード差は大きくなる。</p>
-<p>ここでは <a href="https://github.com/fsnotify/fsnotify" target="_blank" >fsnotify/fsnotify.v1</a>
-を用いてファイルの変更検知プログラムを作成した。</p>
+<p>ここでは <a href="https://github.com/fsnotify/fsnotify" target="_blank" >fsnotify/fsnotify.v1</a>を用いてファイルの変更検知プログラムを作成した。</p>
 <p>fsnotify.v1では、Linuxの場合はinotify系APIが、BSD系OSの場合はkqueueが使われている。</p>
 <h3 id="ファイルのメモリへのマッピングsyscallmmap">ファイルのメモリへのマッピング（<code>syscall.Mmap()</code>）<a href="#ファイルのメモリへのマッピングsyscallmmap" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p><code>syscall.Mmap()</code>を使うことでファイルの中身をそのままメモリ上に展開したり、メモリ上で書き換えた内容をそのままファイルに書き込むことができる。</p>
-<p><a href="https://github.com/edsrzf/mmap-go" target="_blank" >edsrzf/mmap-go</a>
-では<code>mmap.Map()</code>を使うことでファイルをメモリに展開できる。<code>mmap.Map()</code>は次のようなシグネチャを持つ。</p>
+<p><a href="https://github.com/edsrzf/mmap-go" target="_blank" >edsrzf/mmap-go</a>では<code>mmap.Map()</code>を使うことでファイルをメモリに展開できる。<code>mmap.Map()</code>は次のようなシグネチャを持つ。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Map</span>(<span style="color:#a6e22e">f</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">File</span>, <span style="color:#a6e22e">prot</span>, <span style="color:#a6e22e">flags</span> <span style="color:#66d9ef">int</span>) (<span style="color:#a6e22e">MMap</span>, <span style="color:#66d9ef">error</span>)
 </span></span></code></pre></div><p>2つ目の引数に次のような値を指定することでメモリ領域に対して許可する操作を設定できる。</p>
 <ul>
@@ -700,8 +717,7 @@ if (!doNotTrack) {
 </ul>
 <h3 id="プロセスの出力に色づけをする">プロセスの出力に色づけをする<a href="#プロセスの出力に色づけをする" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>プロセスの出力に色をつけたい場合には<strong>ANSIエスケープシーケンス</strong>を使うことができる。</p>
-<p>自分が利用したことある<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>Rustの<a href="https://crates.io/crates/colored" target="_blank" ><code>colored</code></a>
-クレートも確認したところ実際にANSIエスケープシーケンスを使ってターミナルに色をつけていた。</p>
+<p>自分が利用したことある<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>Rustの<a href="https://crates.io/crates/colored" target="_blank" ><code>colored</code></a>クレートも確認したところ実際にANSIエスケープシーケンスを使ってターミナルに色をつけていた。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span>    <span style="color:#75715e">#[cfg_attr(feature = </span><span style="color:#e6db74">&#34;no-color&#34;</span><span style="color:#75715e">, ignore)]</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[test]</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">compute_style_simple_fg_blue</span>() {
@@ -709,7 +725,17 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        assert_eq!(blue, <span style="color:#e6db74">&#34;&#34;</span>.blue().compute_style());
 </span></span><span style="display:flex;"><span>    }
-</span></span></code></pre></div><p><a href="https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811" target="_blank" >https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811</a>
+</span></span></code></pre></div><p><div class="blogcard" data-url="https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811" data-auto-fetch="true">
+  <a href="https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811</div><div class="blogcard-url">https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811</div>
+    </div>
+  </a>
+</div>
  より</p>
 <p>調べてみたところ<code>\x1B</code>でも<code>\e</code>でもエスケープシーケンスを表現できるらしい。<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup></p>
 <h3 id="外部プロセスに対して自分が擬似端末だと詐称する">外部プロセスに対して自分が擬似端末だと詐称する<a href="#外部プロセスに対して自分が擬似端末だと詐称する" class="hanchor" ariaLabel="Anchor">#</a> </h3>
@@ -938,8 +964,7 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>	close(<span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">receiver</span>)
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h4 id="イベントの流れを定義するreactivex">イベントの流れを定義する：ReactiveX<a href="#イベントの流れを定義するreactivex" class="hanchor" ariaLabel="Anchor">#</a> </h4>
-<p>ここでは<a href="https://github.com/ReactiveX/RxGo" target="_blank" >RxGo</a>
-を使ってイベントの流れを定義する方法が紹介されていた。
+<p>ここでは<a href="https://github.com/ReactiveX/RxGo" target="_blank" >RxGo</a>を使ってイベントの流れを定義する方法が紹介されていた。
 まずこのようにwatcherを定義する。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">watcher</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">observer</span>.<span style="color:#a6e22e">Observer</span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">NextHandler</span>: <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">item</span> <span style="color:#a6e22e">any</span>) {
@@ -1050,8 +1075,7 @@ if (!doNotTrack) {
 <p>以下はWikipediaによるリンカーの説明。</p>
 <blockquote>
 <p>a computer program that takes one or more object files generated by a compiler or generated by an assembler and links them with libraries, generating an executable program or shared library</p>
-<p><a href="https://en.wikipedia.org/wiki/Linker" target="_blank" >Linker - Wikipedia</a>
- から引用</p>
+<p><a href="https://en.wikipedia.org/wiki/Linker" target="_blank" >Linker - Wikipedia</a> から引用</p>
 </blockquote>
 <p>上記を翻訳すると「コンパイラまたはアセンブラによって生成された1つ以上のオブジェクトファイルをライブラリと結合し実行可能ファイルまたは共有ライブラリを生成するプログラム」といった感じだろうか。</p>
 <p>OSはリンカーが生成した実行ファイルがシェルから起動されると、実行ファイルの内容をメモリに配置する。</p>
@@ -1140,41 +1164,66 @@ if (!doNotTrack) {
 <li>Linuxで動かしながら学ぶTCP/IPネットワーク入門</li>
 <li>体系的に学ぶ 安全なWebアプリケーションの作り方</li>
 </ul>
-<p>あるいは、 <a href="https://blog.ojisan.io/server-architecture-2023/#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9-vs-%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89" target="_blank" >Webサーバーアーキテクチャ進化論2023 - blog.ojisan.io</a>
-を参考に学習ロードマップを立ててみるのもいいかもしれない。</p>
+<p>あるいは、 <a href="https://blog.ojisan.io/server-architecture-2023/#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9-vs-%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89" target="_blank" >Webサーバーアーキテクチャ進化論2023 - blog.ojisan.io</a>を参考に学習ロードマップを立ててみるのもいいかもしれない。</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1">
-<p>Neovimでのデバッガの環境構築は <a href="https://zenn.dev/saito9/articles/32c57f776dc369" target="_blank" >nvim-dapでGolangのデバッグ環境構築</a>
- を参考にした&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>Neovimでのデバッガの環境構築は <a href="https://zenn.dev/saito9/articles/32c57f776dc369" target="_blank" >nvim-dapでGolangのデバッグ環境構築</a> を参考にした&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2">
-<p><code>Sysfd</code>の定義はgolang/go/src/internal/poll/fd_unix.go#L23(<a href="https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23" target="_blank" >https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23</a>
+<p><code>Sysfd</code>の定義はgolang/go/src/internal/poll/fd_unix.go#L23(<div class="blogcard" data-url="https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23" data-auto-fetch="true">
+  <a href="https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23</div><div class="blogcard-url">https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23</div>
+    </div>
+  </a>
+</div>
 ) にある。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3">
-<p><code>io.Pipe</code>の使いどころに関しては <a href="https://medium.com/eureka-engineering/file-uploads-in-go-with-io-pipe-75519dfa647b" target="_blank" >Go言語のio.Pipeでファイルを効率よくアップロードする方法</a>
- が大変参考になった。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><code>io.Pipe</code>の使いどころに関しては <a href="https://medium.com/eureka-engineering/file-uploads-in-go-with-io-pipe-75519dfa647b" target="_blank" >Go言語のio.Pipeでファイルを効率よくアップロードする方法</a> が大変参考になった。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:4">
-<p>cf. <a href="https://github.com/kyu08/go-system-programming/blob/b9da4a0ce759b2df4ce884ab61248fb893b60bef/4-channel/unbufferedchannel/main.go#L8" target="_blank" >kyu08/go-system-programming/4-channel/unbufferedchannel/main.go#L8</a>
-&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>cf. <a href="https://github.com/kyu08/go-system-programming/blob/b9da4a0ce759b2df4ce884ab61248fb893b60bef/4-channel/unbufferedchannel/main.go#L8" target="_blank" >kyu08/go-system-programming/4-channel/unbufferedchannel/main.go#L8</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:5">
 <p>Distrolessに対して「コンテナイメージが軽量になる」以外のメリットを感じていなかったが書かれている通りセキュリティ面でもメリットがあると気付いた。&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:6">
-<p>fzf-makeの出力の一部に色を付けるために使っている。 <a href="https://github.com/kyu08/fzf-make/blob/12789acd19bc24daa60ba7eb84973dab18fe7a52/src/usecase/execute_make_command.rs#L5" target="_blank" >https://github.com/kyu08/fzf-make/blob/12789acd19bc24daa60ba7eb84973dab18fe7a52/src/usecase/execute_make_command.rs#L5</a>
+<p>fzf-makeの出力の一部に色を付けるために使っている。 <div class="blogcard" data-url="https://github.com/kyu08/fzf-make/blob/12789acd19bc24daa60ba7eb84973dab18fe7a52/src/usecase/execute_make_command.rs#L5" data-auto-fetch="true">
+  <a href="https://github.com/kyu08/fzf-make/blob/12789acd19bc24daa60ba7eb84973dab18fe7a52/src/usecase/execute_make_command.rs#L5" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/kyu08/fzf-make/blob/12789acd19bc24daa60ba7eb84973dab18fe7a52/src/usecase/execute_make_command.rs#L5</div><div class="blogcard-url">https://github.com/kyu08/fzf-make/blob/12789acd19bc24daa60ba7eb84973dab18fe7a52/src/usecase/execute_make_command.rs#L5</div>
+    </div>
+  </a>
+</div>
 &#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:7">
-<p><a href="https://ufcpp.net/blog/2023/12/escape-escape/" target="_blank" >https://ufcpp.net/blog/2023/12/escape-escape/</a>
+<p><div class="blogcard" data-url="https://ufcpp.net/blog/2023/12/escape-escape/" data-auto-fetch="true">
+  <a href="https://ufcpp.net/blog/2023/12/escape-escape/" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://ufcpp.net/blog/2023/12/escape-escape/</div><div class="blogcard-url">https://ufcpp.net/blog/2023/12/escape-escape/</div>
+    </div>
+  </a>
+</div>
 &#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:8">
-<p>仮想メモリ空間についてはκeenさんのこちらの記事がとてもわかりやすかった。<a href="https://keens.github.io/blog/2017/04/30/memoritosutakkutohi_puto/" target="_blank" >メモリとスタックとヒープとプログラミング言語</a>
-&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>仮想メモリ空間についてはκeenさんのこちらの記事がとてもわかりやすかった。<a href="https://keens.github.io/blog/2017/04/30/memoritosutakkutohi_puto/" target="_blank" >メモリとスタックとヒープとプログラミング言語</a>&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
