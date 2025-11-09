@@ -101,7 +101,17 @@
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;完全に余談だがスクリプトの&lt;code&gt;REPO=...&lt;/code&gt;の部分は &lt;a href=&#34;https://www.tutorialspoint.com/execute_bash_online.php&#34; target=&#34;_blank&#34; &gt;https://www.tutorialspoint.com/execute_bash_online.php&lt;/a&gt;
+&lt;p&gt;完全に余談だがスクリプトの&lt;code&gt;REPO=...&lt;/code&gt;の部分は &lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.tutorialspoint.com/execute_bash_online.php&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://www.tutorialspoint.com/execute_bash_online.php&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://www.tutorialspoint.com/execute_bash_online.php&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.tutorialspoint.com/execute_bash_online.php&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
  を使って出先で書いた。スマホでもシェルスクリプトが書けて便利。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -118,7 +128,17 @@
       <description>稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ってマージさ</description>
       <content>&lt;p&gt;稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ってマージされたPR一覧」を表示する方法)&lt;/p&gt;
 &lt;h2 id=&#34;tldr&#34;&gt;tl;dr&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/pulls&#34; target=&#34;_blank&#34; &gt;https://github.com/pulls&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/pulls&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/pulls&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/pulls&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/pulls&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
  でクエリに&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;is:pr archived:false is:closed author:@me is:public -user:@me created:2024-01-01..2024-12-31 
@@ -127,9 +147,18 @@
 &lt;h2 id=&#34;余談&#34;&gt;余談&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;orgを所属組織とかに絞って検索すれば仕事の振り返りとかにも使えそう。&lt;/li&gt;
-&lt;li&gt;他にも &lt;a href=&#34;https://github.com/pulls/review-requested&#34; target=&#34;_blank&#34; &gt;https://github.com/pulls/review-requested&lt;/a&gt;
- にいくと自分がレビュワーとしてアサインされているPR一覧が見れて便利だったりする。ターミナル上で同じようなことをやりたい人は &lt;a href=&#34;https://github.com/dlvhdr/gh-dash&#34; target=&#34;_blank&#34; &gt;dlvhdr/gh-dash&lt;/a&gt;
- とかもオススメかもしれない。&lt;/li&gt;
+&lt;li&gt;他にも &lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/pulls/review-requested&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/pulls/review-requested&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/pulls/review-requested&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/pulls/review-requested&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+ にいくと自分がレビュワーとしてアサインされているPR一覧が見れて便利だったりする。ターミナル上で同じようなことをやりたい人は &lt;a href=&#34;https://github.com/dlvhdr/gh-dash&#34; target=&#34;_blank&#34; &gt;dlvhdr/gh-dash&lt;/a&gt; とかもオススメかもしれない。&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     </item>

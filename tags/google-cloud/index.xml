@@ -17,8 +17,7 @@
       <description>普段業務でCloud Spannerを使っているが、雰囲気で使っている自覚が大いにあるのでドキュメントやブログを読んで知らなかったことを自分用</description>
       <content>&lt;p&gt;普段業務でCloud Spannerを使っているが、雰囲気で使っている自覚が大いにあるのでドキュメントやブログを読んで知らなかったことを自分用のメモとしてまとめてみる。&lt;/p&gt;
 &lt;h2 id=&#34;spanner-のスキーマ設計の最適化--google-cloud&#34;&gt;Spanner のスキーマ設計の最適化  |  Google Cloud&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja&#34; target=&#34;_blank&#34; &gt;Spanner のスキーマ設計の最適化  |  Google Cloud&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja&#34; target=&#34;_blank&#34; &gt;Spanner のスキーマ設計の最適化  |  Google Cloud&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;キー定義とインターリーブの2つはスケーラビリティに大きな影響を与える&lt;/li&gt;
 &lt;li&gt;Spannerにはルートテーブルとインターリーブされたテーブルの2種類のテーブルがある。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
@@ -69,8 +68,7 @@
 &lt;p&gt;現在はインデックスキーは16個、合計サイズが6KiBまでに制限されているため、&lt;code&gt;STORING&lt;/code&gt;句を使用することで任意のインデックスに対してデータを格納することができる。&lt;/p&gt;
 &lt;p&gt;つまり&lt;code&gt;STORING&lt;/code&gt;を使用すると&lt;strong&gt;WRITEコストおよびストレージコストの上昇&lt;/strong&gt;と引き換えに&lt;strong&gt;READコストを削減&lt;/strong&gt;できる。&lt;/p&gt;
 &lt;p&gt;また、ドキュメントでは&lt;code&gt;STORING&lt;/code&gt;の便利な応用例として&lt;code&gt;NULL_FILTERED&lt;/code&gt;インデックスとの併用を紹介している。それについてはこちらの記事が大変詳しいので参照されたい。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://zenn.dev/facengineer/articles/15e7a68fcc2fad&#34; target=&#34;_blank&#34; &gt;Cloud SpannerのNull Filtered INDEXの用途を考察する 〜サブタイプ実装〜&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://zenn.dev/facengineer/articles/15e7a68fcc2fad&#34; target=&#34;_blank&#34; &gt;Cloud SpannerのNull Filtered INDEXの用途を考察する 〜サブタイプ実装〜&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;アンチパターン&#34;&gt;アンチパターン&lt;/h3&gt;
 &lt;p&gt;ルートテーブルをタイムスタンプ順にしてしまうとテーブルの最後に巨大なホットスポットが生まれてしまう。&lt;/p&gt;
 &lt;p&gt;タイムスタンプ順に並んだレコードが必要な場合は以下の対策が有効。&lt;/p&gt;
@@ -81,8 +79,7 @@
 &lt;p&gt;この例ではPKに&lt;code&gt;ShardId&lt;/code&gt;(0~N-1)を追加する方法を紹介している。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;spanner-sharding.webp&#34; alt=&#34;spanner-sharding.webp&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;スキーマ設計のベスト-プラクティス--spanner--google-cloud&#34;&gt;スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://cloud.google.com/spanner/docs/schema-design?hl=ja&#34; target=&#34;_blank&#34; &gt;スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cloud.google.com/spanner/docs/schema-design?hl=ja&#34; target=&#34;_blank&#34; &gt;スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;次のような場合はキー列をタイムスタンプ降順に格納することでホットスポットを回避する。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;最新の履歴を読み取る際、履歴にインターリーブ テーブルを使用しており、親行を読み取る場合&lt;/li&gt;
@@ -113,8 +110,7 @@
 &lt;li&gt;（そもそも）インデックスをインターリーブする&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;セカンダリ-インデックス--spanner--google-cloud&#34;&gt;セカンダリ インデックス  |  Spanner  |  Google Cloud&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja&#34; target=&#34;_blank&#34; &gt;セカンダリ インデックス  |  Spanner  |  Google Cloud&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja&#34; target=&#34;_blank&#34; &gt;セカンダリ インデックス  |  Spanner  |  Google Cloud&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Spannerではセカンダリインデックスに次のデータが格納される。
 &lt;ul&gt;
@@ -141,8 +137,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;このようなケースでは次のようにPK降順のインデックスを明示的に作成することで読み取りパフォーマンスを向上させることができる。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;INDEX&lt;/span&gt; SongIdDesc &lt;span style=&#34;color:#66d9ef&#34;&gt;On&lt;/span&gt; Songs(SongId &lt;span style=&#34;color:#66d9ef&#34;&gt;DESC&lt;/span&gt;);
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;sharding-of-timestamp-ordered-data-in-cloud-spanner---googblogscom&#34;&gt;Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/&#34; target=&#34;_blank&#34; &gt;Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/&#34; target=&#34;_blank&#34; &gt;Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;タイムスタンプ順に並んだレコードをいかに効率よく挿入、取得するかについての解説記事。&lt;/p&gt;
 &lt;h3 id=&#34;レコードの挿入時&#34;&gt;レコードの挿入時&lt;/h3&gt;
 &lt;p&gt;次のようにCompanyID、UserID、Timestampの3つのキーを持つログテーブルがあるとする。&lt;/p&gt;
@@ -216,8 +211,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;上記の条件で合計1000レコードを挿入するINSERT文を作成した。（スクリプトは&lt;a href=&#34;https://gist.github.com/kyu08/a751344fd76d4e50208164378a822dc1&#34; target=&#34;_blank&#34; &gt;こちら&lt;/a&gt;
-）&lt;/p&gt;
+&lt;p&gt;上記の条件で合計1000レコードを挿入するINSERT文を作成した。（スクリプトは&lt;a href=&#34;https://gist.github.com/kyu08/a751344fd76d4e50208164378a822dc1&#34; target=&#34;_blank&#34; &gt;こちら&lt;/a&gt;）&lt;/p&gt;
 &lt;h4 id=&#34;クエリの実行&#34;&gt;クエリの実行&lt;/h4&gt;
 &lt;p&gt;これに対して次の2つのクエリを実行し、実行計画を確認した。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- 記事で紹介されていたクエリ
@@ -257,19 +251,16 @@
 &lt;p&gt;CompanyId, EntryShardIdの順番を逆にしてみたクエリ
 &lt;img src=&#34;swap.webp&#34; alt=&#34;swap.webp&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;cloud-spanner-におけるトランザクションのロックについて&#34;&gt;Cloud Spanner におけるトランザクションのロックについて&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner&#34; target=&#34;_blank&#34; &gt;Cloud Spanner におけるトランザクションのロックについて&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner&#34; target=&#34;_blank&#34; &gt;Cloud Spanner におけるトランザクションのロックについて&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Spanner におけるトランザクションのロックの粒度は、セル、つまり行と列の交点となります。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;なのでREAD, WRITEの範囲(行および列)を最小限にすることでロック範囲を最小限にすることができる。結果として他のトランザクションに与えるパフォーマンス影響を最小限にすることができる。&lt;/p&gt;
 &lt;p&gt;他には複数のトランザクションが同時に実行された際の優先度について詳しく解説してあった。&lt;/p&gt;
 &lt;h2 id=&#34;spanner-の読み取りと書き込みのライフサイクル--google-cloud&#34;&gt;Spanner の読み取りと書き込みのライフサイクル  |  Google Cloud&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja&#34; target=&#34;_blank&#34; &gt;Spanner の読み取りと書き込みのライフサイクル  |  Google Cloud&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja&#34; target=&#34;_blank&#34; &gt;Spanner の読み取りと書き込みのライフサイクル  |  Google Cloud&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Spannerのレプリカセットの構成については次の記事が非常にわかりやすい。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://zenn.dev/facengineer/articles/bca8790087b0e4&#34; target=&#34;_blank&#34; &gt;Cloud Spannerのスプリット分散をわかった気になる&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://zenn.dev/facengineer/articles/bca8790087b0e4&#34; target=&#34;_blank&#34; &gt;Cloud Spannerのスプリット分散をわかった気になる&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;読み込みおよび書き込み時のロックの取り方について詳しく解説されていた。&lt;/p&gt;
 &lt;h3 id=&#34;読み取り専用トランザクション&#34;&gt;読み取り専用トランザクション&lt;/h3&gt;
 &lt;ul&gt;
@@ -286,11 +277,9 @@
 &lt;li&gt;書き込む行に対して排他ロックを取得する&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;ちなみに複数のトランザクションが同時に実行された場合の挙動については次の記事が詳しかった。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner&#34; target=&#34;_blank&#34; &gt;Cloud Spanner におけるトランザクションのロックについて&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner&#34; target=&#34;_blank&#34; &gt;Cloud Spanner におけるトランザクションのロックについて&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;sql-のベスト-プラクティス--spanner--google-cloud&#34;&gt;SQL のベスト プラクティス  |  Spanner  |  Google Cloud&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja&#34; target=&#34;_blank&#34; &gt;SQL のベスト プラクティス  |  Spanner  |  Google Cloud&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja&#34; target=&#34;_blank&#34; &gt;SQL のベスト プラクティス  |  Spanner  |  Google Cloud&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;クエリパラメータの使用&#34;&gt;クエリパラメータの使用&lt;/h3&gt;
 &lt;p&gt;クエリパラメータを使用することで次のメリットがある。&lt;/p&gt;
 &lt;ul&gt;
@@ -322,8 +311,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; Singers s &lt;span style=&#34;color:#66d9ef&#34;&gt;JOIN&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;{&lt;/span&gt;JOIN_METHOD&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;HASH_JOIN&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;}&lt;/span&gt; Albums &lt;span style=&#34;color:#66d9ef&#34;&gt;AS&lt;/span&gt; a
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ON&lt;/span&gt; a.SingerId &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a.SingerId
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;JOINアルゴリズムについては次の記事が詳しい。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://zenn.dev/facengineer/articles/cc0cab5c7e9a1c#join%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&#34; target=&#34;_blank&#34; &gt;Cloud Spannerのパフォーマンスチューニングの勘所&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://zenn.dev/facengineer/articles/cc0cab5c7e9a1c#join%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&#34; target=&#34;_blank&#34; &gt;Cloud Spannerのパフォーマンスチューニングの勘所&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;likeの代わりにstarts_withを使用する&#34;&gt;&lt;code&gt;LIKE&lt;/code&gt;の代わりに&lt;code&gt;STARTS_WITH&lt;/code&gt;を使用する&lt;/h3&gt;
 &lt;p&gt;Spannerはパラメータ化された&lt;code&gt;LIKE&lt;/code&gt;パターンを実行時まで評価しないのですべての行を読み取ったうえで&lt;code&gt;LIKE&lt;/code&gt;式で評価し、一致しない行を除外するためパフォーマンスが悪い。&lt;/p&gt;
 &lt;p&gt;適切なインデックスが作成されている場合は&lt;code&gt;LIKE&lt;/code&gt;の代わりに&lt;code&gt;STARTS_WITH&lt;/code&gt;を使用するとSpannerはクエリ実行プランをより効率的に最適化することができる。&lt;/p&gt;
@@ -335,12 +323,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; a.AlbumTitle &lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; Albums a
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt; STARTS_WITH(a.AlbumTitle, &lt;span style=&#34;color:#f92672&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;prefix&lt;/span&gt;);
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;クエリ実行プラン--spanner--google-cloud&#34;&gt;クエリ実行プラン  |  Spanner  |  Google Cloud&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja&#34; target=&#34;_blank&#34; &gt;クエリ実行プラン  |  Spanner  |  Google Cloud&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja&#34; target=&#34;_blank&#34; &gt;クエリ実行プラン  |  Spanner  |  Google Cloud&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;CPUの消費量が多いクエリの場合、実行計画は30日間保存されている。&lt;/p&gt;
 &lt;p&gt;確認方法は以下。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries&#34; target=&#34;_blank&#34; &gt;サンプリングされたクエリプランを表示する&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries&#34; target=&#34;_blank&#34; &gt;サンプリングされたクエリプランを表示する&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;クエリごとにレイテンシや返された行数、スキャン行数の平均値や実行回数確認することができるためチューニングの際にかなり便利そう。&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;Spannerの気持ちが少しわかった。すごく強引にまとめると以下のようなポイントが重要そう。&lt;/p&gt;

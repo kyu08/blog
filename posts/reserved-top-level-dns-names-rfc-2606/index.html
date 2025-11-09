@@ -6,7 +6,7 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="本記事はUnipos Advent Calendar 2024 の16日目の記事です。 ふいに見かけたRFC 2606: Reserved Top Level DNS Names を読んでみたところ発見があったのでその内容をまとめてみようと" />
+<meta name="description" content="本記事はUnipos Advent Calendar 2024の16日目の記事です。 ふいに見かけたRFC 2606: Reserved Top Level DNS Namesを読んでみたところ発見があったのでその内容をま" />
 <meta name="keywords" content="RFC" />
 
   <meta name="robots" content="noodp" />
@@ -92,7 +92,7 @@ if (!doNotTrack) {
 <meta property="og:locale" content="ja" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="RFC 2606: Reserved Top Level DNS Namesを読んで知らなかったことを書く">
-<meta property="og:description" content="本記事はUnipos Advent Calendar 2024 の16日目の記事です。 ふいに見かけたRFC 2606: Reserved Top Level DNS Names を読んでみたところ発見があったのでその内容をまとめてみようと" />
+<meta property="og:description" content="本記事はUnipos Advent Calendar 2024の16日目の記事です。 ふいに見かけたRFC 2606: Reserved Top Level DNS Namesを読んでみたところ発見があったのでその内容をま" />
 <meta property="og:url" content="https://blog.kyu08.com/posts/reserved-top-level-dns-names-rfc-2606/" />
 <meta property="og:site_name" content="blog.kyu08.com" />
 
@@ -214,7 +214,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2024/12/15</time>
       
-    <span class="post-reading-time">4 min read (1940 words)</span></div>
+    <span class="post-reading-time">4 min read (1952 words)</span></div>
 
   
     <span class="post-tags">
@@ -248,10 +248,8 @@ if (!doNotTrack) {
   
 
   <div class="post-content"><div>
-        <p>本記事は<a href="https://qiita.com/advent-calendar/2024/unipos" target="_blank" >Unipos Advent Calendar 2024</a>
-の16日目の記事です。</p>
-<p>ふいに見かけた<a href="https://datatracker.ietf.org/doc/html/rfc2606" target="_blank" >RFC 2606: Reserved Top Level DNS Names</a>
-を読んでみたところ発見があったのでその内容をまとめてみようと思います。</p>
+        <p>本記事は<a href="https://qiita.com/advent-calendar/2024/unipos" target="_blank" >Unipos Advent Calendar 2024</a>の16日目の記事です。</p>
+<p>ふいに見かけた<a href="https://datatracker.ietf.org/doc/html/rfc2606" target="_blank" >RFC 2606: Reserved Top Level DNS Names</a>を読んでみたところ発見があったのでその内容をまとめてみようと思います。</p>
 <h2 id="rfc-2606の概要">RFC 2606の概要<a href="#rfc-2606の概要" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <blockquote>
 <p>Abstract</p>
@@ -302,7 +300,17 @@ would conflict with widely deployed code which assumes this use.</p>
 <p><code>.invalid</code>の説明がわからなかったのでWikipadiaを参照してみたところ次のような記述があった。</p>
 <blockquote>
 <p>This top-level domain is sometimes used as a pseudo domain name in Uniform Resource Identifiers (URIs) to convey either an error condition or in use of privacy protection.</p>
-<p><a href="https://en.wikipedia.org/wiki/.invalid" target="_blank" >https://en.wikipedia.org/wiki/.invalid</a>
+<p><div class="blogcard" data-url="https://en.wikipedia.org/wiki/.invalid" data-auto-fetch="true">
+  <a href="https://en.wikipedia.org/wiki/.invalid" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://en.wikipedia.org/wiki/.invalid</div><div class="blogcard-url">https://en.wikipedia.org/wiki/.invalid</div>
+    </div>
+  </a>
+</div>
  より引用</p>
 </blockquote>
 <p>要はエラーケースのテストのためやプライバシー保護の目的で擬似ドメイン名として利用されることがある、と理解した。(このあたりの深い理解は別途時間をとりたい)</p>
@@ -346,17 +354,13 @@ English.</p>
 <hr>
 <ol>
 <li id="fn:1">
-<p><a href="https://www.amazon.co.jp/Linux%E3%81%A7%E5%8B%95%E3%81%8B%E3%81%97%E3%81%AA%E3%81%8C%E3%82%89%E5%AD%A6%E3%81%B6TCP-IP%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E5%85%A5%E9%96%80-%E3%82%82%E3%81%BF%E3%81%98%E3%81%82%E3%82%81-ebook/dp/B085BG8CH5" target="_blank" >Linuxで動かしながら学ぶTCP/IPネットワーク入門</a>
-や<a href="https://www.sbcr.jp/product/4815618599/" target="_blank" >体験しながら学ぶ ネットワーク技術入門</a>
-あたりで腰を据えてネットワーク周りを学びたい&hellip;。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://www.amazon.co.jp/Linux%E3%81%A7%E5%8B%95%E3%81%8B%E3%81%97%E3%81%AA%E3%81%8C%E3%82%89%E5%AD%A6%E3%81%B6TCP-IP%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E5%85%A5%E9%96%80-%E3%82%82%E3%81%BF%E3%81%98%E3%81%82%E3%82%81-ebook/dp/B085BG8CH5" target="_blank" >Linuxで動かしながら学ぶTCP/IPネットワーク入門</a>や<a href="https://www.sbcr.jp/product/4815618599/" target="_blank" >体験しながら学ぶ ネットワーク技術入門</a>あたりで腰を据えてネットワーク周りを学びたい&hellip;。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2">
-<p>が、次は<a href="https://www.oreilly.co.jp/books/9784814400874/" target="_blank" >コンピュータシステムの理論と実装 第2版</a>
-をやると決めているのでやるとしたらその次かな&hellip;。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>が、次は<a href="https://www.oreilly.co.jp/books/9784814400874/" target="_blank" >コンピュータシステムの理論と実装 第2版</a>をやると決めているのでやるとしたらその次かな&hellip;。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3">
-<p>ちなみに、他のRFCを眺めていたら<code>SHOULD</code>, <code>MUST</code>のようなキーワードが大文字で強調されていたが、それらのキーワードの解釈については<a href="https://datatracker.ietf.org/doc/html/rfc2119" target="_blank" >RFC 2119: Key words for use in RFCs to Indicate Requirement Levels</a>
-で説明されていたのでよければ参照ください。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>ちなみに、他のRFCを眺めていたら<code>SHOULD</code>, <code>MUST</code>のようなキーワードが大文字で強調されていたが、それらのキーワードの解釈については<a href="https://datatracker.ietf.org/doc/html/rfc2119" target="_blank" >RFC 2119: Key words for use in RFCs to Indicate Requirement Levels</a>で説明されていたのでよければ参照ください。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
@@ -434,6 +438,9 @@ English.</p>
     Cookies can be disabled in your browser.
   </span>
 </font>
+
+
+<script src="https://blog.kyu08.com/blogcard.js"></script>
 
 
   

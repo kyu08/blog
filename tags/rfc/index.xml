@@ -14,11 +14,9 @@
       <pubDate>Sun, 15 Dec 2024 15:00:00 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/posts/reserved-top-level-dns-names-rfc-2606/</guid>
-      <description>本記事はUnipos Advent Calendar 2024 の16日目の記事です。 ふいに見かけたRFC 2606: Reserved Top Level DNS Names を読んでみたところ発見があったのでその内容をまとめてみようと</description>
-      <content>&lt;p&gt;本記事は&lt;a href=&#34;https://qiita.com/advent-calendar/2024/unipos&#34; target=&#34;_blank&#34; &gt;Unipos Advent Calendar 2024&lt;/a&gt;
-の16日目の記事です。&lt;/p&gt;
-&lt;p&gt;ふいに見かけた&lt;a href=&#34;https://datatracker.ietf.org/doc/html/rfc2606&#34; target=&#34;_blank&#34; &gt;RFC 2606: Reserved Top Level DNS Names&lt;/a&gt;
-を読んでみたところ発見があったのでその内容をまとめてみようと思います。&lt;/p&gt;
+      <description>本記事はUnipos Advent Calendar 2024の16日目の記事です。 ふいに見かけたRFC 2606: Reserved Top Level DNS Namesを読んでみたところ発見があったのでその内容をま</description>
+      <content>&lt;p&gt;本記事は&lt;a href=&#34;https://qiita.com/advent-calendar/2024/unipos&#34; target=&#34;_blank&#34; &gt;Unipos Advent Calendar 2024&lt;/a&gt;の16日目の記事です。&lt;/p&gt;
+&lt;p&gt;ふいに見かけた&lt;a href=&#34;https://datatracker.ietf.org/doc/html/rfc2606&#34; target=&#34;_blank&#34; &gt;RFC 2606: Reserved Top Level DNS Names&lt;/a&gt;を読んでみたところ発見があったのでその内容をまとめてみようと思います。&lt;/p&gt;
 &lt;h2 id=&#34;rfc-2606の概要&#34;&gt;RFC 2606の概要&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Abstract&lt;/p&gt;
@@ -69,7 +67,17 @@ would conflict with widely deployed code which assumes this use.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;.invalid&lt;/code&gt;の説明がわからなかったのでWikipadiaを参照してみたところ次のような記述があった。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;This top-level domain is sometimes used as a pseudo domain name in Uniform Resource Identifiers (URIs) to convey either an error condition or in use of privacy protection.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/.invalid&#34; target=&#34;_blank&#34; &gt;https://en.wikipedia.org/wiki/.invalid&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://en.wikipedia.org/wiki/.invalid&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://en.wikipedia.org/wiki/.invalid&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://en.wikipedia.org/wiki/.invalid&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://en.wikipedia.org/wiki/.invalid&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
  より引用&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;要はエラーケースのテストのためやプライバシー保護の目的で擬似ドメイン名として利用されることがある、と理解した。(このあたりの深い理解は別途時間をとりたい)&lt;/p&gt;
@@ -113,17 +121,13 @@ English.&lt;/p&gt;
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.amazon.co.jp/Linux%E3%81%A7%E5%8B%95%E3%81%8B%E3%81%97%E3%81%AA%E3%81%8C%E3%82%89%E5%AD%A6%E3%81%B6TCP-IP%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E5%85%A5%E9%96%80-%E3%82%82%E3%81%BF%E3%81%98%E3%81%82%E3%82%81-ebook/dp/B085BG8CH5&#34; target=&#34;_blank&#34; &gt;Linuxで動かしながら学ぶTCP/IPネットワーク入門&lt;/a&gt;
-や&lt;a href=&#34;https://www.sbcr.jp/product/4815618599/&#34; target=&#34;_blank&#34; &gt;体験しながら学ぶ ネットワーク技術入門&lt;/a&gt;
-あたりで腰を据えてネットワーク周りを学びたい&amp;hellip;。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.amazon.co.jp/Linux%E3%81%A7%E5%8B%95%E3%81%8B%E3%81%97%E3%81%AA%E3%81%8C%E3%82%89%E5%AD%A6%E3%81%B6TCP-IP%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E5%85%A5%E9%96%80-%E3%82%82%E3%81%BF%E3%81%98%E3%81%82%E3%82%81-ebook/dp/B085BG8CH5&#34; target=&#34;_blank&#34; &gt;Linuxで動かしながら学ぶTCP/IPネットワーク入門&lt;/a&gt;や&lt;a href=&#34;https://www.sbcr.jp/product/4815618599/&#34; target=&#34;_blank&#34; &gt;体験しながら学ぶ ネットワーク技術入門&lt;/a&gt;あたりで腰を据えてネットワーク周りを学びたい&amp;hellip;。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:2&#34;&gt;
-&lt;p&gt;が、次は&lt;a href=&#34;https://www.oreilly.co.jp/books/9784814400874/&#34; target=&#34;_blank&#34; &gt;コンピュータシステムの理論と実装 第2版&lt;/a&gt;
-をやると決めているのでやるとしたらその次かな&amp;hellip;。&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;が、次は&lt;a href=&#34;https://www.oreilly.co.jp/books/9784814400874/&#34; target=&#34;_blank&#34; &gt;コンピュータシステムの理論と実装 第2版&lt;/a&gt;をやると決めているのでやるとしたらその次かな&amp;hellip;。&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:3&#34;&gt;
-&lt;p&gt;ちなみに、他のRFCを眺めていたら&lt;code&gt;SHOULD&lt;/code&gt;, &lt;code&gt;MUST&lt;/code&gt;のようなキーワードが大文字で強調されていたが、それらのキーワードの解釈については&lt;a href=&#34;https://datatracker.ietf.org/doc/html/rfc2119&#34; target=&#34;_blank&#34; &gt;RFC 2119: Key words for use in RFCs to Indicate Requirement Levels&lt;/a&gt;
-で説明されていたのでよければ参照ください。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ちなみに、他のRFCを眺めていたら&lt;code&gt;SHOULD&lt;/code&gt;, &lt;code&gt;MUST&lt;/code&gt;のようなキーワードが大文字で強調されていたが、それらのキーワードの解釈については&lt;a href=&#34;https://datatracker.ietf.org/doc/html/rfc2119&#34; target=&#34;_blank&#34; &gt;RFC 2119: Key words for use in RFCs to Indicate Requirement Levels&lt;/a&gt;で説明されていたのでよければ参照ください。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;

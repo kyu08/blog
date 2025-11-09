@@ -15,10 +15,8 @@
       
       <guid>https://blog.kyu08.com/posts/hello-go-static-analisys/</guid>
       <description>tenntenn Conference 2023 にスポンサーし、Goの静的解析を完全に理解した話 を読んでから静的解析が気になっていたのでこれをやってみた。 静的解析をはじめよう - Gop</description>
-      <content>&lt;p&gt;&lt;a href=&#34;https://zenn.dev/team_soda/articles/8e61219eab0fc8&#34; target=&#34;_blank&#34; &gt;tenntenn Conference 2023 にスポンサーし、Goの静的解析を完全に理解した話&lt;/a&gt;
- を読んでから静的解析が気になっていたのでこれをやってみた。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://golangtokyo.github.io/codelab/find-gophers/?index=codelab#0&#34; target=&#34;_blank&#34; &gt;静的解析をはじめよう - Gopherをさがせ！&lt;/a&gt;
-&lt;/p&gt;
+      <content>&lt;p&gt;&lt;a href=&#34;https://zenn.dev/team_soda/articles/8e61219eab0fc8&#34; target=&#34;_blank&#34; &gt;tenntenn Conference 2023 にスポンサーし、Goの静的解析を完全に理解した話&lt;/a&gt; を読んでから静的解析が気になっていたのでこれをやってみた。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://golangtokyo.github.io/codelab/find-gophers/?index=codelab#0&#34; target=&#34;_blank&#34; &gt;静的解析をはじめよう - Gopherをさがせ！&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;以下のようなソースコードから&lt;code&gt;Gopher&lt;/code&gt;型を探し出す簡単な解析スクリプトを通してGoでの静的解析の流れやASTの探索方法、型チェックを用いたより詳細な解析方法などを学べた。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;
@@ -42,7 +40,17 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;gopher&lt;/span&gt; = &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Gopher&lt;/span&gt;{&lt;span style=&#34;color:#a6e22e&#34;&gt;Gopher&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gopher&amp;#34;&lt;/span&gt;} &lt;span style=&#34;color:#75715e&#34;&gt;// ここ
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://golangtokyo.github.io/codelab/find-gophers/?index=codelab#2&#34; target=&#34;_blank&#34; &gt;https://golangtokyo.github.io/codelab/find-gophers/?index=codelab#2&lt;/a&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://golangtokyo.github.io/codelab/find-gophers/?index=codelab#2&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://golangtokyo.github.io/codelab/find-gophers/?index=codelab#2&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://golangtokyo.github.io/codelab/find-gophers/?index=codelab#2&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://golangtokyo.github.io/codelab/find-gophers/?index=codelab#2&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
  より&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;解説がかなり丁寧でわかりやすかったので静的解析初心者にはかなりありがたかった。&lt;/p&gt;

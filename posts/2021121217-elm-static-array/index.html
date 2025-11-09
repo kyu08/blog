@@ -260,8 +260,7 @@ if (!doNotTrack) {
   <div class="post-content"><div>
         <p>Elmで固定長配列を扱うためのライブラリelm-static-arrayを触ってみたので感じたことを書いていきます。</p>
 <h2 id="elm-static-array-とは">elm-static-array とは<a href="#elm-static-array-とは" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p><a href="https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/" target="_blank" >elm-static-array</a>
- はElmで固定長配列を扱うためのライブラリです。</p>
+<p><a href="https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/" target="_blank" >elm-static-array</a> はElmで固定長配列を扱うためのライブラリです。</p>
 <p>配列の長さを型で表現できることが特徴です。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elm" data-lang="elm"><span style="display:flex;"><span><span style="color:#75715e">-- StaticArray</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">-- 長さ 4 の配列</span>
@@ -387,8 +386,7 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>        head
 </span></span><span style="display:flex;"><span>        tail
 </span></span></code></pre></div><h3 id="懸念staticarray-の書き方に慣れるまでは時間がかかる">懸念②：StaticArray の書き方に慣れるまでは時間がかかる<a href="#懸念staticarray-の書き方に慣れるまでは時間がかかる" class="hanchor" ariaLabel="Anchor">#</a> </h3>
-<p>たとえばインデックスを指定してStaticArrayの要素を取得するget関数を使おうと<a href="https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/StaticArray#get" target="_blank" >ドキュメント</a>
-を見ると、下記のような記述があります。</p>
+<p>たとえばインデックスを指定してStaticArrayの要素を取得するget関数を使おうと<a href="https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/StaticArray#get" target="_blank" >ドキュメント</a>を見ると、下記のような記述があります。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elm" data-lang="elm"><span style="display:flex;"><span><span style="color:#75715e">-- Gets an element of the array. Note that it only possible if the index is in bound. Therefore eliminating Off-by-one errors.</span>
 </span></span><span style="display:flex;"><span>get <span style="color:#a6e22e">:</span> <span style="color:#66d9ef">Index</span> n <span style="color:#a6e22e">-&gt;</span> <span style="color:#66d9ef">StaticArray</span> n a <span style="color:#a6e22e">-&gt;</span> a
 </span></span></code></pre></div><p>自分のElm力の乏しさのせいではありますがドキュメントに具体的なコード例が示されていないこともあり、動かすまでにそれなりの試行錯誤が必要でした。(当時はGitHubで検索しても引っ掛からずに絶望していましたが、検索の仕方が悪かっただけだということに執筆時に気付きました。)
@@ -396,8 +394,7 @@ if (!doNotTrack) {
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elm" data-lang="elm"><span style="display:flex;"><span>head <span style="color:#a6e22e">:</span> <span style="color:#66d9ef">Element</span>
 </span></span><span style="display:flex;"><span>head <span style="color:#a6e22e">=</span> <span style="color:#66d9ef">StaticArray</span><span style="color:#a6e22e">.</span>get (<span style="color:#66d9ef">Index</span><span style="color:#a6e22e">.</span>fromModBy <span style="color:#66d9ef">Length</span><span style="color:#a6e22e">.</span>four <span style="color:#ae81ff">0</span>) someStaticArray
 </span></span></code></pre></div><p>まとめると、 <strong>多少の手間が必要になる</strong> ということかなと思います。
-このあたりがelm-static-arrayの作者が <a href="https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/" target="_blank" >README</a>
- の中で以下のように言っている所以かなと感じました。</p>
+このあたりがelm-static-arrayの作者が <a href="https://package.elm-lang.org/packages/Orasund/elm-static-array/latest/" target="_blank" >README</a> の中で以下のように言っている所以かなと感じました。</p>
 <blockquote>
 <p>Construction is a bit slower (should be neglectable for most cases).</p>
 </blockquote>
@@ -481,6 +478,9 @@ if (!doNotTrack) {
     Cookies can be disabled in your browser.
   </span>
 </font>
+
+
+<script src="https://blog.kyu08.com/blogcard.js"></script>
 
 
   

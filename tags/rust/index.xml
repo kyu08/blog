@@ -21,7 +21,17 @@
 &lt;p&gt;筆者はElmやRustの開発体験を気に入っており、Webアプリケーションのサーバーサイドを関数型言語で書くことに興味があったので参加してみた。&lt;/p&gt;
 &lt;h2 id=&#34;関数型言語テイスティング-haskell-scala-clojure-elixirを比べて味わう関数型プログラミングの旨さ---lagénorhynqueカマイルカさん&#34;&gt;関数型言語テイスティング: Haskell, Scala, Clojure, Elixirを比べて味わう関数型プログラミングの旨さ - lagénorhynque/カマイルカさん&lt;/h2&gt;
 &lt;p&gt;lagénorhynque/カマイルカさんによるHaskell, Scala, Clojure, Elixirの紹介と比較を行う発表。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-haskell-scala-clojure-elixir#p1&#34; target=&#34;_blank&#34; &gt;https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-haskell-scala-clojure-elixir#p1&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-haskell-scala-clojure-elixir#p1&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-haskell-scala-clojure-elixir#p1&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-haskell-scala-clojure-elixir#p1&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-haskell-scala-clojure-elixir#p1&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;部分適用や関数合成やパイプ演算子などElmで便利だった言語機能を思い出しながら聞いていた。&lt;/p&gt;
 &lt;p&gt;文法を見ていると、Elmの文法はかなりHaskellに近いようだった。(ML系と呼ばれるらしい)&lt;/p&gt;
@@ -43,7 +53,17 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;関数型言語を採用し維持し継続する---松澤-有さん&#34;&gt;関数型言語を採用し、維持し、継続する - 松澤 有さん&lt;/h2&gt;
 &lt;p&gt;Siiibo証券株式会社のCTOである松澤さんによる自社プロダクトのフロントエンド、バックエンドの開発言語として関数型言語(Elm, Elixir)をなぜ採用したのか、そしていかにして維持し、継続しているかについての発表。実は主にこの発表を聞くために関数型まつりに参加したので良い発表を聞けてよかった。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://zenn.dev/siiibo_tech/articles/adopting-fp-languages&#34; target=&#34;_blank&#34; &gt;https://zenn.dev/siiibo_tech/articles/adopting-fp-languages&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://zenn.dev/siiibo_tech/articles/adopting-fp-languages&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://zenn.dev/siiibo_tech/articles/adopting-fp-languages&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://zenn.dev/siiibo_tech/articles/adopting-fp-languages&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://zenn.dev/siiibo_tech/articles/adopting-fp-languages&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;結局はラストマンシップを持って自分がなんとかするという気概が重要だという話が一番印象的だった。これは関数型言語を業務で書いているわけではない自分にも大いに参考になる話だと思っていて、結局どんな技術を採用したかやCTOかメンバーかなどにかかわらず、このラストマンシップを持っているエンジニアが多ければ多いほど開発組織は強固になるんだろうなと思った。&lt;/p&gt;
 &lt;p&gt;また「アウトリーチを怠らなければ意外と世の中にちゃんと仲間はいる」ということをおっしゃっていて、使用言語がメインストリームであろうとなかろうと外部発信を通してコミュニティに貢献したり認知を獲得することの重要性を改めて感じた。やっていき。&lt;/p&gt;
@@ -157,8 +177,7 @@
 &lt;/li&gt;
 &lt;li&gt;リプレイス先の候補はGo, Rust, Haskell, Erlang, Elm
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://qiita.com/kikuyuta/items/96c3f91a850e9274b0e9&#34; target=&#34;_blank&#34; &gt;Elixir を使うようになった経緯 〜電力システム制御の現場から〜&lt;/a&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/kikuyuta/items/96c3f91a850e9274b0e9&#34; target=&#34;_blank&#34; &gt;Elixir を使うようになった経緯 〜電力システム制御の現場から〜&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -250,7 +269,17 @@
 &lt;p&gt;プログラマーが命令的なコーディングから関数型のコーディングへ移行する際のハードルを下げることを意識した設計になっているらしい。&lt;/p&gt;
 &lt;h2 id=&#34;マイクロサービス内で動くapiをfで書いている---ayato-pさん&#34;&gt;マイクロサービス内で動くAPIをF#で書いている - ayato-pさん&lt;/h2&gt;
 &lt;p&gt;ayato-pさんによるマイクロサービスの1サービスをF#で書く際の設計や悩みどころを紹介する発表。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://speakerdeck.com/ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru&#34; target=&#34;_blank&#34; &gt;https://speakerdeck.com/ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://speakerdeck.com/ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://speakerdeck.com/ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://speakerdeck.com/ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://speakerdeck.com/ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;ドメイン設計の際に容易にOptionを使わずにenumの別のvariantとして表現する、という考え方はRustなどでも活かせそうだと思った。別の概念であれば別の型として表現するのが大事そう。&lt;/p&gt;
 &lt;p&gt;以下メモ。&lt;/p&gt;
@@ -317,15 +346,13 @@
 &lt;p&gt;今は業務で関数型言語を使うことはないが、関数型言語の考え方を取り入れることで非関数型言語でもより良いコードを書けるようになると改めて感じた。&lt;/p&gt;
 &lt;p&gt;個人で初めてオフラインの勉強会/カンファレンスに参加したが普通に楽しかったのでまた行ってみようと思う。&lt;/p&gt;
 &lt;h2 id=&#34;つけ麺情報&#34;&gt;つけ麺情報&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://tabelog.com/tokyo/A1319/A131902/13115487&#34; target=&#34;_blank&#34; &gt;二代目えん寺&lt;/a&gt;
-がとても美味しかった。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://tabelog.com/tokyo/A1319/A131902/13115487&#34; target=&#34;_blank&#34; &gt;二代目えん寺&lt;/a&gt;がとても美味しかった。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;tsukemen.webp&#34; alt=&#34;tsukemen&#34;&gt;&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://sporto.github.io/elm-patterns/advanced/railway.html&#34; target=&#34;_blank&#34; &gt;Elm Patternsでも紹介されていた&lt;/a&gt;
-のを思い出した。改めて読み直してみよう。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sporto.github.io/elm-patterns/advanced/railway.html&#34; target=&#34;_blank&#34; &gt;Elm Patternsでも紹介されていた&lt;/a&gt;のを思い出した。改めて読み直してみよう。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
@@ -347,12 +374,9 @@
 &lt;h2 id=&#34;tldr&#34;&gt;tl;dr&lt;/h2&gt;
 &lt;p&gt;以下のチェックをCIで実行することでcargoプロジェクトの依存関係を継続的に省力で管理できる。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/bnjbvr/cargo-machete&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;cargo-machete&lt;/code&gt;&lt;/a&gt;
-: 不要な依存関係がないか&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/EmbarkStudios/cargo-deny&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;cargo-deny&lt;/code&gt;&lt;/a&gt;
-: 依存ライブラリに許容しないライセンスが含まれていないか&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/EmbarkStudios/cargo-about&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;cargo-about&lt;/code&gt;&lt;/a&gt;
-: リポジトリのライセンス表記ファイルに更新漏れがないか&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/bnjbvr/cargo-machete&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;cargo-machete&lt;/code&gt;&lt;/a&gt;: 不要な依存関係がないか&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/EmbarkStudios/cargo-deny&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;cargo-deny&lt;/code&gt;&lt;/a&gt;: 依存ライブラリに許容しないライセンスが含まれていないか&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/EmbarkStudios/cargo-about&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;cargo-about&lt;/code&gt;&lt;/a&gt;: リポジトリのライセンス表記ファイルに更新漏れがないか&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;それぞれ紹介する。なお、コード例はそれぞれ以下のランナーを想定している。&lt;/p&gt;
 &lt;table&gt;
@@ -378,8 +402,7 @@
 &lt;p&gt;ある程度の期間開発を続けていると以前追加した依存関係が不要になったことに気付かずに&lt;code&gt;cargo.toml&lt;/code&gt;の&lt;code&gt;dependencies&lt;/code&gt;や&lt;code&gt;dev-dependencies&lt;/code&gt;に残ったままになることがある。
 不要な依存関係が残ったままになっているとrenovateやdependabotによるバージョン更新の手間が不必要に増えてしまうのでPRの時点で気付けるようにしたい。&lt;/p&gt;
 &lt;h3 id=&#34;what&#34;&gt;what&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/bnjbvr/cargo-machete&#34; target=&#34;_blank&#34; &gt;cargo-machete&lt;/a&gt;
-を使って&lt;code&gt;cargo.toml&lt;/code&gt;に記述されている依存関係のうち、プロジェクトが実際には依存していない依存関係を検出する。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/bnjbvr/cargo-machete&#34; target=&#34;_blank&#34; &gt;cargo-machete&lt;/a&gt;を使って&lt;code&gt;cargo.toml&lt;/code&gt;に記述されている依存関係のうち、プロジェクトが実際には依存していない依存関係を検出する。&lt;/p&gt;
 &lt;h3 id=&#34;howローカル&#34;&gt;how(ローカル)&lt;/h3&gt;
 &lt;p&gt;以下のようなmake targetを定義しておくと&lt;code&gt;make detect-unused-dependencies&lt;/code&gt;で不要な依存関係を検出できる。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-makefile&#34; data-lang=&#34;makefile&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.PHONY&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; tool-detect-unused-dependencies
@@ -414,8 +437,7 @@
 &lt;p&gt;筆者は&lt;code&gt;fzf-make&lt;/code&gt;をより自由に利用してほしいと考えているためMITライセンスでプロジェクトを公開したい。
 コピーレフトのライセンスに依存してしまうとライセンス変更を余儀なくされるため、コピーレフトのライブラリに依存することを避けたい。&lt;/p&gt;
 &lt;h3 id=&#34;what-1&#34;&gt;what&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/EmbarkStudios/cargo-deny&#34; target=&#34;_blank&#34; &gt;cargo-deny&lt;/a&gt;
-は依存関係のlint機能を提供する。&lt;code&gt;fzf-make&lt;/code&gt;では、&lt;code&gt;cargo deny check licenses&lt;/code&gt;を用いてホワイトリストに登録したライセンス以外のライセンスが依存ライブラリに含まれていないか検証している。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/EmbarkStudios/cargo-deny&#34; target=&#34;_blank&#34; &gt;cargo-deny&lt;/a&gt;は依存関係のlint機能を提供する。&lt;code&gt;fzf-make&lt;/code&gt;では、&lt;code&gt;cargo deny check licenses&lt;/code&gt;を用いてホワイトリストに登録したライセンス以外のライセンスが依存ライブラリに含まれていないか検証している。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# deny.toml&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;licenses&lt;/span&gt;]
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;allow&lt;/span&gt; = [
@@ -474,8 +496,7 @@
 &lt;p&gt;また、本来は依存ライブラリの依存ライブラリを再帰的にチェックしてすべてのライセンス表記をすべきなのだと思うが、手作業でそれをする気にはなれなかったので直接依存しているライブラリのライセンスしか表記できていなかった。&lt;/p&gt;
 &lt;p&gt;これらの課題を&lt;code&gt;cargo-about&lt;/code&gt;を用いることで解決できそうだったので導入してみた。&lt;/p&gt;
 &lt;h3 id=&#34;what-2&#34;&gt;what&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/EmbarkStudios/cargo-about&#34; target=&#34;_blank&#34; &gt;cargo-about&lt;/a&gt;
-は依存ライブラリのライセンス表記ファイルを自動生成する機能を提供する。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/EmbarkStudios/cargo-about&#34; target=&#34;_blank&#34; &gt;cargo-about&lt;/a&gt;は依存ライブラリのライセンス表記ファイルを自動生成する機能を提供する。&lt;/p&gt;
 &lt;p&gt;以下のようなテンプレートを用意し、&lt;code&gt;cargo about generate about.hbs &amp;gt; CREDITS.html&lt;/code&gt;を実行すると&lt;code&gt;CREDITS.html&lt;/code&gt;にライセンス表記を出力してくれる。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
@@ -581,8 +602,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;This page lists the licenses of the projects used in fzf-make.&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これに関しては以下のissueを立ててみたので&lt;code&gt;cargo-about&lt;/code&gt;側と意見が一致したら修正するPRを送ってみようと思う。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/EmbarkStudios/cargo-about/issues/281&#34; target=&#34;_blank&#34; &gt;[Feature request] change &lt;code&gt;cargo about init&lt;/code&gt; to generate the statement including user&amp;rsquo;s project name.&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/EmbarkStudios/cargo-about/issues/281&#34; target=&#34;_blank&#34; &gt;[Feature request] change &lt;code&gt;cargo about init&lt;/code&gt; to generate the statement including user&amp;rsquo;s project name.&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
 &lt;p&gt;繰り返しの定型タスクをCIに任せることができたので開発により集中できるようになった。（趣味開発だと数ヶ月ぶりにコミットするとかもザラにあり、開発に必要なタスクを忘れがちなのでそういった意味でも自動化の範囲を増やすことができてよかった）&lt;/p&gt;
 &lt;p&gt;便利ツールをOSSとして公開してくれている人/企業に感謝しつつ利用するだけでなく自分にできる貢献はやっていきたい。&lt;/p&gt;
@@ -590,12 +610,10 @@
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;&lt;code&gt;fzf-make&lt;/code&gt;の紹介記事: &lt;a href=&#34;https://zenn.dev/kyu08/articles/974fd8bc25c303&#34; target=&#34;_blank&#34; &gt;[make,pnpm,yarn,justに対応]コマンドをfuzzy finder形式で選択できるCLIツール fzf-makeの紹介&lt;/a&gt;
-&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;fzf-make&lt;/code&gt;の紹介記事: &lt;a href=&#34;https://zenn.dev/kyu08/articles/974fd8bc25c303&#34; target=&#34;_blank&#34; &gt;[make,pnpm,yarn,justに対応]コマンドをfuzzy finder形式で選択できるCLIツール fzf-makeの紹介&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:2&#34;&gt;
-&lt;p&gt;そして実際に&lt;a href=&#34;https://github.com/search?q=%22This&amp;#43;page&amp;#43;lists&amp;#43;the&amp;#43;licenses&amp;#43;of&amp;#43;the&amp;#43;projects&amp;#43;used&amp;#43;in&amp;#43;cargo-about.%22&amp;amp;type=code&#34; target=&#34;_blank&#34; &gt;90件近くのプロジェクトで&lt;code&gt;cargo-about&lt;/code&gt;のままになっている。&lt;/a&gt;
-&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;そして実際に&lt;a href=&#34;https://github.com/search?q=%22This&amp;#43;page&amp;#43;lists&amp;#43;the&amp;#43;licenses&amp;#43;of&amp;#43;the&amp;#43;projects&amp;#43;used&amp;#43;in&amp;#43;cargo-about.%22&amp;amp;type=code&#34; target=&#34;_blank&#34; &gt;90件近くのプロジェクトで&lt;code&gt;cargo-about&lt;/code&gt;のままになっている。&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
@@ -609,8 +627,7 @@
       
       <guid>https://blog.kyu08.com/posts/renew-oss-sponsoring/</guid>
       <description>OSSへの寄付の月予算を$10にした - laiso こちらの記事で寄付するOSSプロジェクトの選び方として次のような基準が紹介されていた。 寄付するプロジ</description>
-      <content>&lt;p&gt;&lt;a href=&#34;https://laiso.hatenablog.com/entry/2022/02/25/gihutown&#34; target=&#34;_blank&#34; &gt;OSSへの寄付の月予算を$10にした - laiso&lt;/a&gt;
-&lt;/p&gt;
+      <content>&lt;p&gt;&lt;a href=&#34;https://laiso.hatenablog.com/entry/2022/02/25/gihutown&#34; target=&#34;_blank&#34; &gt;OSSへの寄付の月予算を$10にした - laiso&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;こちらの記事で寄付するOSSプロジェクトの選び方として次のような基準が紹介されていた。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;寄付するプロジェクトはこういう基準で選んでる&lt;/p&gt;
@@ -619,25 +636,18 @@
 &lt;li&gt;マイナーであまり寄付されていない&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;今まで前者の基準に則って&lt;a href=&#34;https://github.com/sponsors/neovim&#34; target=&#34;_blank&#34; &gt;neovim&lt;/a&gt;
-に寄付していたが、後者の観点を持てていなかったことに気付いた。そこで自分もOSSへの寄付を見直してみようと思った。&lt;/p&gt;
+&lt;p&gt;今まで前者の基準に則って&lt;a href=&#34;https://github.com/sponsors/neovim&#34; target=&#34;_blank&#34; &gt;neovim&lt;/a&gt;に寄付していたが、後者の観点を持てていなかったことに気付いた。そこで自分もOSSへの寄付を見直してみようと思った。&lt;/p&gt;
 &lt;h2 id=&#34;というわけで&#34;&gt;というわけで&lt;/h2&gt;
-&lt;p&gt;タイトルの通りだが、GitHub Sponsorsの寄付先に&lt;a href=&#34;https://github.com/sponsors/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;
-を追加した。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/ratatui/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;
-とは、手軽にTUIアプリケーションを作成できるRust用のライブラリで、筆者が個人開発しているOSSである&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;fzf-make&lt;/a&gt;
-でも利用している。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;タイトルの通りだが、GitHub Sponsorsの寄付先に&lt;a href=&#34;https://github.com/sponsors/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;を追加した。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/ratatui/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;とは、手軽にTUIアプリケーションを作成できるRust用のライブラリで、筆者が個人開発しているOSSである&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;fzf-make&lt;/a&gt;でも利用している。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/kyu08/fzf-make/main/static/demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34;&gt;
-&lt;a href=&#34;https://github.com/ratatui/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;
-のおかげでこんな感じのUIを手軽に実装できている。&lt;/p&gt;
+&lt;a href=&#34;https://github.com/ratatui/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;のおかげでこんな感じのUIを手軽に実装できている。&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Rust製のTUIツールでは非常に幅広く利用されている印象だが、現在のスポンサー数が9人と少なかったので少しでも力になれればということで寄付先に追加した。長期間メンテされる状態が続いてくれると嬉しい。自分にもできそうなバグ修正があれば挑戦してみようと思う。&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;&lt;img src=&#34;ratatuis-10th-sponsor.webp&#34; alt=&#34;ratatuis-10th-sponsor.webp&#34;&gt;
 10番目のスポンサーになった様子。&lt;/p&gt;
-&lt;p&gt;これで現在の寄付額は$10/月で、&lt;a href=&#34;https://github.com/sponsors/neovim&#34; target=&#34;_blank&#34; &gt;neovim&lt;/a&gt;
-と&lt;a href=&#34;https://github.com/sponsors/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;
-にそれぞれ$5ずつ寄付していることになる。&lt;/p&gt;
+&lt;p&gt;これで現在の寄付額は$10/月で、&lt;a href=&#34;https://github.com/sponsors/neovim&#34; target=&#34;_blank&#34; &gt;neovim&lt;/a&gt;と&lt;a href=&#34;https://github.com/sponsors/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;にそれぞれ$5ずつ寄付していることになる。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;github-sponsors-logos.webp&#34; alt=&#34;github-sponsors-logos.webp&#34;&gt;&lt;/p&gt;
 &lt;p&gt;他にも寄付したいプロジェクトは山ほどあるので山ほど稼いでいきたい。(あと円高頼む&amp;hellip;)&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
@@ -646,7 +656,17 @@
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;make targetをプレビューウィンドウ付きであいまい検索によって選択&amp;amp;実行できるツール。brewやcargoでインストールできるのでぜひ。 &lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/fzf-make&lt;/a&gt;
+&lt;p&gt;make targetをプレビューウィンドウ付きであいまい検索によって選択&amp;amp;実行できるツール。brewやcargoでインストールできるのでぜひ。 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-make&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/fzf-make&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-make&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -663,11 +683,20 @@
       <description>(2024/12/14追記) 内容を更新した紹介記事をZennに投稿しました。 [make,pnpm,yarnに対応]タスクランナーのコマンドを</description>
       <content>&lt;blockquote&gt;
 &lt;h1 id=&#34;20241214追記-内容を更新した紹介記事をzennに投稿しました&#34;&gt;(2024/12/14追記) 内容を更新した紹介記事をZennに投稿しました。&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://zenn.dev/kyu08/articles/974fd8bc25c303&#34; target=&#34;_blank&#34; &gt;[make,pnpm,yarnに対応]タスクランナーのコマンドをfuzzy finder形式で選択できるCLIツール fzf-makeの紹介&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://zenn.dev/kyu08/articles/974fd8bc25c303&#34; target=&#34;_blank&#34; &gt;[make,pnpm,yarnに対応]タスクランナーのコマンドをfuzzy finder形式で選択できるCLIツール fzf-makeの紹介&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/fzf-make&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-make&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/fzf-make&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-make&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;こんな感じで動く。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo&#34;&gt;&lt;/p&gt;
@@ -679,36 +708,62 @@
 &lt;li&gt;&lt;code&gt;skim&lt;/code&gt;から選択されたtargetが返ってくるので&lt;code&gt;make ${target}&lt;/code&gt;を実行&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;基本的な動作はすべて&lt;code&gt;skim&lt;/code&gt;任せになっていてRust側でやっているのは&lt;code&gt;skim&lt;/code&gt;とのやりとりくらいになっている。&lt;/p&gt;
-&lt;p&gt;※&lt;a href=&#34;https://github.com/lotabout/skim&#34; target=&#34;_blank&#34; &gt;lotabout/skim&lt;/a&gt;
-&amp;hellip;Rust製のfuzzy-finder。Rustのライブラリとして利用することもできる。&lt;/p&gt;
-&lt;p&gt;(makeの文法が思ったより多彩っぽかったので自分が必要とするごく簡単なユースケース以外をカバーするのは&lt;a href=&#34;https://twitter.com/kyu08_/status/1639986936407531525&#34; target=&#34;_blank&#34; &gt;早々に諦めた。&lt;/a&gt;
-(makeで1冊本が書けるぐらいだしそれはそうという感じではある))&lt;/p&gt;
+&lt;p&gt;※&lt;a href=&#34;https://github.com/lotabout/skim&#34; target=&#34;_blank&#34; &gt;lotabout/skim&lt;/a&gt;&amp;hellip;Rust製のfuzzy-finder。Rustのライブラリとして利用することもできる。&lt;/p&gt;
+&lt;p&gt;(makeの文法が思ったより多彩っぽかったので自分が必要とするごく簡単なユースケース以外をカバーするのは&lt;a href=&#34;https://twitter.com/kyu08_/status/1639986936407531525&#34; target=&#34;_blank&#34; &gt;早々に諦めた。&lt;/a&gt;(makeで1冊本が書けるぐらいだしそれはそうという感じではある))&lt;/p&gt;
 &lt;p&gt;brewコマンドでインストールできるので気になる方はぜひ。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew tap kyu08/tap
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install kyu08/tap/fzf-make
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ソースも公開しているので、「こう書くといいよ」とかバグとかありましたらぜひissueやPRで教えてください。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/fzf-make&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-make&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/fzf-make&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-make&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &lt;/p&gt;
 &lt;h2 id=&#34;実装&#34;&gt;実装&lt;/h2&gt;
 &lt;p&gt;上述の通り処理の大部分はskim任せになっている。(書いたコードはテストを含めても200行程度)&lt;/p&gt;
 &lt;p&gt;ただskimをライブラリとして利用する実装サンプルがあまりなかったのがちょっと大変だった。特にプレビューウィンドウの表示にfzfの候補文字列を変数としたシェルコマンドの形で渡すことができることに気づくまでに時間がかかった&lt;/p&gt;
 &lt;p&gt;↓の&lt;code&gt;{}&lt;/code&gt;にtarget名が入るイメージ。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; preview_command &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;line=$(bat Makefile | grep -nE &amp;#39;^{}\s*:&amp;#39; | sed -e &amp;#39;s/:.*//g&amp;#39;); bat --style=numbers --color=always --line-range $line: --highlight-line $line Makefile&amp;#34;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18&lt;/a&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;あとはgoでいつもやっている感じでテーブル駆動テストっぽくテストを書いてみた。可読性も保守性も高いので割と気に入っている。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145&#34; target=&#34;_blank&#34; &gt;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
 &lt;/p&gt;
 &lt;h2 id=&#34;動機&#34;&gt;動機&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Rustが書きたかった。(以上)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;最近Rustのやっていきが高まっており、&lt;a href=&#34;https://doc.rust-jp.rs/book-ja/&#34; target=&#34;_blank&#34; &gt;The Rust Programming Language&lt;/a&gt;
- を1周したので何か作ってみるぞーという機運とMakefileのターゲットをfuzzy-finderで絞り込めたら便利そうだなーという気持ちが重なったのでRustでfzf-makeを作ってみた。 (あとはskimの存在を知っていたのも大きい。)&lt;/p&gt;
+&lt;p&gt;最近Rustのやっていきが高まっており、&lt;a href=&#34;https://doc.rust-jp.rs/book-ja/&#34; target=&#34;_blank&#34; &gt;The Rust Programming Language&lt;/a&gt; を1周したので何か作ってみるぞーという機運とMakefileのターゲットをfuzzy-finderで絞り込めたら便利そうだなーという気持ちが重なったのでRustでfzf-makeを作ってみた。 (あとはskimの存在を知っていたのも大きい。)&lt;/p&gt;
 &lt;p&gt;自分が欲しいCLIツールを手に入れつつRustの経験が積めたのでよかった。&lt;/p&gt;
 &lt;p&gt;ちなみにRustに入門した直接的(?)なきっかけとしてはこのスライドを目にして、「Elmっぽい！楽しそう！」と思ったのが発端だった。Rustに興味を持っている人はぜひ読んでみて欲しい。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://speakerdeck.com/estie/man-wochi-siteshi-merurust&#34; target=&#34;_blank&#34; &gt;満を持して始める Rust&lt;/a&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://speakerdeck.com/estie/man-wochi-siteshi-merurust&#34; target=&#34;_blank&#34; &gt;満を持して始める Rust&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;rustを触ってみて感じたこと&#34;&gt;Rustを触ってみて感じたこと&lt;/h2&gt;
 &lt;p&gt;Rustを触る前に持っていた印象は「コンパイルが通りずらく、安全性が高い」「関数型っぽい」という感じだった。&lt;/p&gt;
 &lt;p&gt;実際に学んでみた印象は次のような感じ。&lt;/p&gt;
@@ -716,8 +771,7 @@
 &lt;li&gt;関数型っぽい書き心地
 &lt;ul&gt;
 &lt;li&gt;特にenumとパターンマッチング,Option型 ,Result型, 式指向な考え方などの関数型っぽい言語機能や極力データをイミュータブルに扱う思想などが心地よかった。筆者が大好きな言語であるElm(ウェブブラウザベースのGUIを作成するための純粋関数型)の好きな部分をほとんど含んでたのでElmに近い感覚で書くことができた。(もちろん慣れてないこともあってElmよりも全然難しかったけど)&lt;/li&gt;
-&lt;li&gt;(Elmが気になる方は&lt;a href=&#34;https://guide.elm-lang.jp/&#34; target=&#34;_blank&#34; &gt;Elm Guide&lt;/a&gt;
-がおすすめです)&lt;/li&gt;
+&lt;li&gt;(Elmが気になる方は&lt;a href=&#34;https://guide.elm-lang.jp/&#34; target=&#34;_blank&#34; &gt;Elm Guide&lt;/a&gt;がおすすめです)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;↑に近いがNull安全なことに加えて所有権などの概念のおかげでコンパイルが通りさえすればちゃんと動いてくれるという安心感がある。
@@ -732,8 +786,17 @@
 &lt;/li&gt;
 &lt;li&gt;コミュニティの初学者をサポートする姿勢がすごい
 &lt;ul&gt;
-&lt;li&gt;RustのOSSプロジェクトへのcontributionについては &lt;a href=&#34;https://zenn.dev/fraternite/articles/4e11063bf05aac&#34; target=&#34;_blank&#34; &gt;rust-lang/rustへのcode contributionをはじめからていねいに&lt;/a&gt;
- が詳しいが、Rust製のOSSプロジェクトには&lt;code&gt;E-mentor&lt;/code&gt;というタグがありissueを進めるに当たってメンターが指針を記してくれているらしい。（&lt;a href=&#34;https://github.com/rust-lang/rust/issues/109099&#34; target=&#34;_blank&#34; &gt;https://github.com/rust-lang/rust/issues/109099&lt;/a&gt;
+&lt;li&gt;RustのOSSプロジェクトへのcontributionについては &lt;a href=&#34;https://zenn.dev/fraternite/articles/4e11063bf05aac&#34; target=&#34;_blank&#34; &gt;rust-lang/rustへのcode contributionをはじめからていねいに&lt;/a&gt; が詳しいが、Rust製のOSSプロジェクトには&lt;code&gt;E-mentor&lt;/code&gt;というタグがありissueを進めるに当たってメンターが指針を記してくれているらしい。（&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/rust-lang/rust/issues/109099&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/rust-lang/rust/issues/109099&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/rust-lang/rust/issues/109099&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/rust-lang/rust/issues/109099&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
  これとかすごい。）&lt;/li&gt;
 &lt;li&gt;いつかRustのOSSプロジェクトにもcontributionしてみたい&lt;/li&gt;
 &lt;/ul&gt;
@@ -742,8 +805,7 @@
 &lt;/ul&gt;
 &lt;p&gt;総じて開発体験は良かったのでこれからもゆるゆるとRustの学習は続けていきたい。&lt;/p&gt;
 &lt;h2 id=&#34;余談&#34;&gt;余談&lt;/h2&gt;
-&lt;p&gt;テスト実行に &lt;a href=&#34;nextest-rs/nextest&#34; &gt;https://github.com/nextest-rs/nextest&lt;/a&gt;
- を使ってみたがテスト結果が見やすくて便利だった。&lt;/p&gt;
+&lt;p&gt;テスト実行に &lt;a href=&#34;nextest-rs/nextest&#34; &gt;https://github.com/nextest-rs/nextest&lt;/a&gt; を使ってみたがテスト結果が見やすくて便利だった。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;cargo run&lt;/code&gt;の結果
 &lt;img src=&#34;cargo-run.webp&#34; alt=&#34;cargo run&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;cargo nextest run&lt;/code&gt;の結果
