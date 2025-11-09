@@ -1,0 +1,11 @@
+{{- $url := .Get "url" -}}
+{{- $title := .Get "title" -}}
+{{- $description := .Get "description" -}}
+{{- $image := .Get "image" -}}
+{{- $autoFetch := .Get "auto-fetch" | default "true" -}}
+
+{{- if not $url -}}
+  {{- errorf "blogcard shortcode requires 'url' parameter" -}}
+{{- end -}}
+
+{{- partial "blogcard.html" (dict "url" $url "title" $title "description" $description "image" $image "autoFetch" $autoFetch) -}}

@@ -1,1 +1,15 @@
-<a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if or (strings.HasPrefix .Destination "http") (strings.HasPrefix .Destination "https") }} target="_blank"{{ end }} >{{ .Text | safeHTML }}</a>
+{{- /* リンクテキストとURLが同じ場合はblogcardとして表示 */ -}}
+{{- $text := .Text -}}
+{{- $dest := .Destination -}}
+
+{{- /* URLの正規化（プロトコルとトレイリングスラッシュを除去して比較） */ -}}
+{{- $normalizedText := $text | replaceRE "^https?://" "" | strings.TrimSuffix "/" -}}
+{{- $normalizedDest := $dest | replaceRE "^https?://" "" | strings.TrimSuffix "/" -}}
+
+{{- if eq $normalizedText $normalizedDest -}}
+  {{- /* blogcardとして表示 */ -}}
+  {{- partial "blogcard.html" (dict "url" $dest "autoFetch" "true") -}}
+{{- else -}}
+  {{- /* 通常のリンクとして表示 */ -}}
+  <a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if or (strings.HasPrefix .Destination "http") (strings.HasPrefix .Destination "https") }} target="_blank"{{ end }} >{{ .Text | safeHTML }}</a>
+{{- end -}}
