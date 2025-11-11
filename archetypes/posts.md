@@ -2,7 +2,7 @@
 title: ""
 tags: []
 
-cover: "https://blog.kyu08.com/cover.png"
+cover: "cover.png"
 description: ""
 date: {{ .Date }}
 author: "kyu08"
