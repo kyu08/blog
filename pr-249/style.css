@@ -67,26 +67,24 @@ a {
   color: white;
 }
 
-/* posts_pagination用のレスポンシブスタイル */
-@media (max-width: 768px) {
-  .pagination__buttons {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
+/* posts_pagination用のスタイル（全デバイス） */
+.pagination__buttons {
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
 
-  /* 長いテキストを3行まで表示し、それ以降は...で省略 */
-  .pagination__buttons a.button.inline {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: normal;
-    max-width: 100%;
-    line-height: 1.5;
-    text-align: center;
-  }
+/* 長いテキストを3行まで表示し、それ以降は...で省略 */
+.pagination__buttons a.button.inline {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  max-width: 100%;
+  line-height: 1.5;
+  text-align: center;
 }
 
 code {
