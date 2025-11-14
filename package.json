@@ -4,6 +4,7 @@
   "description": "",
   "main": "",
   "type": "module",
+  "packageManager": "pnpm@10.20.0",
   "scripts": {
     "generate-ogp": "node scripts/generate-ogp.mjs"
   },
