@@ -1,0 +1,15 @@
+{{- /* 画像をfigure要素で囲み、alt-textをキャプションとして表示 */ -}}
+{{- $alt := .Text -}}
+{{- $src := .Destination -}}
+{{- $title := .Title -}}
+
+{{- if $alt -}}
+  {{- /* alt-textがある場合はfigureとfigcaptionを使用 */ -}}
+  <figure class="image-with-caption">
+    <img src="{{ $src | safeURL }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} loading="lazy" />
+    <figcaption>{{ $alt }}</figcaption>
+  </figure>
+{{- else -}}
+  {{- /* alt-textがない場合は通常のimg要素 */ -}}
+  <img src="{{ $src | safeURL }}" alt=""{{ with $title }} title="{{ . }}"{{ end }} loading="lazy" />
+{{- end -}}
