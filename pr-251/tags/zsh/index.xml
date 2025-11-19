@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>zsh on blog.kyu08.com</title>
+    <link>https://blog.kyu08.com/pr-251/tags/zsh/</link>
+    <description>Recent content in zsh on blog.kyu08.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>blog.kyu08.com</copyright>
+    <lastBuildDate>Mon, 02 Sep 2024 15:54:12 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-251/tags/zsh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>forkしたrepositoryのremoteを最新化しつつローカルにpullするスクリプトを書いた</title>
+      <link>https://blog.kyu08.com/pr-251/posts/gh-sync-remote-and-pull/</link>
+      <pubDate>Mon, 02 Sep 2024 15:54:12 +0000</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-251/posts/gh-sync-remote-and-pull/</guid>
+      <description>前提 ghコマンドがインストールされていること デフォルトブランチにいること tl;dr # forkしたrepositoryのremoteを更新しつつpul</description>
+      <content>&lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;gh&lt;/code&gt;コマンドがインストールされていること&lt;/li&gt;
+&lt;li&gt;デフォルトブランチにいること&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tldr&#34;&gt;tl;dr&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# forkしたrepositoryのremoteを更新しつつpullする&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; git-sync&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    REPO&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;git remote get-url origin | sed -E &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s%.+github.com/(.*).git$%\1%&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;🔄 Syncing &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;REPO&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;...\\n&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    gh repo sync &lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;REPO&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git pull
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias gsy&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;git-sync
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;嬉しさ&#34;&gt;嬉しさ&lt;/h2&gt;
+&lt;p&gt;もともとは以下の2ステップだったが前述のスクリプトを使うと1ステップにまとめることができる。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ブラウザで&lt;code&gt;Sync fork &amp;gt; Update branch&lt;/code&gt;をクリック&lt;/li&gt;
+&lt;li&gt;ローカルで&lt;code&gt;git pull&lt;/code&gt;を実行&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>ブラウザからforkすると遅いのでCLIからfork &amp; cloneするスクリプトを書いた</title>
+      <link>https://blog.kyu08.com/pr-251/posts/gh-repo-fork-script/</link>
+      <pubDate>Sun, 18 Aug 2024 06:52:01 +0000</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-251/posts/gh-repo-fork-script/</guid>
+      <description>モチベーション GitHubにホストされているOSSにPRを出す時にforkしてからローカルにcloneするが、ブラウザのforkボタンを使っ</description>
+      <content>&lt;h2 id=&#34;モチベーション&#34;&gt;モチベーション&lt;/h2&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;GitHubにホストされているOSSにPRを出す時にforkしてからローカルにcloneするが、ブラウザのforkボタンを使ってforkすると時間がかかることが多くストレスに感じていた。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;そのためCLI上でforkとcloneを行うスクリプトを書いた。&lt;/p&gt;
+&lt;p&gt;これまでの手順は以下のような手順が必要だった。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ブラウザでforkボタンを押す&lt;/li&gt;
+&lt;li&gt;forkの完了を待つ&lt;/li&gt;
+&lt;li&gt;ブラウザに表示されるcloneコマンドをコピー(&lt;code&gt;gh repo clone owner/repo&lt;/code&gt;みたいなやつ)&lt;/li&gt;
+&lt;li&gt;ターミナルでコマンドを実行してforkしたリポジトリをcloneする&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;これを以下のステップでできるようにした。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;リポジトリのURLまたは&lt;code&gt;OWNER/REPO&lt;/code&gt;形式の文字列をコピー&lt;/li&gt;
+&lt;li&gt;コマンドに1. で取得した文字列を渡して実行&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;つくったスクリプト&#34;&gt;つくったスクリプト&lt;/h2&gt;
+&lt;p&gt;以下を&lt;code&gt;.zshrc&lt;/code&gt;などに追加すると使えるようになる。&lt;code&gt;alias&lt;/code&gt;の部分はお好みで。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; git-fork-clone&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# 入力からowner/repoを取り出す。owner/repoのような形式でもURLでもOK&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    REPO&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;echo $1 | sed -E &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s@.+github.com/([^/]+)/([^/]+).*@\1/\2@&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;🐙 &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;REPO&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; will be forked and cloned.\\n&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# -- 以降のオプションはgit cloneに渡される&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# See: https://cli.github.com/manual/gh_repo_fork&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    gh repo fork &lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;REPO&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt; --default-branch-only --clone&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;true -- --filter&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;blob:none
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias gf&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;git-fork-clone
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;gh&lt;/code&gt;コマンドがインストールされていること。&lt;/p&gt;
+&lt;h2 id=&#34;使い方&#34;&gt;使い方&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git-fork-clone https://github.com/cli/cli
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;上記を実行すると以下のような出力が表示され、リポジトリのforkとcloneが行われる。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;🐙 cli/cli will be forked and cloned.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;✓ Created fork kyu08/cli
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Cloning into &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;cli&amp;#39;&lt;/span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;remote: Enumerating objects: 31, &lt;span style=&#34;color:#66d9ef&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;remote: Counting objects: 100% &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;31/31&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;remote: Compressing objects: 100% &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;30/30&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;remote: Total &lt;span style=&#34;color:#ae81ff&#34;&gt;31&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;delta 0&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;, reused &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;delta 0&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;, pack-reused &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;from 0&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Receiving objects: 100% &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;31/31&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;, 20.41 KiB | 10.20 MiB/s, &lt;span style=&#34;color:#66d9ef&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;From github.com:cli/cli
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; * &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;new branch&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;      main       -&amp;gt; upstream/main
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; * &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;new tag&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;         v1.0.1     -&amp;gt; v1.0.1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;✓ Cloned fork
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以下のような形式でも動く。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git-fork-clone https://github.com/cli/cli/pulls&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git-fork-clone cli/cli&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;また人類のOSS貢献力を加速させてしまいました。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;完全に余談だがスクリプトの&lt;code&gt;REPO=...&lt;/code&gt;の部分は &lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.tutorialspoint.com/execute_bash_online.php&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://www.tutorialspoint.com/execute_bash_online.php&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://www.tutorialspoint.com/execute_bash_online.php&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.tutorialspoint.com/execute_bash_online.php&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+ を使って出先で書いた。スマホでもシェルスクリプトが書けて便利。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Tmux&#43;NeovimでJetBrains IDEのScratchみたいな機能を実現している話</title>
+      <link>https://blog.kyu08.com/pr-251/posts/tmux-neovim-scratch/</link>
+      <pubDate>Sat, 04 Feb 2023 16:15:48 +0000</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-251/posts/tmux-neovim-scratch/</guid>
+      <description>任意の構成のSandbox的な環境をTmuxのwindowとして用意するようにしたところターミナルから出ずにサクっと動作検証とかが行えてハッ</description>
+      <content>&lt;p&gt;任意の構成のSandbox的な環境をTmuxのwindowとして用意するようにしたところターミナルから出ずにサクっと動作検証とかが行えてハッピーになったよ、という記事。ここではvanillaなGoのプロジェクトの例を紹介しますが、お好みの構成でSandbox環境を作ってみてください。&lt;/p&gt;
+&lt;p&gt;全然大したことをやっているわけではないですがTmux, Neovimやそれらのプラグインの普及活動になれば嬉しいので書いてみます。&lt;/p&gt;
+&lt;h2 id=&#34;動作イメージ&#34;&gt;動作イメージ&lt;/h2&gt;
+&lt;p&gt;こんな感じでvanillaのGoプロジェクトをTmuxのwindowに開いておいて、確認したくなったときにすぐwindowを切り替えてコードを書いて実行結果を確認できるようにしている。(Gifの例はGoの書式指定子&lt;code&gt;%+v&lt;/code&gt;の動作を忘れて試してみているところ)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;go-playground.gif&#34; alt=&#34;go-playground&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Gifでやっていることは以下&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;GoのSandbox環境を開いたNeovimが起動しているwindowに切り替え&lt;/li&gt;
+&lt;li&gt;コードを書く&lt;/li&gt;
+&lt;li&gt;Neovim上でターミナルを表示&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make run&lt;/code&gt;を実行してコード実行&lt;/li&gt;
+&lt;li&gt;結果を確認&lt;/li&gt;
+&lt;li&gt;元いたwindowに戻る&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;tmux-fzfなど筆者のターミナル環境については以下参照&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.kyu08.com/posts/my-dev-setup-terminal&#34; target=&#34;_blank&#34; &gt;開発の効率化のためにやっていること ターミナル編&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;筆者はGoの動作を確認したいことがほとんどなのでこういった構成にしているが、必要に応じてよく使うFWをセットアップした環境を作っておくと便利そう。&lt;/p&gt;
+&lt;h2 id=&#34;プロジェクトの内容&#34;&gt;プロジェクトの内容&lt;/h2&gt;
+&lt;p&gt;Go固有の内容もあるので参考程度で。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── .git
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── .gitignore
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── go.mod
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── go.sum
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── main.go
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── main.go.sample
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── main_test.go
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;└── Makefile
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;基本的に&lt;code&gt;main.go&lt;/code&gt;の中身を編集して、&lt;code&gt;go run .&lt;/code&gt;で実行して実行結果を確認するということをしている。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Makefile&lt;/code&gt;の中身は以下のような感じになっていて、&lt;code&gt;make run&lt;/code&gt;でコード実行、&lt;code&gt;make clear&lt;/code&gt;で&lt;code&gt;main.go&lt;/code&gt;をまっさらにできるようにしているだけである。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-Makefile&#34; data-lang=&#34;Makefile&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.PHONY&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; run clear
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;run&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  @go run .
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;clear&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  @cp ./main.go.sample ./main.go
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;main.go.sample&lt;/code&gt;の内容は以下。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;あとはよく見返したくなるコードは&lt;code&gt;main.go&lt;/code&gt;以外のファイル名で保存したり、commitしておくと後からでもさっと確認できてよさそう。(筆者はそこまでやってない)&lt;/p&gt;
+&lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
+&lt;p&gt;ターミナルから出ずに作業が完結できてうれしい。&lt;/p&gt;
+&lt;p&gt;同様のことはGoの場合はブラウザからThe Go Playground(※)を開いても行えるが筆者は何でもターミナルでできると嬉しい人なのでできるようにしてみた。&lt;/p&gt;
+&lt;p&gt;※ブラウザ上で実行できるGoのエディタ + 実行環境がセットになったやつ。&lt;div class=&#34;blogcard&#34; data-url=&#34;https://go.dev/play/&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://go.dev/play/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://go.dev/play/&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://go.dev/play/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;あとやるとしたらThe Go PlaygroundにあるURL発行機能とかを実現できると他の人への共有も楽になっていいのかもしれない。(今のところあんまり他の人に共有する機会がないので困っていない)&lt;/p&gt;
+&lt;h2 id=&#34;補足&#34;&gt;補足&lt;/h2&gt;
+&lt;p&gt;最後に補足としてGif内で使っているNeovimのプラグインを紹介します。&lt;/p&gt;
+&lt;h3 id=&#34;ターミナル表示&#34;&gt;ターミナル表示&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/voldikss/vim-floaterm&#34; target=&#34;_blank&#34; &gt;voldikss/vim-floaterm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;floaterm.gif&#34; alt=&#34;floaterm&#34;&gt;&lt;/p&gt;
+&lt;p&gt;GoのSandbox環境の&lt;code&gt;main.go&lt;/code&gt;に書いたスクリプトを実行するために、Neovimからターミナルを表示するシーンで使っている。&lt;/p&gt;
+&lt;p&gt;コード編集してサクっと動作確認したいときなどに便利。(といいつつ最近動作の重さが目立ってきたので&lt;code&gt;&amp;lt;C-z&amp;gt;&lt;/code&gt;でNeovimの起動元に戻ってターミナルを操作することが多い)&lt;/p&gt;
+&lt;h3 id=&#34;カーソル移動&#34;&gt;カーソル移動&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/yuki-yano/fuzzy-motion.vim&#34; target=&#34;_blank&#34; &gt;yuki-yano/fuzzy-motion.vim&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;fmt.Printf(&amp;quot;u: %v\n&amp;quot;, u)&lt;/code&gt;の&lt;code&gt;u&lt;/code&gt;から&lt;code&gt;%v&lt;/code&gt;の位置にカーソル移動する際に使っているプラグイン。&lt;/p&gt;
+&lt;p&gt;動作のイメージはこんな感じ。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fuzzy-motion.gif&#34; alt=&#34;fuzzy-motion&#34;&gt;&lt;/p&gt;
+&lt;p&gt;起動すると文字がグレーアウトするのでジャンプしたい文字列を入力するとその文字にジャンプするためのキーワードを表示してくれるというプラグイン。&lt;/p&gt;
+&lt;p&gt;同様の機能をもつプラグインとしてはeasy-motionなどのプラグインが有名だが、fuzzy-motionはジャンプしたい文字列をfuzzy-finder形式で絞り込んでくれるのが大きな特徴。(詳しくはリポジトリのREADME参照)&lt;/p&gt;
+&lt;p&gt;筆者はノーマルモードで&lt;code&gt;f&lt;/code&gt;キーを押下するとプラグインが起動するように設定している。&lt;/p&gt;
+&lt;p&gt;カーソル移動の効率がよすぎて正直もうこれなしでは開発したくない。&lt;/p&gt;
+&lt;h3 id=&#34;lsp-server&#34;&gt;LSP Server&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/neoclide/coc.nvim&#34; target=&#34;_blank&#34; &gt;neoclide/coc.nvim&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Language Serverをホストするためのプラグイン。&lt;/p&gt;
+&lt;p&gt;すごく簡単にいうと補完や関数定義を表示したり定義ジャンプできるようにしたりしてくれる。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;coc-nvim.gif&#34; alt=&#34;coc-nvim&#34;&gt;&lt;/p&gt;
+&lt;p&gt;以上です。ここまで読んでくれてありがとうございました。&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>開発の効率化のためにやっていることターミナル編</title>
+      <link>https://blog.kyu08.com/pr-251/posts/my-dev-setup-terminal/</link>
+      <pubDate>Wed, 14 Dec 2022 16:15:48 +0000</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-251/posts/my-dev-setup-terminal/</guid>
+      <description>【この記事はUnipos Advent Calendar 2022の記事です】 この記事では筆者が開発の効率化のために行っている工夫や使っているツールなどについて紹介します</description>
+      <content>&lt;p&gt;【この記事は&lt;a href=&#34;https://qiita.com/advent-calendar/2022/unipos&#34; target=&#34;_blank&#34; &gt;Unipos Advent Calendar 2022&lt;/a&gt;の記事です】&lt;/p&gt;
+&lt;p&gt;この記事では筆者が開発の効率化のために行っている工夫や使っているツールなどについて紹介します。
+「他にもこんなツールあるよ！」「こんな設定おすすめだよ！」などなどありましたらtwitterとかで教えてもらえると助かります。&lt;/p&gt;
+&lt;p&gt;今回はターミナル編です！&lt;/p&gt;
+&lt;h2 id=&#34;シェル&#34;&gt;シェル&lt;/h2&gt;
+&lt;p&gt;シェルはzshを使っています。 一時期fishも使っていましたが、環境移行のコストが低かったりPOSIX準拠だったりするメリットに旨味を感じてzshに乗り換えました。&lt;/p&gt;
+&lt;h3 id=&#34;よく使うalias&#34;&gt;よく使うalias&lt;/h3&gt;
+&lt;p&gt;zshでは&lt;code&gt;alias hoge=&#39;echo hoge&#39;&lt;/code&gt;のように記述することでaliasを定義できます。&lt;/p&gt;
+&lt;p&gt;ここでは筆者がよく使うaliasをいくつか紹介します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias m&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;MEMODIR=~/code/memo; cd $MEMODIR; FILE=$MEMODIR/$(date +%Y%m%d).md; if [ ! -e $FILE ]; then echo &amp;#34;# todo \n\n# done\n&amp;#34; &amp;gt;&amp;gt; $FILE; fi; nvim $FILE&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;日毎に&lt;code&gt;yyyymmdd.md&lt;/code&gt;形式の名前のファイルを作成してvimで開く。
+ファイルが存在していなければ&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;# todo
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;# done
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;をファイルに書き込んだうえでvimで開く、という内容のワンライナーです。&lt;/p&gt;
+&lt;p&gt;実際に呼び出すとこんな感じです。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;memo.gif&#34; alt=&#34;memo&#34;&gt;&lt;/p&gt;
+&lt;p&gt;ちなみに筆者は&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;# todo
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; タスクA
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 子タスクa
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 子タスクb
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; タスクB
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;# done
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;のような感じでタスクを書いていき、完了したら以下のように&lt;code&gt;done&lt;/code&gt;に移すという素朴な方法でタスク管理をしています。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;# todo
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; タスクB
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;# done
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; タスクA
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 子タスクa
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 子タスクb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias ghw&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;gh repo view -w&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;gh&lt;/code&gt;コマンドを利用して現在いるリポジトリをブラウザでGitHubで開くコマンド&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ghw.gif&#34; alt=&#34;ghw&#34;&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias pbc&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;pbcopy &amp;amp;&amp;amp; pbpaste&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;make test | pbc&lt;/code&gt;のように出力をパイプで&lt;code&gt;pbc&lt;/code&gt;に渡すとクリップボードにコピーしつつ標準出力に出力してくれる。&lt;/p&gt;
+&lt;p&gt;コマンドの出力をコピーしたいけど出力内容もその場で確認したいときに便利。&lt;/p&gt;
+&lt;p&gt;こちらの記事で紹介されていた。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://takuya-1st.hatenablog.jp/entry/2017/05/30/093000&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://takuya-1st.hatenablog.jp/entry/2017/05/30/093000&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://takuya-1st.hatenablog.jp/entry/2017/05/30/093000&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://takuya-1st.hatenablog.jp/entry/2017/05/30/093000&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias finder&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;open -a Finder ./&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;現在いるディレクトをfinderで開くコマンド&lt;/p&gt;
+&lt;p&gt;ごく稀に使う。&lt;/p&gt;
+&lt;h3 id=&#34;ディレクトリ移動&#34;&gt;ディレクトリ移動&lt;/h3&gt;
+&lt;p&gt;zshにはcdrという、移動したことがあるディレクトリを自動的に保持してくれる機能があります。&lt;/p&gt;
+&lt;p&gt;これをいい感じにファジーファインダーから呼び出すスクリプトを公開して下さっている方がいたのでありがたく使わせてもらっています。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.rasukarusan.com/entry/2018/08/14/083000&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://www.rasukarusan.com/entry/2018/08/14/083000&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://www.rasukarusan.com/entry/2018/08/14/083000&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.rasukarusan.com/entry/2018/08/14/083000&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;fzfをインストールした上で以下のスクリプトを&lt;code&gt;.zshrc&lt;/code&gt;に記述すると&lt;code&gt;c&lt;/code&gt;で呼び出すことができます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# fzf-cdr &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias c&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;fzf-cdr&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; fzf-cdr&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    target_dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;cdr -l | sed &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s/^[^ ][^ ]*  *//&amp;#39;&lt;/span&gt; | fzf&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    target_dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;target_dir/&lt;span style=&#34;color:#ae81ff&#34;&gt;\~&lt;/span&gt;/$HOME&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt; -n &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$target_dir&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;; &lt;span style=&#34;color:#66d9ef&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        cd $target_dir
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# cdrの設定&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;autoload -Uz is-at-least
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; is-at-least 4.3.11
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  add-zsh-hook chpwd chpwd_recent_dirs
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  zstyle &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;:chpwd:*&amp;#39;&lt;/span&gt;      recent-dirs-max &lt;span style=&#34;color:#ae81ff&#34;&gt;500&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  zstyle &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;:chpwd:*&amp;#39;&lt;/span&gt;      recent-dirs-default yes
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  zstyle &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;:completion:*&amp;#39;&lt;/span&gt; recent-dirs-insert both
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# fzfの設定&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;export FZF_DEFAULT_OPTS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;--color=fg+:11 --height 70% --reverse --exit-0 --multi&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これを実際に使うとこんな感じになります。ファジーファインダーを利用して効率的にディレクトリ移動できます。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-cdr.gif&#34; alt=&#34;cdr&#34;&gt;&lt;/p&gt;
+&lt;p&gt;やっていることは以下です。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;.zshrc&lt;/code&gt;に定義したfzf-cdrを実行&lt;/li&gt;
+&lt;li&gt;移動したいディレクトリのパスの一部を入力&lt;/li&gt;
+&lt;li&gt;候補から移動したいディレクトリを選択する&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;コマンド履歴検索&#34;&gt;コマンド履歴検索&lt;/h3&gt;
+&lt;p&gt;実行したコマンドの履歴についてもfzfを使って絞り込みを行うようにしています。&lt;/p&gt;
+&lt;p&gt;これもスクリプトを公開して下さっている方がいたのでありがたく使わせてもらっています。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;以下のスクリプトを&lt;code&gt;.zshrc&lt;/code&gt;に記述すると、&lt;code&gt;ctrl + r&lt;/code&gt;でコマンド履歴を呼び出すことができます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;select&lt;/span&gt;-history&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  BUFFER&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;history -n -r &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | fzf --no-sort +m --query &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$LBUFFER&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; --prompt&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;History &amp;gt; &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  CURSOR&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;$#BUFFER
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;zle -N &lt;span style=&#34;color:#66d9ef&#34;&gt;select&lt;/span&gt;-history
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bindkey &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;^r&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;select&lt;/span&gt;-history
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;command-history.gif&#34; alt=&#34;command-history&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;git操作&#34;&gt;Git操作&lt;/h2&gt;
+&lt;p&gt;Git操作のほとんどはGitのTUIクライアントであるLazygitを使っています。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/jesseduffield/lazygit&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/jesseduffield/lazygit&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/jesseduffield/lazygit&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/jesseduffield/lazygit&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;Lazygitはターミナル上で動作するリッチなGitクライアントでGitに関する大抵のことを行うことができます。(機能が豊富すぎて何ができて何ができないのかを正確に把握できていない)&lt;/p&gt;
+&lt;p&gt;以下はLazygitを使って変更をaddしてcommitしてpushする例です。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;lazygit-push.gif&#34; alt=&#34;lazygit-push&#34;&gt;&lt;/p&gt;
+&lt;p&gt;見やすいですし、&lt;strong&gt;少ないタイプ数で操作できる&lt;/strong&gt;点でおすすめです。他にも基本的なブランチ操作はもちろんのこと、&lt;code&gt;git rebase -i&lt;/code&gt;相当のこともスピーディーにできるのでよく使っています。&lt;/p&gt;
+&lt;p&gt;ちなみに筆者はkdheepak/lazygit.nvimというプラグインを使ってNeovim上からLazygitを呼び出しています。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kdheepak/lazygit.nvim&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/kdheepak/lazygit.nvim&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kdheepak/lazygit.nvim&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kdheepak/lazygit.nvim&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;ターミナルエミュレータ&#34;&gt;ターミナルエミュレータ&lt;/h2&gt;
+&lt;p&gt;筆者はターミナルエミュレータ(以下ターミナル)としてAlacrittyを使っています。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/alacritty/alacritty&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/alacritty/alacritty&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/alacritty/alacritty&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/alacritty/alacritty&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;筆者は普段開発にNeovimを利用しているのですが、以前からプロジェクトの全文検索に時間がかかってしまう点が気になっていました。
+動作が高速なターミナルを探していたところRust製のターミナルであるAlacrittyにたどり着きました。&lt;/p&gt;
+&lt;p&gt;iTerm2からの乗り換えでしたが満足できるだけの速度になりました。&lt;strong&gt;ターミナルの速度を早くしたい人にはオススメ&lt;/strong&gt;です。あとは&lt;strong&gt;設定をyamlで記述できる&lt;/strong&gt;のも好みなポイントです。&lt;/p&gt;
+&lt;p&gt;カラースキームはTokyo Nightを利用しています。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/zatchheems/tokyo-night-alacritty-theme&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/zatchheems/tokyo-night-alacritty-theme&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/zatchheems/tokyo-night-alacritty-theme&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/zatchheems/tokyo-night-alacritty-theme&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tokyonight.webp&#34; alt=&#34;tokyonight&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Alacrittyにはタブ機能がなくタブ的な機能を実現するためにはtmuxなどのターミナルマルチプレクサを利用する必要があるため筆者はtmuxを利用しています。
+設定・プラグインなどは後述しますが、tmuxの操作感も好みなので割と満足しています。&lt;/p&gt;
+&lt;p&gt;他にもRust製のターミナルとしてWarp, Weztermなどがありますが筆者の環境ではWarpはNeovimのcolorschemeの反映がうまくできず、Weztermは画面の再描画まわりの不具合が多少あったため、採用しませんでした。(Warp便利そうだしみやすいので使いたかった)&lt;/p&gt;
+&lt;h2 id=&#34;ターミナルのタブ管理&#34;&gt;ターミナルのタブ管理&lt;/h2&gt;
+&lt;p&gt;前述の通りAlacrittyにはタブ機能がないため、tmuxを使ってターミナルのタブ管理を行っています。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/tmux/tmux&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/tmux/tmux&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/tmux/tmux&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/tmux/tmux&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;ステータスラインの表示&#34;&gt;ステータスラインの表示&lt;/h3&gt;
+&lt;p&gt;ステータスラインは比較的シンプルにしていて、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ウィンドウ一覧&lt;/li&gt;
+&lt;li&gt;現在時刻&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;を表示するようにしています。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tmux-status-line.webp&#34; alt=&#34;tmux-status-line&#34;&gt;&lt;/p&gt;
+&lt;p&gt;普段の開発ではプロジェクトごとにウィンドウを開き、必要に応じて切り替える運用にしています。&lt;/p&gt;
+&lt;h3 id=&#34;ウィンドウの切り替え&#34;&gt;ウィンドウの切り替え&lt;/h3&gt;
+&lt;p&gt;筆者はふだんプロジェクトごとのウィンドウに加えてmemo用のウィンドウ・dotfiles用のウィンドウなども開いており、常時ウィンドウが15前後あります。筆者は簡単なタスク管理もmemo用ウィンドウに立ち上げたNeovim内で行っているため、ウィンドウの切り替えを頻繁に行います。&lt;/p&gt;
+&lt;p&gt;以前まではウィンドウ切り替えを&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;prefix + w&lt;/code&gt; でウィンドウの一覧を表示&lt;/li&gt;
+&lt;li&gt;目的のウィンドウの位置を確認&lt;/li&gt;
+&lt;li&gt;目的のウィンドウまで &lt;code&gt;ctrl + n&lt;/code&gt;, &lt;code&gt;ctrl + p&lt;/code&gt; で移動&lt;/li&gt;
+&lt;li&gt;選択する&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;という手順で行っていましたがウィンドウが増えてくると地味にウィンドウ移動が大変になっていきました。以下は従来のウィンドウ切り替えの様子です。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tmux-window.gif&#34; alt=&#34;tmux-window&#34;&gt;&lt;/p&gt;
+&lt;p&gt;どうにかもう少し楽にウィンドウ切り替えをできないかと探していたところsainnhe/tmux-fzfに出会いました。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/sainnhe/tmux-fzf&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/sainnhe/tmux-fzf&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/sainnhe/tmux-fzf&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/sainnhe/tmux-fzf&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;sainnhe/tmux-fzfはファジーファインダーで効率的にtmuxを操作するためのプラグインです。&lt;/p&gt;
+&lt;p&gt;詳しくはリポジトリのREADMEに譲りますが、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;セッション管理&lt;/li&gt;
+&lt;li&gt;ウィンドウ管理&lt;/li&gt;
+&lt;li&gt;ペイン管理&lt;/li&gt;
+&lt;li&gt;コマンドの検索&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;などが可能です。&lt;/p&gt;
+&lt;p&gt;筆者はウィンドウ管理機能の中のウィンドウの切り替え機能を使っています。
+sainnhe/tmux-fzfを使うようにしたことでウィンドウ切り替えを&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;prefix&lt;/code&gt; + &lt;code&gt;prefix&lt;/code&gt;  でtmux-fzfのウィンドウ一覧を表示&lt;/li&gt;
+&lt;li&gt;目的のウィンドウ名の一部を入力&lt;/li&gt;
+&lt;li&gt;選択する&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;という手順でできるようになりました。文字にすると違いが伝わりづらいですが、ファジーファインダーを使ってウィンドウの選択を行うことができるようになったことでキーのタイプ数や切り替えの際の脳の負荷を大幅に減らすことができました。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tmux-fzf.gif&#34; alt=&#34;tmux-fzf&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
+&lt;p&gt;ここまで読んでくださってありがとうございました。&lt;/p&gt;
+&lt;p&gt;需要がありそうだったら&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Neovim編&lt;/li&gt;
+&lt;li&gt;alfred編&lt;/li&gt;
+&lt;li&gt;chrome拡張機能編&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;なども書こうと思います。&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

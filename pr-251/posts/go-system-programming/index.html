@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+    <title>『Goならわかるシステムプログラミング 第2版』を読んだ :: blog.kyu08.com</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11" />
+<meta name="keywords" content="Go, CS" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://blog.kyu08.com/pr-251/posts/go-system-programming/" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BDQ408J45J', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/post.min.d551b54605ea87772c5eb05bf68219699a011687df301682a1006e8811253df9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+<link rel="stylesheet" href="https://blog.kyu08.com/pr-251/style.css">
+
+
+<link rel="shortcut icon" href="https://blog.kyu08.com/pr-251/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/pr-251/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="kyu08_" />
+
+
+
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="『Goならわかるシステムプログラミング 第2版』を読んだ">
+<meta property="og:description" content="『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11" />
+<meta property="og:url" content="https://blog.kyu08.com/pr-251/posts/go-system-programming/" />
+<meta property="og:site_name" content="blog.kyu08.com" />
+
+
+  
+  
+    
+  
+
+
+  <meta property="og:image" content="https://blog.kyu08.com/pr-251/posts/go-system-programming/cover.png">
+  <meta name="twitter:image" content="https://blog.kyu08.com/pr-251/posts/go-system-programming/cover.png">
+  <meta name="twitter:image:alt" content="『Goならわかるシステムプログラミング 第2版』を読んだ">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+  <meta property="article:published_time" content="2024-11-03 12:42:30 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+<link rel="author" href="http://www.hatena.ne.jp/kyu08/" />
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ . }}');
+</script>
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    blog.kyu08.com
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/pr-251/tags/diary/">_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-251/about">about</a></li>
+        
+      
+        
+          <li><a href="/pr-251/index.xml">rss</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/pr-251/tags/diary/" >_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-251/about" >about</a></li>
+        
+      
+        
+          <li><a href="/pr-251/index.xml" >rss</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://blog.kyu08.com/pr-251/posts/go-system-programming/">『Goならわかるシステムプログラミング 第2版』を読んだ</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2024/11/03</time>
+      
+    <span class="post-reading-time">34 min read (16582 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://blog.kyu08.com/pr-251/tags/go/">Go</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-251/tags/cs/">CS</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-251/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/">読書ログ</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="/pr-251/posts/go-system-programming/cover.png"
+    class="post-cover"
+    alt="『Goならわかるシステムプログラミング 第2版』を読んだ"
+    title="Cover Image" />
+
+
+  
+    <div class="table-of-contents">
+      <h2>
+        目次
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#第1章-go言語で覗くシステムプログラミングの世界">第1章 Go言語で覗くシステムプログラミングの世界</a></li>
+    <li><a href="#第2章-低レベルアクセスへの入口1iowriter">第2章 低レベルアクセスへの入口1：io.Writer</a></li>
+    <li><a href="#第3章-低レベルアクセスへの入口1ioreader">第3章 低レベルアクセスへの入口1：io.Reader</a>
+      <ul>
+        <li><a href="#エンディアン変換">エンディアン変換</a></li>
+        <li><a href="#ioパッケージのいくつかの関数--構造体--インターフェースの使い方"><code>io</code>パッケージのいくつかの関数 / 構造体 / インターフェースの使い方</a></li>
+      </ul>
+    </li>
+    <li><a href="#第4章-チャネル">第4章 チャネル</a></li>
+    <li><a href="#第5章-システムコール">第5章 システムコール</a>
+      <ul>
+        <li><a href="#cpuの動作モード">CPUの動作モード</a></li>
+        <li><a href="#システムコールが必要な理由">システムコールが必要な理由</a></li>
+      </ul>
+    </li>
+    <li><a href="#第6章-tcpソケットとhttpの実装">第6章 TCPソケットとHTTPの実装</a>
+      <ul>
+        <li><a href="#ソケットとは">ソケットとは</a></li>
+        <li><a href="#ソケットの種類本書で説明するもののみ">ソケットの種類（本書で説明するもののみ）</a></li>
+        <li><a href="#ソケット通信の基本構造">ソケット通信の基本構造</a></li>
+        <li><a href="#goに組み込まれているtcpの機能netconnだけを使ってhttpによる通信を実現する">Goに組み込まれているTCPの機能（<code>net.Conn</code>）だけを使ってHTTPによる通信を実現する</a></li>
+        <li><a href="#素朴な実装の速度改善">素朴な実装の速度改善</a></li>
+      </ul>
+    </li>
+    <li><a href="#第7章-udpソケットを使ったマルチキャスト通信">第7章 UDPソケットを使ったマルチキャスト通信</a>
+      <ul>
+        <li><a href="#udpとtcpの用途の違い">UDPとTCPの用途の違い</a></li>
+        <li><a href="#udpのマルチキャストの実装例">UDPのマルチキャストの実装例</a></li>
+        <li><a href="#udpとtcpの機能面の違い">UDPとTCPの機能面の違い</a></li>
+      </ul>
+    </li>
+    <li><a href="#第8章-高速なunixドメインソケット">第8章 高速なUnixドメインソケット</a>
+      <ul>
+        <li><a href="#unixドメインソケットの基本">Unixドメインソケットの基本</a></li>
+        <li><a href="#unixドメインソケットとtcpのベンチマーク">UnixドメインソケットとTCPのベンチマーク</a></li>
+      </ul>
+    </li>
+    <li><a href="#第9章-ファイルシステムの基礎とgo言語の標準パッケージ">第9章 ファイルシステムの基礎とGo言語の標準パッケージ</a>
+      <ul>
+        <li><a href="#ファイルディレクトリを扱うgo言語の関数たち">ファイル/ディレクトリを扱うGo言語の関数たち</a></li>
+        <li><a href="#os内部におけるファイル操作の高速化">OS内部におけるファイル操作の高速化</a></li>
+        <li><a href="#pathfilepathパッケージの関数たち"><code>path/filepath</code>パッケージの関数たち</a></li>
+      </ul>
+    </li>
+    <li><a href="#第10章-ファイルシステムの最深部を扱うgo言語の関数">第10章 ファイルシステムの最深部を扱うGo言語の関数</a>
+      <ul>
+        <li><a href="#ファイルの変更監視syscallinotify">ファイルの変更監視（<code>syscall.Inotify</code>）</a></li>
+        <li><a href="#ファイルのメモリへのマッピングsyscallmmap">ファイルのメモリへのマッピング（<code>syscall.Mmap()</code>）</a></li>
+        <li><a href="#同期非同期--ブロッキングノンブロッキング">同期・非同期 / ブロッキング・ノンブロッキング</a></li>
+        <li><a href="#select属のシステムコールによるio多重化">select属のシステムコールによるI/O多重化</a></li>
+        <li><a href="#第11章-コマンドシェル101">第11章 コマンドシェル101</a></li>
+      </ul>
+    </li>
+    <li><a href="#第12章-プロセスの役割とgo言語による操作">第12章 プロセスの役割とGo言語による操作</a>
+      <ul>
+        <li><a href="#プロセスの入出力">プロセスの入出力</a></li>
+        <li><a href="#osから見たプロセス">OSから見たプロセス</a></li>
+        <li><a href="#プロセスの出力に色づけをする">プロセスの出力に色づけをする</a></li>
+        <li><a href="#外部プロセスに対して自分が擬似端末だと詐称する">外部プロセスに対して自分が擬似端末だと詐称する</a></li>
+        <li><a href="#デーモン化">デーモン化</a></li>
+      </ul>
+    </li>
+    <li><a href="#第13章-シグナルによるプロセス間の通信">第13章 シグナルによるプロセス間の通信</a>
+      <ul>
+        <li><a href="#シグナルのハンドラを書く">シグナルのハンドラを書く</a></li>
+      </ul>
+    </li>
+    <li><a href="#第14章-go言語と並列処理">第14章 Go言語と並列処理</a>
+      <ul>
+        <li><a href="#並行処理と並列処理の違い">並行処理と並列処理の違い</a></li>
+        <li><a href="#チャネル">チャネル</a></li>
+        <li><a href="#スレッドとgoroutineの違い">スレッドとgoroutineの違い</a></li>
+        <li><a href="#goroutineのメリット">goroutineのメリット</a></li>
+      </ul>
+    </li>
+    <li><a href="#第15章-並行並列処理の手法と設計のパターン">第15章 並行・並列処理の手法と設計のパターン</a>
+      <ul>
+        <li><a href="#代表的な並行並列処理の手法">代表的な並行・並列処理の手法</a></li>
+        <li><a href="#イベント駆動">イベント駆動</a></li>
+        <li><a href="#マルチスレッド">マルチスレッド</a></li>
+        <li><a href="#goにおける並行並列処理のパターン集">Goにおける並行・並列処理のパターン集</a></li>
+      </ul>
+    </li>
+    <li><a href="#第16章-go言語のメモリ管理">第16章 Go言語のメモリ管理</a>
+      <ul>
+        <li><a href="#仮想メモリ">仮想メモリ</a></li>
+        <li><a href="#osカーネルがプロセスのメモリを確保するまで">OSカーネルがプロセスのメモリを確保するまで</a></li>
+        <li><a href="#スタック">スタック</a></li>
+        <li><a href="#go言語でのスタックとヒープの使い分け">Go言語でのスタックとヒープの使い分け</a></li>
+        <li><a href="#ガベージコレクタ">ガベージコレクタ</a></li>
+      </ul>
+    </li>
+    <li><a href="#第17章-実行ファイルが起動するまで">第17章 実行ファイルが起動するまで</a>
+      <ul>
+        <li><a href="#ランタイムの役割">ランタイムの役割</a></li>
+        <li><a href="#リンカーの役割">リンカーの役割</a></li>
+        <li><a href="#実行ファイルのメモリ配置">実行ファイルのメモリ配置</a></li>
+        <li><a href="#goのプログラムの起動">Goのプログラムの起動</a></li>
+      </ul>
+    </li>
+    <li><a href="#まとめ">まとめ</a>
+      <ul>
+        <li><a href="#プロセスとスレッドの違いは何か">プロセスとスレッドの違いは何か</a></li>
+        <li><a href="#プログラムはどのような流れで実行されるか">プログラムはどのような流れで実行されるか</a></li>
+        <li><a href="#感想">感想</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <p>『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11/4でコミットした日数としてはおおよそ24日ほどだった。)</p>
+<p>筆者は情報系の学部を出ておらず、CSなどの基礎知識があまりないので大変勉強になった。また、サンプルコードが豊富なので実際に自分のマシン上で動かしながら学ぶことができ解像度を上げながら理解を深めることができた。</p>
+<p>低レイヤ、コンピューターサイエンスの学習に興味がある方にはとてもおすすめなのでぜひ買って読んでみてください。</p>
+<p><div class="blogcard" data-url="https://www.lambdanote.com/products/go-2" data-auto-fetch="true">
+  <a href="https://www.lambdanote.com/products/go-2" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://www.lambdanote.com/products/go-2</div><div class="blogcard-url">https://www.lambdanote.com/products/go-2</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>手元で実行したコードは以下のリポジトリにまとめた。</p>
+<p><div class="blogcard" data-url="https://github.com/kyu08/go-system-programming" data-auto-fetch="true">
+  <a href="https://github.com/kyu08/go-system-programming" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/kyu08/go-system-programming</div><div class="blogcard-url">https://github.com/kyu08/go-system-programming</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>以下読書メモ。</p>
+<h2 id="第1章-go言語で覗くシステムプログラミングの世界">第1章 Go言語で覗くシステムプログラミングの世界<a href="#第1章-go言語で覗くシステムプログラミングの世界" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>デバッガを使って<code>fmt.Println</code>の動作をシステムコールまで追った。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></li>
+<li>当然だがデバッガを使うと変数の中身に何が入ってるかがわかって便利。</li>
+<li>デバッガを使ってみて別パッケージのprivate変数の中身を見ることができるのはプリントデバッグにはないデバッガの利点だと気づいた。</li>
+</ul>
+<h2 id="第2章-低レベルアクセスへの入口1iowriter">第2章 低レベルアクセスへの入口1：io.Writer<a href="#第2章-低レベルアクセスへの入口1iowriter" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li><code>io.Writer</code>はOSが持つファイルのシステムコールの相似形</li>
+<li>OSでは、システムコールを<strong>ファイルディスクリプタ</strong>と呼ばれるものに対して呼ぶ。</li>
+<li>ファイルディスクリプタ(file descriptor)は一種の識別子（数値）で、この数値を指定してシステムコールを呼び出すと、数値に対応するモノへとアクセスできる。</li>
+<li>ファイルディスクリプタはOSがカーネルのレイヤーで用意している抽象化の仕組み。</li>
+<li>OSのカーネル内部のデータベースに、プロセスごとに実体が用意される。</li>
+<li>OSはプロセスが起動されるとまず3つの擬似ファイルを作成し、それぞれにファイルディスクリプタを割り当てる。
+<ul>
+<li><code>0</code>が標準入力、<code>1</code>が標準出力、<code>2</code>が標準エラー出力。</li>
+<li>以降はそのプロセスでファイルをオープンしたりソケットをオープンしたりするたびに1ずつ大きな数値が割り当てられていく。</li>
+</ul>
+</li>
+</ul>
+<p>複数のファイル<code>f1</code>, <code>f2</code>を<code>os.Create()</code>する処理をデバッガーで追ってみたところ、それぞれファイルディスクリプタの値が<code>3</code>, <code>4</code><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>となっておりファイルディスクリプタの値が<code>3</code>からインクリメントされる様子を確認できた。</p>
+<p><img src="delve-neovim.webp" alt="delve-neovim.webp"></p>
+<h2 id="第3章-低レベルアクセスへの入口1ioreader">第3章 低レベルアクセスへの入口1：io.Reader<a href="#第3章-低レベルアクセスへの入口1ioreader" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="エンディアン変換">エンディアン変換<a href="#エンディアン変換" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>リトルエンディアンでは、10000という数値(<code>0x2710</code>)をメモリに格納するとき下位バイトから順に格納する。</li>
+<li>ビッグエンディアンでは、上位バイトから順に格納する。</li>
+<li>現在主流のCPUではリトルエンディアンが採用されている。</li>
+<li>ネットワーク上で転送されるデータの多くはビッグエンディアンが用いられている。</li>
+<li>そのため多くの環境ではネットワークで受け取ったデータをリトルエンディアンに変換する必要がある。</li>
+</ul>
+<h3 id="ioパッケージのいくつかの関数--構造体--インターフェースの使い方"><code>io</code>パッケージのいくつかの関数 / 構造体 / インターフェースの使い方<a href="#ioパッケージのいくつかの関数--構造体--インターフェースの使い方" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li><code>io.Pipe</code><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></li>
+<li><code>io.LimitReader</code>: 先頭の<code>n</code>バイトだけ読み込む</li>
+<li><code>io.MultiReader</code>: 複数の<code>io.Reader</code>を1つの<code>io.Reader</code>にまとめる</li>
+<li><code>io.SectionReader</code>: <code>offset</code>と<code>n</code>を指定して一部のデータだけ読み込む</li>
+</ul>
+<h2 id="第4章-チャネル">第4章 チャネル<a href="#第4章-チャネル" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>普段goroutineを全然使わないので忘れていることが多かった。以下学んだことメモ。</p>
+<ul>
+<li>バッファなしチャネルでは、受け取り側が受信しないと、送信側もブロックされる。<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></li>
+<li><code>for task := range tasks // tasksは任意のch</code>のように書くと、チャネルに値が入るたびにループが回り、チャネルがクローズされるまでループが回る。</li>
+</ul>
+<h2 id="第5章-システムコール">第5章 システムコール<a href="#第5章-システムコール" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>システムコールとは特権モードでOSの機能を呼ぶこと。</p>
+<h3 id="cpuの動作モード">CPUの動作モード<a href="#cpuの動作モード" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>OSの仕事は以下の2つ
+<ul>
+<li>各種資源（メモリ、CPU時間、ストレージなど）の管理</li>
+<li>外部入出力機能の提供（ネットワーク、ファイル読み書き、プロセス間通信）</li>
+</ul>
+</li>
+<li>動作モード
+<ul>
+<li>実行してよいハードウェアとしての機能がソフトウェアの種類に応じて制限されている</li>
+<li>OSが動作する特権モード</li>
+<li>一般的なアプリケーションが動作するユーザーモード</li>
+</ul>
+</li>
+</ul>
+<h3 id="システムコールが必要な理由">システムコールが必要な理由<a href="#システムコールが必要な理由" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>通常のアプリケーションでメモリ割り当てやファイル入出力、インターネット通信などの機能を使うために必要なのがシステムコール</li>
+<li>システムコールがなくてもCPUの命令そのものはほとんど使うことができる</li>
+<li>しかし、ユーザーモードでは計算した結果を画面に出力したり、ファイルに保存したり外部のWebサービスに送信したりできない。</li>
+</ul>
+<p><code>dtruss</code>コマンドを使ってシステムコールの呼び出しを確認しようとしたがmacOSのセキュリティの設定上何も表示されなかったのでDocker上でLinuxを起動して確認してみることにした。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker run -it --name stracetest golang:1.22.4-alpine3.19
+</span></span><span style="display:flex;"><span>apk add strace
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>go mod init kyu08/stracetest
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 任意のgoファイルを作成</span>
+</span></span><span style="display:flex;"><span>go build ./...
+</span></span><span style="display:flex;"><span>strace -o strace.log ./実行ファイル
+</span></span><span style="display:flex;"><span>less strace.log
+</span></span></code></pre></div><p>今回は<code>f, _ := os.Create(&quot;test_file.txt&quot;)</code>と<code>defer f.Close()</code>を実行するだけのgoプログラムを実行したときのシステムコールのログを確認した。以下はその一部。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>rt_sigaction<span style="color:#f92672">(</span>SIGRT_32, <span style="color:#f92672">{</span>sa_handler<span style="color:#f92672">=</span>0x70d90, sa_mask<span style="color:#f92672">=</span>~<span style="color:#f92672">[]</span>, sa_flags<span style="color:#f92672">=</span>SA_ONSTACK|SA_RESTART|SA_SIGINFO<span style="color:#f92672">}</span>, NULL, 8<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>rt_sigprocmask<span style="color:#f92672">(</span>SIG_SETMASK, ~<span style="color:#f92672">[]</span>, <span style="color:#f92672">[]</span>, 8<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>clone<span style="color:#f92672">(</span>child_stack<span style="color:#f92672">=</span>0x400001c000, flags<span style="color:#f92672">=</span>CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">890</span>
+</span></span><span style="display:flex;"><span>rt_sigprocmask<span style="color:#f92672">(</span>SIG_SETMASK, <span style="color:#f92672">[]</span>, NULL, 8<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>--- SIGURG <span style="color:#f92672">{</span>si_signo<span style="color:#f92672">=</span>SIGURG, si_code<span style="color:#f92672">=</span>SI_TKILL, si_pid<span style="color:#f92672">=</span>889, si_uid<span style="color:#f92672">=</span>0<span style="color:#f92672">}</span> ---
+</span></span><span style="display:flex;"><span>rt_sigreturn<span style="color:#f92672">({</span>mask<span style="color:#f92672">=[]})</span>                 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1139696</span>
+</span></span><span style="display:flex;"><span>rt_sigprocmask<span style="color:#f92672">(</span>SIG_SETMASK, ~<span style="color:#f92672">[]</span>, <span style="color:#f92672">[]</span>, 8<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>clone<span style="color:#f92672">(</span>child_stack<span style="color:#f92672">=</span>0x4000062000, flags<span style="color:#f92672">=</span>CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">891</span>
+</span></span><span style="display:flex;"><span>rt_sigprocmask<span style="color:#f92672">(</span>SIG_SETMASK, <span style="color:#f92672">[]</span>, NULL, 8<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>futex<span style="color:#f92672">(</span>0x4000080148, FUTEX_WAKE_PRIVATE, 1<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>futex<span style="color:#f92672">(</span>0x4000048948, FUTEX_WAKE_PRIVATE, 1<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>prlimit64<span style="color:#f92672">(</span>0, RLIMIT_NOFILE, NULL, <span style="color:#f92672">{</span>rlim_cur<span style="color:#f92672">=</span>1024*1024, rlim_max<span style="color:#f92672">=</span>1024*1024<span style="color:#f92672">})</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>fcntl<span style="color:#f92672">(</span>0, F_GETFL<span style="color:#f92672">)</span>                       <span style="color:#f92672">=</span> 0x20002 <span style="color:#f92672">(</span>flags O_RDWR|O_LARGEFILE<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>futex<span style="color:#f92672">(</span>0x4000049148, FUTEX_WAKE_PRIVATE, 1<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>fcntl<span style="color:#f92672">(</span>1, F_GETFL<span style="color:#f92672">)</span>                       <span style="color:#f92672">=</span> 0x20002 <span style="color:#f92672">(</span>flags O_RDWR|O_LARGEFILE<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>fcntl<span style="color:#f92672">(</span>2, F_GETFL<span style="color:#f92672">)</span>                       <span style="color:#f92672">=</span> 0x20002 <span style="color:#f92672">(</span>flags O_RDWR|O_LARGEFILE<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>openat<span style="color:#f92672">(</span>AT_FDCWD, <span style="color:#e6db74">&#34;test_file.txt&#34;</span>, O_RDWR|O_CREAT|O_TRUNC|O_CLOEXEC, 0666<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>futex<span style="color:#f92672">(</span>0x115ea0, FUTEX_WAKE_PRIVATE, 1<span style="color:#f92672">)</span>  <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>futex<span style="color:#f92672">(</span>0x115db8, FUTEX_WAKE_PRIVATE, 1<span style="color:#f92672">)</span>  <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>fcntl<span style="color:#f92672">(</span>3, F_GETFL<span style="color:#f92672">)</span>                       <span style="color:#f92672">=</span> 0x20002 <span style="color:#f92672">(</span>flags O_RDWR|O_LARGEFILE<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>fcntl<span style="color:#f92672">(</span>3, F_SETFL, O_RDWR|O_NONBLOCK|O_LARGEFILE<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>epoll_create1<span style="color:#f92672">(</span>EPOLL_CLOEXEC<span style="color:#f92672">)</span>            <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>pipe2<span style="color:#f92672">([</span>5, 6<span style="color:#f92672">]</span>, O_NONBLOCK|O_CLOEXEC<span style="color:#f92672">)</span>     <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>epoll_ctl<span style="color:#f92672">(</span>4, EPOLL_CTL_ADD, 5, <span style="color:#f92672">{</span>events<span style="color:#f92672">=</span>EPOLLIN, data<span style="color:#f92672">={</span>u32<span style="color:#f92672">=</span>1549912, u64<span style="color:#f92672">=</span>1549912<span style="color:#f92672">}})</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>epoll_ctl<span style="color:#f92672">(</span>4, EPOLL_CTL_ADD, 3, <span style="color:#f92672">{</span>events<span style="color:#f92672">=</span>EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, data<span style="color:#f92672">={</span>u32<span style="color:#f92672">=</span>3997171713, u64<span style="color:#f92672">=</span>18446585726557487105<span style="color:#f92672">}})</span> <span style="color:#f92672">=</span> -1 EPERM <span style="color:#f92672">(</span>Operation not permitted<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>fcntl<span style="color:#f92672">(</span>3, F_GETFL<span style="color:#f92672">)</span>                       <span style="color:#f92672">=</span> 0x20802 <span style="color:#f92672">(</span>flags O_RDWR|O_NONBLOCK|O_LARGEFILE<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>fcntl<span style="color:#f92672">(</span>3, F_SETFL, O_RDWR|O_LARGEFILE<span style="color:#f92672">)</span>   <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>close<span style="color:#f92672">(</span>3<span style="color:#f92672">)</span>                                <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>exit_group<span style="color:#f92672">(</span>0<span style="color:#f92672">)</span>                           <span style="color:#f92672">=</span> ?
+</span></span><span style="display:flex;"><span>+++ exited with <span style="color:#ae81ff">0</span> +++
+</span></span></code></pre></div><ul>
+<li><code>openat(AT_FDCWD, &quot;test_file.txt&quot;, O_RDWR|O_CREAT|O_TRUNC|O_CLOEXEC, 0666) = 3</code>の部分でファイルが作成され、ファイルディスクリプタに<code>3</code>が割り当ている</li>
+<li><code>close(3)                                = 0</code>の部分で<code>defer f.Close()</code>に相当する処理が行われている</li>
+</ul>
+<p>ということを確認できた。</p>
+<h2 id="第6章-tcpソケットとhttpの実装">第6章 TCPソケットとHTTPの実装<a href="#第6章-tcpソケットとhttpの実装" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="ソケットとは">ソケットとは<a href="#ソケットとは" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>ほとんどのOSではアプリケーション層からトランスポート層のプロトコルを利用するときのAPIとして<strong>ソケット</strong>という仕組みを利用している</li>
+<li>HTTP/1.0と1.1はこのソケットのバイトストリーム上に作られたテキストを使ったプロトコル</li>
+</ul>
+<h3 id="ソケットの種類本書で説明するもののみ">ソケットの種類（本書で説明するもののみ）<a href="#ソケットの種類本書で説明するもののみ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>TCP：一番使われている。安定性が高い。</li>
+<li>UDP：通信開始が早い。相手に一方的に送りつける。</li>
+<li>Unixドメインソケット：ローカル通信でしか使えないが最速。</li>
+</ul>
+<h3 id="ソケット通信の基本構造">ソケット通信の基本構造<a href="#ソケット通信の基本構造" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>どんなソケット通信も基本となる構成は次のような形態
+<ul>
+<li>サーバー：ソケットを開いて待ち受ける</li>
+<li>クライアント：開いているソケットに接続し、通信する</li>
+</ul>
+</li>
+<li>GoではTCP通信が確立されると、送信側、受信側の両方に相手との通信する<code>net.Conn</code>インタフェースを満たすオブジェクトが渡ってくる</li>
+</ul>
+<h3 id="goに組み込まれているtcpの機能netconnだけを使ってhttpによる通信を実現する">Goに組み込まれているTCPの機能（<code>net.Conn</code>）だけを使ってHTTPによる通信を実現する<a href="#goに組み込まれているtcpの機能netconnだけを使ってhttpによる通信を実現する" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li><code>net.Conn</code>だけを使ってTCPソケットの初期化や通信の確立などの普段なら<code>net/http</code>がやってくれている部分を実装した。</li>
+<li><code>http.ListenAndServe()</code>のコードを読んでみたら、<a href="https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/net/http/server.go#L3258" target="_blank" >golang/go/src/net/http/server.go#L3258</a>で本書のハンズオンと同じようにTCPソケットの初期化を行っていることを確認できた。</li>
+</ul>
+<h3 id="素朴な実装の速度改善">素朴な実装の速度改善<a href="#素朴な実装の速度改善" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>①Keep-Aliveへの対応
+<ul>
+<li>HTTP/1.1から入った規格</li>
+<li>HTTP/1.0ではセットの通信が終わるたびにTCPコネクションが切れる仕様になっていたが、Keep-Aliveを使うことで、しばらくの間はTCP接続のコネクションを維持して使い回すことができる。</li>
+<li>TCP接続の通信には一定のオーバーヘッドがあるが、Keep-Aliveを使うことでそのオーバーヘッドを削減できる。</li>
+</ul>
+</li>
+<li>②レスポンスの圧縮
+<ul>
+<li>レスポンスを圧縮することで、通信量を削減でき速度向上につながる。</li>
+<li>レスポンスヘッダーは圧縮されないため、少量のデータを通信する場合は効率が悪くなる。そのため実際のデータ量に応じて圧縮するかどうかを判断する必要がありそう。</li>
+</ul>
+</li>
+<li>③チャンク形式のボディー送信
+<ul>
+<li>動画など大きいデータを送信する場合、データを分割して送信することでデータの送信が完了する前に受信側でデータを処理できるようになる。また、すべてのデータをメモリに展開する必要もなくなるのでメモリの使用量を抑えることができるというメリットもある。</li>
+<li>チャンク形式ではヘッダーに送信データのサイズを書かないかわりに<code>Transfer-Encoding: chunked</code>というヘッダーを付与する。</li>
+</ul>
+</li>
+<li>④パイプライニング
+<ul>
+<li>送受信を非同期化する方法</li>
+</ul>
+</li>
+</ul>
+<h2 id="第7章-udpソケットを使ったマルチキャスト通信">第7章 UDPソケットを使ったマルチキャスト通信<a href="#第7章-udpソケットを使ったマルチキャスト通信" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="udpとtcpの用途の違い">UDPとTCPの用途の違い<a href="#udpとtcpの用途の違い" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>UDPはTCPと同じトランスポート層のプロトコルで以下のような特徴がある。</p>
+<ul>
+<li>誰と繋がっているか管理しない</li>
+<li>データロスの検知をすることも通信速度の制限をすることもしない</li>
+<li>パケットの到着順序も管理しない</li>
+<li>複数のコンピュータに同時にメッセージを送ることが可能な「マルチキャスト」と「ブロードキャスト」をサポートしている。（TCPにはない機能）</li>
+<li>UDPの利用例としてはDNSやNTP, WebRTCなどがある。</li>
+</ul>
+<h3 id="udpのマルチキャストの実装例">UDPのマルチキャストの実装例<a href="#udpのマルチキャストの実装例" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>マルチキャストはリクエスト側の負担を増やすことなく多くのクライアントに同時にデータを送信できる仕組み。</li>
+</ul>
+<h3 id="udpとtcpの機能面の違い">UDPとTCPの機能面の違い<a href="#udpとtcpの機能面の違い" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>TCPには再送処理とフロー処理がある。</li>
+</ul>
+<h4 id="再送処理">再送処理<a href="#再送処理" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li>TCPでは送信するメッセージに<strong>シーケンス番号</strong>が入っているので、受信側ではこの数値をみることでパケットの順序を管理できる。</li>
+<li>受信側はメッセージを受け取ると、受信したデータの<strong>シーケンス番号</strong>と<strong>ペイロードサイズの合計</strong>を確認応答番号として返信する。</li>
+<li>送信側はこの応答確認番号が受け取れなかった場合に再送処理を行う。</li>
+</ul>
+<h4 id="フロー処理">フロー処理<a href="#フロー処理" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li>受信側がリソースを用意できていない状態で送信リクエストが集中して通信内容が失われるのを防ぐための仕組みを<strong>ウィンドウ制御</strong>という。
+<ul>
+<li>具体的には、受信用のバッファ（ウィンドウ）をあらかじめ決めておき送信側ではそのサイズまでは受信側からの受信確認を待たずにデータを送信できる。</li>
+</ul>
+</li>
+<li>受信側のデータの読み込みが間に合わない場合には、受信できるウィンドウサイズを受信側から送信側に伝えて通信量を制御できる。これを<strong>フロー制御</strong>という。</li>
+</ul>
+<h4 id="フレームサイズ">フレームサイズ<a href="#フレームサイズ" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li>UDPレイヤーで取り扱えるデータは約64キロバイトまで。</li>
+<li>UDPではデータの分割などはアプリケーションで面倒を見る必要がある。</li>
+</ul>
+<h4 id="輻輳制御とフェアネス">輻輳制御とフェアネス<a href="#輻輳制御とフェアネス" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li><strong>輻輳制御</strong>とは、ネットワークの輻輳（渋滞）を避けるように流量を調整し、そのネットワークの最大効率で通信できるようにするとともに複数の通信をお互いに<strong>フェアに行う</strong>ための仕組み。</li>
+<li>TCPには輻輳制御が備わっており、そのアルゴリズムにはさまざまな種類がある。</li>
+<li>UDPにはTCPのような輻輳制御の仕組みはなく、流量の制御はUDPを利用する各プログラムに委ねられている。そのため、UDPとTCPを利用するアプリケーションがそれぞれあって、UDPを利用するアプリケーションでフェアネスが考慮されていない場合には、<strong>両方の通信が重なった時に遠慮する機能が組み込まれたTCPの通信速度だけが極端に落ち込む</strong>こともある。</li>
+</ul>
+<h2 id="第8章-高速なunixドメインソケット">第8章 高速なUnixドメインソケット<a href="#第8章-高速なunixドメインソケット" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>UnixドメインソケットはPOSIX系OSで提供されている機能で、コンピュータ内部でしか使えない代わりに高速な通信が可能。</li>
+<li>Unixドメインソケットには、TCP型（ストリーム型）とUDP型（データグラム型）の両方の使い方ができる。</li>
+</ul>
+<h3 id="unixドメインソケットの基本">Unixドメインソケットの基本<a href="#unixドメインソケットの基本" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>TCPとUDPによるソケット通信が外部のネットワークにつながるインターフェースに接続するのに対し、Unixドメインソケットはカーネル内部で完結する高速なネットワークインターフェースを作成する。</li>
+<li>Unixドメインソケットを使うことで、ウェブサーバーとNGINXなどのリバースプロキシとの間、あるいはウェブサーバーとデーターベースとの間の接続を高速にできる場合がある。</li>
+<li>Unixドメインソケットを開くには、ファイルシステムのパスを指定する。サーバープロセスを起動するとファイルシステム上の指定したパスにソケットファイルが作成される。</li>
+<li>Unixドメインソケットで作成されるのはソケットファイルと呼ばれる特殊なファイルであり、通常のファイルのような実体を持たない。あくまでもプロセス間の高速な通信としてファイルというインターフェースを利用するだけ。</li>
+</ul>
+<p>以下はソケットファイルが作成されている様子。ソケットファイルは先頭が&quot;s&quot;で始まる。</p>
+<p><img src="socket-file.webp" alt="socket-file.webp"></p>
+<h3 id="unixドメインソケットとtcpのベンチマーク">UnixドメインソケットとTCPのベンチマーク<a href="#unixドメインソケットとtcpのベンチマーク" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>Unixドメインソケットを使った実装とTCPを経由した実装のベンチマークの比較をすると筆者の環境だとUnixドメインソケットの方が10倍ほど高速だった。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ go test -bench . -benchmem
+</span></span><span style="display:flex;"><span>goos: darwin
+</span></span><span style="display:flex;"><span>goarch: arm64
+</span></span><span style="display:flex;"><span>pkg: github.com/kyu08/go-system-programming/bench
+</span></span><span style="display:flex;"><span>BenchmarkTCPServer-8                <span style="color:#ae81ff">4165</span>            <span style="color:#ae81ff">327038</span> ns/op           <span style="color:#ae81ff">52175</span> B/op        <span style="color:#ae81ff">110</span> allocs/op
+</span></span><span style="display:flex;"><span>BenchmarkUDSStreamServer-8         <span style="color:#ae81ff">42742</span>             <span style="color:#ae81ff">27837</span> ns/op           <span style="color:#ae81ff">16762</span> B/op         <span style="color:#ae81ff">59</span> allocs/op
+</span></span><span style="display:flex;"><span>PASS
+</span></span><span style="display:flex;"><span>ok      github.com/kyu08/go-system-programming/bench    4.788s
+</span></span></code></pre></div><h2 id="第9章-ファイルシステムの基礎とgo言語の標準パッケージ">第9章 ファイルシステムの基礎とGo言語の標準パッケージ<a href="#第9章-ファイルシステムの基礎とgo言語の標準パッケージ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>この章では<code>os</code>パッケージと<code>path/filepath</code>パッケージの主要な関数の使い方が紹介されていた。</p>
+<h3 id="ファイルディレクトリを扱うgo言語の関数たち">ファイル/ディレクトリを扱うGo言語の関数たち<a href="#ファイルディレクトリを扱うgo言語の関数たち" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>2つのファイルの同一性の判定: <code>os.Samefile()</code></li>
+<li>ファイルのパーミッション、オーナー、タイムスタンプの変更: <code>os.Chmod()</code>, <code>os.Chown</code>, <code>os.Chtimes()</code></li>
+<li>ハードリンク、シンボリックリンクの作成: <code>os.Link</code>, <code>os.Symlink()</code></li>
+<li>ファイル一覧の取得: <code>dir, _ := os.Open(path)</code> -&gt; <code>dir.Readdir()</code></li>
+</ul>
+<h3 id="os内部におけるファイル操作の高速化">OS内部におけるファイル操作の高速化<a href="#os内部におけるファイル操作の高速化" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>CPUにとってディスクの読み書きはとても遅い処理であり、なるべく最後までやらないようにしたい。LinuxではVFSの内部に設けられているバッファを利用することでディスクに対する操作をなるべく回避している。</li>
+</ul>
+<h3 id="pathfilepathパッケージの関数たち"><code>path/filepath</code>パッケージの関数たち<a href="#pathfilepathパッケージの関数たち" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>パスの最後の要素を返す: <code>filepath.Base()</code></li>
+<li>パスのディレクトリ部分を返す: <code>filepath.Dir()</code></li>
+<li>パスをディレクトリとパス名に分割する: <code>filepath.Split()</code></li>
+<li>ファイルの拡張子を返す: <code>filepath.Ext()</code></li>
+<li><code>/some/../path</code>や<code>another//path</code>のような形式のパスを整える: <code>filepath.Clean()</code></li>
+<li>パターンにマッチするファイルの判定: <code>filepath.Match()</code></li>
+<li>ディレクトリのトラバース: <code>filepath.Walk()</code></li>
+</ul>
+<p>想像よりも標準パッケージでいろんなことができるのでこの辺りの操作をしたくなったら自作関数を書く前に標準パッケージを探してみるのが良さそうだと思った。</p>
+<h2 id="第10章-ファイルシステムの最深部を扱うgo言語の関数">第10章 ファイルシステムの最深部を扱うGo言語の関数<a href="#第10章-ファイルシステムの最深部を扱うgo言語の関数" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="ファイルの変更監視syscallinotify">ファイルの変更監視（<code>syscall.Inotify</code>）<a href="#ファイルの変更監視syscallinotify" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>プログラムでファイルを監視する方法には次の2種類がある。</p>
+<ol>
+<li>監視したいファイルをOS側に通知しておいて、変更があったら教えてもらう（パッシブな）方式</li>
+<li>タイマーなどで定期的にフォルダを走査し、<code>os.Stat()</code>などを使って変更を探しに行く（アクティブな）方式</li>
+</ol>
+<p>アクティブな方式の方がコード量は少ないが監視対象が増えるとCPU負荷やIO負荷が増える。</p>
+<p>パッシブな方式はファイルの変更検知が各OSでシステムコールやAPUIとして提供されている一方で環境ごとのコード差は大きくなる。</p>
+<p>ここでは <a href="https://github.com/fsnotify/fsnotify" target="_blank" >fsnotify/fsnotify.v1</a>を用いてファイルの変更検知プログラムを作成した。</p>
+<p>fsnotify.v1では、Linuxの場合はinotify系APIが、BSD系OSの場合はkqueueが使われている。</p>
+<h3 id="ファイルのメモリへのマッピングsyscallmmap">ファイルのメモリへのマッピング（<code>syscall.Mmap()</code>）<a href="#ファイルのメモリへのマッピングsyscallmmap" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p><code>syscall.Mmap()</code>を使うことでファイルの中身をそのままメモリ上に展開したり、メモリ上で書き換えた内容をそのままファイルに書き込むことができる。</p>
+<p><a href="https://github.com/edsrzf/mmap-go" target="_blank" >edsrzf/mmap-go</a>では<code>mmap.Map()</code>を使うことでファイルをメモリに展開できる。<code>mmap.Map()</code>は次のようなシグネチャを持つ。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Map</span>(<span style="color:#a6e22e">f</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">File</span>, <span style="color:#a6e22e">prot</span>, <span style="color:#a6e22e">flags</span> <span style="color:#66d9ef">int</span>) (<span style="color:#a6e22e">MMap</span>, <span style="color:#66d9ef">error</span>)
+</span></span></code></pre></div><p>2つ目の引数に次のような値を指定することでメモリ領域に対して許可する操作を設定できる。</p>
+<ul>
+<li><code>mmap.RDONLY</code>: 読み込み専用</li>
+<li><code>mmap.RDWR</code>: 読み書き可能</li>
+<li><code>mmap.EXEC</code>: 実行可能にする</li>
+<li><code>mmap.COPY</code>: コピーオンライト</li>
+</ul>
+<p>コピーオンライトが指定されると、複数のプロセスが同じファイルをマッピングしているときに、カーネル上は1つ分のみメモリ領域が使用され、それ以上のメモリを消費しない。</p>
+<p>しかし、その領域内でメモリ書き換えが発生すると、その領域がまるごとコピーされる。このようにすることでメモリ消費量をうまく節約できる。</p>
+<h3 id="同期非同期--ブロッキングノンブロッキング">同期・非同期 / ブロッキング・ノンブロッキング<a href="#同期非同期--ブロッキングノンブロッキング" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>同期処理: OSにI/Oタスクを投げて、入出力の準備ができたらアプリケーションに処理が返ってくる</li>
+<li>非同期処理: OSにI/Oタスクを投げて、入出力の準備ができたら通知をもらう</li>
+<li>ブロッキング処理: お願いしたI/Oタスクの結果の準備ができるまで待つ（自分は停止）</li>
+<li>ノンブロッキング処理: お願いしたI/Oタスクの結果の準備ができるのを待たない（自分は停止しない）</li>
+</ul>
+<h3 id="select属のシステムコールによるio多重化">select属のシステムコールによるI/O多重化<a href="#select属のシステムコールによるio多重化" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>非同期・ブロッキングは1スレッドでたくさんの入出力を効率よく扱うための手法でありI/O多重化とも呼ばれる。それを効率よく実現するAPIのことを本書では<strong>select属</strong>と総称する。</p>
+<p>並行処理を使うことで小さい規模のI/Oの効率化は十分に行えるが、select属はC10K問題と呼ばれる、万の単位の入出力を効率よく扱うための手法として有効。</p>
+<h3 id="第11章-コマンドシェル101">第11章 コマンドシェル101<a href="#第11章-コマンドシェル101" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>シェルとは、ユーザーがコンピューターを操作するために使う接点となるシステムにおいてコンピューターシステムの殻（shell）となるプログラムのこと。</p>
+<h4 id="シェルがないシステム">シェルがないシステム<a href="#シェルがないシステム" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>Distrolessと呼ばれるコンテナイメージはシェルがないため、セキュリティホールをついてシステムに侵入されることがない。<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>（当然攻撃の脅威がゼロになるわけではない）</p>
+<h4 id="シェルがコマンドを起動するまで">シェルがコマンドを起動するまで<a href="#シェルがコマンドを起動するまで" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>シェルがコマンドを起動するまでには次のようなことを行っている。</p>
+<ol>
+<li>ユーザーの入力を受け付ける</li>
+<li>入力されたテキストの分解</li>
+<li>コマンドと引数の前処理</li>
+<li>実行ファイルの探索</li>
+<li>ワイルドカードの展開</li>
+<li>プロセスの起動</li>
+</ol>
+<p>「11.5.3コマンドと引数の前処理」で紹介されていたが、<code>$(which nvim)</code>と同様に<code>`which nvim`</code>でもコマンドの実行結果を変数に代入できるのは知らなかった。</p>
+<h2 id="第12章-プロセスの役割とgo言語による操作">第12章 プロセスの役割とGo言語による操作<a href="#第12章-プロセスの役割とgo言語による操作" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>OSが実行ファイルを読み込んで実行するには、そのためのリソース（CPU、メモリ）を用意する必要がある。そのようなリソースをまとめたプログラムの実行単位のことを<strong>プロセス</strong>と呼ぶ。プロセスはOSが実行ファイルを読み込んで実行するときに新しく作られる。</li>
+<li>プロセスにはプロセスごとにユニークな識別子がある。（<strong>プロセスID</strong>）。Go言語では<code>os.Getpid()</code>で取得できる。</li>
+</ul>
+<h3 id="プロセスの入出力">プロセスの入出力<a href="#プロセスの入出力" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>すべてのプロセスは少なくとも次の3つの入出力データを持っている。</p>
+<ul>
+<li>入力：コマンドライン引数</li>
+<li>入力：環境変数</li>
+<li>出力：終了コード</li>
+</ul>
+<h3 id="osから見たプロセス">OSから見たプロセス<a href="#osから見たプロセス" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>OSの仕事はたくさんあるプロセスに効率よく仕事をさせること</li>
+<li>Linuxではプロセスごとに<code>task_struct</code>型の<strong>プロセスディスクリプタ</strong>と呼ばれる構造体を持っている。
+<ul>
+<li>基本的にはプロセスから見た各種情報と同じ内容だが、そこには含まれていない要素もいくつか存在する。</li>
+<li>例えば、<strong>どこからどこまでが自分のメモリ領域かというメモリブロックの情報</strong>や<strong>スタック領域がどこにありプログラムが静的に確保するデータや動的に確保するデータがどのようにレイアウトされるか</strong>もOSが持つプロセスの情報の中にある。</li>
+</ul>
+</li>
+</ul>
+<h3 id="プロセスの出力に色づけをする">プロセスの出力に色づけをする<a href="#プロセスの出力に色づけをする" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>プロセスの出力に色をつけたい場合には<strong>ANSIエスケープシーケンス</strong>を使うことができる。</p>
+<p>自分が利用したことある<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>Rustの<a href="https://crates.io/crates/colored" target="_blank" ><code>colored</code></a>クレートも確認したところ実際にANSIエスケープシーケンスを使ってターミナルに色をつけていた。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span>    <span style="color:#75715e">#[cfg_attr(feature = </span><span style="color:#e6db74">&#34;no-color&#34;</span><span style="color:#75715e">, ignore)]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[test]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">compute_style_simple_fg_blue</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> blue <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\x1B</span><span style="color:#e6db74">[34m&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        assert_eq!(blue, <span style="color:#e6db74">&#34;&#34;</span>.blue().compute_style());
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><p><div class="blogcard" data-url="https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811" data-auto-fetch="true">
+  <a href="https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811</div><div class="blogcard-url">https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811</div>
+    </div>
+  </a>
+</div>
+ より</p>
+<p>調べてみたところ<code>\x1B</code>でも<code>\e</code>でもエスケープシーケンスを表現できるらしい。<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup></p>
+<h3 id="外部プロセスに対して自分が擬似端末だと詐称する">外部プロセスに対して自分が擬似端末だと詐称する<a href="#外部プロセスに対して自分が擬似端末だと詐称する" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>ライブラリによっては、自分が繋がっている先が擬似端末かどうかでエスケープシーケンスを出力するかどうかを決定している。</p>
+<p>子プロセスの出力を色づけするためには、親を擬似端末だと詐称することでエスケープシーケンスを出力させることができる。</p>
+<h3 id="デーモン化">デーモン化<a href="#デーモン化" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>普通のプログラムはシェルのプロセスの子になってしまうので、ログアウトしたりシェルを閉じたりするだけで終了してしまう。</p>
+<p>そのような場合でも終了しないように下記のような特別な細工が施されたプロセスが<strong>デーモン</strong>である。</p>
+<ul>
+<li>セッションID、グループIDを新しいものにして既存のセッションとグループから独立</li>
+<li>カレントのディレクトリはルートに移動</li>
+<li>フォークしてからブートプロセスのinitを親に設定し、実際の親はすぐに終了</li>
+<li>標準入出力も起動時のものから切り離される(通常は<code>dev/null</code>に設定される)</li>
+</ul>
+<h2 id="第13章-シグナルによるプロセス間の通信">第13章 シグナルによるプロセス間の通信<a href="#第13章-シグナルによるプロセス間の通信" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>シグナルには主に2つの用途がある。</p>
+<ul>
+<li><strong>プロセス間通信</strong>: カーネルが仲介してあるプロセスから別のプロセスへとシグナルを送るケース。自分自身にシグナルを送ることもできる。</li>
+<li><strong>ソフトウェア割り込み</strong>: システムで発生したイベントがシグナルとしてプロセスに送られる。シグナルを受け取ったプロセスは現在置くなっているタスクを中断してあらかじめ登録しておいた処理を実行する。</li>
+</ul>
+<p>システムコールはユーザー空間で動作しているプロセスからカーネル空間にはたらきかけるためのインターフェースだが、その逆方向がシグナルだと考えることができる。</p>
+<ul>
+<li>システムコールでは最大7つほどの引数を指定できるのに対し、ソフトウェア割り込みとしてのシグナルで送信できるのはその種類のみ。</li>
+<li>プロセスは受け取ったシグナルを無視するか補足して処理する。</li>
+</ul>
+<h3 id="シグナルのハンドラを書く">シグナルのハンドラを書く<a href="#シグナルのハンドラを書く" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Goでは次のように<code>signal.NotifyContext()</code>を使ってシグナルを受け取ることができる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;context&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;os/signal&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;syscall&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;time&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">ctx</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Background</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">sigctx</span>, <span style="color:#a6e22e">cancel</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">signal</span>.<span style="color:#a6e22e">NotifyContext</span>(<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">syscall</span>.<span style="color:#a6e22e">SIGINT</span>, <span style="color:#a6e22e">syscall</span>.<span style="color:#a6e22e">SIGTERM</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">cancel</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">toctx</span>, <span style="color:#a6e22e">cancel2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">WithTimeout</span>(<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span><span style="color:#f92672">*</span><span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">cancel2</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">select</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">sigctx</span>.<span style="color:#a6e22e">Done</span>():
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;signal&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">toctx</span>.<span style="color:#a6e22e">Done</span>():
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;timeout&#34;</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>KubernetesやDockerでは外からタスクを終了させるとき、まずSIGTERMをアプリケーションに対して送信する。(SIGTERM: <code>kill()</code>システムコールや<code>kill</code>コマンドがデフォルトで送信するシグナル。プロセスを終了させるもの)</p>
+<p>(GoアプリケーションのGraceful Shutdownの実装例でSIGTERMをハンドリングするのをよく見るのはだからか、と納得した。)</p>
+<h2 id="第14章-go言語と並列処理">第14章 Go言語と並列処理<a href="#第14章-go言語と並列処理" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="並行処理と並列処理の違い">並行処理と並列処理の違い<a href="#並行処理と並列処理の違い" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>並行処理: 1つのコアで複数のタスクを素早く切り替えながら処理すること</li>
+<li>並列処理: 複数のコアを使って複数のタスクを同時に処理すること</li>
+</ul>
+<h3 id="チャネル">チャネル<a href="#チャネル" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>Go言語で簡単に並列処理を書くための道具としてgoroutineとチャネルがある。</li>
+<li>チャネルを使うことでデータの入出力を<strong>直列化できる。</strong></li>
+</ul>
+<h3 id="スレッドとgoroutineの違い">スレッドとgoroutineの違い<a href="#スレッドとgoroutineの違い" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>スレッドとはプログラムを実行するためのものであり、OSによって手配される。</li>
+<li>プログラムからみたスレッドは「<strong>時間が凍結されたプログラムの実行状態</strong>」で、CPUが演算に使ったり計算結果や状態を保持したりする<strong>レジスタ</strong>と呼ばれるメモリと<strong>スタックメモリ</strong>が含まれる。</li>
+<li>OSは凍結状態のプログラムの実行状態を復元して各スレッドに短時間ずつ処理をさせる。実行予定のスレッドは<strong>ランキュー</strong>と呼ばれるリストに入っている。</li>
+<li><strong>スレッドがCPUコアに対してマッピングされる</strong>のに対し、<strong>gouroutineはOSのスレッドにマッピングされる</strong>点が通常のスレッドとgoroutineとの最大の違い。
+<ul>
+<li>goroutineはOSスレッドの1~2MBと比べると初期スタックメモリのサイズが小さい(2KB)ため起動処理が軽い。</li>
+<li>また、gouroutineはOSに処理を渡さずに作成できるのでカーネルとのタスク切り替えのコストも小さい。</li>
+</ul>
+</li>
+</ul>
+<h3 id="goroutineのメリット">goroutineのメリット<a href="#goroutineのメリット" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>大量のクライアントからのリクエストを効率よく捌きたいとき（いわゆるC10K）に、クライアントごとに1つのgoroutineを割り当てたとしても少ないメモリ消費量で処理できる（前述の通りgoroutineは起動時の初期スタックメモリのサイズが小さいため）</p>
+<h2 id="第15章-並行並列処理の手法と設計のパターン">第15章 並行・並列処理の手法と設計のパターン<a href="#第15章-並行並列処理の手法と設計のパターン" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="代表的な並行並列処理の手法">代表的な並行・並列処理の手法<a href="#代表的な並行並列処理の手法" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>マルチプロセス</li>
+<li>イベント駆動</li>
+<li>マルチスレッド</li>
+<li>ストリーミング・プロセッシング</li>
+</ul>
+<h3 id="イベント駆動">イベント駆動<a href="#イベント駆動" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>主に並列化ではなく並行処理のために使われる。</li>
+<li>I/Oバウンドなプログラムで用いられる。</li>
+<li>OSに依頼したデータ受信の仕事が終わるたびにコールバックが返ってくる仕組み。</li>
+<li>単体ではCPUを使いこなしにくい点が欠点。</li>
+</ul>
+<h3 id="マルチスレッド">マルチスレッド<a href="#マルチスレッド" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>同じメモリ空間内で多くのCPUが同時に実行するための仕組み
+<ul>
+<li>Linuxではプロセスもスレッドもカーネル上は同じ構造体として表現されている。親のプロセスとメモリ空間を共有していなければプロセス、共有していればスレッド。</li>
+</ul>
+</li>
+<li>利点はCPUのパフォーマンスを引き出すことができる点。</li>
+<li>欠点はプロセスほどではないが、OSのスレッドの場合は比較的大きなスタックメモリ（1~2MB）を必要とし、起動時間もややかかる。そのためスレッドプールを作っておき、必要になったらすぐ使えるようにする、ということが行なわれている。</li>
+</ul>
+<h3 id="goにおける並行並列処理のパターン集">Goにおける並行・並列処理のパターン集<a href="#goにおける並行並列処理のパターン集" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>アムダールの法則: 並列化を導入するとどれだけ効率が改善するかを表す数式</p>
+<pre tabindex="0"><code>S(N) = 1 / ((1 - P) + P/N)
+</code></pre><p>ここで<code>P</code>は並列化できる仕事の割合、<code>N</code>は並列数である。</p>
+<p>P = 0.5, N = ∞のとき、S(N) = 2倍になり、P = 0.9, N = ∞のとき、S(N) = 10倍になる。このことからもわかるように、並列数よりも並列化できるタスクの割合が支配的になる。</p>
+<p>Pを改善するためのアイディアとして次のような手法が考えられる。</p>
+<ul>
+<li>同期処理を非同期にする</li>
+<li>非同期にしたものを同期化する</li>
+<li>タスク生成と処理を分ける（Producer-Consumerパターン）</li>
+<li>開始した順で処理する（チャネルのチャネル）</li>
+<li>タスク処理が詰まったら待機（バックプレッシャー）</li>
+<li>並列なForループ</li>
+<li>決まった数のgoroutineでタスクを消化する（ワーカープール）</li>
+<li>依存関係のあるタスクを表現する（Future/Promise）</li>
+<li>イベントの流れを定義する（ReactiveX）</li>
+<li>自立した複数のシステムで協調動作（アクターモデル）</li>
+</ul>
+<h4 id="同期---非同期化">同期 -&gt; 非同期化<a href="#同期---非同期化" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>I/O処理などの重いタスクを非同期化する</p>
+<h4 id="非同期---同期化">非同期 -&gt; 同期化<a href="#非同期---同期化" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>非同期化したタスクはどこかで同期化する必要がある。そのための一番簡単な手法がチャネル。</p>
+<h4 id="タスク生成と処理を分けるproducer-consumerパターン">タスク生成と処理を分ける（Producer-Consumerパターン）<a href="#タスク生成と処理を分けるproducer-consumerパターン" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>GoではチャネルでProducerとConsumerを接続することで簡単に実現できる。</p>
+<h4 id="開始した順で処理するチャネルのチャネル">開始した順で処理する（チャネルのチャネル）<a href="#開始した順で処理するチャネルのチャネル" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>チャネルを用いると複数の処理を終了した順に取り出すことができる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// 終了した順に書き出し
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// チャネルに結果が投入された順に処理される
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">writeToConn</span>(<span style="color:#a6e22e">responses</span> <span style="color:#66d9ef">chan</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Response</span>, <span style="color:#a6e22e">conn</span> <span style="color:#a6e22e">net</span>.<span style="color:#a6e22e">Conn</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">conn</span>.<span style="color:#a6e22e">Close</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// 順番に取り出す
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">response</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">responses</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">Write</span>(<span style="color:#a6e22e">conn</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>チャネルのチャネルを使うと処理を開始した順で処理をできる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// 開始した順に書き出し
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// チャネルにチャネルを入れた(開始した)順に処理される
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">writeToConn</span>(<span style="color:#a6e22e">sessionResponses</span> <span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">chan</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Response</span>, <span style="color:#a6e22e">conn</span> <span style="color:#a6e22e">net</span>.<span style="color:#a6e22e">Conn</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">conn</span>.<span style="color:#a6e22e">Close</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// 順番に取り出す
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">sessionResponse</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">sessionResponses</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 選択された仕事が終わるまで待つ
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">response</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">sessionResponse</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">Write</span>(<span style="color:#a6e22e">conn</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="タスク処理が詰まったら待機バックプレッシャー">タスク処理が詰まったら待機（バックプレッシャー）<a href="#タスク処理が詰まったら待機バックプレッシャー" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>以下のようなバッファ付きチャネルを使うことで実現できる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">tasks</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">string</span>, <span style="color:#ae81ff">10</span>)
+</span></span></code></pre></div><h4 id="並列forループ">並列Forループ<a href="#並列forループ" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li>forループ内の処理をgoroutineで実行することでループ処理を並列化できる。</li>
+<li>ループ内部の処理が小さすぎるとオーバーヘッドのほうが大きくなり効率が上がらないことがあるので注意が必要。</li>
+</ul>
+<h4 id="決まった数のgoroutineでタスクを消化するワーカープール">決まった数のgoroutineでタスクを消化する（ワーカープール）<a href="#決まった数のgoroutineでタスクを消化するワーカープール" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li>特にCPUバウンドな処理ではCPUのコア数以上にgoroutineを作ってもスループットは上がらないため、CPUコア数分のワーカーを作成してタスクを消化するのが効果的な場合がある。</li>
+</ul>
+<h4 id="依存関係のあるタスクを表現するfuturepromise">依存関係のあるタスクを表現する（Future/Promise）<a href="#依存関係のあるタスクを表現するfuturepromise" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>Futureをチャネルで表現すると、必要なデータが揃ったらタスクを逐次実行できる。</p>
+<p>後続の処理に結果を引き継ぎたいが、処理自体は可能な限り非同期で実行したい場合に有効そう。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">readFile</span>(<span style="color:#a6e22e">path</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">string</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// ファイルを読み込み、その結果を返すFutureを返す
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">promise</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">string</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">go</span> <span style="color:#66d9ef">func</span>() {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">content</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">ReadFile</span>(<span style="color:#a6e22e">path</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;read error %s\n&#34;</span>, <span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">Error</span>())
+</span></span><span style="display:flex;"><span>			close(<span style="color:#a6e22e">promise</span>)
+</span></span><span style="display:flex;"><span>		} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">// 約束を果たした
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#a6e22e">promise</span> <span style="color:#f92672">&lt;-</span> string(<span style="color:#a6e22e">content</span>)
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}()
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">promise</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">printFunc</span>(<span style="color:#a6e22e">futureSource</span> <span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">chan</span> []<span style="color:#66d9ef">string</span> { 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 文字列中の関数一覧を返すFutureを返す
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">promise</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">chan</span> []<span style="color:#66d9ef">string</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">go</span> <span style="color:#66d9ef">func</span>() {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">result</span> []<span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// futureが解決するまで待って実行
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">line</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Split</span>(<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">futureSource</span>, <span style="color:#e6db74">&#34;\n&#34;</span>) {
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">HasPrefix</span>(<span style="color:#a6e22e">line</span>, <span style="color:#e6db74">&#34;func &#34;</span>) {
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">result</span> = append(<span style="color:#a6e22e">result</span>, <span style="color:#a6e22e">line</span>)
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 約束を果たした
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#a6e22e">promise</span> <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">result</span>
+</span></span><span style="display:flex;"><span>	}()
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">promise</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">futureSource</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">readFile</span>(<span style="color:#e6db74">&#34;main.go&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">futureFuncs</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">printFunc</span>(<span style="color:#a6e22e">futureSource</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Join</span>(<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">futureFuncs</span>, <span style="color:#e6db74">&#34;\n&#34;</span>))
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>また、次のような構造体を定義することで上記のFutureの値を複数回読み取ることができる。（上記の実装ではバッファなしチャネルを使っているので複数回受信してしまうと処理がブロックされてしまう）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">StringFuture</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">receiver</span> <span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">cache</span>    <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">NewStringFuture</span>() (<span style="color:#f92672">*</span><span style="color:#a6e22e">StringFuture</span>, <span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">string</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">f</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">StringFuture</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">receiver</span>: make(<span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">string</span>),
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">f</span>, <span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">receiver</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">f</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">StringFuture</span>) <span style="color:#a6e22e">Get</span>() <span style="color:#66d9ef">string</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">ok</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">receiver</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">ok</span> {
+</span></span><span style="display:flex;"><span>		close(<span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">receiver</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">cache</span> = <span style="color:#a6e22e">r</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">cache</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">f</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">StringFuture</span>) <span style="color:#a6e22e">Close</span>() {
+</span></span><span style="display:flex;"><span>	close(<span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">receiver</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="イベントの流れを定義するreactivex">イベントの流れを定義する：ReactiveX<a href="#イベントの流れを定義するreactivex" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>ここでは<a href="https://github.com/ReactiveX/RxGo" target="_blank" >RxGo</a>を使ってイベントの流れを定義する方法が紹介されていた。
+まずこのようにwatcherを定義する。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">watcher</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">observer</span>.<span style="color:#a6e22e">Observer</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">NextHandler</span>: <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">item</span> <span style="color:#a6e22e">any</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">line</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">item</span>.(<span style="color:#66d9ef">string</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">HasPrefix</span>(<span style="color:#a6e22e">line</span>, <span style="color:#e6db74">&#34;func &#34;</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">line</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ErrHandler</span>: <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">err</span> <span style="color:#66d9ef">error</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Encountered error: %v\n&#34;</span>, <span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">DoneHandler</span>: <span style="color:#66d9ef">func</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Done!&#34;</span>)
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>以下のようにすると<code>NextHandler</code>に登録された関数に<code>line</code>が渡される。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">emitter</span> <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">line</span>
+</span></span></code></pre></div><p>そして次のようにすると<code>ErrHandler</code>に登録された関数が呼ばれる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">emitter</span> <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">err</span>
+</span></span></code></pre></div><p>渡ってきた値に応じて処理を分岐させたく、かつ何度も同一のイベントが発生するケースではこの方法を使うと良さそう。</p>
+<h4 id="自律した複数のシステムで協調動作アクターモデル">自律した複数のシステムで協調動作：アクターモデル<a href="#自律した複数のシステムで協調動作アクターモデル" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li>アクターと呼ばれる自律した多数のコンピューターが協調して動作するというモデル。</li>
+<li>各アクターは別のアクターから送られてくるメッセージを受け取る<strong>メッセージボックス</strong>を持つ。</li>
+</ul>
+<h2 id="第16章-go言語のメモリ管理">第16章 Go言語のメモリ管理<a href="#第16章-go言語のメモリ管理" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="仮想メモリ">仮想メモリ<a href="#仮想メモリ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>現代のOSではプロセスはメモリを読み書きするのに物理的なアドレスを直接扱うのではなく、プロセスごとに仮想的なメモリアドレス空間があり、それを使ってメモリにアクセスしている。この仮想的なメモリアドレス空間のことを<strong>仮想メモリ</strong>という。</p>
+<p>仮想メモリのアドレスから実際の物理メモリにアクセスするために<strong>ページテーブル</strong>というデータ構造が使われる。<strong>ページ</strong>とはメモリを管理する単位のこと。</p>
+<p>仮想メモリのおかげで実際の保存領域が飛び飛びになっていたとしてもプロセスからはフラットなメモリ領域が確保されているように見える。</p>
+<p>仮想メモリは物理メモリのアドレスと1対1対応しているわけではなく、物理メモリのあるアドレスが複数の仮想メモリから参照されることもある。こうすることで共有ライブラリなどを複数のプロセスで利用でき省メモリになる。</p>
+<h3 id="osカーネルがプロセスのメモリを確保するまで">OSカーネルがプロセスのメモリを確保するまで<a href="#osカーネルがプロセスのメモリを確保するまで" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>プロセスは起動時にOSからメモリをもらう。OSはプロセスごとに仮想メモリの領域を確保する。</li>
+<li>ユーザーのメモリ空間は大きく3つの連続したメモリ領域に分かれる。3つの領域の間の空きスペース分はメモリの確保が行われない。
+<pre tabindex="0"><code>| ①プログラム + 静的データ | ヒープとして使われる領域 | ②共有ライブラリ |      | ③スタックなど |
+小さいアドレス                                                                大きいアドレス -&gt; 
+</code></pre></li>
+</ul>
+<h3 id="スタック">スタック<a href="#スタック" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>関数を呼ぶとリターンアドレスや新しい関数のための作業メモリ領域として<strong>スタックフレーム</strong>と呼ばれるメモリ領域が確保される。</p>
+<p>スタックフレームはスレッドごとにあらかじめ確保されているメモリブロックに対して順番に追加したり削除されたりされるだけなので割当のコストはほぼゼロ。</p>
+<h3 id="go言語でのスタックとヒープの使い分け">Go言語でのスタックとヒープの使い分け<a href="#go言語でのスタックとヒープの使い分け" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Go言語では変数のデータをヒープに置くかスタックに置くかはコンパイラが自動的に判断する。以下はその一部。</p>
+<ul>
+<li><code>new</code>で初期化してもその関数内でしか利用されなければスタックに確保される。</li>
+<li>ローカル変数として宣言してもそのポインタを他の関数に渡したり、関数の返り値として返すような場合にはヒープに確保される。</li>
+</ul>
+<p>Go言語でメモリがスタックとヒープのどちらに確保されるかを知りたい場合にはビルド時に<code>-gcflags -m</code>を渡すことで確認できる。</p>
+<p>ということで次のコードを使って上記の挙動を確認してみる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">strValue</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Hello, World!&#34;</span> <span style="color:#75715e">// スタックに確保される(関数内でしか利用されていないため)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">strValue</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">strPtr</span> <span style="color:#f92672">:=</span> new(<span style="color:#66d9ef">string</span>) <span style="color:#75715e">// スタックに確保される(関数内でしか利用されていないため)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">_</span> = <span style="color:#f92672">*</span><span style="color:#a6e22e">strPtr</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">strPtr2</span> <span style="color:#f92672">:=</span> new(<span style="color:#66d9ef">string</span>) <span style="color:#75715e">// ヒープに確保される(他の関数に渡されているため)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">receiveStrPtr</span>(<span style="color:#a6e22e">strPtr2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">strPtrFromFunc</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">returnStrPtr</span>() <span style="color:#75715e">// スタックに確保される(関数内でしか利用されていないため)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">_</span> = <span style="color:#f92672">*</span><span style="color:#a6e22e">strPtrFromFunc</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">receiveStrPtr</span>(<span style="color:#a6e22e">argStrPtr</span> <span style="color:#f92672">*</span><span style="color:#66d9ef">string</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;argStrPtr: %v\n&#34;</span>, <span style="color:#a6e22e">argStrPtr</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">returnStrPtr</span>() <span style="color:#f92672">*</span><span style="color:#66d9ef">string</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">str</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Hello, World!&#34;</span> <span style="color:#75715e">// ヒープに確保される(関数の返り値として返されているため)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">return</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">str</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><code>-gcflags -m</code>をつけてビルドしてみると次のようになりコードコメント通り、<code>strPtr2</code>と<code>str</code>がヒープに確保されていることがわかった。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ go build -gcflags -m main.go
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># command-line-arguments</span>
+</span></span><span style="display:flex;"><span>./main.go:19:6: can inline receiveStrPtr
+</span></span><span style="display:flex;"><span>./main.go:23:6: can inline returnStrPtr
+</span></span><span style="display:flex;"><span>./main.go:13:15: inlining call to receiveStrPtr
+</span></span><span style="display:flex;"><span>./main.go:15:32: inlining call to returnStrPtr
+</span></span><span style="display:flex;"><span>./main.go:13:15: inlining call to fmt.Printf
+</span></span><span style="display:flex;"><span>./main.go:20:12: inlining call to fmt.Printf
+</span></span><span style="display:flex;"><span>./main.go:7:15: strValue + <span style="color:#e6db74">&#34;&#34;</span> does not escape
+</span></span><span style="display:flex;"><span>./main.go:9:15: new<span style="color:#f92672">(</span>string<span style="color:#f92672">)</span> does not escape
+</span></span><span style="display:flex;"><span>./main.go:10:14: *strPtr + <span style="color:#e6db74">&#34;&#34;</span> does not escape
+</span></span><span style="display:flex;"><span>./main.go:12:16: new<span style="color:#f92672">(</span>string<span style="color:#f92672">)</span> escapes to heap
+</span></span><span style="display:flex;"><span>./main.go:13:15: ... argument does not escape
+</span></span><span style="display:flex;"><span>./main.go:16:22: *strPtrFromFunc + <span style="color:#e6db74">&#34;&#34;</span> does not escape
+</span></span><span style="display:flex;"><span>./main.go:19:20: leaking param: argStrPtr
+</span></span><span style="display:flex;"><span>./main.go:20:12: ... argument does not escape
+</span></span><span style="display:flex;"><span>./main.go:24:2: moved to heap: str
+</span></span></code></pre></div><h3 id="ガベージコレクタ">ガベージコレクタ<a href="#ガベージコレクタ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Goをはじめとして多くの言語ではマークアンドスイープという方式が採用されている。</p>
+<p>マークアンドスイープ方式では、まずメモリの領域をスキャンして必要なデータか否かをマークしていき、次のフェーズで不要なものを削除する。</p>
+<p>マークアンドスイープ方式では、不要なメモリを削除する間にプログラム全体を停止する必要がある。（これをストップザワールドと呼ぶ）</p>
+<p>Goではバージョンを重ねる事にストップザワールドの時間の短縮化が進んでいる。</p>
+<h2 id="第17章-実行ファイルが起動するまで">第17章 実行ファイルが起動するまで<a href="#第17章-実行ファイルが起動するまで" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>最終的にCPUで実行されるバイナリはメモリ空間に単に命令が並んだもので、そこにはブロックのような概念は存在しない（Goでいうと<code>{</code>と<code>}</code>で囲まれた処理の塊）。</p>
+<p>アセンブリ言語には関数のブロックのような概念はないが、その代わりにラベルという概念がある。</p>
+<h3 id="ランタイムの役割">ランタイムの役割<a href="#ランタイムの役割" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Goに限らずC言語でもRustでも何かしらのプログラミング言語で生成したアプリケーションは「ランタイム」と呼ばれるライブラリを利用したプログラムになるのが一般的。</p>
+<p>ラインタイムライブラリが最終的にはOSのカーネルにシステムコールを発行して仕事を依頼し、メモリ管理やファイルやネットワークアクセスを実現する役割を担う。</p>
+<p>ラインタイムライブラリがなければ、OSに仕事を依頼するところも自分で作成する必要がある。</p>
+<h3 id="リンカーの役割">リンカーの役割<a href="#リンカーの役割" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>以下はWikipediaによるリンカーの説明。</p>
+<blockquote>
+<p>a computer program that takes one or more object files generated by a compiler or generated by an assembler and links them with libraries, generating an executable program or shared library</p>
+<p><a href="https://en.wikipedia.org/wiki/Linker" target="_blank" >Linker - Wikipedia</a> から引用</p>
+</blockquote>
+<p>上記を翻訳すると「コンパイラまたはアセンブラによって生成された1つ以上のオブジェクトファイルをライブラリと結合し実行可能ファイルまたは共有ライブラリを生成するプログラム」といった感じだろうか。</p>
+<p>OSはリンカーが生成した実行ファイルがシェルから起動されると、実行ファイルの内容をメモリに配置する。</p>
+<p>ロードが終わったら決め打ちされた「特定のアドレス」からCPUが命令を読み込んで実行が開始される。</p>
+<p>実行中に発生する関数呼び出しはすでにリンカーによってアドレスが解決されているので示されたアドレスにジャンプするだけで高速に実行される。</p>
+<h3 id="実行ファイルのメモリ配置">実行ファイルのメモリ配置<a href="#実行ファイルのメモリ配置" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>OSがアプリケーションの実行ファイルを最初にロードしてくる部分についての解説。</p>
+<p>まず、実行ファイルのフォーマットはOSによって異なる。</p>
+<ul>
+<li>LinuxなどのPOSIX系OS: ELF形式</li>
+<li>Windows: PE(Portable Executable)形式</li>
+<li>macOS: Mach-O形式</li>
+</ul>
+<p>また、実行ファイルには次のようなデータが格納されている。</p>
+<ul>
+<li>この実行ファイルが対象としているCPUアーキテクチャの種類</li>
+<li>実行ファイル中に含まれるセクションをどのメモリアドレスに配置するか、そのときのセクション名と実行権限</li>
+<li>プログラム起動時に最初に呼び出す命令が格納されているアドレス</li>
+<li>実行ファイルの実行に必要な共有ライブラリの情報</li>
+<li>実行コードのセクション</li>
+<li>静的に初期化された変数のセクション</li>
+</ul>
+<p>セクションは実行ファイルフォーマットを構成するバイナリデータのブロックのことで以下のようなものがある。</p>
+<ul>
+<li><code>TEXT</code>: 機械語の実行コードが格納されるセクション</li>
+<li><code>DATA</code>: 実行コードを含まない静的に確保された初期化済み（データがすでに入っている）のメモリ領域</li>
+<li><code>BSS</code>: 変数が置かれる領域で初期化されていない（すべてゼロ）メモリ領域</li>
+</ul>
+<p>OSはこの実行ファイルフォーマットに従って実行ファイルに含まれるセクションを適切なアドレスに配置していく。<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup>その後実行ファイルフォーマットに書かれた初期実行アドレスを実行することでアプリケーションが起動する。</p>
+<h3 id="goのプログラムの起動">Goのプログラムの起動<a href="#goのプログラムの起動" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Goで書かれたソースコードが実行されるまでの流れは以下。</p>
+<ol>
+<li>Goで書かれたアプリケーションをコンパイルすると実行ファイルが作成される</li>
+<li>コンパイル済みのGoプログラムを実行すると実行環境のランタイムにある<code>$GOROOT/src/runtime/asm_(ARCH名).s</code>というファイルのなかにある<code>_rt0_(ARCH名)</code>という関数が呼ばれる。このプロシージャの中では以下のような処理が実行される。
+<ol>
+<li>最初のgoroutineの初期化</li>
+<li>OSから渡されるコマンドライン引数<code>os.Args</code>のパース</li>
+<li>コンピュターで利用可能なCPUコア数の取得</li>
+</ol>
+</li>
+<li><code>$GOROOT/src/runtime/proc.go</code>の<code>schedinit()</code>関数の中で以下のような処理が実行される。
+<ul>
+<li>スタックを初期化</li>
+<li>メモリマネージャを初期化し、Mを初期化</li>
+<li>mapの内部で使われるハッシュアルゴリズムの初期化</li>
+<li>モジュール機能向けのモジュール情報や型情報の取得</li>
+<li>シグナルハンドラの初期化</li>
+<li>コマンドライン引数と環境変数の初期化</li>
+<li>ガベージコレクタの初期化</li>
+</ul>
+</li>
+</ol>
+<p>次に新しいgoroutineを作って<code>$GOROOT/src/runtime/proc.go</code>の<code>main()</code>関数が呼び出される。そこでは以下のような流れで処理が進む。</p>
+<ol>
+<li><code>runtime.lockOSThread()</code></li>
+<li>(ランタイムの)<code>init()</code></li>
+<li><code>main・init()</code>(アプリケーションのmainパッケージの<code>init()</code>関数)</li>
+<li><code>runtime.unlockOSThread()</code></li>
+<li><code>main・main()</code>(アプリケーションのmainパッケージの<code>main()</code>関数)</li>
+</ol>
+<h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>ここまでの理解をもとにいくつかの質問に対する答えを書いてみる。</p>
+<h3 id="プロセスとスレッドの違いは何か">プロセスとスレッドの違いは何か<a href="#プロセスとスレッドの違いは何か" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>プロセスはプログラムの実行単位であり他のプロセスとはメモリを共有していない。</li>
+<li>プロセスは起動時に仮想メモリが割り当てられるためスレッドに比べて起動コストが高い</li>
+<li>スレッドはプロセス内で実行される軽量な実行単位でプロセス内のメモリ空間やリソースを共有する。</li>
+<li>複数のスレッドが同じメモリを操作する可能性があるためデータ競合を防ぐ必要がある。</li>
+</ul>
+<h3 id="プログラムはどのような流れで実行されるか">プログラムはどのような流れで実行されるか<a href="#プログラムはどのような流れで実行されるか" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ol>
+<li>コンパイラがソースコードをコンパイルする</li>
+<li>リンカーがコンパイル済みのオブジェクトファイルをリンクし実行可能ファイルを生成する</li>
+<li>ユーザーが実行可能ファイルを実行する(e.g. ターミナルから呼び出す)</li>
+<li>OSがプロセスを生成し、プロセスの実行に必要な仮想メモリ空間を割り当てる</li>
+<li>OSが実行ファイルの内容をディスクからメモリに読み込み、仮想アドレス空間に適切に配置する</li>
+<li>メインスレッドでプログラムが実行される(プロセスが生成されると自動的にメインスレッドが作成される)</li>
+</ol>
+<h3 id="感想">感想<a href="#感想" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>冒頭にも書いた通りCSを体系的に学んだ経験がない自分にとってはとても勉強になった。</p>
+<p>次はこのあたりの書籍を読んでみようとおもう。</p>
+<ul>
+<li>コンピュータシステムの理論と実装</li>
+<li>Go言語による並行処理</li>
+<li>つくって、壊して、直して学ぶ Kubernetes入門</li>
+<li>Linuxで動かしながら学ぶTCP/IPネットワーク入門</li>
+<li>体系的に学ぶ 安全なWebアプリケーションの作り方</li>
+</ul>
+<p>あるいは、 <a href="https://blog.ojisan.io/server-architecture-2023/#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9-vs-%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89" target="_blank" >Webサーバーアーキテクチャ進化論2023 - blog.ojisan.io</a>を参考に学習ロードマップを立ててみるのもいいかもしれない。</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Neovimでのデバッガの環境構築は <a href="https://zenn.dev/saito9/articles/32c57f776dc369" target="_blank" >nvim-dapでGolangのデバッグ環境構築</a> を参考にした&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><code>Sysfd</code>の定義はgolang/go/src/internal/poll/fd_unix.go#L23(<div class="blogcard" data-url="https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23" data-auto-fetch="true">
+  <a href="https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23</div><div class="blogcard-url">https://github.com/golang/go/blob/c83b1a7013784098c2061ae7be832b2ab7241424/src/internal/poll/fd_unix.go#L23</div>
+    </div>
+  </a>
+</div>
+) にある。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><code>io.Pipe</code>の使いどころに関しては <a href="https://medium.com/eureka-engineering/file-uploads-in-go-with-io-pipe-75519dfa647b" target="_blank" >Go言語のio.Pipeでファイルを効率よくアップロードする方法</a> が大変参考になった。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>cf. <a href="https://github.com/kyu08/go-system-programming/blob/b9da4a0ce759b2df4ce884ab61248fb893b60bef/4-channel/unbufferedchannel/main.go#L8" target="_blank" >kyu08/go-system-programming/4-channel/unbufferedchannel/main.go#L8</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>Distrolessに対して「コンテナイメージが軽量になる」以外のメリットを感じていなかったが書かれている通りセキュリティ面でもメリットがあると気付いた。&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6">
+<p>fzf-makeの出力の一部に色を付けるために使っている。 <div class="blogcard" data-url="https://github.com/kyu08/fzf-make/blob/12789acd19bc24daa60ba7eb84973dab18fe7a52/src/usecase/execute_make_command.rs#L5" data-auto-fetch="true">
+  <a href="https://github.com/kyu08/fzf-make/blob/12789acd19bc24daa60ba7eb84973dab18fe7a52/src/usecase/execute_make_command.rs#L5" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/kyu08/fzf-make/blob/12789acd19bc24daa60ba7eb84973dab18fe7a52/src/usecase/execute_make_command.rs#L5</div><div class="blogcard-url">https://github.com/kyu08/fzf-make/blob/12789acd19bc24daa60ba7eb84973dab18fe7a52/src/usecase/execute_make_command.rs#L5</div>
+    </div>
+  </a>
+</div>
+&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7">
+<p><div class="blogcard" data-url="https://ufcpp.net/blog/2023/12/escape-escape/" data-auto-fetch="true">
+  <a href="https://ufcpp.net/blog/2023/12/escape-escape/" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://ufcpp.net/blog/2023/12/escape-escape/</div><div class="blogcard-url">https://ufcpp.net/blog/2023/12/escape-escape/</div>
+    </div>
+  </a>
+</div>
+&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8">
+<p>仮想メモリ空間についてはκeenさんのこちらの記事がとてもわかりやすかった。<a href="https://keens.github.io/blog/2017/04/30/memoritosutakkutohi_puto/" target="_blank" >メモリとスタックとヒープとプログラミング言語</a>&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+      </div></div>
+
+  
+  
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="https://blog.kyu08.com/pr-251/posts/refine-notion-gantt-chart/" class="button inline prev">
+        Notionのダークモードのガントチャートが見づらいのをChrome拡張で修正する方法
+      </a>
+    
+    
+      <a href="https://blog.kyu08.com/pr-251/posts/renew-oss-sponsoring/" class="button inline next">
+        GitHub Sponsorsの寄付先にratatuiを追加した
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+        repo="kyu08/blog-comments"
+        issue-term="pathname"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>blog.kyu08.com</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/pr-251/bundle.min.js"></script>
+
+
+<font color="#808080">
+  <span>
+    This site uses Google Analytics for access analysis.
+    Google Analytics uses cookies to collect traffic data, but this traffic data is collected anonymously and does not personally identify you.
+    Cookies can be disabled in your browser.
+  </span>
+</font>
+
+
+<script src="https://blog.kyu08.com/pr-251/blogcard.js"></script>
+
+
+  
+</div>
+
+</body>
+</html>

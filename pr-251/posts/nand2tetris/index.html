@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+    <title>『コンピュータシステムの理論と実装 第2版』を読んだ :: blog.kyu08.com</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は## 学び、得た経験までジャンプして" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://blog.kyu08.com/pr-251/posts/nand2tetris/" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BDQ408J45J', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/post.min.d551b54605ea87772c5eb05bf68219699a011687df301682a1006e8811253df9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-251/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+<link rel="stylesheet" href="https://blog.kyu08.com/pr-251/style.css">
+
+
+<link rel="shortcut icon" href="https://blog.kyu08.com/pr-251/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/pr-251/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="kyu08_" />
+
+
+
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="『コンピュータシステムの理論と実装 第2版』を読んだ">
+<meta property="og:description" content="『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は## 学び、得た経験までジャンプして" />
+<meta property="og:url" content="https://blog.kyu08.com/pr-251/posts/nand2tetris/" />
+<meta property="og:site_name" content="blog.kyu08.com" />
+
+
+  
+  
+    
+  
+
+
+  <meta property="og:image" content="https://blog.kyu08.com/pr-251/posts/nand2tetris/cover.png">
+  <meta name="twitter:image" content="https://blog.kyu08.com/pr-251/posts/nand2tetris/cover.png">
+  <meta name="twitter:image:alt" content="『コンピュータシステムの理論と実装 第2版』を読んだ">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+  <meta property="article:published_time" content="2025-04-29 15:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+<link rel="author" href="http://www.hatena.ne.jp/kyu08/" />
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ . }}');
+</script>
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    blog.kyu08.com
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/pr-251/tags/diary/">_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-251/about">about</a></li>
+        
+      
+        
+          <li><a href="/pr-251/index.xml">rss</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/pr-251/tags/diary/" >_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-251/about" >about</a></li>
+        
+      
+        
+          <li><a href="/pr-251/index.xml" >rss</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://blog.kyu08.com/pr-251/posts/nand2tetris/">『コンピュータシステムの理論と実装 第2版』を読んだ</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2025/04/29</time>
+      
+    <span class="post-reading-time">25 min read (12073 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://blog.kyu08.com/pr-251/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/">読書ログ</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-251/tags/cs/">CS</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="/pr-251/posts/nand2tetris/cover.png"
+    class="post-cover"
+    alt="『コンピュータシステムの理論と実装 第2版』を読んだ"
+    title="Cover Image" />
+
+
+  
+    <div class="table-of-contents">
+      <h2>
+        目次
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#本書の構成">本書の構成</a></li>
+    <li><a href="#第1章-ブール論理">第1章 ブール論理</a></li>
+    <li><a href="#第2章-ブール算術">第2章 ブール算術</a></li>
+    <li><a href="#第3章-メモリ">第3章 メモリ</a>
+      <ul>
+        <li><a href="#学びメモ">学びメモ</a></li>
+      </ul>
+    </li>
+    <li><a href="#第4章-機械語">第4章 機械語</a>
+      <ul>
+        <li><a href="#機械語">機械語</a></li>
+        <li><a href="#メモリ">メモリ</a></li>
+        <li><a href="#プロセッサ">プロセッサ</a></li>
+        <li><a href="#レジスタ">レジスタ</a></li>
+        <li><a href="#hackコンピュータのアーキテクチャ">Hackコンピュータのアーキテクチャ</a></li>
+        <li><a href="#アセンブラの役割">アセンブラの役割</a></li>
+        <li><a href="#命令タイプ">命令タイプ</a></li>
+        <li><a href="#外部デバイス">外部デバイス</a></li>
+        <li><a href="#hackプログラムの例">Hackプログラムの例</a></li>
+      </ul>
+    </li>
+    <li><a href="#第5章-コンピュータアーキテクチャ">第5章 コンピュータアーキテクチャ</a></li>
+    <li><a href="#第6章-アセンブラ">第6章 アセンブラ</a>
+      <ul>
+        <li><a href="#シンボル処理">シンボル処理</a></li>
+      </ul>
+    </li>
+    <li><a href="#第7章-仮想マシンi処理">第7章 仮想マシンI：処理</a>
+      <ul>
+        <li><a href="#hackプラットフォームのvmアーキテクチャとその利点">HackプラットフォームのVMアーキテクチャとその利点</a></li>
+        <li><a href="#vm言語の設計">VM言語の設計</a></li>
+        <li><a href="#スタックマシンの挙動">スタックマシンの挙動</a></li>
+        <li><a href="#仮想メモリセグメント">仮想メモリセグメント</a></li>
+        <li><a href="#vm変換器の動作例">VM変換器の動作例</a></li>
+      </ul>
+    </li>
+    <li><a href="#第8章-仮想マシンii制御">第8章 仮想マシンII：制御</a>
+      <ul>
+        <li><a href="#関数の呼び出しcall">関数の呼び出し(<code>call</code>)</a></li>
+        <li><a href="#関数からのreturnreturn">関数からのreturn(<code>return</code>)</a></li>
+      </ul>
+    </li>
+    <li><a href="#第9章-高水準言語">第9章 高水準言語</a></li>
+    <li><a href="#第10章-コンパイラi構文解析">第10章 コンパイラI：構文解析</a></li>
+    <li><a href="#第11章-コンパイラiiコード生成">第11章 コンパイラII：コード生成</a>
+      <ul>
+        <li><a href="#シンボルテーブル">シンボルテーブル</a></li>
+        <li><a href="#コンストラクタのコンパイル">コンストラクタのコンパイル</a></li>
+      </ul>
+    </li>
+    <li><a href="#第12章-os">第12章 OS</a></li>
+    <li><a href="#学び得た経験">学び、得た経験</a></li>
+    <li><a href="#おわりに">おわりに</a></li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <p>『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は<a href="#%e5%ad%a6%e3%81%b3%e5%be%97%e3%81%9f%e7%b5%8c%e9%a8%93" >## 学び、得た経験</a>までジャンプしてください。</p>
+<h2 id="本書の構成">本書の構成<a href="#本書の構成" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>本書はnand2tetrisという通称の通り、NANDゲートからスタートして、CPUやコンパイラやOSなどを実装し、最終的にはそのプラットフォーム上でテトリス(のようなアプリケーション)<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>が動くところまで実装するという内容のコースになっている。</p>
+<p><img src="roadmap.webp" alt="roadmap">
+<div class="blogcard" data-url="https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view</div><div class="blogcard-url">https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view</div>
+    </div>
+  </a>
+</div>
+ P3より引用</p>
+<p>上図のとおりだが、大まかな流れとしては以下。</p>
+<ol>
+<li>NANDゲートを使ってnot, and, orなどの基本的なチップを実装</li>
+<li>加算機やALUを実装</li>
+<li>レジスタ、RAM、Program Counterを実装</li>
+<li>Memory、CPU、Computerを実装</li>
+<li>アセンブラを実装(機械語の記号表現をバイナリ表現に変換する)</li>
+<li>仮想マシンを実装</li>
+<li>コンパイラを実装</li>
+<li>OSを実装</li>
+</ol>
+<p>各章末に課題とそれをパスしたことを確認するテストがある。基本的にはテストコードを使って動作確認ができるようになっているため、自分の実装が合ってるかを機械的に確認できるようになっており、手を動かしながら理解を深めやすいようになっている。</p>
+<p>参考までに各章の実装に用いる言語を記しておく。</p>
+<table>
+<thead>
+<tr>
+<th>章</th>
+<th>実装言語</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第1章 ブール論理</td>
+<td>HDL(Hardware Description Languageの略で論理回路の構造を記述できる言語)</td>
+</tr>
+<tr>
+<td>第2章 ブール算術</td>
+<td>HDL</td>
+</tr>
+<tr>
+<td>第3章 メモリ</td>
+<td>HDL</td>
+</tr>
+<tr>
+<td>第4章 機械語</td>
+<td>アセンブリ言語(Hackプラットフォーム独自の仕様)</td>
+</tr>
+<tr>
+<td>第5章 コンピュータアーキテクチャ</td>
+<td>HDL</td>
+</tr>
+<tr>
+<td>第6章 アセンブラ</td>
+<td>任意の言語</td>
+</tr>
+<tr>
+<td>第7章 仮想マシンI：処理</td>
+<td>任意の言語</td>
+</tr>
+<tr>
+<td>第8章 仮想マシンII：制御</td>
+<td>任意の言語</td>
+</tr>
+<tr>
+<td>第9章 高水準言語</td>
+<td>Jack言語(本書で実装するJavaライクな独自言語)</td>
+</tr>
+<tr>
+<td>第10章 コンパイラI：構文解析</td>
+<td>任意の言語</td>
+</tr>
+<tr>
+<td>第11章 コンパイラII：コード生成</td>
+<td>任意の言語</td>
+</tr>
+<tr>
+<td>第12章 OS</td>
+<td>Jack言語</td>
+</tr>
+</tbody>
+</table>
+<p>第6章 ~ 第8章と第10章 ~ 第11章は決められた入出力を持つCLIツールを書けばいいので任意の言語で書くことができる。筆者はRustで実装した。特にEnumとパターンマッチのおかげで構文解析関連の処理が書きやすかった。</p>
+<p>ここからは各章の学びを簡単に書いていく。</p>
+<h2 id="第1章-ブール論理">第1章 ブール論理<a href="#第1章-ブール論理" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>NANDを使って以下の論理回路をHDLを使って実装した。</p>
+<ul>
+<li>not</li>
+<li>and</li>
+<li>or</li>
+<li>xor</li>
+<li>マルチプレクサ</li>
+<li>デマルチプレクサ</li>
+<li>not(16bit)</li>
+<li>and(16bit)</li>
+<li>or(16bit)</li>
+<li>マルチプレクサ(16bit)</li>
+<li>8入力or</li>
+<li>4入力マルチプレクサ(16bit)</li>
+<li>8入力マルチプレクサ(16bit)</li>
+<li>4入力デマルチプレクサ</li>
+<li>8入力デマルチプレクサ</li>
+</ul>
+<p>マルチプレクサの実装に悩んだがいい感じの実装を思いついたときの爽快感がすごかった。</p>
+<p>真理値表を丁寧めに書きながら進めた結果マルチプレクサの実装以外はそこまで悩まなかった。</p>
+<h2 id="第2章-ブール算術">第2章 ブール算術<a href="#第2章-ブール算術" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>以下の論理回路を作成した。</p>
+<ul>
+<li>半加算器</li>
+<li>全加算器</li>
+<li>16bit同士の加算</li>
+<li>16bitの入力に1をインクリメントする回路</li>
+<li>ALU(Arithmetic Logic Unit: 算術論理演算装置)</li>
+</ul>
+<p>学び:</p>
+<ul>
+<li>内部ピンにインデックスアクセスするには次のように書く必要がある。
+<pre tabindex="0"><code class="language-hdl" data-lang="hdl">Mux16(a=calculateResult, b=notCalculateResult, sel=no, out=out, out[0..7]=out0To7, out[8..15]=out8To15, out[15]=ng);
+</code></pre></li>
+<li>愚直な実装をしている箇所があったが、Mux16でスマートに書き直せることを知って感動した。</li>
+</ul>
+<h2 id="第3章-メモリ">第3章 メモリ<a href="#第3章-メモリ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>この章では、DFF(Data Flip-Flop)を用いて1-bit registerを作成し、それを組み合わせて16-bit registerを作成し、さらにそれを組み合わせてRAMを作成した。</p>
+<p><img src="from-dff-to-ram.webp" alt="from-dff-to-ram.webp">
+<div class="blogcard" data-url="https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view</div><div class="blogcard-url">https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view</div>
+    </div>
+  </a>
+</div>
+ P47より引用</p>
+<p>読み書き可能なメモリを作成したことで、コンピュータを作っている感が強まってきた。</p>
+<p>作成した回路は具体的には以下。</p>
+<ul>
+<li>Register(1bit)</li>
+<li>Register(16bit)</li>
+<li>RAM(8bit)</li>
+<li>RAM(64bit)</li>
+<li>ProgramCounter</li>
+<li>RAM(512bit)</li>
+<li>RAM(4K-bit)</li>
+<li>RAM(16K-bit)</li>
+</ul>
+<h3 id="学びメモ">学びメモ<a href="#学びメモ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>第2章までは時間に依存しない回路のみを扱っていたがこの章では過去の状態を保持する回路を作成した。</li>
+<li>ここでは時間をクロックという単位で区切って扱う。</li>
+<li><strong>非同期チップ(組み合わせチップ)</strong>: 入力値の組み合わせのみに反応し時間の進行には影響を受けない</li>
+<li><strong>同期チップ(順序チップ)</strong>: 以前の時間単位での変化に対応する用に設計されたチップ</li>
+<li>同期チップを利用することでシステム内のチップ間で信号が伝播するのにかかる時間を無視できる。</li>
+<li>ただしクロックサイクルは「システム内のチップ間で信号が伝播するのにかかる時間の最大値」と「1チップ内で最も処理時間がかかる演算を完了するのにかかる時間」の合計値よりも大きく設定する必要がある。</li>
+</ul>
+<p>DFFは<code>out(t+1) = in(t)</code>で表される出力を持つ。DFFを用いることで過去の状態を論理回路上で表現できる。</p>
+<p><img src="dff.webp" alt="dff.webp">
+<div class="blogcard" data-url="https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view</div><div class="blogcard-url">https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view</div>
+    </div>
+  </a>
+</div>
+ P41より引用</p>
+<p>次のようにマルチプレクサとDFFを組み合わせることで1-bit registerを作成できる。</p>
+<pre tabindex="0"><code class="language-hdl" data-lang="hdl">CHIP Bit {
+    IN in, load;
+    OUT out;
+
+    PARTS:
+    Mux(a=dffOut, b=in, sel=load, out=mux);
+    DFF(in=mux, out=out, out=dffOut);
+}
+</code></pre><p>1-bit registerは時刻<code>t</code>において<code>load</code>ビットがアサートされると<code>out(t+1)</code>が<code>in(t)</code>の値になり、アサートされていない場合は<code>out(t+1)</code>は<code>out(t)</code>の値になる。換言するとレジスタを利用することで過去の状態を保持できる。</p>
+<p><img src="1-bit-register.webp" alt="1-bit-register.webp">
+<div class="blogcard" data-url="https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view</div><div class="blogcard-url">https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view</div>
+    </div>
+  </a>
+</div>
+ P25より引用</p>
+<h2 id="第4章-機械語">第4章 機械語<a href="#第4章-機械語" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>第4章では以下のプログラムを機械語で書いた。</p>
+<ul>
+<li>掛け算を行うプログラム</li>
+<li>キーボードが押されているときだけ画面を黒くするプログラム</li>
+</ul>
+<h3 id="機械語">機械語<a href="#機械語" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>ハードウェアプラットフォームが実行するように設計されている基本的な命令セット</li>
+<li>高水準言語は表現力やプラットフォーム間の互換性を目標に設計される一方で機械語は特定のハードウェアで直接実行され、そのハードウェアを完全に制御できるように設計されている。</li>
+<li>機械語は決められた形式に従い<strong>プロセッサ</strong>と<strong>レジスタ</strong>を用いて<strong>メモリ</strong>を操作するように設計されている。</li>
+<li>バイナリ形式、記号形式の2パターンで記述できる。</li>
+</ul>
+<h3 id="メモリ">メモリ<a href="#メモリ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>データや命令を保存するハードウェアデバイス。各セルは<strong>メモリ位置</strong>や<strong>メモリレジスタ</strong>と呼ばれ、それぞれ固有の<strong>アドレス</strong>を持つ。</li>
+</ul>
+<h3 id="プロセッサ">プロセッサ<a href="#プロセッサ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>プロセッサは<strong>中央演算装置(CPU)</strong> と呼ばれ、あらかじめ決められた基本的な命令セットを実行できる。</li>
+<li>プロセッサは選択されたレジスタとメモリ位置からデータを取り出し、選択されたレジスタとメモリ位置に出力を書き込む。</li>
+<li>プロセッサは<strong>ALU</strong>と<strong>レジスタ</strong>、<strong>バイナリ命令の解析と実行を可能にする論理ゲート</strong>によって構成される。</li>
+</ul>
+<h3 id="レジスタ">レジスタ<a href="#レジスタ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>プロセッサとメモリはそれぞれ独立したチップとして実装されており一方から他方へデータを移すには比較的時間がかかる。そのためほとんどのプロセッサにはいくつかのレジスタが備わっており、高速なローカルメモリとして機能する。</li>
+<li>CPUに存在するレジスタは2つのタイプに分類される。
+<ul>
+<li>データを保持する<strong>データレジスタ(Dレジスタ)</strong></li>
+<li>アドレスを保持する<strong>アドレスレジスタ(Aレジスタ)</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="hackコンピュータのアーキテクチャ">Hackコンピュータのアーキテクチャ<a href="#hackコンピュータのアーキテクチャ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Hackコンピュータは以下のようなアーキテクチャを持つ。</p>
+<p><img src="hack-computer-architecture.webp" alt="hack-computer-architecture.webp">
+<div class="blogcard" data-url="https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view</div><div class="blogcard-url">https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view</div>
+    </div>
+  </a>
+</div>
+ P23より引用</p>
+<h3 id="アセンブラの役割">アセンブラの役割<a href="#アセンブラの役割" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>機械語はバイナリ形式、記号形式の2パターンで記述できると書いたが、記号形式で<code>@x</code>のように変数を宣言した場合にその変数を実際のメモリのどこに置くかを知るのが<strong>アセンブラ</strong>である。アセンブラのおかげで記号形式のプログラム側は実装詳細を意識することなく変数を初期化、利用できる。</p>
+<h3 id="命令タイプ">命令タイプ<a href="#命令タイプ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Hack言語には2つの命令タイプがある。</p>
+<ul>
+<li><strong>A命令</strong>
+<ul>
+<li>A命令はAレジスタに15ビットの値を設定する。</li>
+<li>A命令は1ビットのオペコード + 15ビットの値で構成される。(Hack機械語ではA命令のオペコードは<code>0</code>)</li>
+<li>A命令は3つの目的で使用される。
+<ul>
+<li>プログラムによってコンピュータに定数を入力する</li>
+<li>Aレジスタのアドレスを設定することでその次のC命令でRAMレジスタを操作できる</li>
+<li>Aレジスタにジャンプ先のアドレスを設定することでその次のC命令でジャンプを実行できる</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>C命令</strong>
+<ul>
+<li>C命令では次の3つを指定する。
+<ul>
+<li>どういう計算をするか(comp)</li>
+<li>計算された値をどこに保存するか(dest)</li>
+<li>次に何をするか(jump)</li>
+</ul>
+</li>
+<li>Hack機械語では一番左端の1ビットが1</li>
+<li>C命令は次のような形式で構成される。<code>111accccccdddjjj</code>
+<ul>
+<li>111: 先頭の1がオペコードで、左から2,3ビット目は使用されないが慣例として<code>1</code>が設定されている。</li>
+<li>a: ALUへの入力がAレジスタからの値化Mからの値か決定する(1ビット)</li>
+<li>c: compフィールド。(6ビット)ALUに対して計算内容を指定する。</li>
+<li>d: destフィールド。(3ビット)計算結果の値をどこに保存するかを表現する。左から順にDレジスタ、Aレジスタ、<code>RAM[A]</code>に値を保存するかを表現する。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="the-hack-language-specification.webp" alt="the-hack-language-specification">
+<div class="blogcard" data-url="https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view</div><div class="blogcard-url">https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view</div>
+    </div>
+  </a>
+</div>
+ P129より引用</p>
+<h3 id="外部デバイス">外部デバイス<a href="#外部デバイス" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Hackのハードウェアプラットフォームでは画面とキーボードの2つの外部デバイスに接続できる。どちらのデバイスも<strong>メモリマップ</strong>を通してコンピュータと会話する。(メモリの中に画面とキーボード用のメモリ領域があり、そこに画面の各ピクセルの値や押下されているキーのキーコードが格納される。)</p>
+<h3 id="hackプログラムの例">Hackプログラムの例<a href="#hackプログラムの例" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>以下は掛け算を行うHackプログラムのソースコード。(Hackアーキテクチャで動作する機械語で書かれている) ハードウェアの構成要素を理解しながら手続き型チックに記述する必要があるため難しかったが理解が進んだ。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-asm" data-lang="asm"><span style="display:flex;"><span><span style="color:#75715e">// 0に対して(R0-1)回R1を足すことで掛け算を実現する
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// n = 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">n</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">M</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// R2 = 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">R2</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">M</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">LOOP</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// if n == R0 then goto END
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">n</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">M</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">R0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D-M</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">END</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">D</span><span style="color:#75715e">;JEQ
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// R2 += R1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">R2</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">M</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">R1</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D</span><span style="color:#960050;background-color:#1e0010">+</span><span style="color:#66d9ef">M</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// R2 = D
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">R2</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">M</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// n++
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">n</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">M</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">M</span><span style="color:#960050;background-color:#1e0010">+</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// go to LOOP
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">LOOP</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">0</span><span style="color:#75715e">;JMP
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">END</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">END</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">0</span><span style="color:#75715e">;JMP
+</span></span></span></code></pre></div><h2 id="第5章-コンピュータアーキテクチャ">第5章 コンピュータアーキテクチャ<a href="#第5章-コンピュータアーキテクチャ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>第5章では、これまでの章で作成した論理回路を組み合わせてついに1つの汎用コンピュータを作成する。このコンピュータは第4章に登場した機械語のプログラムを実行できる。</p>
+<ul>
+<li><strong>ノイマン型アーキテクチャ</strong>:
+<ul>
+<li>CPUがメモリデバイスと相互作用する。</li>
+<li>入力デバイスからデータを受け取り出力デバイスへデータを送信する。</li>
+<li>コンピュータのメモリに保存されるデータはコンピュータが計算したデータだけではなくコンピュータに何を行うべきかを指示する「命令」も含まれる。</li>
+</ul>
+</li>
+<li><strong>メモリ</strong>:
+<ul>
+<li>物理的にはアドレス指定可能な固定サイズの<strong>レジスタ</strong>の並びで、それぞれが固有のアドレスを持つ。</li>
+<li>概念的にはアドレス空間はデータと命令の保存という2つの役割を果たす。</li>
+<li>ランダムに選択されたメモリレジスタに瞬時に到達できるという要件からRandom Access Memoryと呼ばれている。
+<ul>
+<li>たしかにRAMはレジスタの木構造になっていたのである程度大きいRAMでも少ないホップ数で指定したレジスタにアクセスできそうだ。</li>
+</ul>
+</li>
+<li>データ専用のメモリ領域を<strong>データメモリ</strong>、命令専用のメモリ領域を<strong>命令メモリ</strong>と呼ぶ。</li>
+</ul>
+</li>
+<li><strong>CPU</strong>:
+<!-- raw HTML omitted -->
+<ul>
+<li>CPUは現在読み込まれているプログラムの命令を実行する。</li>
+<li>各命令はCPUに対して以下を指示する。
+<ul>
+<li>どの計算を実行するか</li>
+<li>どのレジスタにアクセスするか</li>
+<li>次のどの命令をフェッチして実行するか</li>
+</ul>
+</li>
+<li>CPUはこれらのタスクを<strong>ALU</strong>、<strong>レジスタ</strong>、<strong>制御ユニット</strong>を使って実行する。</li>
+</ul>
+<!-- raw HTML omitted -->
+</li>
+</ul>
+<p>第5章の課題ではこれまでの章で作成した論理回路を組み合わせて以下を作成した。</p>
+<ul>
+<li>Memory</li>
+<li>CPU</li>
+<li>Computer</li>
+</ul>
+<p>正直CPUの実装、デバッグがはかなり大変だったが公式が提供してくれているテストツールとデバッガのおかげで効率的にバグを見つけることができた。</p>
+<p>こんな感じで各ピンの出力や期待する結果とのdiffを比較的見やすい形式で表示してくれるのでありがたかった。</p>
+<p><img src="cpu-debug.webp" alt="cpu-debug.webp"></p>
+<p>ここで作成したCPUの回路は次のようなもの。ここではヒントとして大まかな回路設計が与えられておりそれを参考にしつつ足りない部分を埋めていく形で実装を進めた。</p>
+<p><img src="cpu-implementation.webp" alt="cpu-implementation.webp">
+<div class="blogcard" data-url="https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view</div><div class="blogcard-url">https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view</div>
+    </div>
+  </a>
+</div>
+ P31より引用</p>
+<h2 id="第6章-アセンブラ">第6章 アセンブラ<a href="#第6章-アセンブラ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>第6章では第5章で書いた機械語の記号表現をバイナリ表現に変換するアセンブラを開発する。</p>
+<ul>
+<li>変数やラベルのアドレス管理を行うために<strong>シンボルテーブル</strong>を利用する。シンボルテーブルには以下のような情報が格納される。
+<ul>
+<li>ラベルの位置 e.g. <code>(LOOP)</code></li>
+<li>変数のアドレス e.g. <code>@i</code>(Hack機械語では変数は16以降のアドレスに順に割り当てられる)</li>
+<li>定義済みシンボルのアドレス e.g. <code>@SCREEN</code>, <code>@KBD</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="シンボル処理">シンボル処理<a href="#シンボル処理" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>アセンブリプログラムではシンボルが定義される前にシンボルラベルを使用できる。(goto命令の行き先を指定するのに利用する)</p>
+<p>この挙動も考慮しつつバイナリを生成するには<strong>2パス・アセンブラ</strong>と呼ばれる手法を用いる。</p>
+<ul>
+<li>第1パス: シンボルテーブルを作成しすべてのラベルシンボルをテーブルに追加する。</li>
+<li>第2パス: 変数シンボルを処理し、シンボルテーブルを使用してバイナリコードを生成する。</li>
+</ul>
+<p>第6章からは好きな言語で実装できるのでRustで実装した。構文解析系はenumがある言語だと書きやすくて良い。</p>
+<h2 id="第7章-仮想マシンi処理">第7章 仮想マシンI：処理<a href="#第7章-仮想マシンi処理" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>第7章ではVM変換器の一部を実装した。第8章で残りの部分を実装してVM変換器が完成する。ここまでの課題の中では一番大変で丸3日かかった。</p>
+<h3 id="hackプラットフォームのvmアーキテクチャとその利点">HackプラットフォームのVMアーキテクチャとその利点<a href="#hackプラットフォームのvmアーキテクチャとその利点" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Hackプラットフォームにおいて、Hackプログラムは2段階コンパイルによって機械語に変換される。(更にその後アセンブラが機械語(記号表現)を機械語(バイナリ表現)に変換する)</p>
+
+<pre class="mermaid">    graph LR
+    A[Jackコード<br>e.g. Foo.jack] -->|コンパイラが変換| B["VMコード(中間コード)<br>e.g. Foo.vm"]
+    B -->|VM変換器が変換| C["機械語(記号表現)<br>e.g. Foo.asm"]
+    C -->|アセンブラが変換| D["機械語(バイナリ表現)<br>e.g. Foo.hack"]
+</pre>
+
+<p>中間コードは<strong>仮想マシン(Virtual Machine; VM)</strong> と呼ばれる抽象化されたコンピュータ上で実行されるように設計されている。</p>
+<p>高水準言語のプログラムを直接機械語に変換する方式だとハードウェアプラットフォームごとにコンパイラを作成する必要がある。この場合、コンパイラはソース言語(高水準言語)とターゲット言語(機械語)の両方に依存するためそれぞれの変更に追従する必要がある。</p>
+<p>2段階でコンパイルする方式を採用するとコンパイラはソース言語の詳細に、VM変換器はターゲット言語の詳細にのみ依存するため<strong>変更への追従コストを下げることができる。</strong>
+この方式ではコンパイラはハードウェアプラットフォームによらず利用することができ、ハードウェアごとにVM変換器さえ実装すればよい。そのため<strong>クロスプラットフォーム対応が比較的容易になる</strong>という利点がある。</p>
+<p>VMフレームワークは上記の利点の代償として<strong>効率性が低下する</strong>という欠点がある。2段階の変換プロセスで生成するコードは直接コンパイルで生成するコードよりも冗長なことが多く、効率性が落ちる。</p>
+<h3 id="vm言語の設計">VM言語の設計<a href="#vm言語の設計" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>VM言語の設計にはバランスが重要で以下の要求を同時に満たす必要がある。</p>
+<ul>
+<li>高水準側からの要求: 高水準言語のコードを表現できるだけの表現力と構造性を持たなければならない</li>
+<li>低水準側からの要求: VMコードから生成される機械語がコンパクトで効率的になるようにVMコードは十分に低水準でなければならない</li>
+</ul>
+<p>このような一見矛盾するような要件を<strong>スタックマシン</strong>が解決する。スタックマシンに基づく中間のVM言語を用いることで<strong>高水準言語の表現力</strong>と<strong>低水準言語の効率性</strong>という相反する要求を満たすことができる。</p>
+<h3 id="スタックマシンの挙動">スタックマシンの挙動<a href="#スタックマシンの挙動" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>スタックマシンの中心は<strong>スタック</strong>と呼ばれるLIFOのデータ構造にある。ここではいくつかの操作について説明する。(ここではスタックは下方向に成長するように記述する)</p>
+<h4 id="push操作の例">push操作の例<a href="#push操作の例" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+
+<pre class="mermaid">graph LR
+    A[Stack: empty] -->|push 10| B[Stack:<br>10]
+</pre>
+
+<p>pushを行うとスタックの先頭に値が追加される。スタックでは<strong>SP(スタックポインタ)</strong> という値を使ってスタックの先頭位置を保持している。SPはpush操作を行う際に値を追加する領域を指し示している。スタックのメモリアドレスが<code>0</code>からスタートすると仮定すると今回の例ではアドレス<code>0</code>に値がpushされたときにSPの値が<code>0</code>から<code>1</code>になる。</p>
+<table>
+<thead>
+<tr>
+<th>アドレス</th>
+<th>値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>10</td>
+</tr>
+<tr>
+<td>1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<pre class="mermaid">graph LR
+    A[Stack: empty] -->|push 10| B[Stack:<br>10]
+    B -->|push 20| C[Stack:<br>10<br>20]
+</pre>
+
+<p>push操作を行うとスタックの先頭に値が追加される。このときSPの値は<code>1</code>から<code>2</code>になる。(補足:ここではSPは0-originとする)</p>
+<h4 id="pop操作の例">pop操作の例<a href="#pop操作の例" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+
+<pre class="mermaid">graph LR
+    A[Stack:<br>42] -->|pop local 0| B["Stack: empty<br>local[0] = 42"]
+</pre>
+
+<p><code>pop segment_name index</code>と記述するとスタックの先頭の値を取り除き、指定したメモリセグメント、インデックスの位置に値を書き込む。</p>
+<p>pop操作はスタックの先頭の値を取り除く。</p>
+<h4 id="算術演算addの例">算術演算(add)の例<a href="#算術演算addの例" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+
+<pre class="mermaid">graph LR
+    A[Stack: empty] -->|push 10| B[Stack:<br>10]
+    B -->|push 20| C[Stack:<br>10<br>20]
+    C -->|add| D[Stack:<br>30]
+</pre>
+
+<p>算術演算の例として<code>x+y</code>を行うケースを考える。</p>
+<p>この処理は次のような流れで行われる。</p>
+<ol>
+<li>スタックからオペランド<code>x</code>, <code>y</code>をpopする</li>
+<li><code>x+y</code>を計算する</li>
+<li>計算結果をスタックにpushする</li>
+</ol>
+
+<pre class="mermaid">graph LR
+    A[Stack:<br>10<br>20] -->|pop y=20| B[Stack:<br>10]
+    B -->|pop x=10| C[Stack: empty]
+    C -->|push x+y=30| D[Stack:<br>30]
+</pre>
+
+<p>この方法を拡張することで一般的な算術演算をスタックマシンで評価できる。</p>
+<p>第7章では、以下の演算子を実装した。</p>
+<ul>
+<li><code>push</code></li>
+<li><code>pop</code></li>
+<li>算術演算子
+<ul>
+<li><code>add</code></li>
+<li><code>sub</code></li>
+<li><code>neg</code></li>
+<li><code>eq</code></li>
+<li><code>gt</code></li>
+<li><code>lt</code></li>
+<li><code>and</code></li>
+<li><code>or</code></li>
+<li><code>not</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="仮想メモリセグメント">仮想メモリセグメント<a href="#仮想メモリセグメント" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>ここで実装するVMにはシンボル変数は存在しない。そのかわりに変数は<code>static</code>, <code>local</code>, <code>argument</code>, <code>this</code>, <code>that</code>, <code>pointer</code>, <code>temp</code>のような名前を持つ<strong>仮想セグメント</strong>の要素として表現される。たとえばコンパイラは高水準言語プログラムで見つかった最初のスタティック変数を<code>static 0</code>に、その次に見つかったスタティック変数を<code>static 1</code>に、というように変換する。</p>
+<p>ここでのVM実装では以下のような仮想メモリセグメントを持つ。</p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th>名前</th>
+<th>場所</th>
+<th>使用法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SP</td>
+<td>RAM[0]</td>
+<td>スタックポインタ：スタック最上位の次のメモリアドレス</td>
+</tr>
+<tr>
+<td>LCL</td>
+<td>RAM[1]</td>
+<td>localセグメントのベースアドレス</td>
+</tr>
+<tr>
+<td>ARG</td>
+<td>RAM[2]</td>
+<td>argumentセグメントのベースアドレス</td>
+</tr>
+<tr>
+<td>THIS</td>
+<td>RAM[3]</td>
+<td>thisセグメントのベースアドレス</td>
+</tr>
+<tr>
+<td>THAT</td>
+<td>RAM[4]</td>
+<td>thatセグメントのベースアドレス</td>
+</tr>
+<tr>
+<td>TEMP</td>
+<td>RAM[5-12]</td>
+<td>tempセグメントを保持</td>
+</tr>
+<tr>
+<td>R13, R14, R15</td>
+<td>RAM[13-15]</td>
+<td>VM変換器が生成するアセンブリコードに変数が必要な場合、これらのレジスタを使用可能</td>
+</tr>
+</tbody>
+</table>
+<p>P175より引用</p>
+</blockquote>
+<p><code>LCL</code>, <code>ARG</code>, <code>THIS</code>, <code>THAT</code>には各セグメントのベースアドレスが格納されている。たとえば次のように指定されていた場合、<code>pop this 2</code>はスタックの先頭の値を<code>RAM[2202]</code>に書き込む。</p>
+<table>
+<thead>
+<tr>
+<th>アドレス</th>
+<th>値</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>256</td>
+<td>SP</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2000</td>
+<td>LCL</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2100</td>
+<td>ARG</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2200</td>
+<td>THIS</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2300</td>
+<td>THAT</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vm変換器の動作例">VM変換器の動作例<a href="#vm変換器の動作例" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>例として実際の変換例を示す。</p>
+<pre tabindex="0"><code class="language-vm" data-lang="vm">push constant 7
+push constant 8
+add
+</code></pre><p>今回作成した実装では上記のvmコードは次のようなアセンブリコードに変換される。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-asm" data-lang="asm"><span style="display:flex;"><span><span style="color:#75715e">// init
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">@256</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">A</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">SP</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">M</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// body
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// push
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">@7</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">A</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">SP</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">A</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">M</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">M</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">SP</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">M</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">M</span><span style="color:#960050;background-color:#1e0010">+</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// push
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">@8</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">A</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">SP</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">A</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">M</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">M</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">SP</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">M</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">M</span><span style="color:#960050;background-color:#1e0010">+</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// add
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">SP</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">A</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">M</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">A</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">A-1</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">A</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">A-1</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">M</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">SP</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">A</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">M</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">A</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">A-1</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">D</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D</span><span style="color:#960050;background-color:#1e0010">+</span><span style="color:#66d9ef">M</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">SP</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">A</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">M</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">A</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">A-1</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">A</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">A-1</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">M</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">SP</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">A</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">M</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">A</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">A-1</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">M</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">SP</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">M</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">M-1</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">M</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">M-1</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">SP</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">A</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">M</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">M</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">D</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">SP</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">M</span><span style="color:#960050;background-color:#1e0010">=</span><span style="color:#66d9ef">M</span><span style="color:#960050;background-color:#1e0010">+</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// end
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">END</span>)
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">END</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">0</span><span style="color:#75715e">;JMP
+</span></span></span></code></pre></div><p>VM変換器の実装はハードウェアの構造を意識しながらだいぶ手続き的なコードを書く必要があるので大変だった。(記述量も多いしミスるポイントも多い。)</p>
+<p>現代のおいては低レイヤを隠蔽してくれる便利な仕組みがあるおかげでソフトウェアエンジニアが少ない記述量でアプリケーションを動かすことができていることを実感した。</p>
+<p>ただ、隠蔽されているからこそ自主的に潜っていかないと構造の理解を深めるのが難しかったりするので引き続きやっていきたい。</p>
+<h2 id="第8章-仮想マシンii制御">第8章 仮想マシンII：制御<a href="#第8章-仮想マシンii制御" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>第7章では</p>
+<blockquote>
+<ul>
+<li><code>push</code></li>
+<li><code>pop</code></li>
+<li>算術演算子
+<ul>
+<li><code>add</code></li>
+<li><code>sub</code></li>
+<li><code>neg</code></li>
+<li><code>eq</code></li>
+<li><code>gt</code></li>
+<li><code>lt</code></li>
+<li><code>and</code></li>
+<li><code>or</code></li>
+<li><code>not</code></li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p>以下の演算子を実装したが、第8章では以下の演算子を実装し、VM変換器を完成させた。</p>
+<ul>
+<li><code>label</code></li>
+<li><code>goTo</code></li>
+<li><code>ifGoTo</code></li>
+<li><code>call</code></li>
+<li><code>function</code></li>
+<li><code>return</code></li>
+</ul>
+<p>これを実装することで次の操作が可能になりよりプログラムっぽい処理を行えるようになる。</p>
+<ul>
+<li>任意のラベル位置へのジャンプ</li>
+<li>if分岐</li>
+<li>関数の宣言と呼び出し</li>
+</ul>
+<h3 id="関数の呼び出しcall">関数の呼び出し(<code>call</code>)<a href="#関数の呼び出しcall" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Hackプラットフォームにおいては<code>call {function_name}</code>コマンドを使って関数呼び出しを行う。</p>
+<p>スタックを利用することで関数の呼び出しと戻り値の取得をシンプルに行うことができる。</p>
+<p>ここでは<code>func_a</code>から<code>func_b</code>を呼び出すシナリオを例に関数呼び出しをスタックで実現する際の操作を説明する。</p>
+<ol>
+<li>(<code>func_a</code>から<code>func_b</code>を呼び出す)</li>
+<li><code>func_a</code>の以下の呼び出し側の情報をスタックにpush(これらの情報は<strong>フレーム</strong>と呼ばれる)(画像の灰色の部分)
+<ol>
+<li>リターンアドレス(: <code>func_b</code>の呼び出しが完了して<code>return</code>する際に戻るアドレス)</li>
+<li><code>func_a</code>のLCLセグメントのベースアドレス</li>
+<li><code>func_a</code>のARGセグメントのベースアドレス</li>
+<li><code>func_a</code>のTHISセグメントのベースアドレス</li>
+<li><code>func_a</code>のTHATセグメントのベースアドレス</li>
+</ol>
+</li>
+<li>ARG, LCLセグメントの値を更新</li>
+<li><code>func_b</code>のコマンドが定義されているアドレスにジャンプ</li>
+<li>リターンアドレスラベルをコードに挿入</li>
+</ol>
+<p><img src="call.webp" alt="call.webp">
+<div class="blogcard" data-url="https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view</div><div class="blogcard-url">https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view</div>
+    </div>
+  </a>
+</div>
+ P58より引用</p>
+<h3 id="関数からのreturnreturn">関数からのreturn(<code>return</code>)<a href="#関数からのreturnreturn" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>呼び出された関数の終了は<code>return</code>コマンドで行う。このコマンドが呼ばれることで呼び出し側に処理が戻る。</p>
+<p>ここでは<code>func_a</code>から<code>func_b</code>を呼び出した際に<code>func_b</code>から<code>func_a</code>に戻るシナリオを例にスタックの操作を説明する。</p>
+<ol>
+<li>frameのアドレスを一時変数に格納</li>
+<li>リターンアドレスを一時変数に格納</li>
+<li><code>ARG</code>に返り値を格納</li>
+<li><code>SP</code>を<code>ARG+1</code>に設定</li>
+<li><code>THAT</code>, <code>THIS</code>, <code>ARG</code>, <code>LCL</code>を復元</li>
+<li>リターンアドレスにジャンプ</li>
+</ol>
+<p><img src="return.webp" alt="return.webp">
+<div class="blogcard" data-url="https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view</div><div class="blogcard-url">https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view</div>
+    </div>
+  </a>
+</div>
+ P73より引用</p>
+<h2 id="第9章-高水準言語">第9章 高水準言語<a href="#第9章-高水準言語" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>第10章、第11章でコンパイラを実装するJackの言語仕様を解説した章。</p>
+<p>Javaに近い感じの文法。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>   function <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>      var Array a<span style="color:#f92672">;</span> 
+</span></span><span style="display:flex;"><span>      var <span style="color:#66d9ef">int</span> length<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>      var <span style="color:#66d9ef">int</span> i<span style="color:#f92672">,</span> sum<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      let length <span style="color:#f92672">=</span> Keyboard<span style="color:#f92672">.</span><span style="color:#a6e22e">readInt</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;How many numbers? &#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>      let a <span style="color:#f92672">=</span> Array<span style="color:#f92672">.</span><span style="color:#a6e22e">new</span><span style="color:#f92672">(</span>length<span style="color:#f92672">);</span> <span style="color:#75715e">// constructs the array
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>     
+</span></span><span style="display:flex;"><span>      let i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;</span> length<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>         let a<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Keyboard<span style="color:#f92672">.</span><span style="color:#a6e22e">readInt</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Enter a number: &#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>         let sum <span style="color:#f92672">=</span> sum <span style="color:#f92672">+</span> a<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+</span></span><span style="display:flex;"><span>         let i <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">do</span> Output<span style="color:#f92672">.</span><span style="color:#a6e22e">printString</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;The average is &#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">do</span> Output<span style="color:#f92672">.</span><span style="color:#a6e22e">printInt</span><span style="color:#f92672">(</span>sum <span style="color:#f92672">/</span> length<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h2 id="第10章-コンパイラi構文解析">第10章 コンパイラI：構文解析<a href="#第10章-コンパイラi構文解析" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>第10章の内容に入る前にJackのソースコードが実行可能な形式になるまでの流れをおさらいしておく。</p>
+
+<pre class="mermaid">    graph LR
+    A[Jackコード<br>e.g. Foo.jack] -->|コンパイラが変換| B["VMコード(中間コード)<br>e.g. Foo.vm"]
+    B -->|VM変換器が変換| C["機械語(記号表現)<br>e.g. Foo.asm"]
+    C -->|アセンブラが変換| D["機械語(バイナリ表現)<br>e.g. Foo.hack"]
+</pre>
+
+<p>Jackコンパイラは構文解析器とコード生成器からなり構文解析器はトークナイザとパーサ<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>からなる。</p>
+<p><img src="compiler-roadmap.webp" alt="compiler-roadmap">
+<div class="blogcard" data-url="https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view</div><div class="blogcard-url">https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view</div>
+    </div>
+  </a>
+</div>
+ P4より引用</p>
+<p>トークナイザはソースコードをトークンと呼ばれる「プログラムにおいて意味を持つコードの最小単位」に変換する処理を担う。</p>
+<p>トークンのような表現に変換してからパースを行うことでプログラムの複雑性を軽減することができる。</p>
+<p>例として以下のJack言語のコードのトークン列をXMLで表記すると以下のようになる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> test<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    function <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">do</span> Output<span style="color:#f92672">.</span><span style="color:#a6e22e">printString</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello world!&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;class&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;keyword&gt;</span> class <span style="color:#f92672">&lt;/keyword&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;identifier&gt;</span> Main <span style="color:#f92672">&lt;/identifier&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;symbol&gt;</span> { <span style="color:#f92672">&lt;/symbol&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;classVarDec&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;keyword&gt;</span> static <span style="color:#f92672">&lt;/keyword&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;keyword&gt;</span> boolean <span style="color:#f92672">&lt;/keyword&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;identifier&gt;</span> test <span style="color:#f92672">&lt;/identifier&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;symbol&gt;</span> ; <span style="color:#f92672">&lt;/symbol&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/classVarDec&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;subroutineDec&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;keyword&gt;</span> function <span style="color:#f92672">&lt;/keyword&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;keyword&gt;</span> void <span style="color:#f92672">&lt;/keyword&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;identifier&gt;</span> main <span style="color:#f92672">&lt;/identifier&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;symbol&gt;</span> ( <span style="color:#f92672">&lt;/symbol&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;parameterList&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/parameterList&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;symbol&gt;</span> ) <span style="color:#f92672">&lt;/symbol&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;subroutineBody&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;symbol&gt;</span> { <span style="color:#f92672">&lt;/symbol&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;statements&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;doStatement&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&lt;keyword&gt;</span> do <span style="color:#f92672">&lt;/keyword&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&lt;identifier&gt;</span> Output <span style="color:#f92672">&lt;/identifier&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&lt;symbol&gt;</span> . <span style="color:#f92672">&lt;/symbol&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&lt;identifier&gt;</span> printString <span style="color:#f92672">&lt;/identifier&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&lt;symbol&gt;</span> ( <span style="color:#f92672">&lt;/symbol&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&lt;expressionList&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;expression&gt;</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&lt;term&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;stringConstant&gt;</span> Hello world! <span style="color:#f92672">&lt;/stringConstant&gt;</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&lt;/term&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/expression&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&lt;/expressionList&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&lt;symbol&gt;</span> ) <span style="color:#f92672">&lt;/symbol&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&lt;symbol&gt;</span> ; <span style="color:#f92672">&lt;/symbol&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/doStatement&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;returnStatement&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&lt;keyword&gt;</span> return <span style="color:#f92672">&lt;/keyword&gt;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&lt;symbol&gt;</span> ; <span style="color:#f92672">&lt;/symbol&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/returnStatement&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;/statements&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;symbol&gt;</span> } <span style="color:#f92672">&lt;/symbol&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/subroutineBody&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/subroutineDec&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;symbol&gt;</span> } <span style="color:#f92672">&lt;/symbol&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/class&gt;</span>
+</span></span></code></pre></div><p>パーサはトークン列を言語の構文ルールに照らし合わせその構造を構文上の要素に変換する処理を担う。</p>
+<p>ここでは再帰下降構文解析というアルゴリズムを使って構文解析を行った。</p>
+<p>ちなみに、Jack言語の構文は次のように定義されている。簡単な部類の言語とはいえ実装量はこれまでの課題と比べると多めだった。趣味でCコンパイラを書く人をたまにTwitterで見かけたりするがすごいなぁという気持ちになった。</p>
+<p><img src="jack-grammer.webp" alt="jack-grammer"></p>
+<h2 id="第11章-コンパイラiiコード生成">第11章 コンパイラII：コード生成<a href="#第11章-コンパイラiiコード生成" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>第11章では、コード生成器を実装する。具体的には構文解析した結果をもとにVMコードを生成する。</p>
+<p><img src="compiler-roadmap.webp" alt="compiler-roadmap">
+<div class="blogcard" data-url="https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view</div><div class="blogcard-url">https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view</div>
+    </div>
+  </a>
+</div>
+ P4より引用</p>
+<p>一般的には<strong>ソースコードをVMコードに変換する層をフロントエンド</strong>、<strong>VMコードを機械語に変換する層をバックエンド</strong>と呼ぶらしい。本書では第10章と第11章の内容がフロントエンドに、第6章~第8章の内容がバックエンドに該当する、と言えそう。</p>
+<h3 id="シンボルテーブル">シンボルテーブル<a href="#シンボルテーブル" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>コンパイラが<code>let y = foo(x);</code>のような文に遭遇するたびに<code>x</code>, <code>y</code>が何を表しているのかを知る必要がある。</p>
+<p>Jackではクラススコープとサブルーチンスコープの2つのスコープがある。クラススコープの変数にはフィールド変数、スタティック変数の2種類があり、サブルーチンスコープの変数にはローカル変数、引数の2種類がある。</p>
+<p>ここではこれらの変数の情報は<strong>シンボルテーブル</strong>と呼ばれるデータ構造に格納することで管理する手法が紹介されていた。シンボルテーブルは変数の名前、型、スコープ、種類、インデックスを保持する。</p>
+<p><img src="symbol-table.webp" alt="symbol-table">
+<div class="blogcard" data-url="https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view" data-auto-fetch="true">
+  <a href="https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view</div><div class="blogcard-url">https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view</div>
+    </div>
+  </a>
+</div>
+ P6より引用</p>
+<p>Jackではクラススコープとサブルーチンスコープの2つのスコープがあるのでそれぞれ別のシンボルテーブルを保持する必要がある。Jackでは内側のスコープが外側のスコープよりも優先されるため、コンパイラは<code>x</code>という変数に出会ったときにまずサブルーチンスコープのシンボルテーブルを検索し、見つからなければクラススコープのシンボルテーブルを検索する。</p>
+<h3 id="コンストラクタのコンパイル">コンストラクタのコンパイル<a href="#コンストラクタのコンパイル" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ol>
+<li>特定のクラス型の変数を宣言する。e.g. <code>var Point p</code></li>
+<li>クラスのコンストラクタを呼び出して実際にインスタンス化する。 e.g. <code>let p = Point.new(2, 3)</code>
+<ol>
+<li>新しい<code>Point</code>インスタンスを表現するために必要な2ワード分のメモリブロックをヒープ上に確保する</li>
+<li>確保された2ワードがコンストラクタの引数として与えられた<code>2</code>と<code>3</code>で初期化される</li>
+<li>pに新しく確保したメモリブロックのベースアドレスを割り当てる</li>
+</ol>
+</li>
+</ol>
+<p>実装自体が難しいというケースは少なかったが、純粋にVM変換器の仕様を忘れて思い出すのに時間がかかったりしたので可能な方は時間を開けずにやると思い出しにかかるコストを減らせておすすめです。</p>
+<h2 id="第12章-os">第12章 OS<a href="#第12章-os" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>第12章では最小限のOSを実装した。</p>
+<p>ここではOSは以下の役割を果たす。</p>
+<ul>
+<li>ハードウェア操作の抽象化</li>
+<li>Jack言語でよく使われる処理を関数/メソッドとして提供</li>
+</ul>
+<p>それぞれ具体的には次のようなクラスによって実現されている。</p>
+<ul>
+<li>ハードウェア操作の抽象化
+<ul>
+<li><code>Output</code>クラス: <code>printString</code>, <code>println</code>などのスクリーンへのテキストの書き込み処理を提供</li>
+<li><code>Screen</code>クラス: <code>drawLine</code>, <code>drawCircle</code>などのスクリーンへの図形の書き込みを処理を提供</li>
+<li><code>Keyboard</code>クラス: <code>keyPressed</code>, <code>readLine</code>などのキーボードからの入力の読み取り処理を提供</li>
+<li><code>Memory</code>クラス: <code>alloc</code>, <code>deAlloc</code>, <code>peek</code>, <code>poke</code>などのメモリアクセス処理を提供</li>
+<li><code>Sys</code>クラス: プログラム実行に必要な処理の提供</li>
+</ul>
+</li>
+<li>Jack言語でよく使われる処理を関数/メソッドとして提供
+<ul>
+<li><code>Math</code>クラス: <code>abs</code>, <code>devide</code>などの基本的な算術演算を提供</li>
+<li><code>String</code>クラス: 文字列データ型と<code>length</code>, <code>setCharAt</code>などの関連処理を提供</li>
+<li><code>Array</code>クラス: 配列の初期化とメモリの解放を行う機能を提供</li>
+</ul>
+</li>
+</ul>
+<p>この章ではこれまでまったく意識したことがなかったメモリ操作によってハードウェアを制御するという経験が得られた。クラスインスタンスの初期化のためにメモリから任意の大きさの空き領域を探して確保する処理や、2点の座標が与えられたときにそれらを結ぶ直線をスクリーン上に描画する処理など。想像に難くない通り、基本的にかなり泥臭い実装が多かったがその泥臭さを吸収するための層でもあるので仕方ないとは思う。</p>
+<p>その過程でメモリ操作やビットを扱う処理に少し慣れられたのは大きな収穫の1つだった。普段のWeb開発ではbit演算やメモリ操作をする機会はなかなかないので貴重な経験だった。</p>
+<p>軽く調べた感じでは、現実世界では(Linuxでは)システムコールやデバイスドライバがそれらを担っているらしい。</p>
+<p>実装に関しては整数型のオーバーフローが原因で数時間費やしてしまった。<a href="https://blog.kyu08.com/posts/cs50-jp/#%E5%AD%A6%E3%81%B3%E3%82%84%E5%BE%97%E3%81%9F%E3%82%82%E3%81%AE" target="_blank" >CS50でC言語で課題を解いていたときも同様のハマり</a>があったのであるあるかもしれない。普段書いている言語は簡単にオーバーフローしなかったり場合によっては静的解析で指摘してくれたりするのでなかなか気付くことができなかった。</p>
+<h2 id="学び得た経験">学び、得た経験<a href="#学び得た経験" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>普段はWebアプリケーションばかり触っているので、それよりも数段下のレイヤーの解像度を上げることができた。今後新しい知識の習得やトラブルシューティングがスムーズになるといいなと思う。
+<ul>
+<li>あとは普段触っているソフトウェア、ハードウェアの仕組みを知ることができて純粋に楽しかった。</li>
+</ul>
+</li>
+<li>難しい概念に出会ったときに「順を追って理解を整理したり、労を惜しまずに手を動かしていけばきっと体得できるはず」という感覚を持てるようになった。
+<ul>
+<li>自分のコンピュータサイエンスの知識と経験が薄いのもあり、本書を通して未知の概念とのたくさんの出会いがあった。</li>
+<li>まったく知らない概念でも、順を追って理解を進めて手を動かすことで知識を自分のものにすることができた。その過程で未知の技術に対する恐れや及び腰になる感覚が減った。</li>
+<li>余談だが、大学受験のときにセンター試験の数2Bで一見すると難しそうな問題が出ることが多いように感じていて「いけるいける難しくない落ち着いて考えればわかる」と何回も念じながら問題文を読んでいたのを思い出した。「難しそう」と考えるよりも「わかりそう」とか「なんかいけそう」みたいな方向性のマインドを持っていたほうがパフォーマンスも高くなるなーと改めて思うなどした。<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></li>
+</ul>
+</li>
+<li>難しい課題も小さい部分に分割して段階的に進めるとうまくいくことを実感できた。
+<ul>
+<li>0からコンパイラを実装するのは気が引けるが、仕組みを理解していくつかの部品に分解して進めることで、複雑なソフトウェアを着実に構築する経験を得ることができた。</li>
+</ul>
+</li>
+<li>コンパイラやアセンブラの実装で泥臭い処理をたくさん書いたおかげで泥臭さへの耐性が多少ついた。そもそも複雑なものは実装も複雑になりうるのでそういうケースでは特に実装力が大事だなーと思うなどした。</li>
+</ul>
+<h2 id="おわりに">おわりに<a href="#おわりに" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>『Goならわかるシステムプログラミング』を読んでからかなり気になっていた本だったので無事完走できてよかった。</p>
+<p>最近のテーマであるCS力の強化をまた一歩進めることができた。</p>
+<p>次は<a href="https://www.sbcr.jp/product/4815618599/" target="_blank" >『体験しながら学ぶ ネットワーク技術入門』</a>でネットワークの理解を深めていこうかなと思う。</p>
+<p>あとはソフトスキル系でいうと<a href="https://www.oreilly.co.jp/books/9784814401116/" target="_blank" >『エンジニアリングチームのリード術-―Googleに学ぶインディビジュアルコントリビューターとマネージャーのための実践ガイド』</a>も良さそうなので読んでみようと思う。</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>実際はテトリスではなく別のブロック崩しのようなゲームではある&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Twitterを見ているとパーザと表記する流派も存在する模様&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>近い話が<a href="https://blog.3qe.us/entry/2025/01/15/194843" target="_blank" >何かがそれほど得意でなくても、世の中の平均よりは得意だと思っておいたほうがよい - Lambdaカクテル</a>で綺麗に言語化されている。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+      </div></div>
+
+  
+  
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+    </script>
+  
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="https://blog.kyu08.com/pr-251/posts/oblivion-keycaps/" class="button inline prev">
+        傾斜付きロープロファイルキーキャップNuPhy Oblivionを買った
+      </a>
+    
+    
+      <a href="https://blog.kyu08.com/pr-251/posts/magi65/" class="button inline next">
+        IQUNIX Magi65を買った
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+        repo="kyu08/blog-comments"
+        issue-term="pathname"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>blog.kyu08.com</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/pr-251/bundle.min.js"></script>
+
+
+<font color="#808080">
+  <span>
+    This site uses Google Analytics for access analysis.
+    Google Analytics uses cookies to collect traffic data, but this traffic data is collected anonymously and does not personally identify you.
+    Cookies can be disabled in your browser.
+  </span>
+</font>
+
+
+<script src="https://blog.kyu08.com/pr-251/blogcard.js"></script>
+
+
+  
+</div>
+
+</body>
+</html>
