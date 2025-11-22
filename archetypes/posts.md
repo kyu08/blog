@@ -1,8 +1,8 @@
 ---
 title: ""
-tags: []
+tags:
+  - ""
 
-cover: "https://blog.kyu08.com/cover.png"
 description: ""
 date: {{ .Date }}
 author: "kyu08"
@@ -12,5 +12,6 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ""
+cover: "cover.png"
 ---
 
