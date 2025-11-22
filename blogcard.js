@@ -173,13 +173,47 @@
     }
   }
 
+  // ブログカードを通常のリンクに置き換える関数
+  function convertBlogCardToLink(card) {
+    const url = card.getAttribute('data-url');
+    const link = card.querySelector('.blogcard-link');
+
+    if (!url) {
+      log('No URL found for card, cannot convert to link');
+      return;
+    }
+
+    // 新しいリンク要素を作成
+    const newLink = document.createElement('a');
+    newLink.href = url;
+    newLink.textContent = url;
+    newLink.target = '_blank';
+
+    // ブログカード要素を新しいリンクで置き換え
+    card.parentNode.replaceChild(newLink, card);
+    log('Converted blog card to normal link:', url);
+  }
+
   // ページ読み込み時に自動取得設定のあるブログカードを処理
   async function initBlogCards() {
     log('Initializing blog cards...');
     const cards = document.querySelectorAll('.blogcard[data-auto-fetch="true"]');
     log('Found', cards.length, 'blog cards with auto-fetch');
 
-    await Promise.all(Array.from(cards).map(async (card) => {
+    // 脚注内のブログカードを通常のリンクに変換
+    const cardsToProcess = Array.from(cards).filter(card => {
+      const isInFootnotes = card.closest('.footnotes') !== null;
+      if (isInFootnotes) {
+        log('Converting blog card in footnotes to normal link:', card.getAttribute('data-url'));
+        convertBlogCardToLink(card);
+        return false;
+      }
+      return true;
+    });
+
+    log('Processing', cardsToProcess.length, 'blog cards (excluded footnotes)');
+
+    await Promise.all(cardsToProcess.map(async (card) => {
       const url = card.getAttribute('data-url');
       log('Processing card for URL:', url);
 
