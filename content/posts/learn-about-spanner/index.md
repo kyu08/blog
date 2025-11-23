@@ -21,7 +21,8 @@ cover: cover.png
 普段業務でCloud Spannerを使っているが、雰囲気で使っている自覚が大いにあるのでドキュメントやブログを読んで知らなかったことを自分用のメモとしてまとめてみる。
 
 ## Spanner のスキーマ設計の最適化  |  Google Cloud 
-[Spanner のスキーマ設計の最適化  |  Google Cloud](https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja)
+https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja
+
 - キー定義とインターリーブの2つはスケーラビリティに大きな影響を与える
 - Spannerにはルートテーブルとインターリーブされたテーブルの2種類のテーブルがある。[^1]
 
@@ -73,7 +74,7 @@ Spannerテーブルの行は`PRIMARY_KEY`によって辞書順に並べかえら
 
 また、ドキュメントでは`STORING`の便利な応用例として`NULL_FILTERED`インデックスとの併用を紹介している。それについてはこちらの記事が大変詳しいので参照されたい。
 
-[Cloud SpannerのNull Filtered INDEXの用途を考察する 〜サブタイプ実装〜](https://zenn.dev/facengineer/articles/15e7a68fcc2fad)
+https://zenn.dev/facengineer/articles/15e7a68fcc2fad
 
 ### アンチパターン
 ルートテーブルをタイムスタンプ順にしてしまうとテーブルの最後に巨大なホットスポットが生まれてしまう。
@@ -88,7 +89,7 @@ Spannerテーブルの行は`PRIMARY_KEY`によって辞書順に並べかえら
 ![spanner-sharding.webp](spanner-sharding.webp)
 
 ## スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud 
-[スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/schema-design?hl=ja)
+https://cloud.google.com/spanner/docs/schema-design?hl=ja
 
 次のような場合はキー列をタイムスタンプ降順に格納することでホットスポットを回避する。
 
@@ -134,7 +135,7 @@ CREATE NULL_FILTERED INDEX UsersByLastAccess ON Users(LastAccess);
 1. （そもそも）インデックスをインターリーブする
 
 ## セカンダリ インデックス  |  Spanner  |  Google Cloud
-[セカンダリ インデックス  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja)
+https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja
 
 - Spannerではセカンダリインデックスに次のデータが格納される。
     - ベーステーブルのすべてのキー列
@@ -171,7 +172,7 @@ CREATE INDEX SongIdDesc On Songs(SongId DESC);
 ```
 
 ## Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com
-[Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com](https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/)
+https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/
 
 タイムスタンプ順に並んだレコードをいかに効率よく挿入、取得するかについての解説記事。
 
@@ -296,7 +297,7 @@ CompanyId, EntryShardIdの順番を逆にしてみたクエリ
 ![swap.webp](swap.webp)
 
 ## Cloud Spanner におけるトランザクションのロックについて
-[Cloud Spanner におけるトランザクションのロックについて](https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner)
+https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner
 
 > Spanner におけるトランザクションのロックの粒度は、セル、つまり行と列の交点となります。
 
@@ -305,11 +306,11 @@ CompanyId, EntryShardIdの順番を逆にしてみたクエリ
 他には複数のトランザクションが同時に実行された際の優先度について詳しく解説してあった。
 
 ## Spanner の読み取りと書き込みのライフサイクル  |  Google Cloud
-[Spanner の読み取りと書き込みのライフサイクル  |  Google Cloud](https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja)
+https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja
 
 Spannerのレプリカセットの構成については次の記事が非常にわかりやすい。
 
-[Cloud Spannerのスプリット分散をわかった気になる](https://zenn.dev/facengineer/articles/bca8790087b0e4)
+https://zenn.dev/facengineer/articles/bca8790087b0e4
 
 読み込みおよび書き込み時のロックの取り方について詳しく解説されていた。
 
@@ -324,10 +325,10 @@ Spannerのレプリカセットの構成については次の記事が非常に�
 
 ちなみに複数のトランザクションが同時に実行された場合の挙動については次の記事が詳しかった。
 
-[Cloud Spanner におけるトランザクションのロックについて](https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner)
+https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner
 
 ## SQL のベスト プラクティス  |  Spanner  |  Google Cloud
-[SQL のベスト プラクティス  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja)
+https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja
 
 ### クエリパラメータの使用
 クエリパラメータを使用することで次のメリットがある。
@@ -382,7 +383,7 @@ ON a.SingerId = a.SingerId
 
 JOINアルゴリズムについては次の記事が詳しい。
 
-[Cloud Spannerのパフォーマンスチューニングの勘所](https://zenn.dev/facengineer/articles/cc0cab5c7e9a1c#join%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0)
+https://zenn.dev/facengineer/articles/cc0cab5c7e9a1c#join%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0
 
 ### `LIKE`の代わりに`STARTS_WITH`を使用する
 Spannerはパラメータ化された`LIKE`パターンを実行時まで評価しないのですべての行を読み取ったうえで`LIKE`式で評価し、一致しない行を除外するためパフォーマンスが悪い。
@@ -400,13 +401,13 @@ WHERE STARTS_WITH(a.AlbumTitle, @prefix);
 ```
 
 ## クエリ実行プラン  |  Spanner  |  Google Cloud
-[クエリ実行プラン  |  Spanner  |  Google Cloud](https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja)
+https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja
 
 CPUの消費量が多いクエリの場合、実行計画は30日間保存されている。
 
 確認方法は以下。
 
-[サンプリングされたクエリプランを表示する](https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries)
+https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries
 
 クエリごとにレイテンシや返された行数、スキャン行数の平均値や実行回数確認することができるためチューニングの際にかなり便利そう。
 
