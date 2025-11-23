@@ -188,6 +188,7 @@
     newLink.href = url;
     newLink.textContent = url;
     newLink.target = '_blank';
+    newLink.rel = 'noopener noreferrer';
 
     // ブログカード要素を新しいリンクで置き換え
     card.parentNode.replaceChild(newLink, card);
@@ -208,6 +209,56 @@
         convertBlogCardToLink(card);
         return false;
       }
+
+      // 段落内のテキスト混在チェック
+      // 注: <p>内に<div>を入れるとブラウザが自動修正するため、このケースは通常発生しない
+      const paragraph = card.parentElement;
+      if (paragraph && paragraph.tagName === 'P') {
+        const hasOtherText = Array.from(paragraph.childNodes).some(node => {
+          // ブログカード以外のテキストノードをチェック
+          if (node.nodeType === Node.TEXT_NODE) {
+            // 空白以外の文字があるかチェック
+            return node.textContent.trim().length > 0;
+          }
+          // ブログカード以外の要素があるかチェック
+          if (node !== card && node.nodeType === Node.ELEMENT_NODE) {
+            return true;
+          }
+          return false;
+        });
+
+        if (hasOtherText) {
+          log('Converting blog card with mixed text to normal link:', card.getAttribute('data-url'));
+          convertBlogCardToLink(card);
+          return false;
+        }
+      }
+
+      // 直前の兄弟要素が<p>タグで、テキストがある場合
+      // （ブラウザが<p>ref: <div class="blogcard">...</div></p>を<p>ref: </p><div>...</div>に修正した場合）
+      const previousSibling = card.previousElementSibling;
+      if (previousSibling && previousSibling.tagName === 'P') {
+        const hasText = previousSibling.textContent.trim().length > 0;
+        if (hasText) {
+          log('Converting blog card with preceding text to normal link:', card.getAttribute('data-url'));
+
+          // 前の<p>にリンクを追加
+          const url = card.getAttribute('data-url');
+          const link = document.createElement('a');
+          link.href = url;
+          link.textContent = url;
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+
+          previousSibling.appendChild(link);
+
+          // ブログカード要素を削除
+          card.parentNode.removeChild(card);
+
+          return false;
+        }
+      }
+
       return true;
     });
 
