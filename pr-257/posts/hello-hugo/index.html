@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+    <title>このブログをhugoで作り直した :: blog.kyu08.com</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="もともとこのブログはNext.js &#43; Vercelの構成で作られていたが色々と辛くなってしまったのでお手軽にブログが作れそうなhugo &#43; GitHub Pa" />
+<meta name="keywords" content=", " />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://blog.kyu08.com/pr-257/posts/hello-hugo/" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BDQ408J45J', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-257/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-257/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-257/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-257/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-257/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-257/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-257/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-257/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-257/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-257/css/post.min.d551b54605ea87772c5eb05bf68219699a011687df301682a1006e8811253df9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-257/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-257/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-257/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-257/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+<link rel="stylesheet" href="https://blog.kyu08.com/pr-257/style.css">
+
+
+<link rel="shortcut icon" href="https://blog.kyu08.com/pr-257/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/pr-257/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="kyu08_" />
+
+
+
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="このブログをhugoで作り直した">
+<meta property="og:description" content="もともとこのブログはNext.js &#43; Vercelの構成で作られていたが色々と辛くなってしまったのでお手軽にブログが作れそうなhugo &#43; GitHub Pa" />
+<meta property="og:url" content="https://blog.kyu08.com/pr-257/posts/hello-hugo/" />
+<meta property="og:site_name" content="blog.kyu08.com" />
+
+
+  
+  
+    
+  
+
+
+  <meta property="og:image" content="https://blog.kyu08.com/pr-257/posts/hello-hugo/cover.png">
+  <meta name="twitter:image" content="https://blog.kyu08.com/pr-257/posts/hello-hugo/cover.png">
+  <meta name="twitter:image:alt" content="このブログをhugoで作り直した">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+  <meta property="article:published_time" content="2023-06-07 13:25:41 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+<link rel="author" href="http://www.hatena.ne.jp/kyu08/" />
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ . }}');
+</script>
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    blog.kyu08.com
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/pr-257/tags/diary/">_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-257/about">about</a></li>
+        
+      
+        
+          <li><a href="/pr-257/index.xml">rss</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/pr-257/tags/diary/" >_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-257/about" >about</a></li>
+        
+      
+        
+          <li><a href="/pr-257/index.xml" >rss</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://blog.kyu08.com/pr-257/posts/hello-hugo/">このブログをhugoで作り直した</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2023/06/07</time>
+      
+    <span class="post-reading-time">4 min read (1865 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://blog.kyu08.com/pr-257/tags/hugo/">hugo</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="/pr-257/posts/hello-hugo/cover.png"
+    class="post-cover"
+    alt="このブログをhugoで作り直した"
+    title="Cover Image" />
+
+
+  
+    <div class="table-of-contents">
+      <h2>
+        目次
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#動機">動機</a></li>
+    <li><a href="#やったこと">やったこと</a>
+      <ul>
+        <li><a href="#デプロイの自動化">デプロイの自動化</a></li>
+        <li><a href="#ga4の導入">GA4の導入</a></li>
+      </ul>
+    </li>
+    <li><a href="#着手--公開まででかかった時間">着手 ~ 公開まででかかった時間</a></li>
+    <li><a href="#hugoのいいところ">hugoのいいところ</a></li>
+    <li><a href="#ハマったところ">ハマったところ</a></li>
+    <li><a href="#実際の運用はこんな感じ">実際の運用はこんな感じ</a></li>
+    <li><a href="#おわりに">おわりに</a></li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <p>もともとこのブログはNext.js + Vercelの構成で作られていたが色々と辛くなってしまったのでお手軽にブログが作れそうなhugo + GitHub Pagesの構成に移行した。</p>
+<h2 id="動機">動機<a href="#動機" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>もともとNext.jsを触ってみたかったのでNext.jsで書いたでブログを運営していた。</p>
+<p>このときのディレクトリ構成が以下のような感じになっていて、画像はrepositoryにアップロードして(PRのコメント欄とかに画像を貼って取得した<code>https://user-images.githubusercontent.com/xxxxx</code>のようなURLを使って)それをマークダウンから呼び出していた。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root/
+</span></span><span style="display:flex;"><span>  ├ posts/
+</span></span><span style="display:flex;"><span>  │　├ post1.md
+</span></span><span style="display:flex;"><span>  │　├ post2.md
+</span></span><span style="display:flex;"><span>  │　└ post3.md
+</span></span><span style="display:flex;"><span>  └ ...
+</span></span></code></pre></div><p>ところがGitHubのrepositoryにアップした画像まわりの仕様が変わり<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>、それ以降private repositoryにアップした画像は認証付きになったため画像のホスト方法の変更が必要になった。</p>
+<p>そこで管理のしやすさから以下のようにマークダウンと同一ディレクトリに画像を配置する方法にすることにした。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root/
+</span></span><span style="display:flex;"><span>  ├ posts/
+</span></span><span style="display:flex;"><span>  │  ├ post1.md/
+</span></span><span style="display:flex;"><span>  │  │  ├ index.md
+</span></span><span style="display:flex;"><span>  │  │  └ image.png
+</span></span><span style="display:flex;"><span>  │  ├ post2.md/
+</span></span><span style="display:flex;"><span>  │  │  ├ index.md
+</span></span><span style="display:flex;"><span>  │  │  └ image.png
+</span></span><span style="display:flex;"><span>  │  └ post3.md/
+</span></span><span style="display:flex;"><span>  │     ├ index.md
+</span></span><span style="display:flex;"><span>  │     └ image.png
+</span></span><span style="display:flex;"><span>  └ ...
+</span></span></code></pre></div><p>で、それをやろうとしたがどうにもうまく画像を読み込むことができなかった。(当然悪いのはNext.jsではなく1000億%自分の技術力のNASAです)</p>
+<p>ちゃんとNext.js(やJSのツールチェイン周り)のお勉強をすればNextでもできたと思うが当面JS関連の技術を触る予定もないしブログの管理にそこまで時間をかけたい気持ちもなかったので諦めてhugoに移行することにした。</p>
+<h2 id="やったこと">やったこと<a href="#やったこと" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>テーマ選定(<a href="https://github.com/panr/hugo-theme-terminal" target="_blank" >panr/hugo-theme-terminal</a>を選択した)</li>
+<li>フォントなどスタイルの調整</li>
+<li>ファビコンの設定</li>
+<li>デプロイの自動化</li>
+<li>カスタムドメインの設定</li>
+<li>GA4導入</li>
+</ul>
+<p>以下部分的に補足する。</p>
+<h3 id="デプロイの自動化">デプロイの自動化<a href="#デプロイの自動化" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>以下のようなyamlを<code>.github/workflows/deploy.yaml</code>として配置するとmainへのpush時に自動でデプロイが行われる。</p>
+<p>カスタムドメインに指定したい場合は<code>cname</code>を指定しないとデプロイのたびにカスタムドメインが404になってしまうので注意。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">deploy</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">deploy</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span> <span style="color:#75715e"># サポートされていないバージョンを指定するとGitHub Actionsがずっとrunningになるので注意</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">submodules</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">fetch-depth</span>: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Setup Hugo</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-hugo@v2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#34;0.112.5&#34;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">extended</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">hugo</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-gh-pages@v3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">github_token</span>: <span style="color:#ae81ff">${{ secrets.GITHUB_TOKEN }}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">publish_dir</span>: <span style="color:#ae81ff">./public</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">cname</span>: <span style="color:#ae81ff">blog.kyu08.com</span> <span style="color:#75715e"># カスタムドメインの設定をしていない場合は不要</span>
+</span></span></code></pre></div><h3 id="ga4の導入">GA4の導入<a href="#ga4の導入" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p><a href="https://maku77.github.io/p/zxk6pat/" target="_blank" >こちらの記事</a>を参考に進めたらできた。</p>
+<p>1点だけ注意が必要なのはpartialsの扱いがthemeによって異なる(っぽい)こと。</p>
+<p><a href="https://github.com/panr/hugo-theme-terminal" target="_blank" >panr/hugo-theme-terminal</a>では</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!--
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">To add an extended head section, please create
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">`layouts/partials/extended_head.html` in your Hugo directory.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--&gt;</span>
+</span></span></code></pre></div><p>とのことだった<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>ので<code>layouts/partials/extended_head.html</code>にタグの設定を記述した。</p>
+<h2 id="着手--公開まででかかった時間">着手 ~ 公開まででかかった時間<a href="#着手--公開まででかかった時間" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>たぶん6hくらい。</p>
+<p>数箇所詰まったがドキュメントや先人のブログのおかげですぐに解決できた。</p>
+<p>おそらくミニマムな状態(カスタムドメイン設定なし, テーマのデザインをそのまま利用, GA4なしなどなど)なら1hもかからずに公開までできると思う。</p>
+<h2 id="hugoのいいところ">hugoのいいところ<a href="#hugoのいいところ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>既存のテーマを利用すると手軽に色々できる(TOC, シンタックスハイライト, 脚注などなど)。とにかくお手軽なのが最高。基本的にはテーマを選んで記事を書いてデプロイすればブログが公開できてしまうのですごい。</li>
+<li>ドキュメント・themeのソースコードを読めば大抵解決する</li>
+<li><code>watch</code>オプションがあるので<code>hugo serve -w</code>を実行するとホットリロードが有効になるので捗る</li>
+</ul>
+<h2 id="ハマったところ">ハマったところ<a href="#ハマったところ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><del>長くなりそうなので別途記事にする予定</del></p>
+<p>それぞれ記事にした。</p>
+<ul>
+<li><a href="/posts/hugo-theme-terminal-ogp-config" >hugo-theme-terminal でOGPに任意の画像を設定する方法</a></li>
+<li><a href="/posts/github-pages-custom-domain" >GitHub Pagesでデプロイのたびにカスタムドメインの設定が消える問題の解決方法</a></li>
+</ul>
+<h2 id="実際の運用はこんな感じ">実際の運用はこんな感じ<a href="#実際の運用はこんな感じ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ol>
+<li>記事作成用のブランチを作成</li>
+<li>記事を作成</li>
+<li>PRを作成してmainにマージ</li>
+<li>GitHub Actionsでビルド・デプロイが走る</li>
+</ol>
+<p><code>2.記事を作成</code>だけ軽く補足すると、Makefileに以下のようなターゲットを定義したので</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Makefile" data-lang="Makefile"><span style="display:flex;"><span><span style="color:#a6e22e">.PHONY</span><span style="color:#f92672">:</span> new
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">new</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>	@read -p <span style="color:#e6db74">&#34;post id: &#34;</span> id; <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>	hugo new <span style="color:#e6db74">&#34;posts/</span>$$<span style="color:#e6db74">{id}/index.md&#34;</span>
+</span></span></code></pre></div><p>こんな感じで動く。地味に楽。</p>
+<p><img src="make-new.gif" alt="make-new.gif"></p>
+<p>ちなみにデプロイは1分くらいで完了するのでサクサク反映できて嬉しい。</p>
+<p><img src="deploy.webp" alt="deploy.webp"></p>
+<h2 id="おわりに">おわりに<a href="#おわりに" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>色々追加したい機能はあるけどとりあえず最低限の機能はできたのでヨシ！とする。</p>
+<p>ブログたくさん書くぞ〜</p>
+<p>感想はtwitterとかで呟いたりリプしてくれたりすると跳んで喜びます。</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><div class="blogcard" data-url="https://github.blog/changelog/2023-05-09-more-secure-private-attachments/" data-auto-fetch="true">
+  <a href="https://github.blog/changelog/2023-05-09-more-secure-private-attachments/" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.blog/changelog/2023-05-09-more-secure-private-attachments/</div><div class="blogcard-url">https://github.blog/changelog/2023-05-09-more-secure-private-attachments/</div>
+    </div>
+  </a>
+</div>
+&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><div class="blogcard" data-url="https://github.com/panr/hugo-theme-terminal/blob/9726b8d80658c6cf3c092c21484548aba6f64a68/layouts/partials/extended_head.html" data-auto-fetch="true">
+  <a href="https://github.com/panr/hugo-theme-terminal/blob/9726b8d80658c6cf3c092c21484548aba6f64a68/layouts/partials/extended_head.html" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/panr/hugo-theme-terminal/blob/9726b8d80658c6cf3c092c21484548aba6f64a68/layouts/partials/extended_head.html</div><div class="blogcard-url">https://github.com/panr/hugo-theme-terminal/blob/9726b8d80658c6cf3c092c21484548aba6f64a68/layouts/partials/extended_head.html</div>
+    </div>
+  </a>
+</div>
+&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+      </div></div>
+
+  
+  
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="https://blog.kyu08.com/pr-257/posts/create-gif/" class="button inline prev">
+        ブログ用にGifでキャプチャを作る時にやっていること
+      </a>
+    
+    
+      <a href="https://blog.kyu08.com/pr-257/posts/fzf-make/" class="button inline next">
+        Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+        repo="kyu08/blog-comments"
+        issue-term="pathname"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>blog.kyu08.com</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/pr-257/bundle.min.js"></script>
+
+
+<font color="#808080">
+  <span>
+    This site uses Google Analytics for access analysis.
+    Google Analytics uses cookies to collect traffic data, but this traffic data is collected anonymously and does not personally identify you.
+    Cookies can be disabled in your browser.
+  </span>
+</font>
+
+
+<script src="https://blog.kyu08.com/pr-257/blogcard.js"></script>
+
+
+  
+</div>
+
+</body>
+</html>
