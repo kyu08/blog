@@ -33,7 +33,8 @@ jobs:
         id: generation-check
         run: |
           # 生成後の差分をチェック（新規ファイルと変更ファイルの両方を検出）
-          git add content/**/cover.png content/about/cover.png static/cover.png 2>/dev/null || true
+          shopt -s globstar
+          git add content/**/cover.png static/cover.png 2>/dev/null || true
           if git diff --cached --quiet --exit-code; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
           else
@@ -45,7 +46,8 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add content/**/cover.png content/about/cover.png static/cover.png 2>/dev/null || true
+          shopt -s globstar
+          git add content/**/cover.png static/cover.png 2>/dev/null || true
           git commit -m "chore: update OGP images"
           git push origin HEAD:${{ github.head_ref }}
 
