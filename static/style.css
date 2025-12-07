@@ -310,3 +310,26 @@ blockquote::before {
     height: 200px;
   }
 }
+
+/* モバイルでもデスクトップメニューを表示する */
+@media (max-width: 684px) {
+  /* デスクトップメニューを表示 */
+  .menu--desktop {
+    display: flex !important;
+  }
+
+  /* モバイルメニューのトリガーボタンを非表示 */
+  .menu--mobile .menu__trigger {
+    display: none !important;
+  }
+
+  /* PC表示と同じように横並びにする */
+  .navigation-menu__inner {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+  }
+
+  .navigation-menu__inner > li:not(:last-of-type) {
+    margin-right: 20px !important;
+  }
+}
