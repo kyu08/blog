@@ -332,4 +332,9 @@ blockquote::before {
   .navigation-menu__inner > li:not(:last-of-type) {
     margin-right: 20px !important;
   }
+
+  /* 上下の要素との距離を均等にする */
+  .navigation-menu {
+    margin: 20px 0 10px !important;
+  }
 }
