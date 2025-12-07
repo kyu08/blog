@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+    <title>『ベタープログラマ』 を読んだ :: blog.kyu08.com</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="『ベタープログラマ』を読んだので自分的に刺さった点をまとめる。 6章 航路を航行する 新たなメンバーが開発チームに参加する際にどのようにすれば速や" />
+<meta name="keywords" content="読書ログ" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://blog.kyu08.com/pr-262/posts/better-programmer/" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BDQ408J45J', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-262/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-262/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-262/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-262/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-262/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-262/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-262/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-262/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-262/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-262/css/post.min.f049fef13af1dfd5ea526cc59ea5a3fc7be11a05911ca7198c5bb9225250119c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-262/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-262/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-262/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-262/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+<link rel="stylesheet" href="https://blog.kyu08.com/pr-262/style.css">
+
+
+<link rel="shortcut icon" href="https://blog.kyu08.com/pr-262/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/pr-262/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="kyu08_" />
+
+
+
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="『ベタープログラマ』 を読んだ">
+<meta property="og:description" content="『ベタープログラマ』を読んだので自分的に刺さった点をまとめる。 6章 航路を航行する 新たなメンバーが開発チームに参加する際にどのようにすれば速や" />
+<meta property="og:url" content="https://blog.kyu08.com/pr-262/posts/better-programmer/" />
+<meta property="og:site_name" content="blog.kyu08.com" />
+
+
+  
+  
+    
+  
+
+
+  <meta property="og:image" content="https://blog.kyu08.com/pr-262/posts/better-programmer/cover.png">
+  <meta name="twitter:image" content="https://blog.kyu08.com/pr-262/posts/better-programmer/cover.png">
+  <meta name="twitter:image:alt" content="『ベタープログラマ』 を読んだ">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+  <meta property="article:published_time" content="2024-03-06 15:27:45 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+<link rel="author" href="http://www.hatena.ne.jp/kyu08/" />
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ . }}');
+</script>
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    blog.kyu08.com
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/pr-262/tags/diary/">_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-262/about">about</a></li>
+        
+      
+        
+          <li><a href="/pr-262/index.xml">rss</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/pr-262/tags/diary/" >_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-262/about" >about</a></li>
+        
+      
+        
+          <li><a href="/pr-262/index.xml" >rss</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://blog.kyu08.com/pr-262/posts/better-programmer/">『ベタープログラマ』 を読んだ</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2024/03/06</time>
+      
+    <span class="post-reading-time">10 min read (4678 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://blog.kyu08.com/pr-262/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/">読書ログ</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="/pr-262/posts/better-programmer/cover.png"
+    class="post-cover"
+    alt="『ベタープログラマ』 を読んだ"
+    title="Cover Image" />
+
+
+  
+    <div class="table-of-contents">
+      <h2>
+        目次
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#6章-航路を航行する">6章 航路を航行する</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#14章-ソフトウェア開発とは">14章 ソフトウェア開発とは</a>
+      <ul>
+        <li><a href="#ソフトウェア開発は退屈な仕事">ソフトウェア開発は退屈な仕事</a></li>
+      </ul>
+    </li>
+    <li><a href="#15章-規則に従って競技する">15章 規則に従って競技する</a></li>
+    <li><a href="#18章-変わらないものはない">18章 変わらないものはない</a></li>
+    <li><a href="#28章-倫理的なプログラマ">28章 倫理的なプログラマ</a></li>
+    <li><a href="#結び">結び</a></li>
+    <li><a href="#感想">感想</a></li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <p>『ベタープログラマ』を読んだので自分的に刺さった点をまとめる。</p>
+<h2 id="6章-航路を航行する">6章 航路を航行する<a href="#6章-航路を航行する" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>新たなメンバーが開発チームに参加する際にどのようにすれば速やかに生産的になることができるかについての章。</p>
+<p>最善な策はすでにプロジェクトへの理解があるメンバーに導いてもらうこと。もしそれができなければ次のようなことを調べるとよい。</p>
+<h4 id="ソースの取得の容易さ">ソースの取得の容易さ<a href="#ソースの取得の容易さ" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>ソースの取得がどれだけ簡単か。健全なプログラムはコードベース全体を得るための単一のチェックアウトのみを必要とする。</p>
+<h4 id="コードのビルドの容易さ">コードのビルドの容易さ<a href="#コードのビルドの容易さ" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li>一般的でないツールにビルドが依存していないか</li>
+<li>コード自身に適切で簡単なドキュメンテーションがあるか</li>
+<li>手作業なしで1つのコマンドでビルドを行うことができか</li>
+<li>コードの一部に取り組んでいるときにその部分だけをビルドできるか</li>
+<li>ビルド中に潜在的な問題を曖昧にしているかもしれない無数の警告が出ていないか</li>
+</ul>
+<h4 id="テスト">テスト<a href="#テスト" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li>単体テスト・インテグレーションテスト・システム全体のテストがどの程度揃っているか</li>
+<li>テストは自動で実行されるか。あるいは追加のビルドステップを必要とするか</li>
+<li>テストはどれだけ頻繁に実行されているか</li>
+<li>カバレッジはどの程度か</li>
+<li>テストは適切できちんと作成されているか</li>
+</ul>
+<p>コードとテストには普遍的な関連性がある。優れたテストが存在するコードはたいていきちんとリファクタリングされ、きちんと考え尽くされている。</p>
+<h4 id="ファイルの構造">ファイルの構造<a href="#ファイルの構造" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li>ディレクトリの構造が領域・サブシステム・コードの階層を明確に表しているか</li>
+<li>ディレクトリの構造が整っているか</li>
+<li>サードパーティのライブラリはプロジェクトのコードからきちんと分離されているか</li>
+</ul>
+<h4 id="ドキュメンテーション">ドキュメンテーション<a href="#ドキュメンテーション" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li>ドキュメンテーションは存在するか。わかりやすく、かつメンテナンスされているか</li>
+</ul>
+<h4 id="要件">要件<a href="#要件" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>プロジェクトの要件文書あるいは機能仕様書があるか。</p>
+<h4 id="プロジェクトの依存物">プロジェクトの依存物<a href="#プロジェクトの依存物" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li>コードは特定のFWやライブラリを使っているか。それらについてどの程度学ぶ必要があるか</li>
+<li>コードが言語の標準ライブラリをうまく利用しているか</li>
+</ul>
+<h4 id="コードの品質">コードの品質<a href="#コードの品質" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>品質の感触を得るためにざっと目を通す。</p>
+<ul>
+<li>コードのコメントの量と質はどうか</li>
+<li>多くのデッドコードがあるか</li>
+<li>コーディングのスタイルは全体にわたって首尾一貫しているか</li>
+</ul>
+<h4 id="アーキテクチャ">アーキテクチャ<a href="#アーキテクチャ" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li>ここまでの項目を通して主となる階層群を特定できるか</li>
+<li>それらの階層がきれいに分離されているか</li>
+</ul>
+<p>上記を実施すれば素早くプロジェクトについて把握できる。
+では実際にプロジェクトに取り組む際にはどのようにすればいいか。</p>
+<ul>
+<li>やってみて学ぶ
+<ul>
+<li>コードを読むことは読むことにすぎない。実際に取り組んでみて、間違いを犯すことによってのみコードベースを学ぶことができる</li>
+</ul>
+</li>
+<li>何か単純で小さな修正から着手する</li>
+<li>コードを点検する
+<ul>
+<li>コード検査ツールをコードベースに対して実行してみる</li>
+<li>コンパイルの警告が無効にされいないか調べる。無効にされていれば有効にして警告が表示されないようにコードを修正する。それによってコードベースの構造と品質の理解を深めることができる</li>
+</ul>
+</li>
+<li>調査、そして行動
+<ul>
+<li>コードの小さな部分を調べ、批評してみる。弱点がないか調べ、容赦なくリファクタリングする。正しい命名に修正したり、長いコードを小さくて適正な命名をもつ関数に切り出す</li>
+<li>このような作業を数回行うことで、コードにどれだけの柔軟性があり修正や変更に対してどれだけ従順であるかの感触を得ることができる</li>
+</ul>
+</li>
+<li>維持管理
+<ul>
+<li>ソースファイルを整頓したりディレクトリ階層を正しくしたりする</li>
+</ul>
+</li>
+<li>わかったことを文書化する
+<ul>
+<li>コードに取り組み始める方法を説明しているトップレベルのREADMEは存在するか。しなければ作成してこれまでに学んだことを書く</li>
+<li>そのドキュメンテーションを経験のあるプログラマにレビューしてもらう</li>
+</ul>
+</li>
+</ul>
+<p>新たなコードベースに取り組むほど、新たなコードを効果的に学ぶことができる。</p>
+<p>この章はプロジェクトのキャッチアップに必要な観点が多く記述されていてとても参考になった。</p>
+<ul>
+<li>新しくプロジェクトに参加した際(業務・OSS関わらず)</li>
+<li>既存のプロジェクトの課題点を整理する際</li>
+</ul>
+<p>などのタイミングで特に参考にできそう。</p>
+<h2 id="14章-ソフトウェア開発とは">14章 ソフトウェア開発とは<a href="#14章-ソフトウェア開発とは" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<blockquote>
+<h3 id="ソフトウェア開発は退屈な仕事">ソフトウェア開発は退屈な仕事<a href="#ソフトウェア開発は退屈な仕事" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>ソフトウェア開発の仕事の多くは、楽しくありません。魅力的でもありません。(中略)有能なプログラマであるためには、退屈な仕事を恐れてはいけません。(中略)時には、私達はソフトウェアの清掃員にならなければならず、次のことが求められます。&hellip;</p>
+</blockquote>
+<p>自分が学生のときには想像できていなかったソフトウェアエンジニアの現実、という感じがする。学生のときには毎日コードを書けるなんて夢みたいだ！と思っていたけれど、実際には楽しくない仕事もあるしコードを書かない日もある。ただ、自分が見てきた優秀なエンジニアたちはそういった仕事であっても着実に丁寧に素早くこなしていた印象がある。</p>
+<p>あと、このところは</p>
+<ul>
+<li>チームとして成果を出すためにはどうすればいいか</li>
+<li>身の回りの人から信頼される振る舞いとはどのようなものだろう</li>
+</ul>
+<p>を意識して行動するようにしていて、自分にとってタスクが楽しいかや成長に繋がるかということをいい意味で意識せずに仕事ができている。この意識を持つようにしてから仕事が楽しく感じられるようになったので自分にとってもかなりいい変化だった思う。</p>
+<h2 id="15章-規則に従って競技する">15章 規則に従って競技する<a href="#15章-規則に従って競技する" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<blockquote>
+<p><strong>自分達で決めた</strong>規則が必要です。私達が所有権を持つ規則です。特定のチームにおける文化、およびうまく開発できる方法を定めている規則です。これらは、大きくて、扱いにくい厳しい規則である必要はありません。新たなチームメンバーがすぐに一緒に開発できるように、単純なものでよいです。つまり、それらは単なる方法やプロセスよりも詳しく何かを記述している規則であったり、コーディング文化を記述している規則だったりします。すなわち、<strong>チームで優れた選手になるための方法を記述している規則です。</strong></p>
+</blockquote>
+<p>この <strong>「チームで優れた選手になるための方法を記述している規則です。」</strong> という部分が特にいいなと思った。チームメンバーとして活躍する方法が言語化されていることで、新しいメンバーが素早く立ち上がることができるだけでなく、すでにチームに所属しているメンバーもことあるごとに立ち返ることができて、方向性がずれかけてもうまく軌道修正できるなどのメリットがありそう。</p>
+<p>個人的にチームで共通理解を持つことでチームの方向性がうまく揃い、軌道修正もしやすかった経験を部活のときにしたのでこの章の内容はとても腹落ちした。</p>
+<h2 id="18章-変わらないものはない">18章 変わらないものはない<a href="#18章-変わらないものはない" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<blockquote>
+<p>コードのどの領域も、誰にも「所有」されていません。どの領域でも、誰もが変更を行うことが許されています。コードを所有するといった制度は避けてください。それは、変更を抑制します。</p>
+</blockquote>
+<p>サーバーサイドの開発チームに初めて異動したときは「自分よりもサーバーサイドも経験が長いエンジニアたちが書いたコードだからどの部位も意図があり、設計も練られた上で今の実装になってるに違いない&hellip;！だから強い理由がないとなかなか変更を加えるべきではないのではないか」という思い込みがあったが、何ヶ月かサーバーサイドの開発の経験を積んで「なんか全然自分でも修正できそうなところあるぞ・・・！」と感じられるようになった。</p>
+<p>いい意味でフラットな目線でコードベースに触れる意識を持てるとよさそう。</p>
+<h2 id="28章-倫理的なプログラマ">28章 倫理的なプログラマ<a href="#28章-倫理的なプログラマ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<blockquote>
+<p>プログラミングのキャリアの中で、最も頻繁に出会う人々は、チームメイトです。彼らは、毎日一緒に働くプログラマやテスターなどです。倫理的なプログラマは、彼ら全員と一緒に誠実に働き、各チームメンバーに敬意を払って、できる限り最善の結果を達成することに注意を払っています。</p>
+<p>どれだけ成熟しているとか経験を積んでいるとかに関係なく、誰もが貢献できる価値を持っていることを常に信じてください。</p>
+<p>誠実で信頼されるようになってください。誰にでも誠意を持って接してください。</p>
+</blockquote>
+<p>大事。</p>
+<blockquote>
+<p>倫理的なプログラマは、燃え尽きるような働き方をしません。それは、個人的に不都合であるだけではなく、チーム全体に対しても悪い影響を与えます。毎週、何十時間も残業すれば、疲れ切ったプログラマになり、必ず不注意な間違いを生み出し、悪い結果となります。驚くほど熱心に働く英雄のように思われるのは素晴らしいですが、倫理的なプログラマは、非現実的な期待に応えようとして、自身が燃え尽きてしまうのは悪い考えであることを理解しています。</p>
+</blockquote>
+<p>直感では理解できるが、プロジェクトの種類によっては残業の量が成果に直結することもあり難しい。残業を最後の手段にしつつ必要なときはやる、くらいの感覚がいいのだろうか。(残業前提でスケジュールを組み出すと工夫をする発想がなくなり、効率が上がらず長期的には損だと思う。もちろん燃え尽きリスクが高まるという面でもそう。)</p>
+<p>あとは現実的にビジネス的に絶対に守りたい締切があることはあると思う。現場レイヤー目線だと踏ん張りどこは頑張って、乗り切ったら少し休むようにし、マネジメントレイヤー目線だとそうならないように人員計画をいい感じにするとかがいいのだろうか（？）</p>
+<p>ただ、チームをマネジメントする立場からみると長期間安定して働いてくれることも一定嬉しいとは思うので無理をしすぎないことも重要そう。</p>
+<h2 id="結び">結び<a href="#結び" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<blockquote>
+<p>ひどいプログラマと優れたプログラマを区別しているものは、態度です。それが、単なる適当なプログラマと並外れたプログラマを区別するものです。</p>
+<p>態度は、技術スキルに勝ります。プログラミング言語の複雑な知識は、保守可能なコードを保証しません。プログラミングのモデルを多く理解したからといって、必ずしも優れた設計を生み出すとは限りません。あなたのコードが優れているかどうかと、あなたと一緒に働くのが楽しいのかどうかを決めるのは、あなたの態度なのです。</p>
+</blockquote>
+<p>この記述がこの本を通して特に刺さった。シンプルだがとても重要なことだと思う。「何ができるか」も重要だが、それ以上に「どうしたいか」や「どこを目指しているのか」がより重要なのだろうと思った。ついついハードスキルばかりに目がいってしまうがそういった志向性を持つことにも同様に気を配りたい。</p>
+<p>自分が見てきた優秀なエンジニアはこれを体現している人ばかりだったように思う。</p>
+<p>最悪技術力の不足はレビューなどで他のエンジニアの力を借りて補うことができても、オーナーシップや主体性に限っては自分自身で持つしかない。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>そういった意味でもどのようにすれば良い態度を保ち続けられるか、はふりかえりや環境選びの重要な観点になるように思える。</p>
+<h2 id="感想">感想<a href="#感想" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>「優秀なエンジニアはどう振る舞うか」を主題に数多くのトピックが書かれていてとても参考になった。自分がこれまで接してきた優秀なエンジニアの振る舞いとも重なるところが多かった。 優秀なエンジニアがなぜ優秀かをあらゆる角度から言語化していて理解を深めることができたし、自分も真似できそうなことが多くあったので実践していきたい。</p>
+<p>次は久々に技術寄りの本を読みたくなったので次はRust関連の本を読んでみたいと思う。<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>あとは「プログラマー脳」も気になるのでいずれ読みたい。</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>もちろん日々研鑽して自分の技術力を高めることも当然重要だと思っている。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>「コンセプトから理解するRust」でRustの理解を深めて「詳解Rustプログラミング」でRustで低レイヤーを学んでいこうと思っている。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+      </div></div>
+
+  
+  
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="https://blog.kyu08.com/pr-262/posts/add-comment-section-to-this-blog/" class="button inline prev">
+        GitHub Issuesをサイトのコメント欄として活用できるutterancesを導入した
+      </a>
+    
+    
+      <a href="https://blog.kyu08.com/pr-262/posts/looking-back-on-2023/" class="button inline next">
+        2023年を振り返る
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+        repo="kyu08/blog-comments"
+        issue-term="pathname"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>blog.kyu08.com</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/pr-262/bundle.min.js"></script>
+
+
+<font color="#808080">
+  <span>
+    This site uses Google Analytics for access analysis.
+    Google Analytics uses cookies to collect traffic data, but this traffic data is collected anonymously and does not personally identify you.
+    Cookies can be disabled in your browser.
+  </span>
+</font>
+
+
+<script src="https://blog.kyu08.com/pr-262/blogcard.js"></script>
+
+
+  
+</div>
+
+</body>
+</html>
