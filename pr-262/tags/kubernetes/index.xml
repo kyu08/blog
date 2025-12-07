@@ -37,7 +37,7 @@
 &lt;p&gt;本書は、Kubernetesの実践的な知識をハンズオン形式で解説する書籍です。本書の特徴は、壊れにくいKubernetesをあえて壊しながら学ぶことで、初心者が挫折しやすいトラブルシューティングの知識や対応力が身に付けられることです。初心者でも、経験者でも、今度こそKubernetesがわかる！&lt;/p&gt;
 &lt;p&gt;マンガや図解を多く掲載しているため視覚的に理解したい方にもおすすめです。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;という書籍説明の通り、ハンズオン形式でk8sを学ぶことができる。&lt;/p&gt;
+&lt;p&gt;という書籍説明の通り、ハンズオン形式でKubernetesを学ぶことができる。&lt;/p&gt;
 &lt;p&gt;また、&lt;a href=&#34;https://github.com/kubernetes-sigs/kind&#34; target=&#34;_blank&#34; &gt;Kind&lt;/a&gt;というツールを使ってローカルでKubernetesクラスタを構築するのでクラウドの登録や課金を気にする必要がないのも手軽でよかった。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kubernetes-sigs/kind&#34; data-auto-fetch=&#34;true&#34;&gt;
   &lt;a href=&#34;https://github.com/kubernetes-sigs/kind&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
