@@ -1,7 +1,7 @@
 <link rel="author" href="http://www.hatena.ne.jp/kyu08/" />
 
-{{ if not hugo.IsServer }}
-{{ with site.Config.Services.GoogleAnalytics.ID }}
+{{ if not .Site.IsServer }}
+{{ with .Site.GoogleAnalytics }}
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
 <script>
@@ -9,7 +9,7 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', '{{ . }}');
+  gtag('config', '{{ "{{" }} . }}');
 </script>
 {{ end }}
 {{ end }}
