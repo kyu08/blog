@@ -335,6 +335,6 @@ blockquote::before {
 
   /* 上下の要素との距離を均等にする */
   .navigation-menu {
-    margin: 20px 0 10px !important;
+    margin: 20px 0 0 !important;
   }
 }
