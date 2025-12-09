@@ -56,11 +56,14 @@ https://github.com/kubernetes-sigs/kind
 ## 学び
 - kubectlの使い方
 - Pod、Service、Deploymentなどの基本的なリソースの性質や動かし方
-- Resource Requests/Limits, HPA, Affinityなどの性能やスケールなどに関する機能の使い方
-<!-- TODO: 他にも学んだことをかく -->
-- とかとか
+- Readiness probe, Liveness probe, Startup probeの特徴や使い方
+- Resource Requests/Limits, HPA, Affinity, HPA, VPAなどの性能やスケールなどに関する機能の使い方
+- Kubernetes自体のアーキテクチャ
+- etc.
 
 ## 感想
-<!-- TODO: かく -->
+- 0からKubernetesの基礎を学ぶことができてとても良い本だった。
+- ちょうど業務でmanifestを書くタイミングがあったので本書で学んだことがダイレクトに業務に活きてとても助かった。
+- 次はしばらく積んでしまっていた[『体験しながら学ぶ ネットワーク技術入門』](https://www.sbcr.jp/product/4815618599/)をやっていく。
 
 [^1]: 本書後半でも紹介されているが本で詳しく学ぶなら[Kubernetes完全ガイド 第2版](https://book.impress.co.jp/books/1119101148)がいいらしい。
