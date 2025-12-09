@@ -34,7 +34,7 @@ jobs:
         run: |
           # 生成後の差分をチェック（新規ファイルと変更ファイルの両方を検出）
           shopt -s globstar
-          git add content/**/cover.png static/cover.png 2>/dev/null || true
+          git add content/**/cover.webp static/cover.webp 2>/dev/null || true
           if ! git diff --cached --quiet --exit-code; then
             echo "has_changes=true" >> $GITHUB_OUTPUT
           else
@@ -47,7 +47,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           shopt -s globstar
-          git add content/**/cover.png static/cover.png 2>/dev/null || true
+          git add content/**/cover.webp static/cover.webp 2>/dev/null || true
           git commit -m "chore: update OGP images"
           git push origin HEAD:${{ github.head_ref }}
 
@@ -58,8 +58,8 @@ jobs:
           # PRのベースブランチとの差分を取得
           git fetch origin ${{ github.base_ref }}
 
-          # PRに含まれるcover.pngの変更を検出
-          CHANGED_FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD | grep 'cover.png' || true)
+          # PRに含まれるcover.webpの変更を検出
+          CHANGED_FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD | grep 'cover.webp' || true)
 
           echo "Changed OGP files in PR:"
           echo "$CHANGED_FILES"
@@ -88,12 +88,12 @@ jobs:
             IFS=',' read -ra FILES <<< "${{ steps.pr-check.outputs.files }}"
             for file in "${FILES[@]}"; do
               # ファイルパスから記事名を抽出
-              if [[ "$file" == "static/cover.png" ]]; then
+              if [[ "$file" == "static/cover.webp" ]]; then
                 POST_NAME="トップページ (Top Page)"
-              elif [[ "$file" == "content/about/cover.png" ]]; then
+              elif [[ "$file" == "content/about/cover.webp" ]]; then
                 POST_NAME="aboutページ (About Page)"
               else
-                POST_NAME=$(echo "$file" | sed 's|content/posts/||' | sed 's|/cover.png||')
+                POST_NAME=$(echo "$file" | sed 's|content/posts/||' | sed 's|/cover.webp||')
               fi
               IMAGE_URL="https://github.com/${{ github.repository }}/raw/${{ github.head_ref }}/${file}"
               COMMENT="${COMMENT}### ${POST_NAME}\n![${POST_NAME}](${IMAGE_URL})\n\n"
