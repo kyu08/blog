@@ -13,7 +13,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 gc(go compiler)のコード（具体的には[`go/src/cmd/compile`](https://github.com/golang/go/tree/master/src/cmd/compile)配下）を読むために必要な手順があったのでメモ代わりに書いておく。neovimでしか確認していないが他のエディタでもきっと同じような感じなはず。

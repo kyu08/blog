@@ -14,7 +14,7 @@ readingTime: true
 hideComments: false
 color: ''
 toc: false
-cover: cover.png
+cover: cover.webp
 ---
 
 ![box.webp](box.webp)

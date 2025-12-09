@@ -16,7 +16,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 2025/06/14(土)、2025/06/15(日)に中野セントラルパークで行われた関数型まつり2025に参加した。

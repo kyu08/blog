@@ -13,7 +13,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 持ち運び用に軽めの60%メカニカルキーボードが欲しくなり、いくつか検討した結果、[Keychron V4 Max(Barebone)](https://www.keychron.com/products/keychron-v4-max-qmk-via-wireless-custom-mechanical-keyboard?variant=41285926682713)を買った。

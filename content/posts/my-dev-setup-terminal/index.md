@@ -17,7 +17,7 @@ readingTime: true
 hideComments: false
 color: ''
 draft: false
-cover: cover.png
+cover: cover.webp
 ---
 
 

@@ -15,7 +15,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 普段業務でCloud Spannerを使っているが、雰囲気で使っている自覚が大いにあるのでドキュメントやブログを読んで知らなかったことを自分用のメモとしてまとめてみる。

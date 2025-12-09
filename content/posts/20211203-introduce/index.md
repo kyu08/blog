@@ -14,7 +14,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 今年の2月ごろから下書きを放置していて書いてなかったことに気付いてしまったので書きます。

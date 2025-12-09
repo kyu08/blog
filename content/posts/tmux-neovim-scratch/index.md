@@ -19,7 +19,7 @@ readingTime: true
 hideComments: false
 color: ''
 draft: false
-cover: cover.png
+cover: cover.webp
 ---
 
 任意の構成のSandbox的な環境をTmuxのwindowとして用意するようにしたところターミナルから出ずにサクっと動作検証とかが行えてハッピーになったよ、という記事。ここではvanillaなGoのプロジェクトの例を紹介しますが、お好みの構成でSandbox環境を作ってみてください。

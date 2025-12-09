@@ -16,6 +16,7 @@ import { fileURLToPath } from 'url';
 import matter from 'gray-matter';
 import satori from 'satori';
 import { Resvg } from '@resvg/resvg-js';
+import sharp from 'sharp';
 import { generateOgpTemplate } from './ogp-template.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -71,9 +72,9 @@ function extractMetadata(filePath, content) {
 }
 
 /**
- * SVGをPNGに変換
+ * SVGをWebPに変換
  */
-function svgToPng(svg) {
+async function svgToWebp(svg) {
   const resvg = new Resvg(svg, {
     fitTo: {
       mode: 'width',
@@ -82,7 +83,10 @@ function svgToPng(svg) {
   });
 
   const pngData = resvg.render();
-  return pngData.asPng();
+  const pngBuffer = pngData.asPng();
+
+  // PNGをWebPに変換
+  return sharp(pngBuffer).webp({ quality: 80 }).toBuffer();
 }
 
 /**
@@ -144,14 +148,14 @@ async function generateOgpImage(metadata, fonts) {
       }
     );
 
-    // SVGをPNGに変換
-    const png = svgToPng(svg);
+    // SVGをWebPに変換
+    const webp = await svgToWebp(svg);
 
-    // 記事のディレクトリにcover.pngとして保存
-    const outputPath = path.join(metadata.postDir, 'cover.png');
-    await fs.writeFile(outputPath, png);
+    // 記事のディレクトリにcover.webpとして保存
+    const outputPath = path.join(metadata.postDir, 'cover.webp');
+    await fs.writeFile(outputPath, webp);
 
-    console.log(`✅ Generated: ${metadata.slug}/cover.png`);
+    console.log(`✅ Generated: ${metadata.slug}/cover.webp`);
   } catch (error) {
     console.error(`❌ Failed to generate OGP for ${metadata.slug}:`, error);
   }
@@ -179,11 +183,11 @@ async function generateStaticOgpImage({ title, outputPath, author = 'kyu08', sho
       }
     );
 
-    // SVGをPNGに変換
-    const png = svgToPng(svg);
+    // SVGをWebPに変換
+    const webp = await svgToWebp(svg);
 
     // 指定されたパスに保存
-    await fs.writeFile(outputPath, png);
+    await fs.writeFile(outputPath, webp);
 
     console.log(`✅ Generated: ${path.relative(__dirname, outputPath)}`);
   } catch (error) {
@@ -219,7 +223,7 @@ async function main() {
   // aboutページ用
   await generateStaticOgpImage({
     title: 'blog.kyu08.com',
-    outputPath: path.join(__dirname, '../content/about/cover.png'),
+    outputPath: path.join(__dirname, '../content/about/cover.webp'),
     author: 'kyu08',
     showDate: false,
     showTags: false,
@@ -228,7 +232,7 @@ async function main() {
   // トップページ用
   await generateStaticOgpImage({
     title: 'blog.kyu08.com',
-    outputPath: path.join(__dirname, '../static/cover.png'),
+    outputPath: path.join(__dirname, '../static/cover.webp'),
     author: 'kyu08',
     showDate: false,
     showTags: false,

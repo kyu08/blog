@@ -15,7 +15,7 @@ readingTime: true
 hideComments: false
 color: ''
 draft: false
-cover: cover.png
+cover: cover.webp
 ---
 
 このブログを作った動機でもある今年の振り返りを書いていきます。

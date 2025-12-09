@@ -15,7 +15,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 Neovimに対してGitHub Sponsorsを通してOne-time[^1]の寄付をしたという話。

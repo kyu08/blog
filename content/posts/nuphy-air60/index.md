@@ -18,7 +18,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 NuPhy Air60を買ったので簡単にレビューする

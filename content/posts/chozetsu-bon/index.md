@@ -15,7 +15,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 田中ひさてるさんの『ちょうぜつソフトウェア設計入門――PHPで理解するオブジェクト指向の活用』が話題になっていたので読んでみた。

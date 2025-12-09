@@ -14,7 +14,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 もともとこのブログはNext.js + Vercelの構成で作られていたが色々と辛くなってしまったのでお手軽にブログが作れそうなhugo + GitHub Pagesの構成に移行した。

@@ -14,7 +14,7 @@ readingTime: true
 hideComments: false
 color: ''
 draft: false
-cover: cover.png
+cover: cover.webp
 ---
 
 Elmで固定長配列を扱うためのライブラリelm-static-arrayを触ってみたので感じたことを書いていきます。

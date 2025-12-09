@@ -16,7 +16,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11/4でコミットした日数としてはおおよそ24日ほどだった。)

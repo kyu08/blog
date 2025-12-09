@@ -14,7 +14,7 @@ readingTime: true
 hideComments: false
 color: ''
 draft: false
-cover: cover.png
+cover: cover.webp
 ---
 
 ずっと気になってはいたが2つ~3つくらいしか知らなかったデザインパターンをやっと勉強する気になったのでこのサイトを一通り眺めてみた。

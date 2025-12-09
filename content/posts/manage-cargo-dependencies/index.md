@@ -13,7 +13,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 OSSに依存するプロジェクトでは依存しているライブラリのライセンス表記が必要になることがある。（体感的にはほとんどのライブラリはライセンス表記を求めているように思う）

@@ -13,7 +13,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 技術書典で購入した『読み手につたわる文章 - テクニカルライティング』を読んだので学びになったトピックについて書く。

@@ -12,7 +12,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 『[Tidy First?](https://www.oreilly.co.jp/books/9784814400911/)』を読んだ。

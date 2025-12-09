@@ -13,7 +13,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 『ベタープログラマ』を読んだので自分的に刺さった点をまとめる。

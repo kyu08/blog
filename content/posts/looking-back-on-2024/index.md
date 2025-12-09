@@ -11,7 +11,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 年の瀬なので今年を振り返る。

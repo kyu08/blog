@@ -15,7 +15,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 [ThePrimeagen/harpoon](https://github.com/ThePrimeagen/harpoon)というNeovimプラグインを使ってみたので気になっている人の参考になればと思い感想を書いてみる。

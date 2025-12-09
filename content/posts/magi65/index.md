@@ -19,7 +19,7 @@ readingTime: true
 hideComments: false
 color: ''
 toc: false
-cover: cover.png
+cover: cover.webp
 ---
 
 ある日YouTube Shortsで流れてきて打鍵感と打鍵音がよさそうで気になっていた[IQUNIX Magi65](https://iqunix.com/products/magi65)を買ってみた。

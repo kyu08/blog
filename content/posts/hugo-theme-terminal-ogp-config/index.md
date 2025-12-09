@@ -15,7 +15,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 [hugo-theme-terminal](https://github.com/panr/hugo-theme-terminal) でOGPの設定に少し詰まったのでやったことを書いておく。

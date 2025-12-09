@@ -17,7 +17,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 [OSSへの寄付の月予算を$10にした - laiso](https://laiso.hatenablog.com/entry/2022/02/25/gihutown)

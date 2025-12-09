@@ -15,7 +15,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 [tenntenn Conference 2023 にスポンサーし、Goの静的解析を完全に理解した話](https://zenn.dev/team_soda/articles/8e61219eab0fc8) を読んでから静的解析が気になっていたのでこれをやってみた。

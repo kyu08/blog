@@ -3,7 +3,7 @@ title: "About Me"
 date: "2023-06-06T01:15:48+09:00"
 author: "kyu08"
 authorTwitter: "kyu08_" #do not include @
-cover: "cover.png"
+cover: "cover.webp"
 tags: []
 keywords: ["", ""]
 description: ""

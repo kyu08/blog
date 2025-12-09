@@ -14,7 +14,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 > # (2024/12/14追記) 内容を更新した紹介記事をZennに投稿しました。

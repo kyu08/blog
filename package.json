@@ -15,6 +15,7 @@
     "@resvg/resvg-js": "^2.6.2",
     "gray-matter": "^4.0.3",
     "satori": "^0.10.14",
+    "sharp": "^0.34.5",
     "textlint": "^14.0.4",
     "textlint-filter-rule-comments": "^1.2.2",
     "textlint-rule-preset-ja-spacing": "^2.4.3",

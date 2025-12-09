@@ -13,7 +13,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 2025年11月2日（日）にアキバプラザ・アキバホールで開催された[VimConf 2025 Small](https://vimconf.org/2025/ja/)に参加した。

@@ -13,7 +13,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ってマージされたPR一覧」を表示する方法)

@@ -12,7 +12,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は[## 学び、得た経験](#学び得た経験)までジャンプしてください。

@@ -14,7 +14,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 ブログ用によくGifをつくるので自分用の備忘録代わりに手順を記しておく。

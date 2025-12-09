@@ -15,7 +15,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 2024/4からチーム異動してスクラムを実践しているチームに移ったのでアジャイル・スクラムのインプットをしたいと思い、『いちばんやさしいアジャイル開発の教本』を読んだ。

@@ -13,7 +13,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 個人開発のプロジェクトで使えそうなGitHub Actionsを物色していたところちょうど自分でも修正できそうな箇所があったのでPRを送ってみたところ無事にマージしてもらうことができた。

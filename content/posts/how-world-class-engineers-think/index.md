@@ -13,7 +13,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 Microsoftのエンジニアとしてアメリカで働いている牛尾剛さんが優秀な同僚から学んだ思考法について書いた著書『世界一流エンジニアの思考法』を読んだので学びになったトピックについて簡単に書こうと思う。

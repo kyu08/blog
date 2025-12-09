@@ -13,7 +13,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 [CS50.jp](https://cs50.jp/)の気になっていたトピックを学んでみたので振り返っておく。

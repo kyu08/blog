@@ -13,7 +13,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ''
-cover: cover.png
+cover: cover.webp
 ---
 
 本記事は[Unipos Advent Calendar 2024](https://qiita.com/advent-calendar/2024/unipos)の16日目の記事です。
