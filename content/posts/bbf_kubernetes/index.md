@@ -14,7 +14,7 @@ showFullContent: false
 readingTime: true
 hideComments: false
 color: ""
-cover: "cover.png"
+cover: "cover.webp"
 ---
 
 0からKubernetesのキャッチアップがしたくて、高橋 あおいさん著の『つくって、壊して、直して学ぶ Kubernetes入門』を読んだ。
@@ -52,6 +52,12 @@ https://github.com/kubernetes-sigs/kind
 
 ![command.webp](command.webp)
 [商品ページ](https://www.shoeisha.co.jp/book/detail/9784798183961)より引用
+
+こんな感じでk9sを常時起動しながらコマンドを実行するスタイルで進めたところリアルタイムでPodの変化が見れて理解が捗った。
+
+![k9s.webp](k9s.webp)
+
+https://github.com/derailed/k9s/
 
 ## 学び
 - kubectlの使い方
