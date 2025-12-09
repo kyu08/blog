@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+    <title>`Process failed to start: too many open files: &#34;/opt/homebrew/bin/git&#34;`というエラーが出てNeovimのプラグインが動作しなくなる問題の回避策 :: blog.kyu08.com</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="問題 ここ数日Neovimを使っていると、Process failed to start: too many open files: &amp;quot;/opt/homebrew/bin/git&amp;quot;といっ" />
+<meta name="keywords" content="neovim" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://blog.kyu08.com/pr-264/posts/mac-too-many-open-files/" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BDQ408J45J', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-264/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-264/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-264/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-264/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-264/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-264/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-264/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-264/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-264/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-264/css/post.min.f049fef13af1dfd5ea526cc59ea5a3fc7be11a05911ca7198c5bb9225250119c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-264/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-264/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-264/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-264/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+<link rel="stylesheet" href="https://blog.kyu08.com/pr-264/style.css">
+
+
+<link rel="shortcut icon" href="https://blog.kyu08.com/pr-264/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/pr-264/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="kyu08_" />
+
+
+
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="`Process failed to start: too many open files: &#34;/opt/homebrew/bin/git&#34;`というエラーが出てNeovimのプラグインが動作しなくなる問題の回避策">
+<meta property="og:description" content="問題 ここ数日Neovimを使っていると、Process failed to start: too many open files: &amp;quot;/opt/homebrew/bin/git&amp;quot;といっ" />
+<meta property="og:url" content="https://blog.kyu08.com/pr-264/posts/mac-too-many-open-files/" />
+<meta property="og:site_name" content="blog.kyu08.com" />
+
+
+  
+  
+
+
+  <meta property="og:image" content="https://blog.kyu08.com/pr-264/cover.webp">
+  <meta name="twitter:image" content="https://blog.kyu08.com/pr-264/cover.webp">
+  <meta name="twitter:image:alt" content="`Process failed to start: too many open files: &#34;/opt/homebrew/bin/git&#34;`というエラーが出てNeovimのプラグインが動作しなくなる問題の回避策">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+  <meta property="article:published_time" content="2024-05-13 04:11:01 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+<link rel="author" href="http://www.hatena.ne.jp/kyu08/" />
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ . }}');
+</script>
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    blog.kyu08.com
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/pr-264/tags/diary/">_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-264/about">about</a></li>
+        
+      
+        
+          <li><a href="/pr-264/index.xml">rss</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/pr-264/tags/diary/" >_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-264/about" >about</a></li>
+        
+      
+        
+          <li><a href="/pr-264/index.xml" >rss</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://blog.kyu08.com/pr-264/posts/mac-too-many-open-files/"><code>Process failed to start: too many open files: &quot;/opt/homebrew/bin/git&quot;</code>というエラーが出てNeovimのプラグインが動作しなくなる問題の回避策</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2024/05/13</time>
+      
+    <span class="post-reading-time">2 min read (906 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://blog.kyu08.com/pr-264/tags/neovim/">neovim</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="https://blog.kyu08.com/pr-264/cover.webp"
+    class="post-cover"
+    alt="`Process failed to start: too many open files: &#34;/opt/homebrew/bin/git&#34;`というエラーが出てNeovimのプラグインが動作しなくなる問題の回避策"
+    title="Cover Image" />
+
+
+  
+    <div class="table-of-contents">
+      <h2>
+        目次
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#問題">問題</a></li>
+    <li><a href="#筆者の環境">筆者の環境</a></li>
+    <li><a href="#回避策">回避策</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <h2 id="問題">問題<a href="#問題" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>ここ数日Neovimを使っていると、<code>Process failed to start: too many open files: &quot;/opt/homebrew/bin/git&quot;</code>といったエラーとともにプラグインが動作しなくなることがあり困っていた。</p>
+<p>記憶にある範囲だと<a href="https://github.com/nvim-telescope/telescope.nvim" target="_blank" >nvim-telescope/telescope.nvim</a>や<a href="https://github.com/akinsho/toggleterm.nvim" target="_blank" >akinsho/toggleterm.nvim</a>を使っているときにこのエラーが起きることが多かった印象。</p>
+<h2 id="筆者の環境">筆者の環境<a href="#筆者の環境" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ nvim --version
+</span></span><span style="display:flex;"><span>NVIM v0.9.5
+</span></span><span style="display:flex;"><span>Build type: Release
+</span></span><span style="display:flex;"><span>LuaJIT 2.1.1703358377
+</span></span></code></pre></div><p>利用しているプラグインは後述。</p>
+<h2 id="回避策">回避策<a href="#回避策" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>この記事にしたがってファイルを作成したところエラーが出なくなった。</p>
+<p><div class="blogcard" data-url="https://qiita.com/sou_lab/items/1ca051a1f3b906a23dc8" data-auto-fetch="true">
+  <a href="https://qiita.com/sou_lab/items/1ca051a1f3b906a23dc8" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://qiita.com/sou_lab/items/1ca051a1f3b906a23dc8</div><div class="blogcard-url">https://qiita.com/sou_lab/items/1ca051a1f3b906a23dc8</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>以下記事より引用。</p>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo vi /Library/LaunchDaemons/limit.maxfiles.plist
+</span></span></code></pre></div><p>viでもnanoでもcodeでもお好きなエディタのコマンドで下記コードをコピペ。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE plist PUBLIC &#34;-//Apple//DTD PLIST 1.0//EN&#34; &#34;http://www.apple.com/DTDs/PropertyList-1.0.dtd&#34;&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;plist</span> <span style="color:#a6e22e">version=</span><span style="color:#e6db74">&#34;1.0&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;dict&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;key&gt;</span>Label<span style="color:#f92672">&lt;/key&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;string&gt;</span>limit.maxfiles<span style="color:#f92672">&lt;/string&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;key&gt;</span>ProgramArguments<span style="color:#f92672">&lt;/key&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;array&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;string&gt;</span>launchctl<span style="color:#f92672">&lt;/string&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;string&gt;</span>limit<span style="color:#f92672">&lt;/string&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;string&gt;</span>maxfiles<span style="color:#f92672">&lt;/string&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;string&gt;</span>524288<span style="color:#f92672">&lt;/string&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;string&gt;</span>524288<span style="color:#f92672">&lt;/string&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/array&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;key&gt;</span>RunAtLoad<span style="color:#f92672">&lt;/key&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;true/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;key&gt;</span>ServiceIPC<span style="color:#f92672">&lt;/key&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;false/&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/dict&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/plist&gt;</span>
+</span></span></code></pre></div></blockquote>
+<h2 id="参考">参考<a href="#参考" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>同時に開くことができるファイル数の上限に引っかかってしまっている模様。</p>
+<p>もしかしたら一部のNeovimプラグインの特定のバージョンに原因があるのかもしれない。</p>
+<p>もしかしたらこれをみた人の参考になるかもしれないので<code>lazy-lock.json</code>を貼っておく。（原因特定までする元気はなかった）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;Comment.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;0236521ea582747b58869cb72f70ccfa967d2e89&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;alpha-nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;41283fb402713fc8b327e60907f74e46166f4cfd&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;barbecue&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;cd7e7da622d68136e13721865b4d919efd6325ed&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;bufferline.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;73540cb95f8d95aa1af3ed57713c6720c78af915&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;cmp-buffer&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;3022dbc9166796b644a841a02de8dd1cc1d311fa&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;cmp-look&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;971e65a6be0e75c3438fe7b176d4fc020cb89d7b&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;cmp-nvim-lsp&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;5af77f54de1b16c34b23cba810150689a3a90312&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;cmp-nvim-lsp-signature-help&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;3d8912ebeb56e5ae08ef0906e3a54de1c66b92f1&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;cmp-nvim-lua&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;f12408bdb54c39c23e67cab726264c10db33ada8&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;cmp-path&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;91ff86cd9c29299a64f968ebb45846c485725f23&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;cmp-vsnip&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;989a8a73c44e926199bfd05fa7a516d51f2d2752&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;copilot.vim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;release&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;b603990a639bb4b8651d054ef8d5a8fe5db56e0c&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;dial.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;27eb570085db2ef44bff4f620d3806039184651c&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;fzf&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;24ff66d4a9d6889988e4d7e373f33f4098870b9e&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;gitsigns.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;bc933d24a669608968ff4791b14d2d9554813a65&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;gotests-vim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;42abccb59e9889cd1ce427b11b2ffbb36f2a46a6&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;gruvbox.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;dd0ab08b17d2ead7bdb4838b48e1d08034ead0f0&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;harpoon&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;harpoon2&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;0378a6c428a0bed6a2781d459d7943843f374bce&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;indent-blankline.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;3d08501caef2329aba5121b753e903904088f7e6&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;lasterisk.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;bbcfcaeca50f686e338a03386e41645fc3305f44&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;lazy.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;ebdd0499551765e6a7aba220cc8ae4e0cdb6be69&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;lazygit.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;0ada6c6e7e138df92f5009b6952f4ac41248305a&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;lsp-lens.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;48bb1a7e271424c15f3d588d54adc9b7c319d977&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;lsp_signature.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;c6aeb2f1d2538bbdfdaab1664d9d4c3c75aa9db8&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;lspkind.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;1735dd5a5054c1fb7feaf8e8658dbab925f4f0cf&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;lspsaga.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;052234296f13e2705d5d290c7bd5a36d3dd81fde&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;lualine.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;0a5a66803c7407767b799067986b4dc3036e1983&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;mason-lspconfig.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;05744f0f1967b5757bd05c08df4271ab8ec990aa&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;mason.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;751b1fcbf3d3b783fcf8d48865264a9bcd8f9b10&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;neo-tree.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;v2.x&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;80dc74d081823649809f78370fa5b204aa9a853a&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;noice.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;f4decbc7a80229ccc9f86026b74bdcf0c39e38a7&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;nui.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;274fa89a9b4bed746647c2917091902f882509ec&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;nvim-autopairs&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;14e97371b2aab6ee70054c1070a123dfaa3e217e&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;nvim-bqf&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;52703d7adc3be3f7c09eea9a80c5b8caa615fb25&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;nvim-cmp&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;8f3c541407e691af6163e2447f3af1bd6e17f9a3&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;nvim-hlslens&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;3e8fceb2b030100857ee72741a8f48c9a1d8595e&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;nvim-jdtls&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;8eb5f0dbe6e126b392ddcaf45893358619893e45&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;nvim-lspconfig&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;ee450e6a9364fc740236166dd57aaca1ec7cdb48&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;nvim-metals&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;c6268555d0b471262af78818f11a086ddf30688b&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;nvim-navic&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;8649f694d3e76ee10c19255dece6411c29206a54&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;nvim-scrollbar&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;35f99d559041c7c0eff3a41f9093581ceea534e8&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;nvim-treesitter&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;4b70dde72753a179333b4bba02518d234a30510e&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;nvim-ts-context-commentstring&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;a6382f744f584bbf71d0a563af789af7190aabda&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;nvim-web-devicons&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;475fbcfcb6ee7c35aa33a6b6207ebd4032791d87&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;plenary.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;08e301982b9a057110ede7a735dd1b5285eb341f&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;pounce.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;0c044cad69571d57d8f64a41cca95332859b6abc&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;sqlite.lua&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;d0ffd703b56d090d213b497ed4eb840495f14a11&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;telescope-egrepify.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;728dc1b7f31297876c3a3254fc6108108b6a9e9d&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;telescope-frecency.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;6b6565e6584c86ca501bdac485cbdc2ca64556e4&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;telescope-fzf-native.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;9ef21b2e6bb6ebeaf349a0781745549bbb870d27&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;telescope.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;fac83a556e7b710dc31433dec727361ca062dbe9&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;todo-comments.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;a7e39ae9e74f2c8c6dc4eea6d40c3971ae84752d&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;toggleterm.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;066cccf48a43553a80a210eb3be89a15d789d6e6&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;translate.nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;main&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;30cc9e9f339b61e7bd40bc1ba7af73ea193bf589&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;vim-illuminate&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;e522e0dd742a83506db0a72e1ced68c9c130f185&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;vim-test&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;eb5bd18d58a859e7d55d732d37e4e2b94fa50275&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;vim-to-github&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;9ea9c75b6cd48bd42823a39c56a05a2ff8161536&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;vim-vsnip&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;02a8e79295c9733434aab4e0e2b8c4b7cea9f3a9&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;vim-vsnip-integ&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;1914e72cf3de70df7f5dde476cd299aba2440aef&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;yode-nvim&#34;</span>: { <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#e6db74">&#34;develop&#34;</span>, <span style="color:#f92672">&#34;commit&#34;</span>: <span style="color:#e6db74">&#34;eaf3141b919c143ebf174d7ad180abd9c032b38c&#34;</span> }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+      </div></div>
+
+  
+  
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="https://blog.kyu08.com/pr-264/posts/ichiban-yasashii-agile-no-kyouhon/" class="button inline prev">
+        『いちばんやさしいアジャイル開発の教本』 を読んだ
+      </a>
+    
+    
+      <a href="https://blog.kyu08.com/pr-264/posts/cs50-jp/" class="button inline next">
+        CS50.jpでCSに入門した
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+        repo="kyu08/blog-comments"
+        issue-term="pathname"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>blog.kyu08.com</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/pr-264/bundle.min.js"></script>
+
+
+<font color="#808080">
+  <span>
+    This site uses Google Analytics for access analysis.
+    Google Analytics uses cookies to collect traffic data, but this traffic data is collected anonymously and does not personally identify you.
+    Cookies can be disabled in your browser.
+  </span>
+</font>
+
+
+<script src="https://blog.kyu08.com/pr-264/blogcard.js"></script>
+
+
+  
+</div>
+
+</body>
+</html>
