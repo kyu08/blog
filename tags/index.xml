@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Wed, 10 Dec 2025 00:04:41 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Dec 2025 19:21:35 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rust</title>
+      <link>https://blog.kyu08.com/tags/rust/</link>
+      <pubDate>Mon, 15 Dec 2025 19:21:35 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/rust/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>読書ログ</title>
+      <link>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</link>
+      <pubDate>Mon, 15 Dec 2025 19:21:35 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
     <item>
       <title>Kubernetes</title>
       <link>https://blog.kyu08.com/tags/kubernetes/</link>
@@ -24,16 +44,6 @@
       <pubDate>Wed, 10 Dec 2025 00:04:41 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/tags/%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>読書ログ</title>
-      <link>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</link>
-      <pubDate>Wed, 10 Dec 2025 00:04:41 +0900</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</guid>
       <description></description>
       <content></content>
     </item>
@@ -154,16 +164,6 @@
       <pubDate>Sun, 15 Jun 2025 05:00:00 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/tags/ocaml/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>Rust</title>
-      <link>https://blog.kyu08.com/tags/rust/</link>
-      <pubDate>Sun, 15 Jun 2025 05:00:00 +0000</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/rust/</guid>
       <description></description>
       <content></content>
     </item>

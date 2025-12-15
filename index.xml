@@ -7,7 +7,97 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Wed, 10 Dec 2025 00:04:41 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Dec 2025 19:21:35 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>『コンセプトから理解するRust』を読んだ</title>
+      <link>https://blog.kyu08.com/posts/understanding-rust-from-concepts/</link>
+      <pubDate>Mon, 15 Dec 2025 19:21:35 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/posts/understanding-rust-from-concepts/</guid>
+      <description>Rustのことをもっと理解りたくて『コンセプトから理解するRust』を読んだ。 https://gihyo.jp/book/2022/978-4-297-12562-2https://gihyo.jp/book/2022/978-4-297-12562-2 前提 筆者のRustの知識はTour of RustやThe Rust Programming La</description>
+      <content>&lt;p&gt;Rustのことをもっと理解りたくて『コンセプトから理解するRust』を読んだ。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://gihyo.jp/book/2022/978-4-297-12562-2&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://gihyo.jp/book/2022/978-4-297-12562-2&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://gihyo.jp/book/2022/978-4-297-12562-2&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://gihyo.jp/book/2022/978-4-297-12562-2&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;
+&lt;p&gt;筆者のRustの知識は&lt;a href=&#34;https://tourofrust.com/00_ja.html&#34; target=&#34;_blank&#34; &gt;Tour of Rust&lt;/a&gt;や&lt;a href=&#34;https://doc.rust-jp.rs/book-ja/&#34; target=&#34;_blank&#34; &gt;The Rust Programming Language&lt;/a&gt;を読んだり簡単なツール&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;を作ったことがある程度で、非同期処理をスラスラ書けたり、スムーズに人に教えたりできるレベルではない。&lt;/p&gt;
+&lt;p&gt;過去に&lt;a href=&#34;https://doc.rust-jp.rs/book-ja/&#34; target=&#34;_blank&#34; &gt;The Rust Programming Language&lt;/a&gt;を読んだときもスマートポインターまわりなどは飛ばしつつ読んでいたので本書での学びは多かった。&lt;/p&gt;
+&lt;h2 id=&#34;学び&#34;&gt;学び&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Box&lt;/code&gt;について理解した。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Rc&lt;/code&gt;, &lt;code&gt;RefCell&lt;/code&gt;, &lt;code&gt;Weak&lt;/code&gt;周りをなんとなく理解した。たぶん空では書けないが、エラーになったら調べて解決できるくらいの理解にはなったはず。&lt;/li&gt;
+&lt;li&gt;トレイト境界についてちょっとわかった。&lt;/li&gt;
+&lt;li&gt;クロージャ, &lt;code&gt;Fn&lt;/code&gt;, &lt;code&gt;FnMut&lt;/code&gt;, &lt;code&gt;FnOnce&lt;/code&gt;について理解できた。&lt;/li&gt;
+&lt;li&gt;簡単な非同期処理の仕組みがわかった。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;今まで全然わかっていなかったこれらの概念が少しだけわかった。やはりコードを書き散らかすだけでなく体系的なインプットも大事&amp;hellip;。（それはそう）&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;おそらく今後Rustを書いたりコンパイラと対話したりしていくともう少し深く理解していけると思う。&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;全体を通してコード例が豊富だったので手元で動かしながら理解しやすくてとてもありがたかった。&lt;/p&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;Rustの力がまた少しついた。&lt;/p&gt;
+&lt;p&gt;Rustを学ぶとRust自体への理解が深まるだけでなく、少なからずコンピュータの仕組みに近い低レイヤな部分の理解も一緒に深まるので勉強になる感覚があって楽しめた。&lt;/p&gt;
+&lt;p&gt;非同期処理周りはあまりちゃんと勉強したことがないので次はこの本を読んでみようと思う。（サンプルコードが主にRustで書かれているらしいのでこの本での学びも活かせそう）&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.oreilly.co.jp/books/9784873119595/&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://www.oreilly.co.jp/books/9784873119595/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://www.oreilly.co.jp/books/9784873119595/&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.oreilly.co.jp/books/9784873119595/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;おまけ&#34;&gt;おまけ&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The name &amp;ldquo;Tokio&amp;rdquo; is derived from Tokyo and mio, and the Tokio logo vaguely resembles the city emblem of Tokyo.&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://en.wikipedia.org/wiki/Tokio_%28software%29&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://en.wikipedia.org/wiki/Tokio_%28software%29&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://en.wikipedia.org/wiki/Tokio_(software)&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://en.wikipedia.org/wiki/Tokio_(software)&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Rustの非同期ランタイムのtokioの名前の由来の一部は東京らしい。&lt;/p&gt;
+&lt;p&gt;あとロゴも東京都の紋章を彷彿とさせるデザインになっているらしい。（実際調べてみたら似ているというかほぼ同じだったw）&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;fzf-make&lt;/a&gt;というTUIツールを書いている。あとそういえば&lt;a href=&#34;https://github.com/kyu08/sunaba/tree/main/rust/nand2tetris&#34; target=&#34;_blank&#34; &gt;nand2tetris&lt;/a&gt;もRustで書いていた。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;趣味のプログラミングなのでRustを覚え始めた頃は楽しさ優先でまあ動けばOKという気持ちで書いていたが最近になってちゃんと理解したくなってきたので学んでいる。&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;あるいは各種概念を自作するという選択肢もあるかもしれない。Arcとか非同期ランタイムとか&amp;hellip;。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34;&gt;
+&lt;p&gt;他には&lt;a href=&#34;https://www.oreilly.co.jp/books/9784814400515/&#34; target=&#34;_blank&#34; &gt;詳解 Rustアトミック操作とロック&lt;/a&gt;、&lt;a href=&#34;https://www.oreilly.co.jp/books/9784814401185/&#34; target=&#34;_blank&#34; &gt;Async Rust
+&lt;/a&gt;、&lt;a href=&#34;https://www.kodansha.co.jp/book/products/0000398182&#34; target=&#34;_blank&#34; &gt;RustによるWebアプリケーション開発　設計からリリース・運用まで
+&lt;/a&gt;あたりもとても気になっている。&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
     <item>
       <title>『つくって、壊して、直して学ぶ Kubernetes入門』を読んだ</title>
       <link>https://blog.kyu08.com/posts/bbf_kubernetes/</link>
