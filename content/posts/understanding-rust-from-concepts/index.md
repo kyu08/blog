@@ -21,7 +21,7 @@ Rustのことをもっと理解りたくて『コンセプトから理解するR
 https://gihyo.jp/book/2022/978-4-297-12562-2
 
 ## 前提
-筆者のRustの知識は[Tour of Rust](https://tourofrust.com/00_ja.html)や[The Rust Programming Language](https://doc.rust-jp.rs/book-ja/)を読んだり[簡単なTUIツール](https://github.com/kyu08/fzf-make)を作ったことがある程度で、非同期処理をスラスラ書けたり、スムーズに人に教えたりできるレベルではない。
+筆者のRustの知識は[Tour of Rust](https://tourofrust.com/00_ja.html)や[The Rust Programming Language](https://doc.rust-jp.rs/book-ja/)を読んだり簡単なツール[^1]を作ったことがある程度で、非同期処理をスラスラ書けたり、スムーズに人に教えたりできるレベルではない。
 
 [The Rust Programming Language](https://doc.rust-jp.rs/book-ja/)もスマートポインターまわりなどを飛ばしつつ読んでいたので本書での学びは多かった。
 
@@ -37,7 +37,11 @@ https://gihyo.jp/book/2022/978-4-297-12562-2
 全体を通してコード例が豊富だったので手元で動かしながら理解しやすくてとてもありがたかった。
 
 ## まとめ
-非同期処理周りはあまりちゃんと勉強したことがないので次はこの本を読んでみようと思う。（サンプルコードが主にRustで書かれているらしいのでこの本での学びも活かせそう）[^1]
+Rustの力がまた少しついた。（間違ってもﾁｮｯﾄﾜｶﾙとか言えない）
+
+Rustを学ぶとRust自体への理解が深まるだけでなく、少なからずコンピュータの仕組みに近い低レイヤな部分の理解も一緒に深まるので勉強になる感覚があって楽しい、という感覚を改めて感じた。
+
+非同期処理周りはあまりちゃんと勉強したことがないので次はこの本を読んでみようと思う。（サンプルコードが主にRustで書かれているらしいのでこの本での学びも活かせそう）[^2]
 
 https://www.oreilly.co.jp//books/9784873119595/
 
@@ -51,6 +55,7 @@ Rustの非同期ランタイムのtokioの名前の由来の一部は東京ら�
 
 あとロゴも東京都の紋章を彷彿とさせるデザインになっているらしい。（実際調べてみたら似ているというかほぼ同じだったw）
 
-[^1]: [詳解 Rustアトミック操作とロック](https://www.oreilly.co.jp/books/9784814400515/)、[Async Rust
+[^1]: [fzf-make](https://github.com/kyu08/fzf-make)というTUIツールを書いている。あとそういえば[nand2tetris](https://github.com/kyu08/sunaba/tree/main/rust/nand2tetris)もRustで書いていた。
+[^2]: [詳解 Rustアトミック操作とロック](https://www.oreilly.co.jp/books/9784814400515/)、[Async Rust
 ](https://www.oreilly.co.jp/books/9784814401185/)、[RustによるWebアプリケーション開発　設計からリリース・運用まで
 ](https://www.kodansha.co.jp/book/products/0000398182)あたりもとても気になっている。
