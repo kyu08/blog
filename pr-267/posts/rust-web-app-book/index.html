@@ -214,7 +214,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2025/12/21</time>
       
-    <span class="post-reading-time">2 min read (548 words)</span></div>
+    <span class="post-reading-time">2 min read (938 words)</span></div>
 
   
     <span class="post-tags">
@@ -254,10 +254,46 @@ if (!doNotTrack) {
 <p>Rustという言語の開発体験がかなり好きでRustでサーバーサイドを書くのがどんな感じなのか純粋に気になっていたので読んでみた。（筆者がサーバーサイドの開発でガッツリ書いたことがあるのはGoのみというバックグラウンド）</p>
 <h2 id="本書の概要">本書の概要<a href="#本書の概要" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>本書はRustで蔵書管理アプリケーションのサーバーサイドを実装しながらRustでのWebアプリケーション開発の仕方を学ぶことができる本。</p>
-<p>Web開発で有用なクレートの紹介やコンパイル時間短縮の工夫、RustでどうDIを実装すべきかなども紹介されている。</p>
-<p>設計面ではレイヤードアーキテクチャを採用しており、レイヤー間の責務などが考慮された設計になっている。その意味でも実際の開発に近い内容になっていると言えるかもしれない。</p>
-<p>ステップごとのコード差分が丁寧に書かれているので、本書に従って実装を進めるとWeb Serverの実装が出来上がる（はず）。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>ただ動くものを作る、というよりは業務の実際のサーバーサイドの開発でよく出くわす課題をRustでどう開発するかが豊富に紹介されていた。(DIやエラーハンドリングなど)</p>
+<p>設計面ではレイヤードアーキテクチャを採用しており、レイヤー間の責務などが考慮された設計になっている。その意味でも実務での開発に近い内容になっていると言えるかもしれない。</p>
+<p>あとはステップごとのコード差分が丁寧に書かれているので、本書に従って実装を進めるとWeb Serverの実装が出来上がる（はず）。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <h2 id="学び">学び<a href="#学び" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>コンパイル時間短縮の工夫
+<ul>
+<li>レイヤーごとにクレートを分割することで変更があったクレートだけ再コンパイルすればよくなる。</li>
+</ul>
+</li>
+<li>エラーハンドリングの方法
+<ul>
+<li>基本はanyhowで扱っておいて、クライアントに返すエラーはthiserrorで定義する</li>
+</ul>
+</li>
+<li>Web開発で有用なクレート
+<!-- raw HTML omitted -->
+<ul>
+<li><a href="https://crates.io/crates/derive-new" target="_blank" ><code>derive_new</code></a>: <code>new</code>関数を実装してくれる。デフォルト値の設定などもできる模様。</li>
+<li><a href="https://crates.io/crates/serde" target="_blank" ><code>serde</code></a>: 言わずとしれたシリアライズ/デシリアライズのためのクレート。</li>
+<li><a href="https://crates.io/crates/sqlx" target="_blank" ><code>sqlx</code></a>: SQLを型安全に扱うことができる。</li>
+</ul>
+</li>
+<li>RustでどうDIを実装すべきか
+<ul>
+<li>ジェネリクスを用いてDIするパターン（静的ディスパッチ）
+<ul>
+<li>記述量が増える</li>
+<li>動的ディスパッチと比較するとパフォーマンスが高い</li>
+</ul>
+</li>
+<li>トレイトオブジェクト（<code>dyn &lt;トレイト名&gt;</code>）を利用するパターン（動的ディスパッチ）
+<ul>
+<li>記述量が減る</li>
+<li>静的ディスパッチと比較するとパフォーマンス面で不利</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="goとの比較">Goとの比較<a href="#goとの比較" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>注釈かく</p>
 <ul>
