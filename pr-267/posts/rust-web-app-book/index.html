@@ -111,7 +111,7 @@ if (!doNotTrack) {
 <meta property="og:image:height" content="630">
 
 
-  <meta property="article:published_time" content="2025-12-21 17:13:06 &#43;0900 &#43;0900" />
+  <meta property="article:published_time" content="2025-12-22 00:13:06 &#43;0900 &#43;0900" />
 
 
 
@@ -212,9 +212,9 @@ if (!doNotTrack) {
   <h1 class="post-title">
     <a href="https://blog.kyu08.com/pr-267/posts/rust-web-app-book/">『RustによるWebアプリケーション開発 設計からリリース・運用まで』を読んだ</a>
   </h1>
-  <div class="post-meta"><time class="post-date">2025/12/21</time>
+  <div class="post-meta"><time class="post-date">2025/12/22</time>
       
-    <span class="post-reading-time">2 min read (938 words)</span></div>
+    <span class="post-reading-time">6 min read (2538 words)</span></div>
 
   
     <span class="post-tags">
@@ -242,7 +242,13 @@ if (!doNotTrack) {
     <li><a href="#モチベーション">モチベーション</a></li>
     <li><a href="#本書の概要">本書の概要</a></li>
     <li><a href="#学び">学び</a></li>
-    <li><a href="#goとの比較">Goとの比較</a></li>
+    <li><a href="#実際にrustでweb-serverを書いてみた感想主にgoとの比較">実際にRustでWeb Serverを書いてみた感想（主にGoとの比較）</a>
+      <ul>
+        <li><a href="#ポジ">ポジ</a></li>
+        <li><a href="#ネガ">ネガ</a></li>
+      </ul>
+    </li>
+    <li><a href="#まとめ">まとめ</a></li>
   </ul>
 </nav>
     </div>
@@ -261,20 +267,20 @@ if (!doNotTrack) {
 <ul>
 <li>コンパイル時間短縮の工夫
 <ul>
-<li>レイヤーごとにクレートを分割することで変更があったクレートだけ再コンパイルすればよくなる。</li>
+<li>アプリケーションを複数のクレートを分割することで変更があったクレートだけ再コンパイルすればよくなるためコンパイル時間が短縮できる。</li>
+<li>たとえば本書ではレイヤードアーキテクチャのレイヤーごとにクレートを分割していた。</li>
+</ul>
+</li>
+<li>Web開発で有用なクレート
+<ul>
+<li><a href="https://crates.io/crates/derive-new" target="_blank" ><code>derive_new</code></a>: <code>new</code>関数を実装してくれる。デフォルト値の設定などもできる模様。</li>
+<li><a href="https://crates.io/crates/serde" target="_blank" ><code>serde</code></a>: 言わずと知れたシリアライズ/デシリアライズのためのクレート。</li>
+<li><a href="https://crates.io/crates/sqlx" target="_blank" ><code>sqlx</code></a>: SQLを型安全に扱うことができる。</li>
 </ul>
 </li>
 <li>エラーハンドリングの方法
 <ul>
-<li>基本はanyhowで扱っておいて、クライアントに返すエラーはthiserrorで定義する</li>
-</ul>
-</li>
-<li>Web開発で有用なクレート
-<!-- raw HTML omitted -->
-<ul>
-<li><a href="https://crates.io/crates/derive-new" target="_blank" ><code>derive_new</code></a>: <code>new</code>関数を実装してくれる。デフォルト値の設定などもできる模様。</li>
-<li><a href="https://crates.io/crates/serde" target="_blank" ><code>serde</code></a>: 言わずとしれたシリアライズ/デシリアライズのためのクレート。</li>
-<li><a href="https://crates.io/crates/sqlx" target="_blank" ><code>sqlx</code></a>: SQLを型安全に扱うことができる。</li>
+<li>クライアントに返すエラーはthiserrorで定義し、それ以外のエラーはanyhowを使って表現する。</li>
 </ul>
 </li>
 <li>RustでどうDIを実装すべきか
@@ -289,22 +295,88 @@ if (!doNotTrack) {
 <ul>
 <li>記述量が減る</li>
 <li>静的ディスパッチと比較するとパフォーマンス面で不利</li>
+<li>本書ではWeb開発において動的ディスパッチのコストが問題になることは少ないことを理由にこちらを採用していた。</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<h2 id="goとの比較">Goとの比較<a href="#goとの比較" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p>注釈かく</p>
+<h2 id="実際にrustでweb-serverを書いてみた感想主にgoとの比較">実際にRustでWeb Serverを書いてみた感想（主にGoとの比較）<a href="#実際にrustでweb-serverを書いてみた感想主にgoとの比較" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>※なお、筆者のRustスキルは趣味レベルなのでRustを深く理解したうえでの感想ではありません。間違っている点や他の重要な観点などがある可能性があります。また、個人的なメモ用途で書いているので説明を端折っている箇所がある可能性があります。</p>
+<h3 id="ポジ">ポジ<a href="#ポジ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<!-- raw HTML omitted -->
 <ul>
-<li>Rustにはそこまで詳しくない</li>
-<li>あくまでチュートリアルをなぞっただけなので他の観点もあるはず</li>
+<li>enumやパターンマッチ等を使って仕様をスマートに書ける。</li>
+<li>null安全なので他の言語のnull相当の概念を型安全に扱うことができる。</li>
+<li>変数がデフォルトでimmutableなので、mutableな変数を目立たせやすいし、自然とimmutableなコードが書きやすい。</li>
+<li>あらゆるシンボルがデフォルトでprivateなのでカプセル化するようなコードが若干書きやすい。（意識的に<code>pub</code>を付けなければprivateになってくれる点で強い理由がなければprivateになりやすくなる、と考えている）</li>
 </ul>
+<h3 id="ネガ">ネガ<a href="#ネガ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>コンパイル時間が長い</li>
+<li>Goに慣れているとRustのマクロやアトリビュートが若干黒魔術的に感じる。これらに慣れるまでは認知負荷が高そう。こういうのとか。（『RustによるWebアプリケーション開発 設計からリリース・運用まで』より引用）
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">#[derive(Error, Debug)]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">AppError</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;{0}&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    UnprocessableEntity(String),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;{0}&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    EntityNotFound(String),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;{0}&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    ValidationError(<span style="color:#75715e">#[from]</span> garde::Report),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;トランザクションを実行できませんでした。&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    TransactionError(<span style="color:#75715e">#[source]</span> sqlx::Error),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;データベース処理実行中にエラーが発生しました。&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    SpecificOperationError(<span style="color:#75715e">#[source]</span> sqlx::Error),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;No rows affected: {0}&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    NoRowsAffectedError(String),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;{0}&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    KeyValueStoreError(<span style="color:#75715e">#[from]</span> redis::RedisError),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;{0}&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    BcryptError(<span style="color:#75715e">#[from]</span> bcrypt::BcryptError),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;{0}&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    ConvertToUuidError(<span style="color:#75715e">#[from]</span> uuid::Error),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;ログインに失敗しました&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    UnauthenticatedError,
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;認可情報が誤っています&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    UnauthorizedError,
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;許可されていない操作です&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    ForbiddenOperation,
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;{0}&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    ConversionEntityError(String),
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>コンパイル時間短縮のためにcrate分割が推奨されているが、依存関係の増減があるたびに<code>Cargo.toml</code>を手書きで編集しないといけないのが若干面倒
+<ul>
+<li>もしかしたらコードアクション等、エディタの支援が得られるのかもしれないがそこまで調べられていない。</li>
+</ul>
+</li>
+<li>DIが若干面倒
+<ul>
+<li>Goならinterface使うだけなので楽</li>
+</ul>
+</li>
+<li>非同期処理
+<ul>
+<li>これもRustの非同期処理の仕組みへの理解<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>が大変浅いのであまり具体的に書けないが、自分の現状のRustスキルだとGoに比べて意図通りに動く非同期処理を書くのに数倍時間がかかる。</li>
+</ul>
+</li>
+</ul>
+<h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>本書を読むまではRustがWebサーバーサイド開発の銀の弾丸、とまでは言わないがかなりいい選択肢の1つのように思えていた。</p>
+<p>しかし実際に本書でRustでサーバーを書いてみるとGoのシンプルさ、手軽さの良さを改めて認識した。</p>
+<p>少なくとも今の自分のRustスキルだと（Rustの方が型の表現力が高いとはいえ）Goを採用したほうが長期的にも開発効率が高そうだと感じた。</p>
+<p>Rustの基礎文法を習得した自分がこう感じたので、Rustの経験が少ない組織にRustを導入することは少なくとも自分には難しそうだと感じた。<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1">
 <p>5章途中までしかやっていないので「はず」と書いている。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>あるいは単にコンピュータの仕組みへの理解が浅いとも言えるのかもしれない。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>言い換えると、要件にもよるがシンプルなWebアプリケーションであれば基本的にはGoの方がビジネス成果を継続的に出しやすそうだと感じた。例えばパフォーマンスが極めて重要だったり、サーバーコストを少しでも圧縮する必要があったり、ドメインロジックが超複雑だったりする場合は選択肢になるかもしれないなと思っている。あとはRustに精通したメンバーの割合がかなり多く、Goよりも組織的に（かつ継続的に）生産性が高まりそうな環境であれば採用の後押しになるかも知れない。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
