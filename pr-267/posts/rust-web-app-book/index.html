@@ -214,7 +214,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2025/12/22</time>
       
-    <span class="post-reading-time">6 min read (2538 words)</span></div>
+    <span class="post-reading-time">5 min read (2444 words)</span></div>
 
   
     <span class="post-tags">
@@ -302,7 +302,7 @@ if (!doNotTrack) {
 </li>
 </ul>
 <h2 id="実際にrustでweb-serverを書いてみた感想主にgoとの比較">実際にRustでWeb Serverを書いてみた感想（主にGoとの比較）<a href="#実際にrustでweb-serverを書いてみた感想主にgoとの比較" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p>※なお、筆者のRustスキルは趣味レベルなのでRustを深く理解したうえでの感想ではありません。間違っている点や他の重要な観点などがある可能性があります。また、個人的なメモ用途で書いているので説明を端折っている箇所がある可能性があります。</p>
+<p>※なお、筆者のRustスキルは趣味レベルなのでRustを深く理解したうえでの感想ではありません。間違っている点や他の重要な観点などがある可能性があります。また、主には個人的な考えのスナップショットを自分用に残す目的で書いているので説明を端折っている箇所がある可能性があります。</p>
 <h3 id="ポジ">ポジ<a href="#ポジ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <!-- raw HTML omitted -->
 <ul>
@@ -362,10 +362,9 @@ if (!doNotTrack) {
 </li>
 </ul>
 <h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p>本書を読むまではRustがWebサーバーサイド開発の銀の弾丸、とまでは言わないがかなりいい選択肢の1つのように思えていた。</p>
-<p>しかし実際に本書でRustでサーバーを書いてみるとGoのシンプルさ、手軽さの良さを改めて認識した。</p>
-<p>少なくとも今の自分のRustスキルだと（Rustの方が型の表現力が高いとはいえ）Goを採用したほうが長期的にも開発効率が高そうだと感じた。</p>
-<p>Rustの基礎文法を習得した自分がこう感じたので、Rustの経験が少ない組織にRustを導入することは少なくとも自分には難しそうだと感じた。<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<p>本書を読むまではRustがWebサーバーサイド開発の銀の弾丸、とまでは言わないもののかなりいい選択肢の1つのように思えていた。主に型の表現力のお陰でドメインがうまく表現できたり、所有権などの言語機能や発達したリンターによって内部品質を高く保つことができ、その結果開発生産性が高まると考えていた。</p>
+<p>しかし実際に本書でRustでサーバーを書いてみると上記のメリットはありつつも、意外とRustでの実装でも手間や複雑なポイントがありGoのシンプルさ、手軽さの良さを改めて認識した。</p>
+<p>結果はともあれ実際にRustでサーバーを書くのがどんな感じなのかを知ることが本書を読んだ目的だったので解像度を高めることができてよかった。<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -376,7 +375,7 @@ if (!doNotTrack) {
 <p>あるいは単にコンピュータの仕組みへの理解が浅いとも言えるのかもしれない。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3">
-<p>言い換えると、要件にもよるがシンプルなWebアプリケーションであれば基本的にはGoの方がビジネス成果を継続的に出しやすそうだと感じた。例えばパフォーマンスが極めて重要だったり、サーバーコストを少しでも圧縮する必要があったり、ドメインロジックが超複雑だったりする場合は選択肢になるかもしれないなと思っている。あとはRustに精通したメンバーの割合がかなり多く、Goよりも組織的に（かつ継続的に）生産性が高まりそうな環境であれば採用の後押しになるかも知れない。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>もちろんもっとDeep Diveしたら違う感想を持つかも知れないが、あくまで今時点の自分の感想としては上記のような感じ。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
