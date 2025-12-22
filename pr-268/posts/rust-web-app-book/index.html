@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+    <title>『RustによるWebアプリケーション開発 設計からリリース・運用まで』を読んだ :: blog.kyu08.com</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="『RustによるWebアプリケーション開発 設計からリリース・運用まで』を読んだので感じたことをメモしておく。 https://www.kodansha.co.jp/book/products/0000398182https://www.kodansha.co.jp/book/products/0000398182 モチベーション Rustという言" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://blog.kyu08.com/pr-268/posts/rust-web-app-book/" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BDQ408J45J', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/post.min.f049fef13af1dfd5ea526cc59ea5a3fc7be11a05911ca7198c5bb9225250119c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+<link rel="stylesheet" href="https://blog.kyu08.com/pr-268/style.css">
+
+
+<link rel="shortcut icon" href="https://blog.kyu08.com/pr-268/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/pr-268/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="kyu08_" />
+
+
+
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="『RustによるWebアプリケーション開発 設計からリリース・運用まで』を読んだ">
+<meta property="og:description" content="『RustによるWebアプリケーション開発 設計からリリース・運用まで』を読んだので感じたことをメモしておく。 https://www.kodansha.co.jp/book/products/0000398182https://www.kodansha.co.jp/book/products/0000398182 モチベーション Rustという言" />
+<meta property="og:url" content="https://blog.kyu08.com/pr-268/posts/rust-web-app-book/" />
+<meta property="og:site_name" content="blog.kyu08.com" />
+
+
+  
+  
+    
+  
+
+
+  <meta property="og:image" content="https://blog.kyu08.com/pr-268/posts/rust-web-app-book/cover.png">
+  <meta name="twitter:image" content="https://blog.kyu08.com/pr-268/posts/rust-web-app-book/cover.png">
+  <meta name="twitter:image:alt" content="『RustによるWebアプリケーション開発 設計からリリース・運用まで』を読んだ">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+  <meta property="article:published_time" content="2025-12-22 00:13:06 &#43;0900 &#43;0900" />
+
+
+
+
+
+
+
+
+
+<link rel="author" href="http://www.hatena.ne.jp/kyu08/" />
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ . }}');
+</script>
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    blog.kyu08.com
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/pr-268/tags/diary/">_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-268/about">about</a></li>
+        
+      
+        
+          <li><a href="/pr-268/index.xml">rss</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/pr-268/tags/diary/" >_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-268/about" >about</a></li>
+        
+      
+        
+          <li><a href="/pr-268/index.xml" >rss</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://blog.kyu08.com/pr-268/posts/rust-web-app-book/">『RustによるWebアプリケーション開発 設計からリリース・運用まで』を読んだ</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2025/12/22</time>
+      
+    <span class="post-reading-time">6 min read (2549 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://blog.kyu08.com/pr-268/tags/rust/">rust</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-268/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/">読書ログ</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="/pr-268/posts/rust-web-app-book/cover.png"
+    class="post-cover"
+    alt="『RustによるWebアプリケーション開発 設計からリリース・運用まで』を読んだ"
+    title="Cover Image" />
+
+
+  
+    <div class="table-of-contents">
+      <h2>
+        目次
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#モチベーション">モチベーション</a></li>
+    <li><a href="#本書の概要">本書の概要</a></li>
+    <li><a href="#学び">学び</a></li>
+    <li><a href="#実際にrustでweb-serverを書いてみた感想主にgoとの比較">実際にRustでWeb Serverを書いてみた感想（主にGoとの比較）</a>
+      <ul>
+        <li><a href="#ポジ">ポジ</a></li>
+        <li><a href="#ネガ">ネガ</a></li>
+      </ul>
+    </li>
+    <li><a href="#まとめ">まとめ</a></li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <p>『RustによるWebアプリケーション開発 設計からリリース・運用まで』を読んだので感じたことをメモしておく。</p>
+<p><div class="blogcard" data-url="https://www.kodansha.co.jp/book/products/0000398182" data-auto-fetch="true">
+  <a href="https://www.kodansha.co.jp/book/products/0000398182" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://www.kodansha.co.jp/book/products/0000398182</div><div class="blogcard-url">https://www.kodansha.co.jp/book/products/0000398182</div>
+    </div>
+  </a>
+</div>
+</p>
+<h2 id="モチベーション">モチベーション<a href="#モチベーション" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Rustという言語の開発体験がかなり好きでRustでサーバーサイドを書くのがどんな感じなのか純粋に気になっていたので読んでみた。（筆者がサーバーサイドの開発でガッツリ書いたことがあるのはほぼGoのみで、RustはCLIやTUIの開発にしか使ったことがないというバックグラウンド）</p>
+<h2 id="本書の概要">本書の概要<a href="#本書の概要" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>本書はRustで蔵書管理アプリケーションのサーバーサイドを実装しながらRustでのWebアプリケーション開発の仕方を学ぶことができる本。</p>
+<p>ただ動くものを作る、というよりは業務の実際のサーバーサイドの開発でよく出くわす課題をRustではどう実装するのかが豊富に紹介されている。(DIやエラーハンドリングなど)</p>
+<p>設計面ではレイヤードアーキテクチャを採用しており、レイヤー間の責務などが考慮された設計になっている。その意味でも実務での開発に近い内容になっていると言える。</p>
+<p>あとはステップごとのコード差分が丁寧に書かれているので、本書に従って実装を進めるとWeb Serverの実装が出来上がる（はず）。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<h2 id="学び">学び<a href="#学び" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>コンパイル時間短縮の工夫
+<ul>
+<li>アプリケーションを複数のクレートに分割することで変更があったクレートだけ再コンパイルすればよくなるためコンパイル時間が短縮できる。</li>
+<li>たとえば本書ではレイヤードアーキテクチャのレイヤーごとにクレートを分割していた。</li>
+</ul>
+</li>
+<li>Web開発で有用なクレート
+<ul>
+<li><a href="https://crates.io/crates/derive-new" target="_blank" ><code>derive_new</code></a>: <code>new</code>関数を実装してくれる。デフォルト値の設定などもできる模様。</li>
+<li><a href="https://crates.io/crates/serde" target="_blank" ><code>serde</code></a>: 言わずと知れたシリアライズ/デシリアライズのためのクレート。</li>
+<li><a href="https://crates.io/crates/sqlx" target="_blank" ><code>sqlx</code></a>: SQLを型安全に扱うことができる。</li>
+</ul>
+</li>
+<li>エラーハンドリングの方法
+<ul>
+<li>クライアントに返すエラーはthiserrorで定義し、それ以外のエラーはanyhowを使って表現する。</li>
+</ul>
+</li>
+<li>RustでどうDIを実装すべきか
+<ul>
+<li>ジェネリクスを用いてDIするパターン（静的ディスパッチ）
+<ul>
+<li>動的ディスパッチと比較すると記述量が増える</li>
+<li>動的ディスパッチと比較するとパフォーマンスが高い</li>
+</ul>
+</li>
+<li>トレイトオブジェクト（<code>dyn &lt;トレイト名&gt;</code>）を利用するパターン（動的ディスパッチ）
+<ul>
+<li>静的ディスパッチと比較すると記述量が減る</li>
+<li>静的ディスパッチと比較するとパフォーマンス面で不利</li>
+<li>本書ではWeb開発において動的ディスパッチのコストが問題になることは少ないことを理由にこちらを採用していた。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="実際にrustでweb-serverを書いてみた感想主にgoとの比較">実際にRustでWeb Serverを書いてみた感想（主にGoとの比較）<a href="#実際にrustでweb-serverを書いてみた感想主にgoとの比較" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>※なお、筆者のRustスキルは趣味レベルなのでRustを深く理解したうえでの感想ではありません。間違っている点や他の重要な観点などがある可能性があります。また、主には個人的な考えのスナップショットを自分用に残す目的で書いているので説明を端折っている箇所がある可能性があります。</p>
+<h3 id="ポジ">ポジ<a href="#ポジ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>enumやパターンマッチ等を使って仕様をスマートに書ける。</li>
+<li>null安全なので他の言語のnull相当の概念を型安全に扱うことができる。</li>
+<li>if式を始めとした関数型ライクな言語機能のおかげで開発体験が良い。</li>
+<li>変数がデフォルトでimmutableなので、mutableな変数を目立たせやすいし、自然とimmutableなコードが書きやすい。</li>
+<li>あらゆるシンボルがデフォルトでprivateなのでカプセル化するようなコードが若干書きやすい。（意識的に<code>pub</code>を付けなければprivateになってくれる点で強い理由がなければprivateになりやすくなる、と考えている）</li>
+</ul>
+<h3 id="ネガ">ネガ<a href="#ネガ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>コンパイル時間が長い。</li>
+<li>コンパイル時間短縮のためにcrate分割が推奨されているが、依存関係の増減があるたびに<code>Cargo.toml</code>を手書きで編集しないといけないのが若干面倒。
+<ul>
+<li>もしかしたらコードアクション等、エディタの支援が得られるのかもしれないがそこまで調べられていない。</li>
+</ul>
+</li>
+<li>Goに慣れているとRustのマクロやアトリビュートが若干黒魔術的に感じる。これらに慣れるまでは認知負荷が高そう。例えば以下。（『RustによるWebアプリケーション開発 設計からリリース・運用まで』より引用）
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">#[derive(Error, Debug)]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">AppError</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;{0}&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    UnprocessableEntity(String),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;{0}&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    EntityNotFound(String),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;{0}&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    ValidationError(<span style="color:#75715e">#[from]</span> garde::Report),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;トランザクションを実行できませんでした。&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    TransactionError(<span style="color:#75715e">#[source]</span> sqlx::Error),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;データベース処理実行中にエラーが発生しました。&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    SpecificOperationError(<span style="color:#75715e">#[source]</span> sqlx::Error),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;No rows affected: {0}&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    NoRowsAffectedError(String),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;{0}&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    KeyValueStoreError(<span style="color:#75715e">#[from]</span> redis::RedisError),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;{0}&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    BcryptError(<span style="color:#75715e">#[from]</span> bcrypt::BcryptError),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;{0}&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    ConvertToUuidError(<span style="color:#75715e">#[from]</span> uuid::Error),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;ログインに失敗しました&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    UnauthenticatedError,
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;認可情報が誤っています&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    UnauthorizedError,
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;許可されていない操作です&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    ForbiddenOperation,
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;{0}&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>    ConversionEntityError(String),
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>DIが若干複雑
+<ul>
+<li>Goならinterface使うだけなので考えることが少なくて済む。</li>
+</ul>
+</li>
+<li>非同期処理
+<ul>
+<li>これもRustの非同期処理の仕組みへの理解<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>が大変浅いのであまり具体的に書けないが、自分の現状のRustスキルだとGoに比べて意図通りに動く非同期処理を書くのに数倍時間がかかる。</li>
+</ul>
+</li>
+</ul>
+<h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>本書を読むまではRustがWebサーバーサイド開発の銀の弾丸、とまでは言わないもののかなりいい選択肢の1つのように思えていた。主に型の表現力のおかげでドメインがうまく表現できたり、所有権などの言語機能や発達したリンターによって内部品質を高く保つことができ、その結果開発生産性が高まると考えていた。</p>
+<p>しかし実際に本書でRustでサーバーを書いてみると上記のメリットはありつつも意外とRustでの実装でも手間や複雑なポイントがあり、Goのシンプルさや手軽さの良さを改めて認識した。</p>
+<p>結果はともあれ実際にRustでサーバーを書くのがどんな感じなのかを知ることが本書を読んだ目的だったので解像度を高めることができてよかった。<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>5章の途中までしかやっていないので「はず」と書いている。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>あるいは単にコンピュータの仕組みへの理解が浅いとも言えるのかもしれない。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>もちろんもっとDeep Diveしたら違う感想を持つかも知れないが、あくまで今時点の自分の感想としては上記のような感じ。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+      </div></div>
+
+  
+  
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="https://blog.kyu08.com/pr-268/posts/looking-back-on-2025/" class="button inline prev">
+        2025年を振り返る
+      </a>
+    
+    
+      <a href="https://blog.kyu08.com/pr-268/posts/understanding-rust-from-concepts/" class="button inline next">
+        『コンセプトから理解するRust』を読んだ
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+        repo="kyu08/blog-comments"
+        issue-term="pathname"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>blog.kyu08.com</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/pr-268/bundle.min.js"></script>
+
+
+<font color="#808080">
+  <span>
+    This site uses Google Analytics for access analysis.
+    Google Analytics uses cookies to collect traffic data, but this traffic data is collected anonymously and does not personally identify you.
+    Cookies can be disabled in your browser.
+  </span>
+</font>
+
+
+<script src="https://blog.kyu08.com/pr-268/blogcard.js"></script>
+
+
+  
+</div>
+
+</body>
+</html>
