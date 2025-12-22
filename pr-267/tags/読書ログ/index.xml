@@ -67,6 +67,7 @@
 &lt;ul&gt;
 &lt;li&gt;enumやパターンマッチ等を使って仕様をスマートに書ける。&lt;/li&gt;
 &lt;li&gt;null安全なので他の言語のnull相当の概念を型安全に扱うことができる。&lt;/li&gt;
+&lt;li&gt;if式を始めとした関数型ライクな言語機能のお陰で開発体験が良い。&lt;/li&gt;
 &lt;li&gt;変数がデフォルトでimmutableなので、mutableな変数を目立たせやすいし、自然とimmutableなコードが書きやすい。&lt;/li&gt;
 &lt;li&gt;あらゆるシンボルがデフォルトでprivateなのでカプセル化するようなコードが若干書きやすい。（意識的に&lt;code&gt;pub&lt;/code&gt;を付けなければprivateになってくれる点で強い理由がなければprivateになりやすくなる、と考えている）&lt;/li&gt;
 &lt;/ul&gt;
