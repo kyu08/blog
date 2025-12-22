@@ -214,7 +214,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2025/12/22</time>
       
-    <span class="post-reading-time">5 min read (2443 words)</span></div>
+    <span class="post-reading-time">5 min read (2441 words)</span></div>
 
   
     <span class="post-tags">
@@ -313,7 +313,12 @@ if (!doNotTrack) {
 <h3 id="ネガ">ネガ<a href="#ネガ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <ul>
 <li>コンパイル時間が長い</li>
-<li>Goに慣れているとRustのマクロやアトリビュートが若干黒魔術的に感じる。これらに慣れるまでは認知負荷が高そう。こういうのとか。（『RustによるWebアプリケーション開発 設計からリリース・運用まで』より引用）
+<li>コンパイル時間短縮のためにcrate分割が推奨されているが、依存関係の増減があるたびに<code>Cargo.toml</code>を手書きで編集しないといけないのが若干面倒
+<ul>
+<li>もしかしたらコードアクション等、エディタの支援が得られるのかもしれないがそこまで調べられていない。</li>
+</ul>
+</li>
+<li>Goに慣れているとRustのマクロやアトリビュートが若干黒魔術的に感じる。これらに慣れるまでは認知負荷が高そう。例えば以下。（『RustによるWebアプリケーション開発 設計からリリース・運用まで』より引用）
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">#[derive(Error, Debug)]</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">AppError</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[error(</span><span style="color:#e6db74">&#34;{0}&#34;</span><span style="color:#75715e">)]</span>
@@ -344,11 +349,6 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>    ConversionEntityError(String),
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div></li>
-<li>コンパイル時間短縮のためにcrate分割が推奨されているが、依存関係の増減があるたびに<code>Cargo.toml</code>を手書きで編集しないといけないのが若干面倒
-<ul>
-<li>もしかしたらコードアクション等、エディタの支援が得られるのかもしれないがそこまで調べられていない。</li>
-</ul>
-</li>
 <li>DIが若干面倒
 <ul>
 <li>Goならinterface使うだけなので楽</li>

@@ -73,7 +73,12 @@
 &lt;h3 id=&#34;ネガ&#34;&gt;ネガ&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;コンパイル時間が長い&lt;/li&gt;
-&lt;li&gt;Goに慣れているとRustのマクロやアトリビュートが若干黒魔術的に感じる。これらに慣れるまでは認知負荷が高そう。こういうのとか。（『RustによるWebアプリケーション開発 設計からリリース・運用まで』より引用）
+&lt;li&gt;コンパイル時間短縮のためにcrate分割が推奨されているが、依存関係の増減があるたびに&lt;code&gt;Cargo.toml&lt;/code&gt;を手書きで編集しないといけないのが若干面倒
+&lt;ul&gt;
+&lt;li&gt;もしかしたらコードアクション等、エディタの支援が得られるのかもしれないがそこまで調べられていない。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Goに慣れているとRustのマクロやアトリビュートが若干黒魔術的に感じる。これらに慣れるまでは認知負荷が高そう。例えば以下。（『RustによるWebアプリケーション開発 設計からリリース・運用まで』より引用）
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#[derive(Error, Debug)]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;pub&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;enum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;AppError&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#[error(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{0}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;)]&lt;/span&gt;
@@ -104,11 +109,6 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ConversionEntityError(String),
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;コンパイル時間短縮のためにcrate分割が推奨されているが、依存関係の増減があるたびに&lt;code&gt;Cargo.toml&lt;/code&gt;を手書きで編集しないといけないのが若干面倒
-&lt;ul&gt;
-&lt;li&gt;もしかしたらコードアクション等、エディタの支援が得られるのかもしれないがそこまで調べられていない。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;li&gt;DIが若干面倒
 &lt;ul&gt;
 &lt;li&gt;Goならinterface使うだけなので楽&lt;/li&gt;
