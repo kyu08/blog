@@ -110,7 +110,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ConversionEntityError(String),
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;DIが若干面倒
+&lt;li&gt;DIが若干複雑
 &lt;ul&gt;
 &lt;li&gt;Goならinterface使うだけなので楽&lt;/li&gt;
 &lt;/ul&gt;
