@@ -7,7 +7,153 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Mon, 15 Dec 2025 19:21:35 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Dec 2025 00:13:06 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>『RustによるWebアプリケーション開発 設計からリリース・運用まで』を読んだ</title>
+      <link>https://blog.kyu08.com/posts/rust-web-app-book/</link>
+      <pubDate>Mon, 22 Dec 2025 00:13:06 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/posts/rust-web-app-book/</guid>
+      <description>『RustによるWebアプリケーション開発 設計からリリース・運用まで』を読んだので感じたことをメモしておく。 https://www.kodansha.co.jp/book/products/0000398182https://www.kodansha.co.jp/book/products/0000398182 モチベーション Rustという言</description>
+      <content>&lt;p&gt;『RustによるWebアプリケーション開発 設計からリリース・運用まで』を読んだので感じたことをメモしておく。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.kodansha.co.jp/book/products/0000398182&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://www.kodansha.co.jp/book/products/0000398182&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://www.kodansha.co.jp/book/products/0000398182&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.kodansha.co.jp/book/products/0000398182&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;モチベーション&#34;&gt;モチベーション&lt;/h2&gt;
+&lt;p&gt;Rustという言語の開発体験がかなり好きでRustでサーバーサイドを書くのがどんな感じなのか純粋に気になっていたので読んでみた。（筆者がサーバーサイドの開発でガッツリ書いたことがあるのはほぼGoのみで、RustはCLIやTUIの開発にしか使ったことがないというバックグラウンド）&lt;/p&gt;
+&lt;h2 id=&#34;本書の概要&#34;&gt;本書の概要&lt;/h2&gt;
+&lt;p&gt;本書はRustで蔵書管理アプリケーションのサーバーサイドを実装しながらRustでのWebアプリケーション開発の仕方を学ぶことができる本。&lt;/p&gt;
+&lt;p&gt;ただ動くものを作る、というよりは業務の実際のサーバーサイドの開発でよく出くわす課題をRustではどう実装するのかが豊富に紹介されている。(DIやエラーハンドリングなど)&lt;/p&gt;
+&lt;p&gt;設計面ではレイヤードアーキテクチャを採用しており、レイヤー間の責務などが考慮された設計になっている。その意味でも実務での開発に近い内容になっていると言える。&lt;/p&gt;
+&lt;p&gt;あとはステップごとのコード差分が丁寧に書かれているので、本書に従って実装を進めるとWeb Serverの実装が出来上がる（はず）。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&#34;学び&#34;&gt;学び&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;コンパイル時間短縮の工夫
+&lt;ul&gt;
+&lt;li&gt;アプリケーションを複数のクレートに分割することで変更があったクレートだけ再コンパイルすればよくなるためコンパイル時間が短縮できる。&lt;/li&gt;
+&lt;li&gt;たとえば本書ではレイヤードアーキテクチャのレイヤーごとにクレートを分割していた。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Web開発で有用なクレート
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://crates.io/crates/derive-new&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;derive_new&lt;/code&gt;&lt;/a&gt;: &lt;code&gt;new&lt;/code&gt;関数を実装してくれる。デフォルト値の設定などもできる模様。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://crates.io/crates/serde&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;serde&lt;/code&gt;&lt;/a&gt;: 言わずと知れたシリアライズ/デシリアライズのためのクレート。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://crates.io/crates/sqlx&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;sqlx&lt;/code&gt;&lt;/a&gt;: SQLを型安全に扱うことができる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;エラーハンドリングの方法
+&lt;ul&gt;
+&lt;li&gt;クライアントに返すエラーはthiserrorで定義し、それ以外のエラーはanyhowを使って表現する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;RustでどうDIを実装すべきか
+&lt;ul&gt;
+&lt;li&gt;ジェネリクスを用いてDIするパターン（静的ディスパッチ）
+&lt;ul&gt;
+&lt;li&gt;動的ディスパッチと比較すると記述量が増える&lt;/li&gt;
+&lt;li&gt;動的ディスパッチと比較するとパフォーマンスが高い&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;トレイトオブジェクト（&lt;code&gt;dyn &amp;lt;トレイト名&amp;gt;&lt;/code&gt;）を利用するパターン（動的ディスパッチ）
+&lt;ul&gt;
+&lt;li&gt;静的ディスパッチと比較すると記述量が減る&lt;/li&gt;
+&lt;li&gt;静的ディスパッチと比較するとパフォーマンス面で不利&lt;/li&gt;
+&lt;li&gt;本書ではWeb開発において動的ディスパッチのコストが問題になることは少ないことを理由にこちらを採用していた。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;実際にrustでweb-serverを書いてみた感想主にgoとの比較&#34;&gt;実際にRustでWeb Serverを書いてみた感想（主にGoとの比較）&lt;/h2&gt;
+&lt;p&gt;※なお、筆者のRustスキルは趣味レベルなのでRustを深く理解したうえでの感想ではありません。間違っている点や他の重要な観点などがある可能性があります。また、主には個人的な考えのスナップショットを自分用に残す目的で書いているので説明を端折っている箇所がある可能性があります。&lt;/p&gt;
+&lt;h3 id=&#34;ポジ&#34;&gt;ポジ&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;enumやパターンマッチ等を使って仕様をスマートに書ける。&lt;/li&gt;
+&lt;li&gt;null安全なので他の言語のnull相当の概念を型安全に扱うことができる。&lt;/li&gt;
+&lt;li&gt;if式を始めとした関数型ライクな言語機能のおかげで開発体験が良い。&lt;/li&gt;
+&lt;li&gt;変数がデフォルトでimmutableなので、mutableな変数を目立たせやすいし、自然とimmutableなコードが書きやすい。&lt;/li&gt;
+&lt;li&gt;あらゆるシンボルがデフォルトでprivateなのでカプセル化するようなコードが若干書きやすい。（意識的に&lt;code&gt;pub&lt;/code&gt;を付けなければprivateになってくれる点で強い理由がなければprivateになりやすくなる、と考えている）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ネガ&#34;&gt;ネガ&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;コンパイル時間が長い。&lt;/li&gt;
+&lt;li&gt;コンパイル時間短縮のためにcrate分割が推奨されているが、依存関係の増減があるたびに&lt;code&gt;Cargo.toml&lt;/code&gt;を手書きで編集しないといけないのが若干面倒。
+&lt;ul&gt;
+&lt;li&gt;もしかしたらコードアクション等、エディタの支援が得られるのかもしれないがそこまで調べられていない。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Goに慣れているとRustのマクロやアトリビュートが若干黒魔術的に感じる。これらに慣れるまでは認知負荷が高そう。例えば以下。（『RustによるWebアプリケーション開発 設計からリリース・運用まで』より引用）
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#[derive(Error, Debug)]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;pub&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;enum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;AppError&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#[error(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{0}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;)]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    UnprocessableEntity(String),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#[error(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{0}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;)]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    EntityNotFound(String),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#[error(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{0}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;)]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ValidationError(&lt;span style=&#34;color:#75715e&#34;&gt;#[from]&lt;/span&gt; garde::Report),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#[error(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;トランザクションを実行できませんでした。&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;)]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    TransactionError(&lt;span style=&#34;color:#75715e&#34;&gt;#[source]&lt;/span&gt; sqlx::Error),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#[error(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;データベース処理実行中にエラーが発生しました。&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;)]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    SpecificOperationError(&lt;span style=&#34;color:#75715e&#34;&gt;#[source]&lt;/span&gt; sqlx::Error),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#[error(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;No rows affected: {0}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;)]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    NoRowsAffectedError(String),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#[error(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{0}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;)]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    KeyValueStoreError(&lt;span style=&#34;color:#75715e&#34;&gt;#[from]&lt;/span&gt; redis::RedisError),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#[error(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{0}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;)]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    BcryptError(&lt;span style=&#34;color:#75715e&#34;&gt;#[from]&lt;/span&gt; bcrypt::BcryptError),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#[error(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{0}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;)]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ConvertToUuidError(&lt;span style=&#34;color:#75715e&#34;&gt;#[from]&lt;/span&gt; uuid::Error),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#[error(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ログインに失敗しました&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;)]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    UnauthenticatedError,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#[error(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;認可情報が誤っています&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;)]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    UnauthorizedError,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#[error(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;許可されていない操作です&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;)]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ForbiddenOperation,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#[error(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{0}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;)]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ConversionEntityError(String),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;DIが若干複雑
+&lt;ul&gt;
+&lt;li&gt;Goならinterface使うだけなので考えることが少なくて済む。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;非同期処理
+&lt;ul&gt;
+&lt;li&gt;これもRustの非同期処理の仕組みへの理解&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;が大変浅いのであまり具体的に書けないが、自分の現状のRustスキルだとGoに比べて意図通りに動く非同期処理を書くのに数倍時間がかかる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;本書を読むまではRustがWebサーバーサイド開発の銀の弾丸、とまでは言わないもののかなりいい選択肢の1つのように思えていた。主に型の表現力のおかげでドメインがうまく表現できたり、所有権などの言語機能や発達したリンターによって内部品質を高く保つことができ、その結果開発生産性が高まると考えていた。&lt;/p&gt;
+&lt;p&gt;しかし実際に本書でRustでサーバーを書いてみると上記のメリットはありつつも意外とRustでの実装でも手間や複雑なポイントがあり、Goのシンプルさや手軽さの良さを改めて認識した。&lt;/p&gt;
+&lt;p&gt;結果はともあれ実際にRustでサーバーを書くのがどんな感じなのかを知ることが本書を読んだ目的だったので解像度を高めることができてよかった。&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;5章の途中までしかやっていないので「はず」と書いている。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;あるいは単にコンピュータの仕組みへの理解が浅いとも言えるのかもしれない。&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;もちろんもっとDeep Diveしたら違う感想を持つかも知れないが、あくまで今時点の自分の感想としては上記のような感じ。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
     <item>
       <title>『コンセプトから理解するRust』を読んだ</title>
       <link>https://blog.kyu08.com/posts/understanding-rust-from-concepts/</link>
