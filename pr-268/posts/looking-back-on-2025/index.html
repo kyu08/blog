@@ -214,7 +214,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2025/12/22</time>
       
-    <span class="post-reading-time">4 min read (1604 words)</span></div>
+    <span class="post-reading-time">5 min read (2068 words)</span></div>
 
   
     <span class="post-tags">
@@ -248,12 +248,17 @@ if (!doNotTrack) {
         <li><a href="#振り返り">振り返り</a></li>
       </ul>
     </li>
-    <li><a href="#個人開発">個人開発</a></li>
-    <li><a href="#仕事">仕事</a></li>
+    <li><a href="#個人開発">個人開発</a>
+      <ul>
+        <li><a href="#fzf-make">fzf-make</a></li>
+        <li><a href="#sunaba">sunaba</a></li>
+      </ul>
+    </li>
     <li><a href="#ブログ">ブログ</a></li>
     <li><a href="#読書など">読書など</a></li>
     <li><a href="#生活">生活</a></li>
-    <li><a href="#2026年の豊富">2026年の豊富</a></li>
+    <li><a href="#仕事">仕事</a></li>
+    <li><a href="#2026年の抱負">2026年の抱負</a></li>
     <li><a href="#おわりに">おわりに</a></li>
   </ul>
 </nav>
@@ -375,19 +380,40 @@ if (!doNotTrack) {
 <p>OSSメンテナに感謝されるのは嬉しいし、OSSの持続可能性にも少しでも貢献していきたいので引き続きやっていきたい。</p>
 <p>社内でもOSSは楽しいぞーという話を何回かしたところ、それをきっかけにしてOSS貢献にトライしてくれる方が何名かいたのも素直に嬉しかった。</p>
 <h2 id="個人開発">個人開発<a href="#個人開発" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="fzf-make">fzf-make<a href="#fzf-make" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>タスクランナー側で定義したコマンドをfuzzy finder形式で選択できるRust製のCLIツールを趣味で開発している。</p>
+<p><img src="fzf-make-demo.gif" alt="fzf-make-demo.gif"></p>
+<p>現在は以下のタスクランナーに対応している。</p>
 <ul>
-<li>fzf-make
-<ul>
-<li>スター数</li>
-<li>追加した機能の紹介</li>
+<li>make</li>
+<li>pnpm</li>
+<li>yarn</li>
+<li>just</li>
+<li>task</li>
 </ul>
-</li>
-</ul>
-<h2 id="仕事">仕事<a href="#仕事" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<ul>
-<li>転職した</li>
-<li>MVPを受賞した</li>
-</ul>
+<p>gifを見てもらえれば分かる通り、プレビューウィンドウでコマンド内容を確認しながらコマンドを選択できるのも特徴の一つ。</p>
+<p><div class="blogcard" data-url="https://github.com/kyu08/fzf-make" data-auto-fetch="true">
+  <a href="https://github.com/kyu08/fzf-make" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/kyu08/fzf-make</div><div class="blogcard-url">https://github.com/kyu08/fzf-make</div>
+    </div>
+  </a>
+</div>
+</p>
+<h4 id="スター数">スター数<a href="#スター数" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>2025/12/23現在では245スターを獲得している。</p>
+<p><img src="fzf-make-star.webp" alt="fzf-make-star.webp"></p>
+<p><a href="https://www.star-history.com/#kyu08/fzf-make&amp;type=date&amp;legend=top-left" target="_blank" >Star History</a>によると2024/12/19時点では129スターだったので1年で大体倍くらいになった模様。🎉</p>
+<p><img src="fzf-make-star-history-20251223-last-year.webp" alt="fzf-make-star-history-20251223-last-year.webp"></p>
+<p>大変おこがましいかつ取らぬ狸の皮算用的な話ではあるが、あんまり有名になって毎週たくさんのPRが送られてくる、とかだとちょっと今のモチベ的にはしんどいのでしばらくは広報活動にリソースを割かないでみる。</p>
+<p>これを見ている人の機能提案やバグ報告、PRは歓迎ですのでぜひお気軽にお願いします！（大量の人が見ているブログではないので）</p>
+<p>来年も自分のペースで細々とメンテしていこうと思う。(npm対応は早めにやりたい&hellip;！)</p>
+<h4 id="追加した機能の紹介">追加した機能の紹介<a href="#追加した機能の紹介" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<h3 id="sunaba">sunaba<a href="#sunaba" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <h2 id="ブログ">ブログ<a href="#ブログ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <ul>
 <li>OGPを動的生成するようにした</li>
@@ -405,7 +431,16 @@ if (!doNotTrack) {
 <li>なんか早く寝れるようになってきた</li>
 <li>お昼ご飯たくさん食べると午後の仕事が捗ることに気づいた</li>
 </ul>
-<h2 id="2026年の豊富">2026年の豊富<a href="#2026年の豊富" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h2 id="仕事">仕事<a href="#仕事" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>転職した</li>
+<li>MVPを受賞した
+<ul>
+<li>去年末に立てた今年の抱負を達成できたといってよさそう</li>
+</ul>
+</li>
+</ul>
+<h2 id="2026年の抱負">2026年の抱負<a href="#2026年の抱負" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <h2 id="おわりに">おわりに<a href="#おわりに" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <div class="footnotes" role="doc-endnotes">
 <hr>
