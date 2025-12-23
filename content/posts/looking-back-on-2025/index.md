@@ -154,7 +154,13 @@ https://github.com/kyu08/fzf-make
 
 #### 追加した機能の紹介
 
+2025年は[筆者が74件のPRを作成&マージし](https://github.com/pulls?q=is%3Apr+archived%3Afalse+author%3Akyu08+is%3Apublic+repo%3Akyu08%2Ffzf-make+created%3A2025-01-01..2025-12-31+is%3Amerged+)、[12個のバージョンがリリースされ、筆者とrenovateを含めて5人の貢献者により102のcommitが追加された。](https://github.com/kyu08/fzf-make/compare/v0.54.0...v0.65.0)
+
+TUIツールを個人開発をしているとなかなかユーザーの存在を感じづらいので昨年に引き続き自分以外にissueを立ててくれたりPRを送ってくれる方がいてとても嬉しい。🙏
+
+
 ### sunaba
+（あんまり個人開発とは言わないかもだがまあいいでしょう）
 
 ## ブログ
 - OGPを動的生成するようにした
