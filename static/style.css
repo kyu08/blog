@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap");
 
 :root {
   --background: #222129;
@@ -12,34 +11,55 @@
 
   /* themeColorを切り替えたらここも切り替える */
   /* orange */
-  --color-theme: #FFA86A; 
+  --color-theme: #ffa86a;
   /* blue */
   /* --color-theme: #23B0FFB3;  */
 
-  -webkit-font-feature-settings: "liga" on, "calt" on;
+  -webkit-font-feature-settings:
+    "liga" on,
+    "calt" on;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-wrap: break-word;
   box-sizing: border-box;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-transform: none;
 }
 
 /* Markdown記号の表示 (h1は記事タイトルに使用されるため除外) */
-h2::before, h3::before, h4::before, h5::before, h6::before {
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before {
   letter-spacing: -0.1em; /* #同士の間隔を狭める */
   color: var(--color-gray);
   margin-right: 6px;
 }
 
-h2::before { content: "##"; }
-h3::before { content: "###"; }
-h4::before { content: "####"; }
-h5::before { content: "#####"; }
-h6::before { content: "######"; }
+h2::before {
+  content: "##";
+}
+h3::before {
+  content: "###";
+}
+h4::before {
+  content: "####";
+}
+h5::before {
+  content: "#####";
+}
+h6::before {
+  content: "######";
+}
 
 html,
 body {
@@ -47,8 +67,18 @@ body {
   max-width: 1200px;
   margin: 0;
   margin: 0 auto;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
 }
 
 a {
@@ -57,9 +87,10 @@ a {
 }
 
 /* 記事末尾の「次の記事ボタン」「前の記事ボタン」のスタイル */
-.button.next,.button.previous{
-    border: 0;
-    max-width: 100%;
+.button.next,
+.button.previous {
+  border: 0;
+  max-width: 100%;
 }
 
 .button a {
@@ -88,7 +119,7 @@ a {
 }
 
 code {
-  background-color: rgba(99,110,123,0.4);
+  background-color: rgba(99, 110, 123, 0.4);
   border-radius: 8px;
   padding: 0 8px;
 }
@@ -96,9 +127,14 @@ code {
 img {
   max-width: 100%;
   max-height: 600px;
+  margin: 0;
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 20px;
   margin-bottom: 0px;
 }
@@ -117,7 +153,8 @@ p {
   margin: 10px 0;
 }
 
-.post-cover, a.read-more {
+.post-cover,
+a.read-more {
   display: none;
 }
 
@@ -127,8 +164,9 @@ p > img {
   margin: 0 auto;
 }
 
-th, td {
-  border: 2px solid var(--accent)
+th,
+td {
+  border: 2px solid var(--accent);
 }
 
 article.post > div.post-meta {
@@ -150,7 +188,12 @@ article.on-list {
   padding: 0;
 }
 
-.headings--one-size h1:not(first-child), .headings--one-size h2:not(first-child), .headings--one-size h3:not(first-child), .headings--one-size h4:not(first-child), .headings--one-size h5:not(first-child), .headings--one-size h6:not(first-child) {
+.headings--one-size h1:not(first-child),
+.headings--one-size h2:not(first-child),
+.headings--one-size h3:not(first-child),
+.headings--one-size h4:not(first-child),
+.headings--one-size h5:not(first-child),
+.headings--one-size h6:not(first-child) {
   margin-top: 20px;
 }
 
@@ -196,7 +239,9 @@ blockquote::before {
   margin: 24px 0;
   border-radius: 8px;
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .blogcard.loading .blogcard-thumbnail-placeholder {
@@ -204,7 +249,8 @@ blockquote::before {
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
