@@ -17,9 +17,13 @@ color: ""
 cover: "cover.png"
 ---
 
+<!-- TODO: 執筆開始以降で作成したPRがあれば記事中のデータを更新する -->
+
 年の瀬なので1年を振り返る。
 
 ## OSS
+<!-- TODO: ほかにも書けることないか考える -->
+
 ### PRでの貢献
 GitHubとGerritで54件のPR[^1]を作成し48件のPRがマージされた。([GitHub](https://github.com/pulls?q=is%3Apr+archived%3Afalse+is%3Aclosed+author%3Akyu08+is%3Apublic+-user%3Akyu08+created%3A2025-01-01..2025-12-31+)[^2] [Gerrit](https://go-review.googlesource.com/q/owner:kyu.subsub@gmail.com))
 
@@ -102,12 +106,16 @@ https://blog.kyu08.com/posts/renew-oss-sponsoring/
 - LazygitのGitHubのトップページのContributors一覧入りを果たした
     - GitHubではcommit数が多い順にrepositoryにもよるが12人前後までのアイコンがContributorsに表示される。
     - 細々とcontributionを続けたところのcommit数トップ9人に入れた。（2025/12/23現在）
+    - しばらくはこれを目標にlazygitへのcontributionを続けていたので素直に嬉しい。
+    - CIの修正やGoのバージョンアップなど、地味めなPRがメインだったがいくつか機能追加PRもマージしてもらえてよかった。
         ![lazygit-contibutors.webp](lazygit-contibutors.webp)
-- Gerrit初めてつかった。
+- GoWikiへのcontributionに際してGerritを初めてつかった。
+    - GitHubとかなかなかメンタルモデルが違う感じだったので結構手間取った。
+    - 参考になったリソースなどをいつか記事にしたい。
 
-感謝されるのは嬉しいし、OSSの持続可能性にも少しでも貢献していきたいので引き続きやっていきたい。
+OSSメンテナに感謝されるのは嬉しいし、OSSの持続可能性にも少しでも貢献していきたいので引き続きやっていきたい。
 
-社内でもOSSは楽しいぞーという話を何回かしたところ、OSS貢献にトライしてくれる方が何名かいたのもすごく嬉しかった。
+社内でもOSSは楽しいぞーという話を何回かしたところ、それをきっかけにしてOSS貢献にトライしてくれる方が何名かいたのも素直に嬉しかった。
 
 ## 個人開発
 - fzf-make
