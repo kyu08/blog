@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on blog.kyu08.com</title>
+    <link>https://blog.kyu08.com/pr-268/tags/blog/</link>
+    <description>Recent content in blog on blog.kyu08.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>blog.kyu08.com</copyright>
+    <lastBuildDate>Mon, 22 Dec 2025 23:55:39 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-268/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2025年を振り返る</title>
+      <link>https://blog.kyu08.com/pr-268/posts/looking-back-on-2025/</link>
+      <pubDate>Mon, 22 Dec 2025 23:55:39 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-268/posts/looking-back-on-2025/</guid>
+      <description>年の瀬なので1年を振り返る。 OSS PRでの貢献 GitHubとGerritで54件のPR1を作成し48件のPRがマージされた。(GitHub2 Gerrit) 去</description>
+      <content>&lt;p&gt;年の瀬なので1年を振り返る。&lt;/p&gt;
+&lt;h2 id=&#34;oss&#34;&gt;OSS&lt;/h2&gt;
+&lt;h3 id=&#34;prでの貢献&#34;&gt;PRでの貢献&lt;/h3&gt;
+&lt;p&gt;GitHubとGerritで54件のPR&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;を作成し48件のPRがマージされた。(&lt;a href=&#34;https://github.com/pulls?q=is%3Apr&amp;#43;archived%3Afalse&amp;#43;is%3Aclosed&amp;#43;author%3Akyu08&amp;#43;is%3Apublic&amp;#43;-user%3Akyu08&amp;#43;created%3A2025-01-01..2025-12-31&amp;#43;&#34; target=&#34;_blank&#34; &gt;GitHub&lt;/a&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; &lt;a href=&#34;https://go-review.googlesource.com/q/owner:kyu.subsub@gmail.com&#34; target=&#34;_blank&#34; &gt;Gerrit&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;去年の数字が以下だったのでPR作成数、マージされたPR数ともに微増だった。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;49件のPRを作成1し43件のPRがマージされた。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;PR一覧は以下のような感じ。&lt;/p&gt;
+&lt;h4 id=&#34;機能追加&#34;&gt;機能追加&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/4810&#34; target=&#34;_blank&#34; &gt;jesseduffield/lazygit - Add &amp;ldquo;CopyToClipboard&amp;rdquo; command to ConfirmationController&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/4728&#34; target=&#34;_blank&#34; &gt;jesseduffield/lazygit - Add new command &amp;ldquo;Checkout previous branch&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/nabekou29/pair-lens.nvim/pull/2&#34; target=&#34;_blank&#34; &gt;nabekou29/pair-lens.nvim - feat: add Go expression_switch_statement and type_switch_statement support&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;ドキュメント関連&#34;&gt;ドキュメント関連&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Homebrew/homebrew-cask/pull/200288&#34; target=&#34;_blank&#34; &gt;Homebrew/homebrew-cask - cursor: update homepage link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rust-lang/this-week-in-rust/pull/7158&#34; target=&#34;_blank&#34; &gt;rust-lang/this-week-in-rust - Add project update: &amp;ldquo;fzf-make v0.65.0&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ratatui/.github/pull/2&#34; target=&#34;_blank&#34; &gt;ratatui/.github - Fix typo Javascript -&amp;gt; JavaScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/genkit-ai/docsite/pull/158&#34; target=&#34;_blank&#34; &gt;genkit-ai/docsite - Fix incorrect field name in express authentication example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/humanlayer/12-factor-agents/pull/73&#34; target=&#34;_blank&#34; &gt;humanlayer/12-factor-agents - Fix typo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/humanlayer/12-factor-agents/pull/72&#34; target=&#34;_blank&#34; &gt;humanlayer/12-factor-agents - Delete unnecessary ]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/go-task/task/pull/2394&#34; target=&#34;_blank&#34; &gt;go-task/task - chore: delete unnecessary whitespace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/go-task/task/pull/2393&#34; target=&#34;_blank&#34; &gt;go-task/task - docs: add fzf-make to &amp;ldquo;Community Integrations&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/4807&#34; target=&#34;_blank&#34; &gt;jesseduffield/lazygit - Update the badges of golangci-lint and homebrew in README.md&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/4806&#34; target=&#34;_blank&#34; &gt;jesseduffield/lazygit - Update CONTRIBUTING.md to clarify translation contribution process&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/nvim-orgmode/orgmode/pull/985&#34; target=&#34;_blank&#34; &gt;nvim-orgmode/orgmode - docs: fix absences of line break&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/bnjbvr/cargo-machete/pull/168&#34; target=&#34;_blank&#34; &gt;bnjbvr/cargo-machete - doc: rename job name in example workflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rust-lang/cargo/pull/15511&#34; target=&#34;_blank&#34; &gt;rust-lang/cargo - docs: update version notice for deprecation removal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/geek-rabb1t/geek-rabb1t.github.io/pull/1&#34; target=&#34;_blank&#34; &gt;geek-rabb1t/geek-rabb1t.github.io - typoを修正&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/h3pei/trace-pr.nvim/pull/4&#34; target=&#34;_blank&#34; &gt;h3pei/trace-pr.nvim - docs: describe the default value of trace_by_commit_hash_when_pr_not_found explicitly in README.md&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/golangci/golangci-lint/pull/5697&#34; target=&#34;_blank&#34; &gt;golangci/golangci-lint - docs: explicitly describe that the migrate command automatically migrate linters.presets&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/catppuccin/lazygit/pull/53&#34; target=&#34;_blank&#34; &gt;catppuccin/lazygit - doc: remove deprecated selectedRangeBgColor key from example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/yykamei/block-merge-based-on-time/pull/2192&#34; target=&#34;_blank&#34; &gt;yykamei/block-merge-based-on-time - Add ready_for_review as the workflow trigger to the example in README.md&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/yuki-yano/zeno.zsh/pull/81&#34; target=&#34;_blank&#34; &gt;yuki-yano/zeno.zsh - docs(readme): replace exa with eza&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/nand2tetris/web-ide/pull/559&#34; target=&#34;_blank&#34; &gt;nand2tetris/web-ide - Fix typo in projects/src/project_08/21_nested_call.ts(initliazes -&amp;gt; initializes)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cloudspannerecosystem/yo/pull/147&#34; target=&#34;_blank&#34; &gt;cloudspannerecosystem/yo - Add installation method for Go 1.16+&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://go-review.googlesource.com/c/wiki/&amp;#43;/703735&#34; target=&#34;_blank&#34; &gt;703735: GoUsers: add Canary Inc.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://go-review.googlesource.com/c/wiki/&amp;#43;/703736&#34; target=&#34;_blank&#34; &gt;703736: GoUsers: fix the position of CloudSign&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;バグ修正&#34;&gt;バグ修正&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/derailed/k9s/pull/3699&#34; target=&#34;_blank&#34; &gt;derailed/k9s - feat(pulse): map hjkl to navigate as help shows&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;ci開発環境等の修正&#34;&gt;CI、開発環境等の修正&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/4974&#34; target=&#34;_blank&#34; &gt;jesseduffield/lazygit - Add synchronize event to the hooks of &amp;ldquo;Check Required Labels&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/4936&#34; target=&#34;_blank&#34; &gt;jesseduffield/lazygit - Use ignore directive to ignore test files not to be passes to gofumpt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/4844&#34; target=&#34;_blank&#34; &gt;jesseduffield/lazygit - Update go to 1.25&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/4830&#34; target=&#34;_blank&#34; &gt;jesseduffield/lazygit - Run label check workflow only on label events and open pr event&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/4829&#34; target=&#34;_blank&#34; &gt;jesseduffield/lazygit - Enhance PR/Issue templates readability&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/4809&#34; target=&#34;_blank&#34; &gt;jesseduffield/lazygit - Pass only Git-tracked Go files to gofumpt&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;翻訳&#34;&gt;翻訳&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rust-lang/surveys/pull/329&#34; target=&#34;_blank&#34; &gt;rust-lang/surveys - [Japanese] replace &amp;ldquo;prioritising work&amp;rdquo; with &amp;ldquo;problems to productivity&amp;rdquo; in 2024 survey&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;自作tuiのbrew-release関連&#34;&gt;自作TUIのbrew release関連&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Homebrew/homebrew-core/pull/249550&#34; target=&#34;_blank&#34; &gt;Homebrew/homebrew-core - fzf-make 0.65.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Homebrew/homebrew-core/pull/249255&#34; target=&#34;_blank&#34; &gt;Homebrew/homebrew-core - fzf-make 0.64.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Homebrew/homebrew-core/pull/248909&#34; target=&#34;_blank&#34; &gt;Homebrew/homebrew-core - fzf-make 0.63.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Homebrew/homebrew-core/pull/246767&#34; target=&#34;_blank&#34; &gt;Homebrew/homebrew-core - fzf-make 0.62.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Homebrew/homebrew-core/pull/242247&#34; target=&#34;_blank&#34; &gt;Homebrew/homebrew-core - fzf-make 0.61.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Homebrew/homebrew-core/pull/234337&#34; target=&#34;_blank&#34; &gt;Homebrew/homebrew-core - fzf-make: add task to available runner in description&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Homebrew/homebrew-core/pull/233946&#34; target=&#34;_blank&#34; &gt;Homebrew/homebrew-core - fzf-make 0.60.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Homebrew/homebrew-core/pull/223065&#34; target=&#34;_blank&#34; &gt;Homebrew/homebrew-core - fzf-make: update desc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Homebrew/homebrew-core/pull/223063&#34; target=&#34;_blank&#34; &gt;Homebrew/homebrew-core - fzf-make 0.59.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Homebrew/homebrew-core/pull/222737&#34; target=&#34;_blank&#34; &gt;Homebrew/homebrew-core - fzf-make 0.58.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Homebrew/homebrew-core/pull/222421&#34; target=&#34;_blank&#34; &gt;Homebrew/homebrew-core - fzf-make 0.57.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Homebrew/homebrew-core/pull/205485&#34; target=&#34;_blank&#34; &gt;Homebrew/homebrew-core - fzf-make 0.56.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Homebrew/homebrew-core/pull/203296&#34; target=&#34;_blank&#34; &gt;Homebrew/homebrew-core - fzf-make 0.55.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Homebrew/homebrew-core/pull/203265&#34; target=&#34;_blank&#34; &gt;Homebrew/homebrew-core - fzf-make 0.54.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;寄付&#34;&gt;寄付&lt;/h3&gt;
+&lt;p&gt;この記事を書いたときから継続して&lt;a href=&#34;https://github.com/sponsors/neovim&#34; target=&#34;_blank&#34; &gt;Neovim&lt;/a&gt;と&lt;a href=&#34;https://github.com/sponsors/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;に5$/monthずつ寄付し続けている。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://blog.kyu08.com/posts/renew-oss-sponsoring/&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://blog.kyu08.com/posts/renew-oss-sponsoring/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://blog.kyu08.com/posts/renew-oss-sponsoring/&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://blog.kyu08.com/posts/renew-oss-sponsoring/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;だいたい累計$150くらい寄付したことになる。OSSコミュニティの持続可能性に少しでも貢献していきたいのでこれからも続けていく。&lt;/p&gt;
+&lt;h3 id=&#34;振り返り&#34;&gt;振り返り&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;PR数ベースで去年と同じくらいのペースでPRを送れた。（月平均4.5件ペース）&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;LazygitのGitHubのトップページのContributors一覧入りを果たした
+&lt;ul&gt;
+&lt;li&gt;GitHubではcommit数が多い順にrepositoryにもよるが12人前後までのアイコンがContributorsに表示される。&lt;/li&gt;
+&lt;li&gt;細々とcontributionを続けたところのcommit数トップ9人に入れた。（2025/12/23現在）
+&lt;img src=&#34;lazygit-contibutors.webp&#34; alt=&#34;lazygit-contibutors.webp&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Gerrit初めてつかった。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;感謝されるのは嬉しいし、OSSの持続可能性にも少しでも貢献していきたいので引き続きやっていきたい。&lt;/p&gt;
+&lt;p&gt;社内でもOSSは楽しいぞーという話を何回かしたところ、OSS貢献にトライしてくれる方が何名かいたのもすごく嬉しかった。&lt;/p&gt;
+&lt;h2 id=&#34;個人開発&#34;&gt;個人開発&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;fzf-make
+&lt;ul&gt;
+&lt;li&gt;スター数&lt;/li&gt;
+&lt;li&gt;追加した機能の紹介&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;仕事&#34;&gt;仕事&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;転職した&lt;/li&gt;
+&lt;li&gt;MVPを受賞した&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ブログ&#34;&gt;ブログ&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;OGPを動的生成するようにした&lt;/li&gt;
+&lt;li&gt;Heading要素のデザインを変えた&lt;/li&gt;
+&lt;li&gt;プレビュー環境を整えた&lt;/li&gt;
+&lt;li&gt;今年のPV数を振り返る？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;読書など&#34;&gt;読書など&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;読んだ本を紹介&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;生活&#34;&gt;生活&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ジムに行き始めた&lt;/li&gt;
+&lt;li&gt;なんか早く寝れるようになってきた&lt;/li&gt;
+&lt;li&gt;お昼ご飯たくさん食べると午後の仕事が捗ることに気づいた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2026年の豊富&#34;&gt;2026年の豊富&lt;/h2&gt;
+&lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;便宜的にPRと表記しているが、GerritではCL(たしかChange List)と呼ばれる。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;Ownerが自分以外のPublic Repositoryを対象に集計。&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;brew releaseに関してはfzf-makeの新バージョンをリリースする際にCIから自動でPRを送っているので本質的なOSS貢献かと言われるとちょっと微妙ではある。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>GitHub Issuesをサイトのコメント欄として活用できるutterancesを導入した</title>
+      <link>https://blog.kyu08.com/pr-268/posts/add-comment-section-to-this-blog/</link>
+      <pubDate>Sun, 17 Mar 2024 13:06:40 +0000</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-268/posts/add-comment-section-to-this-blog/</guid>
+      <description>このブログにコメント欄を設置した。 utterance/utterancesというGitHubのIssuesへのコメントを記事のコメント欄とし</description>
+      <content>&lt;p&gt;このブログにコメント欄を設置した。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/utterance/utterances&#34; target=&#34;_blank&#34; &gt;utterance/utterances&lt;/a&gt;というGitHubのIssuesへのコメントを記事のコメント欄として使えるようにしてくれるOSSのツールを使っている。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;導入に必要だったのは&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;コメント用のリポジトリ作成&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://utteranc.es/&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://utteranc.es/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://utteranc.es/&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://utteranc.es/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+でscriptタグを生成&lt;/li&gt;
+&lt;li&gt;生成したタグをブログに埋め込む&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;だけだったので10分くらいでできて大変お手軽だった。&lt;/p&gt;
+&lt;p&gt;(自分はこのブログのリポジトリのissueをコメント用に使いたくなかったのでそれ用のリポジトリを作成したが、もし既存のリポジトリを使う場合は&lt;code&gt;1.&lt;/code&gt;は不要)&lt;/p&gt;
+&lt;p&gt;ぜひご自由にコメントを残していってください。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://blog.orhun.dev/&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://blog.orhun.dev/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://blog.orhun.dev/&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://blog.orhun.dev/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+で使われていていいなと思ったのでこのブログでも導入してみた。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/blog-comments&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/blog-comments&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/blog-comments&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/blog-comments&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>hugo-theme-terminal でOGPに任意の画像を設定する方法</title>
+      <link>https://blog.kyu08.com/pr-268/posts/hugo-theme-terminal-ogp-config/</link>
+      <pubDate>Fri, 09 Jun 2023 17:02:33 +0000</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-268/posts/hugo-theme-terminal-ogp-config/</guid>
+      <description>hugo-theme-terminal でOGPの設定に少し詰まったのでやったことを書いておく。 前提 hugo version: hugo v0.112.5+extended darwin/arm64 困り 筆者はカバー画像を記事一覧・記事詳細画面に表示したくない、かつO</description>
+      <content>&lt;p&gt;&lt;a href=&#34;https://github.com/panr/hugo-theme-terminal&#34; target=&#34;_blank&#34; &gt;hugo-theme-terminal&lt;/a&gt; でOGPの設定に少し詰まったのでやったことを書いておく。&lt;/p&gt;
+&lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;hugo version: &lt;code&gt;hugo v0.112.5+extended darwin/arm64&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;困り&#34;&gt;困り&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;筆者はカバー画像を記事一覧・記事詳細画面に表示したくない、かつOGPは全共通の画像を使いたい&lt;/li&gt;
+&lt;li&gt;hugo-theme-terminalでは任意の画像をOGPだけに設定できない。（カバー画像をOGPとすることはできる）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;やったこと&#34;&gt;やったこと&lt;/h2&gt;
+&lt;p&gt;多少ハッキーな方法ではあるが以下の方法で実現した。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;各記事のFront Matterに&lt;code&gt;cover: &amp;quot;${OGP_URL}&amp;quot;&lt;/code&gt;指定(&lt;code&gt;archetypes&lt;/code&gt;にテンプレートとして書いておくと便利)&lt;/li&gt;
+&lt;li&gt;以下のCSSを追加&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;post-cover&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;display&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;none&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+    <item>
+      <title>ブログ用にGifでキャプチャを作る時にやっていること</title>
+      <link>https://blog.kyu08.com/pr-268/posts/create-gif/</link>
+      <pubDate>Fri, 09 Jun 2023 16:26:52 +0000</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-268/posts/create-gif/</guid>
+      <description>ブログ用によくGifをつくるので自分用の備忘録代わりに手順を記しておく。 追記(2023/11/29) 下記の方法だと生成後のgifに格子模様の</description>
+      <content>&lt;p&gt;ブログ用によくGifをつくるので自分用の備忘録代わりに手順を記しておく。&lt;/p&gt;
+&lt;h2 id=&#34;追記20231129&#34;&gt;追記(2023/11/29)&lt;/h2&gt;
+&lt;p&gt;下記の方法だと生成後のgifに格子模様のようなものが入ってしまうので以下の記事で紹介されているffmpegを使った方法を使うようにしたところ綺麗なgifが生成できるようになった。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://qiita.com/takasp/items/65d1d0d90073bcfc4873&#34; target=&#34;_blank&#34; &gt;Mac で GIF 画像を作る技術 - Qiita&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;動画内で使用している色を最適化するために、パレット画像を生成します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i input.mov -vf &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;palettegen&amp;#34;&lt;/span&gt; -y palette.png
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;GIF 画像を出力します。
+サンプルでは、-r オプションでフレームレートを 24 に設定しています。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i input.mov -i palette.png -r &lt;span style=&#34;color:#ae81ff&#34;&gt;24&lt;/span&gt; -y output.gif
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;追記ここまで&lt;/p&gt;
+&lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;macOS&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://getkap.co/&#34; target=&#34;_blank&#34; &gt;Kap&lt;/a&gt;がインストールされていること&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/keycastr/keycastr&#34; target=&#34;_blank&#34; &gt;Keycastr&lt;/a&gt;がインストールされていること&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;手順&#34;&gt;手順&lt;/h2&gt;
+&lt;h3 id=&#34;1-keycastrを起動&#34;&gt;1. Keycastrを起動&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;keycastr.gif&#34; alt=&#34;keycastr.gif&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-kapでいい感じに範囲を選んで録画開始ボタンを押す&#34;&gt;2. Kapでいい感じに範囲を選んで録画開始ボタンを押す&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;select-window.webp&#34; alt=&#34;select-window.webp&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3-いい感じのサイズで保存重要&#34;&gt;3. いい感じのサイズで保存(重要)&lt;/h3&gt;
+&lt;p&gt;(あとから圧縮しようとすると思いのほか大変なのでサイズを小さくしたい場合はいい感じのサイズにするのを忘れない)
+&lt;img src=&#34;select-size.webp&#34; alt=&#34;select-size.webp&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
+&lt;p&gt;(いざ書いてみると書くほどでもなかった)&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
