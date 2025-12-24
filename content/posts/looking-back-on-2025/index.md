@@ -108,7 +108,7 @@ https://blog.kyu08.com/posts/renew-oss-sponsoring/
     - GitHubではcommit数が多い順にrepositoryにもよるが12人前後までのアイコンがContributorsに表示される。
     - 細々とcontributionを続けたところのcommit数トップ9人に入れた。（2025/12/23現在）
     - しばらくはこれを目標にlazygitへのcontributionを続けていたので素直に嬉しい。
-    - CIの修正やGoのバージョンアップなど、地味めなPRがメインだったがいくつか機能追加PRもマージしてもらえてよかった。
+    - CIの修正やGoのバージョンアップなど、地味めなPRがメインだったがいくつか機能追加PRもマージしてもらえた。
         ![lazygit-contibutors.webp](lazygit-contibutors.webp)
 - GoWikiへのcontributionに際してGerritを初めてつかった。
     - GitHubとかなかなかメンタルモデルが違う感じだったので結構手間取った。
