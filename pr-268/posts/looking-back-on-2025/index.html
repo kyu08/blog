@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+    <title>2025年を振り返る :: blog.kyu08.com</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="年の瀬なので1年を振り返る。 OSS PRでの貢献 GitHubとGerritで54件のPR1を作成し48件のPRがマージされた。(GitHub2 Gerrit) 去" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://blog.kyu08.com/pr-268/posts/looking-back-on-2025/" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BDQ408J45J', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/post.min.f049fef13af1dfd5ea526cc59ea5a3fc7be11a05911ca7198c5bb9225250119c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-268/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+<link rel="stylesheet" href="https://blog.kyu08.com/pr-268/style.css">
+
+
+<link rel="shortcut icon" href="https://blog.kyu08.com/pr-268/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/pr-268/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="kyu08_" />
+
+
+
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="2025年を振り返る">
+<meta property="og:description" content="年の瀬なので1年を振り返る。 OSS PRでの貢献 GitHubとGerritで54件のPR1を作成し48件のPRがマージされた。(GitHub2 Gerrit) 去" />
+<meta property="og:url" content="https://blog.kyu08.com/pr-268/posts/looking-back-on-2025/" />
+<meta property="og:site_name" content="blog.kyu08.com" />
+
+
+  
+  
+    
+  
+
+
+  <meta property="og:image" content="https://blog.kyu08.com/pr-268/posts/looking-back-on-2025/cover.png">
+  <meta name="twitter:image" content="https://blog.kyu08.com/pr-268/posts/looking-back-on-2025/cover.png">
+  <meta name="twitter:image:alt" content="2025年を振り返る">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+  <meta property="article:published_time" content="2025-12-22 23:55:39 &#43;0900 &#43;0900" />
+
+
+
+
+
+
+
+
+
+<link rel="author" href="http://www.hatena.ne.jp/kyu08/" />
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ . }}');
+</script>
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    blog.kyu08.com
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/pr-268/tags/diary/">_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-268/about">about</a></li>
+        
+      
+        
+          <li><a href="/pr-268/index.xml">rss</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/pr-268/tags/diary/" >_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-268/about" >about</a></li>
+        
+      
+        
+          <li><a href="/pr-268/index.xml" >rss</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://blog.kyu08.com/pr-268/posts/looking-back-on-2025/">2025年を振り返る</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2025/12/22</time>
+      
+    <span class="post-reading-time">5 min read (2264 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://blog.kyu08.com/pr-268/tags/%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A/">振り返り</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-268/tags/oss/">OSS</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-268/tags/blog/">blog</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="/pr-268/posts/looking-back-on-2025/cover.png"
+    class="post-cover"
+    alt="2025年を振り返る"
+    title="Cover Image" />
+
+
+  
+    <div class="table-of-contents">
+      <h2>
+        目次
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#oss">OSS</a>
+      <ul>
+        <li><a href="#prでの貢献">PRでの貢献</a></li>
+        <li><a href="#寄付">寄付</a></li>
+        <li><a href="#振り返り">振り返り</a></li>
+      </ul>
+    </li>
+    <li><a href="#個人開発">個人開発</a>
+      <ul>
+        <li><a href="#fzf-make">fzf-make</a></li>
+        <li><a href="#sunaba">sunaba</a></li>
+      </ul>
+    </li>
+    <li><a href="#ブログ">ブログ</a></li>
+    <li><a href="#読書など">読書など</a></li>
+    <li><a href="#生活">生活</a></li>
+    <li><a href="#仕事">仕事</a></li>
+    <li><a href="#2026年の抱負">2026年の抱負</a></li>
+    <li><a href="#おわりに">おわりに</a></li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <!-- raw HTML omitted -->
+<p>年の瀬なので1年を振り返る。</p>
+<h2 id="oss">OSS<a href="#oss" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<!-- raw HTML omitted -->
+<h3 id="prでの貢献">PRでの貢献<a href="#prでの貢献" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>GitHubとGerritで54件のPR<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>を作成し48件のPRがマージされた。(<a href="https://github.com/pulls?q=is%3Apr&#43;archived%3Afalse&#43;is%3Aclosed&#43;author%3Akyu08&#43;is%3Apublic&#43;-user%3Akyu08&#43;created%3A2025-01-01..2025-12-31&#43;" target="_blank" >GitHub</a><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> <a href="https://go-review.googlesource.com/q/owner:kyu.subsub@gmail.com" target="_blank" >Gerrit</a>)</p>
+<p>去年の数字が以下だったのでPR作成数、マージされたPR数ともに微増だった。</p>
+<blockquote>
+<p>49件のPRを作成1し43件のPRがマージされた。</p>
+</blockquote>
+<p>PR一覧は以下のような感じ。</p>
+<h4 id="機能追加">機能追加<a href="#機能追加" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/4810" target="_blank" >jesseduffield/lazygit - Add &ldquo;CopyToClipboard&rdquo; command to ConfirmationController</a></li>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/4728" target="_blank" >jesseduffield/lazygit - Add new command &ldquo;Checkout previous branch&rdquo;</a></li>
+<li><a href="https://github.com/nabekou29/pair-lens.nvim/pull/2" target="_blank" >nabekou29/pair-lens.nvim - feat: add Go expression_switch_statement and type_switch_statement support</a></li>
+</ul>
+<h4 id="ドキュメント関連">ドキュメント関連<a href="#ドキュメント関連" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li><a href="https://github.com/Homebrew/homebrew-cask/pull/200288" target="_blank" >Homebrew/homebrew-cask - cursor: update homepage link</a></li>
+<li><a href="https://github.com/rust-lang/this-week-in-rust/pull/7158" target="_blank" >rust-lang/this-week-in-rust - Add project update: &ldquo;fzf-make v0.65.0&rdquo;</a></li>
+<li><a href="https://github.com/ratatui/.github/pull/2" target="_blank" >ratatui/.github - Fix typo Javascript -&gt; JavaScript</a></li>
+<li><a href="https://github.com/genkit-ai/docsite/pull/158" target="_blank" >genkit-ai/docsite - Fix incorrect field name in express authentication example</a></li>
+<li><a href="https://github.com/humanlayer/12-factor-agents/pull/73" target="_blank" >humanlayer/12-factor-agents - Fix typo</a></li>
+<li><a href="https://github.com/humanlayer/12-factor-agents/pull/72" target="_blank" >humanlayer/12-factor-agents - Delete unnecessary ]</a></li>
+<li><a href="https://github.com/go-task/task/pull/2394" target="_blank" >go-task/task - chore: delete unnecessary whitespace</a></li>
+<li><a href="https://github.com/go-task/task/pull/2393" target="_blank" >go-task/task - docs: add fzf-make to &ldquo;Community Integrations&rdquo;</a></li>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/4807" target="_blank" >jesseduffield/lazygit - Update the badges of golangci-lint and homebrew in README.md</a></li>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/4806" target="_blank" >jesseduffield/lazygit - Update CONTRIBUTING.md to clarify translation contribution process</a></li>
+<li><a href="https://github.com/nvim-orgmode/orgmode/pull/985" target="_blank" >nvim-orgmode/orgmode - docs: fix absences of line break</a></li>
+<li><a href="https://github.com/bnjbvr/cargo-machete/pull/168" target="_blank" >bnjbvr/cargo-machete - doc: rename job name in example workflow</a></li>
+<li><a href="https://github.com/rust-lang/cargo/pull/15511" target="_blank" >rust-lang/cargo - docs: update version notice for deprecation removal</a></li>
+<li><a href="https://github.com/geek-rabb1t/geek-rabb1t.github.io/pull/1" target="_blank" >geek-rabb1t/geek-rabb1t.github.io - typoを修正</a></li>
+<li><a href="https://github.com/h3pei/trace-pr.nvim/pull/4" target="_blank" >h3pei/trace-pr.nvim - docs: describe the default value of trace_by_commit_hash_when_pr_not_found explicitly in README.md</a></li>
+<li><a href="https://github.com/golangci/golangci-lint/pull/5697" target="_blank" >golangci/golangci-lint - docs: explicitly describe that the migrate command automatically migrate linters.presets</a></li>
+<li><a href="https://github.com/catppuccin/lazygit/pull/53" target="_blank" >catppuccin/lazygit - doc: remove deprecated selectedRangeBgColor key from example</a></li>
+<li><a href="https://github.com/yykamei/block-merge-based-on-time/pull/2192" target="_blank" >yykamei/block-merge-based-on-time - Add ready_for_review as the workflow trigger to the example in README.md</a></li>
+<li><a href="https://github.com/yuki-yano/zeno.zsh/pull/81" target="_blank" >yuki-yano/zeno.zsh - docs(readme): replace exa with eza</a></li>
+<li><a href="https://github.com/nand2tetris/web-ide/pull/559" target="_blank" >nand2tetris/web-ide - Fix typo in projects/src/project_08/21_nested_call.ts(initliazes -&gt; initializes)</a></li>
+<li><a href="https://github.com/cloudspannerecosystem/yo/pull/147" target="_blank" >cloudspannerecosystem/yo - Add installation method for Go 1.16+</a></li>
+<li><a href="https://go-review.googlesource.com/c/wiki/&#43;/703735" target="_blank" >703735: GoUsers: add Canary Inc.</a></li>
+<li><a href="https://go-review.googlesource.com/c/wiki/&#43;/703736" target="_blank" >703736: GoUsers: fix the position of CloudSign</a></li>
+</ul>
+<h4 id="バグ修正">バグ修正<a href="#バグ修正" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li><a href="https://github.com/derailed/k9s/pull/3699" target="_blank" >derailed/k9s - feat(pulse): map hjkl to navigate as help shows</a></li>
+</ul>
+<h4 id="ci開発環境等の修正">CI、開発環境等の修正<a href="#ci開発環境等の修正" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/4974" target="_blank" >jesseduffield/lazygit - Add synchronize event to the hooks of &ldquo;Check Required Labels&rdquo;</a></li>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/4936" target="_blank" >jesseduffield/lazygit - Use ignore directive to ignore test files not to be passes to gofumpt</a></li>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/4844" target="_blank" >jesseduffield/lazygit - Update go to 1.25</a></li>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/4830" target="_blank" >jesseduffield/lazygit - Run label check workflow only on label events and open pr event</a></li>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/4829" target="_blank" >jesseduffield/lazygit - Enhance PR/Issue templates readability</a></li>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/4809" target="_blank" >jesseduffield/lazygit - Pass only Git-tracked Go files to gofumpt</a></li>
+</ul>
+<h4 id="翻訳">翻訳<a href="#翻訳" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li><a href="https://github.com/rust-lang/surveys/pull/329" target="_blank" >rust-lang/surveys - [Japanese] replace &ldquo;prioritising work&rdquo; with &ldquo;problems to productivity&rdquo; in 2024 survey</a></li>
+</ul>
+<h4 id="自作tuiのbrew-release関連">自作TUIのbrew release関連<a href="#自作tuiのbrew-release関連" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/249550" target="_blank" >Homebrew/homebrew-core - fzf-make 0.65.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/249255" target="_blank" >Homebrew/homebrew-core - fzf-make 0.64.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/248909" target="_blank" >Homebrew/homebrew-core - fzf-make 0.63.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/246767" target="_blank" >Homebrew/homebrew-core - fzf-make 0.62.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/242247" target="_blank" >Homebrew/homebrew-core - fzf-make 0.61.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/234337" target="_blank" >Homebrew/homebrew-core - fzf-make: add task to available runner in description</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/233946" target="_blank" >Homebrew/homebrew-core - fzf-make 0.60.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/223065" target="_blank" >Homebrew/homebrew-core - fzf-make: update desc</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/223063" target="_blank" >Homebrew/homebrew-core - fzf-make 0.59.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/222737" target="_blank" >Homebrew/homebrew-core - fzf-make 0.58.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/222421" target="_blank" >Homebrew/homebrew-core - fzf-make 0.57.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/205485" target="_blank" >Homebrew/homebrew-core - fzf-make 0.56.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/203296" target="_blank" >Homebrew/homebrew-core - fzf-make 0.55.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/203265" target="_blank" >Homebrew/homebrew-core - fzf-make 0.54.0</a></li>
+</ul>
+<h3 id="寄付">寄付<a href="#寄付" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>この記事を書いたときから継続して<a href="https://github.com/sponsors/neovim" target="_blank" >Neovim</a>と<a href="https://github.com/sponsors/ratatui" target="_blank" >ratatui</a>に5$/monthずつ寄付し続けている。</p>
+<p><div class="blogcard" data-url="https://blog.kyu08.com/posts/renew-oss-sponsoring/" data-auto-fetch="true">
+  <a href="https://blog.kyu08.com/posts/renew-oss-sponsoring/" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://blog.kyu08.com/posts/renew-oss-sponsoring/</div><div class="blogcard-url">https://blog.kyu08.com/posts/renew-oss-sponsoring/</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>だいたい累計$150くらい寄付したことになる。OSSコミュニティの持続可能性に少しでも貢献していきたいのでこれからも続けていく。</p>
+<h3 id="振り返り">振り返り<a href="#振り返り" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>PR数ベースで去年と同じくらいのペースでPRを送れた。（月平均4.5件ペース）<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></li>
+<li>LazygitのGitHubのトップページのContributors一覧入りを果たした
+<ul>
+<li>GitHubではcommit数が多い順にrepositoryにもよるが12人前後までのアイコンがContributorsに表示される。</li>
+<li>細々とcontributionを続けたところのcommit数トップ9人に入れた。（2025/12/23現在）</li>
+<li>しばらくはこれを目標にlazygitへのcontributionを続けていたので素直に嬉しい。</li>
+<li>CIの修正やGoのバージョンアップなど、地味めなPRがメインだったがいくつか機能追加PRもマージしてもらえてよかった。
+<img src="lazygit-contibutors.webp" alt="lazygit-contibutors.webp"></li>
+</ul>
+</li>
+<li>GoWikiへのcontributionに際してGerritを初めてつかった。
+<ul>
+<li>GitHubとかなかなかメンタルモデルが違う感じだったので結構手間取った。</li>
+<li>参考になったリソースなどをいつか記事にしたい。</li>
+</ul>
+</li>
+</ul>
+<p>OSSメンテナに感謝されるのは嬉しいし、OSSの持続可能性にも少しでも貢献していきたいので引き続きやっていきたい。</p>
+<p>社内でもOSSは楽しいぞーという話を何回かしたところ、それをきっかけにしてOSS貢献にトライしてくれる方が何名かいたのも素直に嬉しかった。</p>
+<h2 id="個人開発">個人開発<a href="#個人開発" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="fzf-make">fzf-make<a href="#fzf-make" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>タスクランナー側で定義したコマンドをfuzzy finder形式で選択できるRust製のCLIツールを趣味で開発している。</p>
+<p><img src="fzf-make-demo.gif" alt="fzf-make-demo.gif"></p>
+<p>現在は以下のタスクランナーに対応している。</p>
+<ul>
+<li>make</li>
+<li>pnpm</li>
+<li>yarn</li>
+<li>just</li>
+<li>task</li>
+</ul>
+<p>gifを見てもらえれば分かる通り、プレビューウィンドウでコマンド内容を確認しながらコマンドを選択できるのも特徴の一つ。</p>
+<p><div class="blogcard" data-url="https://github.com/kyu08/fzf-make" data-auto-fetch="true">
+  <a href="https://github.com/kyu08/fzf-make" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/kyu08/fzf-make</div><div class="blogcard-url">https://github.com/kyu08/fzf-make</div>
+    </div>
+  </a>
+</div>
+</p>
+<h4 id="スター数">スター数<a href="#スター数" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>2025/12/23現在では245スターを獲得している。</p>
+<p><img src="fzf-make-star.webp" alt="fzf-make-star.webp"></p>
+<p><a href="https://www.star-history.com/#kyu08/fzf-make&amp;type=date&amp;legend=top-left" target="_blank" >Star History</a>によると2024/12/19時点では129スターだったので1年で大体倍くらいになった模様。🎉</p>
+<p><img src="fzf-make-star-history-20251223-last-year.webp" alt="fzf-make-star-history-20251223-last-year.webp"></p>
+<p>大変おこがましいかつ取らぬ狸の皮算用的な話ではあるが、あんまり有名になって毎週たくさんのPRが送られてくる、とかだとちょっと今のモチベ的にはしんどいのでしばらくは広報活動にリソースを割かないでみる。</p>
+<p>これを見ている人の機能提案やバグ報告、PRは歓迎ですのでぜひお気軽にお願いします！（大量の人が見ているブログではないので）</p>
+<p>来年も自分のペースで細々とメンテしていこうと思う。(npm対応は早めにやりたい&hellip;！)</p>
+<h4 id="追加した機能の紹介">追加した機能の紹介<a href="#追加した機能の紹介" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>2025年は<a href="https://github.com/pulls?q=is%3Apr&#43;archived%3Afalse&#43;author%3Akyu08&#43;is%3Apublic&#43;repo%3Akyu08%2Ffzf-make&#43;created%3A2025-01-01..2025-12-31&#43;is%3Amerged&#43;" target="_blank" >筆者が74件のPRを作成&amp;マージし</a>、<a href="https://github.com/kyu08/fzf-make/compare/v0.54.0...v0.65.0" target="_blank" >12個のバージョンがリリースされ、筆者とrenovateを含めて5人の貢献者により102のcommitが追加された。</a></p>
+<p>TUIツールを個人開発をしているとなかなかユーザーの存在を感じづらいので昨年に引き続き自分以外にissueを立ててくれたりPRを送ってくれる方がいてとても嬉しい。🙏</p>
+<h3 id="sunaba">sunaba<a href="#sunaba" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>（あんまり個人開発とは言わないかもだがまあいいでしょう）</p>
+<h2 id="ブログ">ブログ<a href="#ブログ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>OGPを動的生成するようにした</li>
+<li>Heading要素のデザインを変えた</li>
+<li>プレビュー環境を整えた</li>
+<li>今年のPV数を振り返る？</li>
+</ul>
+<h2 id="読書など">読書など<a href="#読書など" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>読んだ本を紹介</li>
+</ul>
+<h2 id="生活">生活<a href="#生活" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>ジムに行き始めた</li>
+<li>なんか早く寝れるようになってきた</li>
+<li>お昼ご飯たくさん食べると午後の仕事が捗ることに気づいた</li>
+</ul>
+<h2 id="仕事">仕事<a href="#仕事" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>転職した</li>
+<li>MVPを受賞した
+<ul>
+<li>去年末に立てた今年の抱負を達成できたといってよさそう</li>
+</ul>
+</li>
+</ul>
+<h2 id="2026年の抱負">2026年の抱負<a href="#2026年の抱負" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h2 id="おわりに">おわりに<a href="#おわりに" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>便宜的にPRと表記しているが、GerritではCL(たしかChange List)と呼ばれる。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Ownerが自分以外のPublic Repositoryを対象に集計。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>brew releaseに関してはfzf-makeの新バージョンをリリースする際にCIから自動でPRを送っているので本質的なOSS貢献かと言われるとちょっと微妙ではある。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+      </div></div>
+
+  
+  
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="https://blog.kyu08.com/pr-268/posts/gerrit-find-cls-you-created/" class="button inline prev">
+        Gerritで自分が作成したCL一覧を確認する方法
+      </a>
+    
+    
+      <a href="https://blog.kyu08.com/pr-268/posts/rust-web-app-book/" class="button inline next">
+        『RustによるWebアプリケーション開発 設計からリリース・運用まで』を読んだ
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+        repo="kyu08/blog-comments"
+        issue-term="pathname"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>blog.kyu08.com</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/pr-268/bundle.min.js"></script>
+
+
+<font color="#808080">
+  <span>
+    This site uses Google Analytics for access analysis.
+    Google Analytics uses cookies to collect traffic data, but this traffic data is collected anonymously and does not personally identify you.
+    Cookies can be disabled in your browser.
+  </span>
+</font>
+
+
+<script src="https://blog.kyu08.com/pr-268/blogcard.js"></script>
+
+
+  
+</div>
+
+</body>
+</html>
