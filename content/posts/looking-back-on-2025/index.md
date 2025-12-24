@@ -31,7 +31,7 @@ GitHubとGerritで55件のPR[^1]を作成し49件のPRがマージされた。([
 
 > 49件のPRを作成1し43件のPRがマージされた。
 
-PR一覧は以下のような感じ。
+PR一覧は以下のような感じ。[^3]
 
 #### 機能追加
 - [jesseduffield/lazygit - Add "CopyToClipboard" command to ConfirmationController](https://github.com/jesseduffield/lazygit/pull/4810)
@@ -103,7 +103,7 @@ https://blog.kyu08.com/posts/renew-oss-sponsoring/
 だいたい累計$150くらい寄付したことになる。OSSコミュニティの持続可能性に少しでも貢献していきたいのでこれからも続けていく。
 
 ### 振り返り
-- PR数ベースで去年と同じくらいのペースでPRを送れた。（月平均4.5件ペース）[^3]
+- PR数ベースで去年と同じくらいのペースでPRを送れた。（月平均4.5件ペース）[^4]
 - LazygitのGitHubのトップページのContributors一覧入りを果たした
     - GitHubではcommit数が多い順にrepositoryにもよるが12人前後までのアイコンがContributorsに表示される。
     - 細々とcontributionを続けたところのcommit数トップ9人に入れた。（2025/12/23現在）
@@ -187,4 +187,5 @@ TUIツールを個人開発をしているとなかなかユーザーの存在�
 
 [^1]: 便宜的にPRと表記しているが、GerritではCL(たしかChange List)と呼ばれる。
 [^2]: Ownerが自分以外のPublic Repositoryを対象に集計。
-[^3]: brew releaseに関してはfzf-makeの新バージョンをリリースする際にCIから自動でPRを送っているので本質的なOSS貢献かと言われるとちょっと微妙ではある。
+[^3]: https://gist.github.com/kyu08/138f8d15c2badc8243ca2e126545ca36 を使って集計した。
+[^4]: brew releaseに関してはfzf-makeの新バージョンをリリースする際にCIから自動でPRを送っているので本質的なOSS貢献かと言われるとちょっと微妙ではある。
