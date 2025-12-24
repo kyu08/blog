@@ -58,7 +58,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;49件のPRを作成1し43件のPRがマージされた。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;PR一覧は以下のような感じ。&lt;/p&gt;
+&lt;p&gt;PR一覧は以下のような感じ。&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;h4 id=&#34;機能追加&#34;&gt;機能追加&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/4810&#34; target=&#34;_blank&#34; &gt;jesseduffield/lazygit - Add &amp;ldquo;CopyToClipboard&amp;rdquo; command to ConfirmationController&lt;/a&gt;&lt;/li&gt;
@@ -143,7 +143,7 @@
 &lt;p&gt;だいたい累計$150くらい寄付したことになる。OSSコミュニティの持続可能性に少しでも貢献していきたいのでこれからも続けていく。&lt;/p&gt;
 &lt;h3 id=&#34;振り返り&#34;&gt;振り返り&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;PR数ベースで去年と同じくらいのペースでPRを送れた。（月平均4.5件ペース）&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;PR数ベースで去年と同じくらいのペースでPRを送れた。（月平均4.5件ペース）&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
 &lt;li&gt;LazygitのGitHubのトップページのContributors一覧入りを果たした
 &lt;ul&gt;
 &lt;li&gt;GitHubではcommit数が多い順にrepositoryにもよるが12人前後までのアイコンがContributorsに表示される。&lt;/li&gt;
@@ -238,7 +238,21 @@
 &lt;p&gt;Ownerが自分以外のPublic Repositoryを対象に集計。&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:3&#34;&gt;
-&lt;p&gt;brew releaseに関してはfzf-makeの新バージョンをリリースする際にCIから自動でPRを送っているので本質的なOSS貢献かと言われるとちょっと微妙ではある。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://gist.github.com/kyu08/138f8d15c2badc8243ca2e126545ca36&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://gist.github.com/kyu08/138f8d15c2badc8243ca2e126545ca36&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://gist.github.com/kyu08/138f8d15c2badc8243ca2e126545ca36&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://gist.github.com/kyu08/138f8d15c2badc8243ca2e126545ca36&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+ を使って集計した。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34;&gt;
+&lt;p&gt;brew releaseに関してはfzf-makeの新バージョンをリリースする際にCIから自動でPRを送っているので本質的なOSS貢献かと言われるとちょっと微妙ではある。&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
