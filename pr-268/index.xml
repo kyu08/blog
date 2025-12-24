@@ -201,6 +201,9 @@
 &lt;h3 id=&#34;sunaba&#34;&gt;sunaba&lt;/h3&gt;
 &lt;p&gt;（あんまり個人開発とは言わないかもだがまあいいでしょう）&lt;/p&gt;
 &lt;h2 id=&#34;ブログ&#34;&gt;ブログ&lt;/h2&gt;
+&lt;h3 id=&#34;書いた記事&#34;&gt;書いた記事&lt;/h3&gt;
+&lt;p&gt;かく&lt;/p&gt;
+&lt;h3 id=&#34;ブログの変更&#34;&gt;ブログの変更&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;OGPを動的生成するようにした&lt;/li&gt;
 &lt;li&gt;Heading要素のデザインを変えた&lt;/li&gt;
