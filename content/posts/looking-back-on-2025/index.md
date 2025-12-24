@@ -6,7 +6,7 @@ tags:
   - "blog"
 
 description: ""
-date: 2025-12-22T23:55:39+09:00
+date: 2025-12-24T23:55:39+09:00
 author: "kyu08"
 authorTwitter: "kyu08_"
 draft: false
@@ -25,7 +25,7 @@ cover: "cover.png"
 <!-- TODO: ほかにも書けることないか考える -->
 
 ### PRでの貢献
-GitHubとGerritで54件のPR[^1]を作成し48件のPRがマージされた。([GitHub](https://github.com/pulls?q=is%3Apr+archived%3Afalse+is%3Aclosed+author%3Akyu08+is%3Apublic+-user%3Akyu08+created%3A2025-01-01..2025-12-31+)[^2] [Gerrit](https://go-review.googlesource.com/q/owner:kyu.subsub@gmail.com))
+GitHubとGerritで55件のPR[^1]を作成し49件のPRがマージされた。([GitHub](https://github.com/pulls?q=is%3Apr+archived%3Afalse+is%3Aclosed+author%3Akyu08+is%3Apublic+-user%3Akyu08+created%3A2025-01-01..2025-12-31+)[^2] [Gerrit](https://go-review.googlesource.com/q/owner:kyu.subsub@gmail.com))
 
 去年の数字が以下だったのでPR作成数、マージされたPR数ともに微増だった。
 
@@ -78,6 +78,7 @@ PR一覧は以下のような感じ。
 - [rust-lang/surveys - \[Japanese\] replace "prioritising work" with "problems to productivity" in 2024 survey](https://github.com/rust-lang/surveys/pull/329)
 
 #### 自作TUIのbrew release関連
+- [Homebrew/homebrew-core - fzf-make 0.66.0](https://github.com/Homebrew/homebrew-core/pull/260001)
 - [Homebrew/homebrew-core - fzf-make 0.65.0](https://github.com/Homebrew/homebrew-core/pull/249550)
 - [Homebrew/homebrew-core - fzf-make 0.64.0](https://github.com/Homebrew/homebrew-core/pull/249255)
 - [Homebrew/homebrew-core - fzf-make 0.63.0](https://github.com/Homebrew/homebrew-core/pull/248909)
