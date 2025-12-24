@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.kyu08.com/</loc>
+    <lastmod>2025-12-25T00:17:02+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/gerrit/</loc>
+    <lastmod>2025-12-25T00:17:02+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/gerrit-find-cls-you-created/</loc>
+    <lastmod>2025-12-25T00:17:02+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/</loc>
+    <lastmod>2025-12-25T00:17:02+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/</loc>
+    <lastmod>2025-12-25T00:17:02+09:00</lastmod>
+  </url><url>
     <loc>https://blog.kyu08.com/posts/rust-web-app-book/</loc>
     <lastmod>2025-12-22T00:13:06+09:00</lastmod>
   </url><url>
-    <loc>https://blog.kyu08.com/</loc>
-    <lastmod>2025-12-22T00:13:06+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/posts/</loc>
-    <lastmod>2025-12-22T00:13:06+09:00</lastmod>
-  </url><url>
     <loc>https://blog.kyu08.com/tags/rust/</loc>
-    <lastmod>2025-12-22T00:13:06+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/</loc>
     <lastmod>2025-12-22T00:13:06+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</loc>
