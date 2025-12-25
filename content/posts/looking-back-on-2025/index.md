@@ -98,7 +98,7 @@ https://blog.kyu08.com/posts/renew-oss-sponsoring/
 だいたい累計$150くらい寄付したことになる。少しでも長く持続してくれると嬉しいのでこれからも続けていく。
 
 ### 振り返り
-- 去年と同じくらいのペースでPRを送ることができた。（月平均4.5件ペース）[^4]
+- 去年と同じくらいのペースでPRを送ることができた。（平均約4.5件/月ペース）[^4]
 - LazygitのGitHubのトップページのContributors一覧入りを果たした。
     ![lazygit-contibutors.webp](lazygit-contibutors.webp)
     - GitHubではcommit数が多い順に12人目くらいまでのアイコンがContributorsに表示される。
