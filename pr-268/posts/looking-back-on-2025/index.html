@@ -214,7 +214,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2025/12/24</time>
       
-    <span class="post-reading-time">7 min read (3130 words)</span></div>
+    <span class="post-reading-time">7 min read (3354 words)</span></div>
 
   
     <span class="post-tags">
@@ -261,7 +261,6 @@ if (!doNotTrack) {
         <li><a href="#ogpの自動生成">OGPの自動生成</a></li>
         <li><a href="#heading要素のデザインを変えた">Heading要素のデザインを変えた</a></li>
         <li><a href="#プレビュー環境を整えた">プレビュー環境を整えた</a></li>
-        <li><a href="#今年のpv数を振り返る">今年のPV数を振り返る？</a></li>
       </ul>
     </li>
     <li><a href="#読書など">読書など</a></li>
@@ -275,8 +274,7 @@ if (!doNotTrack) {
   
 
   <div class="post-content"><div>
-        <!-- raw HTML omitted -->
-<p>年の瀬なので1年を振り返る。</p>
+        <p>年の瀬なので1年を振り返る。</p>
 <h2 id="oss">OSS<a href="#oss" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <!-- raw HTML omitted -->
 <h3 id="prでの貢献">PRでの貢献<a href="#prでの貢献" class="hanchor" ariaLabel="Anchor">#</a> </h3>
@@ -495,9 +493,41 @@ if (!doNotTrack) {
 <p><img src="cover.png" alt="cover.png"></p>
 <p>Twitterで投稿したときに追加されるタイトル要素とOGPのメタ情報が被らないようになっているのが地味なこだわりポイント。</p>
 <p><img src="twitter-caption.webp" alt="twitter-caption.webp"></p>
+<p>ついでにこんな感じでPRにコメントとして表示されるようにしたので投稿前に確認できる。（日本語だとたまーに特定の記号などが豆腐になってしまうのチェック需要がある）</p>
+<p><img src="ogp-pr-comment.webp" alt="ogp-pr-comment.webp"></p>
 <h3 id="heading要素のデザインを変えた">Heading要素のデザインを変えた<a href="#heading要素のデザインを変えた" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>これまでは<code>h2</code>と<code>h3</code>の区別が付きづらかったので<code>## OSS</code>のようにHeading要素のレベルに合わせて<code>#</code>が表示されるデザインにした。</p>
+<table>
+<thead>
+<tr>
+<th>BEFORE</th>
+<th><img src="heading-before.webp" alt="heading-before.webp"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AFTER</strong></td>
+<td><img src="heading-after.webp" alt="heading-after.webp"></td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://x.com/voluntas" target="_blank" >@voluntas</a>さんの<a href="https://x.com/voluntas/status/1981896805672501760" target="_blank" >このツイート</a>をみていいなーと思ったので真似してみた。</p>
 <h3 id="プレビュー環境を整えた">プレビュー環境を整えた<a href="#プレビュー環境を整えた" class="hanchor" ariaLabel="Anchor">#</a> </h3>
-<h3 id="今年のpv数を振り返る">今年のPV数を振り返る？<a href="#今年のpv数を振り返る" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>PRコメントにプレビュー環境のリンクが投稿されるようにした。出先などでも記事の校正がしやすくなった。</p>
+<p><div class="blogcard" data-url="https://github.com/kyu08/blog/pull/235" data-auto-fetch="true">
+  <a href="https://github.com/kyu08/blog/pull/235" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/kyu08/blog/pull/235</div><div class="blogcard-url">https://github.com/kyu08/blog/pull/235</div>
+    </div>
+  </a>
+</div>
+</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h2 id="読書など">読書など<a href="#読書など" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <ul>
 <li>読んだ本を紹介</li>

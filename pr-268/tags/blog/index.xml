@@ -15,8 +15,7 @@
       
       <guid>https://blog.kyu08.com/pr-268/posts/looking-back-on-2025/</guid>
       <description>年の瀬なので1年を振り返る。 OSS PRでの貢献 GitHubとGerritで55件のPR1を作成し49件のPRがマージされた。(GitHub2 Gerrit) 去</description>
-      <content>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;年の瀬なので1年を振り返る。&lt;/p&gt;
+      <content>&lt;p&gt;年の瀬なので1年を振り返る。&lt;/p&gt;
 &lt;h2 id=&#34;oss&#34;&gt;OSS&lt;/h2&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;h3 id=&#34;prでの貢献&#34;&gt;PRでの貢献&lt;/h3&gt;
@@ -235,9 +234,41 @@
 &lt;p&gt;&lt;img src=&#34;cover.png&#34; alt=&#34;cover.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Twitterで投稿したときに追加されるタイトル要素とOGPのメタ情報が被らないようになっているのが地味なこだわりポイント。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;twitter-caption.webp&#34; alt=&#34;twitter-caption.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;ついでにこんな感じでPRにコメントとして表示されるようにしたので投稿前に確認できる。（日本語だとたまーに特定の記号などが豆腐になってしまうのチェック需要がある）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ogp-pr-comment.webp&#34; alt=&#34;ogp-pr-comment.webp&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;heading要素のデザインを変えた&#34;&gt;Heading要素のデザインを変えた&lt;/h3&gt;
+&lt;p&gt;これまでは&lt;code&gt;h2&lt;/code&gt;と&lt;code&gt;h3&lt;/code&gt;の区別が付きづらかったので&lt;code&gt;## OSS&lt;/code&gt;のようにHeading要素のレベルに合わせて&lt;code&gt;#&lt;/code&gt;が表示されるデザインにした。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;BEFORE&lt;/th&gt;
+&lt;th&gt;&lt;img src=&#34;heading-before.webp&#34; alt=&#34;heading-before.webp&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;AFTER&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;heading-after.webp&#34; alt=&#34;heading-after.webp&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;a href=&#34;https://x.com/voluntas&#34; target=&#34;_blank&#34; &gt;@voluntas&lt;/a&gt;さんの&lt;a href=&#34;https://x.com/voluntas/status/1981896805672501760&#34; target=&#34;_blank&#34; &gt;このツイート&lt;/a&gt;をみていいなーと思ったので真似してみた。&lt;/p&gt;
 &lt;h3 id=&#34;プレビュー環境を整えた&#34;&gt;プレビュー環境を整えた&lt;/h3&gt;
-&lt;h3 id=&#34;今年のpv数を振り返る&#34;&gt;今年のPV数を振り返る？&lt;/h3&gt;
+&lt;p&gt;PRコメントにプレビュー環境のリンクが投稿されるようにした。出先などでも記事の校正がしやすくなった。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/blog/pull/235&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/blog/pull/235&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/blog/pull/235&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/blog/pull/235&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;読書など&#34;&gt;読書など&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;読んだ本を紹介&lt;/li&gt;
