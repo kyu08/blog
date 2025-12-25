@@ -60,7 +60,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/derailed/k9s/pull/3699&#34; target=&#34;_blank&#34; &gt;derailed/k9s - feat(pulse): map hjkl to navigate as help shows&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;ci開発環境等の修正&#34;&gt;CI、開発環境等の修正&lt;/h4&gt;
+&lt;h4 id=&#34;ci開発環境等の変更&#34;&gt;CI、開発環境等の変更&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/4974&#34; target=&#34;_blank&#34; &gt;jesseduffield/lazygit - Add synchronize event to the hooks of &amp;ldquo;Check Required Labels&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/4936&#34; target=&#34;_blank&#34; &gt;jesseduffield/lazygit - Use ignore directive to ignore test files not to be passes to gofumpt&lt;/a&gt;&lt;/li&gt;
@@ -108,7 +108,7 @@
 &lt;p&gt;だいたい累計$150くらい寄付したことになる。少しでも長く持続してくれると嬉しいのでこれからも続けていく。&lt;/p&gt;
 &lt;h3 id=&#34;振り返り&#34;&gt;振り返り&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;去年と同じくらいのペースでPRを送ることができた。（平均約4.5件/月ペース）&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;去年と同じくらいのペースでPRを送ることができた。（平均約4.5件/月ペース）&lt;/li&gt;
 &lt;li&gt;LazygitのGitHubのトップページのContributors一覧入りを果たした。
 &lt;img src=&#34;lazygit-contibutors.webp&#34; alt=&#34;lazygit-contibutors.webp&#34;&gt;
 &lt;ul&gt;
@@ -275,7 +275,7 @@
 &lt;/ul&gt;
 &lt;p&gt;読みかけのものは割愛。&lt;/p&gt;
 &lt;p&gt;タイトルからも分かる通りComputer Science、 プロマネ、Kubernetes、Rustが今年の興味領域の中心だった。長期的に役立ちそう系と仕事ですぐ使える系とただ単に興味がある系をバランスよく摂取できた気がする。&lt;/p&gt;
-&lt;p&gt;ひとまずRust欲が落ち着いたので来年はComputer Science系をやりつつ、Goの深堀りにも時間を使っていきたい。Computer Scienceに関してはネットワークと並行プログラミング周りを深ぼろうと思っている。&lt;/p&gt;
+&lt;p&gt;ひとまずRust欲が落ち着いたので来年はComputer Science系をやりつつ、Goの深堀りにも時間を使っていきたい。Computer Scienceに関してはネットワークと並行プログラミング周りを深掘ろうと思っている。&lt;/p&gt;
 &lt;h3 id=&#34;ブログカードの表示&#34;&gt;ブログカードの表示&lt;/h3&gt;
 &lt;p&gt;こんな感じでリンク先の情報を表示するようにした。便利。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;blog-card.webp&#34; alt=&#34;blog-card.webp&#34;&gt;&lt;/p&gt;
@@ -382,9 +382,6 @@
   &lt;/a&gt;
 &lt;/div&gt;
  を使って集計した。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:4&#34;&gt;
-&lt;p&gt;brew releaseに関してはfzf-makeの新バージョンをリリースする際にCIから自動でPRを送っているので本質的なOSS貢献かと言われるとちょっと微妙ではある。&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
