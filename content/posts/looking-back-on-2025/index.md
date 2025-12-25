@@ -6,7 +6,7 @@ tags:
   - "blog"
 
 description: ""
-date: 2025-12-26T00:12:00+09:00
+date: 2025-12-25T00:00:00+09:00
 author: "kyu08"
 authorTwitter: "kyu08_"
 draft: false
