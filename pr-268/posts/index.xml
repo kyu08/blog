@@ -73,7 +73,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/rust-lang/surveys/pull/329&#34; target=&#34;_blank&#34; &gt;rust-lang/surveys - [Japanese] replace &amp;ldquo;prioritising work&amp;rdquo; with &amp;ldquo;problems to productivity&amp;rdquo; in 2024 survey&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;自作tuiのbrew-release関連&#34;&gt;自作TUIのbrew release関連&lt;/h4&gt;
+&lt;h4 id=&#34;自作ツールのbrew-release関連&#34;&gt;自作ツールのbrew release関連&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/Homebrew/homebrew-core/pull/260001&#34; target=&#34;_blank&#34; &gt;Homebrew/homebrew-core - fzf-make 0.66.0&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/Homebrew/homebrew-core/pull/249550&#34; target=&#34;_blank&#34; &gt;Homebrew/homebrew-core - fzf-make 0.65.0&lt;/a&gt;&lt;/li&gt;
