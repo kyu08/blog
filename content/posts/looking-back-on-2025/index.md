@@ -73,7 +73,7 @@ PR一覧は以下のような感じ。[^3]
 #### 翻訳
 - [rust-lang/surveys - \[Japanese\] replace "prioritising work" with "problems to productivity" in 2024 survey](https://github.com/rust-lang/surveys/pull/329)
 
-#### 自作TUIのbrew release関連
+#### 自作ツールのbrew release関連
 - [Homebrew/homebrew-core - fzf-make 0.66.0](https://github.com/Homebrew/homebrew-core/pull/260001)
 - [Homebrew/homebrew-core - fzf-make 0.65.0](https://github.com/Homebrew/homebrew-core/pull/249550)
 - [Homebrew/homebrew-core - fzf-make 0.64.0](https://github.com/Homebrew/homebrew-core/pull/249255)
