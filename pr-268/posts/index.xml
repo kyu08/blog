@@ -14,11 +14,10 @@
       <pubDate>Thu, 25 Dec 2025 12:55:39 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/pr-268/posts/looking-back-on-2025/</guid>
-      <description>年の瀬なので1年を振り返る。 OSS PRでの貢献 GitHubとGerritで55件のPR1を作成し49件のPRがマージされた。(GitHub2 Gerrit) 去</description>
+      <description>年の瀬なので1年を振り返る。 OSS PR GitHubとGerritで55件のPR1を作成し49件のPRがマージされた。(GitHub2 Gerrit) 去年の数字が</description>
       <content>&lt;p&gt;年の瀬なので1年を振り返る。&lt;/p&gt;
 &lt;h2 id=&#34;oss&#34;&gt;OSS&lt;/h2&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;h3 id=&#34;prでの貢献&#34;&gt;PRでの貢献&lt;/h3&gt;
+&lt;h3 id=&#34;pr&#34;&gt;PR&lt;/h3&gt;
 &lt;p&gt;GitHubとGerritで55件のPR&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;を作成し49件のPRがマージされた。(&lt;a href=&#34;https://github.com/pulls?q=is%3Apr&amp;#43;archived%3Afalse&amp;#43;is%3Aclosed&amp;#43;author%3Akyu08&amp;#43;is%3Apublic&amp;#43;-user%3Akyu08&amp;#43;created%3A2025-01-01..2025-12-31&amp;#43;&#34; target=&#34;_blank&#34; &gt;GitHub&lt;/a&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; &lt;a href=&#34;https://go-review.googlesource.com/q/owner:kyu.subsub@gmail.com&#34; target=&#34;_blank&#34; &gt;Gerrit&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;去年の数字が以下だったのでPR作成数、マージされたPR数ともに微増した。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -54,8 +53,8 @@
 &lt;li&gt;&lt;a href=&#34;https://github.com/yuki-yano/zeno.zsh/pull/81&#34; target=&#34;_blank&#34; &gt;yuki-yano/zeno.zsh - docs(readme): replace exa with eza&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/nand2tetris/web-ide/pull/559&#34; target=&#34;_blank&#34; &gt;nand2tetris/web-ide - Fix typo in projects/src/project_08/21_nested_call.ts(initliazes -&amp;gt; initializes)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/cloudspannerecosystem/yo/pull/147&#34; target=&#34;_blank&#34; &gt;cloudspannerecosystem/yo - Add installation method for Go 1.16+&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://go-review.googlesource.com/c/wiki/&amp;#43;/703735&#34; target=&#34;_blank&#34; &gt;703735: GoUsers: add Canary Inc.&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://go-review.googlesource.com/c/wiki/&amp;#43;/703736&#34; target=&#34;_blank&#34; &gt;703736: GoUsers: fix the position of CloudSign&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://go-review.googlesource.com/c/wiki/&amp;#43;/703735&#34; target=&#34;_blank&#34; &gt;golang - 703735: GoUsers: add Canary Inc.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://go-review.googlesource.com/c/wiki/&amp;#43;/703736&#34; target=&#34;_blank&#34; &gt;golang - 703736: GoUsers: fix the position of CloudSign&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;バグ修正&#34;&gt;バグ修正&lt;/h4&gt;
 &lt;ul&gt;
@@ -106,17 +105,17 @@
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;/p&gt;
-&lt;p&gt;だいたい累計$150くらい寄付したことになる。OSSコミュニティの持続可能性に少しでも貢献していきたいのでこれからも続けていく。&lt;/p&gt;
+&lt;p&gt;だいたい累計$150くらい寄付したことになる。少しでも長く持続してくれると嬉しいのでこれからも続けていく。&lt;/p&gt;
 &lt;h3 id=&#34;振り返り&#34;&gt;振り返り&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;PR数ベースで去年と同じくらいのペースでPRを送れた。（月平均4.5件ペース）&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
-&lt;li&gt;LazygitのGitHubのトップページのContributors一覧入りを果たした
+&lt;li&gt;去年と同じくらいのペースでPRを送ることができた。（月平均4.5件ペース）&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;LazygitのGitHubのトップページのContributors一覧入りを果たした。
+&lt;img src=&#34;lazygit-contibutors.webp&#34; alt=&#34;lazygit-contibutors.webp&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;GitHubではcommit数が多い順にrepositoryにもよるが12人前後までのアイコンがContributorsに表示される。&lt;/li&gt;
-&lt;li&gt;細々とcontributionを続けたところの9番目にcommit数が多い人になれた。（2025/12/23現在）&lt;/li&gt;
+&lt;li&gt;GitHubではcommit数が多い順に12人目くらいまでのアイコンがContributorsに表示される。&lt;/li&gt;
+&lt;li&gt;細々とcontributionを続けたところの9番目にcommitが多い人になれた。（2025/12/23現在）&lt;/li&gt;
 &lt;li&gt;しばらくはこれを目標にlazygitへのcontributionを続けていたので嬉しい。&lt;/li&gt;
-&lt;li&gt;CIの修正やGoのバージョンアップなど、地味めなPRがメインだったがいくつか機能追加PRもマージしてもらえた。（&lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/4728&#34; target=&#34;_blank&#34; &gt;branchパネルで&lt;code&gt;-&lt;/code&gt;を押すと&lt;code&gt;git checkout -&lt;/code&gt;相当のことができる機能&lt;/a&gt;と&lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/4810&#34; target=&#34;_blank&#34; &gt;エラー内容をクリップボードにコピーできるようにする機能&lt;/a&gt;）
-&lt;img src=&#34;lazygit-contibutors.webp&#34; alt=&#34;lazygit-contibutors.webp&#34;&gt;&lt;/li&gt;
+&lt;li&gt;CIの修正やGoのバージョンアップなど、地味めなPRがメインだったがいくつか機能追加PRもマージしてもらえた。（&lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/4728&#34; target=&#34;_blank&#34; &gt;branchパネルで&lt;code&gt;-&lt;/code&gt;を押すと&lt;code&gt;git checkout -&lt;/code&gt;相当のことができる機能&lt;/a&gt;と&lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/4810&#34; target=&#34;_blank&#34; &gt;エラー内容をクリップボードにコピーできるようにする機能&lt;/a&gt;）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;GoWikiへのcontributionに際してGerritを初めてつかった。
@@ -158,11 +157,11 @@
 &lt;p&gt;&lt;img src=&#34;fzf-make-star.webp&#34; alt=&#34;fzf-make-star.webp&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.star-history.com/#kyu08/fzf-make&amp;amp;type=date&amp;amp;legend=top-left&#34; target=&#34;_blank&#34; &gt;Star History&lt;/a&gt;によると2024/12/19時点では129スターだったので1年で大体倍くらいになった。🎉&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;fzf-make-star-history-20251223-last-year.webp&#34; alt=&#34;fzf-make-star-history-20251223-last-year.webp&#34;&gt;&lt;/p&gt;
-&lt;p&gt;機能提案やバグ報告、PR大歓迎ですのでぜひお気軽にお願いします！（もちろん使ってるよー！と言ってもらえるだけでも大変うれしいです！そして&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;スター&lt;/a&gt;してくれたらもっと嬉しいです！）&lt;/p&gt;
 &lt;p&gt;来年も適度なペースで細々とメンテしていきます。(npm対応は早めにやりたい&amp;hellip;！)&lt;/p&gt;
-&lt;h4 id=&#34;追加した機能の紹介&#34;&gt;追加した機能の紹介&lt;/h4&gt;
+&lt;h4 id=&#34;今年の変更点&#34;&gt;今年の変更点&lt;/h4&gt;
 &lt;p&gt;2025年は&lt;a href=&#34;https://github.com/pulls?q=is%3Apr&amp;#43;archived%3Afalse&amp;#43;author%3Akyu08&amp;#43;is%3Apublic&amp;#43;repo%3Akyu08%2Ffzf-make&amp;#43;created%3A2025-01-01..2025-12-31&amp;#43;is%3Amerged&amp;#43;&#34; target=&#34;_blank&#34; &gt;筆者が74件のPRを作成&amp;amp;マージし&lt;/a&gt;、&lt;a href=&#34;https://github.com/kyu08/fzf-make/compare/v0.54.0...v0.65.0&#34; target=&#34;_blank&#34; &gt;12個のバージョンがリリースされ、筆者とrenovateを含めて5人の貢献者により102のcommitが追加された。&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;TUIツールを個人開発をしているとなかなかユーザーの存在を感じづらいので昨年に引き続き自分以外にissueを立ててくれたりPRを送ってくれたりTwitterで言及してくれる方がいてとても嬉しい。🙏&lt;/p&gt;
+&lt;p&gt;TUIツールを個人開発をしているとなかなかユーザーの存在を感じづらいので昨年に引き続きissueを立てたりPRを送ってくれたりTwitterで言及してくれる方がいてとても嬉しい。🙏&lt;/p&gt;
+&lt;p&gt;もちろん使ってるよー！と言ってもらえるだけでも大変うれしいです！ぜひ&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;スター&lt;/a&gt;もお願いします！&lt;/p&gt;
 &lt;p&gt;今年行った主要な機能追加は以下の通り。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;コマンドに引数を渡せるようにする&lt;a href=&#34;https://github.com/kyu08/fzf-make/releases/tag/v0.58.0&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;@v0.58.0&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
@@ -187,7 +186,7 @@
 &lt;p&gt;今までは都度repositoryを作成していたが、ディレクトリを作成するだけでよくなったので若干楽になった。&lt;/p&gt;
 &lt;h2 id=&#34;ブログ&#34;&gt;ブログ&lt;/h2&gt;
 &lt;h3 id=&#34;書いた記事&#34;&gt;書いた記事&lt;/h3&gt;
-&lt;p&gt;今年は14本の記事を書いた。仕事が忙しい時期以外は割と本を読んだりブログを書けたりしている。&lt;/p&gt;
+&lt;p&gt;今年は14本の記事を書いた。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://blog.kyu08.com/posts/magi65/&#34; target=&#34;_blank&#34; &gt;IQUNIX Magi65を買った&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://blog.kyu08.com/posts/nand2tetris/&#34; target=&#34;_blank&#34; &gt;『コンピュータシステムの理論と実装 第2版』を読んだ&lt;/a&gt;&lt;/li&gt;
@@ -210,8 +209,8 @@
 &lt;li&gt;OGPを動的生成するようにした&lt;/li&gt;
 &lt;li&gt;Heading要素のデザインを変えた&lt;/li&gt;
 &lt;li&gt;プレビュー環境を整えた&lt;/li&gt;
+&lt;li&gt;ブログカードの表示&lt;/li&gt;
 &lt;/ol&gt;
-&lt;!-- raw HTML omitted --&gt;
 &lt;h3 id=&#34;ogpの自動生成&#34;&gt;OGPの自動生成&lt;/h3&gt;
 &lt;p&gt;CIで記事のタイトルを読み取ってOGP画像を自動生成 + commitするようにした。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/blog/pull/239&#34; data-auto-fetch=&#34;true&#34;&gt;
@@ -230,7 +229,7 @@
 &lt;p&gt;&lt;img src=&#34;cover.png&#34; alt=&#34;cover.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Twitterで投稿したときに追加されるタイトル要素とOGPのメタ情報が被らないようになっているのが地味なこだわりポイント。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;twitter-caption.webp&#34; alt=&#34;twitter-caption.webp&#34;&gt;&lt;/p&gt;
-&lt;p&gt;ついでにこんな感じでPRにコメントとして表示されるようにしたので投稿前に確認できる。（日本語だとたまーに特定の記号などが豆腐になってしまうのチェック需要がある）&lt;/p&gt;
+&lt;p&gt;ついでにこんな感じでPRにコメントとして表示されるようにしたので投稿前に確認できる。（日本語だとたまーに特定の記号などが豆腐になってしまうのチェックしておきたい）&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;ogp-pr-comment.webp&#34; alt=&#34;ogp-pr-comment.webp&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;heading要素のデザインを変えた&#34;&gt;Heading要素のデザインを変えた&lt;/h3&gt;
 &lt;p&gt;これまではレベルの異なるHeading要素の区別が付きづらかったので&lt;code&gt;## OSS&lt;/code&gt;のようにHeading要素のレベルに合わせて&lt;code&gt;#&lt;/code&gt;が表示されるデザインにした。&lt;/p&gt;
@@ -276,7 +275,22 @@
 &lt;/ul&gt;
 &lt;p&gt;読みかけのものは割愛。&lt;/p&gt;
 &lt;p&gt;タイトルからも分かる通りComputer Science、 プロマネ、Kubernetes、Rustが今年の興味領域の中心だった。長期的に役立ちそう系と仕事ですぐ使える系とただ単に興味がある系をバランスよく摂取できた気がする。&lt;/p&gt;
-&lt;p&gt;ひとまずRust欲が落ち着いたので来年はComputer Science系をやりつつ、Goの深堀りにも時間を使っていきたい。Computer Scienceに関してはネットワークと並行処理周りを深ぼろうと思っている。&lt;/p&gt;
+&lt;p&gt;ひとまずRust欲が落ち着いたので来年はComputer Science系をやりつつ、Goの深堀りにも時間を使っていきたい。Computer Scienceに関してはネットワークと並行プログラミング周りを深ぼろうと思っている。&lt;/p&gt;
+&lt;h3 id=&#34;ブログカードの表示&#34;&gt;ブログカードの表示&lt;/h3&gt;
+&lt;p&gt;こんな感じでリンク先の情報を表示するようにした。便利。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;blog-card.webp&#34; alt=&#34;blog-card.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/blog/pull/246&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/blog/pull/246&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/blog/pull/246&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/blog/pull/246&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 &lt;h2 id=&#34;勉強会&#34;&gt;勉強会&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;関数型まつり2025&lt;/li&gt;
@@ -309,22 +323,15 @@
 &lt;/p&gt;
 &lt;p&gt;勉強になったり刺激を得られたりしてよかった。来年はGoの勉強会にも参加してみようと思う。&lt;/p&gt;
 &lt;h2 id=&#34;生活&#34;&gt;生活&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;ジムに行き始めた&lt;/li&gt;
-&lt;li&gt;なんか早く寝れるようになってきた&lt;/li&gt;
-&lt;li&gt;お昼ご飯をたくさん食べると夕方の集中力低下タイムがなくなることに気づいた&lt;/li&gt;
-&lt;li&gt;舌下治療継続中&lt;/li&gt;
-&lt;li&gt;サッカー観戦に行きだした&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h3 id=&#34;ジム&#34;&gt;ジム&lt;/h3&gt;
 &lt;p&gt;8月からジムに通い始めた。腰が痛くなりやすいので腰痛防止が主な目的。&lt;/p&gt;
 &lt;p&gt;無事に腰痛とはお別れでき、筋肉も4ヶ月で4kg増やすことができているので引き続きやっていき。活動できる量も増えるしやはり筋肉は正義なのだと実感した。&lt;/p&gt;
 &lt;h3 id=&#34;睡眠&#34;&gt;睡眠&lt;/h3&gt;
 &lt;p&gt;今年の春くらいから就寝時間が0時半くらいになった。それまでは2時とかに寝て次の日なんかボーッとするなーということが多かったのでいい感じになってよかった。&lt;/p&gt;
 &lt;p&gt;朝散歩で日の光にあたったり運動や出社で体力を使うようにしたのが自分の睡眠にはいい影響があった気がする。（たぶん）&lt;/p&gt;
-&lt;h3 id=&#34;お昼ご飯&#34;&gt;お昼ご飯&lt;/h3&gt;
+&lt;h3 id=&#34;食事&#34;&gt;食事&lt;/h3&gt;
 &lt;p&gt;これまではリモートで働いているとよく17時前後に集中力が皆無になってしまい、ちょっとゴロゴロしてから空腹を感じてご飯を食べる、というようなことをしていた。&lt;/p&gt;
-&lt;p&gt;ある日お昼ご飯をお腹いっぱい食べたところ夕方の集中力低下タイムがなくなったことに気づいた。シンプルに夕方に血糖値的なものが下がりすぎて集中力が落ちていたっぽいことに気づいた。地味に生産性が落ちていたので改善できて嬉しい。&lt;/p&gt;
+&lt;p&gt;ある日お昼ご飯をお腹いっぱい食べたところ夕方の集中力低下タイムがなくなったことに気づいた。シンプルに夕方に血糖値的なものが下がりすぎて集中力が落ちていた模様。地味に生産性が落ちていたので改善できて嬉しい。&lt;/p&gt;
 &lt;h3 id=&#34;舌下治療&#34;&gt;舌下治療&lt;/h3&gt;
 &lt;p&gt;去年の秋頃始めた舌下治療の結果がでて今年の春の花粉シーズンは例年よりも楽だった。&lt;/p&gt;
 &lt;p&gt;来年はもっと楽になることを期待。&lt;/p&gt;
@@ -335,7 +342,7 @@
 &lt;h2 id=&#34;仕事&#34;&gt;仕事&lt;/h2&gt;
 &lt;p&gt;転職し、2/1から新しい職場で働きはじめた。&lt;/p&gt;
 &lt;p&gt;プロダクトがたくさんのお客様に価値提供をできている実感があり、モチベーション高く働けている。&lt;/p&gt;
-&lt;p&gt;また、上期に関わったプロジェクトの成果を認めていただきMVPを受賞することができた。たくさんの人に協力いただきながらなんとか完遂できたプロジェクトだったので周りの方々には感謝しかない。&lt;/p&gt;
+&lt;p&gt;また、上期に関わったプロジェクトの成果を認めていただきMVPを受賞することができた。たくさんの人に協力いただきながらなんとか完遂できたプロジェクトだったので周りの方々には感謝してもしきれない。&lt;/p&gt;
 &lt;p&gt;会社全体としても好調なのでより一層事業成長に貢献していけるように全方面で頑張っていきたい。&lt;/p&gt;
 &lt;p&gt;技術的には引き続き、Go、Google Cloud、Spannerなどを触っている。&lt;/p&gt;
 &lt;p&gt;このブログではあまり会社については詳しく話せていませんが、エンジニア採用を強化中ですので少しでも興味を持ってくれた方はTwitterのDMとかで連絡をください。ご飯やカジュアル面談などの調整をさせていただきます。（もちろんDMで聞きたいことを聞いていただいても大丈夫です）&lt;/p&gt;
@@ -345,7 +352,14 @@
 &lt;li&gt;事業成長に貢献する&lt;/li&gt;
 &lt;li&gt;GoとComputer Scienceを深堀る&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
 &lt;p&gt;来年もやっていきます。&lt;/p&gt;
+&lt;p&gt;過去の振り返り記事はこちら。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.kyu08.com/pr-268/posts/looking-back-on-2024/&#34; &gt;2024年を振り返る&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.kyu08.com/pr-268/posts/looking-back-on-2023/&#34; &gt;2023年を振り返る&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.kyu08.com/pr-268/posts/20201231-review-of-2020/&#34; &gt;2020年をかんたんに振り返る&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
