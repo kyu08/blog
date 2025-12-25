@@ -237,6 +237,7 @@ https://github.com/kyu08/blog/pull/235
 - [つくって、壊して、直して学ぶ Kubernetes入門](https://www.shoeisha.co.jp/book/detail/9784798183961)
 - [コンセプトから理解するRust](https://gihyo.jp/book/2022/978-4-297-12562-2)
 - [RustによるWebアプリケーション開発 設計からリリース・運用まで](https://www.kodansha.co.jp/book/products/0000398182)
+- [Clean Architecture 達人に学ぶソフトウェアの構造と設計](https://tatsu-zine.com/books/clean-architecture)
 
 読みかけのものは割愛。
 
