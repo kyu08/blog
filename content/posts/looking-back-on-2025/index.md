@@ -20,9 +20,7 @@ cover: "cover.png"
 年の瀬なので1年を振り返る。
 
 ## OSS
-<!-- TODO: ほかにも書けることないか考える -->
-
-### PRでの貢献
+### PR
 GitHubとGerritで55件のPR[^1]を作成し49件のPRがマージされた。([GitHub](https://github.com/pulls?q=is%3Apr+archived%3Afalse+is%3Aclosed+author%3Akyu08+is%3Apublic+-user%3Akyu08+created%3A2025-01-01..2025-12-31+)[^2] [Gerrit](https://go-review.googlesource.com/q/owner:kyu.subsub@gmail.com))
 
 去年の数字が以下だったのでPR作成数、マージされたPR数ともに微増した。
@@ -58,8 +56,8 @@ PR一覧は以下のような感じ。[^3]
 - [yuki-yano/zeno.zsh - docs(readme): replace exa with eza](https://github.com/yuki-yano/zeno.zsh/pull/81)
 - [nand2tetris/web-ide - Fix typo in projects/src/project_08/21_nested_call.ts(initliazes -> initializes)](https://github.com/nand2tetris/web-ide/pull/559)
 - [cloudspannerecosystem/yo - Add installation method for Go 1.16+](https://github.com/cloudspannerecosystem/yo/pull/147)
-- [703735: GoUsers: add Canary Inc.](https://go-review.googlesource.com/c/wiki/+/703735)
-- [703736: GoUsers: fix the position of CloudSign](https://go-review.googlesource.com/c/wiki/+/703736)
+- [golang - 703735: GoUsers: add Canary Inc.](https://go-review.googlesource.com/c/wiki/+/703735)
+- [golang - 703736: GoUsers: fix the position of CloudSign](https://go-review.googlesource.com/c/wiki/+/703736)
 
 #### バグ修正
 - [derailed/k9s - feat(pulse): map hjkl to navigate as help shows](https://github.com/derailed/k9s/pull/3699)
@@ -92,22 +90,21 @@ PR一覧は以下のような感じ。[^3]
 - [Homebrew/homebrew-core - fzf-make 0.55.0](https://github.com/Homebrew/homebrew-core/pull/203296)
 - [Homebrew/homebrew-core - fzf-make 0.54.0](https://github.com/Homebrew/homebrew-core/pull/203265)
 
-
 ### 寄付
 この記事を書いたときから継続して[Neovim](https://github.com/sponsors/neovim)と[ratatui](https://github.com/sponsors/ratatui)に5$/monthずつ寄付し続けている。
 
 https://blog.kyu08.com/posts/renew-oss-sponsoring/
 
-だいたい累計$150くらい寄付したことになる。OSSコミュニティの持続可能性に少しでも貢献していきたいのでこれからも続けていく。
+だいたい累計$150くらい寄付したことになる。少しでも長く持続してくれると嬉しいのでこれからも続けていく。
 
 ### 振り返り
-- PR数ベースで去年と同じくらいのペースでPRを送れた。（月平均4.5件ペース）[^4]
-- LazygitのGitHubのトップページのContributors一覧入りを果たした
-    - GitHubではcommit数が多い順にrepositoryにもよるが12人前後までのアイコンがContributorsに表示される。
-    - 細々とcontributionを続けたところの9番目にcommit数が多い人になれた。（2025/12/23現在）
+- 去年と同じくらいのペースでPRを送ることができた。（月平均4.5件ペース）[^4]
+- LazygitのGitHubのトップページのContributors一覧入りを果たした。
+    ![lazygit-contibutors.webp](lazygit-contibutors.webp)
+    - GitHubではcommit数が多い順に12人目くらいまでのアイコンがContributorsに表示される。
+    - 細々とcontributionを続けたところの9番目にcommitが多い人になれた。（2025/12/23現在）
     - しばらくはこれを目標にlazygitへのcontributionを続けていたので嬉しい。
     - CIの修正やGoのバージョンアップなど、地味めなPRがメインだったがいくつか機能追加PRもマージしてもらえた。（[branchパネルで`-`を押すと`git checkout -`相当のことができる機能](https://github.com/jesseduffield/lazygit/pull/4728)と[エラー内容をクリップボードにコピーできるようにする機能](https://github.com/jesseduffield/lazygit/pull/4810)）
-        ![lazygit-contibutors.webp](lazygit-contibutors.webp)
 - GoWikiへのcontributionに際してGerritを初めてつかった。
     - GitHubとかなかなかメンタルモデルが違う感じだったので結構手間取った。
     - 参考になったリソースなどをいつか記事にしたい。
@@ -145,14 +142,14 @@ gifを見てもらえれば分かる通り、プレビューウィンドウで�
 
 ![fzf-make-star-history-20251223-last-year.webp](fzf-make-star-history-20251223-last-year.webp)
 
-機能提案やバグ報告、PR大歓迎ですのでぜひお気軽にお願いします！（もちろん使ってるよー！と言ってもらえるだけでも大変うれしいです！そして[スター](https://github.com/kyu08/fzf-make)してくれたらもっと嬉しいです！）
-
 来年も適度なペースで細々とメンテしていきます。(npm対応は早めにやりたい...！)
 
-#### 追加した機能の紹介
+#### 今年の変更点
 2025年は[筆者が74件のPRを作成&マージし](https://github.com/pulls?q=is%3Apr+archived%3Afalse+author%3Akyu08+is%3Apublic+repo%3Akyu08%2Ffzf-make+created%3A2025-01-01..2025-12-31+is%3Amerged+)、[12個のバージョンがリリースされ、筆者とrenovateを含めて5人の貢献者により102のcommitが追加された。](https://github.com/kyu08/fzf-make/compare/v0.54.0...v0.65.0)
 
-TUIツールを個人開発をしているとなかなかユーザーの存在を感じづらいので昨年に引き続き自分以外にissueを立ててくれたりPRを送ってくれたりTwitterで言及してくれる方がいてとても嬉しい。🙏
+TUIツールを個人開発をしているとなかなかユーザーの存在を感じづらいので昨年に引き続きissueを立てたりPRを送ってくれたりTwitterで言及してくれる方がいてとても嬉しい。🙏
+
+もちろん使ってるよー！と言ってもらえるだけでも大変うれしいです！ぜひ[スター](https://github.com/kyu08/fzf-make)もお願いします！
 
 今年行った主要な機能追加は以下の通り。
 
@@ -171,7 +168,7 @@ https://github.com/kyu08/sunaba
 
 ## ブログ
 ### 書いた記事
-今年は14本の記事を書いた。仕事が忙しい時期以外は割と本を読んだりブログを書けたりしている。
+今年は14本の記事を書いた。
 
 - [IQUNIX Magi65を買った](https://blog.kyu08.com/posts/magi65/)
 - [『コンピュータシステムの理論と実装 第2版』を読んだ](https://blog.kyu08.com/posts/nand2tetris/)
@@ -195,7 +192,7 @@ https://github.com/kyu08/sunaba
 1. OGPを動的生成するようにした
 1. Heading要素のデザインを変えた
 1. プレビュー環境を整えた
-<!-- 1. 今年のPV数を振り返る？ -->
+1. ブログカードの表示
 
 ### OGPの自動生成
 CIで記事のタイトルを読み取ってOGP画像を自動生成 + commitするようにした。
@@ -210,7 +207,7 @@ Twitterで投稿したときに追加されるタイトル要素とOGPのメタ�
 
 ![twitter-caption.webp](twitter-caption.webp)
 
-ついでにこんな感じでPRにコメントとして表示されるようにしたので投稿前に確認できる。（日本語だとたまーに特定の記号などが豆腐になってしまうのチェック需要がある）
+ついでにこんな感じでPRにコメントとして表示されるようにしたので投稿前に確認できる。（日本語だとたまーに特定の記号などが豆腐になってしまうのチェックしておきたい）
 
 ![ogp-pr-comment.webp](ogp-pr-comment.webp)
 
@@ -245,7 +242,15 @@ https://github.com/kyu08/blog/pull/235
 
 タイトルからも分かる通りComputer Science、 プロマネ、Kubernetes、Rustが今年の興味領域の中心だった。長期的に役立ちそう系と仕事ですぐ使える系とただ単に興味がある系をバランスよく摂取できた気がする。
 
-ひとまずRust欲が落ち着いたので来年はComputer Science系をやりつつ、Goの深堀りにも時間を使っていきたい。Computer Scienceに関してはネットワークと並行処理周りを深ぼろうと思っている。
+ひとまずRust欲が落ち着いたので来年はComputer Science系をやりつつ、Goの深堀りにも時間を使っていきたい。Computer Scienceに関してはネットワークと並行プログラミング周りを深ぼろうと思っている。
+
+### ブログカードの表示
+こんな感じでリンク先の情報を表示するようにした。便利。
+
+![blog-card.webp](blog-card.webp)
+
+https://github.com/kyu08/blog/pull/246
+
 
 ## 勉強会
 - 関数型まつり2025
@@ -260,12 +265,6 @@ https://blog.kyu08.com/posts/vim-conf-2025/
 勉強になったり刺激を得られたりしてよかった。来年はGoの勉強会にも参加してみようと思う。
 
 ## 生活
-- ジムに行き始めた
-- なんか早く寝れるようになってきた
-- お昼ご飯をたくさん食べると夕方の集中力低下タイムがなくなることに気づいた
-- 舌下治療継続中
-- サッカー観戦に行きだした
-
 ### ジム
 8月からジムに通い始めた。腰が痛くなりやすいので腰痛防止が主な目的。
 
@@ -276,10 +275,10 @@ https://blog.kyu08.com/posts/vim-conf-2025/
 
 朝散歩で日の光にあたったり運動や出社で体力を使うようにしたのが自分の睡眠にはいい影響があった気がする。（たぶん）
 
-### お昼ご飯
+### 食事
 これまではリモートで働いているとよく17時前後に集中力が皆無になってしまい、ちょっとゴロゴロしてから空腹を感じてご飯を食べる、というようなことをしていた。
 
-ある日お昼ご飯をお腹いっぱい食べたところ夕方の集中力低下タイムがなくなったことに気づいた。シンプルに夕方に血糖値的なものが下がりすぎて集中力が落ちていたっぽいことに気づいた。地味に生産性が落ちていたので改善できて嬉しい。
+ある日お昼ご飯をお腹いっぱい食べたところ夕方の集中力低下タイムがなくなったことに気づいた。シンプルに夕方に血糖値的なものが下がりすぎて集中力が落ちていた模様。地味に生産性が落ちていたので改善できて嬉しい。
 
 ### 舌下治療
 去年の秋頃始めた舌下治療の結果がでて今年の春の花粉シーズンは例年よりも楽だった。
@@ -298,7 +297,7 @@ https://blog.kyu08.com/posts/vim-conf-2025/
 
 プロダクトがたくさんのお客様に価値提供をできている実感があり、モチベーション高く働けている。
 
-また、上期に関わったプロジェクトの成果を認めていただきMVPを受賞することができた。たくさんの人に協力いただきながらなんとか完遂できたプロジェクトだったので周りの方々には感謝しかない。
+また、上期に関わったプロジェクトの成果を認めていただきMVPを受賞することができた。たくさんの人に協力いただきながらなんとか完遂できたプロジェクトだったので周りの方々には感謝してもしきれない。
 
 会社全体としても好調なのでより一層事業成長に貢献していけるように全方面で頑張っていきたい。
 
@@ -312,7 +311,13 @@ https://blog.kyu08.com/posts/vim-conf-2025/
 - 事業成長に貢献する
 - GoとComputer Scienceを深堀る
 
+## おわりに
 来年もやっていきます。
+
+過去の振り返り記事はこちら。
+- [2024年を振り返る](/posts/looking-back-on-2024/)
+- [2023年を振り返る](/posts/looking-back-on-2023/)
+- [2020年をかんたんに振り返る](/posts/20201231-review-of-2020/)
 
 [^1]: 便宜的にPRと表記しているが、GerritではCL(たしかChange List)と呼ばれる。
 [^2]: Ownerが自分以外のPublic Repositoryを対象に集計。
