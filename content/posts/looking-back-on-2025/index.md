@@ -62,7 +62,7 @@ PR一覧は以下のような感じ。[^3]
 #### バグ修正
 - [derailed/k9s - feat(pulse): map hjkl to navigate as help shows](https://github.com/derailed/k9s/pull/3699)
 
-#### CI、開発環境等の修正
+#### CI、開発環境等の変更
 - [jesseduffield/lazygit - Add synchronize event to the hooks of "Check Required Labels"](https://github.com/jesseduffield/lazygit/pull/4974)
 - [jesseduffield/lazygit - Use ignore directive to ignore test files not to be passes to gofumpt](https://github.com/jesseduffield/lazygit/pull/4936)
 - [jesseduffield/lazygit - Update go to 1.25](https://github.com/jesseduffield/lazygit/pull/4844)
@@ -98,7 +98,7 @@ https://blog.kyu08.com/posts/renew-oss-sponsoring/
 だいたい累計$150くらい寄付したことになる。少しでも長く持続してくれると嬉しいのでこれからも続けていく。
 
 ### 振り返り
-- 去年と同じくらいのペースでPRを送ることができた。（平均約4.5件/月ペース）[^4]
+- 去年と同じくらいのペースでPRを送ることができた。（平均約4.5件/月ペース）
 - LazygitのGitHubのトップページのContributors一覧入りを果たした。
     ![lazygit-contibutors.webp](lazygit-contibutors.webp)
     - GitHubではcommit数が多い順に12人目くらいまでのアイコンがContributorsに表示される。
@@ -242,7 +242,7 @@ https://github.com/kyu08/blog/pull/235
 
 タイトルからも分かる通りComputer Science、 プロマネ、Kubernetes、Rustが今年の興味領域の中心だった。長期的に役立ちそう系と仕事ですぐ使える系とただ単に興味がある系をバランスよく摂取できた気がする。
 
-ひとまずRust欲が落ち着いたので来年はComputer Science系をやりつつ、Goの深堀りにも時間を使っていきたい。Computer Scienceに関してはネットワークと並行プログラミング周りを深ぼろうと思っている。
+ひとまずRust欲が落ち着いたので来年はComputer Science系をやりつつ、Goの深堀りにも時間を使っていきたい。Computer Scienceに関してはネットワークと並行プログラミング周りを深掘ろうと思っている。
 
 ### ブログカードの表示
 こんな感じでリンク先の情報を表示するようにした。便利。
@@ -322,4 +322,3 @@ https://blog.kyu08.com/posts/vim-conf-2025/
 [^1]: 便宜的にPRと表記しているが、GerritではCL(たしかChange List)と呼ばれる。
 [^2]: Ownerが自分以外のPublic Repositoryを対象に集計。
 [^3]: https://gist.github.com/kyu08/138f8d15c2badc8243ca2e126545ca36 を使って集計した。
-[^4]: brew releaseに関してはfzf-makeの新バージョンをリリースする際にCIから自動でPRを送っているので本質的なOSS貢献かと言われるとちょっと微妙ではある。
