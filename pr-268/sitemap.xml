@@ -2,31 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.kyu08.com/pr-268/posts/looking-back-on-2025/</loc>
-    <lastmod>2025-12-25T12:55:39+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/pr-268/tags/blog/</loc>
-    <lastmod>2025-12-25T12:55:39+09:00</lastmod>
-  </url><url>
     <loc>https://blog.kyu08.com/pr-268/</loc>
-    <lastmod>2025-12-25T12:55:39+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/pr-268/tags/oss/</loc>
-    <lastmod>2025-12-25T12:55:39+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/pr-268/posts/</loc>
-    <lastmod>2025-12-25T12:55:39+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/pr-268/tags/</loc>
-    <lastmod>2025-12-25T12:55:39+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/pr-268/tags/%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A/</loc>
-    <lastmod>2025-12-25T12:55:39+09:00</lastmod>
+    <lastmod>2025-12-25T00:17:02+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/pr-268/tags/gerrit/</loc>
     <lastmod>2025-12-25T00:17:02+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/pr-268/posts/gerrit-find-cls-you-created/</loc>
+    <lastmod>2025-12-25T00:17:02+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/pr-268/posts/</loc>
+    <lastmod>2025-12-25T00:17:02+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/pr-268/tags/</loc>
     <lastmod>2025-12-25T00:17:02+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/pr-268/posts/rust-web-app-book/</loc>
@@ -110,6 +98,9 @@
     <loc>https://blog.kyu08.com/pr-268/posts/manage-cargo-dependencies/</loc>
     <lastmod>2025-05-20T15:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://blog.kyu08.com/pr-268/tags/oss/</loc>
+    <lastmod>2025-05-20T15:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://blog.kyu08.com/pr-268/tags/nuphy/</loc>
     <lastmod>2025-04-30T13:49:03+00:00</lastmod>
   </url><url>
@@ -135,6 +126,9 @@
     <lastmod>2025-04-06T09:50:34+00:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/pr-268/posts/looking-back-on-2024/</loc>
+    <lastmod>2024-12-29T02:03:53+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/pr-268/tags/%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A/</loc>
     <lastmod>2024-12-29T02:03:53+00:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/pr-268/tags/rfc/</loc>
@@ -220,6 +214,9 @@
   </url><url>
     <loc>https://blog.kyu08.com/pr-268/tags/%E3%83%87%E3%82%B9%E3%82%AF%E7%92%B0%E5%A2%83/</loc>
     <lastmod>2024-03-30T15:00:38+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/pr-268/tags/blog/</loc>
+    <lastmod>2024-03-17T13:06:40+00:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/pr-268/posts/add-comment-section-to-this-blog/</loc>
     <lastmod>2024-03-17T13:06:40+00:00</lastmod>
