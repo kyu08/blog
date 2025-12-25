@@ -17,8 +17,6 @@ color: ""
 cover: "cover.png"
 ---
 
-<!-- TODO: 執筆開始以降で作成したPRがあれば記事中のデータを更新する -->
-
 年の瀬なので1年を振り返る。
 
 ## OSS
@@ -215,10 +213,28 @@ Twitterで投稿したときに追加されるタイトル要素とOGPのメタ�
 
 ![twitter-caption.webp](twitter-caption.webp)
 
+ついでにこんな感じでPRにコメントとして表示されるようにしたので投稿前に確認できる。（日本語だとたまーに特定の記号などが豆腐になってしまうのチェック需要がある）
+
+![ogp-pr-comment.webp](ogp-pr-comment.webp)
+
 ### Heading要素のデザインを変えた
 
+これまでは`h2`と`h3`の区別が付きづらかったので`## OSS`のようにHeading要素のレベルに合わせて`#`が表示されるデザインにした。
+
+| BEFORE | ![heading-before.webp](heading-before.webp) |
+| --- | --- |
+| **AFTER** | ![heading-after.webp](heading-after.webp) |
+
+[@voluntas](https://x.com/voluntas)さんの[このツイート](https://x.com/voluntas/status/1981896805672501760)をみていいなーと思ったので真似してみた。
+
 ### プレビュー環境を整えた
-### 今年のPV数を振り返る？
+PRコメントにプレビュー環境のリンクが投稿されるようにした。出先などでも記事の校正がしやすくなった。
+
+https://github.com/kyu08/blog/pull/235
+
+
+<!-- ### 今年のPV数を振り返る？ -->
+<!-- TODO: 元気があったら書く -->
 
 ## 読書など
 - 読んだ本を紹介
