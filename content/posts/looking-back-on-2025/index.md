@@ -107,6 +107,7 @@ https://blog.kyu08.com/posts/renew-oss-sponsoring/
 - LazygitのGitHubのトップページのContributors一覧入りを果たした
     - GitHubではcommit数が多い順にrepositoryにもよるが12人前後までのアイコンがContributorsに表示される。
     - 細々とcontributionを続けたところのcommit数トップ9人に入れた。（2025/12/23現在）
+    <!-- TODO: 追加した機能を紹介してもいいかもしれない -->
     - しばらくはこれを目標にlazygitへのcontributionを続けていたので素直に嬉しい。
     - CIの修正やGoのバージョンアップなど、地味めなPRがメインだったがいくつか機能追加PRもマージしてもらえた。
         ![lazygit-contibutors.webp](lazygit-contibutors.webp)
@@ -143,35 +144,81 @@ https://github.com/kyu08/fzf-make
 
 ![fzf-make-star.webp](fzf-make-star.webp)
 
-[Star History](https://www.star-history.com/#kyu08/fzf-make&type=date&legend=top-left)によると2024/12/19時点では129スターだったので1年で大体倍くらいになった模様。🎉
+[Star History](https://www.star-history.com/#kyu08/fzf-make&type=date&legend=top-left)によると2024/12/19時点では129スターだったので1年で大体倍くらいになった。🎉
 
 ![fzf-make-star-history-20251223-last-year.webp](fzf-make-star-history-20251223-last-year.webp)
 
-大変おこがましいかつ取らぬ狸の皮算用的な話ではあるが、あんまり有名になって毎週たくさんのPRが送られてくる、とかだとちょっと今のモチベ的にはしんどいのでしばらくは広報活動にリソースを割かないでみる。
+大変おこがましいかつ取らぬ狸の皮算用的な話ではあるが、あんまり有名になって毎週たくさんのPRが送られてくる、とかだとちょっと今のモチベ的にはしんどいのでしばらくは[広報活動](/posts/looking-back-on-2024/#:~:text=%E3%81%BE%E3%81%9F%E3%80%81%E3%81%82%E3%82%8B%E7%A8%8B%E5%BA%A6%E6%A9%9F%E8%83%BD%E3%81%8C%E6%8F%83%E3%81%A3%E3%81%A6%E3%81%8D%E3%81%9F%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E3%81%A7%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E6%95%B0%E3%82%92%E5%A2%97%E3%82%84%E3%81%99%E3%82%A2%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E3%81%97%E3%82%88%E3%81%86%E3%81%A8%E6%80%9D%E3%81%84%E3%80%81zenn%E3%80%81Reddit%2C%20Hacker%20News%E3%81%AB%E8%A8%98%E4%BA%8B%E3%82%92%E6%8A%95%E7%A8%BF%E3%81%97%E3%81%9F%E3%80%82)にリソースを割かないでみようと思う。
 
 これを見ている人の機能提案やバグ報告、PRは歓迎ですのでぜひお気軽にお願いします！（大量の人が見ているブログではないので）
 
-来年も自分のペースで細々とメンテしていこうと思う。(npm対応は早めにやりたい...！)
+来年も適度なペースで細々とメンテしていく。(npm対応は早めにやりたい...！)
 
 #### 追加した機能の紹介
-
 2025年は[筆者が74件のPRを作成&マージし](https://github.com/pulls?q=is%3Apr+archived%3Afalse+author%3Akyu08+is%3Apublic+repo%3Akyu08%2Ffzf-make+created%3A2025-01-01..2025-12-31+is%3Amerged+)、[12個のバージョンがリリースされ、筆者とrenovateを含めて5人の貢献者により102のcommitが追加された。](https://github.com/kyu08/fzf-make/compare/v0.54.0...v0.65.0)
 
 TUIツールを個人開発をしているとなかなかユーザーの存在を感じづらいので昨年に引き続き自分以外にissueを立ててくれたりPRを送ってくれる方がいてとても嬉しい。🙏
 
+行った主要な機能追加は以下の通り。
+
+- コマンドに引数を渡せるようにする[`@v0.58.0`](https://github.com/kyu08/fzf-make/releases/tag/v0.58.0)
+- go-task/taskをサポート[`@v0.60.0`](https://github.com/kyu08/fzf-make/releases/tag/v0.60.0)
+- コマンドのコピー機能を追加[`@v0.66.0`](https://github.com/kyu08/fzf-make/releases/tag/v0.66.0)
+
+来年こそはnpm対応を入れたい。（npm対応のPRを送ってくれている方がいるので早ければ年始くらいにはリリースできるかもしれない）
 
 ### sunaba
-（あんまり個人開発とは言わないかもだがまあいいでしょう）
+これまで素振り用のrepositoryはトピックごと（触りたいライブラリや読んでいる本など）ごとに作成していたが、まとめて管理したくなったので素振りごった煮repositoryを作成した。
+
+https://github.com/kyu08/sunaba
+
+今までは都度repositoryを作成していたが、ディレクトリを作成するだけでよくなったので若干楽になった。
 
 ## ブログ
 ### 書いた記事
-かく
+今年は14本の記事を書いた。仕事が忙しい時期以外は割と本を読んだりブログを書けたりしている。
+
+- [IQUNIX Magi65を買った](https://blog.kyu08.com/posts/magi65/)
+- [『コンピュータシステムの理論と実装 第2版』を読んだ](https://blog.kyu08.com/posts/nand2tetris/)
+- [傾斜付きロープロファイルキーキャップNuPhy Oblivionを買った](https://blog.kyu08.com/posts/oblivion-keycaps/)
+- [cargoプロジェクトで依存関係を継続的に管理する](https://blog.kyu08.com/posts/manage-cargo-dependencies/)
+- [関数型まつり2025に参加した](https://blog.kyu08.com/posts/fp-matsuri-2025/)
+- [Keychron V4 Max を買った](https://blog.kyu08.com/posts/keychron-v4-max/)
+- [追いKeychron V4 Max](https://blog.kyu08.com/posts/second-keychron-v4-max/)
+- [『Tidy First?』を読んだ](https://blog.kyu08.com/posts/tidy-first/)
+- [VimConf 2025 Smallに参加した](https://blog.kyu08.com/posts/vim-conf-2025/)
+- [『デッドライン』を読んだ](https://blog.kyu08.com/posts/the-deadline/)
+- [『つくって、壊して、直して学ぶ Kubernetes入門』を読んだ](https://blog.kyu08.com/posts/bbf_kubernetes/)
+- [『コンセプトから理解するRust』を読んだ](https://blog.kyu08.com/posts/understanding-rust-from-concepts/)
+- [『RustによるWebアプリケーション開発 設計からリリース・運用まで』を読んだ](https://blog.kyu08.com/posts/rust-web-app-book/)
+- [Gerritで自分が作成したCL一覧を確認する方法](https://blog.kyu08.com/posts/gerrit-find-cls-you-created/)
+
 
 ### ブログの変更
-- OGPを動的生成するようにした
-- Heading要素のデザインを変えた
-- プレビュー環境を整えた
-- 今年のPV数を振り返る？
+今年はブログのデザインや仕組みについてもいくつか変更を加えた。
+
+1. OGPを動的生成するようにした
+1. Heading要素のデザインを変えた
+1. プレビュー環境を整えた
+1. 今年のPV数を振り返る？
+
+### OGPの自動生成
+CIで記事のタイトルを読み取ってOGP画像を自動生成 + commitするようにした。
+
+https://github.com/kyu08/blog/pull/239
+
+こんな感じの画像が自動生成される。
+
+![cover.png](cover.png)
+
+Twitterで投稿したときに追加されるタイトル要素とOGPのメタ情報が被らないようになっているのが地味なこだわりポイント。
+
+![twitter-caption.webp](twitter-caption.webp)
+
+### Heading要素のデザインを変えた
+
+### プレビュー環境を整えた
+### 今年のPV数を振り返る？
 
 ## 読書など
 - 読んだ本を紹介
