@@ -7,44 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Thu, 25 Dec 2025 00:17:02 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-268/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Gerritで自分が作成したCL一覧を確認する方法</title>
-      <link>https://blog.kyu08.com/pr-268/posts/gerrit-find-cls-you-created/</link>
-      <pubDate>Thu, 25 Dec 2025 00:17:02 +0900</pubDate>
-      
-      <guid>https://blog.kyu08.com/pr-268/posts/gerrit-find-cls-you-created/</guid>
-      <description>年末の振り返りを書いていて自分が作成したCL一覧が見たくなったときに地味に迷ったのでメモしておく。 tl;dr 以下にアクセスする。 &amp;lt;repo-url&amp;gt;/q/owner:&amp;lt;your-email&amp;gt; こんな感じで表示さ</description>
-      <content>&lt;p&gt;年末の振り返りを書いていて自分が作成したCL一覧が見たくなったときに地味に迷ったのでメモしておく。&lt;/p&gt;
-&lt;h2 id=&#34;tldr&#34;&gt;tl;dr&lt;/h2&gt;
-&lt;p&gt;以下にアクセスする。&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;repo-url&amp;gt;/q/owner:&amp;lt;your-email&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;こんな感じで表示される。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;result.webp&#34; alt=&#34;result.webp&#34;&gt;&lt;/p&gt;
-&lt;p&gt;たとえばgoのrepositoryだったら&lt;code&gt;https://go-review.googlesource.com/q/owner:&amp;lt;your-email&amp;gt;&lt;/code&gt;のような感じ。&lt;/p&gt;
-&lt;p&gt;以降はおまけ。&lt;/p&gt;
-&lt;h2 id=&#34;経緯&#34;&gt;経緯&lt;/h2&gt;
-&lt;p&gt;ここから行けるか&amp;hellip;?とか思ったが&amp;hellip;
-&lt;img src=&#34;menu.webp&#34; alt=&#34;menu.webp&#34;&gt;&lt;/p&gt;
-&lt;p&gt;マージ済みが表示されそうな項目はRecently closedしかないが、これだと最近のCLしか見れなさそうだった。
-&lt;img src=&#34;dashboard.webp&#34; alt=&#34;dashboard.webp&#34;&gt;&lt;/p&gt;
-&lt;p&gt;検索ボックスに打ち込むクエリを試行錯誤したところ冒頭の指定方法を見つけた。&lt;/p&gt;
-&lt;p&gt;GitHubと違ってrepository横断で検索できないっぽいので複数のGerrit repositoryから活動を集計するのは大変そう。（調べてないだけでやり方はあるのかもだが）&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;GitHubと違ってrepositoryごとにそれぞれでホスティングされてそうな雰囲気を感じるので直感的には難しそうではある。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</content>
-    </item>
-    
+    <lastBuildDate>Thu, 25 Dec 2025 12:55:39 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-268/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2025年を振り返る</title>
       <link>https://blog.kyu08.com/pr-268/posts/looking-back-on-2025/</link>
-      <pubDate>Wed, 24 Dec 2025 23:55:39 +0900</pubDate>
+      <pubDate>Thu, 25 Dec 2025 12:55:39 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/pr-268/posts/looking-back-on-2025/</guid>
       <description>年の瀬なので1年を振り返る。 OSS PRでの貢献 GitHubとGerritで55件のPR1を作成し49件のPRがマージされた。(GitHub2 Gerrit) 去</description>
@@ -53,7 +20,7 @@
 &lt;!-- raw HTML omitted --&gt;
 &lt;h3 id=&#34;prでの貢献&#34;&gt;PRでの貢献&lt;/h3&gt;
 &lt;p&gt;GitHubとGerritで55件のPR&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;を作成し49件のPRがマージされた。(&lt;a href=&#34;https://github.com/pulls?q=is%3Apr&amp;#43;archived%3Afalse&amp;#43;is%3Aclosed&amp;#43;author%3Akyu08&amp;#43;is%3Apublic&amp;#43;-user%3Akyu08&amp;#43;created%3A2025-01-01..2025-12-31&amp;#43;&#34; target=&#34;_blank&#34; &gt;GitHub&lt;/a&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; &lt;a href=&#34;https://go-review.googlesource.com/q/owner:kyu.subsub@gmail.com&#34; target=&#34;_blank&#34; &gt;Gerrit&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;去年の数字が以下だったのでPR作成数、マージされたPR数ともに微増だった。&lt;/p&gt;
+&lt;p&gt;去年の数字が以下だったのでPR作成数、マージされたPR数ともに微増した。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;49件のPRを作成1し43件のPRがマージされた。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -146,12 +113,9 @@
 &lt;li&gt;LazygitのGitHubのトップページのContributors一覧入りを果たした
 &lt;ul&gt;
 &lt;li&gt;GitHubではcommit数が多い順にrepositoryにもよるが12人前後までのアイコンがContributorsに表示される。&lt;/li&gt;
-&lt;li&gt;細々とcontributionを続けたところのcommit数トップ9人に入れた。（2025/12/23現在）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;ul&gt;
-&lt;li&gt;しばらくはこれを目標にlazygitへのcontributionを続けていたので素直に嬉しい。&lt;/li&gt;
-&lt;li&gt;CIの修正やGoのバージョンアップなど、地味めなPRがメインだったがいくつか機能追加PRもマージしてもらえた。
+&lt;li&gt;細々とcontributionを続けたところの9番目にcommit数が多い人になれた。（2025/12/23現在）&lt;/li&gt;
+&lt;li&gt;しばらくはこれを目標にlazygitへのcontributionを続けていたので嬉しい。&lt;/li&gt;
+&lt;li&gt;CIの修正やGoのバージョンアップなど、地味めなPRがメインだったがいくつか機能追加PRもマージしてもらえた。（&lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/4728&#34; target=&#34;_blank&#34; &gt;branchパネルで&lt;code&gt;-&lt;/code&gt;を押すと&lt;code&gt;git checkout -&lt;/code&gt;相当のことができる機能&lt;/a&gt;と&lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/4810&#34; target=&#34;_blank&#34; &gt;エラー内容をクリップボードにコピーできるようにする機能&lt;/a&gt;）
 &lt;img src=&#34;lazygit-contibutors.webp&#34; alt=&#34;lazygit-contibutors.webp&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -163,20 +127,9 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;OSSメンテナに感謝されるのは嬉しいし、見つけた問題を自分の手で解決するのも楽しいので引き続きやっていきたい。&lt;/p&gt;
-&lt;p&gt;社内でもOSSは楽しいぞーという話を何回かしたところ、それをきっかけにしてOSS貢献にトライしてくれる方が何名かいたのもとても嬉しかった。&lt;/p&gt;
+&lt;p&gt;社内でもOSSは楽しいぞーという話を何回かしたところ、それをきっかけにしてOSS貢献にトライしてくれる方が何名かいたのも嬉しかった。&lt;/p&gt;
 &lt;h2 id=&#34;個人開発&#34;&gt;個人開発&lt;/h2&gt;
 &lt;h3 id=&#34;fzf-make&#34;&gt;fzf-make&lt;/h3&gt;
-&lt;p&gt;タスクランナー側で定義したコマンドをfuzzy finder形式で選択できるRust製のCLIツールを趣味で開発している。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34;&gt;&lt;/p&gt;
-&lt;p&gt;現在は以下のタスクランナーに対応している。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;make&lt;/li&gt;
-&lt;li&gt;pnpm&lt;/li&gt;
-&lt;li&gt;yarn&lt;/li&gt;
-&lt;li&gt;just&lt;/li&gt;
-&lt;li&gt;task&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;gifを見てもらえれば分かる通り、プレビューウィンドウでコマンド内容を確認しながらコマンドを選択できるのが特徴の一つ。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-make&#34; data-auto-fetch=&#34;true&#34;&gt;
   &lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -189,18 +142,28 @@
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;/p&gt;
+&lt;p&gt;タスクランナー側で定義したコマンドをfuzzy finder形式で選択できるCLIツールを趣味でRustで開発している。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;現在は以下のタスクランナーに対応している。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;make&lt;/li&gt;
+&lt;li&gt;pnpm&lt;/li&gt;
+&lt;li&gt;yarn&lt;/li&gt;
+&lt;li&gt;just&lt;/li&gt;
+&lt;li&gt;task&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;gifを見てもらえれば分かる通り、プレビューウィンドウでコマンド内容を確認しながらコマンドを選択できるのが特徴の一つ。&lt;/p&gt;
 &lt;h4 id=&#34;スター数&#34;&gt;スター数&lt;/h4&gt;
 &lt;p&gt;2025/12/23現在では245スターを獲得している。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;fzf-make-star.webp&#34; alt=&#34;fzf-make-star.webp&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.star-history.com/#kyu08/fzf-make&amp;amp;type=date&amp;amp;legend=top-left&#34; target=&#34;_blank&#34; &gt;Star History&lt;/a&gt;によると2024/12/19時点では129スターだったので1年で大体倍くらいになった。🎉&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;fzf-make-star-history-20251223-last-year.webp&#34; alt=&#34;fzf-make-star-history-20251223-last-year.webp&#34;&gt;&lt;/p&gt;
-&lt;p&gt;大変おこがましいかつ取らぬ狸の皮算用的な話ではあるが、あんまり有名になって毎週たくさんのPRが送られてくる、とかだとちょっと今のモチベ的にはしんどいのでしばらくは&lt;a href=&#34;https://blog.kyu08.com/pr-268/posts/looking-back-on-2024/#:~:text=%E3%81%BE%E3%81%9F%E3%80%81%E3%81%82%E3%82%8B%E7%A8%8B%E5%BA%A6%E6%A9%9F%E8%83%BD%E3%81%8C%E6%8F%83%E3%81%A3%E3%81%A6%E3%81%8D%E3%81%9F%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E3%81%A7%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E6%95%B0%E3%82%92%E5%A2%97%E3%82%84%E3%81%99%E3%82%A2%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E3%81%97%E3%82%88%E3%81%86%E3%81%A8%E6%80%9D%E3%81%84%E3%80%81zenn%E3%80%81Reddit%2C%20Hacker%20News%E3%81%AB%E8%A8%98%E4%BA%8B%E3%82%92%E6%8A%95%E7%A8%BF%E3%81%97%E3%81%9F%E3%80%82&#34; &gt;広報活動&lt;/a&gt;にリソースを割かないでみようと思う。&lt;/p&gt;
-&lt;p&gt;これを見ている人の機能提案やバグ報告、PRは歓迎ですのでぜひお気軽にお願いします！（大量の人が見ているブログではないので）&lt;/p&gt;
-&lt;p&gt;来年も適度なペースで細々とメンテしていく。(npm対応は早めにやりたい&amp;hellip;！)&lt;/p&gt;
+&lt;p&gt;機能提案やバグ報告、PR大歓迎ですのでぜひお気軽にお願いします！（もちろん使ってるよー！と言ってもらえるだけでも大変うれしいです！そして&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;スター&lt;/a&gt;してくれたらもっと嬉しいです！）&lt;/p&gt;
+&lt;p&gt;来年も適度なペースで細々とメンテしていきます。(npm対応は早めにやりたい&amp;hellip;！)&lt;/p&gt;
 &lt;h4 id=&#34;追加した機能の紹介&#34;&gt;追加した機能の紹介&lt;/h4&gt;
 &lt;p&gt;2025年は&lt;a href=&#34;https://github.com/pulls?q=is%3Apr&amp;#43;archived%3Afalse&amp;#43;author%3Akyu08&amp;#43;is%3Apublic&amp;#43;repo%3Akyu08%2Ffzf-make&amp;#43;created%3A2025-01-01..2025-12-31&amp;#43;is%3Amerged&amp;#43;&#34; target=&#34;_blank&#34; &gt;筆者が74件のPRを作成&amp;amp;マージし&lt;/a&gt;、&lt;a href=&#34;https://github.com/kyu08/fzf-make/compare/v0.54.0...v0.65.0&#34; target=&#34;_blank&#34; &gt;12個のバージョンがリリースされ、筆者とrenovateを含めて5人の貢献者により102のcommitが追加された。&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;TUIツールを個人開発をしているとなかなかユーザーの存在を感じづらいので昨年に引き続き自分以外にissueを立ててくれたりPRを送ってくれる方がいてとても嬉しい。🙏&lt;/p&gt;
-&lt;p&gt;行った主要な機能追加は以下の通り。&lt;/p&gt;
+&lt;p&gt;TUIツールを個人開発をしているとなかなかユーザーの存在を感じづらいので昨年に引き続き自分以外にissueを立ててくれたりPRを送ってくれたりTwitterで言及してくれる方がいてとても嬉しい。🙏&lt;/p&gt;
+&lt;p&gt;今年行った主要な機能追加は以下の通り。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;コマンドに引数を渡せるようにする&lt;a href=&#34;https://github.com/kyu08/fzf-make/releases/tag/v0.58.0&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;@v0.58.0&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;go-task/taskをサポート&lt;a href=&#34;https://github.com/kyu08/fzf-make/releases/tag/v0.60.0&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;@v0.60.0&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
@@ -247,8 +210,8 @@
 &lt;li&gt;OGPを動的生成するようにした&lt;/li&gt;
 &lt;li&gt;Heading要素のデザインを変えた&lt;/li&gt;
 &lt;li&gt;プレビュー環境を整えた&lt;/li&gt;
-&lt;li&gt;今年のPV数を振り返る？&lt;/li&gt;
 &lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h3 id=&#34;ogpの自動生成&#34;&gt;OGPの自動生成&lt;/h3&gt;
 &lt;p&gt;CIで記事のタイトルを読み取ってOGP画像を自動生成 + commitするようにした。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/blog/pull/239&#34; data-auto-fetch=&#34;true&#34;&gt;
@@ -270,7 +233,7 @@
 &lt;p&gt;ついでにこんな感じでPRにコメントとして表示されるようにしたので投稿前に確認できる。（日本語だとたまーに特定の記号などが豆腐になってしまうのチェック需要がある）&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;ogp-pr-comment.webp&#34; alt=&#34;ogp-pr-comment.webp&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;heading要素のデザインを変えた&#34;&gt;Heading要素のデザインを変えた&lt;/h3&gt;
-&lt;p&gt;これまでは&lt;code&gt;h2&lt;/code&gt;と&lt;code&gt;h3&lt;/code&gt;の区別が付きづらかったので&lt;code&gt;## OSS&lt;/code&gt;のようにHeading要素のレベルに合わせて&lt;code&gt;#&lt;/code&gt;が表示されるデザインにした。&lt;/p&gt;
+&lt;p&gt;これまではレベルの異なるHeading要素の区別が付きづらかったので&lt;code&gt;## OSS&lt;/code&gt;のようにHeading要素のレベルに合わせて&lt;code&gt;#&lt;/code&gt;が表示されるデザインにした。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -304,27 +267,85 @@
 &lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;読書など&#34;&gt;読書など&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;読んだ本を紹介&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.oreilly.co.jp/books/9784814400874/&#34; target=&#34;_blank&#34; &gt;コンピュータシステムの理論と実装 第2版&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.oreilly.co.jp/books/9784814400911/&#34; target=&#34;_blank&#34; &gt;Tidy First?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bookplus.nikkei.com/atcl/catalog/99/140252/&#34; target=&#34;_blank&#34; &gt;デッドライン&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; target=&#34;_blank&#34; &gt;つくって、壊して、直して学ぶ Kubernetes入門&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gihyo.jp/book/2022/978-4-297-12562-2&#34; target=&#34;_blank&#34; &gt;コンセプトから理解するRust&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.kodansha.co.jp/book/products/0000398182&#34; target=&#34;_blank&#34; &gt;RustによるWebアプリケーション開発 設計からリリース・運用まで&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;読みかけのものは割愛。&lt;/p&gt;
+&lt;p&gt;タイトルからも分かる通りComputer Science、 プロマネ、Kubernetes、Rustが今年の興味領域の中心だった。長期的に役立ちそう系と仕事ですぐ使える系とただ単に興味がある系をバランスよく摂取できた気がする。&lt;/p&gt;
+&lt;p&gt;ひとまずRust欲が落ち着いたので来年はComputer Science系をやりつつ、Goの深堀りにも時間を使っていきたい。Computer Scienceに関してはネットワークと並行処理周りを深ぼろうと思っている。&lt;/p&gt;
+&lt;h2 id=&#34;勉強会&#34;&gt;勉強会&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;関数型まつり2025&lt;/li&gt;
+&lt;li&gt;VimConf 2025 Small&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;に参加した。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://blog.kyu08.com/posts/fp-matsuri-2025/&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://blog.kyu08.com/posts/fp-matsuri-2025/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://blog.kyu08.com/posts/fp-matsuri-2025/&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://blog.kyu08.com/posts/fp-matsuri-2025/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://blog.kyu08.com/posts/vim-conf-2025/&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://blog.kyu08.com/posts/vim-conf-2025/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://blog.kyu08.com/posts/vim-conf-2025/&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://blog.kyu08.com/posts/vim-conf-2025/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;勉強になったり刺激を得られたりしてよかった。来年はGoの勉強会にも参加してみようと思う。&lt;/p&gt;
 &lt;h2 id=&#34;生活&#34;&gt;生活&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;ジムに行き始めた&lt;/li&gt;
 &lt;li&gt;なんか早く寝れるようになってきた&lt;/li&gt;
-&lt;li&gt;お昼ご飯たくさん食べると午後の仕事が捗ることに気づいた&lt;/li&gt;
+&lt;li&gt;お昼ご飯をたくさん食べると夕方の集中力低下タイムがなくなることに気づいた&lt;/li&gt;
 &lt;li&gt;舌下治療継続中&lt;/li&gt;
 &lt;li&gt;サッカー観戦に行きだした&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id=&#34;ジム&#34;&gt;ジム&lt;/h3&gt;
+&lt;p&gt;8月からジムに通い始めた。腰が痛くなりやすいので腰痛防止が主な目的。&lt;/p&gt;
+&lt;p&gt;無事に腰痛とはお別れでき、筋肉も4ヶ月で4kg増やすことができているので引き続きやっていき。活動できる量も増えるしやはり筋肉は正義なのだと実感した。&lt;/p&gt;
+&lt;h3 id=&#34;睡眠&#34;&gt;睡眠&lt;/h3&gt;
+&lt;p&gt;今年の春くらいから就寝時間が0時半くらいになった。それまでは2時とかに寝て次の日なんかボーッとするなーということが多かったのでいい感じになってよかった。&lt;/p&gt;
+&lt;p&gt;朝散歩で日の光にあたったり運動や出社で体力を使うようにしたのが自分の睡眠にはいい影響があった気がする。（たぶん）&lt;/p&gt;
+&lt;h3 id=&#34;お昼ご飯&#34;&gt;お昼ご飯&lt;/h3&gt;
+&lt;p&gt;これまではリモートで働いているとよく17時前後に集中力が皆無になってしまい、ちょっとゴロゴロしてから空腹を感じてご飯を食べる、というようなことをしていた。&lt;/p&gt;
+&lt;p&gt;ある日お昼ご飯をお腹いっぱい食べたところ夕方の集中力低下タイムがなくなったことに気づいた。シンプルに夕方に血糖値的なものが下がりすぎて集中力が落ちていたっぽいことに気づいた。地味に生産性が落ちていたので改善できて嬉しい。&lt;/p&gt;
+&lt;h3 id=&#34;舌下治療&#34;&gt;舌下治療&lt;/h3&gt;
+&lt;p&gt;去年の秋頃始めた舌下治療の結果がでて今年の春の花粉シーズンは例年よりも楽だった。&lt;/p&gt;
+&lt;p&gt;来年はもっと楽になることを期待。&lt;/p&gt;
+&lt;h3 id=&#34;サッカー&#34;&gt;サッカー&lt;/h3&gt;
+&lt;p&gt;今年からJリーグ（カップ戦も含む）観戦にいくようになった。&lt;/p&gt;
+&lt;p&gt;非日常でめっちゃ楽しい。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;soccer.webp&#34; alt=&#34;soccer.webp&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;仕事&#34;&gt;仕事&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;転職した&lt;/li&gt;
-&lt;li&gt;MVPを受賞した
-&lt;ul&gt;
-&lt;li&gt;去年末に立てた今年の抱負を達成できたといってよさそう&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;転職し、2/1から新しい職場で働きはじめた。&lt;/p&gt;
+&lt;p&gt;プロダクトがたくさんのお客様に価値提供をできている実感があり、モチベーション高く働けている。&lt;/p&gt;
+&lt;p&gt;また、上期に関わったプロジェクトの成果を認めていただきMVPを受賞することができた。たくさんの人に協力いただきながらなんとか完遂できたプロジェクトだったので周りの方々には感謝しかない。&lt;/p&gt;
+&lt;p&gt;会社全体としても好調なのでより一層事業成長に貢献していけるように全方面で頑張っていきたい。&lt;/p&gt;
+&lt;p&gt;技術的には引き続き、Go、Google Cloud、Spannerなどを触っている。&lt;/p&gt;
+&lt;p&gt;このブログではあまり会社については詳しく話せていませんが、エンジニア採用を強化中ですので少しでも興味を持ってくれた方はTwitterのDMとかで連絡をください。ご飯やカジュアル面談などの調整をさせていただきます。（もちろんDMで聞きたいことを聞いていただいても大丈夫です）&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://recruit.canary-app.jp/engineer-entrance-book&#34; target=&#34;_blank&#34; &gt;Engineer Entrance Book&lt;/a&gt;にもかなり詳しく情報がまとまっているのでぜひご覧ください。🙇&lt;/p&gt;
 &lt;h2 id=&#34;2026年の抱負&#34;&gt;2026年の抱負&lt;/h2&gt;
-&lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;事業成長に貢献する&lt;/li&gt;
+&lt;li&gt;GoとComputer Scienceを深堀る&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;来年もやっていきます。&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
@@ -350,6 +371,39 @@
 &lt;/li&gt;
 &lt;li id=&#34;fn:4&#34;&gt;
 &lt;p&gt;brew releaseに関してはfzf-makeの新バージョンをリリースする際にCIから自動でPRを送っているので本質的なOSS貢献かと言われるとちょっと微妙ではある。&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Gerritで自分が作成したCL一覧を確認する方法</title>
+      <link>https://blog.kyu08.com/pr-268/posts/gerrit-find-cls-you-created/</link>
+      <pubDate>Thu, 25 Dec 2025 00:17:02 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-268/posts/gerrit-find-cls-you-created/</guid>
+      <description>年末の振り返りを書いていて自分が作成したCL一覧が見たくなったときに地味に迷ったのでメモしておく。 tl;dr 以下にアクセスする。 &amp;lt;repo-url&amp;gt;/q/owner:&amp;lt;your-email&amp;gt; こんな感じで表示さ</description>
+      <content>&lt;p&gt;年末の振り返りを書いていて自分が作成したCL一覧が見たくなったときに地味に迷ったのでメモしておく。&lt;/p&gt;
+&lt;h2 id=&#34;tldr&#34;&gt;tl;dr&lt;/h2&gt;
+&lt;p&gt;以下にアクセスする。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;repo-url&amp;gt;/q/owner:&amp;lt;your-email&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;こんな感じで表示される。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;result.webp&#34; alt=&#34;result.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;たとえばgoのrepositoryだったら&lt;code&gt;https://go-review.googlesource.com/q/owner:&amp;lt;your-email&amp;gt;&lt;/code&gt;のような感じ。&lt;/p&gt;
+&lt;p&gt;以降はおまけ。&lt;/p&gt;
+&lt;h2 id=&#34;経緯&#34;&gt;経緯&lt;/h2&gt;
+&lt;p&gt;ここから行けるか&amp;hellip;?とか思ったが&amp;hellip;
+&lt;img src=&#34;menu.webp&#34; alt=&#34;menu.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;マージ済みが表示されそうな項目はRecently closedしかないが、これだと最近のCLしか見れなさそうだった。
+&lt;img src=&#34;dashboard.webp&#34; alt=&#34;dashboard.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;検索ボックスに打ち込むクエリを試行錯誤したところ冒頭の指定方法を見つけた。&lt;/p&gt;
+&lt;p&gt;GitHubと違ってrepository横断で検索できないっぽいので複数のGerrit repositoryから活動を集計するのは大変そう。（調べてないだけでやり方はあるのかもだが）&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;GitHubと違ってrepositoryごとにそれぞれでホスティングされてそうな雰囲気を感じるので直感的には難しそうではある。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;

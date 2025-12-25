@@ -111,7 +111,7 @@ if (!doNotTrack) {
 <meta property="og:image:height" content="630">
 
 
-  <meta property="article:published_time" content="2025-12-24 23:55:39 &#43;0900 &#43;0900" />
+  <meta property="article:published_time" content="2025-12-25 12:55:39 &#43;0900 &#43;0900" />
 
 
 
@@ -212,9 +212,9 @@ if (!doNotTrack) {
   <h1 class="post-title">
     <a href="https://blog.kyu08.com/pr-268/posts/looking-back-on-2025/">2025年を振り返る</a>
   </h1>
-  <div class="post-meta"><time class="post-date">2025/12/24</time>
+  <div class="post-meta"><time class="post-date">2025/12/25</time>
       
-    <span class="post-reading-time">7 min read (3354 words)</span></div>
+    <span class="post-reading-time">10 min read (4709 words)</span></div>
 
   
     <span class="post-tags">
@@ -264,10 +264,18 @@ if (!doNotTrack) {
       </ul>
     </li>
     <li><a href="#読書など">読書など</a></li>
-    <li><a href="#生活">生活</a></li>
+    <li><a href="#勉強会">勉強会</a></li>
+    <li><a href="#生活">生活</a>
+      <ul>
+        <li><a href="#ジム">ジム</a></li>
+        <li><a href="#睡眠">睡眠</a></li>
+        <li><a href="#お昼ご飯">お昼ご飯</a></li>
+        <li><a href="#舌下治療">舌下治療</a></li>
+        <li><a href="#サッカー">サッカー</a></li>
+      </ul>
+    </li>
     <li><a href="#仕事">仕事</a></li>
     <li><a href="#2026年の抱負">2026年の抱負</a></li>
-    <li><a href="#おわりに">おわりに</a></li>
   </ul>
 </nav>
     </div>
@@ -279,7 +287,7 @@ if (!doNotTrack) {
 <!-- raw HTML omitted -->
 <h3 id="prでの貢献">PRでの貢献<a href="#prでの貢献" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>GitHubとGerritで55件のPR<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>を作成し49件のPRがマージされた。(<a href="https://github.com/pulls?q=is%3Apr&#43;archived%3Afalse&#43;is%3Aclosed&#43;author%3Akyu08&#43;is%3Apublic&#43;-user%3Akyu08&#43;created%3A2025-01-01..2025-12-31&#43;" target="_blank" >GitHub</a><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> <a href="https://go-review.googlesource.com/q/owner:kyu.subsub@gmail.com" target="_blank" >Gerrit</a>)</p>
-<p>去年の数字が以下だったのでPR作成数、マージされたPR数ともに微増だった。</p>
+<p>去年の数字が以下だったのでPR作成数、マージされたPR数ともに微増した。</p>
 <blockquote>
 <p>49件のPRを作成1し43件のPRがマージされた。</p>
 </blockquote>
@@ -372,12 +380,9 @@ if (!doNotTrack) {
 <li>LazygitのGitHubのトップページのContributors一覧入りを果たした
 <ul>
 <li>GitHubではcommit数が多い順にrepositoryにもよるが12人前後までのアイコンがContributorsに表示される。</li>
-<li>細々とcontributionを続けたところのcommit数トップ9人に入れた。（2025/12/23現在）</li>
-</ul>
-<!-- raw HTML omitted -->
-<ul>
-<li>しばらくはこれを目標にlazygitへのcontributionを続けていたので素直に嬉しい。</li>
-<li>CIの修正やGoのバージョンアップなど、地味めなPRがメインだったがいくつか機能追加PRもマージしてもらえた。
+<li>細々とcontributionを続けたところの9番目にcommit数が多い人になれた。（2025/12/23現在）</li>
+<li>しばらくはこれを目標にlazygitへのcontributionを続けていたので嬉しい。</li>
+<li>CIの修正やGoのバージョンアップなど、地味めなPRがメインだったがいくつか機能追加PRもマージしてもらえた。（<a href="https://github.com/jesseduffield/lazygit/pull/4728" target="_blank" >branchパネルで<code>-</code>を押すと<code>git checkout -</code>相当のことができる機能</a>と<a href="https://github.com/jesseduffield/lazygit/pull/4810" target="_blank" >エラー内容をクリップボードにコピーできるようにする機能</a>）
 <img src="lazygit-contibutors.webp" alt="lazygit-contibutors.webp"></li>
 </ul>
 </li>
@@ -389,20 +394,9 @@ if (!doNotTrack) {
 </li>
 </ul>
 <p>OSSメンテナに感謝されるのは嬉しいし、見つけた問題を自分の手で解決するのも楽しいので引き続きやっていきたい。</p>
-<p>社内でもOSSは楽しいぞーという話を何回かしたところ、それをきっかけにしてOSS貢献にトライしてくれる方が何名かいたのもとても嬉しかった。</p>
+<p>社内でもOSSは楽しいぞーという話を何回かしたところ、それをきっかけにしてOSS貢献にトライしてくれる方が何名かいたのも嬉しかった。</p>
 <h2 id="個人開発">個人開発<a href="#個人開発" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <h3 id="fzf-make">fzf-make<a href="#fzf-make" class="hanchor" ariaLabel="Anchor">#</a> </h3>
-<p>タスクランナー側で定義したコマンドをfuzzy finder形式で選択できるRust製のCLIツールを趣味で開発している。</p>
-<p><img src="fzf-make-demo.gif" alt="fzf-make-demo.gif"></p>
-<p>現在は以下のタスクランナーに対応している。</p>
-<ul>
-<li>make</li>
-<li>pnpm</li>
-<li>yarn</li>
-<li>just</li>
-<li>task</li>
-</ul>
-<p>gifを見てもらえれば分かる通り、プレビューウィンドウでコマンド内容を確認しながらコマンドを選択できるのが特徴の一つ。</p>
 <p><div class="blogcard" data-url="https://github.com/kyu08/fzf-make" data-auto-fetch="true">
   <a href="https://github.com/kyu08/fzf-make" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -415,18 +409,28 @@ if (!doNotTrack) {
   </a>
 </div>
 </p>
+<p>タスクランナー側で定義したコマンドをfuzzy finder形式で選択できるCLIツールを趣味でRustで開発している。</p>
+<p><img src="fzf-make-demo.gif" alt="fzf-make-demo.gif"></p>
+<p>現在は以下のタスクランナーに対応している。</p>
+<ul>
+<li>make</li>
+<li>pnpm</li>
+<li>yarn</li>
+<li>just</li>
+<li>task</li>
+</ul>
+<p>gifを見てもらえれば分かる通り、プレビューウィンドウでコマンド内容を確認しながらコマンドを選択できるのが特徴の一つ。</p>
 <h4 id="スター数">スター数<a href="#スター数" class="hanchor" ariaLabel="Anchor">#</a> </h4>
 <p>2025/12/23現在では245スターを獲得している。</p>
 <p><img src="fzf-make-star.webp" alt="fzf-make-star.webp"></p>
 <p><a href="https://www.star-history.com/#kyu08/fzf-make&amp;type=date&amp;legend=top-left" target="_blank" >Star History</a>によると2024/12/19時点では129スターだったので1年で大体倍くらいになった。🎉</p>
 <p><img src="fzf-make-star-history-20251223-last-year.webp" alt="fzf-make-star-history-20251223-last-year.webp"></p>
-<p>大変おこがましいかつ取らぬ狸の皮算用的な話ではあるが、あんまり有名になって毎週たくさんのPRが送られてくる、とかだとちょっと今のモチベ的にはしんどいのでしばらくは<a href="/posts/looking-back-on-2024/#:~:text=%E3%81%BE%E3%81%9F%E3%80%81%E3%81%82%E3%82%8B%E7%A8%8B%E5%BA%A6%E6%A9%9F%E8%83%BD%E3%81%8C%E6%8F%83%E3%81%A3%E3%81%A6%E3%81%8D%E3%81%9F%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E3%81%A7%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E6%95%B0%E3%82%92%E5%A2%97%E3%82%84%E3%81%99%E3%82%A2%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E3%81%97%E3%82%88%E3%81%86%E3%81%A8%E6%80%9D%E3%81%84%E3%80%81zenn%E3%80%81Reddit%2C%20Hacker%20News%E3%81%AB%E8%A8%98%E4%BA%8B%E3%82%92%E6%8A%95%E7%A8%BF%E3%81%97%E3%81%9F%E3%80%82" >広報活動</a>にリソースを割かないでみようと思う。</p>
-<p>これを見ている人の機能提案やバグ報告、PRは歓迎ですのでぜひお気軽にお願いします！（大量の人が見ているブログではないので）</p>
-<p>来年も適度なペースで細々とメンテしていく。(npm対応は早めにやりたい&hellip;！)</p>
+<p>機能提案やバグ報告、PR大歓迎ですのでぜひお気軽にお願いします！（もちろん使ってるよー！と言ってもらえるだけでも大変うれしいです！そして<a href="https://github.com/kyu08/fzf-make" target="_blank" >スター</a>してくれたらもっと嬉しいです！）</p>
+<p>来年も適度なペースで細々とメンテしていきます。(npm対応は早めにやりたい&hellip;！)</p>
 <h4 id="追加した機能の紹介">追加した機能の紹介<a href="#追加した機能の紹介" class="hanchor" ariaLabel="Anchor">#</a> </h4>
 <p>2025年は<a href="https://github.com/pulls?q=is%3Apr&#43;archived%3Afalse&#43;author%3Akyu08&#43;is%3Apublic&#43;repo%3Akyu08%2Ffzf-make&#43;created%3A2025-01-01..2025-12-31&#43;is%3Amerged&#43;" target="_blank" >筆者が74件のPRを作成&amp;マージし</a>、<a href="https://github.com/kyu08/fzf-make/compare/v0.54.0...v0.65.0" target="_blank" >12個のバージョンがリリースされ、筆者とrenovateを含めて5人の貢献者により102のcommitが追加された。</a></p>
-<p>TUIツールを個人開発をしているとなかなかユーザーの存在を感じづらいので昨年に引き続き自分以外にissueを立ててくれたりPRを送ってくれる方がいてとても嬉しい。🙏</p>
-<p>行った主要な機能追加は以下の通り。</p>
+<p>TUIツールを個人開発をしているとなかなかユーザーの存在を感じづらいので昨年に引き続き自分以外にissueを立ててくれたりPRを送ってくれたりTwitterで言及してくれる方がいてとても嬉しい。🙏</p>
+<p>今年行った主要な機能追加は以下の通り。</p>
 <ul>
 <li>コマンドに引数を渡せるようにする<a href="https://github.com/kyu08/fzf-make/releases/tag/v0.58.0" target="_blank" ><code>@v0.58.0</code></a></li>
 <li>go-task/taskをサポート<a href="https://github.com/kyu08/fzf-make/releases/tag/v0.60.0" target="_blank" ><code>@v0.60.0</code></a></li>
@@ -473,8 +477,8 @@ if (!doNotTrack) {
 <li>OGPを動的生成するようにした</li>
 <li>Heading要素のデザインを変えた</li>
 <li>プレビュー環境を整えた</li>
-<li>今年のPV数を振り返る？</li>
 </ol>
+<!-- raw HTML omitted -->
 <h3 id="ogpの自動生成">OGPの自動生成<a href="#ogpの自動生成" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>CIで記事のタイトルを読み取ってOGP画像を自動生成 + commitするようにした。</p>
 <p><div class="blogcard" data-url="https://github.com/kyu08/blog/pull/239" data-auto-fetch="true">
@@ -496,7 +500,7 @@ if (!doNotTrack) {
 <p>ついでにこんな感じでPRにコメントとして表示されるようにしたので投稿前に確認できる。（日本語だとたまーに特定の記号などが豆腐になってしまうのチェック需要がある）</p>
 <p><img src="ogp-pr-comment.webp" alt="ogp-pr-comment.webp"></p>
 <h3 id="heading要素のデザインを変えた">Heading要素のデザインを変えた<a href="#heading要素のデザインを変えた" class="hanchor" ariaLabel="Anchor">#</a> </h3>
-<p>これまでは<code>h2</code>と<code>h3</code>の区別が付きづらかったので<code>## OSS</code>のようにHeading要素のレベルに合わせて<code>#</code>が表示されるデザインにした。</p>
+<p>これまではレベルの異なるHeading要素の区別が付きづらかったので<code>## OSS</code>のようにHeading要素のレベルに合わせて<code>#</code>が表示されるデザインにした。</p>
 <table>
 <thead>
 <tr>
@@ -530,27 +534,85 @@ if (!doNotTrack) {
 <!-- raw HTML omitted -->
 <h2 id="読書など">読書など<a href="#読書など" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <ul>
-<li>読んだ本を紹介</li>
+<li><a href="https://www.oreilly.co.jp/books/9784814400874/" target="_blank" >コンピュータシステムの理論と実装 第2版</a></li>
+<li><a href="https://www.oreilly.co.jp/books/9784814400911/" target="_blank" >Tidy First?</a></li>
+<li><a href="https://bookplus.nikkei.com/atcl/catalog/99/140252/" target="_blank" >デッドライン</a></li>
+<li><a href="https://www.shoeisha.co.jp/book/detail/9784798183961" target="_blank" >つくって、壊して、直して学ぶ Kubernetes入門</a></li>
+<li><a href="https://gihyo.jp/book/2022/978-4-297-12562-2" target="_blank" >コンセプトから理解するRust</a></li>
+<li><a href="https://www.kodansha.co.jp/book/products/0000398182" target="_blank" >RustによるWebアプリケーション開発 設計からリリース・運用まで</a></li>
 </ul>
+<p>読みかけのものは割愛。</p>
+<p>タイトルからも分かる通りComputer Science、 プロマネ、Kubernetes、Rustが今年の興味領域の中心だった。長期的に役立ちそう系と仕事ですぐ使える系とただ単に興味がある系をバランスよく摂取できた気がする。</p>
+<p>ひとまずRust欲が落ち着いたので来年はComputer Science系をやりつつ、Goの深堀りにも時間を使っていきたい。Computer Scienceに関してはネットワークと並行処理周りを深ぼろうと思っている。</p>
+<h2 id="勉強会">勉強会<a href="#勉強会" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>関数型まつり2025</li>
+<li>VimConf 2025 Small</li>
+</ul>
+<p>に参加した。</p>
+<p><div class="blogcard" data-url="https://blog.kyu08.com/posts/fp-matsuri-2025/" data-auto-fetch="true">
+  <a href="https://blog.kyu08.com/posts/fp-matsuri-2025/" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://blog.kyu08.com/posts/fp-matsuri-2025/</div><div class="blogcard-url">https://blog.kyu08.com/posts/fp-matsuri-2025/</div>
+    </div>
+  </a>
+</div>
+</p>
+<p><div class="blogcard" data-url="https://blog.kyu08.com/posts/vim-conf-2025/" data-auto-fetch="true">
+  <a href="https://blog.kyu08.com/posts/vim-conf-2025/" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://blog.kyu08.com/posts/vim-conf-2025/</div><div class="blogcard-url">https://blog.kyu08.com/posts/vim-conf-2025/</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>勉強になったり刺激を得られたりしてよかった。来年はGoの勉強会にも参加してみようと思う。</p>
 <h2 id="生活">生活<a href="#生活" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <ul>
 <li>ジムに行き始めた</li>
 <li>なんか早く寝れるようになってきた</li>
-<li>お昼ご飯たくさん食べると午後の仕事が捗ることに気づいた</li>
+<li>お昼ご飯をたくさん食べると夕方の集中力低下タイムがなくなることに気づいた</li>
 <li>舌下治療継続中</li>
 <li>サッカー観戦に行きだした</li>
 </ul>
+<h3 id="ジム">ジム<a href="#ジム" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>8月からジムに通い始めた。腰が痛くなりやすいので腰痛防止が主な目的。</p>
+<p>無事に腰痛とはお別れでき、筋肉も4ヶ月で4kg増やすことができているので引き続きやっていき。活動できる量も増えるしやはり筋肉は正義なのだと実感した。</p>
+<h3 id="睡眠">睡眠<a href="#睡眠" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>今年の春くらいから就寝時間が0時半くらいになった。それまでは2時とかに寝て次の日なんかボーッとするなーということが多かったのでいい感じになってよかった。</p>
+<p>朝散歩で日の光にあたったり運動や出社で体力を使うようにしたのが自分の睡眠にはいい影響があった気がする。（たぶん）</p>
+<h3 id="お昼ご飯">お昼ご飯<a href="#お昼ご飯" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>これまではリモートで働いているとよく17時前後に集中力が皆無になってしまい、ちょっとゴロゴロしてから空腹を感じてご飯を食べる、というようなことをしていた。</p>
+<p>ある日お昼ご飯をお腹いっぱい食べたところ夕方の集中力低下タイムがなくなったことに気づいた。シンプルに夕方に血糖値的なものが下がりすぎて集中力が落ちていたっぽいことに気づいた。地味に生産性が落ちていたので改善できて嬉しい。</p>
+<h3 id="舌下治療">舌下治療<a href="#舌下治療" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>去年の秋頃始めた舌下治療の結果がでて今年の春の花粉シーズンは例年よりも楽だった。</p>
+<p>来年はもっと楽になることを期待。</p>
+<h3 id="サッカー">サッカー<a href="#サッカー" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>今年からJリーグ（カップ戦も含む）観戦にいくようになった。</p>
+<p>非日常でめっちゃ楽しい。</p>
+<p><img src="soccer.webp" alt="soccer.webp"></p>
 <h2 id="仕事">仕事<a href="#仕事" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<ul>
-<li>転職した</li>
-<li>MVPを受賞した
-<ul>
-<li>去年末に立てた今年の抱負を達成できたといってよさそう</li>
-</ul>
-</li>
-</ul>
+<p>転職し、2/1から新しい職場で働きはじめた。</p>
+<p>プロダクトがたくさんのお客様に価値提供をできている実感があり、モチベーション高く働けている。</p>
+<p>また、上期に関わったプロジェクトの成果を認めていただきMVPを受賞することができた。たくさんの人に協力いただきながらなんとか完遂できたプロジェクトだったので周りの方々には感謝しかない。</p>
+<p>会社全体としても好調なのでより一層事業成長に貢献していけるように全方面で頑張っていきたい。</p>
+<p>技術的には引き続き、Go、Google Cloud、Spannerなどを触っている。</p>
+<p>このブログではあまり会社については詳しく話せていませんが、エンジニア採用を強化中ですので少しでも興味を持ってくれた方はTwitterのDMとかで連絡をください。ご飯やカジュアル面談などの調整をさせていただきます。（もちろんDMで聞きたいことを聞いていただいても大丈夫です）</p>
+<p><a href="https://recruit.canary-app.jp/engineer-entrance-book" target="_blank" >Engineer Entrance Book</a>にもかなり詳しく情報がまとまっているのでぜひご覧ください。🙇</p>
 <h2 id="2026年の抱負">2026年の抱負<a href="#2026年の抱負" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<h2 id="おわりに">おわりに<a href="#おわりに" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>事業成長に貢献する</li>
+<li>GoとComputer Scienceを深堀る</li>
+</ul>
+<p>来年もやっていきます。</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -594,13 +656,9 @@ if (!doNotTrack) {
   </div>
   <div class="pagination__buttons">
     
-      <a href="https://blog.kyu08.com/pr-268/posts/gerrit-find-cls-you-created/" class="button inline prev">
+    
+      <a href="https://blog.kyu08.com/pr-268/posts/gerrit-find-cls-you-created/" class="button inline next">
         Gerritで自分が作成したCL一覧を確認する方法
-      </a>
-    
-    
-      <a href="https://blog.kyu08.com/pr-268/posts/rust-web-app-book/" class="button inline next">
-        『RustによるWebアプリケーション開発 設計からリリース・運用まで』を読んだ
       </a>
     
   </div>
