@@ -6,7 +6,7 @@ tags:
   - "blog"
 
 description: ""
-date: 2025-12-24T23:55:39+09:00
+date: 2025-12-25T12:55:39+09:00
 author: "kyu08"
 authorTwitter: "kyu08_"
 draft: false
@@ -25,7 +25,7 @@ cover: "cover.png"
 ### PRでの貢献
 GitHubとGerritで55件のPR[^1]を作成し49件のPRがマージされた。([GitHub](https://github.com/pulls?q=is%3Apr+archived%3Afalse+is%3Aclosed+author%3Akyu08+is%3Apublic+-user%3Akyu08+created%3A2025-01-01..2025-12-31+)[^2] [Gerrit](https://go-review.googlesource.com/q/owner:kyu.subsub@gmail.com))
 
-去年の数字が以下だったのでPR作成数、マージされたPR数ともに微増だった。
+去年の数字が以下だったのでPR作成数、マージされたPR数ともに微増した。
 
 > 49件のPRを作成1し43件のPRがマージされた。
 
@@ -104,10 +104,9 @@ https://blog.kyu08.com/posts/renew-oss-sponsoring/
 - PR数ベースで去年と同じくらいのペースでPRを送れた。（月平均4.5件ペース）[^4]
 - LazygitのGitHubのトップページのContributors一覧入りを果たした
     - GitHubではcommit数が多い順にrepositoryにもよるが12人前後までのアイコンがContributorsに表示される。
-    - 細々とcontributionを続けたところのcommit数トップ9人に入れた。（2025/12/23現在）
-    <!-- TODO: 追加した機能を紹介してもいいかもしれない -->
-    - しばらくはこれを目標にlazygitへのcontributionを続けていたので素直に嬉しい。
-    - CIの修正やGoのバージョンアップなど、地味めなPRがメインだったがいくつか機能追加PRもマージしてもらえた。
+    - 細々とcontributionを続けたところの9番目にcommit数が多い人になれた。（2025/12/23現在）
+    - しばらくはこれを目標にlazygitへのcontributionを続けていたので嬉しい。
+    - CIの修正やGoのバージョンアップなど、地味めなPRがメインだったがいくつか機能追加PRもマージしてもらえた。（[branchパネルで`-`を押すと`git checkout -`相当のことができる機能](https://github.com/jesseduffield/lazygit/pull/4728)と[エラー内容をクリップボードにコピーできるようにする機能](https://github.com/jesseduffield/lazygit/pull/4810)）
         ![lazygit-contibutors.webp](lazygit-contibutors.webp)
 - GoWikiへのcontributionに際してGerritを初めてつかった。
     - GitHubとかなかなかメンタルモデルが違う感じだったので結構手間取った。
@@ -115,11 +114,14 @@ https://blog.kyu08.com/posts/renew-oss-sponsoring/
 
 OSSメンテナに感謝されるのは嬉しいし、見つけた問題を自分の手で解決するのも楽しいので引き続きやっていきたい。
 
-社内でもOSSは楽しいぞーという話を何回かしたところ、それをきっかけにしてOSS貢献にトライしてくれる方が何名かいたのもとても嬉しかった。
+社内でもOSSは楽しいぞーという話を何回かしたところ、それをきっかけにしてOSS貢献にトライしてくれる方が何名かいたのも嬉しかった。
 
 ## 個人開発
 ### fzf-make
-タスクランナー側で定義したコマンドをfuzzy finder形式で選択できるRust製のCLIツールを趣味で開発している。
+
+https://github.com/kyu08/fzf-make
+
+タスクランナー側で定義したコマンドをfuzzy finder形式で選択できるCLIツールを趣味でRustで開発している。
 
 ![fzf-make-demo.gif](fzf-make-demo.gif)
 
@@ -133,9 +135,6 @@ OSSメンテナに感謝されるのは嬉しいし、見つけた問題を自�
 
 gifを見てもらえれば分かる通り、プレビューウィンドウでコマンド内容を確認しながらコマンドを選択できるのが特徴の一つ。
 
-https://github.com/kyu08/fzf-make
-
-
 #### スター数
 
 2025/12/23現在では245スターを獲得している。
@@ -146,18 +145,16 @@ https://github.com/kyu08/fzf-make
 
 ![fzf-make-star-history-20251223-last-year.webp](fzf-make-star-history-20251223-last-year.webp)
 
-大変おこがましいかつ取らぬ狸の皮算用的な話ではあるが、あんまり有名になって毎週たくさんのPRが送られてくる、とかだとちょっと今のモチベ的にはしんどいのでしばらくは[広報活動](/posts/looking-back-on-2024/#:~:text=%E3%81%BE%E3%81%9F%E3%80%81%E3%81%82%E3%82%8B%E7%A8%8B%E5%BA%A6%E6%A9%9F%E8%83%BD%E3%81%8C%E6%8F%83%E3%81%A3%E3%81%A6%E3%81%8D%E3%81%9F%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E3%81%A7%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E6%95%B0%E3%82%92%E5%A2%97%E3%82%84%E3%81%99%E3%82%A2%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E3%81%97%E3%82%88%E3%81%86%E3%81%A8%E6%80%9D%E3%81%84%E3%80%81zenn%E3%80%81Reddit%2C%20Hacker%20News%E3%81%AB%E8%A8%98%E4%BA%8B%E3%82%92%E6%8A%95%E7%A8%BF%E3%81%97%E3%81%9F%E3%80%82)にリソースを割かないでみようと思う。
+機能提案やバグ報告、PR大歓迎ですのでぜひお気軽にお願いします！（もちろん使ってるよー！と言ってもらえるだけでも大変うれしいです！そして[スター](https://github.com/kyu08/fzf-make)してくれたらもっと嬉しいです！）
 
-これを見ている人の機能提案やバグ報告、PRは歓迎ですのでぜひお気軽にお願いします！（大量の人が見ているブログではないので）
-
-来年も適度なペースで細々とメンテしていく。(npm対応は早めにやりたい...！)
+来年も適度なペースで細々とメンテしていきます。(npm対応は早めにやりたい...！)
 
 #### 追加した機能の紹介
 2025年は[筆者が74件のPRを作成&マージし](https://github.com/pulls?q=is%3Apr+archived%3Afalse+author%3Akyu08+is%3Apublic+repo%3Akyu08%2Ffzf-make+created%3A2025-01-01..2025-12-31+is%3Amerged+)、[12個のバージョンがリリースされ、筆者とrenovateを含めて5人の貢献者により102のcommitが追加された。](https://github.com/kyu08/fzf-make/compare/v0.54.0...v0.65.0)
 
-TUIツールを個人開発をしているとなかなかユーザーの存在を感じづらいので昨年に引き続き自分以外にissueを立ててくれたりPRを送ってくれる方がいてとても嬉しい。🙏
+TUIツールを個人開発をしているとなかなかユーザーの存在を感じづらいので昨年に引き続き自分以外にissueを立ててくれたりPRを送ってくれたりTwitterで言及してくれる方がいてとても嬉しい。🙏
 
-行った主要な機能追加は以下の通り。
+今年行った主要な機能追加は以下の通り。
 
 - コマンドに引数を渡せるようにする[`@v0.58.0`](https://github.com/kyu08/fzf-make/releases/tag/v0.58.0)
 - go-task/taskをサポート[`@v0.60.0`](https://github.com/kyu08/fzf-make/releases/tag/v0.60.0)
@@ -198,7 +195,7 @@ https://github.com/kyu08/sunaba
 1. OGPを動的生成するようにした
 1. Heading要素のデザインを変えた
 1. プレビュー環境を整えた
-1. 今年のPV数を振り返る？
+<!-- 1. 今年のPV数を振り返る？ -->
 
 ### OGPの自動生成
 CIで記事のタイトルを読み取ってOGP画像を自動生成 + commitするようにした。
@@ -219,7 +216,7 @@ Twitterで投稿したときに追加されるタイトル要素とOGPのメタ�
 
 ### Heading要素のデザインを変えた
 
-これまでは`h2`と`h3`の区別が付きづらかったので`## OSS`のようにHeading要素のレベルに合わせて`#`が表示されるデザインにした。
+これまではレベルの異なるHeading要素の区別が付きづらかったので`## OSS`のようにHeading要素のレベルに合わせて`#`が表示されるデザインにした。
 
 | BEFORE | ![heading-before.webp](heading-before.webp) |
 | --- | --- |
@@ -297,12 +294,25 @@ https://blog.kyu08.com/posts/vim-conf-2025/
 ![soccer.webp](soccer.webp)
 
 ## 仕事
-- 転職した
-- MVPを受賞した
-    - 去年末に立てた今年の抱負を達成できたといってよさそう
+転職し、2/1から新しい職場で働きはじめた。
+
+プロダクトがたくさんのお客様に価値提供をできている実感があり、モチベーション高く働けている。
+
+また、上期に関わったプロジェクトの成果を認めていただきMVPを受賞することができた。たくさんの人に協力いただきながらなんとか完遂できたプロジェクトだったので周りの方々には感謝しかない。
+
+会社全体としても好調なのでより一層事業成長に貢献していけるように全方面で頑張っていきたい。
+
+技術的には引き続き、Go、Google Cloud、Spannerなどを触っている。
+
+このブログではあまり会社については詳しく話せていませんが、エンジニア採用を強化中ですので少しでも興味を持ってくれた方はTwitterのDMとかで連絡をください。ご飯やカジュアル面談などの調整をさせていただきます。（もちろんDMで聞きたいことを聞いていただいても大丈夫です）
+
+[Engineer Entrance Book](https://recruit.canary-app.jp/engineer-entrance-book)にもかなり詳しく情報がまとまっているのでぜひご覧ください。🙇
 
 ## 2026年の抱負
-## おわりに
+- 事業成長に貢献する
+- GoとComputer Scienceを深堀る
+
+来年もやっていきます。
 
 [^1]: 便宜的にPRと表記しているが、GerritではCL(たしかChange List)と呼ばれる。
 [^2]: Ownerが自分以外のPublic Repositoryを対象に集計。
