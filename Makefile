@@ -27,3 +27,8 @@ lint:
 .PHONY: lint-fix
 lint-fix:
 	npx textlint --fix ./content/posts/**/*.md
+
+# usage: make list-posts year=2025
+.PHONY: list-posts
+list-posts:
+	@scripts/list-posts-by-year.sh $(year)
