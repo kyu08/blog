@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Thu, 25 Dec 2025 17:00:00 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-268/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Dec 2025 17:00:00 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-268/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2025年を振り返る</title>
       <link>https://blog.kyu08.com/pr-268/posts/looking-back-on-2025/</link>
-      <pubDate>Thu, 25 Dec 2025 17:00:00 +0900</pubDate>
+      <pubDate>Sat, 27 Dec 2025 17:00:00 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/pr-268/posts/looking-back-on-2025/</guid>
       <description>年の瀬なので1年を振り返る。 OSS PR GitHubとGerritで55件のPR1を作成し49件のPRがマージされた。(GitHub2 Gerrit) 去年の数字が</description>
@@ -344,15 +344,15 @@
 &lt;p&gt;また、上期に関わったプロジェクトの成果を認めていただきMVPを受賞することができた。&lt;/p&gt;
 &lt;p&gt;会社全体としても好調なのでより一層事業成長に貢献していけるように全方面で頑張っていきたい。&lt;/p&gt;
 &lt;p&gt;技術的には引き続きGo、Google Cloud、Spannerなどを触っている。&lt;/p&gt;
-&lt;p&gt;このブログではあまり会社については詳しく話せていませんが、エンジニア採用を強化中ですので少しでも興味を持ってくれた方はTwitterのDMとかで連絡をください。ご飯やカジュアル面談などの調整をさせていただきます。（もちろんDMで聞きたいことを聞いていただいても大丈夫です）&lt;/p&gt;
+&lt;p&gt;このブログではあまり会社について詳しく話せていませんが、エンジニア採用を強化中ですので少しでも興味を持ってくれた方はTwitterのDMとかで連絡をください。ご飯やカジュアル面談などの調整をさせていただきます。（もちろんDMで聞きたいことを聞いていただいても大丈夫です）&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://recruit.canary-app.jp/engineer-entrance-book&#34; target=&#34;_blank&#34; &gt;Engineer Entrance Book&lt;/a&gt;にもかなり詳しく情報がまとまっているのでぜひご覧ください。🙇&lt;/p&gt;
 &lt;h2 id=&#34;2026年の抱負&#34;&gt;2026年の抱負&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;事業成長に貢献する&lt;/li&gt;
-&lt;li&gt;GoとComputer Scienceを深堀る&lt;/li&gt;
+&lt;li&gt;事業成長により貢献する&lt;/li&gt;
+&lt;li&gt;GoとComputer Scienceの理解を深める&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
-&lt;p&gt;来年もやっていきます。&lt;/p&gt;
+&lt;p&gt;2026年もやっていき。&lt;/p&gt;
 &lt;p&gt;過去の振り返り記事はこちら。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://blog.kyu08.com/pr-268/posts/looking-back-on-2024/&#34; &gt;2024年を振り返る&lt;/a&gt;&lt;/li&gt;
