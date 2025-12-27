@@ -109,7 +109,7 @@
 &lt;h3 id=&#34;振り返り&#34;&gt;振り返り&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;去年と同じくらいのペースでPRを送ることができた。（平均約4.5件/月ペース）&lt;/li&gt;
-&lt;li&gt;LazygitのGitHubのトップページのContributors一覧入りを果たした。
+&lt;li&gt;LazygitのトップページのContributors一覧に表示されるようになった。
 &lt;img src=&#34;lazygit-contibutors.webp&#34; alt=&#34;lazygit-contibutors.webp&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;GitHubではcommit数が多い順に12人目くらいまでのアイコンがContributorsに表示される。&lt;/li&gt;
@@ -203,6 +203,7 @@
 &lt;li&gt;&lt;a href=&#34;https://blog.kyu08.com/posts/rust-web-app-book/&#34; target=&#34;_blank&#34; &gt;『RustによるWebアプリケーション開発 設計からリリース・運用まで』を読んだ&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://blog.kyu08.com/posts/gerrit-find-cls-you-created/&#34; target=&#34;_blank&#34; &gt;Gerritで自分が作成したCL一覧を確認する方法&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;本を読んで記事を書くことで理解や記憶への定着が捗っている気がするので来年も適度にやっていきたい。&lt;/p&gt;
 &lt;h3 id=&#34;ブログの変更&#34;&gt;ブログの変更&lt;/h3&gt;
 &lt;p&gt;今年はブログのデザインや仕組みについてもいくつか変更を加えた。&lt;/p&gt;
 &lt;ol&gt;
@@ -249,7 +250,7 @@
 &lt;/table&gt;
 &lt;p&gt;&lt;a href=&#34;https://x.com/voluntas&#34; target=&#34;_blank&#34; &gt;@voluntas&lt;/a&gt;さんの&lt;a href=&#34;https://x.com/voluntas/status/1981896805672501760&#34; target=&#34;_blank&#34; &gt;このツイート&lt;/a&gt;をみていいなーと思ったので真似してみた。&lt;/p&gt;
 &lt;h3 id=&#34;プレビュー環境を整えた&#34;&gt;プレビュー環境を整えた&lt;/h3&gt;
-&lt;p&gt;PRコメントにプレビュー環境のリンクが投稿されるようにした。出先などでも記事の校正がしやすくなった。&lt;/p&gt;
+&lt;p&gt;PRコメントにプレビュー環境のリンクが投稿されるようにした。出先などでも記事の推敲がしやすくなった。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/blog/pull/235&#34; data-auto-fetch=&#34;true&#34;&gt;
   &lt;a href=&#34;https://github.com/kyu08/blog/pull/235&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -330,7 +331,7 @@
 &lt;p&gt;朝散歩で日の光にあたったり運動や出社で体力を使うようにしたのが自分の睡眠にはいい影響があった気がする。（たぶん）&lt;/p&gt;
 &lt;h3 id=&#34;食事&#34;&gt;食事&lt;/h3&gt;
 &lt;p&gt;これまではリモートで働いているとよく17時前後に集中力が皆無になってしまい、ちょっとゴロゴロしてから空腹を感じてご飯を食べる、というようなことをしていた。&lt;/p&gt;
-&lt;p&gt;ある日お昼ご飯をお腹いっぱい食べたところ夕方の集中力低下タイムがなくなったことに気づいた。シンプルに夕方に血糖値的なものが下がりすぎて集中力が落ちていた模様。地味に生産性が落ちていたので改善できて嬉しい。&lt;/p&gt;
+&lt;p&gt;ある日お昼ご飯をお腹いっぱい食べたところ夕方の集中力低下タイムがなくなったことに気づいた。シンプルに夕方に血糖値的なものが下がりすぎて集中力が落ちていた模様。地味に生産性が落ちていたので改善できて良かった。&lt;/p&gt;
 &lt;h3 id=&#34;舌下治療&#34;&gt;舌下治療&lt;/h3&gt;
 &lt;p&gt;去年の秋頃始めた舌下治療の結果がでて今年の春の花粉シーズンは例年よりも楽だった。&lt;/p&gt;
 &lt;p&gt;来年はもっと楽になることを期待。&lt;/p&gt;
