@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sat, 27 Dec 2025 17:00:00 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-268/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Dec 2025 12:00:00 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-268/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2025年を振り返る</title>
       <link>https://blog.kyu08.com/pr-268/posts/looking-back-on-2025/</link>
-      <pubDate>Sat, 27 Dec 2025 17:00:00 +0900</pubDate>
+      <pubDate>Tue, 30 Dec 2025 12:00:00 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/pr-268/posts/looking-back-on-2025/</guid>
       <description>年の瀬なので1年を振り返る。 OSS PR GitHubとGerritで55件のPR1を作成し49件のPRがマージされた。(GitHub2 Gerrit) 去年の数字が</description>
@@ -263,19 +263,6 @@
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;読書など&#34;&gt;読書など&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.oreilly.co.jp/books/9784814400874/&#34; target=&#34;_blank&#34; &gt;コンピュータシステムの理論と実装 第2版&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.oreilly.co.jp/books/9784814400911/&#34; target=&#34;_blank&#34; &gt;Tidy First?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://bookplus.nikkei.com/atcl/catalog/99/140252/&#34; target=&#34;_blank&#34; &gt;デッドライン&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; target=&#34;_blank&#34; &gt;つくって、壊して、直して学ぶ Kubernetes入門&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://gihyo.jp/book/2022/978-4-297-12562-2&#34; target=&#34;_blank&#34; &gt;コンセプトから理解するRust&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.kodansha.co.jp/book/products/0000398182&#34; target=&#34;_blank&#34; &gt;RustによるWebアプリケーション開発 設計からリリース・運用まで&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://tatsu-zine.com/books/clean-architecture&#34; target=&#34;_blank&#34; &gt;Clean Architecture 達人に学ぶソフトウェアの構造と設計&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;読みかけのものは割愛。&lt;/p&gt;
-&lt;p&gt;タイトルからも分かる通りComputer Science、 プロマネ、Kubernetes、Rustが今年の興味領域の中心だった。長期的に役立ちそう系と仕事ですぐ使える系とただ単に興味がある系をバランスよく摂取できた気がする。&lt;/p&gt;
-&lt;p&gt;ひとまずRust欲が落ち着いたので来年はComputer Science系をやりつつ、Goの深堀りにも時間を使っていきたい。Computer Scienceに関してはネットワークと並行プログラミング周りを深掘ろうと思っている。&lt;/p&gt;
 &lt;h3 id=&#34;ブログカードの表示&#34;&gt;ブログカードの表示&lt;/h3&gt;
 &lt;p&gt;こんな感じでリンク先の情報を表示するようにした。便利。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;blog-card.webp&#34; alt=&#34;blog-card.webp&#34;&gt;&lt;/p&gt;
@@ -291,6 +278,19 @@
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;/p&gt;
+&lt;h2 id=&#34;読書など&#34;&gt;読書など&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.oreilly.co.jp/books/9784814400874/&#34; target=&#34;_blank&#34; &gt;コンピュータシステムの理論と実装 第2版&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.oreilly.co.jp/books/9784814400911/&#34; target=&#34;_blank&#34; &gt;Tidy First?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bookplus.nikkei.com/atcl/catalog/99/140252/&#34; target=&#34;_blank&#34; &gt;デッドライン&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; target=&#34;_blank&#34; &gt;つくって、壊して、直して学ぶ Kubernetes入門&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gihyo.jp/book/2022/978-4-297-12562-2&#34; target=&#34;_blank&#34; &gt;コンセプトから理解するRust&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.kodansha.co.jp/book/products/0000398182&#34; target=&#34;_blank&#34; &gt;RustによるWebアプリケーション開発 設計からリリース・運用まで&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tatsu-zine.com/books/clean-architecture&#34; target=&#34;_blank&#34; &gt;Clean Architecture 達人に学ぶソフトウェアの構造と設計&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;読みかけのものは割愛。&lt;/p&gt;
+&lt;p&gt;タイトルからも分かる通りComputer Science、 プロマネ、Kubernetes、Rustが今年の興味領域の中心だった。長期的に役立ちそう系と仕事ですぐ使える系とただ単に興味がある系をバランスよく摂取できた気がする。&lt;/p&gt;
+&lt;p&gt;ひとまずRust欲が落ち着いたので来年はComputer Science系をやりつつ、Goの深堀りにも時間を使っていきたい。Computer Scienceに関してはネットワークと並行プログラミング周りを深掘ろうと思っている。&lt;/p&gt;
 &lt;h2 id=&#34;勉強会&#34;&gt;勉強会&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;関数型まつり2025&lt;/li&gt;
