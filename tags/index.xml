@@ -7,7 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Thu, 25 Dec 2025 00:17:02 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Dec 2025 12:00:00 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>blog</title>
+      <link>https://blog.kyu08.com/tags/blog/</link>
+      <pubDate>Tue, 30 Dec 2025 12:00:00 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/blog/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>OSS</title>
+      <link>https://blog.kyu08.com/tags/oss/</link>
+      <pubDate>Tue, 30 Dec 2025 12:00:00 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/oss/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>振り返り</title>
+      <link>https://blog.kyu08.com/tags/%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A/</link>
+      <pubDate>Tue, 30 Dec 2025 12:00:00 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
     <item>
       <title>Gerrit</title>
       <link>https://blog.kyu08.com/tags/gerrit/</link>
@@ -189,16 +219,6 @@
     </item>
     
     <item>
-      <title>OSS</title>
-      <link>https://blog.kyu08.com/tags/oss/</link>
-      <pubDate>Tue, 20 May 2025 15:00:00 +0000</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/oss/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
       <title>NuPhy</title>
       <link>https://blog.kyu08.com/tags/nuphy/</link>
       <pubDate>Wed, 30 Apr 2025 13:49:03 +0000</pubDate>
@@ -244,16 +264,6 @@
       <pubDate>Sun, 06 Apr 2025 09:50:34 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/tags/%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>振り返り</title>
-      <link>https://blog.kyu08.com/tags/%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A/</link>
-      <pubDate>Sun, 29 Dec 2024 02:03:53 +0000</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A/</guid>
       <description></description>
       <content></content>
     </item>
@@ -394,16 +404,6 @@
       <pubDate>Sat, 30 Mar 2024 15:00:38 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/tags/%E3%83%87%E3%82%B9%E3%82%AF%E7%92%B0%E5%A2%83/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>blog</title>
-      <link>https://blog.kyu08.com/tags/blog/</link>
-      <pubDate>Sun, 17 Mar 2024 13:06:40 +0000</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/blog/</guid>
       <description></description>
       <content></content>
     </item>
