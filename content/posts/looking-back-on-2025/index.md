@@ -227,6 +227,13 @@ PRコメントにプレビュー環境のリンクが投稿されるようにし
 
 https://github.com/kyu08/blog/pull/235
 
+### ブログカードの表示
+こんな感じでリンク先の情報を表示するようにした。便利。
+
+![blog-card.webp](blog-card.webp)
+
+https://github.com/kyu08/blog/pull/246
+
 ## 読書など
 - [コンピュータシステムの理論と実装 第2版](https://www.oreilly.co.jp/books/9784814400874/)
 - [Tidy First?](https://www.oreilly.co.jp/books/9784814400911/)
@@ -241,14 +248,6 @@ https://github.com/kyu08/blog/pull/235
 タイトルからも分かる通りComputer Science、 プロマネ、Kubernetes、Rustが今年の興味領域の中心だった。長期的に役立ちそう系と仕事ですぐ使える系とただ単に興味がある系をバランスよく摂取できた気がする。
 
 ひとまずRust欲が落ち着いたので来年はComputer Science系をやりつつ、Goの深堀りにも時間を使っていきたい。Computer Scienceに関してはネットワークと並行プログラミング周りを深掘ろうと思っている。
-
-### ブログカードの表示
-こんな感じでリンク先の情報を表示するようにした。便利。
-
-![blog-card.webp](blog-card.webp)
-
-https://github.com/kyu08/blog/pull/246
-
 
 ## 勉強会
 - 関数型まつり2025
