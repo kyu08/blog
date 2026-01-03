@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>プロジェクトマネジメント on blog.kyu08.com</title>
+    <link>https://blog.kyu08.com/pr-274/tags/%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%9E%E3%83%8D%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88/</link>
+    <description>Recent content in プロジェクトマネジメント on blog.kyu08.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>blog.kyu08.com</copyright>
+    <lastBuildDate>Sun, 23 Nov 2025 10:43:53 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-274/tags/%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%9E%E3%83%8D%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>『デッドライン』を読んだ</title>
+      <link>https://blog.kyu08.com/pr-274/posts/the-deadline/</link>
+      <pubDate>Sun, 23 Nov 2025 10:43:53 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-274/posts/the-deadline/</guid>
+      <description>少し前にTwitterで紹介されていて気になっていた1トム デマルコの『デッドライン』を読んだ。新品で売ってるところが見つからなかったのでAm</description>
+      <content>&lt;p&gt;&lt;img src=&#34;the-deadline.webp&#34; alt=&#34;the-deadline.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;少し前にTwitterで紹介されていて気になっていた&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;トム デマルコの『デッドライン』を読んだ。新品で売ってるところが見つからなかったのでAmazonで中古を購入した。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;プロジェクトマネジメントをするたびにその難しさを痛感しているので知見が得られたり思考が整理できたりすることを期待して読んだ。&lt;/p&gt;
+&lt;p&gt;同著者の本だと『ピープルウエア』が有名だがそちらは未読。『ゆとりの法則』とかも面白そうなのでいつか読みたい。&lt;/p&gt;
+&lt;p&gt;というわけで参考になったところを紹介していく。（なお&lt;code&gt;(P84)&lt;/code&gt;のような数字はページ数を示す。）&lt;/p&gt;
+&lt;h2 id=&#34;生産性の向上p84&#34;&gt;生産性の向上(P84)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;短期的に生産性を高める方法などない。生産性は、長期的な投資によって向上する。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;（本筋ではないが）まずこれを読んだときに手作業の自動化のためのCI/CDを整備したら短期的に生産性はあがるのでは？と思った。&lt;/p&gt;
+&lt;p&gt;が、ここでの生産性は「期間あたりのアウトプット」のことを指していて、「期間あたりのアウトカム」を指しているわけではないのかもしれないと解釈してひとまず納得した。（そもそもそんなに細かい話はしていない、またはCI/CDのような比較的すぐにできて明らかに生産性に寄与する施策はすでに実施済み、という前提はあるのかもしれない。）&lt;/p&gt;
+&lt;p&gt;なので「生産性を大きく向上させるためには長期的な投資が重要なことが多い」くらいに捉えてみる。&lt;/p&gt;
+&lt;p&gt;たしかに長期目線でチームの生産性を大きく向上させるにはチームとしての練度を向上させたり、リアーキテクティングをはじめとした技術的負債を解消したり、スキルアップを図ったりといったことが必要になることが多いように思うのでその意味では同意できる文だった。&lt;/p&gt;
+&lt;p&gt;スタートアップではリソースが限られる中で短期的にマストでやらなければいけないことをこなす必要があったりするので長期的な施策への投資バランスが本当に難しい。（とはいえ少しでも時間を見つけて長期的な施策を少しずつでも進めていくしかないか）&lt;/p&gt;
+&lt;h2 id=&#34;リスク管理p84&#34;&gt;リスク管理(P84)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;リスクを管理することによってプロジェクトを管理せよ。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;それぞれのリスクの実現する確率と予想コストを評価せよ&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;プロジェクトマネジメントをしていると「どう不確実性を取り扱うか」というのが難しく、かつ一番重要度が高いように感じる。&lt;/p&gt;
+&lt;p&gt;プロジェクト（以下PJと表記）を進めていると様々な不確実性によってスケジュール遅延が発生し、品質が落ちたり、計画を変更してPJ期間を延ばしたり、スコープを削ったり、あるいは人員を追加したりというアクションが必要になる。（場合によっては残業が増えたりもする）&lt;/p&gt;
+&lt;p&gt;そして何より、当初の見積もりを超過するとエンジニア当人が感じるプレッシャーが増えたりモチベーションが下がったりする。（自分だけかもしれないが）&lt;/p&gt;
+&lt;p&gt;なので可能な限り見積もりからのズレを減らしたくなる。（見積もりのズレが減って悲しい人はいないはず）&lt;/p&gt;
+&lt;p&gt;今のところは可能な限り見積もりからのズレを減らすためにはこのあたりのことを意識してみている。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;見積もりがズレたらその原因を分析して次回以降に活かす&lt;/li&gt;
+&lt;li&gt;そもそも見積もりという行為自体が不確実性をはらんでいることを理解する&lt;/li&gt;
+&lt;li&gt;不確実性を早期に削減することでPJ後半に手戻りや遅延が発生する確率を下げる&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;1.&lt;/code&gt;に関しては組織、人によってまちまちだと思うが最近自分が発見したズレの要因はこのあたり。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（プロマネと実装を兼任する場合に）プロマネタスクのための時間を確保し忘れていた&lt;/li&gt;
+&lt;li&gt;設計をチームに共有するための資料等の準備時間やレビュワーからもらったフィードバックを反映する時間を見積もりに含めていなかった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;特にプロマネと実装者を兼務している場合、状況が変わった際のスケジュールの組み直し、タスク実行順をどうするかの検討、ステークホルダーへの報告や相談などのプロマネタスクに意外と時間がかかることを直近のPJで学んだ。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;2.&lt;/code&gt;への対策としては2点見積もり、3点見積もりのような手法を用いたり、見積もりをレンジで表現したりすることが考えられそう。（e.g. 「7月1日にリリースできそうです」と伝えるのではなく「7月前半にリリースできそうです」のように範囲で伝える。）&lt;/p&gt;
+&lt;p&gt;PJが進むに連れて不確実性が下がっていき、見積もりの精度も上がっていくはずなので徐々にレンジも狭くなっていくはず。なのでステークホルダーに一度伝えて終わり、というよりはチェックポイントごとに最新の見積もりを伝えるのが良さそうに思う。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;3.&lt;/code&gt;については不確実性コーンに従って不確実性が下がっていくようにPJ初期の要件定義や設計の段階で大きな不確実性を潰しておくことが重要そう。&lt;/p&gt;
+&lt;h2 id=&#34;人材管理の智将p94&#34;&gt;人材管理の智将(P94)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;プロジェクトの初期にむだにする一日も、末期にむだにする一日も等しく打撃になる。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一日をむだにする方法はいくらでもある…しかし、一日を取り戻す方法は一つもない。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;真理みがある。真理過ぎてあまり書くことがない。&lt;/p&gt;
+&lt;p&gt;これを見て小学校のころのサッカーのコーチの「そのリフティングの1回はもう帰ってこないよ（だから集中して取り組もう）」という言葉を思い出した。&lt;/p&gt;
+&lt;h2 id=&#34;プレッシャーの効果p200&#34;&gt;プレッシャーの効果(P200)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;プレッシャーをかけても思考は速くならない。&lt;/li&gt;
+&lt;li&gt;一時的なプレッシャーや残業は、人びとの焦点を定め、その仕事が重要であるという認識を高めるには有効な方法かもしれないが、プレッシャーをかけすぎると、かならず失敗する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;自分もプレッシャーが大きすぎるとパフォーマンスが落ちるタイプなのでとてもわかりみがあった。&lt;/p&gt;
+&lt;p&gt;振り返ってみると特に明示的でないプレッシャーがあるとパフォーマンスが落ちやすい気がした。「xx月yy日までにリリースしたい」のようなものではなく「なんか上司から圧を感じる。今のままだとダメな気がする&amp;hellip;」みたいな状態。要求（の理解）が明瞭ではないので目標が定まらず、辛い感じになりがち。（今思えば上司とコミュニケーションをとって明確にするのがよさそうではある）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;残業時間を増やすのは、生産性を落とす方法である。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;残業が常態化し「あとで残業すればいっか〜」というマインドになってしまうと結局日中の生産性は落ちてしまい無駄が増えてしまうので気をつけたい。&lt;/p&gt;
+&lt;p&gt;一方で昼夜問わず猛烈にコミットして成果を出しまくっている人も身の回りに複数いるので必ずしも残業が悪とまではいえない気持ちにもなっている。（あくまで今の自分がそう感じるというだけ人/時期によっては残業しないことの重要度が高まることは普通にあるとは思う）&lt;/p&gt;
+&lt;p&gt;そういえば残業の話は『世界一流エンジニアの思考法』にも書いてあったなーと思い出した。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ここでの示唆は、業務だけに自分の時間を使ってしまうと&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;学習によって自分の生産性を向上させることがしずらい&lt;/li&gt;
+&lt;li&gt;残業前提で成果を出すため再現性が低い&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ということだと思う。残業しすぎないことで学習の時間を確保したり、開発プロセスの改善やスコープの調整によってうまく成果を出せるようにできていることが重要なのだと思う。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://blog.kyu08.com/posts/how-world-class-engineers-think/#%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E5%88%B6&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://blog.kyu08.com/posts/how-world-class-engineers-think/#%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E5%88%B6&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://blog.kyu08.com/posts/how-world-class-engineers-think/#%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E5%88%B6&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://blog.kyu08.com/posts/how-world-class-engineers-think/#%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E5%88%B6&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;スタッフの人数p259&#34;&gt;スタッフの人数(P259)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;初期に人数が多すぎると、プロジェクトは重要な設計作業を省略せざるをえない（全員に仕事を与えるため）。設計が完成する前に大勢に仕事を割り当てると、人や作業グループの間のインタフェースを最小化できない。&lt;/li&gt;
+&lt;li&gt;このため、相互依存性が高まり、会議が増え、やり直しが増え、フラストレーションがたまる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;チームの人数が多すぎる場合、設計段階で全員にタスクをふろうとすると対象ソフトウェアへの理解が不十分な段階で人為的にソフトウェアを部分に切り分けて担当をアサインすることになる。&lt;/p&gt;
+&lt;p&gt;そのため人と人とのインターフェースが無駄に複雑化してしまい、コミュニケーションコストが増大する、ということを言っていると理解した。&lt;/p&gt;
+&lt;p&gt;そのため設計段階までは少人数で進めてタスクを切り分けられる段階まできたら人数も増やしてもよいのではないか、ということが書かれていた。&lt;/p&gt;
+&lt;p&gt;ここで得られる示唆としては&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;対象ソフトウェアへの理解が曖昧な状態では正しく切り分けることができない（マイクロサービス化にもいえそう）&lt;/li&gt;
+&lt;li&gt;チームの人数をいたずらに増やすべきではない&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;というようなことかなと思った。（生産性以外にも様々な事情があるケースもあるとは思うので一概には言えないが）&lt;/p&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;プロジェクトマネジメントについていろいろと示唆を得られてよかった。&lt;/p&gt;
+&lt;p&gt;物語調だったので隙間時間にサクサク読みやすかった。&lt;/p&gt;
+&lt;p&gt;数冊の積読があるので年内に消化できるようにやっていきたい&amp;hellip;。（k8s本&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;とかネットワークの本&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;とか）&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://x.com/voluntas/status/1957427884848820578&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://x.com/voluntas/status/1957427884848820578&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://x.com/voluntas/status/1957427884848820578&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://x.com/voluntas/status/1957427884848820578&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;ここ数年は物理本派でやらせてもらっているので&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://www.shoeisha.co.jp/book/detail/9784798183961&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.shoeisha.co.jp/book/detail/9784798183961&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34;&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.sbcr.jp/product/4815618599/&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://www.sbcr.jp/product/4815618599/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://www.sbcr.jp/product/4815618599/&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.sbcr.jp/product/4815618599/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

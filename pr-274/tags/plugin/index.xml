@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>plugin on blog.kyu08.com</title>
+    <link>https://blog.kyu08.com/pr-274/tags/plugin/</link>
+    <description>Recent content in plugin on blog.kyu08.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>blog.kyu08.com</copyright>
+    <lastBuildDate>Fri, 17 Nov 2023 15:20:13 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-274/tags/plugin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ThePrimeagen/harpoon を使ってみた</title>
+      <link>https://blog.kyu08.com/pr-274/posts/harpoon-review/</link>
+      <pubDate>Fri, 17 Nov 2023 15:20:13 +0000</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-274/posts/harpoon-review/</guid>
+      <description>ThePrimeagen/harpoonというNeovimプラグインを使ってみたので気になっている人の参考になればと思い感想を書いてみる。 で</description>
+      <content>&lt;p&gt;&lt;a href=&#34;https://github.com/ThePrimeagen/harpoon&#34; target=&#34;_blank&#34; &gt;ThePrimeagen/harpoon&lt;/a&gt;というNeovimプラグインを使ってみたので気になっている人の参考になればと思い感想を書いてみる。&lt;/p&gt;
+&lt;h2 id=&#34;できること&#34;&gt;できること&lt;/h2&gt;
+&lt;p&gt;ファイルをマークしてquick_menu(マークしたファイルの一覧)からファイルを開くことができる。操作している様子は以下の通り。&lt;/p&gt;
+&lt;h3 id=&#34;1-ファイルをマークして&#34;&gt;1. ファイルをマークして&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;:lua require(&amp;quot;harpoon.mark&amp;quot;).add_file()&lt;/code&gt;を実行してファイルをマーク&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;add-file.gif&#34; alt=&#34;add-file&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-quick_menuからファイルを開く&#34;&gt;2. quick_menuからファイルを開く&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;:lua require(&amp;quot;harpoon.ui&amp;quot;).toggle_quick_menu()&lt;/code&gt;を実行してマークしたファイル一覧からファイルを開く&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;toggle-quick-menu.gif&#34; alt=&#34;toggle-quick-menu&#34;&gt;&lt;/p&gt;
+&lt;p&gt;機能は他にもありそう&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;だが筆者はこの機能しか使ってないので割愛。&lt;/p&gt;
+&lt;h2 id=&#34;嬉しさ&#34;&gt;嬉しさ&lt;/h2&gt;
+&lt;p&gt;個人開発などファイル数が少ないプロジェクトだとそこまで効果を感じないが業務では(当然だが)一定数のファイルがあり、かつ定義ジャンプを繰り返しているとバッファにはたくさんファイルが存在しているのでtelescopeなどのfuzzy-finderプラグインを使ったとしてもファイルの行き来には多少時間がかかってしまっていた。&lt;/p&gt;
+&lt;p&gt;harpoonの導入によってファイルの行き来が爆速になってかなり作業効率が爆上がりした。&lt;/p&gt;
+&lt;h2 id=&#34;推しポイント&#34;&gt;推しポイント&lt;/h2&gt;
+&lt;h3 id=&#34;1-マークしたファイルが一度エディタを閉じても保持される&#34;&gt;1. マークしたファイルが一度エディタを閉じても保持される&lt;/h3&gt;
+&lt;p&gt;LSPが不調だったりしてNeovimを再起動することがたまにあるので地味に便利。&lt;/p&gt;
+&lt;p&gt;(一度Neovimを閉じてもマークしたファイルが保持されている様子。)
+&lt;img src=&#34;saved-quick-menu.gif&#34; alt=&#34;saved-quick-menu&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-自由に編集できる-quick_menu&#34;&gt;2. 自由に編集できる quick_menu&lt;/h3&gt;
+&lt;p&gt;作者自身もお気に入りと言及しているが&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;quick_menuは純粋なテキストなので自由に編集できる。&lt;/p&gt;
+&lt;p&gt;つまりこんな感じで&lt;code&gt;dd&lt;/code&gt; -&amp;gt; &lt;code&gt;y&lt;/code&gt;のようなコマンドで自由に順番を入れ替えたり削除したりできる。普段のvimの操作感で扱えるのでとても直感的で使いやすくて嬉しい。&lt;/p&gt;
+&lt;p&gt;quick_menuを自由に編集している様子&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;
+&lt;img src=&#34;editable-quick-menu.gif&#34; alt=&#34;editable-quick-menu&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;気になった方はぜひ試してみてください。&lt;/p&gt;
+&lt;p&gt;インストール方法はこちら&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/ThePrimeagen/harpoon?tab=readme-ov-file#-installation&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/ThePrimeagen/harpoon?tab=readme-ov-file#-installation&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/ThePrimeagen/harpoon?tab=readme-ov-file#-installation&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/ThePrimeagen/harpoon?tab=readme-ov-file#-installation&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h4 id=&#34;余談&#34;&gt;余談&lt;/h4&gt;
+&lt;p&gt;そういえばThePrimeagenの好きな動画があるので貼っておく。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.youtube.com/watch?v=nMHxdz-N7EU&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://www.youtube.com/watch?v=nMHxdz-N7EU&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://www.youtube.com/watch?v=nMHxdz-N7EU&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.youtube.com/watch?v=nMHxdz-N7EU&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;他には&lt;a href=&#34;https://github.com/ThePrimeagen/harpoon?tab=readme-ov-file#terminal-navigation&#34; target=&#34;_blank&#34; &gt;ターミナルを開く機能&lt;/a&gt;とか&lt;a href=&#34;https://github.com/ThePrimeagen/harpoon?tab=readme-ov-file#telescope-support&#34; target=&#34;_blank&#34; &gt;telescope&lt;/a&gt;や&lt;a href=&#34;https://github.com/ThePrimeagen/harpoon?tab=readme-ov-file#tmux-support&#34; target=&#34;_blank&#34; &gt;tmux&lt;/a&gt;との連携機能もある模様&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/ThePrimeagen/harpoon/issues/205#issuecomment-1241921113&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/ThePrimeagen/harpoon/issues/205#issuecomment-1241921113&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/ThePrimeagen/harpoon/issues/205#issuecomment-1241921113&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/ThePrimeagen/harpoon/issues/205#issuecomment-1241921113&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;ちなみにdemoで使っているcolorschemeは&lt;a href=&#34;https://github.com/catppuccin/nvim&#34; target=&#34;_blank&#34; &gt;catppuccin-mocha&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

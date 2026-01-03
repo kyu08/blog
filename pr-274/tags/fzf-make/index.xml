@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fzf-make on blog.kyu08.com</title>
+    <link>https://blog.kyu08.com/pr-274/tags/fzf-make/</link>
+    <description>Recent content in fzf-make on blog.kyu08.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>blog.kyu08.com</copyright>
+    <lastBuildDate>Fri, 29 Dec 2023 15:03:17 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-274/tags/fzf-make/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023年を振り返る</title>
+      <link>https://blog.kyu08.com/pr-274/posts/looking-back-on-2023/</link>
+      <pubDate>Fri, 29 Dec 2023 15:03:17 +0000</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-274/posts/looking-back-on-2023/</guid>
+      <description>趣味 OSS貢献 今年は初めてOSS貢献1をできた年でもあった。2023年に行った貢献を種類ごとにリポジトリごとでまとめたものが以下。2 ドキュメ</description>
+      <content>&lt;h2 id=&#34;趣味&#34;&gt;趣味&lt;/h2&gt;
+&lt;h3 id=&#34;oss貢献&#34;&gt;OSS貢献&lt;/h3&gt;
+&lt;p&gt;今年は初めてOSS貢献&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;をできた年でもあった。2023年に行った貢献を種類ごとにリポジトリごとでまとめたものが以下。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h4 id=&#34;ドキュメント関連&#34;&gt;ドキュメント関連&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;ratatui-org/website
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ratatui-org/website/pull/272&#34; target=&#34;_blank&#34; &gt;chore(docs): fix broken link to showcase/apps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ratatui-org/website/pull/271&#34; target=&#34;_blank&#34; &gt;chore(docs): fix typo in showcase/third-party-widgets&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ratatui-org/website/pull/203&#34; target=&#34;_blank&#34; &gt;docs: Add fzf-make to showcase&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ratatui-org/website/pull/169&#34; target=&#34;_blank&#34; &gt;docs: fix a broken link 🐛&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ratatui-org/website/pull/136&#34; target=&#34;_blank&#34; &gt;docs: Add demo gif to tutorial/json-editor 📚&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;a-kenji/tui-term
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/a-kenji/tui-term/pull/109&#34; target=&#34;_blank&#34; &gt;chore(doc): fix typo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/a-kenji/tui-term/pull/108&#34; target=&#34;_blank&#34; &gt;chore(doc): fix typo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;orhun/PKGBUILDs
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/orhun/PKGBUILDs/pull/10&#34; target=&#34;_blank&#34; &gt;Update fzf-make description&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;neovim/neovim
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/neovim/neovim/pull/25138&#34; target=&#34;_blank&#34; &gt;docs: replace screen.c for undo.c in src/nvim/README.md&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Homebrew/brew.sh
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Homebrew/brew.sh/pull/971&#34; target=&#34;_blank&#34; &gt;Update Japanese translation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;cicd関連&#34;&gt;CI/CD関連&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;hashicorp/terraform
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hashicorp/terraform/pull/34357&#34; target=&#34;_blank&#34; &gt;chore(GitHub Actions): fix inputs of Lock Threads, and bump version&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;jesseduffield/lazygit
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/2952&#34; target=&#34;_blank&#34; &gt;fix Generate Sponsors README&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/2950&#34; target=&#34;_blank&#34; &gt;fix GitHub Actions warnings&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;その他&#34;&gt;その他&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;rust-lang/rust-playground
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rust-lang/rust-playground/pull/992&#34; target=&#34;_blank&#34; &gt;Update outdated links&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;biomejs/biome
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/biomejs/biome/pull/224&#34; target=&#34;_blank&#34; &gt;chore: rename rome_js_transform and rome_js_parser to biome_*&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/biomejs/biome/pull/205&#34; target=&#34;_blank&#34; &gt;chore: rename rome_js_unicode_table to biome_js_unicode_table biomejs#88&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/biomejs/biome/pull/170&#34; target=&#34;_blank&#34; &gt;chore: rename rome_flags to biome_flags, rome_aria_metadata tobiome_aria_metadata and rome_aria tobiome_aria biomejs#88&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;jesseduffield/lazygit
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/2937&#34; target=&#34;_blank&#34; &gt;Add Makefile&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;mislav/bump-homebrew-formula-action
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mislav/bump-homebrew-formula-action/pull/57&#34; target=&#34;_blank&#34; &gt;(docs): use environment files instead of set-output&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2023年8月以降で20個のPRをマージしてもらうことができた！ほとんどが簡単なPRだったとはいえ感謝してもらえることも多かったので単純に嬉しかった。&lt;/p&gt;
+&lt;p&gt;一定数OSSに貢献できたのは嬉しいが、ドキュメントやCIの修正など比較的ハードルが低めの貢献が多かったのも事実。&lt;/p&gt;
+&lt;p&gt;流石にOSSにPRを出すことには慣れてきたので2024年は上記のような貢献もしつつ何らかのOSSのアプリケーションコードへの貢献もしていきたい。&lt;/p&gt;
+&lt;p&gt;OSSメンテナ観点では、どのプロジェクトのメンテナも非常に紳士的で優しく接してくれる方が多かったので自分も見習っていきたい。特にRustコミュニティは初心者を歓迎する雰囲気があり、PRを送った際の体験がとてもよかったので真似したい。&lt;/p&gt;
+&lt;h3 id=&#34;rustを書き始めた&#34;&gt;Rustを書き始めた&lt;/h3&gt;
+&lt;p&gt;2023年2月&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;ごろからRustを書き始めた。きっかけはkenkooooさんのこのスライドを読んで「Elmに似てて開発者体験がよさそう」と感じたので触ってみることにした。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://speakerdeck.com/estie/man-wochi-siteshi-merurust&#34; target=&#34;_blank&#34; &gt;満を持して始める Rust&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;入門に際して以下のようなことをやった。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://tourofrust.com/00_ja.html&#34; target=&#34;_blank&#34; &gt;Tour of Rust&lt;/a&gt;を読んでなんとなく雰囲気をつかむ&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doc.rust-jp.rs/book-ja/&#34; target=&#34;_blank&#34; &gt;The Rust Programming Language&lt;/a&gt;を手を動かしつつ(わからないところはいったん飛ばしつつ)一通り読む&lt;/li&gt;
+&lt;li&gt;RustでCLIアプリを作る&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;3.&lt;/code&gt; で作ったアプリをOSSとして公開した。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;kyu08/fzf-make&lt;/a&gt;&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h3 id=&#34;fzf-makeを公開した&#34;&gt;fzf-makeを公開した&lt;/h3&gt;
+&lt;p&gt;こんな感じでMakefileに定義したtargetを曖昧検索で絞り込んで実行できるツールを作った。プレビューウィンドウがあるのが地味に便利なポイントでtargetの内容を確認しつつ実行できる。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Rustの理解を深めるのと自分の普段の作業を効率化したくて作ったがその両方が割と達成できているので満足している。特に所有権やスマートポインタに関しては&lt;a href=&#34;https://doc.rust-jp.rs/book-ja/&#34; target=&#34;_blank&#34; &gt;The Rust Programming Language&lt;/a&gt;を読んだときにはイマイチ理解できなかったが実際に自分でコードを書いてコンパイラに指摘されてコードを修正することで理解を深めることができた。&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;最初は身近な人に紹介して使ってもらったりしていたが、ある日面識のない日本人の開発者の方がバグ報告issue&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;を立ててくれて、インターネットの向こう側の人に自分のアイディアが届いて気に入ってもらえて、しかもわざわざバグ報告をしてくれたという事実がとても嬉しかった。&lt;/p&gt;
+&lt;p&gt;当然個人の趣味開発なので副業などとは違い時給を得て開発しているわけではないが、ものづくりを通して他者に喜んでもらうということが自分にとって最高の喜びだとわかっただけでも非常に良い経験だった。自分がOSSコミュニティに貢献したいと考えているのも究極は「人に喜んで欲しいから」なのかもしれない。&lt;/p&gt;
+&lt;p&gt;その後も何人かの人がstarしてくれたりTwitter(現X)で言及してくれたり&lt;sup id=&#34;fnref:7&#34;&gt;&lt;a href=&#34;#fn:7&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;7&lt;/a&gt;&lt;/sup&gt;、issueを立ててくれたり、時にはPRを送ってくれたりして自分が書いたツールを通して海外のエンジニアとも交流できたのは自分にとって非常に刺激的だった。&lt;/p&gt;
+&lt;p&gt;これから開発したい機能や修正したいバグはまだまだあるので来年以降も引き続き開発を続けていきたい。Homebrewをはじめ、いくつかのパッケージマネージャでインストールできるのでぜひ使ってみてください。あとスターくれると大変嬉しいです！よろしくお願いします！&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;kyu08/fzf-make&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;neovimへの寄付&#34;&gt;Neovimへの寄付&lt;/h3&gt;
+&lt;p&gt;筆者はNeovimには仕事・趣味のプロジェクトなど自分が行うすべての開発に収まらずちょっとしたタスク管理やブログ執筆などあらゆる場面でとにかくお世話になっている。&lt;/p&gt;
+&lt;p&gt;Neovim自体はOSSなので無償で利用できるわけだが、あるときNeovimコミュニティの成果にフリーライドに近い状態&lt;sup id=&#34;fnref:8&#34;&gt;&lt;a href=&#34;#fn:8&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;8&lt;/a&gt;&lt;/sup&gt;になっている自分に気付いてからNeovimをはじめとしたOSSへの自分の関わり方に対し違和感を感じるようになったのでまずは経済的な支援でNeovimに貢献してみようと思い、GitHub Sponsorsを通じてNeovimに対して5$/Monthの寄付を開始した。&lt;sup id=&#34;fnref:9&#34;&gt;&lt;a href=&#34;#fn:9&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;9&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&#34;fnref:10&#34;&gt;&lt;a href=&#34;#fn:10&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;10&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;冗談抜きにNeovimのメンテナあっての自分の開発生活なのでこれは来年も続けたい。(本当のところはもっと稼いでもっと寄付したい)&lt;/p&gt;
+&lt;h3 id=&#34;ブログ&#34;&gt;ブログ&lt;/h3&gt;
+&lt;p&gt;2023年は20個の記事を書いた。たまに「あの記事読んだよ！」的な反応をもらうことがあって嬉しかった。Twitterで話しかけたり感想を伝えてくれたりするのは嬉しいのでお待ちしています。&lt;/p&gt;
+&lt;p&gt;以下のような目的でやっているいて、後者はともかく前者は効果を実感できているので来年も適度に続けていきたい。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;アウトプットを通して自分の理解と記憶への定着を深める&lt;/li&gt;
+&lt;li&gt;知見を共有して見た人の役に立つ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;fzf-bookmark-openerを公開した&#34;&gt;fzf-bookmark-openerを公開した&lt;/h3&gt;
+&lt;p&gt;ブックマークをfzfで絞り込んで開くことができるCLIツール。自分が欲しかったので作った。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-bookmark-opener&#34; target=&#34;_blank&#34; &gt;kyu08/fzf-bookmark-opener&lt;/a&gt;&lt;sup id=&#34;fnref:11&#34;&gt;&lt;a href=&#34;#fn:11&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;11&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-bookmark-opener-demo.gif&#34; alt=&#34;fzf-bookmark-opener-demo.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;同時期に書いた&lt;a href=&#34;https://github.com/kyu08/gcp-url-generator&#34; target=&#34;_blank&#34; &gt;kyu08/gcp-url-generator&lt;/a&gt;と組み合わせて業務でよく使っている。特定のGCPプロジェクトの特定のGCPサービスのコンソールをターミナルから開きたいことが多いので重宝している。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/ktr0731/go-fuzzyfinder&#34; target=&#34;_blank&#34; &gt;ktr0731/go-fuzzyfinder&lt;/a&gt;のおかげで100行程度のコードでやりたいことが実現できて大変助かった。&lt;/p&gt;
+&lt;h3 id=&#34;買ってよかったもの&#34;&gt;買ってよかったもの&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Nuphy Air60 v2&lt;/li&gt;
+&lt;li&gt;klack&lt;/li&gt;
+&lt;li&gt;コアラマットレスのマットレス&lt;/li&gt;
+&lt;li&gt;オーダーメイド枕&lt;/li&gt;
+&lt;li&gt;Salomon XT-6&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://md-holdings.com/product/list5/4977856205339.html&#34; target=&#34;_blank&#34; &gt;なすの天ぷら&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;大晦日に元気があったら記事として書きます。&lt;/p&gt;
+&lt;h2 id=&#34;仕事&#34;&gt;仕事&lt;/h2&gt;
+&lt;h3 id=&#34;やったこと&#34;&gt;やったこと&lt;/h3&gt;
+&lt;p&gt;SaaSプロダクトのバックエンドエンジニアとして主に負債解消プロジェクトに取り組んでいた。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Scalaで書かれたアプリケーションのGoへの移行&lt;/li&gt;
+&lt;li&gt;DatastoreからCloud Spannerへの移行&lt;/li&gt;
+&lt;li&gt;E2Eテストの整備&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;などを行った。マイクロサービス何もわからないのでオライリーのマイクロサービス本あたりを読んで勉強したい。&lt;/p&gt;
+&lt;h3 id=&#34;学びなど&#34;&gt;学びなど&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;12月ごろからこれまでよりは大きめのプロジェクトを任せてもらっている。これまで担当したプロジェクトよりは自分で考える幅が広いのもありかなり楽しく働けている。引き続きより大きな信頼を勝ち取って自分の仕事の幅を広げていけるように頑張っていきたい。&lt;/li&gt;
+&lt;li&gt;ローカルでテストできる環境が整っていると開発速度が爆上がりすることを実感した。多少整備に時間がかかったとしてペイすることが多いと思うので他のプロジェクトでもうまいこと時間を確保して整備していけるとよさそう。&lt;/li&gt;
+&lt;li&gt;DBに関連する色々を雰囲気でやってしまっていると自覚があるので年末年始はRDBの基礎的な原理&lt;sup id=&#34;fnref:12&#34;&gt;&lt;a href=&#34;#fn:12&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;12&lt;/a&gt;&lt;/sup&gt;や業務でメインで使っているDBであるCloud Spanner&lt;sup id=&#34;fnref:13&#34;&gt;&lt;a href=&#34;#fn:13&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;13&lt;/a&gt;&lt;/sup&gt;の理解を深めていきたい。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2024年の抱負&#34;&gt;2024年の抱負&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;引き続き仕事をモリモリがんばる。&lt;/li&gt;
+&lt;li&gt;OSS貢献を続ける。何らかのOSSのアプリケーションコードにも貢献する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;最後まで読んでくれてありがとうございました！良いお年を〜&lt;/p&gt;
+&lt;p&gt;2024年もがんばるぞー&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;初めてOSS貢献したときの記事はこちら。 &lt;a href=&#34;../my-first-oss-contribution&#34; &gt;OSSに初めてPRを送ってマージされた話&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;(主に来年の自分向け)このスクリプトを使ってデータを集めた。&lt;a href=&#34;https://gist.github.com/kyu08/138f8d15c2badc8243ca2e126545ca36&#34; target=&#34;_blank&#34; &gt;GitHubで自分がOSSに送ってマージされたPRを集計するやつ.md&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/tour-of-rust&#34; target=&#34;_blank&#34; &gt;tour-of-rustのメモリポジトリ&lt;/a&gt;が2023/2頃にできていたのできっとこの頃から書き始めたはず。そういえばkeenさんのこのメモリの記事がすごくわかりやすかった。&lt;a href=&#34;https://keens.github.io/blog/2017/04/30/memoritosutakkutohi_puto/&#34; target=&#34;_blank&#34; &gt;メモリとスタックとヒープとプログラミング言語&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34;&gt;
+&lt;p&gt;モチベーションになるのでスターください！拡散もしてくれると泣いて喜びます！&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:5&#34;&gt;
+&lt;p&gt;そういえば&lt;a href=&#34;https://github.com/rust-lang/rustlings&#34; target=&#34;_blank&#34; &gt;rust-lang/rustlings&lt;/a&gt;というコンパイルエラーを修正していくことでRustの理解を深めるというコンセプトのリポジトリがあるので作りたいものはないがRustの理解を深めたい人にはおすすめかもしれない。（筆者はREADMEを読んだだけで触ったことはない）&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:6&#34;&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-make/issues/21&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/fzf-make/issues/21&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/fzf-make/issues/21&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-make/issues/21&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&amp;#160;&lt;a href=&#34;#fnref:6&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:7&#34;&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://twitter.com/orhunp_/status/1692511841270841502&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://twitter.com/orhunp_/status/1692511841270841502&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://twitter.com/orhunp_/status/1692511841270841502&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://twitter.com/orhunp_/status/1692511841270841502&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&amp;#160;&lt;a href=&#34;#fnref:7&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:8&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/songmu/status/897317241909157888&#34; target=&#34;_blank&#34; &gt;songmuさんも言っている&lt;/a&gt;ようにOSSを使っていることを公言することもOSSプロジェクトにとってはプラスになるとは思うが、それぐらいでは済まないくらいNeovimに自分の開発人生を豊かにしてもらっている自覚がある。&amp;#160;&lt;a href=&#34;#fnref:8&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:9&#34;&gt;
+&lt;p&gt;初めてNeovimに寄付をしたときの話はこちら。&lt;a href=&#34;../sponsored-neovim&#34; &gt;GitHub Sponsorsを通してNeovimに寄付をした&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:9&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:10&#34;&gt;
+&lt;p&gt;ちなみにNeovimへの寄付の使途はopen collective上で公開されている。 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://opencollective.com/neovim&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://opencollective.com/neovim&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://opencollective.com/neovim&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://opencollective.com/neovim&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&amp;#160;&lt;a href=&#34;#fnref:10&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:11&#34;&gt;
+&lt;p&gt;紹介記事はこちら&lt;a href=&#34;../fzf-bookmark-opener&#34; &gt;yamlに定義したbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:11&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:12&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://use-the-index-luke.com/ja&#34; target=&#34;_blank&#34; &gt;SQLのインデックスとそのチューニングについてのオンラインブック&lt;/a&gt;や &lt;a href=&#34;https://zenn.dev/suzuki_hoge/books/2022-12-database-index-9520da88d02c4f&#34; target=&#34;_blank&#34; &gt;図解 DB インデックス&lt;/a&gt;あたりを読んでみようと思っている。&amp;#160;&lt;a href=&#34;#fnref:12&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:13&#34;&gt;
+&lt;p&gt;地道に&lt;a href=&#34;https://cloud.google.com/spanner/docs/create-query-database-console?hl=ja&#34; target=&#34;_blank&#34; &gt;公式ドキュメント&lt;/a&gt;を読んでいくつもり&amp;#160;&lt;a href=&#34;#fnref:13&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
