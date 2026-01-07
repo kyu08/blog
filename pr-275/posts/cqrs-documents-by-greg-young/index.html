@@ -99,10 +99,12 @@ if (!doNotTrack) {
 
   
   
+    
+  
 
 
-  <meta property="og:image" content="https://blog.kyu08.com/pr-275/cover.png">
-  <meta name="twitter:image" content="https://blog.kyu08.com/pr-275/cover.png">
+  <meta property="og:image" content="https://blog.kyu08.com/pr-275/posts/cqrs-documents-by-greg-young/cover.png">
+  <meta name="twitter:image" content="https://blog.kyu08.com/pr-275/posts/cqrs-documents-by-greg-young/cover.png">
   <meta name="twitter:image:alt" content="『CQRS Documents by Greg Young』を読んだ">
 
 <meta property="og:image:width" content="1200">
@@ -212,7 +214,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/01/06</time>
       
-    <span class="post-reading-time">1 min read (440 words)</span></div>
+    <span class="post-reading-time">2 min read (675 words)</span></div>
 
   
     <span class="post-tags">
@@ -224,7 +226,7 @@ if (!doNotTrack) {
     </span>
   
   
-  <img src="https://blog.kyu08.com/pr-275/cover.png"
+  <img src="/pr-275/posts/cqrs-documents-by-greg-young/cover.png"
     class="post-cover"
     alt="『CQRS Documents by Greg Young』を読んだ"
     title="Cover Image" />
@@ -263,6 +265,8 @@ if (!doNotTrack) {
 </p>
 <h2 id="cqrsに興味を持ったきっかけ">CQRSに興味を持ったきっかけ<a href="#cqrsに興味を持ったきっかけ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>ドメイン層のメンテナビリティの重要性を感じる中で、ドメイン層は書き込み系の振る舞いだけを担い、読み取り系の責務は別のモジュールに移譲してしまった方がドメイン層をシンプルに保てて良いのではないかと考えるようになった。</p>
+<!-- raw HTML omitted -->
+<p>（もちろんアプリケーションの状況にもよるが&hellip;。repositoryのRead系メソッドの返り値がドメインモデルと一致しないケースが多くなるようなケースで特にCQRSのメリットが効果を発揮しやすいような気がしている。状況にかかわらずCQRSをやったほうがいいのかどうかはまだあまりわかっていない。ちなみにここでのCQRSは基本的には同一DBでCのアプリケーションコードとQのアプリケーションコードが分離されている、くらいの方法をざっくり想定して書いている。）</p>
 <p>それってCQRSってやつじゃね？と思ったのでまずは原典に近いドキュメントを読んでみたくなったので読むことにした。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <p>ここからはCQRS Documentsの内容をまとめていく。</p>
 <h2 id="非cqrsアーキテクチャシステムの課題">非CQRSアーキテクチャシステムの課題<a href="#非cqrsアーキテクチャシステムの課題" class="hanchor" ariaLabel="Anchor">#</a> </h2>
