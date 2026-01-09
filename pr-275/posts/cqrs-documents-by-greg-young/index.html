@@ -214,7 +214,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/01/06</time>
       
-    <span class="post-reading-time">2 min read (675 words)</span></div>
+    <span class="post-reading-time">4 min read (1591 words)</span></div>
 
   
     <span class="post-tags">
@@ -270,14 +270,32 @@ if (!doNotTrack) {
 <p>それってCQRSってやつじゃね？と思ったのでまずは原典に近いドキュメントを読んでみたくなったので読むことにした。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <p>ここからはCQRS Documentsの内容をまとめていく。</p>
 <h2 id="非cqrsアーキテクチャシステムの課題">非CQRSアーキテクチャシステムの課題<a href="#非cqrsアーキテクチャシステムの課題" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>&ldquo;A Stereotypical Architecture&quot;として、典型的なアーキテクチャが紹介されている。</p>
+<p><img src="a-stereotypical-architecture.webp" alt="a-stereotypical-architecture.webp">
+CQRS Documents by Greg Young P2より引用</p>
+<p>このアーキテクチャではシステムはCRUDのみの機能を持ち、クライアントとは常にDTOを介して通信する。</p>
+<p>つまり、クライアントは<code>UpdateUserAge</code>のようなエンドポイントに更新後の年齢だけを渡すのではなく<code>/user</code>に更新後のDTOを丸ごと渡す。</p>
+<p>サーバー側では受け取ったDTOをドメインオブジェクトに詰め替えてバリデーションを行い、永続化する。</p>
+<p>このような設計ではデータの更新方法はクライアントに委ねられてしまうため、ドメイン知識がクライアント側に漏れ出してしまう。</p>
+<p>多くの場合では、アプリケーションサービスの責務はDTOとドメインオブジェクトの詰め替えに終止し、ドメイン知識はユーザー側に漏れ出してしまう可能性が高い。</p>
+<p>このようなアーキテクチャでは簡潔性からオンボーディングコストが低くなるメリットがある代わりに、次のような課題が発生する。</p>
+<ol>
+<li>スケーリング: 一般的なシステムでは読み取り操作は書き込み操作よりも2桁以上多い。読み取り操作目線では非正規化されたデータ構造が適しているが、書き込み操作目線では正規化されたデータ構造が適している。これらを単一のDBで扱おうとすると垂直スケーリングが必要になるが、垂直スケーリングには非常に高額なコストがかかる。</li>
+<li>DDD適用の困難さ: この設計ではAPIがデータ指向のインターフェースを持つため、システム全体がCRUDの4つの動詞に縛られる。<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></li>
+</ol>
 <h2 id="cqrs">CQRS<a href="#cqrs" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <h2 id="イベントソーシング">イベントソーシング<a href="#イベントソーシング" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <h2 id="感想">感想<a href="#感想" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Documents内でも触れられていたが、結局CQRSにしろイベントソーシングにしろ一定のオーバーヘッドはあるので、システムやビジネスの要件や今後の見通しを元に必要性を検討するのが重要。（それはそう）</p>
+<p>というのはありつつ、ドメイン層のメンテナビリティを高めるためにCQRSを採用するのは有効な選択肢の一つだとも感じているので、ひとまず個人のプロジェクトで検証してみたいと思う。</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1">
 <p>厳密にこのドキュメントが原典であることを確認したわけではない。正確な情報をお持ちの方がいたら教えて下さい。なお、CQRSはBertrand Meyerが提唱した<a href="https://en.wikipedia.org/wiki/Command%E2%80%93query_separation" target="_blank" >『Command and Query Separation Principle』</a>にその起源を持つ、という記述がCQRS Documents内にあった。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>CRUDの4つの動詞に縛られるかどうかは開発者の選択次第では？と思ったがここではそれが本質だとは思わなかったので深堀りしていない。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
