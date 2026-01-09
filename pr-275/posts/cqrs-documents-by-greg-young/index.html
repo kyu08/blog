@@ -214,7 +214,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/01/06</time>
       
-    <span class="post-reading-time">4 min read (1587 words)</span></div>
+    <span class="post-reading-time">4 min read (1681 words)</span></div>
 
   
     <span class="post-tags">
@@ -240,7 +240,11 @@ if (!doNotTrack) {
       <nav id="TableOfContents">
   <ul>
     <li><a href="#cqrsに興味を持ったきっかけ">CQRSに興味を持ったきっかけ</a></li>
-    <li><a href="#非cqrsアーキテクチャシステムの課題">非CQRSアーキテクチャシステムの課題</a></li>
+    <li><a href="#非cqrsアーキテクチャシステムの課題">非CQRSアーキテクチャシステムの課題</a>
+      <ul>
+        <li><a href="#ここまでの感想">ここまでの感想</a></li>
+      </ul>
+    </li>
     <li><a href="#cqrs">CQRS</a></li>
     <li><a href="#イベントソーシング">イベントソーシング</a></li>
     <li><a href="#感想">感想</a></li>
@@ -282,6 +286,8 @@ CQRS Documents by Greg Young P2より引用</p>
 <li>スケーリング: 一般的なシステムでは読み取り操作は書き込み操作よりも2桁以上多い。読み取り操作目線では非正規化されたデータ構造が適しているが、書き込み操作目線では正規化されたデータ構造が適している。これらを単一のDBで扱おうとすると垂直スケーリングが必要になるが、垂直スケーリングには非常に高額なコストがかかる。</li>
 <li>DDD適用の困難さ: この設計ではAPIがデータ指向のインターフェースを持つため、システム全体がCRUDの4つの動詞に縛られる。（データの更新方法がクライアントまたはユーザー側に漏れ出ておりドメイン知識をソフトウェアで表現することが難しいため）</li>
 </ol>
+<h3 id="ここまでの感想">ここまでの感想<a href="#ここまでの感想" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>さすがにこういったアーキテクチャのシステムは見たことがないので極端な例では&hellip;?とは思ったが時代や場所によってはこういった設計のシステムも一定あるのかもしれない。</p>
 <h2 id="cqrs">CQRS<a href="#cqrs" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <h2 id="イベントソーシング">イベントソーシング<a href="#イベントソーシング" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <h2 id="感想">感想<a href="#感想" class="hanchor" ariaLabel="Anchor">#</a> </h2>
