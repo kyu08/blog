@@ -53,12 +53,35 @@ CQRS Documents by Greg Young P2より引用
 さすがにこういったアーキテクチャのシステムは見たことがないので極端な例では...?とは思ったが時代や場所によってはこういった設計のシステムも一定あるのかもしれない。
 
 ## CQRS
+CQRSはBertrand Meyerが提唱した[『Command and Query Separation Principle』](https://en.wikipedia.org/wiki/Command%E2%80%93query_separation)にその起源を持つ。Wikipediaではこの原則を次のように説明している。
+
+> It states that every method should either be a command that performs an action, or a query that returns data to the caller, but not both.
+>
+> [Command–query separation - Wikipedia](https://en.wikipedia.org/wiki/Command%E2%80%93query_separation) より引用
+
+とあり、すべてのメソッドはCommandかQueryのいずれかであるべきであり、両方を兼ねるべきではないと説明されている。
+
+これに対し、Martin Fowlerは以下のようにPopのような操作はCでありQでもあり、必ずしも上記の原則を厳密に守らなくてもいいのではないか、ということを述べている。
+
+> Meyer likes to use command-query separation absolutely, but there are exceptions. Popping a stack is a good example of a modifier that modifies state. Meyer correctly says that you can avoid having this method, but it is a useful idiom. So I prefer to follow this principle when I can, but I'm prepared to break it to get my pop. (Fowler)
+>
+> CQRS Documents by Greg Young P17より引用
+
+実際にWebサービスも開発していてもたとえばユーザー作成メソッドが作成したユーザーのIDを返すように処理は普通に書くし、自分もどちらかというと定義ほどは厳密に運用しなくても十分恩恵を受けられるのではないかという立場。
+
+
+<!-- TODO: cの説明を書く -->
+<!-- TODO: qの説明を書く -->
+<!-- TODO: ドメインイベントの説明を書く -->
+    スナップショット
+    説明されている通り、一定のコストがかかる方法なのでROIをベースに導入判断すべき。
 
 ## イベントソーシング
+詳しくは割愛するが、最後のチーム開発の分担方法が参考になったのでそこだけ紹介する。
 
 ## 感想
 Documents内でも触れられていたが、結局CQRSにしろイベントソーシングにしろ一定のオーバーヘッドはあるので、システムやビジネスの要件や今後の見通しを元に必要性を検討するのが重要。（それはそう）
 
 というのはありつつ、ドメイン層のメンテナビリティを高めるためにCQRSを採用するのは有効な選択肢の一つだとも感じているので、ひとまず個人のプロジェクトで検証してみたいと思う。
 
-[^1]: 厳密にこのドキュメントが原典であることを確認したわけではない。正確な情報をお持ちの方がいたら教えて下さい。なお、CQRSはBertrand Meyerが提唱した[『Command and Query Separation Principle』](https://en.wikipedia.org/wiki/Command%E2%80%93query_separation)にその起源を持つ、という記述がCQRS Documents内にあった。
+[^1]: 厳密にこのドキュメントが原典であることを確認したわけではない。正確な情報をお持ちの方がいたら教えて下さい。
