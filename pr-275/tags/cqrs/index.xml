@@ -35,7 +35,7 @@
 &lt;p&gt;それってCQRSってやつじゃね？と思ったのでまずは原典に近いドキュメントを読んでみたくなったので読むことにした。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;ここからはCQRS Documentsの内容をまとめていく。&lt;/p&gt;
 &lt;h2 id=&#34;非cqrsアーキテクチャシステムの課題&#34;&gt;非CQRSアーキテクチャシステムの課題&lt;/h2&gt;
-&lt;p&gt;&amp;ldquo;A Stereotypical Architecture&amp;quot;として、典型的なアーキテクチャが紹介されている。&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;A Stereotypical Architecture&amp;quot;として、典型的なアーキテクチャが紹介されている。本Documentsではこのアーキテクチャに対して段階的にCQRSを導入していく形で説明が進んでいく。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;a-stereotypical-architecture.webp&#34; alt=&#34;a-stereotypical-architecture.webp&#34;&gt;
 CQRS Documents by Greg Young P2より引用&lt;/p&gt;
 &lt;p&gt;このアーキテクチャではシステムはCRUDのみの機能を持ち、クライアントとは常にDTOを介して通信する。&lt;/p&gt;
