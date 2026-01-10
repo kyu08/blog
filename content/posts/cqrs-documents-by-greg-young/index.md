@@ -61,7 +61,7 @@ CQRSはBertrand Meyerが提唱した[『Command and Query Separation Principle�
 
 とあり、すべてのメソッドはCommandかQueryのいずれかであるべきであり、両方を兼ねるべきではないと説明されている。
 
-これに対し、Martin Fowlerは以下のようにPopのような操作はCでありQでもあり、必ずしも上記の原則を厳密に守らなくてもいいのではないか、ということを述べている。
+これに対し、Martin Fowlerは以下のようにPopのような操作はCommandでありQueryでもあり、必ずしも上記の原則を厳密に守らなくてもいいのではないか、ということを述べている。
 
 > Meyer likes to use command-query separation absolutely, but there are exceptions. Popping a stack is a good example of a modifier that modifies state. Meyer correctly says that you can avoid having this method, but it is a useful idiom. So I prefer to follow this principle when I can, but I'm prepared to break it to get my pop. (Fowler)
 >
@@ -70,8 +70,15 @@ CQRSはBertrand Meyerが提唱した[『Command and Query Separation Principle�
 実際にWebサービスも開発していてもたとえばユーザー作成メソッドが作成したユーザーのIDを返すように処理は普通に書くし、自分もどちらかというと定義ほどは厳密に運用しなくても十分恩恵を受けられるのではないかという立場。
 
 
-<!-- TODO: cの説明を書く -->
+## "A Stereotypical Architecture"にCQRSを導入する
+"A Stereotypical Architecture"として最初に紹介されたアーキテクチャでは、ドメインモデルがCommandとQueryの両方に使用されていた。
+
+### Query
 <!-- TODO: qの説明を書く -->
+P20から
+
+### Command
+<!-- TODO: cの説明を書く -->
 <!-- TODO: ドメインイベントの説明を書く -->
     スナップショット
     説明されている通り、一定のコストがかかる方法なのでROIをベースに導入判断すべき。
