@@ -214,7 +214,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/01/06</time>
       
-    <span class="post-reading-time">4 min read (1732 words)</span></div>
+    <span class="post-reading-time">5 min read (2195 words)</span></div>
 
   
     <span class="post-tags">
@@ -289,7 +289,26 @@ CQRS Documents by Greg Young P2より引用</p>
 <h3 id="ここまでの感想">ここまでの感想<a href="#ここまでの感想" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>さすがにこういったアーキテクチャのシステムは見たことがないので極端な例では&hellip;?とは思ったが時代や場所によってはこういった設計のシステムも一定あるのかもしれない。</p>
 <h2 id="cqrs">CQRS<a href="#cqrs" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>CQRSはBertrand Meyerが提唱した<a href="https://en.wikipedia.org/wiki/Command%E2%80%93query_separation" target="_blank" >『Command and Query Separation Principle』</a>にその起源を持つ。Wikipediaではこの原則を次のように説明している。</p>
+<blockquote>
+<p>It states that every method should either be a command that performs an action, or a query that returns data to the caller, but not both.</p>
+<p><a href="https://en.wikipedia.org/wiki/Command%E2%80%93query_separation" target="_blank" >Command–query separation - Wikipedia</a> より引用</p>
+</blockquote>
+<p>とあり、すべてのメソッドはCommandかQueryのいずれかであるべきであり、両方を兼ねるべきではないと説明されている。</p>
+<p>これに対し、Martin Fowlerは以下のようにPopのような操作はCでありQでもあり、必ずしも上記の原則を厳密に守らなくてもいいのではないか、ということを述べている。</p>
+<blockquote>
+<p>Meyer likes to use command-query separation absolutely, but there are exceptions. Popping a stack is a good example of a modifier that modifies state. Meyer correctly says that you can avoid having this method, but it is a useful idiom. So I prefer to follow this principle when I can, but I&rsquo;m prepared to break it to get my pop. (Fowler)</p>
+<p>CQRS Documents by Greg Young P17より引用</p>
+</blockquote>
+<p>実際にWebサービスも開発していてもたとえばユーザー作成メソッドが作成したユーザーのIDを返すように処理は普通に書くし、自分もどちらかというと定義ほどは厳密に運用しなくても十分恩恵を受けられるのではないかという立場。</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>スナップショット
+説明されている通り、一定のコストがかかる方法なのでROIをベースに導入判断すべき。
+</code></pre>
 <h2 id="イベントソーシング">イベントソーシング<a href="#イベントソーシング" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>詳しくは割愛するが、最後のチーム開発の分担方法が参考になったのでそこだけ紹介する。</p>
 <h2 id="感想">感想<a href="#感想" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>Documents内でも触れられていたが、結局CQRSにしろイベントソーシングにしろ一定のオーバーヘッドはあるので、システムやビジネスの要件や今後の見通しを元に必要性を検討するのが重要。（それはそう）</p>
 <p>というのはありつつ、ドメイン層のメンテナビリティを高めるためにCQRSを採用するのは有効な選択肢の一つだとも感じているので、ひとまず個人のプロジェクトで検証してみたいと思う。</p>
@@ -297,7 +316,7 @@ CQRS Documents by Greg Young P2より引用</p>
 <hr>
 <ol>
 <li id="fn:1">
-<p>厳密にこのドキュメントが原典であることを確認したわけではない。正確な情報をお持ちの方がいたら教えて下さい。なお、CQRSはBertrand Meyerが提唱した<a href="https://en.wikipedia.org/wiki/Command%E2%80%93query_separation" target="_blank" >『Command and Query Separation Principle』</a>にその起源を持つ、という記述がCQRS Documents内にあった。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>厳密にこのドキュメントが原典であることを確認したわけではない。正確な情報をお持ちの方がいたら教えて下さい。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
