@@ -384,3 +384,176 @@ blockquote::before {
     margin: 20px 0 0 !important;
   }
 }
+
+/* Table of Contents Styles */
+/* Desktop: Sticky TOC on the right side */
+@media (min-width: 1201px) {
+  .post-with-toc {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .table-of-contents {
+    position: sticky;
+    top: 20px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    padding: 20px;
+    background-color: rgba(99, 110, 123, 0.1);
+    border-radius: 8px;
+    border: 1px solid color-mix(in srgb, var(--foreground) 20%, transparent);
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .post-main-content {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .table-of-contents h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--color-gray);
+    padding-bottom: 8px;
+  }
+
+  .table-of-contents nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .table-of-contents nav ul li {
+    margin: 8px 0;
+  }
+
+  .table-of-contents nav ul li::before {
+    display: none;
+  }
+
+  .table-of-contents nav a {
+    display: block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    color: var(--foreground);
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .table-of-contents nav a:hover {
+    background-color: rgba(99, 110, 123, 0.3);
+    color: var(--accent);
+  }
+
+  .table-of-contents nav a.toc-active {
+    background-color: var(--accent);
+    color: var(--background);
+    font-weight: bold;
+  }
+
+  /* Hide mobile button on desktop */
+  .toc-mobile-button {
+    display: none;
+  }
+}
+
+/* Mobile: Floating button and overlay TOC */
+@media (max-width: 1200px) {
+  .table-of-contents {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background-color: var(--background);
+    border-left: 2px solid var(--accent);
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: right 0.3s ease;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .table-of-contents.toc-mobile-visible {
+    right: 0;
+  }
+
+  .table-of-contents h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--color-gray);
+    padding-bottom: 8px;
+  }
+
+  .table-of-contents nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .table-of-contents nav ul li {
+    margin: 8px 0;
+  }
+
+  .table-of-contents nav ul li::before {
+    display: none;
+  }
+
+  .table-of-contents nav a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    color: var(--foreground);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .table-of-contents nav a:hover {
+    background-color: rgba(99, 110, 123, 0.3);
+    color: var(--accent);
+  }
+
+  .table-of-contents nav a.toc-active {
+    background-color: var(--accent);
+    color: var(--background);
+    font-weight: bold;
+  }
+
+  /* Floating TOC button */
+  .toc-mobile-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    border: none;
+    color: var(--background);
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .toc-mobile-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  }
+
+  .toc-mobile-button svg {
+    width: 24px;
+    height: 24px;
+  }
+}
