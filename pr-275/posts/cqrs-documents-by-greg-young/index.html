@@ -214,7 +214,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/01/06</time>
       
-    <span class="post-reading-time">5 min read (2195 words)</span></div>
+    <span class="post-reading-time">5 min read (2316 words)</span></div>
 
   
     <span class="post-tags">
@@ -246,6 +246,12 @@ if (!doNotTrack) {
       </ul>
     </li>
     <li><a href="#cqrs">CQRS</a></li>
+    <li><a href="#a-stereotypical-architectureにcqrsを導入する">&ldquo;A Stereotypical Architecture&quot;にCQRSを導入する</a>
+      <ul>
+        <li><a href="#query">Query</a></li>
+        <li><a href="#command">Command</a></li>
+      </ul>
+    </li>
     <li><a href="#イベントソーシング">イベントソーシング</a></li>
     <li><a href="#感想">感想</a></li>
   </ul>
@@ -295,13 +301,18 @@ CQRS Documents by Greg Young P2より引用</p>
 <p><a href="https://en.wikipedia.org/wiki/Command%E2%80%93query_separation" target="_blank" >Command–query separation - Wikipedia</a> より引用</p>
 </blockquote>
 <p>とあり、すべてのメソッドはCommandかQueryのいずれかであるべきであり、両方を兼ねるべきではないと説明されている。</p>
-<p>これに対し、Martin Fowlerは以下のようにPopのような操作はCでありQでもあり、必ずしも上記の原則を厳密に守らなくてもいいのではないか、ということを述べている。</p>
+<p>これに対し、Martin Fowlerは以下のようにPopのような操作はCommandでありQueryでもあり、必ずしも上記の原則を厳密に守らなくてもいいのではないか、ということを述べている。</p>
 <blockquote>
 <p>Meyer likes to use command-query separation absolutely, but there are exceptions. Popping a stack is a good example of a modifier that modifies state. Meyer correctly says that you can avoid having this method, but it is a useful idiom. So I prefer to follow this principle when I can, but I&rsquo;m prepared to break it to get my pop. (Fowler)</p>
 <p>CQRS Documents by Greg Young P17より引用</p>
 </blockquote>
 <p>実際にWebサービスも開発していてもたとえばユーザー作成メソッドが作成したユーザーのIDを返すように処理は普通に書くし、自分もどちらかというと定義ほどは厳密に運用しなくても十分恩恵を受けられるのではないかという立場。</p>
+<h2 id="a-stereotypical-architectureにcqrsを導入する">&ldquo;A Stereotypical Architecture&quot;にCQRSを導入する<a href="#a-stereotypical-architectureにcqrsを導入する" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>&ldquo;A Stereotypical Architecture&quot;として最初に紹介されたアーキテクチャでは、ドメインモデルがCommandとQueryの両方に使用されていた。</p>
+<h3 id="query">Query<a href="#query" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <!-- raw HTML omitted -->
+<p>P20から</p>
+<h3 id="command">Command<a href="#command" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <pre><code>スナップショット
