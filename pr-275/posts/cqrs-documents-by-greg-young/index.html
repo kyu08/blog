@@ -214,7 +214,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/01/06</time>
       
-    <span class="post-reading-time">5 min read (2316 words)</span></div>
+    <span class="post-reading-time">6 min read (2884 words)</span></div>
 
   
     <span class="post-tags">
@@ -310,8 +310,22 @@ CQRS Documents by Greg Young P2より引用</p>
 <h2 id="a-stereotypical-architectureにcqrsを導入する">&ldquo;A Stereotypical Architecture&quot;にCQRSを導入する<a href="#a-stereotypical-architectureにcqrsを導入する" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>&ldquo;A Stereotypical Architecture&quot;として最初に紹介されたアーキテクチャでは、ドメインモデルがCommandとQueryの両方に使用されていた。</p>
 <h3 id="query">Query<a href="#query" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Query処理側にはデータ取得のためのメソッドのみが含まれる。</p>
+<p>元のアーキテクチャではドメインモデルを生成し、それをDTOにマッピングしたうえでクライアントに返却していた。多くの場合でドメインモデルとDTOは異なるモデルであるため、以下のような課題がある。</p>
+<ol>
+<li>複数集約から1つのDTOを生成する場合、複数回DBにアクセスする必要がありパフォーマンスが低下する。また、集約の境界が曖昧になる。</li>
+<li>ドメイン層にQueryの責務が多く含まれている（e.g. repositoryのinterfaceにQuery系のメソッドが多く含まれ、ページングやソート情報が含まれている）</li>
+</ol>
+<blockquote>
+<p>After CQRS has been applied there is a natural boundary. Separate paths have been made explicit. It makes a lot of sense now to not use the domain to project DTOs. Instead it is possible to introduce a new way of projecting DTOs.</p>
+<p>CQRS Documents by Greg Young P20より引用</p>
+</blockquote>
+<p>とあるように、CQRSを適用することでCommandとQueryの処理経路が明確に分離される。この段階ではドメインモデルをDTOを生成するために使用しない方が合理的である。</p>
+<p>その代わりに&quot;Thin Read Layer&quot;という方法でDTOを生成することができる。</p>
+<p><img src="thin-read-layer.webp" alt="thin-read-layer.webp">
+CQRS Documents by Greg Young P21より引用</p>
+<p>この層はDBから直接データを読み取り（ドメインモデルを迂回し）DTOを生成する。こうすることで、ドメイン層からQueryの責務を切り離すことができ、ドメイン層の純度を上げることができる。</p>
 <!-- raw HTML omitted -->
-<p>P20から</p>
 <h3 id="command">Command<a href="#command" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
