@@ -115,7 +115,33 @@ document.addEventListener('DOMContentLoaded', function() {
     tocLinks.forEach(link => link.classList.remove('toc-active'));
     
     if (activeHeading) {
-      const link = headingToLink.get(activeHeading.id);
+      let link = headingToLink.get(activeHeading.id);
+      
+      // If the active heading is not in TOC (h4, h5, h6), find the nearest parent heading in TOC
+      if (!link) {
+        // Get the heading level (2 for h2, 3 for h3, etc.)
+        const activeLevel = parseInt(activeHeading.tagName.substring(1));
+        
+        // Find all headings before the active one
+        const headingsArray = Array.from(headings);
+        const activeIndex = headingsArray.indexOf(activeHeading);
+        
+        // Search backwards for a parent heading (h2 or h3) that exists in TOC
+        for (let i = activeIndex - 1; i >= 0; i--) {
+          const candidateHeading = headingsArray[i];
+          const candidateLevel = parseInt(candidateHeading.tagName.substring(1));
+          
+          // Only consider headings with a lower level number (h2 < h3 < h4)
+          if (candidateLevel < activeLevel) {
+            const candidateLink = headingToLink.get(candidateHeading.id);
+            if (candidateLink) {
+              link = candidateLink;
+              break;
+            }
+          }
+        }
+      }
+      
       if (link) {
         link.classList.add('toc-active');
         
