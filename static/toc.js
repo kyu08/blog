@@ -118,6 +118,14 @@ document.addEventListener('DOMContentLoaded', function() {
       const link = headingToLink.get(activeHeading.id);
       if (link) {
         link.classList.add('toc-active');
+        
+        // Auto-scroll the TOC to keep the active item visible
+        // Use scrollIntoView with smooth behavior
+        link.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+          inline: 'nearest'
+        });
       }
     }
   }, observerOptions);
