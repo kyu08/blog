@@ -17,16 +17,29 @@ document.addEventListener('DOMContentLoaded', function() {
   `;
   document.body.appendChild(tocButton);
 
-  // On narrow screens, clicking the button scrolls to inline TOC
-  tocButton.addEventListener('click', function() {
-    const tocInline = document.querySelector('.table-of-contents-inline');
-    if (tocInline) {
-      tocInline.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+  // Create overlay backdrop
+  const overlay = document.createElement('div');
+  overlay.className = 'toc-overlay';
+  document.body.appendChild(overlay);
+
+  // Toggle TOC visibility on narrow screens
+  let tocOpen = false;
+  
+  function toggleTOC() {
+    tocOpen = !tocOpen;
+    if (tocOpen) {
+      tocSidebar.classList.add('toc-open');
+      overlay.classList.add('toc-open');
+      tocButton.setAttribute('aria-label', '目次を閉じる');
+    } else {
+      tocSidebar.classList.remove('toc-open');
+      overlay.classList.remove('toc-open');
+      tocButton.setAttribute('aria-label', '目次を表示');
     }
-  });
+  }
+
+  tocButton.addEventListener('click', toggleTOC);
+  overlay.addEventListener('click', toggleTOC);
 
   // Highlight active heading based on scroll position (for sidebar TOC only)
   const headings = document.querySelectorAll('.post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6');
