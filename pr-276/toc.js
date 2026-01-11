@@ -51,41 +51,51 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Track which headings are currently visible
-  const visibleHeadings = new Set();
-  let lastActiveHeading = null;
+  // Track scroll direction and last scroll position
+  let lastScrollY = window.scrollY;
+  let scrollDirection = 'down';
   
   // Use Intersection Observer to detect visible headings
   const observerOptions = {
-    rootMargin: '-20% 0px -60% 0px',
-    threshold: 0
+    rootMargin: '-10% 0px -66% 0px',
+    threshold: [0, 0.25, 0.5, 0.75, 1]
   };
 
   const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const id = entry.target.id;
-      
-      if (entry.isIntersecting) {
-        visibleHeadings.add(entry.target);
-      } else {
-        visibleHeadings.delete(entry.target);
-      }
-    });
+    // Update scroll direction
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > lastScrollY) {
+      scrollDirection = 'down';
+    } else if (currentScrollY < lastScrollY) {
+      scrollDirection = 'up';
+    }
+    lastScrollY = currentScrollY;
     
-    // Find the topmost visible heading
-    let topHeading = null;
-    let topPosition = Infinity;
-    
-    visibleHeadings.forEach(heading => {
+    // Find all currently intersecting headings
+    const intersectingHeadings = [];
+    headings.forEach(heading => {
       const rect = heading.getBoundingClientRect();
-      if (rect.top < topPosition) {
-        topPosition = rect.top;
-        topHeading = heading;
+      const viewportHeight = window.innerHeight;
+      
+      // Check if heading is in the upper portion of viewport
+      if (rect.top >= 0 && rect.top <= viewportHeight * 0.4) {
+        intersectingHeadings.push({
+          element: heading,
+          top: rect.top
+        });
       }
     });
     
-    // If no headings are visible, find the closest one above the viewport
-    if (!topHeading) {
+    let activeHeading = null;
+    
+    if (intersectingHeadings.length > 0) {
+      // Sort by position
+      intersectingHeadings.sort((a, b) => a.top - b.top);
+      
+      // Choose the first one (topmost)
+      activeHeading = intersectingHeadings[0].element;
+    } else {
+      // No headings in the detection zone, find the one closest above
       let closestHeading = null;
       let closestDistance = -Infinity;
       
@@ -98,15 +108,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
       
-      topHeading = closestHeading || headings[0];
+      activeHeading = closestHeading || headings[0];
     }
     
     // Update active link
     tocLinks.forEach(link => link.classList.remove('toc-active'));
     
-    if (topHeading) {
-      lastActiveHeading = topHeading;
-      const link = headingToLink.get(topHeading.id);
+    if (activeHeading) {
+      const link = headingToLink.get(activeHeading.id);
       if (link) {
         link.classList.add('toc-active');
       }
