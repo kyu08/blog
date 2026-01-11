@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Track which headings are currently visible
   const visibleHeadings = new Set();
+  let lastActiveHeading = null;
   
   // Use Intersection Observer to detect visible headings
   const observerOptions = {
@@ -83,10 +84,28 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     
+    // If no headings are visible, find the closest one above the viewport
+    if (!topHeading) {
+      let closestHeading = null;
+      let closestDistance = -Infinity;
+      
+      headings.forEach(heading => {
+        const rect = heading.getBoundingClientRect();
+        // Check if heading is above the viewport
+        if (rect.top < 0 && rect.top > closestDistance) {
+          closestDistance = rect.top;
+          closestHeading = heading;
+        }
+      });
+      
+      topHeading = closestHeading || headings[0];
+    }
+    
     // Update active link
     tocLinks.forEach(link => link.classList.remove('toc-active'));
     
     if (topHeading) {
+      lastActiveHeading = topHeading;
       const link = headingToLink.get(topHeading.id);
       if (link) {
         link.classList.add('toc-active');
