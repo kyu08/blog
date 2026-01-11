@@ -74,8 +74,27 @@ CQRSはBertrand Meyerが提唱した[『Command and Query Separation Principle�
 "A Stereotypical Architecture"として最初に紹介されたアーキテクチャでは、ドメインモデルがCommandとQueryの両方に使用されていた。
 
 ### Query
-<!-- TODO: qの説明を書く -->
-P20から
+Query処理側にはデータ取得のためのメソッドのみが含まれる。
+
+元のアーキテクチャではドメインモデルを生成し、それをDTOにマッピングしたうえでクライアントに返却していた。多くの場合でドメインモデルとDTOは異なるモデルであるため、以下のような課題がある。
+
+1. 複数集約から1つのDTOを生成する場合、複数回DBにアクセスする必要がありパフォーマンスが低下する。また、集約の境界が曖昧になる。
+1. ドメイン層にQueryの責務が多く含まれている（e.g. repositoryのinterfaceにQuery系のメソッドが多く含まれ、ページングやソート情報が含まれている）
+
+> After CQRS has been applied there is a natural boundary. Separate paths have been made explicit. It makes a lot of sense now to not use the domain to project DTOs. Instead it is possible to introduce a new way of projecting DTOs. 
+>
+> CQRS Documents by Greg Young P20より引用
+
+とあるように、CQRSを適用することでCommandとQueryの処理経路が明確に分離される。この段階ではドメインモデルをDTOを生成するために使用しない方が合理的である。
+
+その代わりに"Thin Read Layer"という方法でDTOを生成することができる。
+
+![thin-read-layer.webp](thin-read-layer.webp)
+CQRS Documents by Greg Young P21より引用
+
+この層はDBから直接データを読み取り（ドメインモデルを迂回し）DTOを生成する。こうすることで、ドメイン層からQueryの責務を切り離すことができ、ドメイン層の純度を上げることができる。
+
+<!-- TODO: view table生成などの責務を追っている例も見たことがある、的な追記をする？ -->
 
 ### Command
 <!-- TODO: cの説明を書く -->
