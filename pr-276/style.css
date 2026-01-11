@@ -440,6 +440,10 @@ blockquote::before {
     line-height: 1.4;
   }
 
+  .table-of-contents-sidebar nav a:hover {
+    background-color: rgba(255, 168, 106, 0.15);
+  }
+
   /* Add heading level indicators (##, ###, etc.) based on nesting */
   .table-of-contents-sidebar nav > ul > li > a::before {
     content: "## ";
@@ -578,6 +582,10 @@ blockquote::before {
     color: var(--foreground);
     font-size: 0.9rem;
     line-height: 1.4;
+  }
+
+  .table-of-contents-sidebar nav a:hover {
+    background-color: rgba(255, 168, 106, 0.15);
   }
 
   /* Add heading level indicators (##, ###, etc.) */
