@@ -384,3 +384,272 @@ blockquote::before {
     margin: 20px 0 0 !important;
   }
 }
+
+/* Table of Contents Styles */
+
+/* Sidebar TOC: Desktop only (sticky on the right) */
+/* Show sidebar TOC for screens 1400px and wider */
+@media (min-width: 1400px) {
+  .table-of-contents-sidebar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 280px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    padding: 20px;
+    background-color: rgba(99, 110, 123, 0.1);
+    border-radius: 8px;
+    border: 1px solid color-mix(in srgb, var(--foreground) 20%, transparent);
+  }
+
+  .table-of-contents-sidebar h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--color-gray);
+    padding-bottom: 8px;
+  }
+
+  .table-of-contents-sidebar nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  /* Nested lists for heading levels (h3, h4, etc.) */
+  .table-of-contents-sidebar nav ul ul {
+    padding-left: 16px;
+  }
+
+  .table-of-contents-sidebar nav ul li {
+    margin: 8px 0;
+  }
+
+  .table-of-contents-sidebar nav ul li::before {
+    display: none;
+  }
+
+  .table-of-contents-sidebar nav a {
+    display: block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    color: var(--foreground);
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .table-of-contents-sidebar nav a:hover {
+    background-color: rgba(255, 168, 106, 0.15);
+  }
+
+  /* Add heading level indicators (##, ###, etc.) based on nesting */
+  .table-of-contents-sidebar nav > ul > li > a::before {
+    content: "## ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents-sidebar nav > ul > li > ul > li > a::before {
+    content: "### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents-sidebar nav > ul > li > ul > li > ul > li > a::before {
+    content: "#### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents-sidebar nav > ul > li > ul > li > ul > li > ul > li > a::before {
+    content: "##### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents-sidebar nav > ul > li > ul > li > ul > li > ul > li > ul > li > a::before {
+    content: "###### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents-sidebar nav a.toc-active {
+    background-color: var(--accent);
+    color: var(--background);
+    font-weight: bold;
+  }
+
+  .table-of-contents-sidebar nav a.toc-active::before {
+    color: var(--background);
+  }
+
+  /* Hide mobile button on desktop with sidebar */
+  .toc-mobile-button {
+    display: none;
+  }
+}
+
+/* Mobile/Narrower Desktop: Floating button and overlay TOC */
+@media (max-width: 1399px) {
+  /* Show mobile button */
+  .toc-mobile-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    border: none;
+    color: var(--background);
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .toc-mobile-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  }
+
+  .toc-mobile-button svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Sidebar TOC becomes overlay on narrow screens */
+  .table-of-contents-sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 60px 20px 20px;
+    background-color: var(--background);
+    border-left: 1px solid color-mix(in srgb, var(--foreground) 20%, transparent);
+    z-index: 998;
+    transition: right 0.3s ease;
+  }
+
+  .table-of-contents-sidebar.toc-open {
+    right: 0;
+  }
+
+  .table-of-contents-sidebar h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--color-gray);
+    padding-bottom: 8px;
+  }
+
+  .table-of-contents-sidebar nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .table-of-contents-sidebar nav ul ul {
+    padding-left: 16px;
+  }
+
+  .table-of-contents-sidebar nav ul li {
+    margin: 8px 0;
+  }
+
+  .table-of-contents-sidebar nav ul li::before {
+    display: none;
+  }
+
+  .table-of-contents-sidebar nav a {
+    display: block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    color: var(--foreground);
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .table-of-contents-sidebar nav a:hover {
+    background-color: rgba(255, 168, 106, 0.15);
+  }
+
+  /* Add heading level indicators (##, ###, etc.) */
+  .table-of-contents-sidebar nav > ul > li > a::before {
+    content: "## ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents-sidebar nav > ul > li > ul > li > a::before {
+    content: "### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents-sidebar nav > ul > li > ul > li > ul > li > a::before {
+    content: "#### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents-sidebar nav > ul > li > ul > li > ul > li > ul > li > a::before {
+    content: "##### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents-sidebar nav > ul > li > ul > li > ul > li > ul > li > ul > li > a::before {
+    content: "###### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents-sidebar nav a.toc-active {
+    background-color: var(--accent);
+    color: var(--background);
+    font-weight: bold;
+  }
+
+  .table-of-contents-sidebar nav a.toc-active::before {
+    color: var(--background);
+  }
+
+  /* Overlay backdrop */
+  .toc-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 997;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .toc-overlay.toc-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

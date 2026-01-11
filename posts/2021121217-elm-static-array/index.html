@@ -231,11 +231,7 @@ if (!doNotTrack) {
 
 
   
-    <div class="table-of-contents">
-      <h2>
-        目次
-      </h2>
-      <nav id="TableOfContents">
+    <nav id="TableOfContents">
   <ul>
     <li><a href="#elm-static-array-とは">elm-static-array とは</a></li>
     <li><a href="#どんな場面で使ったか">どんな場面で使ったか</a></li>
@@ -254,7 +250,6 @@ if (!doNotTrack) {
     <li><a href="#まとめ">まとめ</a></li>
   </ul>
 </nav>
-    </div>
   
 
   <div class="post-content"><div>
@@ -443,6 +438,34 @@ if (!doNotTrack) {
         async>
 </script>
 
+  
+
+  
+    <div class="table-of-contents-sidebar">
+      <h2>
+        目次
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#elm-static-array-とは">elm-static-array とは</a></li>
+    <li><a href="#どんな場面で使ったか">どんな場面で使ったか</a></li>
+    <li><a href="#elm-static-array-を使うことで得られるメリット">elm-static-array を使うことで得られるメリット</a>
+      <ul>
+        <li><a href="#メリット仕様を型で表現しやすい">メリット①：仕様を型で表現しやすい</a></li>
+        <li><a href="#メリット配列の要素を取得する際に-maybe-をハンドリングする必要がない">メリット②：配列の要素を取得する際に <code>Maybe</code> をハンドリングする必要がない</a></li>
+      </ul>
+    </li>
+    <li><a href="#懸念点">懸念点</a>
+      <ul>
+        <li><a href="#懸念array-に定義されているすべての関数が定義されているわけではない">懸念①：Array に定義されているすべての関数が定義されているわけではない</a></li>
+        <li><a href="#懸念staticarray-の書き方に慣れるまでは時間がかかる">懸念②：StaticArray の書き方に慣れるまでは時間がかかる</a></li>
+      </ul>
+    </li>
+    <li><a href="#まとめ">まとめ</a></li>
+  </ul>
+</nav>
+    </div>
+    <script src="https://blog.kyu08.com/toc.js"></script>
   
 </article>
 

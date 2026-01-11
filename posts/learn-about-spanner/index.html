@@ -233,11 +233,7 @@ if (!doNotTrack) {
 
 
   
-    <div class="table-of-contents">
-      <h2>
-        目次
-      </h2>
-      <nav id="TableOfContents">
+    <nav id="TableOfContents">
   <ul>
     <li><a href="#spanner-のスキーマ設計の最適化--google-cloud">Spanner のスキーマ設計の最適化  |  Google Cloud</a>
       <ul>
@@ -287,7 +283,6 @@ if (!doNotTrack) {
     <li><a href="#まとめ">まとめ</a></li>
   </ul>
 </nav>
-    </div>
   
 
   <div class="post-content"><div>
@@ -804,6 +799,65 @@ if (!doNotTrack) {
         async>
 </script>
 
+  
+
+  
+    <div class="table-of-contents-sidebar">
+      <h2>
+        目次
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#spanner-のスキーマ設計の最適化--google-cloud">Spanner のスキーマ設計の最適化  |  Google Cloud</a>
+      <ul>
+        <li><a href="#テーブルレイアウト">テーブルレイアウト</a></li>
+        <li><a href="#インターリーブ">インターリーブ</a></li>
+        <li><a href="#局所性のトレードオフ">局所性のトレードオフ</a></li>
+        <li><a href="#局所性の勘所">局所性の勘所</a></li>
+        <li><a href="#インデックスのオプション">インデックスのオプション</a></li>
+        <li><a href="#storing">STORING</a></li>
+        <li><a href="#アンチパターン">アンチパターン</a></li>
+      </ul>
+    </li>
+    <li><a href="#スキーマ設計のベスト-プラクティス--spanner--google-cloud">スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud</a>
+      <ul>
+        <li><a href="#値が単調に増加または減少する列へのインターリーブされたインデックスの使用">値が単調に増加または減少する列へのインターリーブされたインデックスの使用</a></li>
+      </ul>
+    </li>
+    <li><a href="#セカンダリ-インデックス--spanner--google-cloud">セカンダリ インデックス  |  Spanner  |  Google Cloud</a>
+      <ul>
+        <li><a href="#null値の並び替え順">NULL値の並び替え順</a></li>
+        <li><a href="#末尾のレコードの取得">末尾のレコードの取得</a></li>
+      </ul>
+    </li>
+    <li><a href="#sharding-of-timestamp-ordered-data-in-cloud-spanner---googblogscom">Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com</a>
+      <ul>
+        <li><a href="#レコードの挿入時">レコードの挿入時</a></li>
+        <li><a href="#レコードの読み取り時">レコードの読み取り時</a></li>
+        <li><a href="#余談">余談</a></li>
+      </ul>
+    </li>
+    <li><a href="#cloud-spanner-におけるトランザクションのロックについて">Cloud Spanner におけるトランザクションのロックについて</a></li>
+    <li><a href="#spanner-の読み取りと書き込みのライフサイクル--google-cloud">Spanner の読み取りと書き込みのライフサイクル  |  Google Cloud</a>
+      <ul>
+        <li><a href="#読み取り専用トランザクション">読み取り専用トランザクション</a></li>
+        <li><a href="#読み取り--書き込みトランザクション">読み取り / 書き込みトランザクション</a></li>
+      </ul>
+    </li>
+    <li><a href="#sql-のベスト-プラクティス--spanner--google-cloud">SQL のベスト プラクティス  |  Spanner  |  Google Cloud</a>
+      <ul>
+        <li><a href="#クエリパラメータの使用">クエリパラメータの使用</a></li>
+        <li><a href="#範囲キーのルックアップを最適化する">範囲キーのルックアップを最適化する</a></li>
+        <li><a href="#結合を最適化する">結合を最適化する</a></li>
+        <li><a href="#likeの代わりにstarts_withを使用する"><code>LIKE</code>の代わりに<code>STARTS_WITH</code>を使用する</a></li>
+      </ul>
+    </li>
+    <li><a href="#クエリ実行プラン--spanner--google-cloud">クエリ実行プラン  |  Spanner  |  Google Cloud</a></li>
+    <li><a href="#まとめ">まとめ</a></li>
+  </ul>
+</nav>
+    </div>
+    <script src="https://blog.kyu08.com/toc.js"></script>
   
 </article>
 
