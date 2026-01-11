@@ -120,10 +120,10 @@ document.addEventListener('DOMContentLoaded', function() {
         link.classList.add('toc-active');
         
         // Auto-scroll the TOC to keep the active item visible
-        // Use scrollIntoView with smooth behavior
+        // Use scrollIntoView with smooth behavior and center positioning for better visibility
         link.scrollIntoView({
           behavior: 'smooth',
-          block: 'nearest',
+          block: 'center',
           inline: 'nearest'
         });
       }
