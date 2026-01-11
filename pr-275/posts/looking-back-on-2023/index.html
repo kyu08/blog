@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+    <title>2023年を振り返る :: blog.kyu08.com</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="趣味 OSS貢献 今年は初めてOSS貢献1をできた年でもあった。2023年に行った貢献を種類ごとにリポジトリごとでまとめたものが以下。2 ドキュメ" />
+<meta name="keywords" content="振り返り, neovim, OSS, fzf-make" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://blog.kyu08.com/pr-275/posts/looking-back-on-2023/" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BDQ408J45J', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-275/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-275/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-275/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-275/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-275/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-275/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-275/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-275/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-275/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-275/css/post.min.f049fef13af1dfd5ea526cc59ea5a3fc7be11a05911ca7198c5bb9225250119c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-275/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-275/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-275/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-275/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+<link rel="stylesheet" href="https://blog.kyu08.com/pr-275/style.css">
+
+
+<link rel="shortcut icon" href="https://blog.kyu08.com/pr-275/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/pr-275/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="kyu08_" />
+
+
+
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="2023年を振り返る">
+<meta property="og:description" content="趣味 OSS貢献 今年は初めてOSS貢献1をできた年でもあった。2023年に行った貢献を種類ごとにリポジトリごとでまとめたものが以下。2 ドキュメ" />
+<meta property="og:url" content="https://blog.kyu08.com/pr-275/posts/looking-back-on-2023/" />
+<meta property="og:site_name" content="blog.kyu08.com" />
+
+
+  
+  
+    
+  
+
+
+  <meta property="og:image" content="https://blog.kyu08.com/pr-275/posts/looking-back-on-2023/cover.png">
+  <meta name="twitter:image" content="https://blog.kyu08.com/pr-275/posts/looking-back-on-2023/cover.png">
+  <meta name="twitter:image:alt" content="2023年を振り返る">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+  <meta property="article:published_time" content="2023-12-29 15:03:17 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+<link rel="author" href="http://www.hatena.ne.jp/kyu08/" />
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ . }}');
+</script>
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    blog.kyu08.com
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/pr-275/tags/diary/">_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-275/about">about</a></li>
+        
+      
+        
+          <li><a href="/pr-275/index.xml">rss</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/pr-275/tags/diary/" >_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-275/about" >about</a></li>
+        
+      
+        
+          <li><a href="/pr-275/index.xml" >rss</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://blog.kyu08.com/pr-275/posts/looking-back-on-2023/">2023年を振り返る</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2023/12/29</time>
+      
+    <span class="post-reading-time">8 min read (3899 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://blog.kyu08.com/pr-275/tags/%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A/">振り返り</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-275/tags/neovim/">neovim</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-275/tags/oss/">OSS</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-275/tags/fzf-make/">fzf-make</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="/pr-275/posts/looking-back-on-2023/cover.png"
+    class="post-cover"
+    alt="2023年を振り返る"
+    title="Cover Image" />
+
+
+  
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#趣味">趣味</a>
+      <ul>
+        <li><a href="#oss貢献">OSS貢献</a></li>
+        <li><a href="#rustを書き始めた">Rustを書き始めた</a></li>
+        <li><a href="#fzf-makeを公開した">fzf-makeを公開した</a></li>
+        <li><a href="#neovimへの寄付">Neovimへの寄付</a></li>
+        <li><a href="#ブログ">ブログ</a></li>
+        <li><a href="#fzf-bookmark-openerを公開した">fzf-bookmark-openerを公開した</a></li>
+        <li><a href="#買ってよかったもの">買ってよかったもの</a></li>
+      </ul>
+    </li>
+    <li><a href="#仕事">仕事</a>
+      <ul>
+        <li><a href="#やったこと">やったこと</a></li>
+        <li><a href="#学びなど">学びなど</a></li>
+      </ul>
+    </li>
+    <li><a href="#2024年の抱負">2024年の抱負</a></li>
+    <li><a href="#まとめ">まとめ</a></li>
+  </ul>
+</nav>
+  
+
+  <div class="post-content"><div>
+        <h2 id="趣味">趣味<a href="#趣味" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="oss貢献">OSS貢献<a href="#oss貢献" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>今年は初めてOSS貢献<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>をできた年でもあった。2023年に行った貢献を種類ごとにリポジトリごとでまとめたものが以下。<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<h4 id="ドキュメント関連">ドキュメント関連<a href="#ドキュメント関連" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li>ratatui-org/website
+<ul>
+<li><a href="https://github.com/ratatui-org/website/pull/272" target="_blank" >chore(docs): fix broken link to showcase/apps</a></li>
+<li><a href="https://github.com/ratatui-org/website/pull/271" target="_blank" >chore(docs): fix typo in showcase/third-party-widgets</a></li>
+<li><a href="https://github.com/ratatui-org/website/pull/203" target="_blank" >docs: Add fzf-make to showcase</a></li>
+<li><a href="https://github.com/ratatui-org/website/pull/169" target="_blank" >docs: fix a broken link 🐛</a></li>
+<li><a href="https://github.com/ratatui-org/website/pull/136" target="_blank" >docs: Add demo gif to tutorial/json-editor 📚</a></li>
+</ul>
+</li>
+<li>a-kenji/tui-term
+<ul>
+<li><a href="https://github.com/a-kenji/tui-term/pull/109" target="_blank" >chore(doc): fix typo</a></li>
+<li><a href="https://github.com/a-kenji/tui-term/pull/108" target="_blank" >chore(doc): fix typo</a></li>
+</ul>
+</li>
+<li>orhun/PKGBUILDs
+<ul>
+<li><a href="https://github.com/orhun/PKGBUILDs/pull/10" target="_blank" >Update fzf-make description</a></li>
+</ul>
+</li>
+<li>neovim/neovim
+<ul>
+<li><a href="https://github.com/neovim/neovim/pull/25138" target="_blank" >docs: replace screen.c for undo.c in src/nvim/README.md</a></li>
+</ul>
+</li>
+<li>Homebrew/brew.sh
+<ul>
+<li><a href="https://github.com/Homebrew/brew.sh/pull/971" target="_blank" >Update Japanese translation</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="cicd関連">CI/CD関連<a href="#cicd関連" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li>hashicorp/terraform
+<ul>
+<li><a href="https://github.com/hashicorp/terraform/pull/34357" target="_blank" >chore(GitHub Actions): fix inputs of Lock Threads, and bump version</a></li>
+</ul>
+</li>
+<li>jesseduffield/lazygit
+<ul>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/2952" target="_blank" >fix Generate Sponsors README</a></li>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/2950" target="_blank" >fix GitHub Actions warnings</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="その他">その他<a href="#その他" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li>rust-lang/rust-playground
+<ul>
+<li><a href="https://github.com/rust-lang/rust-playground/pull/992" target="_blank" >Update outdated links</a></li>
+</ul>
+</li>
+<li>biomejs/biome
+<ul>
+<li><a href="https://github.com/biomejs/biome/pull/224" target="_blank" >chore: rename rome_js_transform and rome_js_parser to biome_*</a></li>
+<li><a href="https://github.com/biomejs/biome/pull/205" target="_blank" >chore: rename rome_js_unicode_table to biome_js_unicode_table biomejs#88</a></li>
+<li><a href="https://github.com/biomejs/biome/pull/170" target="_blank" >chore: rename rome_flags to biome_flags, rome_aria_metadata tobiome_aria_metadata and rome_aria tobiome_aria biomejs#88</a></li>
+</ul>
+</li>
+<li>jesseduffield/lazygit
+<ul>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/2937" target="_blank" >Add Makefile</a></li>
+</ul>
+</li>
+<li>mislav/bump-homebrew-formula-action
+<ul>
+<li><a href="https://github.com/mislav/bump-homebrew-formula-action/pull/57" target="_blank" >(docs): use environment files instead of set-output</a></li>
+</ul>
+</li>
+</ul>
+<p>2023年8月以降で20個のPRをマージしてもらうことができた！ほとんどが簡単なPRだったとはいえ感謝してもらえることも多かったので単純に嬉しかった。</p>
+<p>一定数OSSに貢献できたのは嬉しいが、ドキュメントやCIの修正など比較的ハードルが低めの貢献が多かったのも事実。</p>
+<p>流石にOSSにPRを出すことには慣れてきたので2024年は上記のような貢献もしつつ何らかのOSSのアプリケーションコードへの貢献もしていきたい。</p>
+<p>OSSメンテナ観点では、どのプロジェクトのメンテナも非常に紳士的で優しく接してくれる方が多かったので自分も見習っていきたい。特にRustコミュニティは初心者を歓迎する雰囲気があり、PRを送った際の体験がとてもよかったので真似したい。</p>
+<h3 id="rustを書き始めた">Rustを書き始めた<a href="#rustを書き始めた" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>2023年2月<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>ごろからRustを書き始めた。きっかけはkenkooooさんのこのスライドを読んで「Elmに似てて開発者体験がよさそう」と感じたので触ってみることにした。</p>
+<p><a href="https://speakerdeck.com/estie/man-wochi-siteshi-merurust" target="_blank" >満を持して始める Rust</a></p>
+<p>入門に際して以下のようなことをやった。</p>
+<ol>
+<li><a href="https://tourofrust.com/00_ja.html" target="_blank" >Tour of Rust</a>を読んでなんとなく雰囲気をつかむ</li>
+<li><a href="https://doc.rust-jp.rs/book-ja/" target="_blank" >The Rust Programming Language</a>を手を動かしつつ(わからないところはいったん飛ばしつつ)一通り読む</li>
+<li>RustでCLIアプリを作る</li>
+</ol>
+<p><code>3.</code> で作ったアプリをOSSとして公開した。</p>
+<p><a href="https://github.com/kyu08/fzf-make" target="_blank" >kyu08/fzf-make</a><sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>
+<h3 id="fzf-makeを公開した">fzf-makeを公開した<a href="#fzf-makeを公開した" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>こんな感じでMakefileに定義したtargetを曖昧検索で絞り込んで実行できるツールを作った。プレビューウィンドウがあるのが地味に便利なポイントでtargetの内容を確認しつつ実行できる。</p>
+<p><img src="fzf-make-demo.gif" alt="fzf-make-demo.gif"></p>
+<p>Rustの理解を深めるのと自分の普段の作業を効率化したくて作ったがその両方が割と達成できているので満足している。特に所有権やスマートポインタに関しては<a href="https://doc.rust-jp.rs/book-ja/" target="_blank" >The Rust Programming Language</a>を読んだときにはイマイチ理解できなかったが実際に自分でコードを書いてコンパイラに指摘されてコードを修正することで理解を深めることができた。<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup></p>
+<p>最初は身近な人に紹介して使ってもらったりしていたが、ある日面識のない日本人の開発者の方がバグ報告issue<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>を立ててくれて、インターネットの向こう側の人に自分のアイディアが届いて気に入ってもらえて、しかもわざわざバグ報告をしてくれたという事実がとても嬉しかった。</p>
+<p>当然個人の趣味開発なので副業などとは違い時給を得て開発しているわけではないが、ものづくりを通して他者に喜んでもらうということが自分にとって最高の喜びだとわかっただけでも非常に良い経験だった。自分がOSSコミュニティに貢献したいと考えているのも究極は「人に喜んで欲しいから」なのかもしれない。</p>
+<p>その後も何人かの人がstarしてくれたりTwitter(現X)で言及してくれたり<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>、issueを立ててくれたり、時にはPRを送ってくれたりして自分が書いたツールを通して海外のエンジニアとも交流できたのは自分にとって非常に刺激的だった。</p>
+<p>これから開発したい機能や修正したいバグはまだまだあるので来年以降も引き続き開発を続けていきたい。Homebrewをはじめ、いくつかのパッケージマネージャでインストールできるのでぜひ使ってみてください。あとスターくれると大変嬉しいです！よろしくお願いします！</p>
+<p><a href="https://github.com/kyu08/fzf-make" target="_blank" >kyu08/fzf-make</a></p>
+<h3 id="neovimへの寄付">Neovimへの寄付<a href="#neovimへの寄付" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>筆者はNeovimには仕事・趣味のプロジェクトなど自分が行うすべての開発に収まらずちょっとしたタスク管理やブログ執筆などあらゆる場面でとにかくお世話になっている。</p>
+<p>Neovim自体はOSSなので無償で利用できるわけだが、あるときNeovimコミュニティの成果にフリーライドに近い状態<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup>になっている自分に気付いてからNeovimをはじめとしたOSSへの自分の関わり方に対し違和感を感じるようになったのでまずは経済的な支援でNeovimに貢献してみようと思い、GitHub Sponsorsを通じてNeovimに対して5$/Monthの寄付を開始した。<sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup><sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup></p>
+<p>冗談抜きにNeovimのメンテナあっての自分の開発生活なのでこれは来年も続けたい。(本当のところはもっと稼いでもっと寄付したい)</p>
+<h3 id="ブログ">ブログ<a href="#ブログ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>2023年は20個の記事を書いた。たまに「あの記事読んだよ！」的な反応をもらうことがあって嬉しかった。Twitterで話しかけたり感想を伝えてくれたりするのは嬉しいのでお待ちしています。</p>
+<p>以下のような目的でやっているいて、後者はともかく前者は効果を実感できているので来年も適度に続けていきたい。</p>
+<ul>
+<li>アウトプットを通して自分の理解と記憶への定着を深める</li>
+<li>知見を共有して見た人の役に立つ</li>
+</ul>
+<h3 id="fzf-bookmark-openerを公開した">fzf-bookmark-openerを公開した<a href="#fzf-bookmark-openerを公開した" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>ブックマークをfzfで絞り込んで開くことができるCLIツール。自分が欲しかったので作った。</p>
+<p><a href="https://github.com/kyu08/fzf-bookmark-opener" target="_blank" >kyu08/fzf-bookmark-opener</a><sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">11</a></sup></p>
+<p><img src="fzf-bookmark-opener-demo.gif" alt="fzf-bookmark-opener-demo.gif"></p>
+<p>同時期に書いた<a href="https://github.com/kyu08/gcp-url-generator" target="_blank" >kyu08/gcp-url-generator</a>と組み合わせて業務でよく使っている。特定のGCPプロジェクトの特定のGCPサービスのコンソールをターミナルから開きたいことが多いので重宝している。</p>
+<p><a href="https://github.com/ktr0731/go-fuzzyfinder" target="_blank" >ktr0731/go-fuzzyfinder</a>のおかげで100行程度のコードでやりたいことが実現できて大変助かった。</p>
+<h3 id="買ってよかったもの">買ってよかったもの<a href="#買ってよかったもの" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>Nuphy Air60 v2</li>
+<li>klack</li>
+<li>コアラマットレスのマットレス</li>
+<li>オーダーメイド枕</li>
+<li>Salomon XT-6</li>
+<li><a href="https://md-holdings.com/product/list5/4977856205339.html" target="_blank" >なすの天ぷら</a></li>
+</ul>
+<p>大晦日に元気があったら記事として書きます。</p>
+<h2 id="仕事">仕事<a href="#仕事" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="やったこと">やったこと<a href="#やったこと" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>SaaSプロダクトのバックエンドエンジニアとして主に負債解消プロジェクトに取り組んでいた。</p>
+<ul>
+<li>Scalaで書かれたアプリケーションのGoへの移行</li>
+<li>DatastoreからCloud Spannerへの移行</li>
+<li>E2Eテストの整備</li>
+</ul>
+<p>などを行った。マイクロサービス何もわからないのでオライリーのマイクロサービス本あたりを読んで勉強したい。</p>
+<h3 id="学びなど">学びなど<a href="#学びなど" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>12月ごろからこれまでよりは大きめのプロジェクトを任せてもらっている。これまで担当したプロジェクトよりは自分で考える幅が広いのもありかなり楽しく働けている。引き続きより大きな信頼を勝ち取って自分の仕事の幅を広げていけるように頑張っていきたい。</li>
+<li>ローカルでテストできる環境が整っていると開発速度が爆上がりすることを実感した。多少整備に時間がかかったとしてペイすることが多いと思うので他のプロジェクトでもうまいこと時間を確保して整備していけるとよさそう。</li>
+<li>DBに関連する色々を雰囲気でやってしまっていると自覚があるので年末年始はRDBの基礎的な原理<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">12</a></sup>や業務でメインで使っているDBであるCloud Spanner<sup id="fnref:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">13</a></sup>の理解を深めていきたい。</li>
+</ul>
+<h2 id="2024年の抱負">2024年の抱負<a href="#2024年の抱負" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>引き続き仕事をモリモリがんばる。</li>
+<li>OSS貢献を続ける。何らかのOSSのアプリケーションコードにも貢献する。</li>
+</ul>
+<h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>最後まで読んでくれてありがとうございました！良いお年を〜</p>
+<p>2024年もがんばるぞー</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>初めてOSS貢献したときの記事はこちら。 <a href="../my-first-oss-contribution" >OSSに初めてPRを送ってマージされた話</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>(主に来年の自分向け)このスクリプトを使ってデータを集めた。<a href="https://gist.github.com/kyu08/138f8d15c2badc8243ca2e126545ca36" target="_blank" >GitHubで自分がOSSに送ってマージされたPRを集計するやつ.md</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://github.com/kyu08/tour-of-rust" target="_blank" >tour-of-rustのメモリポジトリ</a>が2023/2頃にできていたのできっとこの頃から書き始めたはず。そういえばkeenさんのこのメモリの記事がすごくわかりやすかった。<a href="https://keens.github.io/blog/2017/04/30/memoritosutakkutohi_puto/" target="_blank" >メモリとスタックとヒープとプログラミング言語</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>モチベーションになるのでスターください！拡散もしてくれると泣いて喜びます！&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>そういえば<a href="https://github.com/rust-lang/rustlings" target="_blank" >rust-lang/rustlings</a>というコンパイルエラーを修正していくことでRustの理解を深めるというコンセプトのリポジトリがあるので作りたいものはないがRustの理解を深めたい人にはおすすめかもしれない。（筆者はREADMEを読んだだけで触ったことはない）&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6">
+<p><div class="blogcard" data-url="https://github.com/kyu08/fzf-make/issues/21" data-auto-fetch="true">
+  <a href="https://github.com/kyu08/fzf-make/issues/21" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/kyu08/fzf-make/issues/21</div><div class="blogcard-url">https://github.com/kyu08/fzf-make/issues/21</div>
+    </div>
+  </a>
+</div>
+&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7">
+<p><div class="blogcard" data-url="https://twitter.com/orhunp_/status/1692511841270841502" data-auto-fetch="true">
+  <a href="https://twitter.com/orhunp_/status/1692511841270841502" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://twitter.com/orhunp_/status/1692511841270841502</div><div class="blogcard-url">https://twitter.com/orhunp_/status/1692511841270841502</div>
+    </div>
+  </a>
+</div>
+&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8">
+<p><a href="https://twitter.com/songmu/status/897317241909157888" target="_blank" >songmuさんも言っている</a>ようにOSSを使っていることを公言することもOSSプロジェクトにとってはプラスになるとは思うが、それぐらいでは済まないくらいNeovimに自分の開発人生を豊かにしてもらっている自覚がある。&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:9">
+<p>初めてNeovimに寄付をしたときの話はこちら。<a href="../sponsored-neovim" >GitHub Sponsorsを通してNeovimに寄付をした</a>&#160;<a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:10">
+<p>ちなみにNeovimへの寄付の使途はopen collective上で公開されている。 <div class="blogcard" data-url="https://opencollective.com/neovim" data-auto-fetch="true">
+  <a href="https://opencollective.com/neovim" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://opencollective.com/neovim</div><div class="blogcard-url">https://opencollective.com/neovim</div>
+    </div>
+  </a>
+</div>
+&#160;<a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:11">
+<p>紹介記事はこちら<a href="../fzf-bookmark-opener" >yamlに定義したbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った</a>&#160;<a href="#fnref:11" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:12">
+<p><a href="https://use-the-index-luke.com/ja" target="_blank" >SQLのインデックスとそのチューニングについてのオンラインブック</a>や <a href="https://zenn.dev/suzuki_hoge/books/2022-12-database-index-9520da88d02c4f" target="_blank" >図解 DB インデックス</a>あたりを読んでみようと思っている。&#160;<a href="#fnref:12" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:13">
+<p>地道に<a href="https://cloud.google.com/spanner/docs/create-query-database-console?hl=ja" target="_blank" >公式ドキュメント</a>を読んでいくつもり&#160;<a href="#fnref:13" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+      </div></div>
+
+  
+  
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="https://blog.kyu08.com/pr-275/posts/better-programmer/" class="button inline prev">
+        『ベタープログラマ』 を読んだ
+      </a>
+    
+    
+      <a href="https://blog.kyu08.com/pr-275/posts/how-world-class-engineers-think/" class="button inline next">
+        『世界一流エンジニアの思考法』 を読んだ
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+        repo="kyu08/blog-comments"
+        issue-term="pathname"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  
+
+  
+    <div class="table-of-contents-sidebar">
+      <h2>
+        目次
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#趣味">趣味</a>
+      <ul>
+        <li><a href="#oss貢献">OSS貢献</a></li>
+        <li><a href="#rustを書き始めた">Rustを書き始めた</a></li>
+        <li><a href="#fzf-makeを公開した">fzf-makeを公開した</a></li>
+        <li><a href="#neovimへの寄付">Neovimへの寄付</a></li>
+        <li><a href="#ブログ">ブログ</a></li>
+        <li><a href="#fzf-bookmark-openerを公開した">fzf-bookmark-openerを公開した</a></li>
+        <li><a href="#買ってよかったもの">買ってよかったもの</a></li>
+      </ul>
+    </li>
+    <li><a href="#仕事">仕事</a>
+      <ul>
+        <li><a href="#やったこと">やったこと</a></li>
+        <li><a href="#学びなど">学びなど</a></li>
+      </ul>
+    </li>
+    <li><a href="#2024年の抱負">2024年の抱負</a></li>
+    <li><a href="#まとめ">まとめ</a></li>
+  </ul>
+</nav>
+    </div>
+    <script src="https://blog.kyu08.com/pr-275/toc.js"></script>
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>blog.kyu08.com</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/pr-275/bundle.min.js"></script>
+
+
+<font color="#808080">
+  <span>
+    This site uses Google Analytics for access analysis.
+    Google Analytics uses cookies to collect traffic data, but this traffic data is collected anonymously and does not personally identify you.
+    Cookies can be disabled in your browser.
+  </span>
+</font>
+
+
+<script src="https://blog.kyu08.com/pr-275/blogcard.js"></script>
+
+
+  
+</div>
+
+</body>
+</html>
