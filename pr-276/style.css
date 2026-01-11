@@ -386,9 +386,60 @@ blockquote::before {
 }
 
 /* Table of Contents Styles */
-/* Desktop: Sticky TOC on the right side outside the content area */
-@media (min-width: 1201px) {
-  .table-of-contents {
+
+/* Inline TOC: Always visible at the beginning of the post content */
+.table-of-contents-inline {
+  margin: 20px 0 30px;
+  padding: 20px;
+  background-color: rgba(99, 110, 123, 0.1);
+  border-radius: 8px;
+  border: 1px solid color-mix(in srgb, var(--foreground) 20%, transparent);
+}
+
+.table-of-contents-inline h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  border-bottom: 2px solid var(--color-gray);
+  padding-bottom: 8px;
+}
+
+.table-of-contents-inline nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.table-of-contents-inline nav ul ul {
+  padding-left: 16px;
+}
+
+.table-of-contents-inline nav ul li {
+  margin: 8px 0;
+}
+
+.table-of-contents-inline nav ul li::before {
+  display: none;
+}
+
+.table-of-contents-inline nav a {
+  display: block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  color: var(--foreground);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.table-of-contents-inline nav a:hover {
+  background-color: rgba(99, 110, 123, 0.2);
+}
+
+/* Sidebar TOC: Desktop only (sticky on the right) */
+/* Show sidebar TOC for screens 1400px and wider */
+@media (min-width: 1400px) {
+  .table-of-contents-sidebar {
     position: fixed;
     top: 20px;
     right: 20px;
@@ -401,14 +452,7 @@ blockquote::before {
     border: 1px solid color-mix(in srgb, var(--foreground) 20%, transparent);
   }
 
-  /* Ensure TOC doesn't appear on smaller screens even if window is resized */
-  @media (max-width: 1580px) {
-    .table-of-contents {
-      display: none;
-    }
-  }
-
-  .table-of-contents h2 {
+  .table-of-contents-sidebar h2 {
     margin-top: 0;
     margin-bottom: 15px;
     font-size: 1.1rem;
@@ -416,26 +460,26 @@ blockquote::before {
     padding-bottom: 8px;
   }
 
-  .table-of-contents nav ul {
+  .table-of-contents-sidebar nav ul {
     list-style: none;
     padding-left: 0;
     margin: 0;
   }
 
   /* Nested lists for heading levels (h3, h4, etc.) */
-  .table-of-contents nav ul ul {
+  .table-of-contents-sidebar nav ul ul {
     padding-left: 16px;
   }
 
-  .table-of-contents nav ul li {
+  .table-of-contents-sidebar nav ul li {
     margin: 8px 0;
   }
 
-  .table-of-contents nav ul li::before {
+  .table-of-contents-sidebar nav ul li::before {
     display: none;
   }
 
-  .table-of-contents nav a {
+  .table-of-contents-sidebar nav a {
     display: block;
     padding: 4px 8px;
     border-radius: 4px;
@@ -446,163 +490,65 @@ blockquote::before {
   }
 
   /* Add heading level indicators (##, ###, etc.) based on nesting */
-  .table-of-contents nav > ul > li > a::before {
+  .table-of-contents-sidebar nav > ul > li > a::before {
     content: "## ";
     letter-spacing: -0.1em;
     color: var(--color-gray);
     margin-right: 6px;
   }
 
-  .table-of-contents nav > ul > li > ul > li > a::before {
+  .table-of-contents-sidebar nav > ul > li > ul > li > a::before {
     content: "### ";
     letter-spacing: -0.1em;
     color: var(--color-gray);
     margin-right: 6px;
   }
 
-  .table-of-contents nav > ul > li > ul > li > ul > li > a::before {
+  .table-of-contents-sidebar nav > ul > li > ul > li > ul > li > a::before {
     content: "#### ";
     letter-spacing: -0.1em;
     color: var(--color-gray);
     margin-right: 6px;
   }
 
-  .table-of-contents nav > ul > li > ul > li > ul > li > ul > li > a::before {
+  .table-of-contents-sidebar nav > ul > li > ul > li > ul > li > ul > li > a::before {
     content: "##### ";
     letter-spacing: -0.1em;
     color: var(--color-gray);
     margin-right: 6px;
   }
 
-  .table-of-contents nav > ul > li > ul > li > ul > li > ul > li > ul > li > a::before {
+  .table-of-contents-sidebar nav > ul > li > ul > li > ul > li > ul > li > ul > li > a::before {
     content: "###### ";
     letter-spacing: -0.1em;
     color: var(--color-gray);
     margin-right: 6px;
   }
 
-  .table-of-contents nav a.toc-active {
+  .table-of-contents-sidebar nav a.toc-active {
     background-color: var(--accent);
     color: var(--background);
     font-weight: bold;
   }
 
-  .table-of-contents nav a.toc-active::before {
+  .table-of-contents-sidebar nav a.toc-active::before {
     color: var(--background);
   }
 
-  /* Hide mobile button on desktop */
+  /* Hide mobile button on desktop with sidebar */
   .toc-mobile-button {
     display: none;
   }
 }
 
-/* Mobile: Floating button and overlay TOC */
-@media (max-width: 1200px) {
-  .table-of-contents {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    max-width: 320px;
-    height: 100vh;
-    background-color: var(--background);
-    border-left: 2px solid var(--accent);
-    padding: 20px;
-    overflow-y: auto;
-    z-index: 1000;
-    transition: right 0.3s ease;
-    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.3);
-  }
-
-  .table-of-contents.toc-mobile-visible {
-    right: 0;
-  }
-
-  .table-of-contents h2 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    border-bottom: 2px solid var(--color-gray);
-    padding-bottom: 8px;
-  }
-
-  .table-of-contents nav ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-  }
-
-  /* Nested lists for heading levels (h3, h4, etc.) */
-  .table-of-contents nav ul ul {
-    padding-left: 16px;
-  }
-
-  .table-of-contents nav ul li {
-    margin: 8px 0;
-  }
-
-  .table-of-contents nav ul li::before {
+/* Mobile/Narrower Desktop: Floating button and overlay TOC */
+@media (max-width: 1399px) {
+  /* Hide sidebar TOC on smaller screens */
+  .table-of-contents-sidebar {
     display: none;
   }
 
-  .table-of-contents nav a {
-    display: block;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-    color: var(--foreground);
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-
-  /* Add heading level indicators (##, ###, etc.) based on nesting */
-  .table-of-contents nav > ul > li > a::before {
-    content: "## ";
-    letter-spacing: -0.1em;
-    color: var(--color-gray);
-    margin-right: 6px;
-  }
-
-  .table-of-contents nav > ul > li > ul > li > a::before {
-    content: "### ";
-    letter-spacing: -0.1em;
-    color: var(--color-gray);
-    margin-right: 6px;
-  }
-
-  .table-of-contents nav > ul > li > ul > li > ul > li > a::before {
-    content: "#### ";
-    letter-spacing: -0.1em;
-    color: var(--color-gray);
-    margin-right: 6px;
-  }
-
-  .table-of-contents nav > ul > li > ul > li > ul > li > ul > li > a::before {
-    content: "##### ";
-    letter-spacing: -0.1em;
-    color: var(--color-gray);
-    margin-right: 6px;
-  }
-
-  .table-of-contents nav > ul > li > ul > li > ul > li > ul > li > ul > li > a::before {
-    content: "###### ";
-    letter-spacing: -0.1em;
-    color: var(--color-gray);
-    margin-right: 6px;
-  }
-
-  .table-of-contents nav a.toc-active {
-    background-color: var(--accent);
-    color: var(--background);
-    font-weight: bold;
-  }
-
-  .table-of-contents nav a.toc-active::before {
-    color: var(--background);
-  }
-
-  /* Floating TOC button */
+  /* Show mobile button */
   .toc-mobile-button {
     position: fixed;
     bottom: 20px;

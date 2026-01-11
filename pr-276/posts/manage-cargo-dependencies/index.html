@@ -234,6 +234,44 @@ if (!doNotTrack) {
     title="Cover Image" />
 
 
+  
+    <div class="table-of-contents-inline">
+      <h2>
+        目次
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#tldr">tl;dr</a></li>
+    <li><a href="#cargo-macheteで不要な依存関係を検出する"><code>cargo-machete</code>で不要な依存関係を検出する</a>
+      <ul>
+        <li><a href="#why">why</a></li>
+        <li><a href="#what">what</a></li>
+        <li><a href="#howローカル">how(ローカル)</a></li>
+        <li><a href="#howci">how(CI)</a></li>
+      </ul>
+    </li>
+    <li><a href="#cargo-denyで依存ライブラリに許容しないライセンスが含まれていないか検証する"><code>cargo-deny</code>で依存ライブラリに許容しないライセンスが含まれていないか検証する</a>
+      <ul>
+        <li><a href="#why-1">why</a></li>
+        <li><a href="#what-1">what</a></li>
+        <li><a href="#howローカル-1">how(ローカル)</a></li>
+        <li><a href="#howci-1">how(CI)</a></li>
+      </ul>
+    </li>
+    <li><a href="#cargo-aboutでリポジトリのライセンス表記が最新か検証する"><code>cargo-about</code>でリポジトリのライセンス表記が最新か検証する</a>
+      <ul>
+        <li><a href="#why-2">why</a></li>
+        <li><a href="#what-2">what</a></li>
+        <li><a href="#howローカル-2">how(ローカル)</a></li>
+        <li><a href="#howci-2">how(CI)</a></li>
+      </ul>
+    </li>
+    <li><a href="#おわりに">おわりに</a></li>
+  </ul>
+</nav>
+    </div>
+  
+
   <div class="post-content"><div>
         <p>OSSに依存するプロジェクトでは依存しているライブラリのライセンス表記が必要になることがある。（体感的にはほとんどのライブラリはライセンス表記を求めているように思う）</p>
 <p>そのため、依存ライブラリが増えた場合にはライセンス表記を更新する必要があるが、依存ライブラリの依存ライブラリに対しても再帰的にライセンス表記を見に行って自リポジトリの依存ライセンス表記ファイルを更新して&hellip;という作業を行うのは現実的ではない。</p>
@@ -528,7 +566,7 @@ if (!doNotTrack) {
   
 
   
-    <div class="table-of-contents">
+    <div class="table-of-contents-sidebar">
       <h2>
         目次
       </h2>
