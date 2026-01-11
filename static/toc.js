@@ -51,30 +51,47 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // Track which headings are currently visible
+  const visibleHeadings = new Set();
+  
   // Use Intersection Observer to detect visible headings
   const observerOptions = {
-    rootMargin: '-100px 0px -66%',
+    rootMargin: '-20% 0px -60% 0px',
     threshold: 0
   };
-
-  let activeLink = null;
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       const id = entry.target.id;
-      const link = headingToLink.get(id);
       
-      if (entry.isIntersecting && link) {
-        // Remove active class from previous link
-        if (activeLink) {
-          activeLink.classList.remove('toc-active');
-        }
-        
-        // Add active class to current link
-        link.classList.add('toc-active');
-        activeLink = link;
+      if (entry.isIntersecting) {
+        visibleHeadings.add(entry.target);
+      } else {
+        visibleHeadings.delete(entry.target);
       }
     });
+    
+    // Find the topmost visible heading
+    let topHeading = null;
+    let topPosition = Infinity;
+    
+    visibleHeadings.forEach(heading => {
+      const rect = heading.getBoundingClientRect();
+      if (rect.top < topPosition) {
+        topPosition = rect.top;
+        topHeading = heading;
+      }
+    });
+    
+    // Update active link
+    tocLinks.forEach(link => link.classList.remove('toc-active'));
+    
+    if (topHeading) {
+      const link = headingToLink.get(topHeading.id);
+      if (link) {
+        link.classList.add('toc-active');
+      }
+    }
   }, observerOptions);
 
   // Observe all headings
