@@ -445,15 +445,50 @@ blockquote::before {
     line-height: 1.4;
   }
 
-  .table-of-contents nav a:hover {
-    background-color: rgba(99, 110, 123, 0.3);
-    color: var(--accent);
+  /* Add heading level indicators (##, ###, etc.) based on nesting */
+  .table-of-contents nav > ul > li > a::before {
+    content: "## ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents nav > ul > li > ul > li > a::before {
+    content: "### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents nav > ul > li > ul > li > ul > li > a::before {
+    content: "#### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents nav > ul > li > ul > li > ul > li > ul > li > a::before {
+    content: "##### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents nav > ul > li > ul > li > ul > li > ul > li > ul > li > a::before {
+    content: "###### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
   }
 
   .table-of-contents nav a.toc-active {
     background-color: var(--accent);
     color: var(--background);
     font-weight: bold;
+  }
+
+  .table-of-contents nav a.toc-active::before {
+    color: var(--background);
   }
 
   /* Hide mobile button on desktop */
@@ -521,15 +556,50 @@ blockquote::before {
     line-height: 1.5;
   }
 
-  .table-of-contents nav a:hover {
-    background-color: rgba(99, 110, 123, 0.3);
-    color: var(--accent);
+  /* Add heading level indicators (##, ###, etc.) based on nesting */
+  .table-of-contents nav > ul > li > a::before {
+    content: "## ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents nav > ul > li > ul > li > a::before {
+    content: "### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents nav > ul > li > ul > li > ul > li > a::before {
+    content: "#### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents nav > ul > li > ul > li > ul > li > ul > li > a::before {
+    content: "##### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents nav > ul > li > ul > li > ul > li > ul > li > ul > li > a::before {
+    content: "###### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
   }
 
   .table-of-contents nav a.toc-active {
     background-color: var(--accent);
     color: var(--background);
     font-weight: bold;
+  }
+
+  .table-of-contents nav a.toc-active::before {
+    color: var(--background);
   }
 
   /* Floating TOC button */
