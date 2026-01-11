@@ -422,6 +422,11 @@ blockquote::before {
     margin: 0;
   }
 
+  /* Nested lists for heading levels (h3, h4, etc.) */
+  .table-of-contents nav ul ul {
+    padding-left: 16px;
+  }
+
   .table-of-contents nav ul li {
     margin: 8px 0;
   }
@@ -491,6 +496,11 @@ blockquote::before {
     list-style: none;
     padding-left: 0;
     margin: 0;
+  }
+
+  /* Nested lists for heading levels (h3, h4, etc.) */
+  .table-of-contents nav ul ul {
+    padding-left: 16px;
   }
 
   .table-of-contents nav ul li {
