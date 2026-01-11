@@ -1,10 +1,10 @@
 // Table of Contents functionality
 
 document.addEventListener('DOMContentLoaded', function() {
-  const toc = document.querySelector('.table-of-contents');
-  if (!toc) return;
+  const tocSidebar = document.querySelector('.table-of-contents-sidebar');
+  if (!tocSidebar) return;
 
-  // Create mobile TOC button
+  // Create mobile TOC button (shown on screens < 1400px)
   const tocButton = document.createElement('button');
   tocButton.className = 'toc-mobile-button';
   tocButton.setAttribute('aria-label', '目次を表示');
@@ -17,27 +17,20 @@ document.addEventListener('DOMContentLoaded', function() {
   `;
   document.body.appendChild(tocButton);
 
-  // Toggle TOC on mobile
-  let isTocVisible = false;
+  // On narrow screens, clicking the button scrolls to inline TOC
   tocButton.addEventListener('click', function() {
-    isTocVisible = !isTocVisible;
-    toc.classList.toggle('toc-mobile-visible', isTocVisible);
-    tocButton.setAttribute('aria-label', isTocVisible ? '目次を閉じる' : '目次を表示');
-  });
-
-  // Close TOC when clicking outside on mobile
-  document.addEventListener('click', function(e) {
-    if (window.innerWidth <= 1200 && isTocVisible && 
-        !toc.contains(e.target) && !tocButton.contains(e.target)) {
-      isTocVisible = false;
-      toc.classList.remove('toc-mobile-visible');
-      tocButton.setAttribute('aria-label', '目次を表示');
+    const tocInline = document.querySelector('.table-of-contents-inline');
+    if (tocInline) {
+      tocInline.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     }
   });
 
-  // Highlight active heading based on scroll position
+  // Highlight active heading based on scroll position (for sidebar TOC only)
   const headings = document.querySelectorAll('.post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6');
-  const tocLinks = toc.querySelectorAll('a[href^="#"]');
+  const tocLinks = tocSidebar.querySelectorAll('a[href^="#"]');
 
   if (headings.length === 0 || tocLinks.length === 0) return;
 
@@ -146,12 +139,14 @@ document.addEventListener('DOMContentLoaded', function() {
         link.classList.add('toc-active');
         
         // Auto-scroll the TOC to keep the active item visible
-        // Use scrollIntoView with smooth behavior and center positioning for better visibility
-        link.scrollIntoView({
-          behavior: 'smooth',
-          block: 'center',
-          inline: 'nearest'
-        });
+        // Only scroll if sidebar is visible (desktop >= 1400px)
+        if (window.innerWidth >= 1400) {
+          link.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+            inline: 'nearest'
+          });
+        }
       }
     }
   }, observerOptions);
