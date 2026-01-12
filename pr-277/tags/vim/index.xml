@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vim on blog.kyu08.com</title>
+    <link>https://blog.kyu08.com/pr-277/tags/vim/</link>
+    <description>Recent content in vim on blog.kyu08.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>blog.kyu08.com</copyright>
+    <lastBuildDate>Sun, 02 Nov 2025 01:07:08 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-277/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VimConf 2025 Smallに参加した</title>
+      <link>https://blog.kyu08.com/pr-277/posts/vim-conf-2025/</link>
+      <pubDate>Sun, 02 Nov 2025 01:07:08 +0000</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-277/posts/vim-conf-2025/</guid>
+      <description>2025年11月2日（日）にアキバプラザ・アキバホールで開催されたVimConf 2025 Smallに参加した。 こちらはノベルティ。食器とかお箸はた</description>
+      <content>&lt;p&gt;2025年11月2日（日）にアキバプラザ・アキバホールで開催された&lt;a href=&#34;https://vimconf.org/2025/ja/&#34; target=&#34;_blank&#34; &gt;VimConf 2025 Small&lt;/a&gt;に参加した。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;vim-conf-2025.webp&#34; alt=&#34;vim-conf-2025.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;こちらはノベルティ。食器とかお箸はたくさんあっても困らないのでありがたい。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;お茶碗&lt;/li&gt;
+&lt;li&gt;お箸&lt;/li&gt;
+&lt;li&gt;コースター&lt;/li&gt;
+&lt;li&gt;巾着&lt;/li&gt;
+&lt;li&gt;お茶&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;vim-conf-novelty.webp&#34; alt=&#34;vim-conf-novelty.webp&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;nvim-cmp-retrospective-exploring-completion-and-facing-foss-challenges&#34;&gt;nvim-cmp retrospective: Exploring Completion and Facing FOSS Challenges&lt;/h2&gt;
+&lt;p&gt;hrsh7thさんによる発表。&lt;/p&gt;
+&lt;h3 id=&#34;explore-completion&#34;&gt;Explore Completion&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;nvim-cmpのcmpって「シーエムピー」って読むんだ（「コンプ」って読んでた）&lt;/li&gt;
+&lt;li&gt;補完プラグインってめちゃめちゃいろんなケースを考慮して作られているんだな&amp;hellip;（全然詳しくないので薄い感想しか出てこない）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;foss-challenges&#34;&gt;FOSS Challenges&lt;/h3&gt;
+&lt;p&gt;大きなOSSプロジェクトをメンテすることになったことでの学びの共有。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;もともとはユーザーが求めるものと自分のやりたいことが合致していた。自分がやりたいことをやることで感謝してもらえていた。
+&lt;ul&gt;
+&lt;li&gt;あるときから自分のやりたいこととユーザーの要望が乖離してきた
+&lt;ul&gt;
+&lt;li&gt;やりたいこと
+&lt;ul&gt;
+&lt;li&gt;コード品質を上げたい&lt;/li&gt;
+&lt;li&gt;実験的な新機能を追加したい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ユーザーが求めること
+&lt;ul&gt;
+&lt;li&gt;安定した動作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;結果モチベが下がった&lt;/li&gt;
+&lt;li&gt;予期せずプロジェクトが大きくなって責任が芽生えた&lt;/li&gt;
+&lt;li&gt;モチベが低いならコミュニティ主導にすればいいのでは？という意見も見るが&amp;hellip;
+&lt;ul&gt;
+&lt;li&gt;直接話したこともない人をrepositoryに招待するのは危険だと感じた（ユーザー数も多いのでサプライチェーンアタックが怖い）
+&lt;ul&gt;
+&lt;li&gt;実際にhrsh7thさんが作ったプラグインのコピープラグインがリリース1週間後にできて、そこにマルウェアが含まれていたことがあるらしい（怖すぎる）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;新メンテナのオンボーディングをサポートするのも大変&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;とはいえOSS開発は楽しい
+&lt;ul&gt;
+&lt;li&gt;nvim-cmpを公開して「これめっちゃ便利だね！」といってもらえたのはとても印象に残っている&lt;/li&gt;
+&lt;li&gt;意図せず人気になってしまうと責任も生じる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;感想&#34;&gt;感想&lt;/h3&gt;
+&lt;p&gt;たくさんのユーザーを抱えるOSSのメンテ目線のリアルな心境を聞けてよかった。&lt;/p&gt;
+&lt;p&gt;大規模OSSのメンテナに憧れる気持ちもあるが、楽しいこともあればその分大変なこともあるんだろうな〜などと思った。（それはそう）&lt;/p&gt;
+&lt;p&gt;とはいえたくさんの開発者、プロジェクトに寄与するような大規模OSSメンテナへの憧れはあるのでコミットしたいOSSが見つかったら挑戦してみようと思う。&lt;/p&gt;
+&lt;h2 id=&#34;and-yet-vim-survived-thinking-and-seeing-in-the-age-of-code-you-dont-write&#34;&gt;And Yet, Vim Survived: Thinking and Seeing in the Age of Code You Don&amp;rsquo;t Write&lt;/h2&gt;
+&lt;p&gt;Λlisueさんによるコードリーディングに関する発表。&lt;/p&gt;
+&lt;p&gt;以下の3stepに分けてコードを読む。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Where - Seeing the flow&lt;/li&gt;
+&lt;li&gt;What - Seeing the structure&lt;/li&gt;
+&lt;li&gt;Why - Seeing the Reasoning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;where---seeing-the-flow&#34;&gt;Where - Seeing the Flow&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;File Jumps
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;gf&lt;/code&gt; / &lt;code&gt;gF&lt;/code&gt; - open file under cursor&lt;/li&gt;
+&lt;li&gt;これ知らなかった。&lt;code&gt;go test&lt;/code&gt;の結果を見て失敗しているファイルに飛ぶときとかに便利そう。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Search Jumps
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/&lt;/code&gt;や&lt;code&gt;?&lt;/code&gt;で検索し&lt;code&gt;n&lt;/code&gt;でジャンプ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;fall.nvim(fuzzy finder)
+&lt;ul&gt;
+&lt;li&gt;検索して&lt;code&gt;n&lt;/code&gt;で飛ぶのに比べて&lt;code&gt;&amp;lt;c-o&amp;gt;&lt;/code&gt;で直前の位置に戻れるので便利&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Quickfix
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;]q&lt;/code&gt; / &lt;code&gt;[q&lt;/code&gt;でジャンプできる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;what---seeing-the-structure&#34;&gt;What - Seeing the structure&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Window management
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;c-w&amp;gt;&lt;/code&gt; + &lt;code&gt;s&lt;/code&gt;/&lt;code&gt;v&lt;/code&gt;/&lt;code&gt;h&lt;/code&gt;/&lt;code&gt;j&lt;/code&gt;/&lt;code&gt;k&lt;/code&gt;/&lt;code&gt;l&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;c-w&amp;gt;&lt;/code&gt; + &lt;code&gt;o&lt;/code&gt;: （複数ウィンドウを開いているときに実行すると）現在のウィンドウのみを表示する
+&lt;ul&gt;
+&lt;li&gt;nativeだと元の状態に戻れない&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;goyo.vim&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;を使うと&lt;code&gt;&amp;lt;c-w&amp;gt;&lt;/code&gt; + &lt;code&gt;o&lt;/code&gt;をもう一度実行するともとのウィンドウの状態に戻れる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;file treeは知らないファイルを探すために使う&lt;/li&gt;
+&lt;li&gt;fuzzy finderは知っているファイルを開くために使う&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;why---seeing-the-reasoning&#34;&gt;Why - Seeing the Reasoning&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;git blameを活用してコードの背景を理解しながらコードを読む&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;感想-1&#34;&gt;感想&lt;/h3&gt;
+&lt;p&gt;ありすえさんが発表がうますぎてその点でも勉強になった。特にこのあたりのポイントが勉強になった。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;論理構造が自然で理解しやすかった&lt;/li&gt;
+&lt;li&gt;話す速度、スライドの情報量が多すぎなかったのでついていきやすかった&lt;/li&gt;
+&lt;li&gt;ユーモアを交えていて楽しく聞けた&lt;/li&gt;
+&lt;li&gt;シンプルに滑舌が良かった（わかんないけどマイクの使い方とかも違うんだろうか。なんかとにかく声が明瞭で聞き取りやすかった）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;beyond-syntax-highlighting-unlocking-the-power-of-tree-sitter-in-neovim&#34;&gt;Beyond Syntax Highlighting: Unlocking the Power of Tree-sitter in Neovim&lt;/h2&gt;
+&lt;p&gt;atusyさんによるtree-sitterに関する発表。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/atusy/treemonkey.nvim&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/atusy/treemonkey.nvim&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/atusy/treemonkey.nvim&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/atusy/treemonkey.nvim&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+ 便利そう&lt;/p&gt;
+&lt;p&gt;tree-sitterをもっと深く理解したくなった（&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;趣味のプロジェクト&lt;/a&gt;で&lt;a href=&#34;https://github.com/IndianBoy42/tree-sitter-just&#34; target=&#34;_blank&#34; &gt;IndianBoy42/tree-sitter-just&lt;/a&gt;に依存しているので自分もメンテに参加できるようになりたい）&lt;/p&gt;
+&lt;h2 id=&#34;designing-repeatable-edits-the-architecture-of--in-vim&#34;&gt;Designing Repeatable Edits: The Architecture of . in Vim&lt;/h2&gt;
+&lt;p&gt;Satoru Kitaguchiさんによるドットリピートの解説。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.&lt;/code&gt;でリピートできる操作
+&lt;ul&gt;
+&lt;li&gt;ノーマルモードから始まってバッファを編集し、ノーマルモードに戻ってくる&lt;/li&gt;
+&lt;li&gt;undoツリー上のlast-change nodeを再実行している = 直前の編集チャンクを再適用する&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;daw&lt;/code&gt;, &lt;code&gt;ci&amp;quot;&lt;/code&gt;などはリピートできる&lt;/li&gt;
+&lt;li&gt;Visual modeを含んだ操作などはリピートできない
+&lt;ul&gt;
+&lt;li&gt;Visual modeでは内部的には選択された文字数や行数しか保持されないため&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;さらっとVimの内部動作を解説していてかっこよすぎた。Vimのコードを読んだのか、Vimの内部構造を解説しているsomethingがどこかに存在するのかちょっと気になった。かなり周到に調査されてスライドを作られてそうな印象を受けた。&lt;/p&gt;
+&lt;p&gt;便利なプラグインの情報を集めるのも楽しいが、たまにはちゃんとVim自体の機能を学んだ方がかえって効率よく日々の操作を効率化できそうだな〜と思った。&lt;/p&gt;
+&lt;p&gt;実践Vimを読みたい気持ちが芽生えた。（n回目）&lt;/p&gt;
+&lt;h2 id=&#34;lt&#34;&gt;LT&lt;/h2&gt;
+&lt;p&gt;ryoppippiさんの &lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/ryoppippi/nvim-in-the-loop&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/ryoppippi/nvim-in-the-loop&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/ryoppippi/nvim-in-the-loop&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/ryoppippi/nvim-in-the-loop&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+ がかなり便利そう。&lt;/p&gt;
+&lt;p&gt;自分のVimの操作履歴を記録し、AIにどのようなキーマップを登録すると無駄な操作を減らせるかを分析させるというものらしい。すごい。&lt;/p&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;学びや刺激を得られたので行って良かった。&lt;/p&gt;
+&lt;p&gt;発表内容もさることながらプレゼンが上手な方がいたり、（おそらく日本の方だけど）英語が超上手な方がいたりして、その意味でも刺激を得られた。&lt;/p&gt;
+&lt;p&gt;今回初参加なので他の回との比較はできないが全然Smallな感じがせず、満足感が高かった。（もしやSmallじゃない回は2トラックとかあったりする&amp;hellip;?）&lt;/p&gt;
+&lt;p&gt;運営の皆さん、登壇者の皆さんありがとうございました！&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;おそらくこれ &lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/junegunn/goyo.vim&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/junegunn/goyo.vim&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/junegunn/goyo.vim&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/junegunn/goyo.vim&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
