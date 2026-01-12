@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Tue, 06 Jan 2026 23:27:58 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-275/tags/cqrs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Jan 2026 00:27:58 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-275/tags/cqrs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>『CQRS Documents by Greg Young』を読んだ</title>
       <link>https://blog.kyu08.com/pr-275/posts/cqrs-documents-by-greg-young/</link>
-      <pubDate>Tue, 06 Jan 2026 23:27:58 +0900</pubDate>
+      <pubDate>Mon, 12 Jan 2026 00:27:58 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/pr-275/posts/cqrs-documents-by-greg-young/</guid>
       <description>CQRSに興味があったのでGreg Young氏のCQRS Documentsを読んでみた。 https://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdfhttps://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdf CQRSに興味を持ったきっかけ ドメイン層のメンテナ</description>
@@ -34,22 +34,22 @@
 &lt;p&gt;（もちろんアプリケーションの状況にもよるが&amp;hellip;。repositoryのRead系メソッドの返り値がドメインモデルと一致しないケースが多くなるようなケースで特にCQRSのメリットが効果を発揮しやすいような気がしている。状況にかかわらずCQRSをやったほうがいいのかどうかはまだあまりわかっていない。ちなみにここでのCQRSは基本的には同一DBでCのアプリケーションコードとQのアプリケーションコードが分離されている、くらいの方法をざっくり想定して書いている。）&lt;/p&gt;
 &lt;p&gt;それってCQRSってやつじゃね？と思ったのでまずは原典に近いドキュメントを読んでみたくなったので読むことにした。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;ここからはCQRS Documentsの内容をまとめていく。&lt;/p&gt;
-&lt;h2 id=&#34;非cqrsアーキテクチャシステムの課題&#34;&gt;非CQRSアーキテクチャシステムの課題&lt;/h2&gt;
+&lt;h2 id=&#34;a-stereotypical-architecture-典型的なアーキテクチャ&#34;&gt;&amp;ldquo;A Stereotypical Architecture&amp;rdquo;: 典型的なアーキテクチャ&lt;/h2&gt;
 &lt;p&gt;&amp;ldquo;A Stereotypical Architecture&amp;quot;として、典型的なアーキテクチャが紹介されている。本Documentsではこのアーキテクチャに対して段階的にCQRSを導入していく形で説明が進んでいく。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;a-stereotypical-architecture.webp&#34; alt=&#34;a-stereotypical-architecture.webp&#34;&gt;
 CQRS Documents by Greg Young P2より引用&lt;/p&gt;
 &lt;p&gt;このアーキテクチャではシステムはCRUDのみの機能を持ち、クライアントとは常にDTOを介して通信する。&lt;/p&gt;
-&lt;p&gt;おそらくクライアントが&lt;code&gt;UpdateUserName&lt;/code&gt;のようなエンドポイントに更新後のユーザーネームだけを渡すのではなく&lt;code&gt;/user&lt;/code&gt;に更新後のDTOを丸ごと渡す、というようなことだと理解している。&lt;/p&gt;
+&lt;p&gt;おそらくクライアントが&lt;code&gt;UpdateUserName&lt;/code&gt;のようなエンドポイントに更新後のユーザーネームだけを渡すのではなく&lt;code&gt;/user&lt;/code&gt;に更新後のDTOを丸ごと渡す、というようなことだと思われる。&lt;/p&gt;
 &lt;p&gt;サーバー側では受け取ったDTOをドメインオブジェクトに詰め替えてバリデーションを行い、永続化する。&lt;/p&gt;
 &lt;p&gt;このような設計ではアプリケーションサービスの責務はDTOとドメインオブジェクトの詰め替えに終始し、ドメイン層はバリデーションを主な責務として受け持つ。データの更新方法はクライアントに委ねられてしまうため、ドメイン知識の一部がクライアント側に漏れ出してしまう。（e.g. 会員ランクによる割引率の設定がある場合など）&lt;/p&gt;
-&lt;p&gt;このようなアーキテクチャでは簡潔性からオンボーディングコストが低くなるメリットがある代わりに、次のような課題が発生する。&lt;/p&gt;
+&lt;p&gt;このようなアーキテクチャでは簡潔性によってオンボーディングコストが低くなるメリットがある代わりに、次のような課題が存在する。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;スケーリング: 一般的なシステムでは読み取り操作は書き込み操作よりも2桁以上多い。読み取り操作目線では非正規化されたデータ構造が適しているが、書き込み操作目線では正規化されたデータ構造が適している。これらを単一のDBで扱おうとすると垂直スケーリングが必要になるが、垂直スケーリングには非常に高額なコストがかかる。&lt;/li&gt;
 &lt;li&gt;DDD適用の困難さ: この設計ではAPIがデータ指向のインターフェースを持つため、システム全体がCRUDの4つの動詞に縛られる。（データの更新方法がクライアントまたはユーザー側に漏れ出ておりドメイン知識をソフトウェアで表現することが難しいため）&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;ここまでの感想&#34;&gt;ここまでの感想&lt;/h3&gt;
-&lt;p&gt;さすがにこういったアーキテクチャのシステムは見たことがないので極端な例では&amp;hellip;?とは思ったが時代や場所によってはこういった設計のシステムも一定あるのかもしれない。&lt;/p&gt;
-&lt;h2 id=&#34;cqrs&#34;&gt;CQRS&lt;/h2&gt;
+&lt;p&gt;さすがにこういったアーキテクチャのシステムは見たことがないので極端な例では&amp;hellip;?とは思いつつ時代や場所によってはこういった設計のシステムも存在するのかもしれない。&lt;/p&gt;
+&lt;h2 id=&#34;cqrsとは&#34;&gt;CQRSとは&lt;/h2&gt;
 &lt;p&gt;CQRSはBertrand Meyerが提唱した&lt;a href=&#34;https://en.wikipedia.org/wiki/Command%E2%80%93query_separation&#34; target=&#34;_blank&#34; &gt;『Command and Query Separation Principle』&lt;/a&gt;にその起源を持つ。Wikipediaではこの原則を次のように説明している。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;It states that every method should either be a command that performs an action, or a query that returns data to the caller, but not both.&lt;/p&gt;
@@ -63,10 +63,10 @@ CQRS Documents by Greg Young P2より引用&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;実際にWebサービスも開発していてもたとえばユーザー作成メソッドが作成したユーザーのIDを返すように処理は普通に書くし、自分もどちらかというと定義ほどは厳密に運用しなくても十分恩恵を受けられるのではないかという立場。&lt;/p&gt;
 &lt;h2 id=&#34;a-stereotypical-architectureにcqrsを導入する&#34;&gt;&amp;ldquo;A Stereotypical Architecture&amp;quot;にCQRSを導入する&lt;/h2&gt;
-&lt;p&gt;&amp;ldquo;A Stereotypical Architecture&amp;quot;として最初に紹介されたアーキテクチャでは、ドメインモデルがCommandとQueryの両方に使用されていた。&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;A Stereotypical Architecture&amp;quot;として最初に紹介されたアーキテクチャでは、ドメインモデルがCommandとQueryの両方に使用されていた。このアプリケーションにCQRSを適用するとQuery側とCommand側はそれぞれ次のようになる。&lt;/p&gt;
 &lt;h3 id=&#34;query&#34;&gt;Query&lt;/h3&gt;
 &lt;p&gt;Query処理側にはデータ取得のためのメソッドのみが含まれる。&lt;/p&gt;
-&lt;p&gt;元のアーキテクチャではドメインモデルを生成し、それをDTOにマッピングしたうえでクライアントに返却していた。多くの場合でドメインモデルとDTOは異なるモデルであるため、以下のような課題がある。&lt;/p&gt;
+&lt;p&gt;元のアーキテクチャではドメインモデルを生成し、それをDTOにマッピングしたうえでクライアントに返却していた。多くの場合でドメインモデルとDTOは異なるモデルであるため、以下のような課題があるがこれがCQRSの適用によって解決される。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;複数集約から1つのDTOを生成する場合、複数回DBにアクセスする必要がありパフォーマンスが低下する。また、集約の境界が曖昧になる。&lt;/li&gt;
 &lt;li&gt;ドメイン層にQueryの責務が多く含まれている（e.g. repositoryのinterfaceにQuery系のメソッドが多く含まれ、ページングやソート情報が含まれている）&lt;/li&gt;
@@ -80,8 +80,6 @@ CQRS Documents by Greg Young P2より引用&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;thin-read-layer.webp&#34; alt=&#34;thin-read-layer.webp&#34;&gt;
 CQRS Documents by Greg Young P21より引用&lt;/p&gt;
 &lt;p&gt;この層はDBから直接データを読み取り（ドメインモデルを迂回し）DTOを生成する。こうすることで、ドメイン層からQueryの責務を切り離すことができ、ドメイン層の純度を上げることができる。&lt;/p&gt;
-&lt;h3 id=&#34;ここまでの感想-1&#34;&gt;ここまでの感想&lt;/h3&gt;
-&lt;!-- raw HTML omitted --&gt;
 &lt;h3 id=&#34;command&#34;&gt;Command&lt;/h3&gt;
 &lt;p&gt;CQRSを適用するとCommand側のアーキテクチャは以下のようになる。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;the-command-site.webp&#34; alt=&#34;the-command-site.webp&#34;&gt;
@@ -93,8 +91,10 @@ CQRS Documents by Greg Young P22より引用&lt;/p&gt;
 &lt;li&gt;DTO構築のためにドメインオブジェクトの内部状態を公開するゲッターメソッドが存在する&lt;/li&gt;
 &lt;li&gt;DTO構築のために複数の集約オブジェクトをそれぞれ読み込むことで、非効率なクエリが実行される&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;ここまでの感想-2&#34;&gt;ここまでの感想&lt;/h3&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;ここまでの感想-1&#34;&gt;ここまでの感想&lt;/h3&gt;
+&lt;p&gt;ドメイン層からQuery系の責務を切り離すことでメンテナビリティが向上する、というのが自分が（直近）CQRSに興味を持っていた一番の理由だったのでそうだよなーと思いながら読んだ。&lt;/p&gt;
+&lt;p&gt;また、（書いてあるとおりだが）読み取り単位を必ずしもドメインモデル単位にする必要がないためパフォーマンスの最適化が行いやすい点も大きなメリットだといえそう。&lt;/p&gt;
+&lt;p&gt;結局CommandとQueryはまったく別の責務なことが多いので両者を分離することでメリットを得られるケースは多そう。&lt;/p&gt;
 &lt;h3 id=&#34;ドメインイベントイベントソーシング&#34;&gt;ドメインイベント、イベントソーシング&lt;/h3&gt;
 &lt;p&gt;本文にはドメインイベント、イベントソーシングについても記載があり読んだが直近の興味領域的にここを詳しくまとめるだけのモチベーションはないのでスキップする。&lt;/p&gt;
 &lt;h2 id=&#34;作業習慣の違い&#34;&gt;作業習慣の違い&lt;/h2&gt;
@@ -105,8 +105,7 @@ CQRS Documents by Greg Young P22より引用&lt;/p&gt;
 &lt;li&gt;クライアント&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;の3つの要素に分解して作業を進めることができるため、プロジェクトに関わる開発者数をより効果的に増やすことができる。（サーバーとクライアントの作業分担をできるのはCQRSかどうかにかかわらないが重要なのは1つのサーバーアプリケーションを2並列で安全に進めやすいという点だろう。）&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;また、チームには次のような観点で開発者間には様々な差異が存在し、&lt;/p&gt;
+&lt;p&gt;また、開発者には次のような観点の差異が存在する。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;技術的熟練度&lt;/li&gt;
 &lt;li&gt;ビジネスドメインに関する知識&lt;/li&gt;
@@ -114,11 +113,12 @@ CQRS Documents by Greg Young P22より引用&lt;/p&gt;
 &lt;li&gt;ソフトスキル&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;ドメイン層の実装には4つの項目が秀でた人材が最適である一方、リードモデルの実装にはそれらの開発者要件は必ずしも当てはまるとは限らない。&lt;/p&gt;
-&lt;h3 id=&#34;ここまでの感想-3&#34;&gt;ここまでの感想&lt;/h3&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;ここまでの感想-2&#34;&gt;ここまでの感想&lt;/h3&gt;
+&lt;p&gt;開発効率の観点は持ってなかったが、たしかにCQRSを採用することで（1つのアプリケーションが2つのモジュールに分離されるので）コンフリクトせずに開発を進めやすそう。（モジュール設計はPJによるので厳密には2つのモジュールとは限らないが）&lt;/p&gt;
 &lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
-&lt;p&gt;Documents内でも触れられていたが、結局CQRSにしろイベントソーシングにしろ一定のオーバーヘッドはあるので、システムやビジネスの要件や今後の見通しを元に必要性を検討するのが重要。（それはそう）&lt;/p&gt;
-&lt;p&gt;というのはありつつ、ドメイン層のメンテナビリティを高めるためにCQRSを採用するのは有効な選択肢の一つだとも感じているので、ひとまず個人のプロジェクトで検証してみたいと思う。&lt;/p&gt;
+&lt;p&gt;事前のイメージ通り、CQRSを適用することで開発効率を高められそうなイメージが持てた。&lt;/p&gt;
+&lt;p&gt;Documents内でも触れられていたが、結局CQRSにしろイベントソーシングにしろ一定のオーバーヘッドはあるので、システムやビジネスの課題や要件、今後の見通しを元に必要性を検討するのが（いつだって）重要そう。&lt;/p&gt;
+&lt;p&gt;というのはありつつ、ドメイン層のメンテナビリティを高めるためにCQRSを採用するのはかなり有効な選択肢の一つだとも感じているので、ひとまず個人のプロジェクトで検証してみたいと思う。&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
