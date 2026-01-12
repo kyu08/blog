@@ -28,7 +28,7 @@ https://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdf
 ここからは[CQRS Documents](https://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdf)の内容をまとめていく。
 
 ## "A Stereotypical Architecture": 典型的なアーキテクチャ
-"A Stereotypical Architecture"として、典型的なアーキテクチャが紹介されている。本Documentsではこのアーキテクチャに対して段階的にCQRSを導入していく形で説明が進んでいく。
+"A Stereotypical Architecture"として、典型的なアーキテクチャが紹介されている。CQRS Documentsではこのアーキテクチャに対して段階的にCQRSを導入していく形で説明が進んでいく。
 
 ![a-stereotypical-architecture.webp](a-stereotypical-architecture.webp)
 CQRS Documents by Greg Young P2より引用
@@ -118,7 +118,7 @@ CQRS Documents by Greg Young P22より引用
 結局CommandとQueryはまったく別の責務なことが多いので両者を分離することでメリットを得られるケースは多そう。
 
 ## 作業習慣の違い
-このDocumentsを読むまでは意識していなかったが、CQRSを採用することで
+CQRS Documentsを読むまでは意識していなかったが、CQRSを採用することで
 
 1. ドメイン層
 1. リードモデル
@@ -136,12 +136,12 @@ CQRS Documents by Greg Young P22より引用
 ドメイン層の実装には4つすべての項目が秀でた人材が最適である一方、リードモデルの実装にはそれらの開発者要件は必ずしも当てはまるとは限らない。
 
 ### ここまでの感想
-開発効率の観点は持ってなかったが、たしかにCQRSを採用することで（1つのアプリケーションが2つのモジュールに分離されるので）コンフリクトせずに開発を進めやすそう。（モジュール設計はPJによるので厳密には2つのモジュールとは限らないが）
+開発効率の観点は持ってなかったが、たしかにCQRSを採用することで（1つのアプリケーションが2つのモジュールに分離されるので）コンフリクトせずに開発を進めやすそう。（モジュール設計はプロジェクトによるので厳密には2つのモジュールとは限らないが）
 
 ## 感想
 事前のイメージ通り、CQRSを適用することで開発効率を高められそうなイメージが持てた。
 
-Documents内でも触れられていたが、結局CQRSにしろイベントソーシングにしろ一定のオーバーヘッドはあるので、システムやビジネスの課題や要件、今後の見通しを元に必要性を検討するのが（いつだって）重要そう。
+CQRS Documents内でも触れられていたが、結局CQRSにしろイベントソーシングにしろ一定のオーバーヘッドはあるので、システムやビジネスの課題や要件、今後の見通しを元に必要性を検討するのが（いつだって）重要そう。
 
 というのはありつつ、ドメイン層のメンテナビリティを高めるためにCQRSを採用するのはかなり有効な選択肢の1つだとも感じているので、ひとまず個人のプロジェクトで検証してみたいと思う。
 
