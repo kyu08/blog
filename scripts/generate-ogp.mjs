@@ -72,6 +72,7 @@ function extractMetadata(filePath, content) {
 
 /**
  * SVGをPNGに変換
+ * 高品質レンダリングオプションを使用
  */
 function svgToPng(svg) {
   const resvg = new Resvg(svg, {
@@ -79,6 +80,12 @@ function svgToPng(svg) {
       mode: 'width',
       value: 1200,
     },
+    font: {
+      loadSystemFonts: false, // システムフォント読み込みを無効化してパフォーマンス向上
+    },
+    shapeRendering: 2, // 0: optimizeSpeed, 1: crispEdges, 2: geometricPrecision
+    textRendering: 2,  // 0: optimizeSpeed, 1: optimizeLegibility, 2: geometricPrecision
+    imageRendering: 2, // 0: optimizeSpeed, 1: optimizeQuality
   });
 
   const pngData = resvg.render();
