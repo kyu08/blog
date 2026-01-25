@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloud Spanner on blog.kyu08.com</title>
+    <link>https://blog.kyu08.com/pr-280/tags/cloud-spanner/</link>
+    <description>Recent content in Cloud Spanner on blog.kyu08.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>blog.kyu08.com</copyright>
+    <lastBuildDate>Mon, 23 Sep 2024 01:44:54 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-280/tags/cloud-spanner/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud Spanner について知らなかったことを書く</title>
+      <link>https://blog.kyu08.com/pr-280/posts/learn-about-spanner/</link>
+      <pubDate>Mon, 23 Sep 2024 01:44:54 +0000</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-280/posts/learn-about-spanner/</guid>
+      <description>普段業務でCloud Spannerを使っているが、雰囲気で使っている自覚が大いにあるのでドキュメントやブログを読んで知らなかったことを自分用</description>
+      <content>&lt;p&gt;普段業務でCloud Spannerを使っているが、雰囲気で使っている自覚が大いにあるのでドキュメントやブログを読んで知らなかったことを自分用のメモとしてまとめてみる。&lt;/p&gt;
+&lt;h2 id=&#34;spanner-のスキーマ設計の最適化--google-cloud&#34;&gt;Spanner のスキーマ設計の最適化  |  Google Cloud&lt;/h2&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;キー定義とインターリーブの2つはスケーラビリティに大きな影響を与える&lt;/li&gt;
+&lt;li&gt;Spannerにはルートテーブルとインターリーブされたテーブルの2種類のテーブルがある。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;テーブルレイアウト&#34;&gt;テーブルレイアウト&lt;/h3&gt;
+&lt;p&gt;Spannerテーブルの行は&lt;code&gt;PRIMARY_KEY&lt;/code&gt;によって辞書順に並べかえられる。したがって以下の特性を示す。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;辞書順のテーブルスキャンは効率的&lt;/li&gt;
+&lt;li&gt;十分に近い行は同じディスクブロックに格納され、一緒に読み込まれてキャッシュされる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;各Spannerレプリカ内のデータは&lt;code&gt;スプリット&lt;/code&gt;と&lt;code&gt;ブロック&lt;/code&gt;という2つの物理階層レベルで編成される。&lt;/p&gt;
+&lt;h3 id=&#34;インターリーブ&#34;&gt;インターリーブ&lt;/h3&gt;
+&lt;p&gt;ルートテーブルの各行をルート行と呼び、インターリーブされたテーブルの各行を子行と呼ぶ。ルート行とそのすべての子孫のコレクションは行ツリーと呼ばれる。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;行ツリー内のオペレーションは他のスプリットとの通信を必要としないケースが多いため基本的には効率性が高い。ただし子行にホットスポットがある場合Spannerはホットスポットの行とそれ以降の子行を分離するためにスプリット境界を追加しようとする。そのため必ずしも効率性が高いという保証はない。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;局所性のトレードオフ&#34;&gt;局所性のトレードオフ&lt;/h3&gt;
+&lt;p&gt;以下の理由で局所性を高めることが重要。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通信するサーバが多いほど一時的にビジー状態のサーバに遭遇する可能性が高くなり、レイテンシの増加につながる。&lt;/li&gt;
+&lt;li&gt;複数のスプリットにまたがるトランザクションは二層コミットの特性によってCPUコストとレイテンシがわずかに増加する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;局所性の勘所&#34;&gt;局所性の勘所&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;分散DBである以上、一定レベルの二層コミットや非ローカルデータオペレーションは避けられない。&lt;/li&gt;
+&lt;li&gt;すべてのオペレーションの局所性を完璧にするのではなく最も重要なルートエンティティと最も一般的なアクセスパターンについて必要な局所性を実現することが重要。その他のオペレーションについてはそのままにすることを推奨。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;インデックスのオプション&#34;&gt;インデックスのオプション&lt;/h3&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;デフォルトではインターリーブされていないインデックスを作成されるが、インターリーブされたインデックスを作成することもできる。
+&lt;ul&gt;
+&lt;li&gt;インターリーブされたインデックスはインターリーブされたテーブルにデータを格納する。そのためデータとインデックスが強制的に同じ行ツリーに格納され、データとインデックスの結合効率が高くなる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Spannerはテーブルと同じ方法でインデックスデータを格納する。&lt;/strong&gt; 換言すると、インターリーブされていないインデックスはルートテーブルにデータを格納する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;そのため以下が推奨される。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;検索範囲が単一のエンティティのときは&lt;strong&gt;常に&lt;/strong&gt;インターリーブされたインデックスを使用する。&lt;/li&gt;
+&lt;li&gt;逆にデータベース内のどこからでも行を検索する必要がある場合はインターリーブされていないインデックスを使用する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;storing&#34;&gt;STORING&lt;/h3&gt;
+&lt;p&gt;要求されたすべてのデータがインデックス自体に含まれる場合、&lt;code&gt;STORING&lt;/code&gt;句を使用してインデックスを作成することができる。これによりベーステーブルと結合することなくクエリを完了できるためより効率的に結果を取得することができる。&lt;/p&gt;
+&lt;p&gt;現在はインデックスキーは16個、合計サイズが6KiBまでに制限されているため、&lt;code&gt;STORING&lt;/code&gt;句を使用することで任意のインデックスに対してデータを格納することができる。&lt;/p&gt;
+&lt;p&gt;つまり&lt;code&gt;STORING&lt;/code&gt;を使用すると&lt;strong&gt;WRITEコストおよびストレージコストの上昇&lt;/strong&gt;と引き換えに&lt;strong&gt;READコストを削減&lt;/strong&gt;できる。&lt;/p&gt;
+&lt;p&gt;また、ドキュメントでは&lt;code&gt;STORING&lt;/code&gt;の便利な応用例として&lt;code&gt;NULL_FILTERED&lt;/code&gt;インデックスとの併用を紹介している。それについてはこちらの記事が大変詳しいので参照されたい。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://zenn.dev/facengineer/articles/15e7a68fcc2fad&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://zenn.dev/facengineer/articles/15e7a68fcc2fad&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://zenn.dev/facengineer/articles/15e7a68fcc2fad&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://zenn.dev/facengineer/articles/15e7a68fcc2fad&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;アンチパターン&#34;&gt;アンチパターン&lt;/h3&gt;
+&lt;p&gt;ルートテーブルをタイムスタンプ順にしてしまうとテーブルの最後に巨大なホットスポットが生まれてしまう。&lt;/p&gt;
+&lt;p&gt;タイムスタンプ順に並んだレコードが必要な場合は以下の対策が有効。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;他のルートテーブルの1つにインターリーブする（ただし各ルートへの書き込みレートが十分低くなるようにする）&lt;/li&gt;
+&lt;li&gt;シャーディングを使用して時系列的に連続したデータを複数のスプリットに分散する&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;この例ではPKに&lt;code&gt;ShardId&lt;/code&gt;(0~N-1)を追加する方法を紹介している。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;spanner-sharding.webp&#34; alt=&#34;spanner-sharding.webp&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;スキーマ設計のベスト-プラクティス--spanner--google-cloud&#34;&gt;スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud&lt;/h2&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://cloud.google.com/spanner/docs/schema-design?hl=ja&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://cloud.google.com/spanner/docs/schema-design?hl=ja&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://cloud.google.com/spanner/docs/schema-design?hl=ja&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://cloud.google.com/spanner/docs/schema-design?hl=ja&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;次のような場合はキー列をタイムスタンプ降順に格納することでホットスポットを回避する。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最新の履歴を読み取る際、履歴にインターリーブ テーブルを使用しており、親行を読み取る場合&lt;/li&gt;
+&lt;li&gt;連続したエントリを日付の新しい順に読み込む場合に、いつまで日付をさかのぼるか不明なとき&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; UserAccessLog (
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;UserId     INT64 &lt;span style=&#34;color:#66d9ef&#34;&gt;NOT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;NULL&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;LastAccess &lt;span style=&#34;color:#66d9ef&#34;&gt;TIMESTAMP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;NOT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;NULL&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;PRIMARY&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;KEY&lt;/span&gt; (UserId, LastAccess &lt;span style=&#34;color:#66d9ef&#34;&gt;DESC&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;筆者はこれまでこのようなケースでは&lt;code&gt;UserAccessLog&lt;/code&gt;テーブルにUUIDを付与し&lt;code&gt;LastAccess&lt;/code&gt;降順なインデックスを作成することで対応することが多かった。この方法は選択肢として持てていなかったので必要になったら思い出せるとよさそう。&lt;/p&gt;
+&lt;p&gt;このケースはアクセスログなのでWRITE頻度が高いテーブルを想定していると思われる。インデックスで対応する方式と比較するとWRITEコストを下げることができる点でメリットがありそう。&lt;/p&gt;
+&lt;p&gt;と思っていたら続きにそのパターンの実装方法も書かれていた。&lt;/p&gt;
+&lt;h3 id=&#34;値が単調に増加または減少する列へのインターリーブされたインデックスの使用&#34;&gt;値が単調に増加または減少する列へのインターリーブされたインデックスの使用&lt;/h3&gt;
+&lt;p&gt;次のようなテーブルがあるとする。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; Users (
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;UserId     INT64 &lt;span style=&#34;color:#66d9ef&#34;&gt;NOT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;NULL&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;LastAccess &lt;span style=&#34;color:#66d9ef&#34;&gt;TIMESTAMP&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;PRIMARY&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;KEY&lt;/span&gt; (UserId);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;このテーブルに対して次のような(インターリーブされていない &amp;amp;&amp;amp; 最初のキーが単調増加する)インデックスを作成した場合、&lt;code&gt;LastAccess&lt;/code&gt;は単調増加する値なので最後のスプリットに書き込みが集中し、ホットスポットが発生してしまう。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; NULL_FILTERED &lt;span style=&#34;color:#66d9ef&#34;&gt;INDEX&lt;/span&gt; UsersByLastAccess &lt;span style=&#34;color:#66d9ef&#34;&gt;ON&lt;/span&gt; Users(LastAccess);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;このようなケースでは次のような対処が考えられる。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;インデックスに&lt;code&gt;ShardId&lt;/code&gt;を追加する&lt;/li&gt;
+&lt;li&gt;（そもそも）インデックスをインターリーブする&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;セカンダリ-インデックス--spanner--google-cloud&#34;&gt;セカンダリ インデックス  |  Spanner  |  Google Cloud&lt;/h2&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Spannerではセカンダリインデックスに次のデータが格納される。
+&lt;ul&gt;
+&lt;li&gt;ベーステーブルのすべてのキー列&lt;/li&gt;
+&lt;li&gt;インデックスに含まれるすべての列&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;STORING&lt;/code&gt;句で指定されたすべての列&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;null値の並び替え順&#34;&gt;NULL値の並び替え順&lt;/h3&gt;
+&lt;p&gt;Spannerでは&lt;code&gt;NULL&lt;/code&gt;を最小値として扱う。そのため昇順の場合は&lt;code&gt;NULL&lt;/code&gt;が先頭に、降順の場合は末尾に並ぶ。&lt;/p&gt;
+&lt;h3 id=&#34;末尾のレコードの取得&#34;&gt;末尾のレコードの取得&lt;/h3&gt;
+&lt;p&gt;次のようなクエリを実行する場合は結果をすばやく取得することができる。これはSpannerがテーブルの行を&lt;code&gt;PRIMARY_KEY&lt;/code&gt;によって辞書順に並べかえるため。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- テーブル定義
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; Songs (
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    SongId INT64 &lt;span style=&#34;color:#66d9ef&#34;&gt;NOT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;NULL&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;PRIMARY&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;KEY&lt;/span&gt; (SongId);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- クエリ
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; SongId &lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; Songs &lt;span style=&#34;color:#66d9ef&#34;&gt;LIMIT&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;しかしSpannerではテーブル全体をスキャンしないと列の最大値を取得することができないため次のようなクエリはすばやく結果を返さない。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; SongId &lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; Songs &lt;span style=&#34;color:#66d9ef&#34;&gt;ORDER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;BY&lt;/span&gt; SongId &lt;span style=&#34;color:#66d9ef&#34;&gt;DESC&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;LIMIT&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;このようなケースでは次のようにPK降順のインデックスを明示的に作成することで読み取りパフォーマンスを向上させることができる。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;INDEX&lt;/span&gt; SongIdDesc &lt;span style=&#34;color:#66d9ef&#34;&gt;On&lt;/span&gt; Songs(SongId &lt;span style=&#34;color:#66d9ef&#34;&gt;DESC&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;sharding-of-timestamp-ordered-data-in-cloud-spanner---googblogscom&#34;&gt;Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com&lt;/h2&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;タイムスタンプ順に並んだレコードをいかに効率よく挿入、取得するかについての解説記事。&lt;/p&gt;
+&lt;h3 id=&#34;レコードの挿入時&#34;&gt;レコードの挿入時&lt;/h3&gt;
+&lt;p&gt;次のようにCompanyID、UserID、Timestampの3つのキーを持つログテーブルがあるとする。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;CompanyId(PK)&lt;/th&gt;
+&lt;th&gt;UserId(PK)&lt;/th&gt;
+&lt;th&gt;Timestamp(PK)&lt;/th&gt;
+&lt;th&gt;LogEntry&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Acme&lt;/td&gt;
+&lt;td&gt;15b7bd1f-8473&lt;/td&gt;
+&lt;td&gt;2018-05-01T15:16:03.386257Z&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;このスキーマにしたがって単純にデータを挿入していくとユーザー数が多い企業があるとホットスポットが発生してしまう。&lt;/p&gt;
+&lt;p&gt;そのための次のような疑似コードで表現できる&lt;code&gt;EntryShardId&lt;/code&gt;を用いることで挿入時のホットスポットを回避できる。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;entryShardId &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; hash(CompanyId &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; timestamp) &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; num_shards
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;レコードの読み取り時&#34;&gt;レコードの読み取り時&lt;/h3&gt;
+&lt;p&gt;次のようなインデックスを追加する。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;INDEX&lt;/span&gt; LogEntriesByCompany &lt;span style=&#34;color:#66d9ef&#34;&gt;ON&lt;/span&gt; LogEntries(EntryShardId, CompanyId, &lt;span style=&#34;color:#66d9ef&#34;&gt;Timestamp&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;そして以下のようなクエリを実行する。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; CompanyId, UserId, &lt;span style=&#34;color:#66d9ef&#34;&gt;Timestamp&lt;/span&gt;, LogEntry
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; LogEntries&lt;span style=&#34;color:#f92672&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;{&lt;/span&gt;FORCE_INDEX&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;LogEntriesByCompany&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt; CompanyId &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Acme&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;AND&lt;/span&gt; EntryShardId &lt;span style=&#34;color:#66d9ef&#34;&gt;BETWEEN&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;AND&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;9&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;AND&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Timestamp&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;2018-05-01T15:14:10.386257Z&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;AND&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Timestamp&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;2018-05-01T15:16:10.386257Z&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ORDER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;BY&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Timestamp&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DESC&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;こうすることでインデックスを使って10個の論理シャードから条件にあったレコードを効率よく取得することができる。&lt;/p&gt;
+&lt;h3 id=&#34;余談&#34;&gt;余談&lt;/h3&gt;
+&lt;p&gt;前章のクエリのWHERE句内で以下のように&lt;code&gt;CompanyId, EntryShardId&lt;/code&gt;の順で指定していたので正しくインデックスが使えるのか気になったので試してみた。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt; CompanyId &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Acme&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;AND&lt;/span&gt; EntryShardId &lt;span style=&#34;color:#66d9ef&#34;&gt;BETWEEN&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;AND&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;9&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;準備&#34;&gt;準備&lt;/h4&gt;
+&lt;p&gt;任意のGoogle CloudプロジェクトでSpannerインスタンスを作成し、以下のDDLを実行してテーブルとインデックスを作成する。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; LogEntries (
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  CompanyId STRING(&lt;span style=&#34;color:#ae81ff&#34;&gt;36&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;NOT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;NULL&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  UserId STRING(&lt;span style=&#34;color:#ae81ff&#34;&gt;36&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;NOT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;NULL&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;Timestamp&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TIMESTAMP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;NOT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;NULL&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  EntryShardId INT64 &lt;span style=&#34;color:#66d9ef&#34;&gt;NOT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;NULL&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  LogEntry STRING(&lt;span style=&#34;color:#66d9ef&#34;&gt;MAX&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;NOT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;NULL&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;PRIMARY&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;KEY&lt;/span&gt; (CompanyId, UserId, &lt;span style=&#34;color:#66d9ef&#34;&gt;Timestamp&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;INDEX&lt;/span&gt; LogEntriesByCompany &lt;span style=&#34;color:#66d9ef&#34;&gt;ON&lt;/span&gt; LogEntries(EntryShardId, CompanyId, &lt;span style=&#34;color:#66d9ef&#34;&gt;Timestamp&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;次にテストデータをINSERTする。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;条件&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;シャード数&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Companyの数&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;従業員数&lt;/td&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;上記の条件で合計1000レコードを挿入するINSERT文を作成した。（スクリプトは&lt;a href=&#34;https://gist.github.com/kyu08/a751344fd76d4e50208164378a822dc1&#34; target=&#34;_blank&#34; &gt;こちら&lt;/a&gt;）&lt;/p&gt;
+&lt;h4 id=&#34;クエリの実行&#34;&gt;クエリの実行&lt;/h4&gt;
+&lt;p&gt;これに対して次の2つのクエリを実行し、実行計画を確認した。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- 記事で紹介されていたクエリ
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  CompanyId,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  UserId,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;Timestamp&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  LogEntry
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  LogEntries&lt;span style=&#34;color:#f92672&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;{&lt;/span&gt;FORCE_INDEX&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;LogEntriesByCompany&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  CompanyId &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;amazon&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;AND&lt;/span&gt; EntryShardId &lt;span style=&#34;color:#66d9ef&#34;&gt;BETWEEN&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;AND&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;9&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;AND&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Timestamp&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;2023-01-01T00:00:00.386257Z&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;AND&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Timestamp&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;2023-01-01T00:00:05.386257Z&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ORDER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;BY&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;Timestamp&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DESC&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- CompanyId, EntryShardIdの順番を逆にしてみたクエリ
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  CompanyId,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  UserId,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;Timestamp&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  LogEntry
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  LogEntries&lt;span style=&#34;color:#f92672&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;{&lt;/span&gt;FORCE_INDEX&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;LogEntriesByCompany&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  EntryShardId &lt;span style=&#34;color:#66d9ef&#34;&gt;BETWEEN&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;AND&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;9&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;AND&lt;/span&gt; CompanyId &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;amazon&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;AND&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Timestamp&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;2023-01-01T00:00:00.386257Z&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;AND&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Timestamp&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;2023-01-01T00:00:05.386257Z&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ORDER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;BY&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;Timestamp&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DESC&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;結果&#34;&gt;結果&lt;/h4&gt;
+&lt;p&gt;結論からいうとどちらのクエリでも同様にインデックスを利用できていた。おそらくSpannerのオプティマイザがいい感じに判断してくれていると思われる。以下が実際の実行計画。&lt;/p&gt;
+&lt;p&gt;記事で紹介されていたクエリ
+&lt;img src=&#34;original.webp&#34; alt=&#34;original.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;CompanyId, EntryShardIdの順番を逆にしてみたクエリ
+&lt;img src=&#34;swap.webp&#34; alt=&#34;swap.webp&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;cloud-spanner-におけるトランザクションのロックについて&#34;&gt;Cloud Spanner におけるトランザクションのロックについて&lt;/h2&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Spanner におけるトランザクションのロックの粒度は、セル、つまり行と列の交点となります。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;なのでREAD, WRITEの範囲(行および列)を最小限にすることでロック範囲を最小限にすることができる。結果として他のトランザクションに与えるパフォーマンス影響を最小限にすることができる。&lt;/p&gt;
+&lt;p&gt;他には複数のトランザクションが同時に実行された際の優先度について詳しく解説してあった。&lt;/p&gt;
+&lt;h2 id=&#34;spanner-の読み取りと書き込みのライフサイクル--google-cloud&#34;&gt;Spanner の読み取りと書き込みのライフサイクル  |  Google Cloud&lt;/h2&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;Spannerのレプリカセットの構成については次の記事が非常にわかりやすい。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://zenn.dev/facengineer/articles/bca8790087b0e4&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://zenn.dev/facengineer/articles/bca8790087b0e4&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://zenn.dev/facengineer/articles/bca8790087b0e4&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://zenn.dev/facengineer/articles/bca8790087b0e4&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;読み込みおよび書き込み時のロックの取り方について詳しく解説されていた。&lt;/p&gt;
+&lt;h3 id=&#34;読み取り専用トランザクション&#34;&gt;読み取り専用トランザクション&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;ロックを取得せずに実行できるため高速&lt;/li&gt;
+&lt;li&gt;ステイル読み込みを使用できる場合はより高速にすることができる（他のオペレーションに与えるパフォーマンス影響も抑えることができる）
+&lt;ul&gt;
+&lt;li&gt;Spannerはレプリカへの同期を10秒ごとに行っているため、10秒以上前のデータをステイル読み込みできる場合は読み取りのスループットをさらに高めることができる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;読み取り--書き込みトランザクション&#34;&gt;読み取り / 書き込みトランザクション&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;読み取った行に対して共有ロックを取得する&lt;/li&gt;
+&lt;li&gt;書き込む行に対して排他ロックを取得する&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ちなみに複数のトランザクションが同時に実行された場合の挙動については次の記事が詳しかった。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;sql-のベスト-プラクティス--spanner--google-cloud&#34;&gt;SQL のベスト プラクティス  |  Spanner  |  Google Cloud&lt;/h2&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;クエリパラメータの使用&#34;&gt;クエリパラメータの使用&lt;/h3&gt;
+&lt;p&gt;クエリパラメータを使用することで次のメリットがある。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;キャッシュが容易になるためクエリのパフォーマンスが向上する&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;文字列の値をエスケープする必要がないため構文エラーのリスクが減る&lt;/li&gt;
+&lt;li&gt;SQLインジェクションを防ぐことができる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;範囲キーのルックアップを最適化する&#34;&gt;範囲キーのルックアップを最適化する&lt;/h3&gt;
+&lt;p&gt;キーのリストが短く、連続していない場合は次のように&lt;code&gt;IN UNNEST&lt;/code&gt;を使用する。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Table&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;AS&lt;/span&gt; t
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt; t.&lt;span style=&#34;color:#66d9ef&#34;&gt;Key&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;IN&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;UNNEST&lt;/span&gt; (&lt;span style=&#34;color:#f92672&#34;&gt;@&lt;/span&gt;KeyList)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;キーのリストが連続して範囲内である場合には次のように下限と上限を設定する。&lt;code&gt;[@min, @max]&lt;/code&gt;の範囲をすべてスキャンするため効率的にスキャンできる。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Table&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;AS&lt;/span&gt; t
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt; t.&lt;span style=&#34;color:#66d9ef&#34;&gt;Key&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;BETWEEN&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;min&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;AND&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;max&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;結合を最適化する&#34;&gt;結合を最適化する&lt;/h3&gt;
+&lt;h4 id=&#34;可能な限りインターリーブされたテーブルのデータを主キーによって結合する&#34;&gt;可能な限りインターリーブされたテーブルのデータを主キーによって結合する&lt;/h4&gt;
+&lt;p&gt;インターリーブされた子行とそのルート行は基本的に同じスプリットに格納されるためローカルで結合することができ、効率的に結合できるため。&lt;/p&gt;
+&lt;h4 id=&#34;結合の順序を強制する&#34;&gt;結合の順序を強制する&lt;/h4&gt;
+&lt;p&gt;Spanner側の最適化によって結合順序が変更され（この場合は&lt;code&gt;Singers JOIN Albums&lt;/code&gt;と記述したが&lt;code&gt;Albums JOIN Singers&lt;/code&gt;の順序に変更されたケース）パフォーマンスが低下した場合などは&lt;code&gt;FORCE_JOIN_ORDER&lt;/code&gt;ヒントを使用することで結合順序を強制することができる。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; Singers &lt;span style=&#34;color:#66d9ef&#34;&gt;AS&lt;/span&gt; s &lt;span style=&#34;color:#66d9ef&#34;&gt;JOIN&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;{&lt;/span&gt;FORCE_JOIN_ORDER&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;TRUE&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;}&lt;/span&gt; Albums &lt;span style=&#34;color:#66d9ef&#34;&gt;AS&lt;/span&gt; a
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ON&lt;/span&gt; s.SingerId &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a.Singerid
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt; s.LastName &lt;span style=&#34;color:#66d9ef&#34;&gt;LIKE&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;%x%&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;AND&lt;/span&gt; a.AlbumTitle &lt;span style=&#34;color:#66d9ef&#34;&gt;LIKE&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;%love%&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;joinアルゴリズムを指定する&#34;&gt;JOINアルゴリズムを指定する&lt;/h4&gt;
+&lt;p&gt;次のように&lt;code&gt;JOIN_METHOD&lt;/code&gt;ヒントを使用することでJOINアルゴリズムを指定することができる。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; Singers s &lt;span style=&#34;color:#66d9ef&#34;&gt;JOIN&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;{&lt;/span&gt;JOIN_METHOD&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;HASH_JOIN&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;}&lt;/span&gt; Albums &lt;span style=&#34;color:#66d9ef&#34;&gt;AS&lt;/span&gt; a
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ON&lt;/span&gt; a.SingerId &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a.SingerId
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;JOINアルゴリズムについては次の記事が詳しい。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://zenn.dev/facengineer/articles/cc0cab5c7e9a1c#join%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://zenn.dev/facengineer/articles/cc0cab5c7e9a1c#join%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://zenn.dev/facengineer/articles/cc0cab5c7e9a1c#join%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://zenn.dev/facengineer/articles/cc0cab5c7e9a1c#join%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;likeの代わりにstarts_withを使用する&#34;&gt;&lt;code&gt;LIKE&lt;/code&gt;の代わりに&lt;code&gt;STARTS_WITH&lt;/code&gt;を使用する&lt;/h3&gt;
+&lt;p&gt;Spannerはパラメータ化された&lt;code&gt;LIKE&lt;/code&gt;パターンを実行時まで評価しないのですべての行を読み取ったうえで&lt;code&gt;LIKE&lt;/code&gt;式で評価し、一致しない行を除外するためパフォーマンスが悪い。&lt;/p&gt;
+&lt;p&gt;適切なインデックスが作成されている場合は&lt;code&gt;LIKE&lt;/code&gt;の代わりに&lt;code&gt;STARTS_WITH&lt;/code&gt;を使用するとSpannerはクエリ実行プランをより効率的に最適化することができる。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- 非推奨
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; a.AlbumTitle &lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; Albums a
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt; a.AlbumTitle &lt;span style=&#34;color:#66d9ef&#34;&gt;LIKE&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;@&lt;/span&gt;like_clause;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- 推奨
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; a.AlbumTitle &lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; Albums a
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt; STARTS_WITH(a.AlbumTitle, &lt;span style=&#34;color:#f92672&#34;&gt;@&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;prefix&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;クエリ実行プラン--spanner--google-cloud&#34;&gt;クエリ実行プラン  |  Spanner  |  Google Cloud&lt;/h2&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;CPUの消費量が多いクエリの場合、実行計画は30日間保存されている。&lt;/p&gt;
+&lt;p&gt;確認方法は以下。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;クエリごとにレイテンシや返された行数、スキャン行数の平均値や実行回数確認することができるためチューニングの際にかなり便利そう。&lt;/p&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;Spannerの気持ちが少しわかった。すごく強引にまとめると以下のようなポイントが重要そう。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ホットスポットに注意する&lt;/li&gt;
+&lt;li&gt;結合コストを最小限にする&lt;/li&gt;
+&lt;li&gt;スキャン行数を最小限にする&lt;/li&gt;
+&lt;li&gt;ロック範囲を最小限にする&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;これまで漫然とドキュメントを読んで頭に入らなかったり記憶が定着しなかったりしたが、ブログにアウトプットしながら読むと理解度も定着度も（モチベーションも）上がるのでやってよかった。&lt;/p&gt;
+&lt;p&gt;次はCloud Runとも仲良くなりたい。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;①ルートテーブル②インターリーブされたテーブル③インターリーブの子を持たない通常のテーブルの3種類だと思い込んでいたが③は①として扱われるようだ。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
