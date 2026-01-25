@@ -388,8 +388,8 @@ blockquote::before {
 /* Table of Contents Styles */
 
 /* Sidebar TOC: Desktop only (sticky on the right) */
-/* Show sidebar TOC for screens 1400px and wider */
-@media (min-width: 1400px) {
+/* Show sidebar TOC for screens 1200px and wider */
+@media (min-width: 1200px) {
   .table-of-contents-sidebar {
     position: fixed;
     top: 20px;
@@ -497,7 +497,7 @@ blockquote::before {
 }
 
 /* Mobile/Narrower Desktop: Floating button and overlay TOC */
-@media (max-width: 1399px) {
+@media (max-width: 1199px) {
   /* Show mobile button */
   .toc-mobile-button {
     position: fixed;
