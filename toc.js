@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const tocSidebar = document.querySelector('.table-of-contents-sidebar');
   if (!tocSidebar) return;
 
-  // Create mobile TOC button (shown on screens < 1400px)
+  // Create mobile TOC button (shown on screens < 1200px)
   const tocButton = document.createElement('button');
   tocButton.className = 'toc-mobile-button';
   tocButton.setAttribute('aria-label', '目次を表示');
@@ -152,8 +152,8 @@ document.addEventListener('DOMContentLoaded', function() {
         link.classList.add('toc-active');
         
         // Auto-scroll the TOC to keep the active item visible
-        // Only scroll if sidebar is visible (desktop >= 1400px)
-        if (window.innerWidth >= 1400) {
+        // Only scroll if sidebar is visible (desktop >= 1200px)
+        if (window.innerWidth >= 1200) {
           link.scrollIntoView({
             behavior: 'smooth',
             block: 'center',
