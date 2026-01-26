@@ -24,9 +24,14 @@
 &lt;/blockquote&gt;
 &lt;p&gt;解像度の構成要素を「深さ」「広さ」「構造」「時間」の4つと整理する視点を得られたのが本書を読んで一番良かったポイントかもしれない。&lt;/p&gt;
 &lt;p&gt;「なんか解像度が低いぞ&amp;hellip;」となったときにどの要素が足りていないかを考えることで効率的に再現性高く解像度を上げることができそう。他の人のアウトプットへのFBにもかなり便利に使えそう。&lt;/p&gt;
+&lt;p&gt;4要素は以下のように理解した。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;深さ:&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;広さ:&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;構造:&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;時間:&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;h2 id=&#34;2&#34;&gt;2&lt;/h2&gt;
-&lt;p&gt;4要素についてそれぞれ説明する？&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;情報をツリー構造で整理する&#34;&gt;情報をツリー構造で整理する&lt;/h2&gt;
 &lt;blockquote&gt;
