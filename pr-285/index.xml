@@ -77,6 +77,7 @@
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;aiツール&#34;&gt;AIツール&lt;/h2&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;ClaudeとDevinを使っている。&lt;/p&gt;
 &lt;p&gt;ClaudeはDesktop App経由で壁打ちや検索用途で使ったり、Claude Codeでコードを書いてもらったりしている。&lt;/p&gt;
 &lt;p&gt;Claude Codeを使うときはNeovim plugin等ではなくtmuxのpaneを切ってそこで直接動かしている。&lt;/p&gt;
