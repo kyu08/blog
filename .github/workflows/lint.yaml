@@ -1,6 +1,11 @@
 name: textlint
-on: 
+on:
   pull_request:
+
+concurrency:
+  group: lint-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
 jobs:
   textlint:
     name: textlint
@@ -14,7 +19,11 @@ jobs:
       - name: Setup Node/npm
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install pnpm
+        run: npm install -g pnpm@10.20.0
       - name: textlint-github-check
         uses: tsuyoshicho/action-textlint@v3
         with:
