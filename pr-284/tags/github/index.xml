@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GitHub on blog.kyu08.com</title>
+    <link>https://blog.kyu08.com/pr-284/tags/github/</link>
+    <description>Recent content in GitHub on blog.kyu08.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>blog.kyu08.com</copyright>
+    <lastBuildDate>Mon, 02 Sep 2024 15:54:12 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-284/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>forkしたrepositoryのremoteを最新化しつつローカルにpullするスクリプトを書いた</title>
+      <link>https://blog.kyu08.com/pr-284/posts/gh-sync-remote-and-pull/</link>
+      <pubDate>Mon, 02 Sep 2024 15:54:12 +0000</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-284/posts/gh-sync-remote-and-pull/</guid>
+      <description>前提 ghコマンドがインストールされていること デフォルトブランチにいること tl;dr # forkしたrepositoryのremoteを更新しつつpul</description>
+      <content>&lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;gh&lt;/code&gt;コマンドがインストールされていること&lt;/li&gt;
+&lt;li&gt;デフォルトブランチにいること&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tldr&#34;&gt;tl;dr&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# forkしたrepositoryのremoteを更新しつつpullする&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; git-sync&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    REPO&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;git remote get-url origin | sed -E &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s%.+github.com/(.*).git$%\1%&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;🔄 Syncing &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;REPO&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;...\\n&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    gh repo sync &lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;REPO&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git pull
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias gsy&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;git-sync
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;嬉しさ&#34;&gt;嬉しさ&lt;/h2&gt;
+&lt;p&gt;もともとは以下の2ステップだったが前述のスクリプトを使うと1ステップにまとめることができる。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ブラウザで&lt;code&gt;Sync fork &amp;gt; Update branch&lt;/code&gt;をクリック&lt;/li&gt;
+&lt;li&gt;ローカルで&lt;code&gt;git pull&lt;/code&gt;を実行&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>ブラウザからforkすると遅いのでCLIからfork &amp; cloneするスクリプトを書いた</title>
+      <link>https://blog.kyu08.com/pr-284/posts/gh-repo-fork-script/</link>
+      <pubDate>Sun, 18 Aug 2024 06:52:01 +0000</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-284/posts/gh-repo-fork-script/</guid>
+      <description>モチベーション GitHubにホストされているOSSにPRを出す時にforkしてからローカルにcloneするが、ブラウザのforkボタンを使っ</description>
+      <content>&lt;h2 id=&#34;モチベーション&#34;&gt;モチベーション&lt;/h2&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;GitHubにホストされているOSSにPRを出す時にforkしてからローカルにcloneするが、ブラウザのforkボタンを使ってforkすると時間がかかることが多くストレスに感じていた。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;そのためCLI上でforkとcloneを行うスクリプトを書いた。&lt;/p&gt;
+&lt;p&gt;これまでの手順は以下のような手順が必要だった。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ブラウザでforkボタンを押す&lt;/li&gt;
+&lt;li&gt;forkの完了を待つ&lt;/li&gt;
+&lt;li&gt;ブラウザに表示されるcloneコマンドをコピー(&lt;code&gt;gh repo clone owner/repo&lt;/code&gt;みたいなやつ)&lt;/li&gt;
+&lt;li&gt;ターミナルでコマンドを実行してforkしたリポジトリをcloneする&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;これを以下のステップでできるようにした。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;リポジトリのURLまたは&lt;code&gt;OWNER/REPO&lt;/code&gt;形式の文字列をコピー&lt;/li&gt;
+&lt;li&gt;コマンドに1. で取得した文字列を渡して実行&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;つくったスクリプト&#34;&gt;つくったスクリプト&lt;/h2&gt;
+&lt;p&gt;以下を&lt;code&gt;.zshrc&lt;/code&gt;などに追加すると使えるようになる。&lt;code&gt;alias&lt;/code&gt;の部分はお好みで。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; git-fork-clone&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# 入力からowner/repoを取り出す。owner/repoのような形式でもURLでもOK&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    REPO&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;echo $1 | sed -E &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s@.+github.com/([^/]+)/([^/]+).*@\1/\2@&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;🐙 &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;REPO&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; will be forked and cloned.\\n&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# -- 以降のオプションはgit cloneに渡される&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# See: https://cli.github.com/manual/gh_repo_fork&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    gh repo fork &lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;REPO&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt; --default-branch-only --clone&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;true -- --filter&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;blob:none
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias gf&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;git-fork-clone
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;gh&lt;/code&gt;コマンドがインストールされていること。&lt;/p&gt;
+&lt;h2 id=&#34;使い方&#34;&gt;使い方&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git-fork-clone https://github.com/cli/cli
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;上記を実行すると以下のような出力が表示され、リポジトリのforkとcloneが行われる。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;🐙 cli/cli will be forked and cloned.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;✓ Created fork kyu08/cli
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Cloning into &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;cli&amp;#39;&lt;/span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;remote: Enumerating objects: 31, &lt;span style=&#34;color:#66d9ef&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;remote: Counting objects: 100% &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;31/31&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;remote: Compressing objects: 100% &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;30/30&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;remote: Total &lt;span style=&#34;color:#ae81ff&#34;&gt;31&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;delta 0&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;, reused &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;delta 0&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;, pack-reused &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;from 0&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Receiving objects: 100% &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;31/31&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;, 20.41 KiB | 10.20 MiB/s, &lt;span style=&#34;color:#66d9ef&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;From github.com:cli/cli
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; * &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;new branch&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;      main       -&amp;gt; upstream/main
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; * &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;new tag&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;         v1.0.1     -&amp;gt; v1.0.1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;✓ Cloned fork
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以下のような形式でも動く。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git-fork-clone https://github.com/cli/cli/pulls&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git-fork-clone cli/cli&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;また人類のOSS貢献力を加速させてしまいました。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;完全に余談だがスクリプトの&lt;code&gt;REPO=...&lt;/code&gt;の部分は &lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.tutorialspoint.com/execute_bash_online.php&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://www.tutorialspoint.com/execute_bash_online.php&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://www.tutorialspoint.com/execute_bash_online.php&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.tutorialspoint.com/execute_bash_online.php&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+ を使って出先で書いた。スマホでもシェルスクリプトが書けて便利。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>GitHubで自分がOSSに送ったPR一覧を表示するやつ</title>
+      <link>https://blog.kyu08.com/pr-284/posts/github-pr-list/</link>
+      <pubDate>Sun, 22 Oct 2023 10:26:39 +0000</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-284/posts/github-pr-list/</guid>
+      <description>稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ってマージさ</description>
+      <content>&lt;p&gt;稀に自分がOSSに送ったPR一覧を見たくなるのでメモ代わりに書く。 (正確には「自分所有でないpublic repositoryに送ってマージされたPR一覧」を表示する方法)&lt;/p&gt;
+&lt;h2 id=&#34;tldr&#34;&gt;tl;dr&lt;/h2&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/pulls&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/pulls&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/pulls&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/pulls&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+ でクエリに&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;is:pr archived:false is:closed author:@me is:public -user:@me created:2024-01-01..2024-12-31 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;を指定して検索するとこんな感じで表示される。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;pulls.webp&#34; alt=&#34;pulls&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;余談&#34;&gt;余談&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;orgを所属組織とかに絞って検索すれば仕事の振り返りとかにも使えそう。&lt;/li&gt;
+&lt;li&gt;他にも &lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/pulls/review-requested&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/pulls/review-requested&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/pulls/review-requested&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/pulls/review-requested&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+ にいくと自分がレビュワーとしてアサインされているPR一覧が見れて便利だったりする。ターミナル上で同じようなことをやりたい人は &lt;a href=&#34;https://github.com/dlvhdr/gh-dash&#34; target=&#34;_blank&#34; &gt;dlvhdr/gh-dash&lt;/a&gt; とかもオススメかもしれない。&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

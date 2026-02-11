@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+    <title>RFC 2606: Reserved Top Level DNS Namesを読んで知らなかったことを書く :: blog.kyu08.com</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="本記事はUnipos Advent Calendar 2024の16日目の記事です。 ふいに見かけたRFC 2606: Reserved Top Level DNS Namesを読んでみたところ発見があったのでその内容をま" />
+<meta name="keywords" content="RFC" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://blog.kyu08.com/pr-284/posts/reserved-top-level-dns-names-rfc-2606/" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BDQ408J45J', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-284/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-284/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-284/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-284/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-284/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-284/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-284/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-284/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-284/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-284/css/post.min.f049fef13af1dfd5ea526cc59ea5a3fc7be11a05911ca7198c5bb9225250119c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-284/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-284/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-284/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-284/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+<link rel="stylesheet" href="https://blog.kyu08.com/pr-284/style.css">
+
+
+<link rel="shortcut icon" href="https://blog.kyu08.com/pr-284/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/pr-284/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="kyu08_" />
+
+
+
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="RFC 2606: Reserved Top Level DNS Namesを読んで知らなかったことを書く">
+<meta property="og:description" content="本記事はUnipos Advent Calendar 2024の16日目の記事です。 ふいに見かけたRFC 2606: Reserved Top Level DNS Namesを読んでみたところ発見があったのでその内容をま" />
+<meta property="og:url" content="https://blog.kyu08.com/pr-284/posts/reserved-top-level-dns-names-rfc-2606/" />
+<meta property="og:site_name" content="blog.kyu08.com" />
+
+
+  
+  
+    
+  
+
+
+  <meta property="og:image" content="https://blog.kyu08.com/pr-284/posts/reserved-top-level-dns-names-rfc-2606/cover.png">
+  <meta name="twitter:image" content="https://blog.kyu08.com/pr-284/posts/reserved-top-level-dns-names-rfc-2606/cover.png">
+  <meta name="twitter:image:alt" content="RFC 2606: Reserved Top Level DNS Namesを読んで知らなかったことを書く">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+  <meta property="article:published_time" content="2024-12-15 15:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+<link rel="author" href="http://www.hatena.ne.jp/kyu08/" />
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ . }}');
+</script>
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    blog.kyu08.com
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/pr-284/tags/diary/">_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-284/about">about</a></li>
+        
+      
+        
+          <li><a href="/pr-284/index.xml">rss</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/pr-284/tags/diary/" >_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-284/about" >about</a></li>
+        
+      
+        
+          <li><a href="/pr-284/index.xml" >rss</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://blog.kyu08.com/pr-284/posts/reserved-top-level-dns-names-rfc-2606/">RFC 2606: Reserved Top Level DNS Namesを読んで知らなかったことを書く</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2024/12/15</time>
+      
+    <span class="post-reading-time">4 min read (1952 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://blog.kyu08.com/pr-284/tags/rfc/">RFC</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="/pr-284/posts/reserved-top-level-dns-names-rfc-2606/cover.png"
+    class="post-cover"
+    alt="RFC 2606: Reserved Top Level DNS Namesを読んで知らなかったことを書く"
+    title="Cover Image" />
+
+
+  
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#rfc-2606の概要">RFC 2606の概要</a></li>
+    <li><a href="#予約されたtop-level-domain-names">予約されたTop Level Domain Names</a></li>
+    <li><a href="#予約されたsecond-level-domain-names">予約されたSecond Level Domain Names</a></li>
+    <li><a href="#著作権表示">著作権表示</a></li>
+    <li><a href="#感想">感想</a></li>
+  </ul>
+</nav>
+  
+
+  <div class="post-content"><div>
+        <p>本記事は<a href="https://qiita.com/advent-calendar/2024/unipos" target="_blank" >Unipos Advent Calendar 2024</a>の16日目の記事です。</p>
+<p>ふいに見かけた<a href="https://datatracker.ietf.org/doc/html/rfc2606" target="_blank" >RFC 2606: Reserved Top Level DNS Names</a>を読んでみたところ発見があったのでその内容をまとめてみようと思います。</p>
+<h2 id="rfc-2606の概要">RFC 2606の概要<a href="#rfc-2606の概要" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<blockquote>
+<p>Abstract</p>
+<p>To reduce the likelihood of conflict and confusion, a few top level
+domain names are reserved for use in private testing, as examples in
+documentation, and the like.  In addition, a few second level domain
+names reserved for use as examples are documented.</p>
+</blockquote>
+<ul>
+<li>対立や混乱を減らす目的でいくつかのTLD名が予約されている。用途はプライベートなテスト用、ドキュメントでの例示用など。</li>
+<li>上記に加えて例示用にいくつかのSecond Level Domain Namesが予約されている。</li>
+</ul>
+<h2 id="予約されたtop-level-domain-names">予約されたTop Level Domain Names<a href="#予約されたtop-level-domain-names" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<blockquote>
+<p>There is a need for top level domain (TLD) names that can be used for
+creating names which, without fear of conflicts with current or
+future actual TLD names in the global DNS, can be used for private
+testing of existing DNS related code, examples in documentation, DNS
+related experimentation, invalid DNS names, or other similar uses.</p>
+</blockquote>
+<p>DNSのプライベートテスト用やドキュメントなどの目的で使用できるTLD名が必要であるとのこと。（DNSへの解像度がとても低いので具体的にどんなテストが行われるのかの想像はついていない&hellip;）<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<blockquote>
+<p>To safely satisfy these needs, four domain names are reserved as
+listed and described below.</p>
+<pre><code>            .test
+         .example
+         .invalid
+       .localhost
+</code></pre>
+<p>&ldquo;.test&rdquo; is recommended for use in testing of current or new DNS
+related code.</p>
+<p>&ldquo;.example&rdquo; is recommended for use in documentation or as examples.</p>
+<p>&ldquo;.invalid&rdquo; is intended for use in online construction of domain
+names that are sure to be invalid and which it is obvious at a
+glance are invalid.</p>
+<p>The &ldquo;.localhost&rdquo; TLD has traditionally been statically defined in
+host DNS implementations as having an A record pointing to the
+loop back IP address and is reserved for such use.  Any other use
+would conflict with widely deployed code which assumes this use.</p>
+</blockquote>
+<p>上記のニーズを満たすために、次の4つのTLD名が予約されている。</p>
+<ul>
+<li><code>.test</code>: 既存のまたは新規のDNS関連コードのテストに使用することが推奨されている。</li>
+<li><code>.example</code>: ドキュメントや例示として使用することが推奨されている。</li>
+<li><code>.invalid</code>: 無効であることが確実で一目で無効であることが明らかなドメイン名をオンラインで構築する際に使用することを目的としている。</li>
+<li><code>.localhost</code>: 伝統的にホストDNS実装においてループバックIPアドレスを指すAレコードを持つものとして静的に定義されておりこのような使用のために予約されている。</li>
+</ul>
+<p><code>.invalid</code>の説明がわからなかったのでWikipadiaを参照してみたところ次のような記述があった。</p>
+<blockquote>
+<p>This top-level domain is sometimes used as a pseudo domain name in Uniform Resource Identifiers (URIs) to convey either an error condition or in use of privacy protection.</p>
+<p><div class="blogcard" data-url="https://en.wikipedia.org/wiki/.invalid" data-auto-fetch="true">
+  <a href="https://en.wikipedia.org/wiki/.invalid" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://en.wikipedia.org/wiki/.invalid</div><div class="blogcard-url">https://en.wikipedia.org/wiki/.invalid</div>
+    </div>
+  </a>
+</div>
+ より引用</p>
+</blockquote>
+<p>要はエラーケースのテストのためやプライバシー保護の目的で擬似ドメイン名として利用されることがある、と理解した。(このあたりの深い理解は別途時間をとりたい)</p>
+<p>これらのTLD名は見たことはあったがRFCとして明示されていることは知らなかった。</p>
+<h2 id="予約されたsecond-level-domain-names">予約されたSecond Level Domain Names<a href="#予約されたsecond-level-domain-names" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<blockquote>
+<p>3 Reserved Example Second Level Domain Names</p>
+<p>The Internet Assigned Numbers Authority (IANA) also currently has the
+following second level domain names reserved which can be used as
+examples.</p>
+<pre><code> example.com
+ example.net
+ example.org
+</code></pre>
+</blockquote>
+<p><code>example.com</code>以外にも<code>example.net</code>と<code>example.org</code>が予約されていることは知らなかった。</p>
+<p>また、<code>4. IANA Considerations</code>にも記述があるが、本文章で示されたTLD名およびSecond Level Domain名はInternet Assigned Numbers Authority(IANA)によって予約される。</p>
+<h2 id="著作権表示">著作権表示<a href="#著作権表示" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<blockquote>
+<p>Copyright (C) The Internet Society (1999).  All Rights Reserved.</p>
+<p>This document and translations of it may be copied and furnished to
+others, and derivative works that comment on or otherwise explain it
+or assist in its implementation may be prepared, copied, published
+and distributed, in whole or in part, without restriction of any
+kind, provided that the above copyright notice and this paragraph are
+included on all such copies and derivative works.  However, this
+document itself may not be modified in any way, such as by removing
+the copyright notice or references to the Internet Society or other
+Internet organizations, except as needed for the purpose of
+developing Internet standards in which case the procedures for
+copyrights defined in the Internet Standards process must be
+followed, or as required to translate it into languages other than
+English.</p>
+</blockquote>
+<h2 id="感想">感想<a href="#感想" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>はじめてRFCを読んだ。部分的に馴染みのある内容だったし文量としても多くなかったのでスムーズに読めた。</p>
+<p>これまでは「誰かがテスト用ドメインとして<code>example.com</code>を抑えてくれているのでテスト用に使ってOK」という程度の理解だったが、いくつかのDomain名がテスト、例示目的で予約されることがRFCで明示されておりIANAが実際にそれらを予約していることでテスト用ドメインが利用できているということを知ることができた。</p>
+<p>物事を正確に理解するとトラブルシューティングや改善も素早くできるはずだし、知らなかったことをブログに書くと自分の理解も捗る(あと純粋に楽しい)ので、これからも自分の理解が曖昧なことを理解し共有する営みをやっていきたい。</p>
+<p>改めてネットワークは本当に何もわからないのでこの冬に時間をとって勉強したい。<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://www.amazon.co.jp/Linux%E3%81%A7%E5%8B%95%E3%81%8B%E3%81%97%E3%81%AA%E3%81%8C%E3%82%89%E5%AD%A6%E3%81%B6TCP-IP%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E5%85%A5%E9%96%80-%E3%82%82%E3%81%BF%E3%81%98%E3%81%82%E3%82%81-ebook/dp/B085BG8CH5" target="_blank" >Linuxで動かしながら学ぶTCP/IPネットワーク入門</a>や<a href="https://www.sbcr.jp/product/4815618599/" target="_blank" >体験しながら学ぶ ネットワーク技術入門</a>あたりで腰を据えてネットワーク周りを学びたい&hellip;。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>が、次は<a href="https://www.oreilly.co.jp/books/9784814400874/" target="_blank" >コンピュータシステムの理論と実装 第2版</a>をやると決めているのでやるとしたらその次かな&hellip;。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>ちなみに、他のRFCを眺めていたら<code>SHOULD</code>, <code>MUST</code>のようなキーワードが大文字で強調されていたが、それらのキーワードの解釈については<a href="https://datatracker.ietf.org/doc/html/rfc2119" target="_blank" >RFC 2119: Key words for use in RFCs to Indicate Requirement Levels</a>で説明されていたのでよければ参照ください。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+      </div></div>
+
+  
+  
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="https://blog.kyu08.com/pr-284/posts/looking-back-on-2024/" class="button inline prev">
+        2024年を振り返る
+      </a>
+    
+    
+      <a href="https://blog.kyu08.com/pr-284/posts/chrome-extensions-for-dev-2024/" class="button inline next">
+        ソフトウェアエンジニア目線で使ってみて便利だったChrome拡張を紹介する
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+        repo="kyu08/blog-comments"
+        issue-term="pathname"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  
+
+  
+    <div class="table-of-contents-sidebar">
+      <h2>
+        目次
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#rfc-2606の概要">RFC 2606の概要</a></li>
+    <li><a href="#予約されたtop-level-domain-names">予約されたTop Level Domain Names</a></li>
+    <li><a href="#予約されたsecond-level-domain-names">予約されたSecond Level Domain Names</a></li>
+    <li><a href="#著作権表示">著作権表示</a></li>
+    <li><a href="#感想">感想</a></li>
+  </ul>
+</nav>
+    </div>
+    <script src="https://blog.kyu08.com/pr-284/toc.js"></script>
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>blog.kyu08.com</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/pr-284/bundle.min.js"></script>
+
+
+<font color="#808080">
+  <span>
+    This site uses Google Analytics for access analysis.
+    Google Analytics uses cookies to collect traffic data, but this traffic data is collected anonymously and does not personally identify you.
+    Cookies can be disabled in your browser.
+  </span>
+</font>
+
+
+<script src="https://blog.kyu08.com/pr-284/blogcard.js"></script>
+
+
+  
+</div>
+
+</body>
+</html>
