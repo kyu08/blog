@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Wed, 11 Feb 2026 00:00:41 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-281/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Feb 2026 13:00:41 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-281/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>『解像度を上げる』を読んだ</title>
       <link>https://blog.kyu08.com/pr-281/posts/kaizodo-wo-ageru/</link>
-      <pubDate>Wed, 11 Feb 2026 00:00:41 +0900</pubDate>
+      <pubDate>Wed, 11 Feb 2026 13:00:41 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/pr-281/posts/kaizodo-wo-ageru/</guid>
       <description>おすすめしていただいて気になっていた『解像度を上げる――曖昧な思考を明晰にする「深さ・広さ・構造・時間」の４視点と行動法』を読んだ。 起業家に</description>
@@ -132,6 +132,8 @@
 &lt;/blockquote&gt;
 &lt;p&gt;これまであまりプログラミングコミュニティに参加してこなかったが、今年はGoの知識を深めたいのでチャレンジしてみようと思った。（さっそく2/21のGo Conference mini in Sendai 2026に行ってることにした）&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;主に起業家や起業家を志す人に向けて書かれているように感じたが、いちソフトウェアエンジニアとしても参考になる部分が非常に多く、読んでよかった。&lt;/p&gt;
+&lt;p&gt;解像度を上げるための4つの視点「深さ」「広さ」「構造」「時間」は非常に有用なフレームワークだと感じたのでしばらくは意識的に使ってみようと思う。&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
