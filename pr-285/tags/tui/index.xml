@@ -127,6 +127,7 @@
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;/p&gt;
+&lt;p&gt;tmuxの設定とか工夫を紹介する記事は別で書きたい。&lt;/p&gt;
 &lt;h2 id=&#34;シェル&#34;&gt;シェル&lt;/h2&gt;
 &lt;p&gt;zshを使っている。&lt;/p&gt;
 &lt;p&gt;元々はネットに落ちているshellのコードが（fishよりも）動きやすいから、という理由で使っていたのを惰性で使っている。&lt;/p&gt;
