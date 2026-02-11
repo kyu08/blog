@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+    <title>Cloud Spanner について知らなかったことを書く :: blog.kyu08.com</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="普段業務でCloud Spannerを使っているが、雰囲気で使っている自覚が大いにあるのでドキュメントやブログを読んで知らなかったことを自分用" />
+<meta name="keywords" content="Google Cloud, Cloud Spanner" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://blog.kyu08.com/pr-287/posts/learn-about-spanner/" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BDQ408J45J', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-287/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-287/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-287/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-287/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-287/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-287/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-287/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-287/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-287/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-287/css/post.min.f049fef13af1dfd5ea526cc59ea5a3fc7be11a05911ca7198c5bb9225250119c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-287/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-287/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-287/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-287/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+<link rel="stylesheet" href="https://blog.kyu08.com/pr-287/style.css">
+
+
+<link rel="shortcut icon" href="https://blog.kyu08.com/pr-287/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/pr-287/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="kyu08_" />
+
+
+
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Cloud Spanner について知らなかったことを書く">
+<meta property="og:description" content="普段業務でCloud Spannerを使っているが、雰囲気で使っている自覚が大いにあるのでドキュメントやブログを読んで知らなかったことを自分用" />
+<meta property="og:url" content="https://blog.kyu08.com/pr-287/posts/learn-about-spanner/" />
+<meta property="og:site_name" content="blog.kyu08.com" />
+
+
+  
+  
+    
+  
+
+
+  <meta property="og:image" content="https://blog.kyu08.com/pr-287/posts/learn-about-spanner/cover.png">
+  <meta name="twitter:image" content="https://blog.kyu08.com/pr-287/posts/learn-about-spanner/cover.png">
+  <meta name="twitter:image:alt" content="Cloud Spanner について知らなかったことを書く">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+  <meta property="article:published_time" content="2024-09-23 01:44:54 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+<link rel="author" href="http://www.hatena.ne.jp/kyu08/" />
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ . }}');
+</script>
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    blog.kyu08.com
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/pr-287/tags/diary/">_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-287/about">about</a></li>
+        
+      
+        
+          <li><a href="/pr-287/index.xml">rss</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/pr-287/tags/diary/" >_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-287/about" >about</a></li>
+        
+      
+        
+          <li><a href="/pr-287/index.xml" >rss</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://blog.kyu08.com/pr-287/posts/learn-about-spanner/">Cloud Spanner について知らなかったことを書く</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2024/09/23</time>
+      
+    <span class="post-reading-time">12 min read (5675 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://blog.kyu08.com/pr-287/tags/google-cloud/">Google Cloud</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-287/tags/cloud-spanner/">Cloud Spanner</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="/pr-287/posts/learn-about-spanner/cover.png"
+    class="post-cover"
+    alt="Cloud Spanner について知らなかったことを書く"
+    title="Cover Image" />
+
+
+  
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#spanner-のスキーマ設計の最適化--google-cloud">Spanner のスキーマ設計の最適化  |  Google Cloud</a>
+      <ul>
+        <li><a href="#テーブルレイアウト">テーブルレイアウト</a></li>
+        <li><a href="#インターリーブ">インターリーブ</a></li>
+        <li><a href="#局所性のトレードオフ">局所性のトレードオフ</a></li>
+        <li><a href="#局所性の勘所">局所性の勘所</a></li>
+        <li><a href="#インデックスのオプション">インデックスのオプション</a></li>
+        <li><a href="#storing">STORING</a></li>
+        <li><a href="#アンチパターン">アンチパターン</a></li>
+      </ul>
+    </li>
+    <li><a href="#スキーマ設計のベスト-プラクティス--spanner--google-cloud">スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud</a>
+      <ul>
+        <li><a href="#値が単調に増加または減少する列へのインターリーブされたインデックスの使用">値が単調に増加または減少する列へのインターリーブされたインデックスの使用</a></li>
+      </ul>
+    </li>
+    <li><a href="#セカンダリ-インデックス--spanner--google-cloud">セカンダリ インデックス  |  Spanner  |  Google Cloud</a>
+      <ul>
+        <li><a href="#null値の並び替え順">NULL値の並び替え順</a></li>
+        <li><a href="#末尾のレコードの取得">末尾のレコードの取得</a></li>
+      </ul>
+    </li>
+    <li><a href="#sharding-of-timestamp-ordered-data-in-cloud-spanner---googblogscom">Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com</a>
+      <ul>
+        <li><a href="#レコードの挿入時">レコードの挿入時</a></li>
+        <li><a href="#レコードの読み取り時">レコードの読み取り時</a></li>
+        <li><a href="#余談">余談</a></li>
+      </ul>
+    </li>
+    <li><a href="#cloud-spanner-におけるトランザクションのロックについて">Cloud Spanner におけるトランザクションのロックについて</a></li>
+    <li><a href="#spanner-の読み取りと書き込みのライフサイクル--google-cloud">Spanner の読み取りと書き込みのライフサイクル  |  Google Cloud</a>
+      <ul>
+        <li><a href="#読み取り専用トランザクション">読み取り専用トランザクション</a></li>
+        <li><a href="#読み取り--書き込みトランザクション">読み取り / 書き込みトランザクション</a></li>
+      </ul>
+    </li>
+    <li><a href="#sql-のベスト-プラクティス--spanner--google-cloud">SQL のベスト プラクティス  |  Spanner  |  Google Cloud</a>
+      <ul>
+        <li><a href="#クエリパラメータの使用">クエリパラメータの使用</a></li>
+        <li><a href="#範囲キーのルックアップを最適化する">範囲キーのルックアップを最適化する</a></li>
+        <li><a href="#結合を最適化する">結合を最適化する</a></li>
+        <li><a href="#likeの代わりにstarts_withを使用する"><code>LIKE</code>の代わりに<code>STARTS_WITH</code>を使用する</a></li>
+      </ul>
+    </li>
+    <li><a href="#クエリ実行プラン--spanner--google-cloud">クエリ実行プラン  |  Spanner  |  Google Cloud</a></li>
+    <li><a href="#まとめ">まとめ</a></li>
+  </ul>
+</nav>
+  
+
+  <div class="post-content"><div>
+        <p>普段業務でCloud Spannerを使っているが、雰囲気で使っている自覚が大いにあるのでドキュメントやブログを読んで知らなかったことを自分用のメモとしてまとめてみる。</p>
+<h2 id="spanner-のスキーマ設計の最適化--google-cloud">Spanner のスキーマ設計の最適化  |  Google Cloud<a href="#spanner-のスキーマ設計の最適化--google-cloud" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><div class="blogcard" data-url="https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja" data-auto-fetch="true">
+  <a href="https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja</div><div class="blogcard-url">https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja</div>
+    </div>
+  </a>
+</div>
+</p>
+<ul>
+<li>キー定義とインターリーブの2つはスケーラビリティに大きな影響を与える</li>
+<li>Spannerにはルートテーブルとインターリーブされたテーブルの2種類のテーブルがある。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></li>
+</ul>
+<h3 id="テーブルレイアウト">テーブルレイアウト<a href="#テーブルレイアウト" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Spannerテーブルの行は<code>PRIMARY_KEY</code>によって辞書順に並べかえられる。したがって以下の特性を示す。</p>
+<ul>
+<li>辞書順のテーブルスキャンは効率的</li>
+<li>十分に近い行は同じディスクブロックに格納され、一緒に読み込まれてキャッシュされる</li>
+</ul>
+<p>各Spannerレプリカ内のデータは<code>スプリット</code>と<code>ブロック</code>という2つの物理階層レベルで編成される。</p>
+<h3 id="インターリーブ">インターリーブ<a href="#インターリーブ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>ルートテーブルの各行をルート行と呼び、インターリーブされたテーブルの各行を子行と呼ぶ。ルート行とそのすべての子孫のコレクションは行ツリーと呼ばれる。</p>
+<!-- raw HTML omitted -->
+<p>行ツリー内のオペレーションは他のスプリットとの通信を必要としないケースが多いため基本的には効率性が高い。ただし子行にホットスポットがある場合Spannerはホットスポットの行とそれ以降の子行を分離するためにスプリット境界を追加しようとする。そのため必ずしも効率性が高いという保証はない。</p>
+<!-- raw HTML omitted -->
+<h3 id="局所性のトレードオフ">局所性のトレードオフ<a href="#局所性のトレードオフ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>以下の理由で局所性を高めることが重要。</p>
+<ul>
+<li>通信するサーバが多いほど一時的にビジー状態のサーバに遭遇する可能性が高くなり、レイテンシの増加につながる。</li>
+<li>複数のスプリットにまたがるトランザクションは二層コミットの特性によってCPUコストとレイテンシがわずかに増加する。</li>
+</ul>
+<h3 id="局所性の勘所">局所性の勘所<a href="#局所性の勘所" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>分散DBである以上、一定レベルの二層コミットや非ローカルデータオペレーションは避けられない。</li>
+<li>すべてのオペレーションの局所性を完璧にするのではなく最も重要なルートエンティティと最も一般的なアクセスパターンについて必要な局所性を実現することが重要。その他のオペレーションについてはそのままにすることを推奨。</li>
+</ul>
+<h3 id="インデックスのオプション">インデックスのオプション<a href="#インデックスのオプション" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<!-- raw HTML omitted -->
+<ul>
+<li>デフォルトではインターリーブされていないインデックスを作成されるが、インターリーブされたインデックスを作成することもできる。
+<ul>
+<li>インターリーブされたインデックスはインターリーブされたテーブルにデータを格納する。そのためデータとインデックスが強制的に同じ行ツリーに格納され、データとインデックスの結合効率が高くなる。</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li><strong>Spannerはテーブルと同じ方法でインデックスデータを格納する。</strong> 換言すると、インターリーブされていないインデックスはルートテーブルにデータを格納する。</li>
+</ul>
+<p>そのため以下が推奨される。</p>
+<ul>
+<li>検索範囲が単一のエンティティのときは<strong>常に</strong>インターリーブされたインデックスを使用する。</li>
+<li>逆にデータベース内のどこからでも行を検索する必要がある場合はインターリーブされていないインデックスを使用する。</li>
+</ul>
+<h3 id="storing">STORING<a href="#storing" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>要求されたすべてのデータがインデックス自体に含まれる場合、<code>STORING</code>句を使用してインデックスを作成することができる。これによりベーステーブルと結合することなくクエリを完了できるためより効率的に結果を取得することができる。</p>
+<p>現在はインデックスキーは16個、合計サイズが6KiBまでに制限されているため、<code>STORING</code>句を使用することで任意のインデックスに対してデータを格納することができる。</p>
+<p>つまり<code>STORING</code>を使用すると<strong>WRITEコストおよびストレージコストの上昇</strong>と引き換えに<strong>READコストを削減</strong>できる。</p>
+<p>また、ドキュメントでは<code>STORING</code>の便利な応用例として<code>NULL_FILTERED</code>インデックスとの併用を紹介している。それについてはこちらの記事が大変詳しいので参照されたい。</p>
+<p><div class="blogcard" data-url="https://zenn.dev/facengineer/articles/15e7a68fcc2fad" data-auto-fetch="true">
+  <a href="https://zenn.dev/facengineer/articles/15e7a68fcc2fad" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://zenn.dev/facengineer/articles/15e7a68fcc2fad</div><div class="blogcard-url">https://zenn.dev/facengineer/articles/15e7a68fcc2fad</div>
+    </div>
+  </a>
+</div>
+</p>
+<h3 id="アンチパターン">アンチパターン<a href="#アンチパターン" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>ルートテーブルをタイムスタンプ順にしてしまうとテーブルの最後に巨大なホットスポットが生まれてしまう。</p>
+<p>タイムスタンプ順に並んだレコードが必要な場合は以下の対策が有効。</p>
+<ol>
+<li>他のルートテーブルの1つにインターリーブする（ただし各ルートへの書き込みレートが十分低くなるようにする）</li>
+<li>シャーディングを使用して時系列的に連続したデータを複数のスプリットに分散する</li>
+</ol>
+<p>この例ではPKに<code>ShardId</code>(0~N-1)を追加する方法を紹介している。</p>
+<p><img src="spanner-sharding.webp" alt="spanner-sharding.webp"></p>
+<h2 id="スキーマ設計のベスト-プラクティス--spanner--google-cloud">スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud<a href="#スキーマ設計のベスト-プラクティス--spanner--google-cloud" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><div class="blogcard" data-url="https://cloud.google.com/spanner/docs/schema-design?hl=ja" data-auto-fetch="true">
+  <a href="https://cloud.google.com/spanner/docs/schema-design?hl=ja" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://cloud.google.com/spanner/docs/schema-design?hl=ja</div><div class="blogcard-url">https://cloud.google.com/spanner/docs/schema-design?hl=ja</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>次のような場合はキー列をタイムスタンプ降順に格納することでホットスポットを回避する。</p>
+<ul>
+<li>最新の履歴を読み取る際、履歴にインターリーブ テーブルを使用しており、親行を読み取る場合</li>
+<li>連続したエントリを日付の新しい順に読み込む場合に、いつまで日付をさかのぼるか不明なとき</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> UserAccessLog (
+</span></span><span style="display:flex;"><span>UserId     INT64 <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>LastAccess <span style="color:#66d9ef">TIMESTAMP</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>) <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (UserId, LastAccess <span style="color:#66d9ef">DESC</span>);
+</span></span></code></pre></div><p>筆者はこれまでこのようなケースでは<code>UserAccessLog</code>テーブルにUUIDを付与し<code>LastAccess</code>降順なインデックスを作成することで対応することが多かった。この方法は選択肢として持てていなかったので必要になったら思い出せるとよさそう。</p>
+<p>このケースはアクセスログなのでWRITE頻度が高いテーブルを想定していると思われる。インデックスで対応する方式と比較するとWRITEコストを下げることができる点でメリットがありそう。</p>
+<p>と思っていたら続きにそのパターンの実装方法も書かれていた。</p>
+<h3 id="値が単調に増加または減少する列へのインターリーブされたインデックスの使用">値が単調に増加または減少する列へのインターリーブされたインデックスの使用<a href="#値が単調に増加または減少する列へのインターリーブされたインデックスの使用" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>次のようなテーブルがあるとする。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> Users (
+</span></span><span style="display:flex;"><span>UserId     INT64 <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>LastAccess <span style="color:#66d9ef">TIMESTAMP</span>,
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>) <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (UserId);
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<p>このテーブルに対して次のような(インターリーブされていない &amp;&amp; 最初のキーが単調増加する)インデックスを作成した場合、<code>LastAccess</code>は単調増加する値なので最後のスプリットに書き込みが集中し、ホットスポットが発生してしまう。</p>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> NULL_FILTERED <span style="color:#66d9ef">INDEX</span> UsersByLastAccess <span style="color:#66d9ef">ON</span> Users(LastAccess);
+</span></span></code></pre></div><p>このようなケースでは次のような対処が考えられる。</p>
+<ol>
+<li>インデックスに<code>ShardId</code>を追加する</li>
+<li>（そもそも）インデックスをインターリーブする</li>
+</ol>
+<h2 id="セカンダリ-インデックス--spanner--google-cloud">セカンダリ インデックス  |  Spanner  |  Google Cloud<a href="#セカンダリ-インデックス--spanner--google-cloud" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><div class="blogcard" data-url="https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja" data-auto-fetch="true">
+  <a href="https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja</div><div class="blogcard-url">https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja</div>
+    </div>
+  </a>
+</div>
+</p>
+<ul>
+<li>Spannerではセカンダリインデックスに次のデータが格納される。
+<ul>
+<li>ベーステーブルのすべてのキー列</li>
+<li>インデックスに含まれるすべての列</li>
+<li><code>STORING</code>句で指定されたすべての列</li>
+</ul>
+</li>
+</ul>
+<h3 id="null値の並び替え順">NULL値の並び替え順<a href="#null値の並び替え順" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Spannerでは<code>NULL</code>を最小値として扱う。そのため昇順の場合は<code>NULL</code>が先頭に、降順の場合は末尾に並ぶ。</p>
+<h3 id="末尾のレコードの取得">末尾のレコードの取得<a href="#末尾のレコードの取得" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>次のようなクエリを実行する場合は結果をすばやく取得することができる。これはSpannerがテーブルの行を<code>PRIMARY_KEY</code>によって辞書順に並べかえるため。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- テーブル定義
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> Songs (
+</span></span><span style="display:flex;"><span>    SongId INT64 <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>) <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (SongId);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- クエリ
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> SongId <span style="color:#66d9ef">FROM</span> Songs <span style="color:#66d9ef">LIMIT</span> <span style="color:#ae81ff">1</span>;
+</span></span></code></pre></div><p>しかしSpannerではテーブル全体をスキャンしないと列の最大値を取得することができないため次のようなクエリはすばやく結果を返さない。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> SongId <span style="color:#66d9ef">FROM</span> Songs <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> SongId <span style="color:#66d9ef">DESC</span> <span style="color:#66d9ef">LIMIT</span> <span style="color:#ae81ff">1</span>;
+</span></span></code></pre></div><p>このようなケースでは次のようにPK降順のインデックスを明示的に作成することで読み取りパフォーマンスを向上させることができる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">INDEX</span> SongIdDesc <span style="color:#66d9ef">On</span> Songs(SongId <span style="color:#66d9ef">DESC</span>);
+</span></span></code></pre></div><h2 id="sharding-of-timestamp-ordered-data-in-cloud-spanner---googblogscom">Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com<a href="#sharding-of-timestamp-ordered-data-in-cloud-spanner---googblogscom" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><div class="blogcard" data-url="https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/" data-auto-fetch="true">
+  <a href="https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/</div><div class="blogcard-url">https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>タイムスタンプ順に並んだレコードをいかに効率よく挿入、取得するかについての解説記事。</p>
+<h3 id="レコードの挿入時">レコードの挿入時<a href="#レコードの挿入時" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>次のようにCompanyID、UserID、Timestampの3つのキーを持つログテーブルがあるとする。</p>
+<table>
+<thead>
+<tr>
+<th>CompanyId(PK)</th>
+<th>UserId(PK)</th>
+<th>Timestamp(PK)</th>
+<th>LogEntry</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Acme</td>
+<td>15b7bd1f-8473</td>
+<td>2018-05-01T15:16:03.386257Z</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>このスキーマにしたがって単純にデータを挿入していくとユーザー数が多い企業があるとホットスポットが発生してしまう。</p>
+<p>そのための次のような疑似コードで表現できる<code>EntryShardId</code>を用いることで挿入時のホットスポットを回避できる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>entryShardId <span style="color:#f92672">=</span> hash(CompanyId <span style="color:#f92672">+</span> timestamp) <span style="color:#f92672">%</span> num_shards
+</span></span></code></pre></div><h3 id="レコードの読み取り時">レコードの読み取り時<a href="#レコードの読み取り時" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>次のようなインデックスを追加する。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">INDEX</span> LogEntriesByCompany <span style="color:#66d9ef">ON</span> LogEntries(EntryShardId, CompanyId, <span style="color:#66d9ef">Timestamp</span>)
+</span></span></code></pre></div><p>そして以下のようなクエリを実行する。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> CompanyId, UserId, <span style="color:#66d9ef">Timestamp</span>, LogEntry
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> LogEntries<span style="color:#f92672">@</span><span style="color:#960050;background-color:#1e0010">{</span>FORCE_INDEX<span style="color:#f92672">=</span>LogEntriesByCompany<span style="color:#960050;background-color:#1e0010">}</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">WHERE</span> CompanyId <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Acme&#39;</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> EntryShardId <span style="color:#66d9ef">BETWEEN</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">AND</span> <span style="color:#ae81ff">9</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> <span style="color:#66d9ef">Timestamp</span> <span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;2018-05-01T15:14:10.386257Z&#39;</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> <span style="color:#66d9ef">Timestamp</span> <span style="color:#f92672">&lt;</span> <span style="color:#e6db74">&#39;2018-05-01T15:16:10.386257Z&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> <span style="color:#66d9ef">Timestamp</span> <span style="color:#66d9ef">DESC</span>;
+</span></span></code></pre></div><p>こうすることでインデックスを使って10個の論理シャードから条件にあったレコードを効率よく取得することができる。</p>
+<h3 id="余談">余談<a href="#余談" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>前章のクエリのWHERE句内で以下のように<code>CompanyId, EntryShardId</code>の順で指定していたので正しくインデックスが使えるのか気になったので試してみた。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>   <span style="color:#66d9ef">WHERE</span> CompanyId <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Acme&#39;</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> EntryShardId <span style="color:#66d9ef">BETWEEN</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">AND</span> <span style="color:#ae81ff">9</span>
+</span></span></code></pre></div><h4 id="準備">準備<a href="#準備" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>任意のGoogle CloudプロジェクトでSpannerインスタンスを作成し、以下のDDLを実行してテーブルとインデックスを作成する。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> LogEntries (
+</span></span><span style="display:flex;"><span>  CompanyId STRING(<span style="color:#ae81ff">36</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>  UserId STRING(<span style="color:#ae81ff">36</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Timestamp</span> <span style="color:#66d9ef">TIMESTAMP</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>  EntryShardId INT64 <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>  LogEntry STRING(<span style="color:#66d9ef">MAX</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>) <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (CompanyId, UserId, <span style="color:#66d9ef">Timestamp</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">INDEX</span> LogEntriesByCompany <span style="color:#66d9ef">ON</span> LogEntries(EntryShardId, CompanyId, <span style="color:#66d9ef">Timestamp</span>);
+</span></span></code></pre></div><p>次にテストデータをINSERTする。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>シャード数</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Companyの数</td>
+<td>5</td>
+</tr>
+<tr>
+<td>従業員数</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<p>上記の条件で合計1000レコードを挿入するINSERT文を作成した。（スクリプトは<a href="https://gist.github.com/kyu08/a751344fd76d4e50208164378a822dc1" target="_blank" >こちら</a>）</p>
+<h4 id="クエリの実行">クエリの実行<a href="#クエリの実行" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>これに対して次の2つのクエリを実行し、実行計画を確認した。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- 記事で紹介されていたクエリ
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>  CompanyId,
+</span></span><span style="display:flex;"><span>  UserId,
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Timestamp</span>,
+</span></span><span style="display:flex;"><span>  LogEntry
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>  LogEntries<span style="color:#f92672">@</span><span style="color:#960050;background-color:#1e0010">{</span>FORCE_INDEX<span style="color:#f92672">=</span>LogEntriesByCompany<span style="color:#960050;background-color:#1e0010">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>  CompanyId <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;amazon&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">AND</span> EntryShardId <span style="color:#66d9ef">BETWEEN</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">AND</span> <span style="color:#ae81ff">9</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">AND</span> <span style="color:#66d9ef">Timestamp</span> <span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;2023-01-01T00:00:00.386257Z&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">AND</span> <span style="color:#66d9ef">Timestamp</span> <span style="color:#f92672">&lt;</span> <span style="color:#e6db74">&#39;2023-01-01T00:00:05.386257Z&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Timestamp</span> <span style="color:#66d9ef">DESC</span>;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- CompanyId, EntryShardIdの順番を逆にしてみたクエリ
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span>
+</span></span><span style="display:flex;"><span>  CompanyId,
+</span></span><span style="display:flex;"><span>  UserId,
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Timestamp</span>,
+</span></span><span style="display:flex;"><span>  LogEntry
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span>
+</span></span><span style="display:flex;"><span>  LogEntries<span style="color:#f92672">@</span><span style="color:#960050;background-color:#1e0010">{</span>FORCE_INDEX<span style="color:#f92672">=</span>LogEntriesByCompany<span style="color:#960050;background-color:#1e0010">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span>
+</span></span><span style="display:flex;"><span>  EntryShardId <span style="color:#66d9ef">BETWEEN</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">AND</span> <span style="color:#ae81ff">9</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">AND</span> CompanyId <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;amazon&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">AND</span> <span style="color:#66d9ef">Timestamp</span> <span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;2023-01-01T00:00:00.386257Z&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">AND</span> <span style="color:#66d9ef">Timestamp</span> <span style="color:#f92672">&lt;</span> <span style="color:#e6db74">&#39;2023-01-01T00:00:05.386257Z&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Timestamp</span> <span style="color:#66d9ef">DESC</span>;
+</span></span></code></pre></div><h4 id="結果">結果<a href="#結果" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>結論からいうとどちらのクエリでも同様にインデックスを利用できていた。おそらくSpannerのオプティマイザがいい感じに判断してくれていると思われる。以下が実際の実行計画。</p>
+<p>記事で紹介されていたクエリ
+<img src="original.webp" alt="original.webp"></p>
+<p>CompanyId, EntryShardIdの順番を逆にしてみたクエリ
+<img src="swap.webp" alt="swap.webp"></p>
+<h2 id="cloud-spanner-におけるトランザクションのロックについて">Cloud Spanner におけるトランザクションのロックについて<a href="#cloud-spanner-におけるトランザクションのロックについて" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><div class="blogcard" data-url="https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner" data-auto-fetch="true">
+  <a href="https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner</div><div class="blogcard-url">https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner</div>
+    </div>
+  </a>
+</div>
+</p>
+<blockquote>
+<p>Spanner におけるトランザクションのロックの粒度は、セル、つまり行と列の交点となります。</p>
+</blockquote>
+<p>なのでREAD, WRITEの範囲(行および列)を最小限にすることでロック範囲を最小限にすることができる。結果として他のトランザクションに与えるパフォーマンス影響を最小限にすることができる。</p>
+<p>他には複数のトランザクションが同時に実行された際の優先度について詳しく解説してあった。</p>
+<h2 id="spanner-の読み取りと書き込みのライフサイクル--google-cloud">Spanner の読み取りと書き込みのライフサイクル  |  Google Cloud<a href="#spanner-の読み取りと書き込みのライフサイクル--google-cloud" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><div class="blogcard" data-url="https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja" data-auto-fetch="true">
+  <a href="https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja</div><div class="blogcard-url">https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>Spannerのレプリカセットの構成については次の記事が非常にわかりやすい。</p>
+<p><div class="blogcard" data-url="https://zenn.dev/facengineer/articles/bca8790087b0e4" data-auto-fetch="true">
+  <a href="https://zenn.dev/facengineer/articles/bca8790087b0e4" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://zenn.dev/facengineer/articles/bca8790087b0e4</div><div class="blogcard-url">https://zenn.dev/facengineer/articles/bca8790087b0e4</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>読み込みおよび書き込み時のロックの取り方について詳しく解説されていた。</p>
+<h3 id="読み取り専用トランザクション">読み取り専用トランザクション<a href="#読み取り専用トランザクション" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>ロックを取得せずに実行できるため高速</li>
+<li>ステイル読み込みを使用できる場合はより高速にすることができる（他のオペレーションに与えるパフォーマンス影響も抑えることができる）
+<ul>
+<li>Spannerはレプリカへの同期を10秒ごとに行っているため、10秒以上前のデータをステイル読み込みできる場合は読み取りのスループットをさらに高めることができる。</li>
+</ul>
+</li>
+</ul>
+<h3 id="読み取り--書き込みトランザクション">読み取り / 書き込みトランザクション<a href="#読み取り--書き込みトランザクション" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>読み取った行に対して共有ロックを取得する</li>
+<li>書き込む行に対して排他ロックを取得する</li>
+</ul>
+<p>ちなみに複数のトランザクションが同時に実行された場合の挙動については次の記事が詳しかった。</p>
+<p><div class="blogcard" data-url="https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner" data-auto-fetch="true">
+  <a href="https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner</div><div class="blogcard-url">https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner</div>
+    </div>
+  </a>
+</div>
+</p>
+<h2 id="sql-のベスト-プラクティス--spanner--google-cloud">SQL のベスト プラクティス  |  Spanner  |  Google Cloud<a href="#sql-のベスト-プラクティス--spanner--google-cloud" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><div class="blogcard" data-url="https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja" data-auto-fetch="true">
+  <a href="https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja</div><div class="blogcard-url">https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja</div>
+    </div>
+  </a>
+</div>
+</p>
+<h3 id="クエリパラメータの使用">クエリパラメータの使用<a href="#クエリパラメータの使用" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>クエリパラメータを使用することで次のメリットがある。</p>
+<ul>
+<li><strong>キャッシュが容易になるためクエリのパフォーマンスが向上する</strong></li>
+<li>文字列の値をエスケープする必要がないため構文エラーのリスクが減る</li>
+<li>SQLインジェクションを防ぐことができる</li>
+</ul>
+<h3 id="範囲キーのルックアップを最適化する">範囲キーのルックアップを最適化する<a href="#範囲キーのルックアップを最適化する" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>キーのリストが短く、連続していない場合は次のように<code>IN UNNEST</code>を使用する。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#66d9ef">Table</span> <span style="color:#66d9ef">AS</span> t
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> t.<span style="color:#66d9ef">Key</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">UNNEST</span> (<span style="color:#f92672">@</span>KeyList)
+</span></span></code></pre></div><p>キーのリストが連続して範囲内である場合には次のように下限と上限を設定する。<code>[@min, @max]</code>の範囲をすべてスキャンするため効率的にスキャンできる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#66d9ef">Table</span> <span style="color:#66d9ef">AS</span> t
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> t.<span style="color:#66d9ef">Key</span> <span style="color:#66d9ef">BETWEEN</span> <span style="color:#f92672">@</span><span style="color:#66d9ef">min</span> <span style="color:#66d9ef">AND</span> <span style="color:#f92672">@</span><span style="color:#66d9ef">max</span>
+</span></span></code></pre></div><h3 id="結合を最適化する">結合を最適化する<a href="#結合を最適化する" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h4 id="可能な限りインターリーブされたテーブルのデータを主キーによって結合する">可能な限りインターリーブされたテーブルのデータを主キーによって結合する<a href="#可能な限りインターリーブされたテーブルのデータを主キーによって結合する" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>インターリーブされた子行とそのルート行は基本的に同じスプリットに格納されるためローカルで結合することができ、効率的に結合できるため。</p>
+<h4 id="結合の順序を強制する">結合の順序を強制する<a href="#結合の順序を強制する" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>Spanner側の最適化によって結合順序が変更され（この場合は<code>Singers JOIN Albums</code>と記述したが<code>Albums JOIN Singers</code>の順序に変更されたケース）パフォーマンスが低下した場合などは<code>FORCE_JOIN_ORDER</code>ヒントを使用することで結合順序を強制することができる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Singers <span style="color:#66d9ef">AS</span> s <span style="color:#66d9ef">JOIN</span><span style="color:#f92672">@</span><span style="color:#960050;background-color:#1e0010">{</span>FORCE_JOIN_ORDER<span style="color:#f92672">=</span><span style="color:#66d9ef">TRUE</span><span style="color:#960050;background-color:#1e0010">}</span> Albums <span style="color:#66d9ef">AS</span> a
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ON</span> s.SingerId <span style="color:#f92672">=</span> a.Singerid
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> s.LastName <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;%x%&#39;</span> <span style="color:#66d9ef">AND</span> a.AlbumTitle <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;%love%&#39;</span>;
+</span></span></code></pre></div><h4 id="joinアルゴリズムを指定する">JOINアルゴリズムを指定する<a href="#joinアルゴリズムを指定する" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>次のように<code>JOIN_METHOD</code>ヒントを使用することでJOINアルゴリズムを指定することができる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Singers s <span style="color:#66d9ef">JOIN</span><span style="color:#f92672">@</span><span style="color:#960050;background-color:#1e0010">{</span>JOIN_METHOD<span style="color:#f92672">=</span>HASH_JOIN<span style="color:#960050;background-color:#1e0010">}</span> Albums <span style="color:#66d9ef">AS</span> a
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ON</span> a.SingerId <span style="color:#f92672">=</span> a.SingerId
+</span></span></code></pre></div><p>JOINアルゴリズムについては次の記事が詳しい。</p>
+<p><div class="blogcard" data-url="https://zenn.dev/facengineer/articles/cc0cab5c7e9a1c#join%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" data-auto-fetch="true">
+  <a href="https://zenn.dev/facengineer/articles/cc0cab5c7e9a1c#join%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://zenn.dev/facengineer/articles/cc0cab5c7e9a1c#join%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0</div><div class="blogcard-url">https://zenn.dev/facengineer/articles/cc0cab5c7e9a1c#join%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0</div>
+    </div>
+  </a>
+</div>
+</p>
+<h3 id="likeの代わりにstarts_withを使用する"><code>LIKE</code>の代わりに<code>STARTS_WITH</code>を使用する<a href="#likeの代わりにstarts_withを使用する" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Spannerはパラメータ化された<code>LIKE</code>パターンを実行時まで評価しないのですべての行を読み取ったうえで<code>LIKE</code>式で評価し、一致しない行を除外するためパフォーマンスが悪い。</p>
+<p>適切なインデックスが作成されている場合は<code>LIKE</code>の代わりに<code>STARTS_WITH</code>を使用するとSpannerはクエリ実行プランをより効率的に最適化することができる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- 非推奨
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> a.AlbumTitle <span style="color:#66d9ef">FROM</span> Albums a
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> a.AlbumTitle <span style="color:#66d9ef">LIKE</span> <span style="color:#f92672">@</span>like_clause;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 推奨
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> a.AlbumTitle <span style="color:#66d9ef">FROM</span> Albums a
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> STARTS_WITH(a.AlbumTitle, <span style="color:#f92672">@</span><span style="color:#66d9ef">prefix</span>);
+</span></span></code></pre></div><h2 id="クエリ実行プラン--spanner--google-cloud">クエリ実行プラン  |  Spanner  |  Google Cloud<a href="#クエリ実行プラン--spanner--google-cloud" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><div class="blogcard" data-url="https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja" data-auto-fetch="true">
+  <a href="https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja</div><div class="blogcard-url">https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>CPUの消費量が多いクエリの場合、実行計画は30日間保存されている。</p>
+<p>確認方法は以下。</p>
+<p><div class="blogcard" data-url="https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries" data-auto-fetch="true">
+  <a href="https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries</div><div class="blogcard-url">https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>クエリごとにレイテンシや返された行数、スキャン行数の平均値や実行回数確認することができるためチューニングの際にかなり便利そう。</p>
+<h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Spannerの気持ちが少しわかった。すごく強引にまとめると以下のようなポイントが重要そう。</p>
+<ul>
+<li>ホットスポットに注意する</li>
+<li>結合コストを最小限にする</li>
+<li>スキャン行数を最小限にする</li>
+<li>ロック範囲を最小限にする</li>
+</ul>
+<p>これまで漫然とドキュメントを読んで頭に入らなかったり記憶が定着しなかったりしたが、ブログにアウトプットしながら読むと理解度も定着度も（モチベーションも）上がるのでやってよかった。</p>
+<p>次はCloud Runとも仲良くなりたい。</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>①ルートテーブル②インターリーブされたテーブル③インターリーブの子を持たない通常のテーブルの3種類だと思い込んでいたが③は①として扱われるようだ。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+      </div></div>
+
+  
+  
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="https://blog.kyu08.com/pr-287/posts/renew-oss-sponsoring/" class="button inline prev">
+        GitHub Sponsorsの寄付先にratatuiを追加した
+      </a>
+    
+    
+      <a href="https://blog.kyu08.com/pr-287/posts/gh-sync-remote-and-pull/" class="button inline next">
+        forkしたrepositoryのremoteを最新化しつつローカルにpullするスクリプトを書いた
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+        repo="kyu08/blog-comments"
+        issue-term="pathname"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  
+
+  
+    <div class="table-of-contents-sidebar">
+      <h2>
+        目次
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#spanner-のスキーマ設計の最適化--google-cloud">Spanner のスキーマ設計の最適化  |  Google Cloud</a>
+      <ul>
+        <li><a href="#テーブルレイアウト">テーブルレイアウト</a></li>
+        <li><a href="#インターリーブ">インターリーブ</a></li>
+        <li><a href="#局所性のトレードオフ">局所性のトレードオフ</a></li>
+        <li><a href="#局所性の勘所">局所性の勘所</a></li>
+        <li><a href="#インデックスのオプション">インデックスのオプション</a></li>
+        <li><a href="#storing">STORING</a></li>
+        <li><a href="#アンチパターン">アンチパターン</a></li>
+      </ul>
+    </li>
+    <li><a href="#スキーマ設計のベスト-プラクティス--spanner--google-cloud">スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud</a>
+      <ul>
+        <li><a href="#値が単調に増加または減少する列へのインターリーブされたインデックスの使用">値が単調に増加または減少する列へのインターリーブされたインデックスの使用</a></li>
+      </ul>
+    </li>
+    <li><a href="#セカンダリ-インデックス--spanner--google-cloud">セカンダリ インデックス  |  Spanner  |  Google Cloud</a>
+      <ul>
+        <li><a href="#null値の並び替え順">NULL値の並び替え順</a></li>
+        <li><a href="#末尾のレコードの取得">末尾のレコードの取得</a></li>
+      </ul>
+    </li>
+    <li><a href="#sharding-of-timestamp-ordered-data-in-cloud-spanner---googblogscom">Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com</a>
+      <ul>
+        <li><a href="#レコードの挿入時">レコードの挿入時</a></li>
+        <li><a href="#レコードの読み取り時">レコードの読み取り時</a></li>
+        <li><a href="#余談">余談</a></li>
+      </ul>
+    </li>
+    <li><a href="#cloud-spanner-におけるトランザクションのロックについて">Cloud Spanner におけるトランザクションのロックについて</a></li>
+    <li><a href="#spanner-の読み取りと書き込みのライフサイクル--google-cloud">Spanner の読み取りと書き込みのライフサイクル  |  Google Cloud</a>
+      <ul>
+        <li><a href="#読み取り専用トランザクション">読み取り専用トランザクション</a></li>
+        <li><a href="#読み取り--書き込みトランザクション">読み取り / 書き込みトランザクション</a></li>
+      </ul>
+    </li>
+    <li><a href="#sql-のベスト-プラクティス--spanner--google-cloud">SQL のベスト プラクティス  |  Spanner  |  Google Cloud</a>
+      <ul>
+        <li><a href="#クエリパラメータの使用">クエリパラメータの使用</a></li>
+        <li><a href="#範囲キーのルックアップを最適化する">範囲キーのルックアップを最適化する</a></li>
+        <li><a href="#結合を最適化する">結合を最適化する</a></li>
+        <li><a href="#likeの代わりにstarts_withを使用する"><code>LIKE</code>の代わりに<code>STARTS_WITH</code>を使用する</a></li>
+      </ul>
+    </li>
+    <li><a href="#クエリ実行プラン--spanner--google-cloud">クエリ実行プラン  |  Spanner  |  Google Cloud</a></li>
+    <li><a href="#まとめ">まとめ</a></li>
+  </ul>
+</nav>
+    </div>
+    <script src="https://blog.kyu08.com/pr-287/toc.js"></script>
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>blog.kyu08.com</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/pr-287/bundle.min.js"></script>
+
+
+<font color="#808080">
+  <span>
+    This site uses Google Analytics for access analysis.
+    Google Analytics uses cookies to collect traffic data, but this traffic data is collected anonymously and does not personally identify you.
+    Cookies can be disabled in your browser.
+  </span>
+</font>
+
+
+<script src="https://blog.kyu08.com/pr-287/blogcard.js"></script>
+
+
+  
+</div>
+
+</body>
+</html>
