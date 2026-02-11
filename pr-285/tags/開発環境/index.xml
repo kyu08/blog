@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Wed, 11 Feb 2026 20:55:08 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-285/tags/%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Feb 2026 00:00:08 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-285/tags/%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>開発環境現状確認 2026</title>
       <link>https://blog.kyu08.com/pr-285/posts/development-environment-2026/</link>
-      <pubDate>Wed, 11 Feb 2026 20:55:08 +0900</pubDate>
+      <pubDate>Thu, 12 Feb 2026 00:00:08 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/pr-285/posts/development-environment-2026/</guid>
       <description>2026年年始に複数の方（や会社）が開発環境について書いていたので2026年時点のスナップショットも兼ねて自分も流行りに乗って書いてみる。 https://blog-dry.com/entry/2026/01/02/145952https://blog-dry.com/entry/2026/01/02/145952</description>
@@ -95,6 +95,7 @@
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;ターミナルマルチプレクサ&#34;&gt;ターミナルマルチプレクサ&lt;/h2&gt;
 &lt;p&gt;tmuxを使っている。1セッションに好きなだけウィンドウを開く運用で使っている。&lt;/p&gt;
 &lt;p&gt;tmux-fzfでのwindow切り替えが快適すぎて手放せない。（動作イメージとか設定手順は過去にこちらに書いた。）&lt;/p&gt;
@@ -110,6 +111,7 @@
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;前述の通りalacrittyとの相性がいい感じなのでよほどのことがない限りこの組み合わせは変えなさそう。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;Zellijも試したことはあるが、自分の環境だとなぜか表示が崩れてしまうので使っていない。&lt;/p&gt;
@@ -229,13 +231,28 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Neovimでタスク管理できるのとタスクに優先度、期日を設定してそれをいい感じにソートして表示してくれるのがかなり肌にあっていて気に入っている。&lt;/p&gt;
 &lt;p&gt;最近は時間の使い方を振り返る目的でClock In的な機能を使ってタスクごとの所要時間も管理してみている。&lt;/p&gt;
 &lt;p&gt;これに関してはそのうち別の記事として詳しく書きたい。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;ブラウザ&#34;&gt;ブラウザ&lt;/h2&gt;
 &lt;p&gt;数年前からBraveを使っている。広告をブロックしてくれつつChrome拡張も使えるので便利。一時期Arcも使っていたが肌に合わない挙動があったので使うのをやめてしまった。（具体的には覚えていない）&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;ime&#34;&gt;IME&lt;/h2&gt;
+&lt;p&gt;Google日本語入力を使っている。&lt;/p&gt;
+&lt;p&gt;たまーにひらがなの変換がおかしいのが気になっている。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;clituiツール&#34;&gt;CLI/TUIツール&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;lazygit&lt;/li&gt;
+&lt;li&gt;k9s&lt;/li&gt;
+&lt;li&gt;fzf-make&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;キーリマッパー&#34;&gt;キーリマッパー&lt;/h2&gt;
 &lt;h2 id=&#34;キーボード&#34;&gt;キーボード&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;7sPro&lt;/li&gt;
+&lt;li&gt;EPOMAKER SPLIT70&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;fuwari&lt;/li&gt;
