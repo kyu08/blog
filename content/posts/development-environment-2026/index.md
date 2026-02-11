@@ -97,6 +97,22 @@ https://github.com/yuki-yano/zeno.zsh
 <!-- TODO: これもまだ書けることありそう -->
 
 ## ランチャー
+AlfredとRaycastを併用している。
+
+基本的に不満がないかつ操作性がRaycastよりも好みなので基本的にはAlfredを使っている。
+
+使い道は至って普通でスニペットやweb検索、ローカルのファイル検索などに使っている。あとはWorkflowを利用してよく使うアプリを以下のようなキーバインドで呼び出せるように設定している。
+
+- Alacritty: `opt + space`
+- Brave: `cmd + esc`
+- Slack: `opt + opt`
+- Notion: `opt + n`
+- Claude: `opt + x`
+- TickTick: `opt + t`
+- Spotify: `ctrl + esc`
+
+今は治ってるかもしれないが、一時期Alfredのクリップボードの動作がとてつもなく重くなってしまったのでそこだけRaycastを使っている。
+
 ## ウィンドウマネージャー
 ## フォント
 ## タスク管理
@@ -105,6 +121,8 @@ https://github.com/yuki-yano/zeno.zsh
 ## CLI/TUIツール
 ## キーリマッパー
 ## キーボード
+## その他
+- fuwari
 
 [^1]: これ系の記事でNeovimの使用率が1位になってるの初めて見た。Neovimユーザーとしては嬉しい。
 [^2]: 画面内の文字を検索するのにcmd+fをよく使うのでghosttyは自分には合わなかった。
