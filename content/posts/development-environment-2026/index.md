@@ -8,7 +8,7 @@ tags:
   - tui
 
 description: ""
-date: 2026-02-11T20:55:08+09:00
+date: 2026-02-12T00:00:08+09:00
 author: "kyu08"
 authorTwitter: "kyu08_"
 draft: false
