@@ -6,7 +6,10 @@ languageCode = "ja"
 defaultContentLanguage = "ja"
 hasCJKLanguage = true
 googleAnalytics = "G-BDQ408J45J"
-ignoreFiles = ["node_modules", "\\.git"]
+ignoreFiles = [
+  "^.*/node_modules/.*$",
+  "^.*/\\.git/.*$"
+]
 
 [params]
   # dir name of your main content (default is `content/posts`).
