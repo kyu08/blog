@@ -84,6 +84,8 @@ Zellijも試したことはあるが、自分の環境だとなぜか表示が�
 
 https://github.com/zellij-org/zellij
 
+tmuxの設定とか工夫を紹介する記事は別で書きたい。
+
 ## シェル
 zshを使っている。
 
