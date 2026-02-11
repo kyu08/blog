@@ -114,9 +114,49 @@ AlfredとRaycastを併用している。
 今は治ってるかもしれないが、一時期Alfredのクリップボードの動作がとてつもなく重くなってしまったのでそこだけRaycastを使っている。
 
 ## ウィンドウマネージャー
+yabaiとskhdを使っている。設定をコード管理できるのが嬉しい。たまに動作が不安定になるのでそのたびに`yabai --restart-service && skhd --restart-service`を実行している。とはいえ特に不満もない。
+
+https://github.com/asmvik/yabai
+
+https://github.com/asmvik/skhd
+
+よく使うのはこの辺のやつ。
+
+- windowを右半分に表示
+- windowを左半分に表示
+- windowを左上に表示
+- windowを左下に表示
+- windowを右3/4に表示
+- windowを左1/4に表示
+
 ## フォント
+M+1Code Nerd Font Monoを使っている。まるっとしていて好き。nerd fontも入っているのでNeovimを使っていても豆腐があまり出なくて嬉しい。
+
 ## タスク管理
+ここ1年くらいはnvim-orgmode/orgmodeを使っている。emacsのorg-modeライクな機能をNeovimで使えるようにしたプラグイン。
+
+https://github.com/nvim-orgmode/orgmode
+
+少し前まで素朴にこんな感じのファイルを毎日生成して管理していたが、期日が違うタスクをいい感じに管理したくて使い出した。
+```markdown
+## TODO
+- 実装
+
+## DONE
+- コードレビュー
+```
+
+Neovimでタスク管理できるのとタスクに優先度、期日を設定してそれをいい感じにソートして表示してくれるのがかなり肌にあっていて気に入っている。
+
+最近は時間の使い方を振り返る目的でClock In的な機能を使ってタスクごとの所要時間も管理してみている。
+
+これに関してはそのうち別の記事として詳しく書きたい。
+
 ## ブラウザ
+数年前からBraveを使っている。広告をブロックしてくれつつChrome拡張も使えるので便利。一時期Arcも使っていたが肌に合わない挙動があったので使うのをやめてしまった。（具体的には覚えていない）
+
+<!-- TODO: chrome拡張の話をかいてもいいかも -->
+
 ## IME
 ## CLI/TUIツール
 ## キーリマッパー
