@@ -44,7 +44,7 @@
       log(`Trying proxy ${i + 1}/${PROXY_SERVICES.length}:`, proxyUrl);
 
       try {
-        const response = await fetchWithTimeout(proxyUrl, 5000);
+        const response = await fetchWithTimeout(proxyUrl);
 
         if (!response.ok) {
           log(`Proxy ${i + 1} failed with status:`, response.status);
@@ -165,7 +165,8 @@
       const img = document.createElement('img');
       img.setAttribute('src', ogpData.image);
       img.setAttribute('alt', ogpData.title || '');
-      img.setAttribute('loading', 'lazy');
+      // 動的に追加される画像はloading="eager"にしてモバイルでも確実に表示
+      img.setAttribute('loading', 'eager');
       thumbnail.appendChild(img);
       log('Image updated:', ogpData.image);
     } else {
@@ -264,21 +265,35 @@
 
     log('Processing', cardsToProcess.length, 'blog cards (excluded footnotes)');
 
-    await Promise.all(cardsToProcess.map(async (card) => {
+    // 順次処理に変更して、プロキシへの負荷とレート制限を回避
+    for (const card of cardsToProcess) {
       const url = card.getAttribute('data-url');
       log('Processing card for URL:', url);
 
       if (!url) {
         log('No URL found, skipping');
-        return;
+        continue;
       }
 
       // ローディング状態を追加
       card.classList.add('loading');
 
-      // OGP情報を取得して更新
+      // OGP情報を取得して更新（失敗時は1回リトライ）
       const startTime = Date.now();
-      const ogpData = await fetchOGPData(url);
+      let ogpData = await fetchOGPData(url);
+      
+      // 失敗した場合は3秒待ってリトライ
+      if (!ogpData) {
+        log('First attempt failed, retrying after 3 seconds...');
+        await new Promise(resolve => setTimeout(resolve, 3000));
+        ogpData = await fetchOGPData(url);
+        if (ogpData) {
+          log('Retry succeeded');
+        } else {
+          log('Retry failed');
+        }
+      }
+      
       const elapsedTime = Date.now() - startTime;
       log(`Fetch completed in ${elapsedTime}ms`);
 
@@ -288,7 +303,7 @@
       if (ogpData) {
         updateBlogCard(card, ogpData);
       }
-    }));
+    }
   }
 
   // DOMContentLoaded後に初期化
