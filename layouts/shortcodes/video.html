@@ -5,7 +5,6 @@
 {{ $poster := .Get "poster" -}}
 {{ $preload := .Get "preload" | default "metadata" -}}
 {{ $src := .Get "src" -}}
-{{ $width := .Get "width" -}}
 
 {{ $posterres := false -}}
 {{ $resource := false -}}
@@ -43,12 +42,7 @@
 {{ end -}}
 
 {{ if $posterres -}}
-  {{ if $width -}}
-    {{ $image := $posterres.Resize (printf "%sx" $width) -}}
-    {{ $poster = $image.RelPermalink -}}
-  {{ else -}}
-    {{ $poster = $posterres.RelPermalink -}}
-  {{ end -}}
+  {{ $poster = $posterres.RelPermalink -}}
 {{ end -}}
 
 {{ if not $src -}}
@@ -58,7 +52,7 @@
 {{ end -}}
 
 <figure class="video{{ with $class }} {{ . }}{{ end }}">
-  <video controls preload="{{ $preload }}" {{ with $width }}width="{{ . }}"{{ end }} {{ with $poster }}poster="{{ . }}"{{ end }} {{ with $autoplay }}autoplay="{{ . }}"{{ end }} {{ with $loop }}loop="{{ . }}"{{ end }}>
+  <video controls preload="{{ $preload }}" {{ with $poster }}poster="{{ . }}"{{ end }} {{ with $autoplay }}autoplay="{{ . }}"{{ end }} {{ with $loop }}loop="{{ . }}"{{ end }}>
     <source src="{{ $src }}" {{ with $type }}type="{{ . }}"{{ end }}>
   </video>
   {{ with $caption -}}
