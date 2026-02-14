@@ -148,10 +148,24 @@ async function getMarkdownFiles(dir) {
  * Markdownファイルからブログカード対象URLを抽出
  * パターン1: リンクテキストとURLが同じ場合（[https://example.com](https://example.com)）
  * パターン2: 単独行のURL（autolink） - 脚注参照などが続く場合も含む
+ * 
+ * 脚注定義内のURL（[^N]: で始まる行）は除外する
  */
 function extractBlogcardUrls(content) {
   const urls = new Set();
   let match;
+
+  // 脚注定義の行を検出するヘルパー関数
+  const isInFootnoteDefinition = (content, matchIndex) => {
+    // matchIndexから行の先頭まで遡る
+    const beforeMatch = content.substring(0, matchIndex);
+    const lastNewline = beforeMatch.lastIndexOf('\n');
+    const lineStart = lastNewline === -1 ? 0 : lastNewline + 1;
+    const linePrefix = content.substring(lineStart, matchIndex);
+    
+    // 行が [^数字]: で始まっているかチェック
+    return /^\[\^[0-9]+\]:\s*/.test(linePrefix);
+  };
 
   // パターン1: Markdownリンク [text](url) でテキストとURLが同じ場合
   const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
@@ -159,6 +173,11 @@ function extractBlogcardUrls(content) {
   while ((match = linkPattern.exec(content)) !== null) {
     const text = match[1];
     const url = match[2];
+
+    // 脚注定義内のリンクはスキップ
+    if (isInFootnoteDefinition(content, match.index)) {
+      continue;
+    }
 
     // URLの正規化（プロトコルとトレイリングスラッシュを除去して比較）
     const normalizedText = text.replace(/^https?:\/\//, '').replace(/\/$/, '');
@@ -173,6 +192,7 @@ function extractBlogcardUrls(content) {
   // パターン2: 行頭のURL（autolink） - 脚注参照やテキストが続く場合も含む
   // 例: https://example.com [^1]
   //     https://example.com P3より引用
+  // 注: 脚注定義（[^N]: https://...）は行頭がURLではないため自動的に除外される
   const autolinkPattern = /^(https?:\/\/[^\s]+)/gm;
   while ((match = autolinkPattern.exec(content)) !== null) {
     urls.add(match[1]);

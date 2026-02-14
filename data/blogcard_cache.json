@@ -1,10 +1,4 @@
 {
-  "https://github.com/kyu08/blog-comments": {
-    "title": "GitHub - kyu08/blog-comments: Comments for blog.kyu08.com",
-    "description": "Comments for blog.kyu08.com. Contribute to kyu08/blog-comments development by creating an account on GitHub.",
-    "image": "https://opengraph.githubassets.com/d90a12b16f3d9ae49ce8a88466a75d4f5bdbc51a4d1475ecd3071826fbcf6209/kyu08/blog-comments",
-    "fetchedAt": "2026-02-14T08:26:10.634Z"
-  },
   "https://github.com/kyu08/fzf-bookmark-opener": {
     "title": "GitHub - kyu08/fzf-bookmark-opener: A command line tool that opens bookmark using fzf.",
     "description": "A command line tool that opens bookmark using fzf. - kyu08/fzf-bookmark-opener",
@@ -88,12 +82,6 @@
     "description": "A lightweight commenting system using GitHub issues.",
     "image": "",
     "fetchedAt": "2026-02-14T11:37:38.664Z"
-  },
-  "https://blog.orhun.dev/": {
-    "title": "Orhun's Blog",
-    "description": "FOSS • Linux • Programming",
-    "image": "https://blog.orhun.dev/crow.png",
-    "fetchedAt": "2026-02-14T11:37:38.798Z"
   },
   "https://www.rasukarusan.com/entry/2019/11/03/211338": {
     "title": "【備忘録】Homebrewで自作ツールを配布する - ハイパーマッスルエンジニア",
