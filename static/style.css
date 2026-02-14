@@ -130,6 +130,19 @@ img {
   margin: 0;
 }
 
+/* 動画のレスポンシブ対応 */
+figure.video {
+  width: 100%;
+  max-width: 100%;
+  margin: 20px 0;
+}
+
+figure.video video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 h2,
 h3,
 h4,
