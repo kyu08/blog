@@ -376,5 +376,17 @@
     "description": "複数のプログラムを同時に実行する「並行プログラミング」は、処理速度を飛躍的に向上させる手法で、タスク管理、プロセス管理、スレッド管理をはじめ、複雑な仕組みについての幅広い知識とテクニックが必要となります。本書はRustとアセンブリ、そして一部Cを用い、CPUのアトミック命令、グリーンスレッド、アクターモデル、π計算、ソフトウェア・トランザクショナルメモリ、async/awaitなど、並行プログラミングに関する理論的な背景から実装までをカバー。さらに、アセンブリ実装の理解を深めるため、AArch64とx86-64アーキテクチャの説明も付録として収録。一歩一歩、着実に理解できるように、その仕組みから順を追って詳しく説明します。GitHub上で公開されているソースコードを実際に動かしながら、並行プログラミングの知識と理解を深めることができます。",
     "image": "https://www.oreilly.co.jp/books/images/picture_large978-4-87311-959-5.jpeg",
     "fetchedAt": "2026-02-14T11:50:32.898Z"
+  },
+  "https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811": {
+    "title": "colored/src/lib.rs at 775ec9f19f099a987a604b85dc72ca83784f4e38 · colored-rs/colored",
+    "description": "(Rust) Coloring terminal so simple you already know how to do it ! - colored-rs/colored",
+    "image": "https://opengraph.githubassets.com/7cb941a7189d226424cc134022030fc00165a6a16ef4388e4eaf39a7978d35e4/colored-rs/colored",
+    "fetchedAt": "2026-02-14T13:59:30.731Z"
+  },
+  "https://github.com/atusy/treemonkey.nvim": {
+    "title": "GitHub - atusy/treemonkey.nvim",
+    "description": "Contribute to atusy/treemonkey.nvim development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/804219f33da8a500a826d1d11eba82298c6ccc5bb6beaa63485762164a54cbbf/atusy/treemonkey.nvim",
+    "fetchedAt": "2026-02-14T13:59:33.837Z"
   }
 }

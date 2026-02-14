@@ -147,7 +147,7 @@ async function getMarkdownFiles(dir) {
 /**
  * Markdownファイルからブログカード対象URLを抽出
  * パターン1: リンクテキストとURLが同じ場合（[https://example.com](https://example.com)）
- * パターン2: 単独行のURL（autolink）
+ * パターン2: 単独行のURL（autolink） - 脚注参照などが続く場合も含む
  */
 function extractBlogcardUrls(content) {
   const urls = new Set();
@@ -170,8 +170,10 @@ function extractBlogcardUrls(content) {
     }
   }
 
-  // パターン2: 単独行のURL（autolink）
-  const autolinkPattern = /^(https?:\/\/[^\s]+)$/gm;
+  // パターン2: 行頭のURL（autolink） - 脚注参照やテキストが続く場合も含む
+  // 例: https://example.com [^1]
+  //     https://example.com P3より引用
+  const autolinkPattern = /^(https?:\/\/[^\s]+)/gm;
   while ((match = autolinkPattern.exec(content)) !== null) {
     urls.add(match[1]);
   }
