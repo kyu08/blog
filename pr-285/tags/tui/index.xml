@@ -320,9 +320,15 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;&amp;lt;PRここから&amp;gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;fzf-makeというmake targetやpnpm script, yarn script, npm script, just recipe, taskfileに定義されたtaskをfuzzy finder形式で選択、実行できるTUIを開発しています。&lt;/p&gt;
+&lt;p&gt;fzf-makeというmake targetをfuzzy finder形式で選択、実行できるTUIを開発しています。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;fzf-make.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;コマンド名やその内容を覚えずとも楽に実行できたり、履歴機能があるのが特徴です。&lt;/p&gt;
+&lt;p&gt;現在は&lt;code&gt;Makefile&lt;/code&gt;に定義されたmake target以外にも以下のようなコマンドに対応しています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;package.json&lt;/code&gt;の&lt;code&gt;scripts&lt;/code&gt;に定義されたコマンド(pnpm, yarn, npmに対応)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Justfile&lt;/code&gt;に定義されたrecipe&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;taskfile.yaml&lt;/code&gt;に定義されたtask&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;次のようなコマンドでインストールできるのでぜひ使ってみてください。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install fzf-make
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cargo +1.90.0 install --locked fzf-make

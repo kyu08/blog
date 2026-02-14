@@ -214,7 +214,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/02/14</time>
       
-    <span class="post-reading-time">9 min read (4483 words)</span></div>
+    <span class="post-reading-time">10 min read (4590 words)</span></div>
 
   
     <span class="post-tags">
@@ -567,9 +567,15 @@ if (!doNotTrack) {
 </li>
 </ul>
 <p><strong>&lt;PRここから&gt;</strong></p>
-<p>fzf-makeというmake targetやpnpm script, yarn script, npm script, just recipe, taskfileに定義されたtaskをfuzzy finder形式で選択、実行できるTUIを開発しています。</p>
+<p>fzf-makeというmake targetをfuzzy finder形式で選択、実行できるTUIを開発しています。</p>
 <p><img src="fzf-make.gif" alt=""></p>
 <p>コマンド名やその内容を覚えずとも楽に実行できたり、履歴機能があるのが特徴です。</p>
+<p>現在は<code>Makefile</code>に定義されたmake target以外にも以下のようなコマンドに対応しています。</p>
+<ul>
+<li><code>package.json</code>の<code>scripts</code>に定義されたコマンド(pnpm, yarn, npmに対応)</li>
+<li><code>Justfile</code>に定義されたrecipe</li>
+<li><code>taskfile.yaml</code>に定義されたtask</li>
+</ul>
 <p>次のようなコマンドでインストールできるのでぜひ使ってみてください。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>brew install fzf-make
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cargo +1.90.0 install --locked fzf-make
