@@ -1,10 +1,4 @@
 {
-  "https://github.com/kyu08/blog-comments": {
-    "title": "GitHub - kyu08/blog-comments: Comments for blog.kyu08.com",
-    "description": "Comments for blog.kyu08.com. Contribute to kyu08/blog-comments development by creating an account on GitHub.",
-    "image": "https://opengraph.githubassets.com/d90a12b16f3d9ae49ce8a88466a75d4f5bdbc51a4d1475ecd3071826fbcf6209/kyu08/blog-comments",
-    "fetchedAt": "2026-02-14T08:26:10.634Z"
-  },
   "https://github.com/kyu08/fzf-bookmark-opener": {
     "title": "GitHub - kyu08/fzf-bookmark-opener: A command line tool that opens bookmark using fzf.",
     "description": "A command line tool that opens bookmark using fzf. - kyu08/fzf-bookmark-opener",
@@ -89,12 +83,6 @@
     "image": "",
     "fetchedAt": "2026-02-14T11:37:38.664Z"
   },
-  "https://blog.orhun.dev/": {
-    "title": "Orhun's Blog",
-    "description": "FOSS • Linux • Programming",
-    "image": "https://blog.orhun.dev/crow.png",
-    "fetchedAt": "2026-02-14T11:37:38.798Z"
-  },
   "https://www.rasukarusan.com/entry/2019/11/03/211338": {
     "title": "【備忘録】Homebrewで自作ツールを配布する - ハイパーマッスルエンジニア",
     "description": "Homebrewでの配布は簡単だが毎回忘れる Goでバイナリ作ったり、ShellScript書いて配布したいなと思ったときにHomebrew使うことが割とある。 が、その都度毎回調べてやり方を思い出しながらするのが億劫だったので、一回まとめてみる。 ざっくり手順 Homebrew配布用のリポジトリを作る tagをpushしてReleaseノートを作る Formulaファイルを作ってpush 1. Homebrew配布用のリポジトリを作る 自作ツールのインストールファイルを置くためのリポジトリを作る。このリポジトリにバイナリとかの成果物を置くわけではない。置くのはインストールファイルである.rb…",
@@ -142,12 +130,6 @@
     "description": "",
     "image": "",
     "fetchedAt": "2026-02-14T11:37:40.029Z"
-  },
-  "https://www.shoeisha.co.jp/book/detail/9784798183961": {
-    "title": "つくって、壊して、直して学ぶ Kubernetes入門 | 翔泳社",
-    "description": "動かなくっても、もう怖くない！\n\nトラブルシューティングを体験しながら学ぶ、実践的入門書。\n\n\n本書は、Kubernetesの実践的な知識をハンズオン形式で解説する書籍です。本書の特徴は、壊れにくいKubernetesをあえて壊しながら学ぶことで、初心者が挫折しやすいトラブルシューティングの知識や対応力が身に付けられることです。初心者でも、経験者でも、今度こそKubernetesがわかる！\nマンガや図解を多く掲載しているため視覚的に理解したい方にもおすすめです。\n\n\n・つくって、壊して、直して学ぶ\n- DockerfileからDockerコンテナをつくる\n- Kubernetesクラスタ上にアプリケーションをつくって、壊す\n- Serviceを壊す\n- kubectlでデバッグする\n- OutOfMemoryを発生させて、直す　...\n\n\n\n・Kubernetesの構築、運用だけでなくオブザーバビリティも解説\nトラブル解決にむけてより多くの情報を得るための「オブザーバビリティ」、そしてトラブルを検知するための「モニタリング」についても説明します。\n\n\n\n・豊富なイラストとマンガで見てわかる\n章ごと、ハンズオンごとに導入マンガを掲載し、視覚的にも学習内容を理解できるようにしています。むずかしい概念もイラストで丁寧に図解してあります。\n\n\n\nPart 1：つくってみようKubernetes\nChapter 1　Dockerコンテナをつくってみる\nChapter 2　Kubernetesクラスタをつくってみる\nChapter 3　全体像の説明\nChapter 4　アプリケーションをKubernetesクラスタ上につくる\nPart 2：アプリケーションを壊して学ぶKubernetes\nChapter 5　トラブルシューティングガイドとkubectlコマンドの使い方\nChapter 6　Kubernetes リソースをつくって壊そう\nChapter 7　安全なステートレス・アプリケーションをつくるために\nChapter 8　総復習：アプリケーションを直そう\nPart 3：壊れても動くKubernetes\nChapter 9　Kubernetesの仕組み、アーキテクチャーを理解しよう\nChapter 10　Kubernetesの開発ワークフローを理解しよう\nChapter 11　オブザーバビリティとモニタリングに触れてみよう\nChapter 12　この先の歩み方",
-    "image": "https://www.shoeisha.co.jp/static/book/og_image/9784798183961.jpg",
-    "fetchedAt": "2026-02-14T11:50:22.514Z"
   },
   "https://github.com/kubernetes-sigs/kind": {
     "title": "GitHub - kubernetes-sigs/kind: Kubernetes IN Docker - local clusters for testing Kubernetes",
@@ -376,5 +358,65 @@
     "description": "複数のプログラムを同時に実行する「並行プログラミング」は、処理速度を飛躍的に向上させる手法で、タスク管理、プロセス管理、スレッド管理をはじめ、複雑な仕組みについての幅広い知識とテクニックが必要となります。本書はRustとアセンブリ、そして一部Cを用い、CPUのアトミック命令、グリーンスレッド、アクターモデル、π計算、ソフトウェア・トランザクショナルメモリ、async/awaitなど、並行プログラミングに関する理論的な背景から実装までをカバー。さらに、アセンブリ実装の理解を深めるため、AArch64とx86-64アーキテクチャの説明も付録として収録。一歩一歩、着実に理解できるように、その仕組みから順を追って詳しく説明します。GitHub上で公開されているソースコードを実際に動かしながら、並行プログラミングの知識と理解を深めることができます。",
     "image": "https://www.oreilly.co.jp/books/images/picture_large978-4-87311-959-5.jpeg",
     "fetchedAt": "2026-02-14T11:50:32.898Z"
+  },
+  "https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811": {
+    "title": "colored/src/lib.rs at 775ec9f19f099a987a604b85dc72ca83784f4e38 · colored-rs/colored",
+    "description": "(Rust) Coloring terminal so simple you already know how to do it ! - colored-rs/colored",
+    "image": "https://opengraph.githubassets.com/7cb941a7189d226424cc134022030fc00165a6a16ef4388e4eaf39a7978d35e4/colored-rs/colored",
+    "fetchedAt": "2026-02-14T13:59:30.731Z"
+  },
+  "https://github.com/atusy/treemonkey.nvim": {
+    "title": "GitHub - atusy/treemonkey.nvim",
+    "description": "Contribute to atusy/treemonkey.nvim development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/804219f33da8a500a826d1d11eba82298c6ccc5bb6beaa63485762164a54cbbf/atusy/treemonkey.nvim",
+    "fetchedAt": "2026-02-14T13:59:33.837Z"
+  },
+  "https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view": {
+    "title": "lecture 7.pdf",
+    "description": "",
+    "image": "",
+    "fetchedAt": "2026-02-14T14:23:34.720Z"
+  },
+  "https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view": {
+    "title": "lecture 3.pdf",
+    "description": "",
+    "image": "",
+    "fetchedAt": "2026-02-14T14:23:34.697Z"
+  },
+  "https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view": {
+    "title": "lecture 4.pdf",
+    "description": "",
+    "image": "",
+    "fetchedAt": "2026-02-14T14:23:34.646Z"
+  },
+  "https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view": {
+    "title": "lecture 5.pdf",
+    "description": "",
+    "image": "",
+    "fetchedAt": "2026-02-14T14:23:34.599Z"
+  },
+  "https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view": {
+    "title": "lecture 8.pdf",
+    "description": "",
+    "image": "",
+    "fetchedAt": "2026-02-14T14:23:37.627Z"
+  },
+  "https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view": {
+    "title": "lecture 10.pdf",
+    "description": "",
+    "image": "",
+    "fetchedAt": "2026-02-14T14:23:37.522Z"
+  },
+  "https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view": {
+    "title": "lecture 11.pdf",
+    "description": "",
+    "image": "",
+    "fetchedAt": "2026-02-14T14:23:37.545Z"
+  },
+  "https://www.shoeisha.co.jp/book/detail/9784798183961": {
+    "title": "つくって、壊して、直して学ぶ Kubernetes入門 | 翔泳社",
+    "description": "動かなくっても、もう怖くない！\n\nトラブルシューティングを体験しながら学ぶ、実践的入門書。\n\n\n本書は、Kubernetesの実践的な知識をハンズオン形式で解説する書籍です。本書の特徴は、壊れにくいKubernetesをあえて壊しながら学ぶことで、初心者が挫折しやすいトラブルシューティングの知識や対応力が身に付けられることです。初心者でも、経験者でも、今度こそKubernetesがわかる！\nマンガや図解を多く掲載しているため視覚的に理解したい方にもおすすめです。\n\n\n・つくって、壊して、直して学ぶ\n- DockerfileからDockerコンテナをつくる\n- Kubernetesクラスタ上にアプリケーションをつくって、壊す\n- Serviceを壊す\n- kubectlでデバッグする\n- OutOfMemoryを発生させて、直す　...\n\n\n\n・Kubernetesの構築、運用だけでなくオブザーバビリティも解説\nトラブル解決にむけてより多くの情報を得るための「オブザーバビリティ」、そしてトラブルを検知するための「モニタリング」についても説明します。\n\n\n\n・豊富なイラストとマンガで見てわかる\n章ごと、ハンズオンごとに導入マンガを掲載し、視覚的にも学習内容を理解できるようにしています。むずかしい概念もイラストで丁寧に図解してあります。\n\n\n\nPart 1：つくってみようKubernetes\nChapter 1　Dockerコンテナをつくってみる\nChapter 2　Kubernetesクラスタをつくってみる\nChapter 3　全体像の説明\nChapter 4　アプリケーションをKubernetesクラスタ上につくる\nPart 2：アプリケーションを壊して学ぶKubernetes\nChapter 5　トラブルシューティングガイドとkubectlコマンドの使い方\nChapter 6　Kubernetes リソースをつくって壊そう\nChapter 7　安全なステートレス・アプリケーションをつくるために\nChapter 8　総復習：アプリケーションを直そう\nPart 3：壊れても動くKubernetes\nChapter 9　Kubernetesの仕組み、アーキテクチャーを理解しよう\nChapter 10　Kubernetesの開発ワークフローを理解しよう\nChapter 11　オブザーバビリティとモニタリングに触れてみよう\nChapter 12　この先の歩み方",
+    "image": "https://www.shoeisha.co.jp/static/book/og_image/9784798183961.jpg",
+    "fetchedAt": "2026-02-14T14:29:02.746Z"
   }
 }

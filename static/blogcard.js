@@ -196,14 +196,14 @@
     log('Converted blog card to normal link:', url);
   }
 
-  // ページ読み込み時に自動取得設定のあるブログカードを処理
+  // ページ読み込み時にブログカードを処理
   async function initBlogCards() {
     log('Initializing blog cards...');
-    const cards = document.querySelectorAll('.blogcard[data-auto-fetch="true"]');
-    log('Found', cards.length, 'blog cards with auto-fetch');
+    const allCards = document.querySelectorAll('.blogcard');
+    log('Found', allCards.length, 'blog cards');
 
-    // 脚注内のブログカードを通常のリンクに変換
-    const cardsToProcess = Array.from(cards).filter(card => {
+    // 脚注内のブログカードを通常のリンクに変換（キャッシュの有無に関わらず）
+    const cardsToProcess = Array.from(allCards).filter(card => {
       const isInFootnotes = card.closest('.footnotes') !== null;
       if (isInFootnotes) {
         log('Converting blog card in footnotes to normal link:', card.getAttribute('data-url'));
@@ -263,10 +263,15 @@
       return true;
     });
 
-    log('Processing', cardsToProcess.length, 'blog cards (excluded footnotes)');
+    log('Processing', cardsToProcess.length, 'blog cards');
+
+    // 自動取得が有効なブログカードのみOGPデータを取得
+    const cardsToFetch = cardsToProcess.filter(card => card.getAttribute('data-auto-fetch') === 'true');
+    
+    log('Fetching OGP data for', cardsToFetch.length, 'blog cards');
 
     // 順次処理に変更して、プロキシへの負荷とレート制限を回避
-    for (const card of cardsToProcess) {
+    for (const card of cardsToFetch) {
       const url = card.getAttribute('data-url');
       log('Processing card for URL:', url);
 
