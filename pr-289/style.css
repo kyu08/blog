@@ -1,0 +1,667 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap");
+
+:root {
+  --background: #222129;
+  --foreground: #eceae5;
+  --accent: #ffa86a;
+}
+
+* {
+  --color-gray: #808080;
+
+  /* themeColorを切り替えたらここも切り替える */
+  /* orange */
+  --color-theme: #ffa86a;
+  /* blue */
+  /* --color-theme: #23B0FFB3;  */
+
+  -webkit-font-feature-settings:
+    "liga" on,
+    "calt" on;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: none;
+}
+
+/* Markdown記号の表示 (h1は記事タイトルに使用されるため除外) */
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before {
+  letter-spacing: -0.1em; /* #同士の間隔を狭める */
+  color: var(--color-gray);
+  margin-right: 6px;
+}
+
+h2::before {
+  content: "##";
+}
+h3::before {
+  content: "###";
+}
+h4::before {
+  content: "####";
+}
+h5::before {
+  content: "#####";
+}
+h6::before {
+  content: "######";
+}
+
+html,
+body {
+  /* padding: 15px; */
+  max-width: 1200px;
+  margin: 0;
+  margin: 0 auto;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
+}
+
+a {
+  color: var(--color-theme);
+  text-decoration: none;
+}
+
+/* 記事末尾の「次の記事ボタン」「前の記事ボタン」のスタイル */
+.button.next,
+.button.previous {
+  border: 0;
+  max-width: 100%;
+}
+
+.button a {
+  background-color: var(--color-gray);
+  color: white;
+}
+
+/* posts_pagination用のスタイル（全デバイス） */
+.pagination__buttons {
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* 長いテキストを3行まで表示し、それ以降は...で省略 */
+.pagination__buttons a.button.inline {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  max-width: 100%;
+  line-height: 1.5;
+  text-align: center;
+}
+
+code {
+  background-color: rgba(99, 110, 123, 0.4);
+  border-radius: 8px;
+  padding: 0 8px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 600px;
+  margin: 0;
+}
+
+/* 動画のレスポンシブ対応 */
+figure.video {
+  max-width: 100%;
+  margin: 20px 0;
+}
+
+figure.video video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+h2 {
+  border-bottom: solid 2px var(--color-gray);
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  padding-bottom: 4px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+.post-cover,
+a.read-more {
+  display: none;
+}
+
+p > img {
+  border: none;
+  display: block;
+  margin: 0 auto;
+}
+
+th,
+td {
+  border: 2px solid var(--accent);
+}
+
+article.post > div.post-meta {
+  margin-top: 8px;
+}
+
+article.on-list > .post-content,
+article.on-list > .post-title::after {
+  display: none;
+}
+
+article.on-list > .post-title {
+  padding-bottom: 0;
+  border: none;
+}
+
+article.on-list {
+  margin: 24px auto;
+  padding: 0;
+}
+
+.headings--one-size h1:not(first-child),
+.headings--one-size h2:not(first-child),
+.headings--one-size h3:not(first-child),
+.headings--one-size h4:not(first-child),
+.headings--one-size h5:not(first-child),
+.headings--one-size h6:not(first-child) {
+  margin-top: 20px;
+}
+
+.pagination__title {
+  margin: 20px 0 20px;
+}
+
+ul {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+ul ul {
+  margin-bottom: 0px;
+}
+
+ol {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+ol ol {
+  margin-bottom: 0px;
+}
+
+blockquote {
+  position: relative;
+  border-left: 2px solid var(--color-gray);
+  border-top: none;
+  border-bottom: none;
+  margin: 0;
+  padding: 10px 25px;
+  color: var(--color-gray);
+  margin: 20px 0;
+}
+
+blockquote::before {
+  display: none;
+}
+
+/* ブログカード */
+.blogcard {
+  margin: 24px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.blogcard.loading .blogcard-thumbnail-placeholder {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.blogcard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 168, 106, 0.2);
+}
+
+.blogcard-link {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: rgba(99, 110, 123, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+.blogcard-link:hover {
+  background-color: rgba(99, 110, 123, 0.3);
+}
+
+.blogcard-thumbnail {
+  flex-shrink: 0;
+  width: 240px;
+  height: 144px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(99, 110, 123, 0.4);
+  overflow: hidden;
+}
+
+.blogcard-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  margin: 0;
+}
+
+.blogcard-thumbnail-placeholder {
+  color: var(--color-gray);
+}
+
+.blogcard-thumbnail-placeholder svg {
+  width: 48px;
+  height: 48px;
+}
+
+.blogcard-content {
+  flex: 1;
+  padding: 16px 16px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.blogcard-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--foreground);
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.blogcard-description {
+  font-size: 14px;
+  color: var(--color-gray);
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.blogcard-url {
+  font-size: 12px;
+  color: var(--accent);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+  .blogcard-link {
+    flex-direction: column;
+  }
+
+  .blogcard-thumbnail {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+/* モバイルでもデスクトップメニューを表示する */
+@media (max-width: 684px) {
+  /* デスクトップメニューを表示 */
+  .menu--desktop {
+    display: flex !important;
+  }
+
+  /* モバイルメニューのトリガーボタンを非表示 */
+  .menu--mobile .menu__trigger {
+    display: none !important;
+  }
+
+  /* PC表示と同じように横並びにする */
+  .navigation-menu__inner {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+  }
+
+  .navigation-menu__inner > li:not(:last-of-type) {
+    margin-right: 20px !important;
+  }
+
+  /* 上下の要素との距離を均等にする */
+  .navigation-menu {
+    margin: 20px 0 0 !important;
+  }
+}
+
+/* Table of Contents Styles */
+
+/* Sidebar TOC: Desktop only (sticky on the right) */
+/* Show sidebar TOC for screens 1200px and wider */
+@media (min-width: 1200px) {
+  .table-of-contents-sidebar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 280px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    padding: 20px;
+    background-color: rgba(99, 110, 123, 0.1);
+    border-radius: 8px;
+    border: 1px solid color-mix(in srgb, var(--foreground) 20%, transparent);
+  }
+
+  .table-of-contents-sidebar h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--color-gray);
+    padding-bottom: 8px;
+  }
+
+  .table-of-contents-sidebar nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  /* Nested lists for heading levels (h3, h4, etc.) */
+  .table-of-contents-sidebar nav ul ul {
+    padding-left: 16px;
+  }
+
+  .table-of-contents-sidebar nav ul li {
+    margin: 8px 0;
+  }
+
+  .table-of-contents-sidebar nav ul li::before {
+    display: none;
+  }
+
+  .table-of-contents-sidebar nav a {
+    display: block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    color: var(--foreground);
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .table-of-contents-sidebar nav a:hover {
+    background-color: rgba(255, 168, 106, 0.15);
+  }
+
+  /* Add heading level indicators (##, ###, etc.) based on nesting */
+  .table-of-contents-sidebar nav > ul > li > a::before {
+    content: "## ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents-sidebar nav > ul > li > ul > li > a::before {
+    content: "### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents-sidebar nav > ul > li > ul > li > ul > li > a::before {
+    content: "#### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents-sidebar nav > ul > li > ul > li > ul > li > ul > li > a::before {
+    content: "##### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents-sidebar nav > ul > li > ul > li > ul > li > ul > li > ul > li > a::before {
+    content: "###### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents-sidebar nav a.toc-active {
+    background-color: var(--accent);
+    color: var(--background);
+    font-weight: bold;
+  }
+
+  .table-of-contents-sidebar nav a.toc-active::before {
+    color: var(--background);
+  }
+
+  /* Hide mobile button on desktop with sidebar */
+  .toc-mobile-button {
+    display: none;
+  }
+}
+
+/* Mobile/Narrower Desktop: Floating button and overlay TOC */
+@media (max-width: 1199px) {
+  /* Show mobile button */
+  .toc-mobile-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    border: none;
+    color: var(--background);
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .toc-mobile-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  }
+
+  .toc-mobile-button svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Sidebar TOC becomes overlay on narrow screens */
+  .table-of-contents-sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 60px 20px 20px;
+    background-color: var(--background);
+    border-left: 1px solid color-mix(in srgb, var(--foreground) 20%, transparent);
+    z-index: 998;
+    transition: right 0.3s ease;
+  }
+
+  .table-of-contents-sidebar.toc-open {
+    right: 0;
+  }
+
+  .table-of-contents-sidebar h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--color-gray);
+    padding-bottom: 8px;
+  }
+
+  .table-of-contents-sidebar nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .table-of-contents-sidebar nav ul ul {
+    padding-left: 16px;
+  }
+
+  .table-of-contents-sidebar nav ul li {
+    margin: 8px 0;
+  }
+
+  .table-of-contents-sidebar nav ul li::before {
+    display: none;
+  }
+
+  .table-of-contents-sidebar nav a {
+    display: block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    color: var(--foreground);
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .table-of-contents-sidebar nav a:hover {
+    background-color: rgba(255, 168, 106, 0.15);
+  }
+
+  /* Add heading level indicators (##, ###, etc.) */
+  .table-of-contents-sidebar nav > ul > li > a::before {
+    content: "## ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents-sidebar nav > ul > li > ul > li > a::before {
+    content: "### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents-sidebar nav > ul > li > ul > li > ul > li > a::before {
+    content: "#### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents-sidebar nav > ul > li > ul > li > ul > li > ul > li > a::before {
+    content: "##### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents-sidebar nav > ul > li > ul > li > ul > li > ul > li > ul > li > a::before {
+    content: "###### ";
+    letter-spacing: -0.1em;
+    color: var(--color-gray);
+    margin-right: 6px;
+  }
+
+  .table-of-contents-sidebar nav a.toc-active {
+    background-color: var(--accent);
+    color: var(--background);
+    font-weight: bold;
+  }
+
+  .table-of-contents-sidebar nav a.toc-active::before {
+    color: var(--background);
+  }
+
+  /* Overlay backdrop */
+  .toc-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 997;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .toc-overlay.toc-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
