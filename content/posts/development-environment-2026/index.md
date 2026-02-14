@@ -18,7 +18,7 @@ hideComments: false
 color: ""
 cover: "cover.png"
 ---
-
+<!-- TODO: スクショが小さすぎるという問題があるかもしれない... -->
 
 2026年年始に複数の方（や会社）が開発環境について書いていたので2026年時点のスナップショットも兼ねて自分も流行りに乗って書いてみる。
 
@@ -255,14 +255,27 @@ https://github.com/kyu08/fzf-make
 
 **</PRここまで>**
 
-<!-- TODO: それぞれスクショかgifをはる -->
-
 ## キーリマッパー
+Karabiner-Elementsを使っています。
+
+vimmerなのでAの左側のキーを
+
+- 単押しでesc
+- 長押しでctrl
+
+となるように設定している。
+
+あとはよくある左cmdを英数、右cmdをかなにリマップする設定とか、ctrl+shift+hjklで←↓↑→が入力する設定とかを入れている。
+
 ## キーボード
 - 7sPro
+    ![](7spro.webp)
+    - 2021/8から使っている。今は家でメインのキーボードとして使っている。
+    - キースイッチは[Yushakobo Fairy Silent Linear Switch](https://shop.yushakobo.jp/products/5659)を使用。
 - EPOMAKER SPLIT70
-
-<!-- TODO: キースイッチは... -->
+    - 2026/1に買って職場で使っている。分割キーボードかつガスケットマウントでとても打鍵感が良い。
+    - キースイッチは同じく[Yushakobo Fairy Silent Linear Switch](https://shop.yushakobo.jp/products/5659)を使用。
+    - https://epomaker.jp/products/epomaker-split70
 
 ## その他
 - fuwari
