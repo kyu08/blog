@@ -132,6 +132,7 @@ img {
 
 /* 動画のレスポンシブ対応 */
 figure.video {
+  width: 100%;
   max-width: 100%;
   margin: 20px 0;
 }
