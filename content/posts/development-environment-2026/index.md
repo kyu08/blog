@@ -285,6 +285,7 @@ vimmerなのでAの左側のキーを
     ![](7spro.webp)
     - 2021/8から使っている。今は家でメインのキーボードとして使っている。
     - キースイッチは[Yushakobo Fairy Silent Linear Switch](https://shop.yushakobo.jp/products/5659)を使用。
+    - https://shop.yushakobo.jp/products/7spro
 - EPOMAKER SPLIT70
     - 2026/1に買って職場で使っている。分割キーボードかつガスケットマウントでとても打鍵感が良い。
     - キースイッチは同じく[Yushakobo Fairy Silent Linear Switch](https://shop.yushakobo.jp/products/5659)を使用。
