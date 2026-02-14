@@ -73,7 +73,7 @@
 &lt;p&gt;（就職した）2021年くらいからNeovimを使っている。厳密には2022年ごろまではJetBrains系のエディタと併用していたが、そこからはNeovimのみを使っている。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;neovim.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;キーボードだけで操作しやすいのと起動が早いのとカスタマイズしやすいのが好きでつかっている。（もちろんvimの操作性も気に入っている）&lt;/p&gt;
-&lt;p&gt;最近はこんな感じで&lt;a href=&#34;https://github.com/sindrets/diffview.nvim&#34; target=&#34;_blank&#34; &gt;diffview.nvim&lt;/a&gt;を使ってPRのdiffはすべてNeovim上で見るようにしている。（&lt;a href=&#34;https://github.com/pwntester/octo.nvim&#34; target=&#34;_blank&#34; &gt;octo.nvim&lt;/a&gt;にコメント周りのバグがあったのでレビューコメントの書き込みはGitHubのWebUIから行っている。）&lt;/p&gt;
+&lt;p&gt;最近はこんな感じで&lt;a href=&#34;https://github.com/sindrets/diffview.nvim&#34; target=&#34;_blank&#34; &gt;diffview.nvim&lt;/a&gt;を使ってPRのdiffはすべてNeovim上で見るようにしている。コードをレビューしていると周辺の実装も含めて確認したいことがよくあるので、エディタ上でレビューしているとすぐに該当ファイルに飛べて便利。（&lt;a href=&#34;https://github.com/pwntester/octo.nvim&#34; target=&#34;_blank&#34; &gt;octo.nvim&lt;/a&gt;にコメント周りのバグがあったのでレビューコメントの書き込みはGitHubのWebUIから行っている。）&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;neovim-pr-review.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/sindrets/diffview.nvim&#34; data-auto-fetch=&#34;true&#34;&gt;
   &lt;a href=&#34;https://github.com/sindrets/diffview.nvim&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
@@ -88,8 +88,8 @@
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;今はGo/TypeScript/Rustあたりしか書いてないので特に困ってないが、JVM系をNeovimで書こうとすると若干辛みがあるかもしれない。（ちょっとだけJava/ScalaをNeovimで書いたことがあるが重かったり不安定だったりして辛かった）&lt;/p&gt;
-&lt;p&gt;AI時代になって設定を自分好みにするコストが格段に減ったのでNeovimのカスタマイズが捗っており嬉しい。（luaの書き方を覚える前にAI時代が来てしまった&amp;hellip;）&lt;/p&gt;
-&lt;p&gt;久々に起動時間を測ってみたら60msくらいになっていたので気が向いたらもうちょっとチューニングしてもいいかもしれない。&lt;/p&gt;
+&lt;p&gt;AI時代になって設定を自分好みにするコストが格段に減ったのでNeovimのカスタマイズが捗っており嬉しい。最近はPRレビュー効率化のための色々をClaude Codeにやってもらっている。（luaの書き方を覚える前にAI時代が来てしまった&amp;hellip;）&lt;/p&gt;
+&lt;p&gt;久々に起動時間を測ってみたら60msくらいになっていたので気が向いたらもうちょっとチューニングしてもいいかもしれない。（たぶん30msくらいまではいけるはず）&lt;/p&gt;
 &lt;p&gt;一時期cursorも頑張って設定ファイルを作り込んだうえで慣れようとしてみたが、どうもVSCode系エディタとは思想が合わなかったので結局数日で戻ってきてしまった。&lt;/p&gt;
 &lt;h2 id=&#34;aiツール&#34;&gt;AIツール&lt;/h2&gt;
 &lt;p&gt;ClaudeとDevin、GitHub Copilotを使っている。&lt;/p&gt;
@@ -98,7 +98,8 @@
 &lt;p&gt;Devinは主にAsk Devinを使ってコードベースの調査などに使っている。レスポンスがめっちゃ早くてありがたい。&lt;/p&gt;
 &lt;p&gt;GitHub Copilotはエディタのインライン補完で使ったり、GitHubのWebUI上でタスクを依頼したりするときに使っている。特にこのブログの機能開発ではよく使っている。（issueさえ書けばそのままWebUIからタスクを依頼できて便利）&lt;/p&gt;
 &lt;h2 id=&#34;ターミナルエミュレータ&#34;&gt;ターミナルエミュレータ&lt;/h2&gt;
-&lt;p&gt;Alacrittyを使っている。ターミナルにはタブ機能がない方がcmd+wで誤爆したりとかが起きないので好きで使っている。正直早いかどうかはあまりわかってないが特に不満もない。（少し前に日本語入力もいい感じになったし）&lt;/p&gt;
+&lt;p&gt;Alacrittyを使っている。ターミナルにはタブ機能がない方が&lt;code&gt;cmd+w&lt;/code&gt;等を誤爆したりとかが起きないので好きで使っている。（iTerm2を使っていたときはたまに誤爆してシェルが消えて悲しくなっていた。）&lt;/p&gt;
+&lt;p&gt;正直早いかどうかはあまりわかってないが特に不満もない。（少し前に日本語入力もいい感じになったし）&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/alacritty/alacritty&#34; data-auto-fetch=&#34;true&#34;&gt;
   &lt;a href=&#34;https://github.com/alacritty/alacritty&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -136,10 +137,10 @@
 &lt;p&gt;前述の通りalacrittyとの相性がいい感じなのでよほどのことがない限りこの組み合わせは変えなさそう。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;Status Lineはこんな感じで画面下側にwindow名と現在時刻を表示している。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;tmux.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;詳しくは後述するが、&lt;a href=&#34;https://github.com/nvim-orgmode/orgmode&#34; target=&#34;_blank&#34; &gt;nvim-orgmode/orgmode&lt;/a&gt;でClock In(時間計測)しているタスクがあるときはそのタスク名と経過時間をStatus Lineに表示するようにしている。&lt;/p&gt;
+&lt;p&gt;詳しくは後述するが、&lt;a href=&#34;https://github.com/nvim-orgmode/orgmode&#34; target=&#34;_blank&#34; &gt;nvim-orgmode/orgmode&lt;/a&gt;でClock In(時間計測)しているタスクがあるときはそのタスク名と経過時間をStatus Lineに表示するようにしている。1つのタスクに集中できて割と作業が捗っている。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;tmux-org-task.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;その他のtmuxの設定とか工夫を紹介する記事は別で書きたい。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/zellij-org/zellij&#34; target=&#34;_blank&#34; &gt;Zellij&lt;/a&gt;も試したことはあるが、自分の環境だとなぜか表示が崩れてしまうので使っていない。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/zellij-org/zellij&#34; target=&#34;_blank&#34; &gt;Zellij&lt;/a&gt;も試したことはあるが、自分の環境だとなぜか表示が崩れてしまったので使っていない。&lt;/p&gt;
 &lt;h2 id=&#34;シェル&#34;&gt;シェル&lt;/h2&gt;
 &lt;p&gt;zshを使っている。&lt;/p&gt;
 &lt;p&gt;元々はネットに落ちているshellのコードが（fishよりも）動きやすいから、という理由で使っていたのを惰性で使い続けている。&lt;/p&gt;
@@ -296,11 +297,13 @@
 &lt;ul&gt;
 &lt;li&gt;fzf
 &lt;ul&gt;
+&lt;li&gt;言わずと知れたあいまい検索ツール。&lt;/li&gt;
 &lt;li&gt;ディレクトリ履歴移動やファイル検索などあらゆるスクリプトで使っている。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;lazygit
 &lt;ul&gt;
+&lt;li&gt;gitのTUIクライアント。&lt;/li&gt;
 &lt;li&gt;gitの操作はすべてlazygitでやっている。
 &lt;img src=&#34;lazygit.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;li&gt;add commit push pullなどの日常の操作やブランチ操作などをかなり少ないキー入力で行えるのがとても便利。&lt;/li&gt;
@@ -311,10 +314,10 @@
 &lt;/li&gt;
 &lt;li&gt;k9s
 &lt;ul&gt;
-&lt;li&gt;GKEのリソースを見たり操作したりするときに使っている。とても便利。
+&lt;li&gt;GKEのリソースを見たり操作したりするときに使っている。とても便利。（画像はサンプル用にkindでローカル起動したクラスタのもの）
 &lt;img src=&#34;k9s.webp&#34; alt=&#34;&#34;&gt;
 &lt;img src=&#34;k9s-pulse.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
-&lt;li&gt;ログはあまり使いこなせてないのでDatadogやCloud Loggingを見ていることが多い。&lt;/li&gt;
+&lt;li&gt;ログはあまり使いこなせてないので普段の開発ではDatadogやCloud Loggingを見ていることが多い。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -325,8 +328,8 @@
 &lt;p&gt;現在は&lt;code&gt;Makefile&lt;/code&gt;に定義されたmake target以外にも以下のようなコマンドに対応しています。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;package.json&lt;/code&gt;の&lt;code&gt;scripts&lt;/code&gt;に定義されたコマンド(pnpm, yarn, npmに対応)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Justfile&lt;/code&gt;に定義されたrecipe&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;taskfile.yaml&lt;/code&gt;に定義されたtask&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;justfile&lt;/code&gt;に定義されたrecipe&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Taskfile.yml&lt;/code&gt;に定義されたtask&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;次のようなコマンドでインストールできるのでぜひ使ってみてください。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install fzf-make
@@ -386,7 +389,7 @@
 &lt;ul&gt;
 &lt;li&gt;fuwari
 &lt;ul&gt;
-&lt;li&gt;スクリーンショットを付箋のように画面上に貼り付けておけるmacアプリ。ちょっとメモとしてみたいときにとても便利&lt;/li&gt;
+&lt;li&gt;スクリーンショットを付箋のように画面上に貼り付けておけるmacアプリ。画面に表示されている何かをちょっとメモ的に見たいときにとても便利&lt;/li&gt;
 &lt;li&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kentya6/Fuwari&#34; data-auto-fetch=&#34;true&#34;&gt;
   &lt;a href=&#34;https://github.com/kentya6/Fuwari&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -409,6 +412,11 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;ここ数年で主要な使用ツール（Neovim, tmux, zsh）が変わっていないので安定して自分好みのカスタマイズが進められている。&lt;/p&gt;
+&lt;p&gt;AIツールの実装力がかなり上がったのもあり、Neovimやtmuxのカスタマイズも今まで以上にかなり捗るようになって嬉しい。&lt;/p&gt;
+&lt;p&gt;好みの環境で作業ができると作業自体が楽しくなって仕事や趣味のモチベーションも上がるので2026年もやっていき。&lt;/p&gt;
+&lt;p&gt;みなさんのこだわりもぜひ教えてください〜！&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
