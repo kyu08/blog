@@ -5,7 +5,7 @@
 {{- $autoFetch := .autoFetch | default "true" -}}
 
 {{- /* キャッシュデータを確認 */ -}}
-{{- $cachedData := nil -}}
+{{- $cachedData := false -}}
 {{- if site.Data.blogcard_cache -}}
   {{- $cachedData = index site.Data.blogcard_cache $url -}}
 {{- end -}}
