@@ -249,6 +249,8 @@ async function fetchAllOGP(urls, existingCache) {
       if (ogpData) {
         cache[url] = ogpData;
       }
+      // 取得失敗時: 既存のキャッシュデータがあればそれを保持、なければスキップ
+      // （既にexistingCacheからコピー済みなので、何もしない）
     }
   }
   
