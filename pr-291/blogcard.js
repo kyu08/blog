@@ -44,7 +44,7 @@
       log(`Trying proxy ${i + 1}/${PROXY_SERVICES.length}:`, proxyUrl);
 
       try {
-        const response = await fetchWithTimeout(proxyUrl, 10000);
+        const response = await fetchWithTimeout(proxyUrl);
 
         if (!response.ok) {
           log(`Proxy ${i + 1} failed with status:`, response.status);
@@ -165,7 +165,8 @@
       const img = document.createElement('img');
       img.setAttribute('src', ogpData.image);
       img.setAttribute('alt', ogpData.title || '');
-      img.setAttribute('loading', 'lazy');
+      // 動的に追加される画像はloading="eager"にしてモバイルでも確実に表示
+      img.setAttribute('loading', 'eager');
       thumbnail.appendChild(img);
       log('Image updated:', ogpData.image);
     } else {
