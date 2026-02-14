@@ -418,5 +418,76 @@
     "description": "動かなくっても、もう怖くない！\n\nトラブルシューティングを体験しながら学ぶ、実践的入門書。\n\n\n本書は、Kubernetesの実践的な知識をハンズオン形式で解説する書籍です。本書の特徴は、壊れにくいKubernetesをあえて壊しながら学ぶことで、初心者が挫折しやすいトラブルシューティングの知識や対応力が身に付けられることです。初心者でも、経験者でも、今度こそKubernetesがわかる！\nマンガや図解を多く掲載しているため視覚的に理解したい方にもおすすめです。\n\n\n・つくって、壊して、直して学ぶ\n- DockerfileからDockerコンテナをつくる\n- Kubernetesクラスタ上にアプリケーションをつくって、壊す\n- Serviceを壊す\n- kubectlでデバッグする\n- OutOfMemoryを発生させて、直す　...\n\n\n\n・Kubernetesの構築、運用だけでなくオブザーバビリティも解説\nトラブル解決にむけてより多くの情報を得るための「オブザーバビリティ」、そしてトラブルを検知するための「モニタリング」についても説明します。\n\n\n\n・豊富なイラストとマンガで見てわかる\n章ごと、ハンズオンごとに導入マンガを掲載し、視覚的にも学習内容を理解できるようにしています。むずかしい概念もイラストで丁寧に図解してあります。\n\n\n\nPart 1：つくってみようKubernetes\nChapter 1　Dockerコンテナをつくってみる\nChapter 2　Kubernetesクラスタをつくってみる\nChapter 3　全体像の説明\nChapter 4　アプリケーションをKubernetesクラスタ上につくる\nPart 2：アプリケーションを壊して学ぶKubernetes\nChapter 5　トラブルシューティングガイドとkubectlコマンドの使い方\nChapter 6　Kubernetes リソースをつくって壊そう\nChapter 7　安全なステートレス・アプリケーションをつくるために\nChapter 8　総復習：アプリケーションを直そう\nPart 3：壊れても動くKubernetes\nChapter 9　Kubernetesの仕組み、アーキテクチャーを理解しよう\nChapter 10　Kubernetesの開発ワークフローを理解しよう\nChapter 11　オブザーバビリティとモニタリングに触れてみよう\nChapter 12　この先の歩み方",
     "image": "https://www.shoeisha.co.jp/static/book/og_image/9784798183961.jpg",
     "fetchedAt": "2026-02-14T14:29:02.746Z"
+  "https://blog-dry.com/entry/2026/01/02/145952": {
+    "title": "開発環境現状確認（2026年） - Don't Repeat Yourself",
+    "description": "覚えてたのでやります。 blog-dry.com 前提として、macOSです。 エディタ Neovimを使っています。仕事ではKotlinを使用しています。KotlinのLanguage Serverは登場しましたが、相変わらずまだ安定的に使える状態にはないのでKotlinを書くときだけ仕方なくIntelliJを使っています。ちなみに別にIntelliJに強い不満があるわけではなく、がんばってlazygitをfloating windowで開かせてそれっぽい動作をさせるなどの涙ぐましいカスタマイズをしています。 なお今年は一瞬Rustのコードレビューなどをする時間を仕事で得たのですが、Neov…",
+    "image": "https://ogimage.blog.st-hatena.com/8599973812298536260/17179246901338085482/1768574867",
+    "fetchedAt": "2026-02-14T13:48:10.482Z"
+  },
+  "https://k0kubun.hatenablog.com/entry/development-environment-2026": {
+    "title": "開発環境現状確認 2026 - k0kubun's blog",
+    "description": "@helloyuki_ さんと @giginet さんがやってて、自分との違いを眺めるのも面白いかと思ったので書いてみる*1。僕の以前の環境は 後悔しているがやめられない開発効率向上術、Neovimを一瞬でVSCode並みに便利にする、自作PC2023: Ryzenをやめた あたりで書いた。 OS Linux、macOS、Windows の3つを、この順に多く使用している。使っている環境が多いほど面倒毎が増えるので、本当なら3つも使わない方が良い。 LinuxはUbuntu 24.04を使っている。よく使うDockerイメージやGitHub Actions環境と同じパッケージ名が使えたり、デス…",
+    "image": "https://cdn.image.st-hatena.com/image/scale/9f7e3bf4789f918b60a5c29199c495e03354b3f6/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fk%2Fk0kubun%2F20260114%2F20260114221351.jpg",
+    "fetchedAt": "2026-02-14T13:48:10.529Z"
+  },
+  "https://store.steampowered.com/sale/steammachine": {
+    "title": "Steam Machine",
+    "description": "Your games on the big screen",
+    "image": "https://clan.fastly.steamstatic.com/images/45479024/d2ce7e96bb0ab51817ba37cf61e3ca919d6f7209.jpg",
+    "fetchedAt": "2026-02-14T13:48:10.654Z"
+  },
+  "https://github.com/sindrets/diffview.nvim": {
+    "title": "GitHub - sindrets/diffview.nvim: Single tabpage interface for easily cycling through diffs for all modified files for any git rev.",
+    "description": "Single tabpage interface for easily cycling through diffs for all modified files for any git rev. - sindrets/diffview.nvim",
+    "image": "https://opengraph.githubassets.com/0b05fc6e64de155389ddc1c55a93ccd0958087bbe8ca24a1d5736d8079156fec/sindrets/diffview.nvim",
+    "fetchedAt": "2026-02-14T13:48:11.095Z"
+  },
+  "https://blog.kyu08.com/posts/tmux-fzf-window/": {
+    "title": "tmux-fzfを使ってwindow切り替えをできるようにする手順",
+    "description": "これはなに こんな感じでtmuxでwindowをfzfで切り替えられるようにするための設定方法 手順 .tmux.confに以下を追記 set -g @plugin &#39;tmux-plugins/tpm&#39; # す",
+    "image": "https://blog.kyu08.com/posts/tmux-fzf-window/cover.png",
+    "fetchedAt": "2026-02-14T13:48:10.562Z"
+  },
+  "https://zenn.dev/fuzmare/articles/zsh-plugin-manager-cache": {
+    "title": "究極のzshプラグイン読み込み高速化: プラグインマネージャーの限界を越えろ【起動時間14.6ms】",
+    "description": "",
+    "image": "https://res.cloudinary.com/zenn/image/upload/s--kunWWsQu--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%25A9%25B6%25E6%25A5%25B5%25E3%2581%25AEzsh%25E3%2583%2597%25E3%2583%25A9%25E3%2582%25B0%25E3%2582%25A4%25E3%2583%25B3%25E8%25AA%25AD%25E3%2581%25BF%25E8%25BE%25BC%25E3%2581%25BF%25E9%25AB%2598%25E9%2580%259F%25E5%258C%2596%253A%2520%25E3%2583%2597%25E3%2583%25A9%25E3%2582%25B0%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%259E%25E3%2583%258D%25E3%2583%25BC%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%25BC%25E3%2581%25AE%25E9%2599%2590%25E7%2595%258C%25E3%2582%2592%25E8%25B6%258A%25E3%2581%2588%25E3%2582%258D%25E3%2580%2590%25E8%25B5%25B7%25E5%258B%2595%25E6%2599%2582%25E9%2596%259314.6ms%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:fuzmare%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2hXeXNFR1h2VTVUX0ZodzJHYnNQX3M2Z3A5YXpjWWVDanVBaENkcmc9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACAGSGT",
+    "fetchedAt": "2026-02-14T13:48:11.323Z"
+  },
+  "https://github.com/yuki-yano/zeno.zsh": {
+    "title": "GitHub - yuki-yano/zeno.zsh: zsh fuzzy completion and utility plugin with Deno.",
+    "description": "zsh fuzzy completion and utility plugin with Deno. - yuki-yano/zeno.zsh",
+    "image": "https://repository-images.githubusercontent.com/360002009/f2a1e442-d89a-40ad-99ab-c3bb3e2d45bc",
+    "fetchedAt": "2026-02-14T13:48:11.981Z"
+  },
+  "https://github.com/starship/starship": {
+    "title": "GitHub - starship/starship: ☄🌌️  The minimal, blazing-fast, and infinitely customizable prompt for any shell!",
+    "description": "☄🌌️  The minimal, blazing-fast, and infinitely customizable prompt for any shell! - starship/starship",
+    "image": "https://repository-images.githubusercontent.com/178991158/17096280-8d4d-11e9-97e9-7fed5f61d6bf",
+    "fetchedAt": "2026-02-14T13:48:11.753Z"
+  },
+  "https://github.com/asmvik/yabai": {
+    "title": "GitHub - asmvik/yabai: A tiling window manager for macOS based on binary space partitioning",
+    "description": "A tiling window manager for macOS based on binary space partitioning - asmvik/yabai",
+    "image": "https://repository-images.githubusercontent.com/184909163/d2ae7e00-d558-11e9-8468-33ce04888bac",
+    "fetchedAt": "2026-02-14T13:48:11.877Z"
+  },
+  "https://github.com/asmvik/skhd": {
+    "title": "GitHub - asmvik/skhd: Simple hotkey daemon for macOS",
+    "description": "Simple hotkey daemon for macOS. Contribute to asmvik/skhd development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/6f2034655fbe9ddc8b68bfbfe4301163dcf88a0daac59ce7cda5776a5a75eff8/asmvik/skhd",
+    "fetchedAt": "2026-02-14T13:48:11.815Z"
+  },
+  "https://github.com/nvim-orgmode/orgmode": {
+    "title": "GitHub - nvim-orgmode/orgmode: Orgmode clone written in Lua for Neovim 0.11.0+.",
+    "description": "Orgmode clone written in Lua for Neovim 0.11.0+. Contribute to nvim-orgmode/orgmode development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/da47d94b6e270c8219d1a55731764f11fb2bb4a60ed24277bd6f1641587837bd/nvim-orgmode/orgmode",
+    "fetchedAt": "2026-02-14T13:48:12.738Z"
+  },
+  "https://blog.kyu08.com/posts/chrome-extensions-for-dev-2024/": {
+    "title": "ソフトウェアエンジニア目線で使ってみて便利だったChrome拡張を紹介する",
+    "description": "本記事はUnipos Advent Calendar 2024の13日目の記事です。 本記事では使ってみて便利だったChrome拡張を紹介します。 Stylus Stylus ユーザー定義のCSSを",
+    "image": "https://blog.kyu08.com/posts/chrome-extensions-for-dev-2024/cover.png",
+    "fetchedAt": "2026-02-14T13:48:12.175Z"
   }
 }
