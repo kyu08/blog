@@ -1,1 +1,86 @@
-{}
+{
+  "https://github.com/kyu08/blog-comments": {
+    "title": "GitHub - kyu08/blog-comments: Comments for blog.kyu08.com",
+    "description": "Comments for blog.kyu08.com. Contribute to kyu08/blog-comments development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/d90a12b16f3d9ae49ce8a88466a75d4f5bdbc51a4d1475ecd3071826fbcf6209/kyu08/blog-comments",
+    "fetchedAt": "2026-02-14T08:26:10.634Z"
+  },
+  "https://github.com/kyu08/fzf-bookmark-opener": {
+    "title": "GitHub - kyu08/fzf-bookmark-opener: A command line tool that opens bookmark using fzf.",
+    "description": "A command line tool that opens bookmark using fzf. - kyu08/fzf-bookmark-opener",
+    "image": "https://opengraph.githubassets.com/d139e419d52297633132631fea0101b20a871eb91b1cb56c2a1ffb7780b41a17/kyu08/fzf-bookmark-opener",
+    "fetchedAt": "2026-02-14T08:26:10.521Z"
+  },
+  "https://github.com/Songmu/gocredits": {
+    "title": "GitHub - Songmu/gocredits: creates CREDITS file from LICENSE files of dependencies",
+    "description": "creates CREDITS file from LICENSE files of dependencies - Songmu/gocredits",
+    "image": "https://opengraph.githubassets.com/e988441e6034bc06ec50b0ad38ca1afba52744179f5c59d77afbb6cbb6764640/Songmu/gocredits",
+    "fetchedAt": "2026-02-14T08:26:13.292Z"
+  },
+  "https://github.com/kyu08/fzf-make": {
+    "title": "GitHub - kyu08/fzf-make: A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task.",
+    "description": "A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task. - kyu08/fzf-make",
+    "image": "https://repository-images.githubusercontent.com/611369838/a30cf798-2e08-47a5-9443-978329275d2c",
+    "fetchedAt": "2026-02-14T08:26:13.480Z"
+  },
+  "https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18": {
+    "title": "fzf-make/src/misc.rs at 3a627d0a1aa75b1bf1ff87f3443f63393afbcf10 · kyu08/fzf-make",
+    "description": "A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task. - kyu08/fzf-make",
+    "image": "https://repository-images.githubusercontent.com/611369838/a30cf798-2e08-47a5-9443-978329275d2c",
+    "fetchedAt": "2026-02-14T08:26:13.562Z"
+  },
+  "https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145": {
+    "title": "fzf-make/src/misc.rs at 3a627d0a1aa75b1bf1ff87f3443f63393afbcf10 · kyu08/fzf-make",
+    "description": "A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task. - kyu08/fzf-make",
+    "image": "https://repository-images.githubusercontent.com/611369838/a30cf798-2e08-47a5-9443-978329275d2c",
+    "fetchedAt": "2026-02-14T08:26:13.641Z"
+  },
+  "https://github.com/rust-lang/rust/issues/109099": {
+    "title": "Check tier 3 targets in CI · Issue #109099 · rust-lang/rust",
+    "description": "NOTE: this issue does not affect the documented target tier policy of the Rust project. We reserve the right to break tier 3 targets at any time, according to the guidelines at https://doc.rust-lan...",
+    "image": "https://opengraph.githubassets.com/5861212f462c4d9f4ef7947b66986b7b268ec1d002733db3df0f1b4f0f36a040/rust-lang/rust/issues/109099",
+    "fetchedAt": "2026-02-14T08:26:13.800Z"
+  },
+  "https://github.com/jesseduffield/lazygit": {
+    "title": "GitHub - jesseduffield/lazygit: simple terminal UI for git commands",
+    "description": "simple terminal UI for git commands. Contribute to jesseduffield/lazygit development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/4910850cd1865fe081e0dc56aafe1cd46178b8ceab0bb9f29e4022121b3621b4/jesseduffield/lazygit",
+    "fetchedAt": "2026-02-14T08:26:17.748Z"
+  },
+  "https://github.com/kdheepak/lazygit.nvim": {
+    "title": "GitHub - kdheepak/lazygit.nvim: Plugin for calling lazygit from within neovim.",
+    "description": "Plugin for calling lazygit from within neovim. Contribute to kdheepak/lazygit.nvim development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/b05199cb36703e693b0b97f6b66893fb8a90270205ba915d359d97a0f1073e07/kdheepak/lazygit.nvim",
+    "fetchedAt": "2026-02-14T08:26:17.867Z"
+  },
+  "https://github.com/alacritty/alacritty": {
+    "title": "GitHub - alacritty/alacritty: A cross-platform, OpenGL terminal emulator.",
+    "description": "A cross-platform, OpenGL terminal emulator. Contribute to alacritty/alacritty development by creating an account on GitHub.",
+    "image": "https://repository-images.githubusercontent.com/51980455/c6857780-448b-11ea-95ed-00fdbc59eb0b",
+    "fetchedAt": "2026-02-14T08:26:17.551Z"
+  },
+  "https://github.com/zatchheems/tokyo-night-alacritty-theme": {
+    "title": "GitHub - zatchheems/tokyo-night-alacritty-theme: A slick dark theme for Alacritty based on the Tokyo Night VS Code theme and ported from the Vim theme of the same name.",
+    "description": "A slick dark theme for Alacritty based on the Tokyo Night VS Code theme and ported from the Vim theme of the same name. - zatchheems/tokyo-night-alacritty-theme",
+    "image": "https://opengraph.githubassets.com/25e9532bd413c0fa13c5ce5c53c1b8a47eb4152da22c1c6056a9ea61878e8987/zatchheems/tokyo-night-alacritty-theme",
+    "fetchedAt": "2026-02-14T08:26:17.949Z"
+  },
+  "https://github.com/tmux/tmux": {
+    "title": "GitHub - tmux/tmux: tmux source code",
+    "description": "tmux source code. Contribute to tmux/tmux development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/834b5e4e3bbd4874c0119836f87d69c8dcb969a7a69297f4d90457fcf86320bb/tmux/tmux",
+    "fetchedAt": "2026-02-14T08:26:17.349Z"
+  },
+  "https://github.com/sainnhe/tmux-fzf": {
+    "title": "GitHub - sainnhe/tmux-fzf: Use fzf to manage your tmux work environment!",
+    "description": "Use fzf to manage your tmux work environment! Contribute to sainnhe/tmux-fzf development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/fcc847e60558715c04cf39a2e5495f4c1fb67f1ac39ae1766253352d68d737bf/sainnhe/tmux-fzf",
+    "fetchedAt": "2026-02-14T08:26:18.467Z"
+  },
+  "https://go.dev/play/": {
+    "title": "Go Playground - The Go Programming Language",
+    "description": "",
+    "image": "https://go.dev/doc/gopher/gopher5logo.jpg",
+    "fetchedAt": "2026-02-14T08:26:18.248Z"
+  }
+}

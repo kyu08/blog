@@ -25,14 +25,6 @@ const CONCURRENT_LIMIT = 5; // 並列度制限
 const TIMEOUT_MS = 10000; // タイムアウト
 const RETRY_DELAY_MS = 3000; // リトライ待機時間
 
-// 複数のプロキシを試す
-const PROXY_SERVICES = [
-  // corsproxy.io
-  (url) => `https://corsproxy.io/?${encodeURIComponent(url)}`,
-  // allOrigins
-  (url) => `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`,
-];
-
 /**
  * タイムアウト付きfetch
  */
@@ -51,87 +43,71 @@ async function fetchWithTimeout(url, timeout = TIMEOUT_MS) {
 }
 
 /**
- * OGP情報を取得する関数
+ * OGP情報を取得する関数（Node.jsでは直接取得可能）
  */
 async function fetchOGPData(url) {
   console.log(`  Fetching OGP data for: ${url}`);
 
-  for (let i = 0; i < PROXY_SERVICES.length; i++) {
-    const proxyUrl = PROXY_SERVICES[i](url);
-    console.log(`    Trying proxy ${i + 1}/${PROXY_SERVICES.length}`);
+  try {
+    // Node.jsではCORS制限がないため、直接URLからHTMLを取得
+    const response = await fetchWithTimeout(url);
 
-    try {
-      const response = await fetchWithTimeout(proxyUrl);
-
-      if (!response.ok) {
-        console.log(`    Proxy ${i + 1} failed with status: ${response.status}`);
-        continue;
-      }
-
-      let html;
-      if (i === 0) {
-        // corsproxy.io returns HTML directly
-        html = await response.text();
-      } else if (i === 1) {
-        // allOrigins returns JSON
-        const data = await response.json();
-        html = data.contents;
-      }
-
-      // HTMLパーサーを使用してOGPメタタグを抽出
-      const dom = new JSDOM(html);
-      const doc = dom.window.document;
-
-      // OGPメタタグから情報を取得
-      const getMetaContent = (property) => {
-        const element = doc.querySelector(`meta[property="${property}"]`) ||
-                       doc.querySelector(`meta[name="${property}"]`);
-        return element ? element.getAttribute('content') : null;
-      };
-
-      // タイトルを取得（OGP > title要素の順）
-      const title = getMetaContent('og:title') ||
-                   doc.querySelector('title')?.textContent ||
-                   url;
-
-      // 説明を取得
-      const description = getMetaContent('og:description') ||
-                         getMetaContent('description') ||
-                         '';
-
-      // 画像を取得
-      let image = getMetaContent('og:image') || '';
-
-      // 相対URLを絶対URLに変換
-      if (image && !image.startsWith('http')) {
-        const urlObj = new URL(url);
-        if (image.startsWith('//')) {
-          image = urlObj.protocol + image;
-        } else if (image.startsWith('/')) {
-          image = urlObj.origin + image;
-        } else {
-          image = urlObj.origin + '/' + image;
-        }
-      }
-
-      const result = {
-        title: title.trim(),
-        description: description.trim(),
-        image: image,
-        fetchedAt: new Date().toISOString()
-      };
-
-      console.log(`    ✅ Success`);
-      return result;
-    } catch (error) {
-      console.log(`    Proxy ${i + 1} error: ${error.message}`);
-      continue;
+    if (!response.ok) {
+      console.log(`    Failed with status: ${response.status}`);
+      return null;
     }
-  }
 
-  // All proxies failed
-  console.log(`    ❌ All proxies failed`);
-  return null;
+    const html = await response.text();
+
+    // HTMLパーサーを使用してOGPメタタグを抽出
+    const dom = new JSDOM(html);
+    const doc = dom.window.document;
+
+    // OGPメタタグから情報を取得
+    const getMetaContent = (property) => {
+      const element = doc.querySelector(`meta[property="${property}"]`) ||
+                     doc.querySelector(`meta[name="${property}"]`);
+      return element ? element.getAttribute('content') : null;
+    };
+
+    // タイトルを取得（OGP > title要素の順）
+    const title = getMetaContent('og:title') ||
+                 doc.querySelector('title')?.textContent ||
+                 url;
+
+    // 説明を取得
+    const description = getMetaContent('og:description') ||
+                       getMetaContent('description') ||
+                       '';
+
+    // 画像を取得
+    let image = getMetaContent('og:image') || '';
+
+    // 相対URLを絶対URLに変換
+    if (image && !image.startsWith('http')) {
+      const urlObj = new URL(url);
+      if (image.startsWith('//')) {
+        image = urlObj.protocol + image;
+      } else if (image.startsWith('/')) {
+        image = urlObj.origin + image;
+      } else {
+        image = urlObj.origin + '/' + image;
+      }
+    }
+
+    const result = {
+      title: title.trim(),
+      description: description.trim(),
+      image: image,
+      fetchedAt: new Date().toISOString()
+    };
+
+    console.log(`    ✅ Success`);
+    return result;
+  } catch (error) {
+    console.log(`    ❌ Error: ${error.message}`);
+    return null;
+  }
 }
 
 /**
