@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubernetes on blog.kyu08.com</title>
+    <link>https://blog.kyu08.com/pr-293/tags/kubernetes/</link>
+    <description>Recent content in Kubernetes on blog.kyu08.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>blog.kyu08.com</copyright>
+    <lastBuildDate>Wed, 10 Dec 2025 00:04:41 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-293/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>『つくって、壊して、直して学ぶ Kubernetes入門』を読んだ</title>
+      <link>https://blog.kyu08.com/pr-293/posts/bbf_kubernetes/</link>
+      <pubDate>Wed, 10 Dec 2025 00:04:41 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-293/posts/bbf_kubernetes/</guid>
+      <description>0からKubernetesのキャッチアップがしたくて、高橋 あおいさん著の『つくって、壊して、直して学ぶ Kubernetes入門』を読んだ。 つ</description>
+      <content>&lt;p&gt;0からKubernetesのキャッチアップがしたくて、高橋 あおいさん著の『つくって、壊して、直して学ぶ Kubernetes入門』を読んだ。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://www.shoeisha.co.jp/static/book/og_image/9784798183961.jpg&#34; alt=&#34;つくって、壊して、直して学ぶ Kubernetes入門 | 翔泳社&#34; loading=&#34;lazy&#34;&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;つくって、壊して、直して学ぶ Kubernetes入門 | 翔泳社&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;動かなくっても、もう怖くない！
+
+トラブルシューティングを体験しながら学ぶ、実践的入門書。
+
+
+本書は、Kubernetesの実践的な知識をハンズオン形式で解説する書籍です。本書の特徴は、壊れにくいKubernetesをあえて壊しながら学ぶことで、初心者が挫折しやすいトラブルシューティングの知識や対応力が身に付けられることです。初心者でも、経験者でも、今度こそKubernetesがわかる！
+マンガや図解を多く掲載しているため視覚的に理解したい方にもおすすめです。
+
+
+・つくって、壊して、直して学ぶ
+- DockerfileからDockerコンテナをつくる
+- Kubernetesクラスタ上にアプリケーションをつくって、壊す
+- Serviceを壊す
+- kubectlでデバッグする
+- OutOfMemoryを発生させて、直す　...
+
+
+
+・Kubernetesの構築、運用だけでなくオブザーバビリティも解説
+トラブル解決にむけてより多くの情報を得るための「オブザーバビリティ」、そしてトラブルを検知するための「モニタリング」についても説明します。
+
+
+
+・豊富なイラストとマンガで見てわかる
+章ごと、ハンズオンごとに導入マンガを掲載し、視覚的にも学習内容を理解できるようにしています。むずかしい概念もイラストで丁寧に図解してあります。
+
+
+
+Part 1：つくってみようKubernetes
+Chapter 1　Dockerコンテナをつくってみる
+Chapter 2　Kubernetesクラスタをつくってみる
+Chapter 3　全体像の説明
+Chapter 4　アプリケーションをKubernetesクラスタ上につくる
+Part 2：アプリケーションを壊して学ぶKubernetes
+Chapter 5　トラブルシューティングガイドとkubectlコマンドの使い方
+Chapter 6　Kubernetes リソースをつくって壊そう
+Chapter 7　安全なステートレス・アプリケーションをつくるために
+Chapter 8　総復習：アプリケーションを直そう
+Part 3：壊れても動くKubernetes
+Chapter 9　Kubernetesの仕組み、アーキテクチャーを理解しよう
+Chapter 10　Kubernetesの開発ワークフローを理解しよう
+Chapter 11　オブザーバビリティとモニタリングに触れてみよう
+Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.shoeisha.co.jp/book/detail/9784798183961&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;そもそものモチベーション&#34;&gt;そもそものモチベーション&lt;/h2&gt;
+&lt;p&gt;今年の2月から仕事でKubernetesを使い始めたが、普段はk9sを使ってデプロイが完了したかどうかを確認するくらいでそれ以上高度なことは全然できていなかった。&lt;/p&gt;
+&lt;p&gt;そんな状態なのでトラブルシューティングや運用を独力で全然できないことに課題感を感じていた。&lt;/p&gt;
+&lt;p&gt;新しい技術を学ぶときは手を動かしながら学ぶのが好きなのでこの本を手に取ってみた。&lt;/p&gt;
+&lt;h2 id=&#34;特徴&#34;&gt;特徴&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本書は、Kubernetesの実践的な知識をハンズオン形式で解説する書籍です。本書の特徴は、壊れにくいKubernetesをあえて壊しながら学ぶことで、初心者が挫折しやすいトラブルシューティングの知識や対応力が身に付けられることです。初心者でも、経験者でも、今度こそKubernetesがわかる！&lt;/p&gt;
+&lt;p&gt;マンガや図解を多く掲載しているため視覚的に理解したい方にもおすすめです。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;という書籍説明の通り、ハンズオン形式でKubernetesを学ぶことができる。&lt;/p&gt;
+&lt;p&gt;また、&lt;a href=&#34;https://github.com/kubernetes-sigs/kind&#34; target=&#34;_blank&#34; &gt;Kind&lt;/a&gt;というツールを使ってローカルでKubernetesクラスタを構築するのでクラウドの登録や課金を気にする必要がないのも手軽でよかった。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kubernetes-sigs/kind&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://github.com/kubernetes-sigs/kind&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/7d235d01400d5d3a46cae744bdb61e68f19d5013be26ea2092894efc5773af45/kubernetes-sigs/kind&#34; alt=&#34;GitHub - kubernetes-sigs/kind: Kubernetes IN Docker - local clusters for testing Kubernetes&#34; loading=&#34;lazy&#34;&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - kubernetes-sigs/kind: Kubernetes IN Docker - local clusters for testing Kubernetes&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;Kubernetes IN Docker - local clusters for testing Kubernetes - kubernetes-sigs/kind&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kubernetes-sigs/kind&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;1つ1つの解説はそこまで文量がないので結構サクサク進めることができる。なので本書でKubernetesの全体感を本書で学び、深く学ぶのは別のリソースで補うのがよさそうだと感じた。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;誤解のないように書いておくと、自分のようなKubernetes初心者にとっては各リソースの説明の文量が多すぎないお陰で短期間で全体感を把握できてとてもよかった。(気になったところは別途公式ドキュメントやLLMを使って深堀ったりした)&lt;/p&gt;
+&lt;p&gt;こんな雰囲気。漫画があって文量も多すぎず読みやすい。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;manga.webp&#34; alt=&#34;manga.webp&#34;&gt;
+&lt;a href=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; target=&#34;_blank&#34; &gt;商品ページ&lt;/a&gt;より引用&lt;/p&gt;
+&lt;p&gt;以下の画像のように実行すべきコマンドとその結果がどうなるかが書いてあるのでKubernetesの経験が少なくても進めやすい。（実際自分もほぼ知識0で臨んだ）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;command.webp&#34; alt=&#34;command.webp&#34;&gt;
+&lt;a href=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; target=&#34;_blank&#34; &gt;商品ページ&lt;/a&gt;より引用&lt;/p&gt;
+&lt;p&gt;こんな感じでk9sを常時起動しながらコマンドを実行するスタイルで進めたところリアルタイムでPodの変化が見れて理解が捗った。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;k9s.webp&#34; alt=&#34;k9s.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/derailed/k9s/&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://github.com/derailed/k9s/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://repository-images.githubusercontent.com/167596393/6dd20780-5c0e-11ea-8e26-7754ad171192&#34; alt=&#34;GitHub - derailed/k9s: 🐶 Kubernetes CLI To Manage Your Clusters In Style!&#34; loading=&#34;lazy&#34;&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - derailed/k9s: 🐶 Kubernetes CLI To Manage Your Clusters In Style!&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;🐶 Kubernetes CLI To Manage Your Clusters In Style! - derailed/k9s&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/derailed/k9s/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;学び&#34;&gt;学び&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;kubectlの使い方&lt;/li&gt;
+&lt;li&gt;Pod、Service、Deploymentなどの基本的なリソースの性質や動かし方&lt;/li&gt;
+&lt;li&gt;Readiness probe, Liveness probe, Startup probeの特徴や使い方&lt;/li&gt;
+&lt;li&gt;Resource Requests/Limits, HPA, Affinity, HPA, VPAなどの性能やスケールなどに関する機能の使い方&lt;/li&gt;
+&lt;li&gt;Kubernetes自体のアーキテクチャ&lt;/li&gt;
+&lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;0からKubernetesの基礎を学ぶことができてとても良い本だった。&lt;/li&gt;
+&lt;li&gt;ちょうど仕事でmanifestを書くタイミングがあったので本書で学んだことがダイレクトに活きてとても助かった。物事の解像度が上がるのはいつだって楽しいな〜と再確認した。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;次はしばらく積んでしまっていた&lt;a href=&#34;https://www.sbcr.jp/product/4815618599/&#34; target=&#34;_blank&#34; &gt;『体験しながら学ぶ ネットワーク技術入門』&lt;/a&gt;をやっていく。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;本書後半でも紹介されているが本で詳しく学ぶなら&lt;a href=&#34;https://book.impress.co.jp/books/1119101148&#34; target=&#34;_blank&#34; &gt;Kubernetes完全ガイド 第2版&lt;/a&gt;がいいらしい。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;たとえばリクエストが全然きてないマイクロサービスのPod数が一瞬2倍になっているグラフをみて、&lt;code&gt;maxSurge: 100%&lt;/code&gt;でRollingUpdateしてるな〜と思えたりとか。&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

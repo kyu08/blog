@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+    <title>2025年を振り返る :: blog.kyu08.com</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="年の瀬なので1年を振り返る。 OSS PR GitHubとGerritで55件のPR1を作成し49件のPRがマージされた。(GitHub2 Gerrit) 去年の数字が" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://blog.kyu08.com/pr-293/posts/looking-back-on-2025/" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BDQ408J45J', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-293/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-293/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-293/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-293/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-293/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-293/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-293/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-293/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-293/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-293/css/post.min.f049fef13af1dfd5ea526cc59ea5a3fc7be11a05911ca7198c5bb9225250119c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-293/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-293/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-293/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-293/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+<link rel="stylesheet" href="https://blog.kyu08.com/pr-293/style.css">
+
+
+<link rel="shortcut icon" href="https://blog.kyu08.com/pr-293/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/pr-293/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="kyu08_" />
+
+
+
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="2025年を振り返る">
+<meta property="og:description" content="年の瀬なので1年を振り返る。 OSS PR GitHubとGerritで55件のPR1を作成し49件のPRがマージされた。(GitHub2 Gerrit) 去年の数字が" />
+<meta property="og:url" content="https://blog.kyu08.com/pr-293/posts/looking-back-on-2025/" />
+<meta property="og:site_name" content="blog.kyu08.com" />
+
+
+  
+  
+    
+  
+
+
+  <meta property="og:image" content="https://blog.kyu08.com/pr-293/posts/looking-back-on-2025/cover.png">
+  <meta name="twitter:image" content="https://blog.kyu08.com/pr-293/posts/looking-back-on-2025/cover.png">
+  <meta name="twitter:image:alt" content="2025年を振り返る">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+  <meta property="article:published_time" content="2025-12-30 12:00:00 &#43;0900 &#43;0900" />
+
+
+
+
+
+
+
+
+
+<link rel="author" href="http://www.hatena.ne.jp/kyu08/" />
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ . }}');
+</script>
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    blog.kyu08.com
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/pr-293/tags/diary/">_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-293/about">about</a></li>
+        
+      
+        
+          <li><a href="/pr-293/index.xml">rss</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/pr-293/tags/diary/" >_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-293/about" >about</a></li>
+        
+      
+        
+          <li><a href="/pr-293/index.xml" >rss</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://blog.kyu08.com/pr-293/posts/looking-back-on-2025/">2025年を振り返る</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2025/12/30</time>
+      
+    <span class="post-reading-time">11 min read (5240 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://blog.kyu08.com/pr-293/tags/%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A/">振り返り</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-293/tags/oss/">OSS</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-293/tags/blog/">blog</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="/pr-293/posts/looking-back-on-2025/cover.png"
+    class="post-cover"
+    alt="2025年を振り返る"
+    title="Cover Image" />
+
+
+  
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#oss">OSS</a>
+      <ul>
+        <li><a href="#pr">PR</a></li>
+        <li><a href="#寄付">寄付</a></li>
+        <li><a href="#振り返り">振り返り</a></li>
+      </ul>
+    </li>
+    <li><a href="#個人開発">個人開発</a>
+      <ul>
+        <li><a href="#fzf-make">fzf-make</a></li>
+        <li><a href="#sunaba">sunaba</a></li>
+      </ul>
+    </li>
+    <li><a href="#ブログ">ブログ</a>
+      <ul>
+        <li><a href="#書いた記事">書いた記事</a></li>
+        <li><a href="#ブログの変更">ブログの変更</a></li>
+        <li><a href="#ogpの自動生成">OGPの自動生成</a></li>
+        <li><a href="#heading要素のデザインを変えた">Heading要素のデザインを変えた</a></li>
+        <li><a href="#プレビュー環境を整えた">プレビュー環境を整えた</a></li>
+        <li><a href="#ブログカードの表示">ブログカードの表示</a></li>
+      </ul>
+    </li>
+    <li><a href="#読書など">読書など</a></li>
+    <li><a href="#勉強会">勉強会</a></li>
+    <li><a href="#生活">生活</a>
+      <ul>
+        <li><a href="#ジム">ジム</a></li>
+        <li><a href="#睡眠">睡眠</a></li>
+        <li><a href="#食事">食事</a></li>
+        <li><a href="#舌下治療">舌下治療</a></li>
+        <li><a href="#サッカー">サッカー</a></li>
+      </ul>
+    </li>
+    <li><a href="#仕事">仕事</a></li>
+    <li><a href="#2026年の抱負">2026年の抱負</a></li>
+    <li><a href="#おわりに">おわりに</a></li>
+  </ul>
+</nav>
+  
+
+  <div class="post-content"><div>
+        <p>年の瀬なので1年を振り返る。</p>
+<h2 id="oss">OSS<a href="#oss" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="pr">PR<a href="#pr" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>GitHubとGerritで55件のPR<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>を作成し49件のPRがマージされた。(<a href="https://github.com/pulls?q=is%3Apr&#43;archived%3Afalse&#43;is%3Aclosed&#43;author%3Akyu08&#43;is%3Apublic&#43;-user%3Akyu08&#43;created%3A2025-01-01..2025-12-31&#43;" target="_blank" >GitHub</a><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> <a href="https://go-review.googlesource.com/q/owner:kyu.subsub@gmail.com" target="_blank" >Gerrit</a>)</p>
+<p>去年の数字が以下だったのでPR作成数、マージされたPR数ともに微増した。</p>
+<blockquote>
+<p>49件のPRを作成し43件のPRがマージされた。</p>
+</blockquote>
+<p>PR一覧は以下のような感じ。<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<h4 id="機能追加">機能追加<a href="#機能追加" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/4810" target="_blank" >jesseduffield/lazygit - Add &ldquo;CopyToClipboard&rdquo; command to ConfirmationController</a></li>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/4728" target="_blank" >jesseduffield/lazygit - Add new command &ldquo;Checkout previous branch&rdquo;</a></li>
+<li><a href="https://github.com/nabekou29/pair-lens.nvim/pull/2" target="_blank" >nabekou29/pair-lens.nvim - feat: add Go expression_switch_statement and type_switch_statement support</a></li>
+</ul>
+<h4 id="ドキュメント関連">ドキュメント関連<a href="#ドキュメント関連" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li><a href="https://github.com/Homebrew/homebrew-cask/pull/200288" target="_blank" >Homebrew/homebrew-cask - cursor: update homepage link</a></li>
+<li><a href="https://github.com/rust-lang/this-week-in-rust/pull/7158" target="_blank" >rust-lang/this-week-in-rust - Add project update: &ldquo;fzf-make v0.65.0&rdquo;</a></li>
+<li><a href="https://github.com/ratatui/.github/pull/2" target="_blank" >ratatui/.github - Fix typo Javascript -&gt; JavaScript</a></li>
+<li><a href="https://github.com/genkit-ai/docsite/pull/158" target="_blank" >genkit-ai/docsite - Fix incorrect field name in express authentication example</a></li>
+<li><a href="https://github.com/humanlayer/12-factor-agents/pull/73" target="_blank" >humanlayer/12-factor-agents - Fix typo</a></li>
+<li><a href="https://github.com/humanlayer/12-factor-agents/pull/72" target="_blank" >humanlayer/12-factor-agents - Delete unnecessary ]</a></li>
+<li><a href="https://github.com/go-task/task/pull/2394" target="_blank" >go-task/task - chore: delete unnecessary whitespace</a></li>
+<li><a href="https://github.com/go-task/task/pull/2393" target="_blank" >go-task/task - docs: add fzf-make to &ldquo;Community Integrations&rdquo;</a></li>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/4807" target="_blank" >jesseduffield/lazygit - Update the badges of golangci-lint and homebrew in README.md</a></li>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/4806" target="_blank" >jesseduffield/lazygit - Update CONTRIBUTING.md to clarify translation contribution process</a></li>
+<li><a href="https://github.com/nvim-orgmode/orgmode/pull/985" target="_blank" >nvim-orgmode/orgmode - docs: fix absences of line break</a></li>
+<li><a href="https://github.com/bnjbvr/cargo-machete/pull/168" target="_blank" >bnjbvr/cargo-machete - doc: rename job name in example workflow</a></li>
+<li><a href="https://github.com/rust-lang/cargo/pull/15511" target="_blank" >rust-lang/cargo - docs: update version notice for deprecation removal</a></li>
+<li><a href="https://github.com/geek-rabb1t/geek-rabb1t.github.io/pull/1" target="_blank" >geek-rabb1t/geek-rabb1t.github.io - typoを修正</a></li>
+<li><a href="https://github.com/h3pei/trace-pr.nvim/pull/4" target="_blank" >h3pei/trace-pr.nvim - docs: describe the default value of trace_by_commit_hash_when_pr_not_found explicitly in README.md</a></li>
+<li><a href="https://github.com/golangci/golangci-lint/pull/5697" target="_blank" >golangci/golangci-lint - docs: explicitly describe that the migrate command automatically migrate linters.presets</a></li>
+<li><a href="https://github.com/catppuccin/lazygit/pull/53" target="_blank" >catppuccin/lazygit - doc: remove deprecated selectedRangeBgColor key from example</a></li>
+<li><a href="https://github.com/yykamei/block-merge-based-on-time/pull/2192" target="_blank" >yykamei/block-merge-based-on-time - Add ready_for_review as the workflow trigger to the example in README.md</a></li>
+<li><a href="https://github.com/yuki-yano/zeno.zsh/pull/81" target="_blank" >yuki-yano/zeno.zsh - docs(readme): replace exa with eza</a></li>
+<li><a href="https://github.com/nand2tetris/web-ide/pull/559" target="_blank" >nand2tetris/web-ide - Fix typo in projects/src/project_08/21_nested_call.ts(initliazes -&gt; initializes)</a></li>
+<li><a href="https://github.com/cloudspannerecosystem/yo/pull/147" target="_blank" >cloudspannerecosystem/yo - Add installation method for Go 1.16+</a></li>
+<li><a href="https://go-review.googlesource.com/c/wiki/&#43;/703735" target="_blank" >golang - 703735: GoUsers: add Canary Inc.</a></li>
+<li><a href="https://go-review.googlesource.com/c/wiki/&#43;/703736" target="_blank" >golang - 703736: GoUsers: fix the position of CloudSign</a></li>
+</ul>
+<h4 id="バグ修正">バグ修正<a href="#バグ修正" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li><a href="https://github.com/derailed/k9s/pull/3699" target="_blank" >derailed/k9s - feat(pulse): map hjkl to navigate as help shows</a></li>
+</ul>
+<h4 id="ci開発環境等の変更">CI、開発環境等の変更<a href="#ci開発環境等の変更" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/4974" target="_blank" >jesseduffield/lazygit - Add synchronize event to the hooks of &ldquo;Check Required Labels&rdquo;</a></li>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/4936" target="_blank" >jesseduffield/lazygit - Use ignore directive to ignore test files not to be passes to gofumpt</a></li>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/4844" target="_blank" >jesseduffield/lazygit - Update go to 1.25</a></li>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/4830" target="_blank" >jesseduffield/lazygit - Run label check workflow only on label events and open pr event</a></li>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/4829" target="_blank" >jesseduffield/lazygit - Enhance PR/Issue templates readability</a></li>
+<li><a href="https://github.com/jesseduffield/lazygit/pull/4809" target="_blank" >jesseduffield/lazygit - Pass only Git-tracked Go files to gofumpt</a></li>
+</ul>
+<h4 id="翻訳">翻訳<a href="#翻訳" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li><a href="https://github.com/rust-lang/surveys/pull/329" target="_blank" >rust-lang/surveys - [Japanese] replace &ldquo;prioritising work&rdquo; with &ldquo;problems to productivity&rdquo; in 2024 survey</a></li>
+</ul>
+<h4 id="自作ツールのbrew-release関連">自作ツールのbrew release関連<a href="#自作ツールのbrew-release関連" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<ul>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/260001" target="_blank" >Homebrew/homebrew-core - fzf-make 0.66.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/249550" target="_blank" >Homebrew/homebrew-core - fzf-make 0.65.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/249255" target="_blank" >Homebrew/homebrew-core - fzf-make 0.64.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/248909" target="_blank" >Homebrew/homebrew-core - fzf-make 0.63.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/246767" target="_blank" >Homebrew/homebrew-core - fzf-make 0.62.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/242247" target="_blank" >Homebrew/homebrew-core - fzf-make 0.61.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/234337" target="_blank" >Homebrew/homebrew-core - fzf-make: add task to available runner in description</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/233946" target="_blank" >Homebrew/homebrew-core - fzf-make 0.60.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/223065" target="_blank" >Homebrew/homebrew-core - fzf-make: update desc</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/223063" target="_blank" >Homebrew/homebrew-core - fzf-make 0.59.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/222737" target="_blank" >Homebrew/homebrew-core - fzf-make 0.58.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/222421" target="_blank" >Homebrew/homebrew-core - fzf-make 0.57.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/205485" target="_blank" >Homebrew/homebrew-core - fzf-make 0.56.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/203296" target="_blank" >Homebrew/homebrew-core - fzf-make 0.55.0</a></li>
+<li><a href="https://github.com/Homebrew/homebrew-core/pull/203265" target="_blank" >Homebrew/homebrew-core - fzf-make 0.54.0</a></li>
+</ul>
+<h3 id="寄付">寄付<a href="#寄付" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>この記事を書いたときから継続して<a href="https://github.com/sponsors/neovim" target="_blank" >Neovim</a>と<a href="https://github.com/sponsors/ratatui" target="_blank" >ratatui</a>に5$/monthずつ寄付し続けている。</p>
+<p><div class="blogcard" data-url="https://blog.kyu08.com/posts/renew-oss-sponsoring/" data-auto-fetch="false">
+  <a href="https://blog.kyu08.com/posts/renew-oss-sponsoring/" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://blog.kyu08.com/posts/renew-oss-sponsoring/cover.png" alt="GitHub Sponsorsの寄付先にratatuiを追加した" loading="lazy">
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">GitHub Sponsorsの寄付先にratatuiを追加した</div><div class="blogcard-description">OSSへの寄付の月予算を$10にした - laiso こちらの記事で寄付するOSSプロジェクトの選び方として次のような基準が紹介されていた。 寄付するプロジ</div><div class="blogcard-url">https://blog.kyu08.com/posts/renew-oss-sponsoring/</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>だいたい累計$150くらい寄付したことになる。少しでも長く持続してくれると嬉しいのでこれからも続けていく。</p>
+<h3 id="振り返り">振り返り<a href="#振り返り" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>去年と同じくらいのペースでPRを送ることができた。（平均約4.5件/月ペース）</li>
+<li>LazygitのトップページのContributors一覧に表示されるようになった。
+<img src="lazygit-contibutors.webp" alt="lazygit-contibutors.webp">
+<ul>
+<li>GitHubではcommit数が多い順に12人目くらいまでのアイコンがContributorsに表示される。</li>
+<li>細々とcontributionを続けたところの9番目にcommitが多い人になれた。（2025/12/23現在）</li>
+<li>しばらくはこれを目標にlazygitへのcontributionを続けていたので嬉しい。</li>
+<li>CIの修正やGoのバージョンアップなど、地味めなPRがメインだったがいくつか機能追加PRもマージしてもらえた。（<a href="https://github.com/jesseduffield/lazygit/pull/4728" target="_blank" >branchパネルで<code>-</code>を押すと<code>git checkout -</code>相当のことができる機能</a>と<a href="https://github.com/jesseduffield/lazygit/pull/4810" target="_blank" >エラー内容をクリップボードにコピーできるようにする機能</a>）</li>
+</ul>
+</li>
+<li>GoWikiへのcontributionに際してGerritを初めてつかった。
+<ul>
+<li>GitHubとかなかなかメンタルモデルが違う感じだったので結構手間取った。</li>
+<li>参考になったリソースなどをいつか記事にしたい。</li>
+</ul>
+</li>
+</ul>
+<p>OSSメンテナに感謝されるのは嬉しいし、見つけた問題を自分の手で解決するのも楽しいので引き続きやっていきたい。</p>
+<p>社内でもOSSは楽しいぞーという話を何回かしたところ、それをきっかけにしてOSS貢献にトライしてくれる方が何名かいたのも嬉しかった。</p>
+<h2 id="個人開発">個人開発<a href="#個人開発" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="fzf-make">fzf-make<a href="#fzf-make" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p><div class="blogcard" data-url="https://github.com/kyu08/fzf-make" data-auto-fetch="false">
+  <a href="https://github.com/kyu08/fzf-make" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://repository-images.githubusercontent.com/611369838/a30cf798-2e08-47a5-9443-978329275d2c" alt="GitHub - kyu08/fzf-make: A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task." loading="lazy">
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">GitHub - kyu08/fzf-make: A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task.</div><div class="blogcard-description">A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task. - kyu08/fzf-make</div><div class="blogcard-url">https://github.com/kyu08/fzf-make</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>タスクランナー側で定義したコマンドをfuzzy finder形式で選択できるCLIツールを趣味でRustで開発している。</p>
+<p><img src="fzf-make-demo.gif" alt="fzf-make-demo.gif"></p>
+<p>現在は以下のタスクランナーに対応している。</p>
+<ul>
+<li>make</li>
+<li>pnpm</li>
+<li>yarn</li>
+<li>just</li>
+<li>task</li>
+</ul>
+<p>gifを見てもらえれば分かる通り、プレビューウィンドウでコマンド内容を確認しながらコマンドを選択できるのが特徴の一つ。</p>
+<h4 id="スター数">スター数<a href="#スター数" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>2025/12/23現在では245スターを獲得している。</p>
+<p><img src="fzf-make-star.webp" alt="fzf-make-star.webp"></p>
+<p><a href="https://www.star-history.com/#kyu08/fzf-make&amp;type=date&amp;legend=top-left" target="_blank" >Star History</a>によると2024/12/19時点では129スターだったので1年で大体倍くらいになった。🎉</p>
+<p><img src="fzf-make-star-history-20251223-last-year.webp" alt="fzf-make-star-history-20251223-last-year.webp"></p>
+<p>来年も適度なペースで細々とメンテしていきます。(npm対応は早めにやりたい&hellip;！)</p>
+<h4 id="今年の変更点">今年の変更点<a href="#今年の変更点" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>2025年は<a href="https://github.com/pulls?q=is%3Apr&#43;archived%3Afalse&#43;author%3Akyu08&#43;is%3Apublic&#43;repo%3Akyu08%2Ffzf-make&#43;created%3A2025-01-01..2025-12-31&#43;is%3Amerged&#43;" target="_blank" >筆者が74件のPRを作成&amp;マージし</a>、<a href="https://github.com/kyu08/fzf-make/compare/v0.54.0...v0.65.0" target="_blank" >12個のバージョンがリリースされ、筆者とrenovateを含めて5人の貢献者により102のcommitが追加された。</a></p>
+<p>TUIツールを個人開発をしているとなかなかユーザーの存在を感じづらいので昨年に引き続きissueを立てたりPRを送ってくれたりTwitterで言及してくれる方がいてとても嬉しい。🙏</p>
+<p>もちろん使ってるよー！と言ってもらえるだけでも大変うれしいです！ぜひ<a href="https://github.com/kyu08/fzf-make" target="_blank" >スター</a>もお願いします！</p>
+<p>今年行った主要な機能追加は以下の通り。</p>
+<ul>
+<li>コマンドに引数を渡せるようにする<a href="https://github.com/kyu08/fzf-make/releases/tag/v0.58.0" target="_blank" ><code>@v0.58.0</code></a></li>
+<li>go-task/taskをサポート<a href="https://github.com/kyu08/fzf-make/releases/tag/v0.60.0" target="_blank" ><code>@v0.60.0</code></a></li>
+<li>コマンドのコピー機能を追加<a href="https://github.com/kyu08/fzf-make/releases/tag/v0.66.0" target="_blank" ><code>@v0.66.0</code></a></li>
+</ul>
+<p>来年こそはnpm対応を入れたい。（npm対応のPRを送ってくれている方がいるので早ければ年始くらいにはリリースできるかもしれない）</p>
+<h3 id="sunaba">sunaba<a href="#sunaba" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>これまで素振り用のrepositoryはトピックごと（触りたいライブラリや読んでいる本など）ごとに作成していたが、まとめて管理したくなったので素振りごった煮repositoryを作成した。</p>
+<p><div class="blogcard" data-url="https://github.com/kyu08/sunaba" data-auto-fetch="false">
+  <a href="https://github.com/kyu08/sunaba" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://opengraph.githubassets.com/ad34e13570a62a62725f2c909dc7cebceb9db024f2e9ad3b46c9bbc841a2fe03/kyu08/sunaba" alt="GitHub - kyu08/sunaba: Personal sandbox" loading="lazy">
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">GitHub - kyu08/sunaba: Personal sandbox</div><div class="blogcard-description">Personal sandbox. Contribute to kyu08/sunaba development by creating an account on GitHub.</div><div class="blogcard-url">https://github.com/kyu08/sunaba</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>今までは都度repositoryを作成していたが、ディレクトリを作成するだけでよくなったので若干楽になった。</p>
+<h2 id="ブログ">ブログ<a href="#ブログ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="書いた記事">書いた記事<a href="#書いた記事" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>今年は14本の記事を書いた。</p>
+<ul>
+<li><a href="https://blog.kyu08.com/posts/magi65/" target="_blank" >IQUNIX Magi65を買った</a></li>
+<li><a href="https://blog.kyu08.com/posts/nand2tetris/" target="_blank" >『コンピュータシステムの理論と実装 第2版』を読んだ</a></li>
+<li><a href="https://blog.kyu08.com/posts/oblivion-keycaps/" target="_blank" >傾斜付きロープロファイルキーキャップNuPhy Oblivionを買った</a></li>
+<li><a href="https://blog.kyu08.com/posts/manage-cargo-dependencies/" target="_blank" >cargoプロジェクトで依存関係を継続的に管理する</a></li>
+<li><a href="https://blog.kyu08.com/posts/fp-matsuri-2025/" target="_blank" >関数型まつり2025に参加した</a></li>
+<li><a href="https://blog.kyu08.com/posts/keychron-v4-max/" target="_blank" >Keychron V4 Max を買った</a></li>
+<li><a href="https://blog.kyu08.com/posts/second-keychron-v4-max/" target="_blank" >追いKeychron V4 Max</a></li>
+<li><a href="https://blog.kyu08.com/posts/tidy-first/" target="_blank" >『Tidy First?』を読んだ</a></li>
+<li><a href="https://blog.kyu08.com/posts/vim-conf-2025/" target="_blank" >VimConf 2025 Smallに参加した</a></li>
+<li><a href="https://blog.kyu08.com/posts/the-deadline/" target="_blank" >『デッドライン』を読んだ</a></li>
+<li><a href="https://blog.kyu08.com/posts/bbf_kubernetes/" target="_blank" >『つくって、壊して、直して学ぶ Kubernetes入門』を読んだ</a></li>
+<li><a href="https://blog.kyu08.com/posts/understanding-rust-from-concepts/" target="_blank" >『コンセプトから理解するRust』を読んだ</a></li>
+<li><a href="https://blog.kyu08.com/posts/rust-web-app-book/" target="_blank" >『RustによるWebアプリケーション開発 設計からリリース・運用まで』を読んだ</a></li>
+<li><a href="https://blog.kyu08.com/posts/gerrit-find-cls-you-created/" target="_blank" >Gerritで自分が作成したCL一覧を確認する方法</a></li>
+</ul>
+<p>本を読んで記事を書くことで理解や記憶への定着が捗っている気がするので来年も適度にやっていきたい。</p>
+<h3 id="ブログの変更">ブログの変更<a href="#ブログの変更" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>今年はブログのデザインや仕組みについてもいくつか変更を加えた。</p>
+<ol>
+<li>OGPを動的生成するようにした</li>
+<li>Heading要素のデザインを変えた</li>
+<li>プレビュー環境を整えた</li>
+<li>ブログカードの表示</li>
+</ol>
+<h3 id="ogpの自動生成">OGPの自動生成<a href="#ogpの自動生成" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>CIで記事のタイトルを読み取ってOGP画像を自動生成 + commitするようにした。</p>
+<p><div class="blogcard" data-url="https://github.com/kyu08/blog/pull/239" data-auto-fetch="false">
+  <a href="https://github.com/kyu08/blog/pull/239" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://opengraph.githubassets.com/fe74384e326179034c16e82687271d21dc5b84b20e1c849b6f4ac4daebf2f6c8/kyu08/blog/pull/239" alt="Add dynamic OGP image generation by kyu08 · Pull Request #239 · kyu08/blog" loading="lazy">
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">Add dynamic OGP image generation by kyu08 · Pull Request #239 · kyu08/blog</div><div class="blogcard-description">close #238, close #120
+
+Add satori and @resvg/resvg-js for OGP image generation
+Create OGP generation script that reads post metadata and generates images
+Add OGP template with dark theme design (b...</div><div class="blogcard-url">https://github.com/kyu08/blog/pull/239</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>こんな感じの画像が自動生成される。</p>
+<p><img src="cover.png" alt="cover.png"></p>
+<p>Twitterで投稿したときに追加されるタイトル要素とOGPのメタ情報が被らないようになっているのが地味なこだわりポイント。</p>
+<p><img src="twitter-caption.webp" alt="twitter-caption.webp"></p>
+<p>ついでにこんな感じでPRにコメントとして表示されるようにしたので投稿前に確認できる。（日本語だとたまーに特定の記号などが豆腐になってしまうのチェックしておきたい）</p>
+<p><img src="ogp-pr-comment.webp" alt="ogp-pr-comment.webp"></p>
+<h3 id="heading要素のデザインを変えた">Heading要素のデザインを変えた<a href="#heading要素のデザインを変えた" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>これまではレベルの異なるHeading要素の区別が付きづらかったので<code>## OSS</code>のようにHeading要素のレベルに合わせて<code>#</code>が表示されるデザインにした。</p>
+<table>
+<thead>
+<tr>
+<th>BEFORE</th>
+<th><img src="heading-before.webp" alt="heading-before.webp"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AFTER</strong></td>
+<td><img src="heading-after.webp" alt="heading-after.webp"></td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://x.com/voluntas" target="_blank" >@voluntas</a>さんの<a href="https://x.com/voluntas/status/1981896805672501760" target="_blank" >このツイート</a>をみていいなーと思ったので真似してみた。</p>
+<h3 id="プレビュー環境を整えた">プレビュー環境を整えた<a href="#プレビュー環境を整えた" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>PRコメントにプレビュー環境のリンクが投稿されるようにした。出先などでも記事の推敲がしやすくなった。</p>
+<p><div class="blogcard" data-url="https://github.com/kyu08/blog/pull/235" data-auto-fetch="false">
+  <a href="https://github.com/kyu08/blog/pull/235" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://opengraph.githubassets.com/32ce461bebea477e1df3aa07888eac4e710be1aef3ba882c0cf49f2b9b765539/kyu08/blog/pull/235" alt="PRごとにPreview環境を作成する by kyu08 · Pull Request #235 · kyu08/blog" loading="lazy">
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">PRごとにPreview環境を作成する by kyu08 · Pull Request #235 · kyu08/blog</div><div class="blogcard-description">A blog powered by hugo. Contribute to kyu08/blog development by creating an account on GitHub.</div><div class="blogcard-url">https://github.com/kyu08/blog/pull/235</div>
+    </div>
+  </a>
+</div>
+</p>
+<h3 id="ブログカードの表示">ブログカードの表示<a href="#ブログカードの表示" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>こんな感じでリンク先の情報を表示するようにした。便利。</p>
+<p><img src="blog-card.webp" alt="blog-card.webp"></p>
+<p><div class="blogcard" data-url="https://github.com/kyu08/blog/pull/246" data-auto-fetch="false">
+  <a href="https://github.com/kyu08/blog/pull/246" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://opengraph.githubassets.com/eb445efdb9b6351b5b509ccdfd909411c138798d6e689ba8c4fa3ef3c235b314/kyu08/blog/pull/246" alt="Implement blog card link preview feature by kyu08 · Pull Request #246 · kyu08/blog" loading="lazy">
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">Implement blog card link preview feature by kyu08 · Pull Request #246 · kyu08/blog</div><div class="blogcard-description">Implemented a blog card shortcode that displays rich link previews with:
+
+Automatic OGP metadata fetching (title, description, image)
+Manual parameter specification support
+Responsive design with d...</div><div class="blogcard-url">https://github.com/kyu08/blog/pull/246</div>
+    </div>
+  </a>
+</div>
+</p>
+<h2 id="読書など">読書など<a href="#読書など" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li><a href="https://www.oreilly.co.jp/books/9784814400874/" target="_blank" >コンピュータシステムの理論と実装 第2版</a></li>
+<li><a href="https://www.oreilly.co.jp/books/9784814400911/" target="_blank" >Tidy First?</a></li>
+<li><a href="https://bookplus.nikkei.com/atcl/catalog/99/140252/" target="_blank" >デッドライン</a></li>
+<li><a href="https://www.shoeisha.co.jp/book/detail/9784798183961" target="_blank" >つくって、壊して、直して学ぶ Kubernetes入門</a></li>
+<li><a href="https://gihyo.jp/book/2022/978-4-297-12562-2" target="_blank" >コンセプトから理解するRust</a></li>
+<li><a href="https://www.kodansha.co.jp/book/products/0000398182" target="_blank" >RustによるWebアプリケーション開発 設計からリリース・運用まで</a></li>
+<li><a href="https://tatsu-zine.com/books/clean-architecture" target="_blank" >Clean Architecture 達人に学ぶソフトウェアの構造と設計</a></li>
+</ul>
+<p>読みかけのものは割愛。</p>
+<p>タイトルからも分かる通りComputer Science、 プロマネ、Kubernetes、Rustが今年の興味領域の中心だった。長期的に役立ちそう系と仕事ですぐ使える系とただ単に興味がある系をバランスよく摂取できた気がする。</p>
+<p>特に『コンピュータシステムの理論と実装』は本当に読んでよかった。</p>
+<p>CSを体系的に学んできていない自分にとっては論理回路を始めとしたハードウェアや、アセンブラ、コンパイラ、OSなどのソフトウェアの解像度を上げられたという意味で貴重な経験だった。（手を動かす分時間はかかったが）</p>
+<p>ひとまずRust欲が落ち着いたので来年はComputer Science系をやりつつ、Goの深堀りにも時間を使っていきたい。Computer Scienceに関してはネットワークと並行プログラミング周りを深掘ろうと思っている。</p>
+<h2 id="勉強会">勉強会<a href="#勉強会" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>関数型まつり2025</li>
+<li>VimConf 2025 Small</li>
+</ul>
+<p>に参加した。</p>
+<p><div class="blogcard" data-url="https://blog.kyu08.com/posts/fp-matsuri-2025/" data-auto-fetch="false">
+  <a href="https://blog.kyu08.com/posts/fp-matsuri-2025/" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://blog.kyu08.com/posts/fp-matsuri-2025/cover.png" alt="関数型まつり2025に参加した" loading="lazy">
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">関数型まつり2025に参加した</div><div class="blogcard-description">2025/06/14(土)、2025/06/15(日)に中野セントラルパークで行われた関数型まつり2025に参加した。 筆者はElmやRust</div><div class="blogcard-url">https://blog.kyu08.com/posts/fp-matsuri-2025/</div>
+    </div>
+  </a>
+</div>
+</p>
+<p><div class="blogcard" data-url="https://blog.kyu08.com/posts/vim-conf-2025/" data-auto-fetch="false">
+  <a href="https://blog.kyu08.com/posts/vim-conf-2025/" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://blog.kyu08.com/posts/vim-conf-2025/cover.png" alt="VimConf 2025 Smallに参加した" loading="lazy">
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">VimConf 2025 Smallに参加した</div><div class="blogcard-description">2025年11月2日（日）にアキバプラザ・アキバホールで開催されたVimConf 2025 Smallに参加した。 こちらはノベルティ。食器とかお箸はた</div><div class="blogcard-url">https://blog.kyu08.com/posts/vim-conf-2025/</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>勉強になったり刺激を得られたりしてよかった。来年はGoの勉強会にも参加してみようと思う。</p>
+<h2 id="生活">生活<a href="#生活" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="ジム">ジム<a href="#ジム" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>8月からジムに通い始めた。腰が痛くなりやすいので腰痛防止が主な目的。</p>
+<p>無事に腰痛とはお別れでき、筋肉も4ヶ月で4kg増やすことができているので引き続きやっていき。活動できる量も増えるしやはり筋肉は正義なのだと実感した。</p>
+<h3 id="睡眠">睡眠<a href="#睡眠" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>今年の春くらいから就寝時間が0時半くらいになった。それまでは2時とかに寝て次の日なんかボーッとするなーということが多かったのでいい感じになってよかった。</p>
+<p>朝散歩で日の光にあたったり運動や出社で体力を使うようにしたのが自分の睡眠にはいい影響があった気がする。（たぶん）</p>
+<h3 id="食事">食事<a href="#食事" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>これまではリモートで働いているとよく17時前後に集中力が皆無になってしまい、ちょっとゴロゴロしてから空腹を感じてご飯を食べる、というようなことをしていた。</p>
+<p>ある日お昼ご飯をお腹いっぱい食べたところ夕方の集中力低下タイムがなくなったことに気づいた。シンプルに夕方に血糖値的なものが下がりすぎて集中力が落ちていた模様。地味に生産性が落ちていたので改善できて良かった。</p>
+<h3 id="舌下治療">舌下治療<a href="#舌下治療" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>去年の秋頃始めた舌下治療の結果がでて今年の春の花粉シーズンは例年よりも楽だった。</p>
+<p>来年はもっと楽になることを期待。</p>
+<h3 id="サッカー">サッカー<a href="#サッカー" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>今年からJリーグ（カップ戦も含む）観戦にいくようになった。</p>
+<p>非日常でめっちゃ楽しい。</p>
+<p><img src="soccer.webp" alt="soccer.webp"></p>
+<h2 id="仕事">仕事<a href="#仕事" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>転職し、2/1から新しい職場で働きはじめた。</p>
+<p>プロダクトがたくさんのお客様に価値提供をできている実感があり、モチベーション高く働けている。</p>
+<p>また、上期に関わったプロジェクトがうまくいき、MVPを受賞することができた。</p>
+<p>会社全体としても好調なのでより一層事業成長に貢献していけるように全方面で頑張っていきたい。</p>
+<p>技術的には引き続きGo、Google Cloud、Spannerなどを触っている。</p>
+<p>このブログではあまり会社について詳しく話せていませんが、エンジニア採用を強化中ですので少しでも興味を持ってくれた方はTwitterのDMとかで連絡をください。ご飯やカジュアル面談などの調整をさせていただきます。（もちろんDMで聞きたいことを聞いていただいても大丈夫です）</p>
+<p><a href="https://recruit.canary-app.jp/engineer-entrance-book" target="_blank" >Engineer Entrance Book</a>にもかなり詳しく情報がまとまっているのでぜひご覧ください。🙇</p>
+<h2 id="2026年の抱負">2026年の抱負<a href="#2026年の抱負" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>事業成長により貢献する</li>
+<li>GoとComputer Scienceの理解を深める</li>
+</ul>
+<h2 id="おわりに">おわりに<a href="#おわりに" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>2026年もやっていき。</p>
+<p>過去の振り返り記事はこちら。</p>
+<ul>
+<li><a href="/posts/looking-back-on-2024/" >2024年を振り返る</a></li>
+<li><a href="/posts/looking-back-on-2023/" >2023年を振り返る</a></li>
+<li><a href="/posts/20201231-review-of-2020/" >2020年をかんたんに振り返る</a></li>
+</ul>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>便宜的にPRと表記しているが、GerritではCL(たしかChange List)と呼ばれる。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Ownerが自分以外のPublic Repositoryを対象に集計。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><div class="blogcard" data-url="https://gist.github.com/kyu08/138f8d15c2badc8243ca2e126545ca36" data-auto-fetch="true">
+  <a href="https://gist.github.com/kyu08/138f8d15c2badc8243ca2e126545ca36" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://gist.github.com/kyu08/138f8d15c2badc8243ca2e126545ca36</div><div class="blogcard-url">https://gist.github.com/kyu08/138f8d15c2badc8243ca2e126545ca36</div>
+    </div>
+  </a>
+</div>
+ を使って集計した。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+      </div></div>
+
+  
+  
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="https://blog.kyu08.com/pr-293/posts/cqrs-documents-by-greg-young/" class="button inline prev">
+        『CQRS Documents by Greg Young』を読んだ
+      </a>
+    
+    
+      <a href="https://blog.kyu08.com/pr-293/posts/gerrit-find-cls-you-created/" class="button inline next">
+        Gerritで自分が作成したCL一覧を確認する方法
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+        repo="kyu08/blog-comments"
+        issue-term="pathname"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  
+
+  
+    <div class="table-of-contents-sidebar">
+      <h2>
+        目次
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#oss">OSS</a>
+      <ul>
+        <li><a href="#pr">PR</a></li>
+        <li><a href="#寄付">寄付</a></li>
+        <li><a href="#振り返り">振り返り</a></li>
+      </ul>
+    </li>
+    <li><a href="#個人開発">個人開発</a>
+      <ul>
+        <li><a href="#fzf-make">fzf-make</a></li>
+        <li><a href="#sunaba">sunaba</a></li>
+      </ul>
+    </li>
+    <li><a href="#ブログ">ブログ</a>
+      <ul>
+        <li><a href="#書いた記事">書いた記事</a></li>
+        <li><a href="#ブログの変更">ブログの変更</a></li>
+        <li><a href="#ogpの自動生成">OGPの自動生成</a></li>
+        <li><a href="#heading要素のデザインを変えた">Heading要素のデザインを変えた</a></li>
+        <li><a href="#プレビュー環境を整えた">プレビュー環境を整えた</a></li>
+        <li><a href="#ブログカードの表示">ブログカードの表示</a></li>
+      </ul>
+    </li>
+    <li><a href="#読書など">読書など</a></li>
+    <li><a href="#勉強会">勉強会</a></li>
+    <li><a href="#生活">生活</a>
+      <ul>
+        <li><a href="#ジム">ジム</a></li>
+        <li><a href="#睡眠">睡眠</a></li>
+        <li><a href="#食事">食事</a></li>
+        <li><a href="#舌下治療">舌下治療</a></li>
+        <li><a href="#サッカー">サッカー</a></li>
+      </ul>
+    </li>
+    <li><a href="#仕事">仕事</a></li>
+    <li><a href="#2026年の抱負">2026年の抱負</a></li>
+    <li><a href="#おわりに">おわりに</a></li>
+  </ul>
+</nav>
+    </div>
+    <script src="https://blog.kyu08.com/pr-293/toc.js"></script>
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>blog.kyu08.com</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/pr-293/bundle.min.js"></script>
+
+
+<font color="#808080">
+  <span>
+    This site uses Google Analytics for access analysis.
+    Google Analytics uses cookies to collect traffic data, but this traffic data is collected anonymously and does not personally identify you.
+    Cookies can be disabled in your browser.
+  </span>
+</font>
+
+
+<script src="https://blog.kyu08.com/pr-293/blogcard.js"></script>
+
+
+  
+</div>
+
+</body>
+</html>
