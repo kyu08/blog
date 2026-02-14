@@ -281,9 +281,8 @@ vimmerなのでAの左側のキーを
 - fuwari
     - スクリーンショットを付箋のように画面上に貼り付けておけるmacアプリ。ちょっとメモとしてみたいときにとても便利
     - https://github.com/kentya6/Fuwari
-    {{<video src="fuwari.mp4" >}}
-
-
+    - こんな感じで動く
+        {{<video src="fuwari.mp4" >}}
 
 [^1]: これ系の記事でNeovimの使用率が1位になってるの初めて見た。Neovimユーザーとしては嬉しい。
 [^2]: 画面内の文字を検索するのにcmd+fをよく使うのでghosttyは自分には合わなかった。
