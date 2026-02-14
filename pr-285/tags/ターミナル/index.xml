@@ -255,12 +255,22 @@
 &lt;ul&gt;
 &lt;li&gt;fzf
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/junegunn/fzf&#34; target=&#34;_blank&#34; &gt;https://github.com/junegunn/fzf&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;言わずと知れたあいまい検索ツール。&lt;/li&gt;
 &lt;li&gt;ディレクトリ履歴移動やファイル検索などあらゆるスクリプトで使っている。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;lazygit
 &lt;ul&gt;
+&lt;li&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/jesseduffield/lazygit&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://github.com/jesseduffield/lazygit&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/d087a11950ff92ffeca5c9f07caf921b1648e797b44d25854544099a69d2c482/jesseduffield/lazygit&#34; alt=&#34;GitHub - jesseduffield/lazygit: simple terminal UI for git commands&#34; loading=&#34;lazy&#34;&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - jesseduffield/lazygit: simple terminal UI for git commands&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;simple terminal UI for git commands. Contribute to jesseduffield/lazygit development by creating an account on GitHub.&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/jesseduffield/lazygit&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/li&gt;
 &lt;li&gt;gitのTUIクライアント。&lt;/li&gt;
 &lt;li&gt;gitの操作はすべてlazygitでやっている。
 &lt;img src=&#34;lazygit.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
@@ -272,6 +282,7 @@
 &lt;/li&gt;
 &lt;li&gt;k9s
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/derailed/k9s&#34; target=&#34;_blank&#34; &gt;https://github.com/derailed/k9s&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;GKEのリソースを見たり操作したりするときに使っている。とても便利。（画像はサンプル用にkindでローカル起動したクラスタのもの）
 &lt;img src=&#34;k9s.webp&#34; alt=&#34;&#34;&gt;
 &lt;img src=&#34;k9s-pulse.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
