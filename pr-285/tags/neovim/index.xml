@@ -197,7 +197,8 @@
 &lt;h2 id=&#34;ランチャー&#34;&gt;ランチャー&lt;/h2&gt;
 &lt;p&gt;AlfredとRaycastを併用している。&lt;/p&gt;
 &lt;p&gt;基本的に不満がないかつ操作性がRaycastよりも好みなので基本的にはAlfredを使っている。&lt;/p&gt;
-&lt;p&gt;使い道は至って普通でスニペットやweb検索、ローカルのファイル検索などに使っている。あとはWorkflowを利用してよく使うアプリを以下のようなキーバインドで呼び出せるように設定している。&lt;/p&gt;
+&lt;p&gt;使い道は至って普通でスニペットやweb検索、ローカルのファイル検索などに使っている。&lt;/p&gt;
+&lt;p&gt;あとはWorkflowを利用してよく使うアプリを以下のようなキーバインドで呼び出せるように設定している。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Alacritty: &lt;code&gt;opt + space&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Brave: &lt;code&gt;cmd + esc&lt;/code&gt;&lt;/li&gt;
@@ -234,8 +235,7 @@
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;よく使うのはこの辺のやつ。&lt;/p&gt;
+&lt;p&gt;めっちゃ雑に書くとよく使うのはこの辺のやつ。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;windowを右半分に表示&lt;/li&gt;
 &lt;li&gt;windowを左半分に表示&lt;/li&gt;
@@ -245,9 +245,9 @@
 &lt;li&gt;windowを左1/4に表示&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;フォント&#34;&gt;フォント&lt;/h2&gt;
-&lt;p&gt;M+1Code Nerd Font Monoを使っている。まるっとしていて好き。nerd fontも入っているのでNeovimを使っていても豆腐があまり出なくて嬉しい。&lt;/p&gt;
+&lt;p&gt;M+1Code Nerd Font Monoを使っている。まるっとしていて好き。nerd fontも入っているのでNeovimを使っていても豆腐が出ず嬉しい。（あまり原理はわかってないがCicaなどの他のnerd font対応フォントよりも豆腐が出なくてありがたい）&lt;/p&gt;
 &lt;h2 id=&#34;タスク管理&#34;&gt;タスク管理&lt;/h2&gt;
-&lt;p&gt;ここ1年くらいはnvim-orgmode/orgmodeを使っている。emacsのorg-modeライクな機能をNeovimで使えるようにしたプラグイン。&lt;/p&gt;
+&lt;p&gt;ここ1年くらいは&lt;a href=&#34;https://github.com/nvim-orgmode/orgmode&#34; target=&#34;_blank&#34; &gt;nvim-orgmode/orgmode&lt;/a&gt;を使っている。emacsのorg-modeライクな機能をNeovimで使えるようにしたプラグイン。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/nvim-orgmode/orgmode&#34; data-auto-fetch=&#34;true&#34;&gt;
   &lt;a href=&#34;https://github.com/nvim-orgmode/orgmode&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -267,9 +267,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## DONE
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; コードレビュー
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Neovimでタスク管理できるのとタスクに優先度、期日を設定してそれをいい感じにソートして表示してくれるのがかなり肌にあっていて気に入っている。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;nvim-orgmode.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;最近は時間の使い方を振り返る目的でClock In的な機能を使ってタスクごとの所要時間も管理してみている。&lt;/p&gt;
 &lt;p&gt;これに関してはそのうち別の記事として詳しく書きたい。&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;ブラウザ&#34;&gt;ブラウザ&lt;/h2&gt;
 &lt;p&gt;数年前からBraveを使っている。広告をブロックしてくれつつChrome拡張も使えるので便利。一時期Arcも使っていたが肌に合わない挙動があったので使うのをやめてしまった。（具体的には覚えていない）&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
