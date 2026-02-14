@@ -5,7 +5,8 @@
   "main": "",
   "type": "module",
   "scripts": {
-    "generate-ogp": "node scripts/generate-ogp.mjs"
+    "generate-ogp": "node scripts/generate-ogp.mjs",
+    "fetch-blogcard-ogp": "node scripts/fetch-blogcard-ogp.mjs"
   },
   "keywords": [],
   "author": "kyu08",
@@ -14,10 +15,12 @@
     "@fontsource/noto-sans-jp": "^5.0.18",
     "@resvg/resvg-js": "^2.6.2",
     "gray-matter": "^4.0.3",
+    "jsdom": "^25.0.1",
     "satori": "^0.10.14",
     "textlint": "^14.0.4",
     "textlint-filter-rule-comments": "^1.2.2",
     "textlint-rule-preset-ja-spacing": "^2.4.3",
-    "textlint-rule-preset-ja-technical-writing": "^10.0.1"
+    "textlint-rule-preset-ja-technical-writing": "^10.0.1",
+    "undici": "^7.2.0"
   }
 }

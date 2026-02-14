@@ -1,0 +1,40 @@
+name: Update Blogcard Cache
+
+on:
+  schedule:
+    # Run every Monday at 00:00 UTC (JST 09:00)
+    - cron: '0 0 * * 1'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-cache:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.18.1'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch blogcard OGP data
+        run: npm run fetch-blogcard-ogp
+
+      - name: Commit and push blogcard cache
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data/blogcard-cache.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update blogcard OGP cache (scheduled)"
+            git push
+          fi
