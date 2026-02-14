@@ -392,12 +392,13 @@
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;
-
+&lt;/li&gt;
+&lt;li&gt;こんな感じで動く
 &lt;figure class=&#34;video&#34;&gt;
-      &lt;video controls preload=&#34;metadata&#34;   &gt;
-        &lt;source src=&#34;https://blog.kyu08.com/pr-285/pr-285/posts/development-environment-2026/fuwari.mp4&#34; type=&#34;video/mp4&#34;&gt;
-      &lt;/video&gt;
-      &lt;/figure&gt;
+          &lt;video controls preload=&#34;metadata&#34;   &gt;
+            &lt;source src=&#34;https://blog.kyu08.com/pr-285/pr-285/posts/development-environment-2026/fuwari.mp4&#34; type=&#34;video/mp4&#34;&gt;
+          &lt;/video&gt;
+          &lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
