@@ -74,7 +74,11 @@ https://github.com/alacritty/alacritty
 ## ターミナルマルチプレクサ
 tmuxを使っている。1セッションに好きなだけウィンドウを開く運用で使っている。
 
-tmux-fzfでのwindow切り替えが快適すぎて手放せない。（動作イメージとか設定手順は過去にこちらに書いた。）
+tmux-fzfでのwindow切り替えが便利すぎる。
+
+{{<video src="tmux.mp4" width="800">}}
+
+設定手順は過去にこちらに書いた。
 
 https://blog.kyu08.com/posts/tmux-fzf-window/
 
@@ -88,11 +92,7 @@ Status Lineはこんな感じにしている。
 詳しくは後述するが、[nvim-orgmode/orgmode](https://github.com/nvim-orgmode/orgmode)でClock In(時間計測)しているタスクがあるときはそのタスク名と経過時間をStatus Lineに表示するようにしている。
 ![](tmux-org-task.webp)
 
-<!-- TODO: gifを貼る？ -->
-
-![](tmux.mp4)
-
-tmuxの設定とか工夫を紹介する記事は別で書きたい。
+その他のtmuxの設定とか工夫を紹介する記事は別で書きたい。
 
 Zellijも試したことはあるが、自分の環境だとなぜか表示が崩れてしまうので使っていない。
 
@@ -101,7 +101,7 @@ https://github.com/zellij-org/zellij
 ## シェル
 zshを使っている。
 
-元々はネットに落ちているshellのコードが（fishよりも）動きやすいから、という理由で使っていたのを惰性で使っている。
+元々はネットに落ちているshellのコードが（fishよりも）動きやすいから、という理由で使っていたのを惰性で使い続けている。
 
 少し前にこの記事を参考にして起動を高速化したりした。（最近は測ってないが多分今も数10msくらいで起動するはず）
 
@@ -111,8 +111,31 @@ https://zenn.dev/fuzmare/articles/zsh-plugin-manager-cache
 
 https://github.com/yuki-yano/zeno.zsh
 
+プロンプト表示にはstarshipを使っている。
 
-<!-- TODO: これもまだ書けることありそう -->
+https://github.com/starship/starship
+
+こんな感じでk8sのcontextとnamespaceを表示するようにしている。
+
+![](zsh.webp)
+
+誤ってprod環境を壊すことがないようにこんな感じでcontextに`prod`という文字列が含まれていたら目立つようにしている。
+
+![](zsh-k8s.webp)
+
+設定はこんな感じ。
+
+```toml
+[kubernetes]
+format = '[[$symbol]($style)\[ctx\]$context \[ns\]$namespace]($style) '
+disabled = false
+contexts = [
+  { context_pattern = ".*dev.*", style = "blue", symbol = " " },
+  { context_pattern = ".*prod.*", style = "bold red", symbol = "🔥 " },
+]
+```
+
+その他の設定とか便利スクリプトを紹介する記事は別で書きたい。
 
 ## ランチャー
 AlfredとRaycastを併用している。
