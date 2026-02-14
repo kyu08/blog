@@ -131,12 +131,6 @@
     "image": "",
     "fetchedAt": "2026-02-14T11:37:40.029Z"
   },
-  "https://www.shoeisha.co.jp/book/detail/9784798183961": {
-    "title": "つくって、壊して、直して学ぶ Kubernetes入門 | 翔泳社",
-    "description": "動かなくっても、もう怖くない！\n\nトラブルシューティングを体験しながら学ぶ、実践的入門書。\n\n\n本書は、Kubernetesの実践的な知識をハンズオン形式で解説する書籍です。本書の特徴は、壊れにくいKubernetesをあえて壊しながら学ぶことで、初心者が挫折しやすいトラブルシューティングの知識や対応力が身に付けられることです。初心者でも、経験者でも、今度こそKubernetesがわかる！\nマンガや図解を多く掲載しているため視覚的に理解したい方にもおすすめです。\n\n\n・つくって、壊して、直して学ぶ\n- DockerfileからDockerコンテナをつくる\n- Kubernetesクラスタ上にアプリケーションをつくって、壊す\n- Serviceを壊す\n- kubectlでデバッグする\n- OutOfMemoryを発生させて、直す　...\n\n\n\n・Kubernetesの構築、運用だけでなくオブザーバビリティも解説\nトラブル解決にむけてより多くの情報を得るための「オブザーバビリティ」、そしてトラブルを検知するための「モニタリング」についても説明します。\n\n\n\n・豊富なイラストとマンガで見てわかる\n章ごと、ハンズオンごとに導入マンガを掲載し、視覚的にも学習内容を理解できるようにしています。むずかしい概念もイラストで丁寧に図解してあります。\n\n\n\nPart 1：つくってみようKubernetes\nChapter 1　Dockerコンテナをつくってみる\nChapter 2　Kubernetesクラスタをつくってみる\nChapter 3　全体像の説明\nChapter 4　アプリケーションをKubernetesクラスタ上につくる\nPart 2：アプリケーションを壊して学ぶKubernetes\nChapter 5　トラブルシューティングガイドとkubectlコマンドの使い方\nChapter 6　Kubernetes リソースをつくって壊そう\nChapter 7　安全なステートレス・アプリケーションをつくるために\nChapter 8　総復習：アプリケーションを直そう\nPart 3：壊れても動くKubernetes\nChapter 9　Kubernetesの仕組み、アーキテクチャーを理解しよう\nChapter 10　Kubernetesの開発ワークフローを理解しよう\nChapter 11　オブザーバビリティとモニタリングに触れてみよう\nChapter 12　この先の歩み方",
-    "image": "https://www.shoeisha.co.jp/static/book/og_image/9784798183961.jpg",
-    "fetchedAt": "2026-02-14T11:50:22.514Z"
-  },
   "https://github.com/kubernetes-sigs/kind": {
     "title": "GitHub - kubernetes-sigs/kind: Kubernetes IN Docker - local clusters for testing Kubernetes",
     "description": "Kubernetes IN Docker - local clusters for testing Kubernetes - kubernetes-sigs/kind",
@@ -418,5 +412,11 @@
     "description": "",
     "image": "",
     "fetchedAt": "2026-02-14T14:23:37.545Z"
+  },
+  "https://www.shoeisha.co.jp/book/detail/9784798183961": {
+    "title": "つくって、壊して、直して学ぶ Kubernetes入門 | 翔泳社",
+    "description": "動かなくっても、もう怖くない！\n\nトラブルシューティングを体験しながら学ぶ、実践的入門書。\n\n\n本書は、Kubernetesの実践的な知識をハンズオン形式で解説する書籍です。本書の特徴は、壊れにくいKubernetesをあえて壊しながら学ぶことで、初心者が挫折しやすいトラブルシューティングの知識や対応力が身に付けられることです。初心者でも、経験者でも、今度こそKubernetesがわかる！\nマンガや図解を多く掲載しているため視覚的に理解したい方にもおすすめです。\n\n\n・つくって、壊して、直して学ぶ\n- DockerfileからDockerコンテナをつくる\n- Kubernetesクラスタ上にアプリケーションをつくって、壊す\n- Serviceを壊す\n- kubectlでデバッグする\n- OutOfMemoryを発生させて、直す　...\n\n\n\n・Kubernetesの構築、運用だけでなくオブザーバビリティも解説\nトラブル解決にむけてより多くの情報を得るための「オブザーバビリティ」、そしてトラブルを検知するための「モニタリング」についても説明します。\n\n\n\n・豊富なイラストとマンガで見てわかる\n章ごと、ハンズオンごとに導入マンガを掲載し、視覚的にも学習内容を理解できるようにしています。むずかしい概念もイラストで丁寧に図解してあります。\n\n\n\nPart 1：つくってみようKubernetes\nChapter 1　Dockerコンテナをつくってみる\nChapter 2　Kubernetesクラスタをつくってみる\nChapter 3　全体像の説明\nChapter 4　アプリケーションをKubernetesクラスタ上につくる\nPart 2：アプリケーションを壊して学ぶKubernetes\nChapter 5　トラブルシューティングガイドとkubectlコマンドの使い方\nChapter 6　Kubernetes リソースをつくって壊そう\nChapter 7　安全なステートレス・アプリケーションをつくるために\nChapter 8　総復習：アプリケーションを直そう\nPart 3：壊れても動くKubernetes\nChapter 9　Kubernetesの仕組み、アーキテクチャーを理解しよう\nChapter 10　Kubernetesの開発ワークフローを理解しよう\nChapter 11　オブザーバビリティとモニタリングに触れてみよう\nChapter 12　この先の歩み方",
+    "image": "https://www.shoeisha.co.jp/static/book/og_image/9784798183961.jpg",
+    "fetchedAt": "2026-02-14T14:29:02.746Z"
   }
 }
