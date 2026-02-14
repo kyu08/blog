@@ -52,7 +52,6 @@ AI時代になって設定を自分好みにするコストが格段に減った
 <!-- TODO: スクショを貼る？ -->
 
 ## AIツール
-<!-- TODO: GitHub Copilotを追加する。インライン補完とGitHub上でいい感じに依頼するときに使っている -->
 ClaudeとDevin、GitHub Copilotを使っている。
 
 ClaudeはDesktop App経由で壁打ちや検索用途で使ったり、Claude Codeでコードを書いてもらったりしている。
@@ -68,8 +67,6 @@ GitHub Copilotはエディタのインライン補完で使ったり、GitHubの
 Alacrittyを使っている。ターミナルにはタブ機能がない方がcmd+wで誤爆したりとかが起きないので好きで使っている。正直早いかどうかはあまりわかってないが特に不満もない。（少し前に日本語入力もいい感じになったし）
 
 https://github.com/alacritty/alacritty
-
-<!-- TODO: スクショを貼る？ -->
 
 ## ターミナルマルチプレクサ
 tmuxを使っている。1セッションに好きなだけウィンドウを開く運用で使っている。
