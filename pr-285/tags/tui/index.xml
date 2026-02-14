@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tui on blog.kyu08.com</title>
+    <link>https://blog.kyu08.com/pr-285/tags/tui/</link>
+    <description>Recent content in tui on blog.kyu08.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>blog.kyu08.com</copyright>
+    <lastBuildDate>Sat, 14 Feb 2026 00:00:08 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-285/tags/tui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>開発環境現状確認 2026</title>
+      <link>https://blog.kyu08.com/pr-285/posts/development-environment-2026/</link>
+      <pubDate>Sat, 14 Feb 2026 00:00:08 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-285/posts/development-environment-2026/</guid>
+      <description>2026年年始に複数の方（や会社）が開発環境について書いていたので2026年時点のスナップショットも兼ねて自分も流行りに乗って書いてみる。 https://blog-dry.com/entry/2026/01/02/145952https://blog-dry.com/entry/2026/01/02/145952</description>
+      <content>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;2026年年始に複数の方（や会社）が開発環境について書いていたので2026年時点のスナップショットも兼ねて自分も流行りに乗って書いてみる。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://blog-dry.com/entry/2026/01/02/145952&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://blog-dry.com/entry/2026/01/02/145952&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://blog-dry.com/entry/2026/01/02/145952&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://blog-dry.com/entry/2026/01/02/145952&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://k0kubun.hatenablog.com/entry/development-environment-2026&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://k0kubun.hatenablog.com/entry/development-environment-2026&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://k0kubun.hatenablog.com/entry/development-environment-2026&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://k0kubun.hatenablog.com/entry/development-environment-2026&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://tech.pepabo.com/2026/01/23/development-environment-2026/&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://tech.pepabo.com/2026/01/23/development-environment-2026/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://tech.pepabo.com/2026/01/23/development-environment-2026/&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://tech.pepabo.com/2026/01/23/development-environment-2026/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+ &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;それではやっていきます。&lt;/p&gt;
+&lt;h2 id=&#34;os&#34;&gt;OS&lt;/h2&gt;
+&lt;p&gt;大学生くらいからmacOSを使っている。あまり不満がなくて好き。（仕事用端末もmacOS）&lt;/p&gt;
+&lt;p&gt;唯一あるとしたらゲームがあんまりできないのでこれがちょっとだけ気になっている。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://store.steampowered.com/sale/steammachine&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://store.steampowered.com/sale/steammachine&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://store.steampowered.com/sale/steammachine&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://store.steampowered.com/sale/steammachine&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;5年くらい前に買ったM1 MacBook Air(16GB RAM)の物持ちが良すぎて新しいMacを買うタイミングがなかなか来ない。新しいMacを買うのは楽しいので買いたい気持ちもありつついかんせん困ってないのでなあ&amp;hellip;の気持ち。&lt;/p&gt;
+&lt;h2 id=&#34;エディタ&#34;&gt;エディタ&lt;/h2&gt;
+&lt;p&gt;（就職した）2021年くらいからNeovimを使っている。厳密には2022年ごろまではJetBrains系のエディタと併用していたが、そこからはNeovimのみを使っている。&lt;/p&gt;
+&lt;p&gt;キーボードだけで操作しやすいのと起動が早いのとカスタマイズしやすいのが好きでつかっている。（もちろんvimの操作性も気に入っている）&lt;/p&gt;
+&lt;p&gt;AI時代になって設定を自分好みにするコストが格段に減ったのでNeovimのカスタマイズが捗っており嬉しい。（luaの書き方を覚える前にAI時代が来てしまった&amp;hellip;）&lt;/p&gt;
+&lt;p&gt;久々に測ってみたら起動時間が60msくらいになっていたので気が向いたらもうちょっとチューニングしてもいいかもしれない。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;aiツール&#34;&gt;AIツール&lt;/h2&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;ClaudeとDevin、GitHub Copilotを使っている。&lt;/p&gt;
+&lt;p&gt;ClaudeはDesktop App経由で壁打ちや検索用途で使ったり、Claude Codeでコードを書いてもらったりしている。&lt;/p&gt;
+&lt;p&gt;Claude Codeを使うときはNeovim plugin等ではなくtmuxのpaneを切ってそこで直接動かしている。&lt;/p&gt;
+&lt;p&gt;Devinは主にAsk Devinを使ってコードベースの調査などに使っている。レスポンスがめっちゃ早くてありがたい。&lt;/p&gt;
+&lt;p&gt;GitHub Copilotはエディタのインライン補完で使ったり、GitHubのWebUI上でタスクを依頼したりするときに使っている。特にこのブログの機能開発ではよく使っている。（issueさえ書けばそのままWebUIからタスクを依頼できるのが便利）&lt;/p&gt;
+&lt;h2 id=&#34;ターミナルエミュレータ&#34;&gt;ターミナルエミュレータ&lt;/h2&gt;
+&lt;p&gt;Alacrittyを使っている。ターミナルにはタブ機能がない方がcmd+wで誤爆したりとかが起きないので好きで使っている。正直早いかどうかはあまりわかってないが特に不満もない。（少し前に日本語入力もいい感じになったし）&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/alacritty/alacritty&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/alacritty/alacritty&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/alacritty/alacritty&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/alacritty/alacritty&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;ターミナルマルチプレクサ&#34;&gt;ターミナルマルチプレクサ&lt;/h2&gt;
+&lt;p&gt;tmuxを使っている。1セッションに好きなだけウィンドウを開く運用で使っている。&lt;/p&gt;
+&lt;p&gt;tmux-fzfでのwindow切り替えが便利すぎる。&lt;/p&gt;
+&lt;figure class=&#34;video&#34;&gt;
+  &lt;video controls preload=&#34;metadata&#34;   &gt;
+    &lt;source src=&#34;https://blog.kyu08.com/pr-285/pr-285/posts/development-environment-2026/tmux.mp4&#34; type=&#34;video/mp4&#34;&gt;
+  &lt;/video&gt;
+  &lt;/figure&gt;
+
+&lt;p&gt;設定手順は過去にこちらに書いた。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://blog.kyu08.com/posts/tmux-fzf-window/&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://blog.kyu08.com/posts/tmux-fzf-window/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://blog.kyu08.com/posts/tmux-fzf-window/&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://blog.kyu08.com/posts/tmux-fzf-window/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;前述の通りalacrittyとの相性がいい感じなのでよほどのことがない限りこの組み合わせは変えなさそう。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Status Lineはこんな感じにしている。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tmux.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;詳しくは後述するが、&lt;a href=&#34;https://github.com/nvim-orgmode/orgmode&#34; target=&#34;_blank&#34; &gt;nvim-orgmode/orgmode&lt;/a&gt;でClock In(時間計測)しているタスクがあるときはそのタスク名と経過時間をStatus Lineに表示するようにしている。
+&lt;img src=&#34;tmux-org-task.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;その他のtmuxの設定とか工夫を紹介する記事は別で書きたい。&lt;/p&gt;
+&lt;p&gt;Zellijも試したことはあるが、自分の環境だとなぜか表示が崩れてしまうので使っていない。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/zellij-org/zellij&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/zellij-org/zellij&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/zellij-org/zellij&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/zellij-org/zellij&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;シェル&#34;&gt;シェル&lt;/h2&gt;
+&lt;p&gt;zshを使っている。&lt;/p&gt;
+&lt;p&gt;元々はネットに落ちているshellのコードが（fishよりも）動きやすいから、という理由で使っていたのを惰性で使い続けている。&lt;/p&gt;
+&lt;p&gt;少し前にこの記事を参考にして起動を高速化したりした。（最近は測ってないが多分今も数10msくらいで起動するはず）&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://zenn.dev/fuzmare/articles/zsh-plugin-manager-cache&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://zenn.dev/fuzmare/articles/zsh-plugin-manager-cache&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://zenn.dev/fuzmare/articles/zsh-plugin-manager-cache&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://zenn.dev/fuzmare/articles/zsh-plugin-manager-cache&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;2024/4頃からzeno.zshを使っていてかなりよく使うコマンドの入力が効率化できた。snippetがいい感じに展開されるのは言わずもがな嬉しいが、&lt;code&gt;zeno-insert-snippet&lt;/code&gt;でzenoに登録したsnippetをfzfで選択&amp;amp;挿入できるのがとても便利。設定ファイルはまだyaml形式で書いている。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/yuki-yano/zeno.zsh&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/yuki-yano/zeno.zsh&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/yuki-yano/zeno.zsh&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/yuki-yano/zeno.zsh&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;プロンプト表示にはstarshipを使っている。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/starship/starship&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/starship/starship&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/starship/starship&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/starship/starship&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;こんな感じでk8sのcontextとnamespaceを表示するようにしている。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;zsh.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;誤ってprod環境を壊すことがないようにこんな感じでcontextに&lt;code&gt;prod&lt;/code&gt;という文字列が含まれていたら目立つようにしている。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;zsh-k8s.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;設定はこんな感じ。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;kubernetes&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;format&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;[[$symbol]($style)\[ctx\]$context \[ns\]$namespace]($style) &amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;disabled&lt;/span&gt; = &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;contexts&lt;/span&gt; = [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  { &lt;span style=&#34;color:#a6e22e&#34;&gt;context_pattern&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.*dev.*&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;blue&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;symbol&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  { &lt;span style=&#34;color:#a6e22e&#34;&gt;context_pattern&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.*prod.*&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bold red&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;symbol&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;🔥 &amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;その他の設定とか便利スクリプトを紹介する記事は別で書きたい。&lt;/p&gt;
+&lt;h2 id=&#34;ランチャー&#34;&gt;ランチャー&lt;/h2&gt;
+&lt;p&gt;AlfredとRaycastを併用している。&lt;/p&gt;
+&lt;p&gt;基本的に不満がないかつ操作性がRaycastよりも好みなので基本的にはAlfredを使っている。&lt;/p&gt;
+&lt;p&gt;使い道は至って普通でスニペットやweb検索、ローカルのファイル検索などに使っている。&lt;/p&gt;
+&lt;p&gt;あとはWorkflowを利用してよく使うアプリを以下のようなキーバインドで呼び出せるように設定している。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Alacritty: &lt;code&gt;opt + space&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Brave: &lt;code&gt;cmd + esc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Slack: &lt;code&gt;opt + opt&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Notion: &lt;code&gt;opt + n&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Claude: &lt;code&gt;opt + x&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;TickTick: &lt;code&gt;opt + t&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Spotify: &lt;code&gt;ctrl + esc&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;今は治ってるかもしれないが、一時期Alfredのクリップボードの動作がとてつもなく重くなってしまったのでそこだけRaycastを使っている。&lt;/p&gt;
+&lt;h2 id=&#34;ウィンドウマネージャー&#34;&gt;ウィンドウマネージャー&lt;/h2&gt;
+&lt;p&gt;yabaiとskhdを使っている。設定をコード管理できるのが嬉しい。たまに動作が不安定になるのでそのたびに&lt;code&gt;yabai --restart-service &amp;amp;&amp;amp; skhd --restart-service&lt;/code&gt;を実行している。とはいえ特に不満もない。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/asmvik/yabai&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/asmvik/yabai&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/asmvik/yabai&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/asmvik/yabai&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/asmvik/skhd&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/asmvik/skhd&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/asmvik/skhd&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/asmvik/skhd&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;めっちゃ雑に書くとよく使うのはこの辺のやつ。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;windowを右半分に表示&lt;/li&gt;
+&lt;li&gt;windowを左半分に表示&lt;/li&gt;
+&lt;li&gt;windowを左上に表示&lt;/li&gt;
+&lt;li&gt;windowを左下に表示&lt;/li&gt;
+&lt;li&gt;windowを右3/4に表示&lt;/li&gt;
+&lt;li&gt;windowを左1/4に表示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;フォント&#34;&gt;フォント&lt;/h2&gt;
+&lt;p&gt;M+1Code Nerd Font Monoを使っている。まるっとしていて好き。nerd fontも入っているのでNeovimを使っていても豆腐が出ず嬉しい。（あまり原理はわかってないがCicaなどの他のnerd font対応フォントよりも豆腐が出なくてありがたい）&lt;/p&gt;
+&lt;h2 id=&#34;タスク管理&#34;&gt;タスク管理&lt;/h2&gt;
+&lt;p&gt;ここ1年くらいは&lt;a href=&#34;https://github.com/nvim-orgmode/orgmode&#34; target=&#34;_blank&#34; &gt;nvim-orgmode/orgmode&lt;/a&gt;を使っている。emacsのorg-modeライクな機能をNeovimで使えるようにしたプラグイン。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/nvim-orgmode/orgmode&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/nvim-orgmode/orgmode&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/nvim-orgmode/orgmode&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/nvim-orgmode/orgmode&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;少し前まで素朴にこんな感じのファイルを毎日生成して管理していたが、期日が違うタスクをいい感じに管理したくて使い出した。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## TODO
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 実装
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## DONE
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; コードレビュー
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Neovimでタスク管理できるのとタスクに優先度、期日を設定してそれをいい感じにソートして表示してくれるのがかなり肌にあっていて気に入っている。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;nvim-orgmode.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;最近は時間の使い方を振り返る目的でClock In的な機能を使ってタスクごとの所要時間も管理してみている。&lt;/p&gt;
+&lt;p&gt;これに関してはそのうち別の記事として詳しく書きたい。&lt;/p&gt;
+&lt;h2 id=&#34;ブラウザ&#34;&gt;ブラウザ&lt;/h2&gt;
+&lt;p&gt;数年前からBraveを使っている。広告をブロックしてくれつつChrome拡張も使えるので便利。一時期Arcも使っていたが肌に合わない挙動があったので使うのをやめてしまった。（具体的には覚えていない）&lt;/p&gt;
+&lt;p&gt;よく使うChrome拡張は少し前にこの記事に書いた。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://blog.kyu08.com/posts/chrome-extensions-for-dev-2024/&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://blog.kyu08.com/posts/chrome-extensions-for-dev-2024/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://blog.kyu08.com/posts/chrome-extensions-for-dev-2024/&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://blog.kyu08.com/posts/chrome-extensions-for-dev-2024/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;ime&#34;&gt;IME&lt;/h2&gt;
+&lt;p&gt;Google日本語入力を使っている。&lt;/p&gt;
+&lt;p&gt;たまーにひらがなの変換がおかしいのが気になっているが全体的には割と満足している。&lt;/p&gt;
+&lt;p&gt;azookeyも試したが辞書登録した単語の優先度が低いのが使いづらくて使うのをやめてしまった。（ライブ変換はとても便利だった。）&lt;/p&gt;
+&lt;p&gt;ならissueを立てようよ&amp;hellip;という話ではあるがちょっとこのところ忙しくそこまではできていない。&lt;/p&gt;
+&lt;h2 id=&#34;clituiツール&#34;&gt;CLI/TUIツール&lt;/h2&gt;
+&lt;p&gt;よく使っているCLI/TUIツールはこのあたり。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;fzf
+&lt;ul&gt;
+&lt;li&gt;ディレクトリ履歴移動やファイル検索などあらゆるスクリプトで使っている。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;lazygit
+&lt;ul&gt;
+&lt;li&gt;gitの操作はすべてlazygitでやっている。
+&lt;img src=&#34;lazygit.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;add commit push pullなどの日常の操作やブランチ操作などをかなり少ないキー入力で行えるのがとても便利。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git rebase -i&lt;/code&gt;相当のことができたり、commitの一部だけstagingに戻したりと細かいこともできる。&lt;/li&gt;
+&lt;li&gt;ここ2年くらいで細々とPRを送っており、去年末頃に9番目にcommitが多い人になれた。
+&lt;img src=&#34;lazygit-contibutors.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;k9s
+&lt;ul&gt;
+&lt;li&gt;GKEのリソースを見たり操作したりするときに使っている。とても便利。
+&lt;img src=&#34;k9s.webp&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;k9s-pulse.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;ログはあまり使いこなせてないのでDatadogやCloud Loggingを見ていることが多い。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&amp;lt;PRここから&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;fzf-makeというmake targetやpnpm script, yarn script, npm script, just recipe, taskfileに定義されたtaskをfuzzy finder形式で選択、実行できるTUIを開発しています。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;コマンド名やその内容を覚えずとも楽に実行できたり、履歴機能があるのが特徴です。&lt;/p&gt;
+&lt;p&gt;次のようなコマンドでインストールできるのでぜひ使ってみてください。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install fzf-make
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cargo +1.90.0 install --locked fzf-make
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;スターもしてもらえると嬉しいです🙏&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-make&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/fzf-make&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-make&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;lt;/PRここまで&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;キーリマッパー&#34;&gt;キーリマッパー&lt;/h2&gt;
+&lt;p&gt;Karabiner-Elementsを使っています。&lt;/p&gt;
+&lt;p&gt;vimmerなのでAの左側のキーを&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;単押しでesc&lt;/li&gt;
+&lt;li&gt;長押しでctrl&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;となるように設定している。&lt;/p&gt;
+&lt;p&gt;あとはよくある左cmdを英数、右cmdをかなにリマップする設定とか、ctrl+shift+hjklで←↓↑→が入力する設定とかを入れている。&lt;/p&gt;
+&lt;h2 id=&#34;キーボード&#34;&gt;キーボード&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;7sPro
+&lt;img src=&#34;7spro.webp&#34; alt=&#34;&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;2021/8から使っている。今は家でメインのキーボードとして使っている。&lt;/li&gt;
+&lt;li&gt;キースイッチは&lt;a href=&#34;https://shop.yushakobo.jp/products/5659&#34; target=&#34;_blank&#34; &gt;Yushakobo Fairy Silent Linear Switch&lt;/a&gt;を使用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;EPOMAKER SPLIT70
+&lt;ul&gt;
+&lt;li&gt;2026/1に買って職場で使っている。分割キーボードかつガスケットマウントでとても打鍵感が良い。&lt;/li&gt;
+&lt;li&gt;キースイッチは同じく&lt;a href=&#34;https://shop.yushakobo.jp/products/5659&#34; target=&#34;_blank&#34; &gt;Yushakobo Fairy Silent Linear Switch&lt;/a&gt;を使用。&lt;/li&gt;
+&lt;li&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://epomaker.jp/products/epomaker-split70&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://epomaker.jp/products/epomaker-split70&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://epomaker.jp/products/epomaker-split70&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://epomaker.jp/products/epomaker-split70&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;fuwari
+&lt;ul&gt;
+&lt;li&gt;スクリーンショットを付箋のように画面上に貼り付けておけるmacアプリ。ちょっとメモとしてみたいときにとても便利&lt;/li&gt;
+&lt;li&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kentya6/Fuwari&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/kentya6/Fuwari&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kentya6/Fuwari&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kentya6/Fuwari&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;figure class=&#34;video&#34;&gt;
+      &lt;video controls preload=&#34;metadata&#34;   &gt;
+        &lt;source src=&#34;https://blog.kyu08.com/pr-285/pr-285/posts/development-environment-2026/fuwari.mp4&#34; type=&#34;video/mp4&#34;&gt;
+      &lt;/video&gt;
+      &lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;これ系の記事でNeovimの使用率が1位になってるの初めて見た。Neovimユーザーとしては嬉しい。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;画面内の文字を検索するのにcmd+fをよく使うのでghosttyは自分には合わなかった。&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>GitHub Sponsorsの寄付先にratatuiを追加した</title>
+      <link>https://blog.kyu08.com/pr-285/posts/renew-oss-sponsoring/</link>
+      <pubDate>Mon, 23 Sep 2024 15:02:46 +0000</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-285/posts/renew-oss-sponsoring/</guid>
+      <description>OSSへの寄付の月予算を$10にした - laiso こちらの記事で寄付するOSSプロジェクトの選び方として次のような基準が紹介されていた。 寄付するプロジ</description>
+      <content>&lt;p&gt;&lt;a href=&#34;https://laiso.hatenablog.com/entry/2022/02/25/gihutown&#34; target=&#34;_blank&#34; &gt;OSSへの寄付の月予算を$10にした - laiso&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;こちらの記事で寄付するOSSプロジェクトの選び方として次のような基準が紹介されていた。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;寄付するプロジェクトはこういう基準で選んでる&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自分が使っていてなくなったら困る&lt;/li&gt;
+&lt;li&gt;マイナーであまり寄付されていない&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;今まで前者の基準に則って&lt;a href=&#34;https://github.com/sponsors/neovim&#34; target=&#34;_blank&#34; &gt;neovim&lt;/a&gt;に寄付していたが、後者の観点を持てていなかったことに気付いた。そこで自分もOSSへの寄付を見直してみようと思った。&lt;/p&gt;
+&lt;h2 id=&#34;というわけで&#34;&gt;というわけで&lt;/h2&gt;
+&lt;p&gt;タイトルの通りだが、GitHub Sponsorsの寄付先に&lt;a href=&#34;https://github.com/sponsors/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;を追加した。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/ratatui/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;とは、手軽にTUIアプリケーションを作成できるRust用のライブラリで、筆者が個人開発しているOSSである&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;fzf-make&lt;/a&gt;でも利用している。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/kyu08/fzf-make/main/static/demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34;&gt;
+&lt;a href=&#34;https://github.com/ratatui/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;のおかげでこんな感じのUIを手軽に実装できている。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Rust製のTUIツールでは非常に幅広く利用されている印象だが、現在のスポンサー数が9人と少なかったので少しでも力になれればということで寄付先に追加した。長期間メンテされる状態が続いてくれると嬉しい。自分にもできそうなバグ修正があれば挑戦してみようと思う。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;img src=&#34;ratatuis-10th-sponsor.webp&#34; alt=&#34;ratatuis-10th-sponsor.webp&#34;&gt;
+10番目のスポンサーになった様子。&lt;/p&gt;
+&lt;p&gt;これで現在の寄付額は$10/月で、&lt;a href=&#34;https://github.com/sponsors/neovim&#34; target=&#34;_blank&#34; &gt;neovim&lt;/a&gt;と&lt;a href=&#34;https://github.com/sponsors/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;にそれぞれ$5ずつ寄付していることになる。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;github-sponsors-logos.webp&#34; alt=&#34;github-sponsors-logos.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;他にも寄付したいプロジェクトは山ほどあるので山ほど稼いでいきたい。(あと円高頼む&amp;hellip;)&lt;/p&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;今後ともOSSコミュニティの持続可能性を高めていきたい。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;make targetをプレビューウィンドウ付きであいまい検索によって選択&amp;amp;実行できるツール。brewやcargoでインストールできるのでぜひ。 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-make&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/fzf-make&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-make&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
