@@ -146,29 +146,36 @@ async function getMarkdownFiles(dir) {
 
 /**
  * Markdownファイルからブログカード対象URLを抽出
- * リンクテキストとURLが同じ場合のみ（[https://example.com](https://example.com)）
+ * パターン1: リンクテキストとURLが同じ場合（[https://example.com](https://example.com)）
+ * パターン2: 単独行のURL（autolink）
  */
 function extractBlogcardUrls(content) {
   const urls = new Set();
-  
-  // Markdownリンクパターン: [text](url)
-  const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
   let match;
-  
+
+  // パターン1: Markdownリンク [text](url) でテキストとURLが同じ場合
+  const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
+
   while ((match = linkPattern.exec(content)) !== null) {
     const text = match[1];
     const url = match[2];
-    
+
     // URLの正規化（プロトコルとトレイリングスラッシュを除去して比較）
     const normalizedText = text.replace(/^https?:\/\//, '').replace(/\/$/, '');
     const normalizedUrl = url.replace(/^https?:\/\//, '').replace(/\/$/, '');
-    
+
     // リンクテキストとURLが同じ場合のみブログカード対象
     if (normalizedText === normalizedUrl && url.startsWith('http')) {
       urls.add(url);
     }
   }
-  
+
+  // パターン2: 単独行のURL（autolink）
+  const autolinkPattern = /^(https?:\/\/[^\s]+)$/gm;
+  while ((match = autolinkPattern.exec(content)) !== null) {
+    urls.add(match[1]);
+  }
+
   return Array.from(urls);
 }
 
