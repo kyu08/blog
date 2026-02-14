@@ -46,7 +46,9 @@ https://store.steampowered.com/sale/steammachine
 
 キーボードだけで操作しやすいのと起動が早いのとカスタマイズしやすいのが好きでつかっている。（もちろんvimの操作性も気に入っている）
 
-最近は[diffview.nvim](https://github.com/sindrets/diffview.nvim)を使ってPRのdiffはすべてNeovim上で見るようにしている。（octo.nvimにコメント周りのバグがあったのでレビューコメントの書き込みはGitHubのWebUIから行っている。）
+最近はこんな感じで[diffview.nvim](https://github.com/sindrets/diffview.nvim)を使ってPRのdiffはすべてNeovim上で見るようにしている。（[octo.nvim](https://github.com/pwntester/octo.nvim)にコメント周りのバグがあったのでレビューコメントの書き込みはGitHubのWebUIから行っている。）
+
+![](neovim-pr-review.webp)
 
 https://github.com/sindrets/diffview.nvim
 
@@ -77,7 +79,7 @@ https://github.com/alacritty/alacritty
 ## ターミナルマルチプレクサ
 tmuxを使っている。1セッションに好きなだけウィンドウを開く運用で使っている。
 
-tmux-fzfでのwindow切り替えが便利すぎる。
+tmux-fzfでのwindow切り替えがとても便利で気に入って使っている。
 
 {{<video src="tmux.mp4" width="800">}}
 
@@ -88,11 +90,12 @@ https://blog.kyu08.com/posts/tmux-fzf-window/
 
 前述の通りalacrittyとの相性がいい感じなのでよほどのことがない限りこの組み合わせは変えなさそう。[^2]
 
-Status Lineはこんな感じにしている。
+Status Lineはこんな感じで画面下側に表示している。
 
 ![](tmux.webp)
 
 詳しくは後述するが、[nvim-orgmode/orgmode](https://github.com/nvim-orgmode/orgmode)でClock In(時間計測)しているタスクがあるときはそのタスク名と経過時間をStatus Lineに表示するようにしている。
+
 ![](tmux-org-task.webp)
 
 その他のtmuxの設定とか工夫を紹介する記事は別で書きたい。
