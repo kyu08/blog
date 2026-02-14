@@ -1,4 +1,11 @@
-{{- /* リンクテキストとURLが同じ場合はblogcardとして表示 */ -}}
+{{- /*
+  リンクテキストとURLが同じ、かつキャッシュに存在する場合はblogcardとして表示
+
+  キャッシュに存在するURLのみブログカードにする理由:
+  - 箇条書き内のURLはブログカードではなく通常のリンクとして表示したい
+  - fetch-blogcard-ogp.mjs は箇条書き内のURLをキャッシュ対象から除外している
+  - よって、キャッシュの有無でブログカード表示を制御できる
+*/ -}}
 {{- $text := .Text -}}
 {{- $dest := .Destination -}}
 
@@ -6,9 +13,15 @@
 {{- $normalizedText := $text | replaceRE "^https?://" "" | strings.TrimSuffix "/" -}}
 {{- $normalizedDest := $dest | replaceRE "^https?://" "" | strings.TrimSuffix "/" -}}
 
-{{- if eq $normalizedText $normalizedDest -}}
-  {{- /* blogcardとして表示 */ -}}
-  {{- partial "blogcard.html" (dict "url" $dest "autoFetch" "true") -}}
+{{- /* キャッシュデータを確認 */ -}}
+{{- $cachedData := false -}}
+{{- if site.Data.blogcard_cache -}}
+  {{- $cachedData = index site.Data.blogcard_cache $dest -}}
+{{- end -}}
+
+{{- if and (eq $normalizedText $normalizedDest) $cachedData -}}
+  {{- /* キャッシュがある場合のみblogcardとして表示 */ -}}
+  {{- partial "blogcard.html" (dict "url" $dest "autoFetch" "false") -}}
 {{- else -}}
   {{- /* 通常のリンクとして表示 */ -}}
   <a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if or (strings.HasPrefix .Destination "http") (strings.HasPrefix .Destination "https") }} target="_blank"{{ end }} >{{ .Text | safeHTML }}</a>
