@@ -237,11 +237,17 @@ azookeyも試したが辞書登録した単語の優先度が低いのが使い�
 
 **<PRここから>**
 
-fzf-makeというmake targetやpnpm script, yarn script, npm script, just recipe, taskfileに定義されたtaskをfuzzy finder形式で選択、実行できるTUIを開発しています。
+fzf-makeというmake targetをfuzzy finder形式で選択、実行できるTUIを開発しています。
 
 ![](fzf-make.gif)
 
 コマンド名やその内容を覚えずとも楽に実行できたり、履歴機能があるのが特徴です。
+
+現在は`Makefile`に定義されたmake target以外にも以下のようなコマンドに対応しています。
+
+- `package.json`の`scripts`に定義されたコマンド(pnpm, yarn, npmに対応)
+- `Justfile`に定義されたrecipe
+- `taskfile.yaml`に定義されたtask
 
 次のようなコマンドでインストールできるのでぜひ使ってみてください。
 
