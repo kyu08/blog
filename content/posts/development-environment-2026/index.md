@@ -45,7 +45,7 @@ https://store.steampowered.com/sale/steammachine
 
 キーボードだけで操作しやすいのと起動が早いのとカスタマイズしやすいのが好きでつかっている。（もちろんvimの操作性も気に入っている）
 
-最近はこんな感じで[diffview.nvim](https://github.com/sindrets/diffview.nvim)を使ってPRのdiffはすべてNeovim上で見るようにしている。（[octo.nvim](https://github.com/pwntester/octo.nvim)にコメント周りのバグがあったのでレビューコメントの書き込みはGitHubのWebUIから行っている。）
+最近はこんな感じで[diffview.nvim](https://github.com/sindrets/diffview.nvim)を使ってPRのdiffはすべてNeovim上で見るようにしている。コードをレビューしていると周辺の実装も含めて確認したいことがよくあるので、エディタ上でレビューしているとすぐに該当ファイルに飛べて便利。（[octo.nvim](https://github.com/pwntester/octo.nvim)にコメント周りのバグがあったのでレビューコメントの書き込みはGitHubのWebUIから行っている。）
 
 ![](neovim-pr-review.webp)
 
@@ -53,9 +53,9 @@ https://github.com/sindrets/diffview.nvim
 
 今はGo/TypeScript/Rustあたりしか書いてないので特に困ってないが、JVM系をNeovimで書こうとすると若干辛みがあるかもしれない。（ちょっとだけJava/ScalaをNeovimで書いたことがあるが重かったり不安定だったりして辛かった）
 
-AI時代になって設定を自分好みにするコストが格段に減ったのでNeovimのカスタマイズが捗っており嬉しい。（luaの書き方を覚える前にAI時代が来てしまった...）
+AI時代になって設定を自分好みにするコストが格段に減ったのでNeovimのカスタマイズが捗っており嬉しい。最近はPRレビュー効率化のための色々をClaude Codeにやってもらっている。（luaの書き方を覚える前にAI時代が来てしまった...）
 
-久々に起動時間を測ってみたら60msくらいになっていたので気が向いたらもうちょっとチューニングしてもいいかもしれない。
+久々に起動時間を測ってみたら60msくらいになっていたので気が向いたらもうちょっとチューニングしてもいいかもしれない。（たぶん30msくらいまではいけるはず）
 
 一時期cursorも頑張って設定ファイルを作り込んだうえで慣れようとしてみたが、どうもVSCode系エディタとは思想が合わなかったので結局数日で戻ってきてしまった。
 
@@ -71,7 +71,9 @@ Devinは主にAsk Devinを使ってコードベースの調査などに使って
 GitHub Copilotはエディタのインライン補完で使ったり、GitHubのWebUI上でタスクを依頼したりするときに使っている。特にこのブログの機能開発ではよく使っている。（issueさえ書けばそのままWebUIからタスクを依頼できて便利）
 
 ## ターミナルエミュレータ
-Alacrittyを使っている。ターミナルにはタブ機能がない方がcmd+wで誤爆したりとかが起きないので好きで使っている。正直早いかどうかはあまりわかってないが特に不満もない。（少し前に日本語入力もいい感じになったし）
+Alacrittyを使っている。ターミナルにはタブ機能がない方が`cmd+w`等を誤爆したりとかが起きないので好きで使っている。（iTerm2を使っていたときはたまに誤爆してシェルが消えて悲しくなっていた。）
+
+正直早いかどうかはあまりわかってないが特に不満もない。（少し前に日本語入力もいい感じになったし）
 
 https://github.com/alacritty/alacritty
 
@@ -93,13 +95,13 @@ Status Lineはこんな感じで画面下側にwindow名と現在時刻を表示
 
 ![](tmux.webp)
 
-詳しくは後述するが、[nvim-orgmode/orgmode](https://github.com/nvim-orgmode/orgmode)でClock In(時間計測)しているタスクがあるときはそのタスク名と経過時間をStatus Lineに表示するようにしている。
+詳しくは後述するが、[nvim-orgmode/orgmode](https://github.com/nvim-orgmode/orgmode)でClock In(時間計測)しているタスクがあるときはそのタスク名と経過時間をStatus Lineに表示するようにしている。1つのタスクに集中できて割と作業が捗っている。
 
 ![](tmux-org-task.webp)
 
 その他のtmuxの設定とか工夫を紹介する記事は別で書きたい。
 
-[Zellij](https://github.com/zellij-org/zellij)も試したことはあるが、自分の環境だとなぜか表示が崩れてしまうので使っていない。
+[Zellij](https://github.com/zellij-org/zellij)も試したことはあるが、自分の環境だとなぜか表示が崩れてしまったので使っていない。
 
 ## シェル
 zshを使っている。
@@ -220,8 +222,10 @@ azookeyも試したが辞書登録した単語の優先度が低いのが使い�
 よく使っているCLI/TUIツールはこのあたり。
 
 - fzf
+    - 言わずと知れたあいまい検索ツール。
     - ディレクトリ履歴移動やファイル検索などあらゆるスクリプトで使っている。
 - lazygit
+    - gitのTUIクライアント。
     - gitの操作はすべてlazygitでやっている。
         ![](lazygit.webp)
     - add commit push pullなどの日常の操作やブランチ操作などをかなり少ないキー入力で行えるのがとても便利。
@@ -229,10 +233,10 @@ azookeyも試したが辞書登録した単語の優先度が低いのが使い�
     - ここ2年くらいで細々とPRを送っており、去年末頃に9番目にcommitが多い人になれた。
         ![](lazygit-contibutors.webp)
 - k9s
-    - GKEのリソースを見たり操作したりするときに使っている。とても便利。
+    - GKEのリソースを見たり操作したりするときに使っている。とても便利。（画像はサンプル用にkindでローカル起動したクラスタのもの）
         ![](k9s.webp)
         ![](k9s-pulse.webp)
-    - ログはあまり使いこなせてないのでDatadogやCloud Loggingを見ていることが多い。
+    - ログはあまり使いこなせてないので普段の開発ではDatadogやCloud Loggingを見ていることが多い。
 
 **<PRここから>**
 
@@ -245,8 +249,8 @@ fzf-makeというmake targetをfuzzy finder形式で選択、実行できるTUI�
 現在は`Makefile`に定義されたmake target以外にも以下のようなコマンドに対応しています。
 
 - `package.json`の`scripts`に定義されたコマンド(pnpm, yarn, npmに対応)
-- `Justfile`に定義されたrecipe
-- `taskfile.yaml`に定義されたtask
+- `justfile`に定義されたrecipe
+- `Taskfile.yml`に定義されたtask
 
 次のようなコマンドでインストールできるのでぜひ使ってみてください。
 
@@ -288,10 +292,19 @@ vimmerなのでAの左側のキーを
 
 ## その他
 - fuwari
-    - スクリーンショットを付箋のように画面上に貼り付けておけるmacアプリ。ちょっとメモとしてみたいときにとても便利
+    - スクリーンショットを付箋のように画面上に貼り付けておけるmacアプリ。画面に表示されている何かをちょっとメモ的に見たいときにとても便利
     - https://github.com/kentya6/Fuwari
     - こんな感じで動く
         {{<video src="fuwari.mp4" >}}
+
+## まとめ
+ここ数年で主要な使用ツール（Neovim, tmux, zsh）が変わっていないので安定して自分好みのカスタマイズが進められている。
+
+AIツールの実装力がかなり上がったのもあり、Neovimやtmuxのカスタマイズも今まで以上にかなり捗るようになって嬉しい。
+
+好みの環境で作業ができると作業自体が楽しくなって仕事や趣味のモチベーションも上がるので2026年もやっていき。
+
+みなさんのこだわりもぜひ教えてください〜！
 
 [^1]: これ系の記事でNeovimの使用率が1位になってるの初めて見た。Neovimユーザーとしては嬉しい。
 [^2]: 画面内の文字を検索するのにcmd+fをよく使うのでghosttyは自分には合わなかった。
