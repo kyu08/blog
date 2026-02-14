@@ -44,7 +44,7 @@
       log(`Trying proxy ${i + 1}/${PROXY_SERVICES.length}:`, proxyUrl);
 
       try {
-        const response = await fetchWithTimeout(proxyUrl, 10000);
+        const response = await fetchWithTimeout(proxyUrl);
 
         if (!response.ok) {
           log(`Proxy ${i + 1} failed with status:`, response.status);
