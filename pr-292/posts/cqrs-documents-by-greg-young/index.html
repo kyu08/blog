@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+    <title>『CQRS Documents by Greg Young』を読んだ :: blog.kyu08.com</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CQRSに興味があったのでGreg Young氏のCQRS Documentsを読んでみた。 https://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdfhttps://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdf CQRSに興味を持ったきっかけ ドメイン層のメンテナ" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://blog.kyu08.com/pr-292/posts/cqrs-documents-by-greg-young/" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BDQ408J45J', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-292/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-292/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-292/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-292/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-292/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-292/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-292/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-292/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-292/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-292/css/post.min.f049fef13af1dfd5ea526cc59ea5a3fc7be11a05911ca7198c5bb9225250119c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-292/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-292/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-292/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-292/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+<link rel="stylesheet" href="https://blog.kyu08.com/pr-292/style.css">
+
+
+<link rel="shortcut icon" href="https://blog.kyu08.com/pr-292/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/pr-292/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="kyu08_" />
+
+
+
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="『CQRS Documents by Greg Young』を読んだ">
+<meta property="og:description" content="CQRSに興味があったのでGreg Young氏のCQRS Documentsを読んでみた。 https://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdfhttps://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdf CQRSに興味を持ったきっかけ ドメイン層のメンテナ" />
+<meta property="og:url" content="https://blog.kyu08.com/pr-292/posts/cqrs-documents-by-greg-young/" />
+<meta property="og:site_name" content="blog.kyu08.com" />
+
+
+  
+  
+    
+  
+
+
+  <meta property="og:image" content="https://blog.kyu08.com/pr-292/posts/cqrs-documents-by-greg-young/cover.png">
+  <meta name="twitter:image" content="https://blog.kyu08.com/pr-292/posts/cqrs-documents-by-greg-young/cover.png">
+  <meta name="twitter:image:alt" content="『CQRS Documents by Greg Young』を読んだ">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+  <meta property="article:published_time" content="2026-01-12 00:27:58 &#43;0900 &#43;0900" />
+
+
+
+
+
+
+
+
+
+<link rel="author" href="http://www.hatena.ne.jp/kyu08/" />
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ . }}');
+</script>
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    blog.kyu08.com
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/pr-292/tags/diary/">_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-292/about">about</a></li>
+        
+      
+        
+          <li><a href="/pr-292/index.xml">rss</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/pr-292/tags/diary/" >_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-292/about" >about</a></li>
+        
+      
+        
+          <li><a href="/pr-292/index.xml" >rss</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://blog.kyu08.com/pr-292/posts/cqrs-documents-by-greg-young/">『CQRS Documents by Greg Young』を読んだ</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2026/01/12</time>
+      
+    <span class="post-reading-time">9 min read (4063 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://blog.kyu08.com/pr-292/tags/cqrs/">CQRS</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-292/tags/%E8%A8%AD%E8%A8%88/">設計</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="/pr-292/posts/cqrs-documents-by-greg-young/cover.png"
+    class="post-cover"
+    alt="『CQRS Documents by Greg Young』を読んだ"
+    title="Cover Image" />
+
+
+  
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#cqrsに興味を持ったきっかけ">CQRSに興味を持ったきっかけ</a></li>
+    <li><a href="#a-stereotypical-architecture-典型的なアーキテクチャ">&ldquo;A Stereotypical Architecture&rdquo;: 典型的なアーキテクチャ</a>
+      <ul>
+        <li><a href="#ここまでの感想">ここまでの感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#cqrsとは">CQRSとは</a>
+      <ul>
+        <li><a href="#ここまでの感想-1">ここまでの感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#a-stereotypical-architectureにcqrsを導入する">&ldquo;A Stereotypical Architecture&quot;にCQRSを導入する</a>
+      <ul>
+        <li><a href="#query">Query</a></li>
+        <li><a href="#command">Command</a></li>
+        <li><a href="#ドメインイベントイベントソーシング">ドメインイベント、イベントソーシング</a></li>
+        <li><a href="#ここまでの感想-2">ここまでの感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#作業習慣の違い">作業習慣の違い</a>
+      <ul>
+        <li><a href="#ここまでの感想-3">ここまでの感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#感想">感想</a></li>
+  </ul>
+</nav>
+  
+
+  <div class="post-content"><div>
+        <p>CQRSに興味があったのでGreg Young氏の<a href="https://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdf" target="_blank" >CQRS Documents</a>を読んでみた。</p>
+<p><div class="blogcard" data-url="https://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdf" data-auto-fetch="true">
+  <a href="https://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdf" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdf</div><div class="blogcard-url">https://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdf</div>
+    </div>
+  </a>
+</div>
+</p>
+<h2 id="cqrsに興味を持ったきっかけ">CQRSに興味を持ったきっかけ<a href="#cqrsに興味を持ったきっかけ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>ドメイン層のメンテナビリティの重要性を感じる中で、ドメイン層は書き込み系の振る舞いだけを担い、読み取り系の責務は別のモジュールに移譲してしまった方がドメイン層をシンプルに保てて良いのではないかと考えるようになった。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>それってCQRSってやつじゃね？と思ったのでまずは原典に近いドキュメントを読んでみることにした。<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>ここからは<a href="https://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdf" target="_blank" >CQRS Documents</a>の内容をまとめていく。</p>
+<h2 id="a-stereotypical-architecture-典型的なアーキテクチャ">&ldquo;A Stereotypical Architecture&rdquo;: 典型的なアーキテクチャ<a href="#a-stereotypical-architecture-典型的なアーキテクチャ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>&ldquo;A Stereotypical Architecture&quot;として、典型的なアーキテクチャが紹介されている。CQRS Documentsではこのアーキテクチャに対して段階的にCQRSを導入していく形で説明が進んでいく。</p>
+<p><img src="a-stereotypical-architecture.webp" alt="a-stereotypical-architecture.webp">
+CQRS Documents by Greg Young P2より引用</p>
+<p>このアーキテクチャではシステムはCRUDのみの機能を持ち、クライアントとは<strong>常にDTOを介して通信する。</strong></p>
+<p>おそらくクライアントが<code>UpdateUserName</code>のようなエンドポイントに更新後のユーザーネームだけを渡すのではなく<code>/user</code>に更新後のDTOを丸ごと渡す、というようなことだと思われる。</p>
+<p>サーバー側では受け取ったDTOをドメインオブジェクトに詰め替えてバリデーションを行い、永続化する。</p>
+<p>このような設計ではアプリケーションサービスの責務はDTOとドメインオブジェクトの詰め替えに終始し、ドメイン層はバリデーションを主な責務として受け持つ。データの更新方法はクライアントに委ねられてしまうため、ドメイン知識の一部がクライアント側に漏れ出してしまう。</p>
+<p>このようなアーキテクチャでは簡潔性によってオンボーディングコストが低くなるメリットがある代わりに、次のような課題が存在する。</p>
+<ol>
+<li><strong>スケーリング:</strong> 一般的なシステムでは読み取り操作は書き込み操作よりも2桁以上多い。読み取り操作から見ると非正規化されたデータ構造が適しているが、書き込み操作から見ると正規化されたデータ構造が適している。これらを単一のDBで扱おうとすると垂直スケーリングが必要になるが、垂直スケーリングには非常に高額なコストがかかる。</li>
+<li><strong>DDD適用の困難さ:</strong> この設計ではAPIがデータ指向のインターフェースを持つため、システム全体がCRUDの4つの動詞に縛られる。（データの更新方法がクライアントまたはユーザー側に漏れ出ておりドメイン知識をソフトウェアで表現することが難しいため）</li>
+</ol>
+<h3 id="ここまでの感想">ここまでの感想<a href="#ここまでの感想" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>さすがにこういったアーキテクチャのシステムは見たことがないので極端な例では&hellip;?とは思いつつ時代や場所によってはこういった設計のシステムも存在するのかもしれない。</p>
+<h2 id="cqrsとは">CQRSとは<a href="#cqrsとは" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>CQRSはBertrand Meyerが提唱した<a href="https://en.wikipedia.org/wiki/Command%E2%80%93query_separation" target="_blank" >『Command and Query Separation Principle』</a>にその起源を持つ。Wikipediaではこの原則を次のように説明している。</p>
+<blockquote>
+<p>It states that every method should either be a command that performs an action, or a query that returns data to the caller, but not both.</p>
+<p><a href="https://en.wikipedia.org/wiki/Command%E2%80%93query_separation" target="_blank" >Command–query separation - Wikipedia</a> より引用</p>
+</blockquote>
+<p>とあり、すべてのメソッドはCommandかQueryのいずれかであるべきであり、両方を兼ねるべきではないと説明されている。</p>
+<p>これに対し、Martin Fowlerは以下のようにPopのような操作はCommandでありQueryでもあり、必ずしも上記の原則を厳密に守らなくてもいいのではないか、ということを述べている。</p>
+<blockquote>
+<p>Meyer likes to use command-query separation absolutely, but there are exceptions. Popping a stack is a good example of a modifier that modifies state. Meyer correctly says that you can avoid having this method, but it is a useful idiom. So I prefer to follow this principle when I can, but I&rsquo;m prepared to break it to get my pop. (Fowler)</p>
+<p>CQRS Documents by Greg Young P17より引用</p>
+</blockquote>
+<h3 id="ここまでの感想-1">ここまでの感想<a href="#ここまでの感想-1" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>実際にWebサービスを開発していてもたとえばユーザー作成メソッドが作成したユーザーのIDを返すような処理は普通に書くし、自分もどちらかというと定義ほどは厳密に運用しなくても十分恩恵を受けられるのではないかという立場。</p>
+<h2 id="a-stereotypical-architectureにcqrsを導入する">&ldquo;A Stereotypical Architecture&quot;にCQRSを導入する<a href="#a-stereotypical-architectureにcqrsを導入する" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>&ldquo;A Stereotypical Architecture&quot;として最初に紹介されたアーキテクチャでは、ドメインモデルがCommandとQueryの両方に使用されていた。このアプリケーションにCQRSを適用するとQuery側とCommand側はそれぞれ次のようになる。</p>
+<h3 id="query">Query<a href="#query" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>Query処理側にはデータ取得のためのメソッドのみが含まれる。</p>
+<p>元のアーキテクチャではドメインモデルを生成し、それをDTOにマッピングしたうえでクライアントに返却していた。多くの場合でドメインモデルとDTOは異なるモデルであるため、以下のような課題があるがこれがCQRSの適用によって解決される。</p>
+<ol>
+<li>複数集約から1つのDTOを生成する場合、複数回DBにアクセスする必要がありパフォーマンスが低下する。また、集約の境界が曖昧になる。</li>
+<li>ドメイン層にQueryの責務が多く含まれている（e.g. repositoryのinterfaceにQuery系のメソッドが多く含まれ、ページングやソート情報が含まれている）</li>
+</ol>
+<blockquote>
+<p>After CQRS has been applied there is a natural boundary. Separate paths have been made explicit. It makes a lot of sense now to not use the domain to project DTOs. Instead it is possible to introduce a new way of projecting DTOs.</p>
+<p>CQRS Documents by Greg Young P20より引用</p>
+</blockquote>
+<p>とあるように、CQRSを適用することでCommandとQueryの処理経路が明確に分離される。この段階ではドメインモデルをDTOの生成に使用しない方が合理的である。</p>
+<p>その代わりに&quot;Thin Read Layer&quot;という方法でDTOを生成することができる。</p>
+<p><img src="thin-read-layer.webp" alt="thin-read-layer.webp">
+CQRS Documents by Greg Young P21より引用</p>
+<p>この層はDBから直接データを読み取り（ドメインモデルを迂回し）DTOを生成する。</p>
+<p>こうすることで、<strong>ドメイン層からQueryの責務を切り離すことができ、ドメイン層の純度を上げることができる。</strong></p>
+<h3 id="command">Command<a href="#command" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>CQRSを適用するとCommand側のアーキテクチャは以下のようになる。</p>
+<p><img src="the-command-site.webp" alt="the-command-site.webp">
+CQRS Documents by Greg Young P22より引用</p>
+<p>元のアーキテクチャでは書き込み系の処理をする際もDTOをクライアントから受け取っていたが、CQRS適用後はデータ中心ではなく振る舞い中心の契約を採用している点と読み取り処理が分離されている点が大きな違い。（元のアーキテクチャでは書き込み時にクライアントからDTOを渡していたが、ここではメッセージが渡されるようになっている）</p>
+<p>また、元のアーキテクチャでドメイン層に存在していた次のような課題が解決されている。</p>
+<ol>
+<li>リポジトリに大量の読み取りメソッドが存在する</li>
+<li>DTO構築のためにドメインオブジェクトの内部状態を公開するゲッターメソッドが存在する</li>
+<li>DTO構築のために複数の集約オブジェクトをそれぞれ読み込むことで、非効率なクエリが実行される</li>
+</ol>
+<h3 id="ドメインイベントイベントソーシング">ドメインイベント、イベントソーシング<a href="#ドメインイベントイベントソーシング" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>本文にはドメインイベント、イベントソーシングについても記載があり読んだがここでは割愛。</p>
+<h3 id="ここまでの感想-2">ここまでの感想<a href="#ここまでの感想-2" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>ドメイン層からQuery系の責務を切り離すことでメンテナビリティが向上する、というのが自分が（直近）CQRSに興味を持っていた一番の理由だったのでそうだよなーと思いながら読んだ。</p>
+<p>また（書いてあるとおりだが）読み取り単位を必ずしもドメインモデル単位にする必要がないためパフォーマンスの最適化が行いやすい点も大きなメリットだといえそう。</p>
+<p>結局CommandとQueryはまったく別の責務なことが多いので両者を分離することでメリットを得られるケースは多そう。</p>
+<h2 id="作業習慣の違い">作業習慣の違い<a href="#作業習慣の違い" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>CQRS Documentsを読むまでは意識していなかったが、CQRSを採用することで</p>
+<ol>
+<li>ドメイン層</li>
+<li>リードモデル</li>
+<li>クライアント</li>
+</ol>
+<p>の3つの要素に分解して作業を進めることができるため、プロジェクトに関わる開発者数をより効果的に増やすことができる。（サーバーとクライアントの作業分担をできるのはCQRSかどうかにかかわらないが、重要なのは1つのサーバーアプリケーションを2並列で安全に進めやすいという点だろう。）</p>
+<p>また、開発者には次のような観点の差異が存在する。</p>
+<ol>
+<li>技術的熟練度</li>
+<li>ビジネスドメインに関する知識</li>
+<li>コスト</li>
+<li>ソフトスキル</li>
+</ol>
+<p>ドメイン層の実装には4つすべての項目が秀でた人材が最適である一方、リードモデルの実装にはそれらの開発者要件は必ずしも当てはまるとは限らない。</p>
+<h3 id="ここまでの感想-3">ここまでの感想<a href="#ここまでの感想-3" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>開発効率の観点は持ってなかったが、たしかにCQRSを採用することで（1つのアプリケーションが2つのモジュールに分離されるので）コンフリクトせずに開発を進めやすそう。（モジュール設計はプロジェクトによるので厳密には2つのモジュールとは限らないが）</p>
+<h2 id="感想">感想<a href="#感想" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>事前のイメージ通り、CQRSを適用することで開発効率を高められそうなイメージが持てた。</p>
+<p>CQRS Documents内でも触れられていたが、結局CQRSにしろイベントソーシングにしろ一定のオーバーヘッドはあるので、システムやビジネスの課題や要件、今後の見通しを元に必要性を検討するのが（いつだって）重要そう。</p>
+<p>というのはありつつ、ドメイン層のメンテナビリティを高めるためにCQRSを採用するのはかなり有効な選択肢の1つだとも感じているので、ひとまず個人のプロジェクトで検証してみたいと思う。</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>もちろんアプリケーションの状況にもよるが&hellip;。repositoryのRead系メソッドの返り値がドメインモデルと一致<strong>しない</strong>ケースが多くなるような場合では特にCQRSのメリットが効果を発揮しやすいような気がしている。状況にかかわらずCQRSをやったほうがいいのかどうかはまだあまりわかっていない。ちなみにここでのCQRSは基本的には<strong>同一DB</strong>でCのアプリケーションコードとQのアプリケーションコードが分離されている、くらいの方法をざっくり想定して書いている。（CとQでDBを分けるパターンは流石にtoo muchなケースが多そうなので）&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>厳密にこのドキュメントが原典であることを確認したわけではない。正確な情報をお持ちの方がいたら教えて下さい。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+      </div></div>
+
+  
+  
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="https://blog.kyu08.com/pr-292/posts/kaizodo-wo-ageru/" class="button inline prev">
+        『解像度を上げる』を読んだ
+      </a>
+    
+    
+      <a href="https://blog.kyu08.com/pr-292/posts/looking-back-on-2025/" class="button inline next">
+        2025年を振り返る
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+        repo="kyu08/blog-comments"
+        issue-term="pathname"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  
+
+  
+    <div class="table-of-contents-sidebar">
+      <h2>
+        目次
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#cqrsに興味を持ったきっかけ">CQRSに興味を持ったきっかけ</a></li>
+    <li><a href="#a-stereotypical-architecture-典型的なアーキテクチャ">&ldquo;A Stereotypical Architecture&rdquo;: 典型的なアーキテクチャ</a>
+      <ul>
+        <li><a href="#ここまでの感想">ここまでの感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#cqrsとは">CQRSとは</a>
+      <ul>
+        <li><a href="#ここまでの感想-1">ここまでの感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#a-stereotypical-architectureにcqrsを導入する">&ldquo;A Stereotypical Architecture&quot;にCQRSを導入する</a>
+      <ul>
+        <li><a href="#query">Query</a></li>
+        <li><a href="#command">Command</a></li>
+        <li><a href="#ドメインイベントイベントソーシング">ドメインイベント、イベントソーシング</a></li>
+        <li><a href="#ここまでの感想-2">ここまでの感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#作業習慣の違い">作業習慣の違い</a>
+      <ul>
+        <li><a href="#ここまでの感想-3">ここまでの感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#感想">感想</a></li>
+  </ul>
+</nav>
+    </div>
+    <script src="https://blog.kyu08.com/pr-292/toc.js"></script>
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>blog.kyu08.com</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/pr-292/bundle.min.js"></script>
+
+
+<font color="#808080">
+  <span>
+    This site uses Google Analytics for access analysis.
+    Google Analytics uses cookies to collect traffic data, but this traffic data is collected anonymously and does not personally identify you.
+    Cookies can be disabled in your browser.
+  </span>
+</font>
+
+
+<script src="https://blog.kyu08.com/pr-292/blogcard.js"></script>
+
+
+  
+</div>
+
+</body>
+</html>
