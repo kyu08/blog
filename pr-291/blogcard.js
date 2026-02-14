@@ -278,9 +278,22 @@
       // ローディング状態を追加
       card.classList.add('loading');
 
-      // OGP情報を取得して更新
+      // OGP情報を取得して更新（失敗時は1回リトライ）
       const startTime = Date.now();
-      const ogpData = await fetchOGPData(url);
+      let ogpData = await fetchOGPData(url);
+      
+      // 失敗した場合は3秒待ってリトライ
+      if (!ogpData) {
+        log('First attempt failed, retrying after 3 seconds...');
+        await new Promise(resolve => setTimeout(resolve, 3000));
+        ogpData = await fetchOGPData(url);
+        if (ogpData) {
+          log('Retry succeeded');
+        } else {
+          log('Retry failed');
+        }
+      }
+      
       const elapsedTime = Date.now() - startTime;
       log(`Fetch completed in ${elapsedTime}ms`);
 
