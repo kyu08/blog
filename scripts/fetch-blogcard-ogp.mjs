@@ -220,7 +220,7 @@ async function fetchAllOGP(urls, existingCache) {
   }
   
   // 並列度制限付きで処理
-  let completed = 0;
+  let processedCount = 0;
   const total = urlsToFetch.length;
   
   for (let i = 0; i < urlsToFetch.length; i += CONCURRENT_LIMIT) {
@@ -231,8 +231,8 @@ async function fetchAllOGP(urls, existingCache) {
     const results = await Promise.all(
       chunk.map(async (url) => {
         const ogpData = await fetchOGPWithRetry(url);
-        completed++;
-        console.log(`  Progress: ${completed}/${total}`);
+        processedCount++;
+        console.log(`  Progress: ${processedCount}/${total}`);
         return { url, ogpData };
       })
     );
