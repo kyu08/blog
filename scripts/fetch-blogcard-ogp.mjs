@@ -7,7 +7,7 @@
  * 1. content/posts/配下の全Markdownファイルを読み取り
  * 2. ブログカード対象のURLを抽出（リンクテキストとURLが同じもの）
  * 3. OGP情報を並列度制限付きで取得
- * 4. data/blogcard-cache.json に保存
+ * 4. data/blogcard_cache.json に保存
  */
 
 import fs from 'fs/promises';
@@ -20,7 +20,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const CONTENT_DIR = path.join(__dirname, '../content/posts');
-const CACHE_FILE = path.join(__dirname, '../data/blogcard-cache.json');
+const CACHE_FILE = path.join(__dirname, '../data/blogcard_cache.json');
 const CONCURRENT_LIMIT = 5; // 並列度制限
 const TIMEOUT_MS = 10000; // タイムアウト
 const RETRY_DELAY_MS = 3000; // リトライ待機時間
