@@ -142,7 +142,9 @@ AlfredとRaycastを併用している。
 
 基本的に不満がないかつ操作性がRaycastよりも好みなので基本的にはAlfredを使っている。
 
-使い道は至って普通でスニペットやweb検索、ローカルのファイル検索などに使っている。あとはWorkflowを利用してよく使うアプリを以下のようなキーバインドで呼び出せるように設定している。
+使い道は至って普通でスニペットやweb検索、ローカルのファイル検索などに使っている。
+
+あとはWorkflowを利用してよく使うアプリを以下のようなキーバインドで呼び出せるように設定している。
 
 - Alacritty: `opt + space`
 - Brave: `cmd + esc`
@@ -161,8 +163,7 @@ https://github.com/asmvik/yabai
 
 https://github.com/asmvik/skhd
 
-<!-- TODO: 書き方が適当すぎる割にちゃんと書くのが面倒なので消してもいいかも -->
-よく使うのはこの辺のやつ。
+めっちゃ雑に書くとよく使うのはこの辺のやつ。
 
 - windowを右半分に表示
 - windowを左半分に表示
@@ -172,10 +173,10 @@ https://github.com/asmvik/skhd
 - windowを左1/4に表示
 
 ## フォント
-M+1Code Nerd Font Monoを使っている。まるっとしていて好き。nerd fontも入っているのでNeovimを使っていても豆腐があまり出なくて嬉しい。
+M+1Code Nerd Font Monoを使っている。まるっとしていて好き。nerd fontも入っているのでNeovimを使っていても豆腐が出ず嬉しい。（あまり原理はわかってないがCicaなどの他のnerd font対応フォントよりも豆腐が出なくてありがたい）
 
 ## タスク管理
-ここ1年くらいはnvim-orgmode/orgmodeを使っている。emacsのorg-modeライクな機能をNeovimで使えるようにしたプラグイン。
+ここ1年くらいは[nvim-orgmode/orgmode](https://github.com/nvim-orgmode/orgmode)を使っている。emacsのorg-modeライクな機能をNeovimで使えるようにしたプラグイン。
 
 https://github.com/nvim-orgmode/orgmode
 
@@ -190,11 +191,11 @@ https://github.com/nvim-orgmode/orgmode
 
 Neovimでタスク管理できるのとタスクに優先度、期日を設定してそれをいい感じにソートして表示してくれるのがかなり肌にあっていて気に入っている。
 
+![](nvim-orgmode.webp)
+
 最近は時間の使い方を振り返る目的でClock In的な機能を使ってタスクごとの所要時間も管理してみている。
 
 これに関してはそのうち別の記事として詳しく書きたい。
-
-<!-- TODO: スクショを貼る？ -->
 
 ## ブラウザ
 数年前からBraveを使っている。広告をブロックしてくれつつChrome拡張も使えるので便利。一時期Arcも使っていたが肌に合わない挙動があったので使うのをやめてしまった。（具体的には覚えていない）
