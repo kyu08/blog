@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+    <title>開発の効率化のためにやっていることターミナル編 :: blog.kyu08.com</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="【この記事はUnipos Advent Calendar 2022の記事です】 この記事では筆者が開発の効率化のために行っている工夫や使っているツールなどについて紹介します" />
+<meta name="keywords" content=", " />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://blog.kyu08.com/pr-291/posts/my-dev-setup-terminal/" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BDQ408J45J', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-291/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-291/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-291/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-291/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-291/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-291/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-291/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-291/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-291/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-291/css/post.min.f049fef13af1dfd5ea526cc59ea5a3fc7be11a05911ca7198c5bb9225250119c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-291/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-291/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-291/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-291/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+<link rel="stylesheet" href="https://blog.kyu08.com/pr-291/style.css">
+
+
+<link rel="shortcut icon" href="https://blog.kyu08.com/pr-291/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/pr-291/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="kyu08_" />
+
+
+
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="開発の効率化のためにやっていることターミナル編">
+<meta property="og:description" content="【この記事はUnipos Advent Calendar 2022の記事です】 この記事では筆者が開発の効率化のために行っている工夫や使っているツールなどについて紹介します" />
+<meta property="og:url" content="https://blog.kyu08.com/pr-291/posts/my-dev-setup-terminal/" />
+<meta property="og:site_name" content="blog.kyu08.com" />
+
+
+  
+  
+    
+  
+
+
+  <meta property="og:image" content="https://blog.kyu08.com/pr-291/posts/my-dev-setup-terminal/cover.png">
+  <meta name="twitter:image" content="https://blog.kyu08.com/pr-291/posts/my-dev-setup-terminal/cover.png">
+  <meta name="twitter:image:alt" content="開発の効率化のためにやっていることターミナル編">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+  <meta property="article:published_time" content="2022-12-14 16:15:48 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+<link rel="author" href="http://www.hatena.ne.jp/kyu08/" />
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ . }}');
+</script>
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    blog.kyu08.com
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/pr-291/tags/diary/">_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-291/about">about</a></li>
+        
+      
+        
+          <li><a href="/pr-291/index.xml">rss</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/pr-291/tags/diary/" >_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-291/about" >about</a></li>
+        
+      
+        
+          <li><a href="/pr-291/index.xml" >rss</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://blog.kyu08.com/pr-291/posts/my-dev-setup-terminal/">開発の効率化のためにやっていることターミナル編</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2022/12/14</time>
+      
+    <span class="post-reading-time">7 min read (3075 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://blog.kyu08.com/pr-291/tags/%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83/">開発環境</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-291/tags/%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB/">ターミナル</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-291/tags/zsh/">zsh</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-291/tags/cli/">cli</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="/pr-291/posts/my-dev-setup-terminal/cover.png"
+    class="post-cover"
+    alt="開発の効率化のためにやっていることターミナル編"
+    title="Cover Image" />
+
+
+  
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#シェル">シェル</a>
+      <ul>
+        <li><a href="#よく使うalias">よく使うalias</a></li>
+        <li><a href="#ディレクトリ移動">ディレクトリ移動</a></li>
+        <li><a href="#コマンド履歴検索">コマンド履歴検索</a></li>
+      </ul>
+    </li>
+    <li><a href="#git操作">Git操作</a></li>
+    <li><a href="#ターミナルエミュレータ">ターミナルエミュレータ</a></li>
+    <li><a href="#ターミナルのタブ管理">ターミナルのタブ管理</a>
+      <ul>
+        <li><a href="#ステータスラインの表示">ステータスラインの表示</a></li>
+        <li><a href="#ウィンドウの切り替え">ウィンドウの切り替え</a></li>
+      </ul>
+    </li>
+    <li><a href="#おわりに">おわりに</a></li>
+  </ul>
+</nav>
+  
+
+  <div class="post-content"><div>
+        <p>【この記事は<a href="https://qiita.com/advent-calendar/2022/unipos" target="_blank" >Unipos Advent Calendar 2022</a>の記事です】</p>
+<p>この記事では筆者が開発の効率化のために行っている工夫や使っているツールなどについて紹介します。
+「他にもこんなツールあるよ！」「こんな設定おすすめだよ！」などなどありましたらtwitterとかで教えてもらえると助かります。</p>
+<p>今回はターミナル編です！</p>
+<h2 id="シェル">シェル<a href="#シェル" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>シェルはzshを使っています。 一時期fishも使っていましたが、環境移行のコストが低かったりPOSIX準拠だったりするメリットに旨味を感じてzshに乗り換えました。</p>
+<h3 id="よく使うalias">よく使うalias<a href="#よく使うalias" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>zshでは<code>alias hoge='echo hoge'</code>のように記述することでaliasを定義できます。</p>
+<p>ここでは筆者がよく使うaliasをいくつか紹介します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>alias m<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;MEMODIR=~/code/memo; cd $MEMODIR; FILE=$MEMODIR/$(date +%Y%m%d).md; if [ ! -e $FILE ]; then echo &#34;# todo \n\n# done\n&#34; &gt;&gt; $FILE; fi; nvim $FILE&#39;</span>
+</span></span></code></pre></div><p>日毎に<code>yyyymmdd.md</code>形式の名前のファイルを作成してvimで開く。
+ファイルが存在していなければ</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span># todo
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># done
+</span></span></code></pre></div><p>をファイルに書き込んだうえでvimで開く、という内容のワンライナーです。</p>
+<p>実際に呼び出すとこんな感じです。</p>
+<p><img src="memo.gif" alt="memo"></p>
+<p>ちなみに筆者は</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span># todo
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> タスクA
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 子タスクa
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 子タスクb
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> タスクB
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># done
+</span></span></code></pre></div><p>のような感じでタスクを書いていき、完了したら以下のように<code>done</code>に移すという素朴な方法でタスク管理をしています。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span># todo
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> タスクB
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># done
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> タスクA
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 子タスクa
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 子タスクb
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>alias ghw<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gh repo view -w&#39;</span>
+</span></span></code></pre></div><p><code>gh</code>コマンドを利用して現在いるリポジトリをブラウザでGitHubで開くコマンド</p>
+<p><img src="ghw.gif" alt="ghw"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>alias pbc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;pbcopy &amp;&amp; pbpaste&#39;</span>
+</span></span></code></pre></div><p><code>make test | pbc</code>のように出力をパイプで<code>pbc</code>に渡すとクリップボードにコピーしつつ標準出力に出力してくれる。</p>
+<p>コマンドの出力をコピーしたいけど出力内容もその場で確認したいときに便利。</p>
+<p>こちらの記事で紹介されていた。</p>
+<p><div class="blogcard" data-url="https://takuya-1st.hatenablog.jp/entry/2017/05/30/093000" data-auto-fetch="true">
+  <a href="https://takuya-1st.hatenablog.jp/entry/2017/05/30/093000" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://takuya-1st.hatenablog.jp/entry/2017/05/30/093000</div><div class="blogcard-url">https://takuya-1st.hatenablog.jp/entry/2017/05/30/093000</div>
+    </div>
+  </a>
+</div>
+</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>alias finder<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;open -a Finder ./&#39;</span>
+</span></span></code></pre></div><p>現在いるディレクトをfinderで開くコマンド</p>
+<p>ごく稀に使う。</p>
+<h3 id="ディレクトリ移動">ディレクトリ移動<a href="#ディレクトリ移動" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>zshにはcdrという、移動したことがあるディレクトリを自動的に保持してくれる機能があります。</p>
+<p>これをいい感じにファジーファインダーから呼び出すスクリプトを公開して下さっている方がいたのでありがたく使わせてもらっています。</p>
+<p><div class="blogcard" data-url="https://www.rasukarusan.com/entry/2018/08/14/083000" data-auto-fetch="true">
+  <a href="https://www.rasukarusan.com/entry/2018/08/14/083000" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://www.rasukarusan.com/entry/2018/08/14/083000</div><div class="blogcard-url">https://www.rasukarusan.com/entry/2018/08/14/083000</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>fzfをインストールした上で以下のスクリプトを<code>.zshrc</code>に記述すると<code>c</code>で呼び出すことができます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span><span style="color:#75715e"># fzf-cdr </span>
+</span></span><span style="display:flex;"><span>alias c<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;fzf-cdr&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> fzf-cdr<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    target_dir<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>cdr -l | sed <span style="color:#e6db74">&#39;s/^[^ ][^ ]*  *//&#39;</span> | fzf<span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>    target_dir<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>echo <span style="color:#e6db74">${</span>target_dir/<span style="color:#ae81ff">\~</span>/$HOME<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -n <span style="color:#e6db74">&#34;</span>$target_dir<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>        cd $target_dir
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># cdrの設定</span>
+</span></span><span style="display:flex;"><span>autoload -Uz is-at-least
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> is-at-least 4.3.11
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>  autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+</span></span><span style="display:flex;"><span>  add-zsh-hook chpwd chpwd_recent_dirs
+</span></span><span style="display:flex;"><span>  zstyle <span style="color:#e6db74">&#39;:chpwd:*&#39;</span>      recent-dirs-max <span style="color:#ae81ff">500</span>
+</span></span><span style="display:flex;"><span>  zstyle <span style="color:#e6db74">&#39;:chpwd:*&#39;</span>      recent-dirs-default yes
+</span></span><span style="display:flex;"><span>  zstyle <span style="color:#e6db74">&#39;:completion:*&#39;</span> recent-dirs-insert both
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># fzfの設定</span>
+</span></span><span style="display:flex;"><span>export FZF_DEFAULT_OPTS<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;--color=fg+:11 --height 70% --reverse --exit-0 --multi&#39;</span>
+</span></span></code></pre></div><p>これを実際に使うとこんな感じになります。ファジーファインダーを利用して効率的にディレクトリ移動できます。</p>
+<p><img src="fzf-cdr.gif" alt="cdr"></p>
+<p>やっていることは以下です。</p>
+<ol>
+<li><code>.zshrc</code>に定義したfzf-cdrを実行</li>
+<li>移動したいディレクトリのパスの一部を入力</li>
+<li>候補から移動したいディレクトリを選択する</li>
+</ol>
+<h3 id="コマンド履歴検索">コマンド履歴検索<a href="#コマンド履歴検索" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>実行したコマンドの履歴についてもfzfを使って絞り込みを行うようにしています。</p>
+<p>これもスクリプトを公開して下さっている方がいたのでありがたく使わせてもらっています。</p>
+<p><div class="blogcard" data-url="https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/" data-auto-fetch="true">
+  <a href="https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/</div><div class="blogcard-url">https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>以下のスクリプトを<code>.zshrc</code>に記述すると、<code>ctrl + r</code>でコマンド履歴を呼び出すことができます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#66d9ef">select</span>-history<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  BUFFER<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>history -n -r <span style="color:#ae81ff">1</span> | fzf --no-sort +m --query <span style="color:#e6db74">&#34;</span>$LBUFFER<span style="color:#e6db74">&#34;</span> --prompt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;History &gt; &#34;</span><span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>  CURSOR<span style="color:#f92672">=</span>$#BUFFER
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>zle -N <span style="color:#66d9ef">select</span>-history
+</span></span><span style="display:flex;"><span>bindkey <span style="color:#e6db74">&#39;^r&#39;</span> <span style="color:#66d9ef">select</span>-history
+</span></span></code></pre></div><p><img src="command-history.gif" alt="command-history"></p>
+<h2 id="git操作">Git操作<a href="#git操作" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Git操作のほとんどはGitのTUIクライアントであるLazygitを使っています。</p>
+<p><div class="blogcard" data-url="https://github.com/jesseduffield/lazygit" data-auto-fetch="true">
+  <a href="https://github.com/jesseduffield/lazygit" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/jesseduffield/lazygit</div><div class="blogcard-url">https://github.com/jesseduffield/lazygit</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>Lazygitはターミナル上で動作するリッチなGitクライアントでGitに関する大抵のことを行うことができます。(機能が豊富すぎて何ができて何ができないのかを正確に把握できていない)</p>
+<p>以下はLazygitを使って変更をaddしてcommitしてpushする例です。</p>
+<p><img src="lazygit-push.gif" alt="lazygit-push"></p>
+<p>見やすいですし、<strong>少ないタイプ数で操作できる</strong>点でおすすめです。他にも基本的なブランチ操作はもちろんのこと、<code>git rebase -i</code>相当のこともスピーディーにできるのでよく使っています。</p>
+<p>ちなみに筆者はkdheepak/lazygit.nvimというプラグインを使ってNeovim上からLazygitを呼び出しています。</p>
+<p><div class="blogcard" data-url="https://github.com/kdheepak/lazygit.nvim" data-auto-fetch="true">
+  <a href="https://github.com/kdheepak/lazygit.nvim" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/kdheepak/lazygit.nvim</div><div class="blogcard-url">https://github.com/kdheepak/lazygit.nvim</div>
+    </div>
+  </a>
+</div>
+</p>
+<h2 id="ターミナルエミュレータ">ターミナルエミュレータ<a href="#ターミナルエミュレータ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>筆者はターミナルエミュレータ(以下ターミナル)としてAlacrittyを使っています。</p>
+<p><div class="blogcard" data-url="https://github.com/alacritty/alacritty" data-auto-fetch="true">
+  <a href="https://github.com/alacritty/alacritty" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/alacritty/alacritty</div><div class="blogcard-url">https://github.com/alacritty/alacritty</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>筆者は普段開発にNeovimを利用しているのですが、以前からプロジェクトの全文検索に時間がかかってしまう点が気になっていました。
+動作が高速なターミナルを探していたところRust製のターミナルであるAlacrittyにたどり着きました。</p>
+<p>iTerm2からの乗り換えでしたが満足できるだけの速度になりました。<strong>ターミナルの速度を早くしたい人にはオススメ</strong>です。あとは<strong>設定をyamlで記述できる</strong>のも好みなポイントです。</p>
+<p>カラースキームはTokyo Nightを利用しています。</p>
+<p><div class="blogcard" data-url="https://github.com/zatchheems/tokyo-night-alacritty-theme" data-auto-fetch="true">
+  <a href="https://github.com/zatchheems/tokyo-night-alacritty-theme" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/zatchheems/tokyo-night-alacritty-theme</div><div class="blogcard-url">https://github.com/zatchheems/tokyo-night-alacritty-theme</div>
+    </div>
+  </a>
+</div>
+</p>
+<p><img src="tokyonight.webp" alt="tokyonight"></p>
+<p>Alacrittyにはタブ機能がなくタブ的な機能を実現するためにはtmuxなどのターミナルマルチプレクサを利用する必要があるため筆者はtmuxを利用しています。
+設定・プラグインなどは後述しますが、tmuxの操作感も好みなので割と満足しています。</p>
+<p>他にもRust製のターミナルとしてWarp, Weztermなどがありますが筆者の環境ではWarpはNeovimのcolorschemeの反映がうまくできず、Weztermは画面の再描画まわりの不具合が多少あったため、採用しませんでした。(Warp便利そうだしみやすいので使いたかった)</p>
+<h2 id="ターミナルのタブ管理">ターミナルのタブ管理<a href="#ターミナルのタブ管理" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>前述の通りAlacrittyにはタブ機能がないため、tmuxを使ってターミナルのタブ管理を行っています。</p>
+<p><div class="blogcard" data-url="https://github.com/tmux/tmux" data-auto-fetch="true">
+  <a href="https://github.com/tmux/tmux" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/tmux/tmux</div><div class="blogcard-url">https://github.com/tmux/tmux</div>
+    </div>
+  </a>
+</div>
+</p>
+<h3 id="ステータスラインの表示">ステータスラインの表示<a href="#ステータスラインの表示" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>ステータスラインは比較的シンプルにしていて、</p>
+<ul>
+<li>ウィンドウ一覧</li>
+<li>現在時刻</li>
+</ul>
+<p>を表示するようにしています。</p>
+<p><img src="tmux-status-line.webp" alt="tmux-status-line"></p>
+<p>普段の開発ではプロジェクトごとにウィンドウを開き、必要に応じて切り替える運用にしています。</p>
+<h3 id="ウィンドウの切り替え">ウィンドウの切り替え<a href="#ウィンドウの切り替え" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>筆者はふだんプロジェクトごとのウィンドウに加えてmemo用のウィンドウ・dotfiles用のウィンドウなども開いており、常時ウィンドウが15前後あります。筆者は簡単なタスク管理もmemo用ウィンドウに立ち上げたNeovim内で行っているため、ウィンドウの切り替えを頻繁に行います。</p>
+<p>以前まではウィンドウ切り替えを</p>
+<ol>
+<li><code>prefix + w</code> でウィンドウの一覧を表示</li>
+<li>目的のウィンドウの位置を確認</li>
+<li>目的のウィンドウまで <code>ctrl + n</code>, <code>ctrl + p</code> で移動</li>
+<li>選択する</li>
+</ol>
+<p>という手順で行っていましたがウィンドウが増えてくると地味にウィンドウ移動が大変になっていきました。以下は従来のウィンドウ切り替えの様子です。</p>
+<p><img src="tmux-window.gif" alt="tmux-window"></p>
+<p>どうにかもう少し楽にウィンドウ切り替えをできないかと探していたところsainnhe/tmux-fzfに出会いました。</p>
+<p><div class="blogcard" data-url="https://github.com/sainnhe/tmux-fzf" data-auto-fetch="true">
+  <a href="https://github.com/sainnhe/tmux-fzf" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/sainnhe/tmux-fzf</div><div class="blogcard-url">https://github.com/sainnhe/tmux-fzf</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>sainnhe/tmux-fzfはファジーファインダーで効率的にtmuxを操作するためのプラグインです。</p>
+<p>詳しくはリポジトリのREADMEに譲りますが、</p>
+<ul>
+<li>セッション管理</li>
+<li>ウィンドウ管理</li>
+<li>ペイン管理</li>
+<li>コマンドの検索</li>
+</ul>
+<p>などが可能です。</p>
+<p>筆者はウィンドウ管理機能の中のウィンドウの切り替え機能を使っています。
+sainnhe/tmux-fzfを使うようにしたことでウィンドウ切り替えを</p>
+<ol>
+<li><code>prefix</code> + <code>prefix</code>  でtmux-fzfのウィンドウ一覧を表示</li>
+<li>目的のウィンドウ名の一部を入力</li>
+<li>選択する</li>
+</ol>
+<p>という手順でできるようになりました。文字にすると違いが伝わりづらいですが、ファジーファインダーを使ってウィンドウの選択を行うことができるようになったことでキーのタイプ数や切り替えの際の脳の負荷を大幅に減らすことができました。</p>
+<p><img src="tmux-fzf.gif" alt="tmux-fzf"></p>
+<h2 id="おわりに">おわりに<a href="#おわりに" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>ここまで読んでくださってありがとうございました。</p>
+<p>需要がありそうだったら</p>
+<ul>
+<li>Neovim編</li>
+<li>alfred編</li>
+<li>chrome拡張機能編</li>
+</ul>
+<p>なども書こうと思います。</p>
+
+      </div></div>
+
+  
+  
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="https://blog.kyu08.com/pr-291/posts/learn-design-pattern/" class="button inline prev">
+        デザインパターンをひととおり眺めた感想
+      </a>
+    
+    
+      <a href="https://blog.kyu08.com/pr-291/posts/consultant/" class="button inline next">
+        『コンサル一年目が学ぶこと』を読んだ
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+        repo="kyu08/blog-comments"
+        issue-term="pathname"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  
+
+  
+    <div class="table-of-contents-sidebar">
+      <h2>
+        目次
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#シェル">シェル</a>
+      <ul>
+        <li><a href="#よく使うalias">よく使うalias</a></li>
+        <li><a href="#ディレクトリ移動">ディレクトリ移動</a></li>
+        <li><a href="#コマンド履歴検索">コマンド履歴検索</a></li>
+      </ul>
+    </li>
+    <li><a href="#git操作">Git操作</a></li>
+    <li><a href="#ターミナルエミュレータ">ターミナルエミュレータ</a></li>
+    <li><a href="#ターミナルのタブ管理">ターミナルのタブ管理</a>
+      <ul>
+        <li><a href="#ステータスラインの表示">ステータスラインの表示</a></li>
+        <li><a href="#ウィンドウの切り替え">ウィンドウの切り替え</a></li>
+      </ul>
+    </li>
+    <li><a href="#おわりに">おわりに</a></li>
+  </ul>
+</nav>
+    </div>
+    <script src="https://blog.kyu08.com/pr-291/toc.js"></script>
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>blog.kyu08.com</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/pr-291/bundle.min.js"></script>
+
+
+<font color="#808080">
+  <span>
+    This site uses Google Analytics for access analysis.
+    Google Analytics uses cookies to collect traffic data, but this traffic data is collected anonymously and does not personally identify you.
+    Cookies can be disabled in your browser.
+  </span>
+</font>
+
+
+<script src="https://blog.kyu08.com/pr-291/blogcard.js"></script>
+
+
+  
+</div>
+
+</body>
+</html>
