@@ -221,35 +221,41 @@ azooKeyも試したが辞書登録した単語の優先度が低いのが使い�
 ## CLI/TUIツール
 よく使っているCLI/TUIツールはこのあたり。
 
-- fzf
-    - https://github.com/junegunn/fzf
-    - 言わずと知れたあいまい検索ツール。
-    - ディレクトリ履歴移動やファイル検索などあらゆるスクリプトで使っている。
-- lazygit
-    - https://github.com/jesseduffield/lazygit
-    - gitのTUIクライアント。
-    - gitの操作はすべてlazygitでやっている。
-        ![](lazygit.webp)
-    - add commit push pullなどの日常の操作やブランチ操作などをかなり少ないキー入力で行えるのがとても便利。
-    - `git rebase -i`相当のことができたり、commitの一部だけstagingに戻したりと細かいこともできる。
-    - ここ2年くらいで細々とPRを送っており、去年末頃に9番目にcommitが多い人になれた。
-        ![](lazygit-contibutors.webp)
-- k9s
-    - https://github.com/derailed/k9s
-    - GKEのリソースを見たり操作したりするときに使っている。とても便利。（画像はサンプル用にkindでローカル起動したクラスタのもの）
-        ![](k9s.webp)
-        ![](k9s-pulse.webp)
-    - ログはあまり使いこなせてないので普段の開発ではDatadogやCloud Loggingを見ていることが多い。
+### fzf
+https://github.com/junegunn/fzf
+- 言わずと知れたあいまい検索ツール。
+- ディレクトリ履歴移動やファイル検索などあらゆるスクリプトで使っている。
+
+### lazygit
+https://github.com/jesseduffield/lazygit
+![](lazygit.webp)
+
+- gitのTUIクライアント。
+- gitの操作はすべてlazygitでやっている。
+- add commit push pullなどの日常の操作やブランチ操作などをかなり少ないキー入力で行えるのがとても便利。
+- `git rebase -i`相当のことができたり、commitの一部だけstagingに戻したりと細かいこともできる。
+- ここ2年くらいで細々とPRを送っており、去年末頃に9番目にcommitが多い人になることができた。
+
+![](lazygit-contibutors.webp)
+
+### k9s
+https://github.com/derailed/k9s
+![](k9s.webp)
+![](k9s-pulse.webp)
+
+- GKEのリソースを見たり操作したりするときに使っている。とても便利。（画像はサンプル用にkindでローカル起動したクラスタのもの）
+- ログはあまり使いこなせてないので普段の開発ではDatadogやCloud Loggingを見ていることが多い。
 
 **<PRここから>**
+### fzf-make
 
-fzf-makeというmake targetをfuzzy finder形式で選択、実行できるTUIを開発しています。
+fzf-makeというmake targetをfuzzy finder形式で選択、実行できるTUIを開発している。
 
 ![](fzf-make.gif)
 
-コマンド名やその内容を覚えずとも楽に実行できたり、履歴機能があるのが特徴です。
+コマンド名やその内容を覚えずとも楽に実行できたり、履歴機能があるのが特徴。
 
-現在は`Makefile`に定義されたmake target以外にも以下のようなコマンドに対応しています。
+現在は`Makefile`に定義されたmake target以外にも以下のようなコマンドに対応している。
 
 - `package.json`の`scripts`に定義されたコマンド(pnpm, yarn, npmに対応)
 - `justfile`に定義されたrecipe

@@ -496,5 +496,17 @@
     "description": "Contribute to atusy/treemonkey.nvim development by creating an account on GitHub.",
     "image": "https://opengraph.githubassets.com/804219f33da8a500a826d1d11eba82298c6ccc5bb6beaa63485762164a54cbbf/atusy/treemonkey.nvim",
     "fetchedAt": "2026-02-14T14:34:26.240Z"
+  },
+  "https://github.com/junegunn/fzf": {
+    "title": "GitHub - junegunn/fzf: :cherry_blossom: A command-line fuzzy finder",
+    "description": ":cherry_blossom: A command-line fuzzy finder. Contribute to junegunn/fzf development by creating an account on GitHub.",
+    "image": "https://repository-images.githubusercontent.com/13807606/b261cfc9-ec9c-4842-a7dd-366e6674cb50",
+    "fetchedAt": "2026-02-14T15:13:45.924Z"
+  },
+  "https://github.com/derailed/k9s": {
+    "title": "GitHub - derailed/k9s: 🐶 Kubernetes CLI To Manage Your Clusters In Style!",
+    "description": "🐶 Kubernetes CLI To Manage Your Clusters In Style! - derailed/k9s",
+    "image": "https://repository-images.githubusercontent.com/167596393/6dd20780-5c0e-11ea-8e26-7754ad171192",
+    "fetchedAt": "2026-02-14T15:13:45.714Z"
   }
 }
