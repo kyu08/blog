@@ -165,7 +165,8 @@
       const img = document.createElement('img');
       img.setAttribute('src', ogpData.image);
       img.setAttribute('alt', ogpData.title || '');
-      img.setAttribute('loading', 'lazy');
+      // 動的に追加される画像はloading="eager"にしてモバイルでも確実に表示
+      img.setAttribute('loading', 'eager');
       thumbnail.appendChild(img);
       log('Image updated:', ogpData.image);
     } else {
