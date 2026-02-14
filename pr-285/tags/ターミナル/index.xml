@@ -78,7 +78,6 @@
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;aiツール&#34;&gt;AIツール&lt;/h2&gt;
-&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;ClaudeとDevin、GitHub Copilotを使っている。&lt;/p&gt;
 &lt;p&gt;ClaudeはDesktop App経由で壁打ちや検索用途で使ったり、Claude Codeでコードを書いてもらったりしている。&lt;/p&gt;
 &lt;p&gt;Claude Codeを使うときはNeovim plugin等ではなくtmuxのpaneを切ってそこで直接動かしている。&lt;/p&gt;
@@ -98,7 +97,6 @@
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;ターミナルマルチプレクサ&#34;&gt;ターミナルマルチプレクサ&lt;/h2&gt;
 &lt;p&gt;tmuxを使っている。1セッションに好きなだけウィンドウを開く運用で使っている。&lt;/p&gt;
 &lt;p&gt;tmux-fzfでのwindow切り替えが便利すぎる。&lt;/p&gt;
