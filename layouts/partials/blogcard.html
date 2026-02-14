@@ -5,7 +5,10 @@
 {{- $autoFetch := .autoFetch | default "true" -}}
 
 {{- /* キャッシュデータを確認 */ -}}
-{{- $cachedData := index site.Data.blogcard_cache $url -}}
+{{- $cachedData := nil -}}
+{{- if site.Data.blogcard_cache -}}
+  {{- $cachedData = index site.Data.blogcard_cache $url -}}
+{{- end -}}
 
 {{- /* キャッシュがある場合はそれを使用 */ -}}
 {{- if $cachedData -}}
