@@ -87,14 +87,11 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
 &lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
 &lt;p&gt;ターミナルから出ずに作業が完結できてうれしい。&lt;/p&gt;
 &lt;p&gt;同様のことはGoの場合はブラウザからThe Go Playground(※)を開いても行えるが筆者は何でもターミナルでできると嬉しい人なのでできるようにしてみた。&lt;/p&gt;
-&lt;p&gt;※ブラウザ上で実行できるGoのエディタ + 実行環境がセットになったやつ。&lt;div class=&#34;blogcard&#34; data-url=&#34;https://go.dev/play/&#34; data-auto-fetch=&#34;true&#34;&gt;
-  &lt;a href=&#34;https://go.dev/play/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
-      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
-        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
-        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+&lt;p&gt;※ブラウザ上で実行できるGoのエディタ + 実行環境がセットになったやつ。&lt;div class=&#34;blogcard&#34; data-url=&#34;https://go.dev/play/&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://go.dev/play/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://go.dev/doc/gopher/gopher5logo.jpg&#34; alt=&#34;Go Playground - The Go Programming Language&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;https://go.dev/play/&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://go.dev/play/&lt;/div&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;Go Playground - The Go Programming Language&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://go.dev/play/&lt;/div&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;

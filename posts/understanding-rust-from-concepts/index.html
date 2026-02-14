@@ -6,7 +6,7 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Rustのことをもっと理解りたくて『コンセプトから理解するRust』を読んだ。 https://gihyo.jp/book/2022/978-4-297-12562-2https://gihyo.jp/book/2022/978-4-297-12562-2 前提 筆者のRustの知識はTour of RustやThe Rust Programming La" />
+<meta name="description" content="Rustのことをもっと理解りたくて『コンセプトから理解するRust』を読んだ。 コンセプトから理解するRust | 技術評論社Rustはメモリ安全" />
 <meta name="keywords" content="" />
 
   <meta name="robots" content="noodp" />
@@ -92,7 +92,7 @@ if (!doNotTrack) {
 <meta property="og:locale" content="ja" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="『コンセプトから理解するRust』を読んだ">
-<meta property="og:description" content="Rustのことをもっと理解りたくて『コンセプトから理解するRust』を読んだ。 https://gihyo.jp/book/2022/978-4-297-12562-2https://gihyo.jp/book/2022/978-4-297-12562-2 前提 筆者のRustの知識はTour of RustやThe Rust Programming La" />
+<meta property="og:description" content="Rustのことをもっと理解りたくて『コンセプトから理解するRust』を読んだ。 コンセプトから理解するRust | 技術評論社Rustはメモリ安全" />
 <meta property="og:url" content="https://blog.kyu08.com/posts/understanding-rust-from-concepts/" />
 <meta property="og:site_name" content="blog.kyu08.com" />
 
@@ -214,7 +214,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2025/12/15</time>
       
-    <span class="post-reading-time">3 min read (1158 words)</span></div>
+    <span class="post-reading-time">4 min read (1989 words)</span></div>
 
   
     <span class="post-tags">
@@ -245,14 +245,11 @@ if (!doNotTrack) {
 
   <div class="post-content"><div>
         <p>Rustのことをもっと理解りたくて『コンセプトから理解するRust』を読んだ。</p>
-<p><div class="blogcard" data-url="https://gihyo.jp/book/2022/978-4-297-12562-2" data-auto-fetch="true">
-  <a href="https://gihyo.jp/book/2022/978-4-297-12562-2" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
+<p><div class="blogcard" data-url="https://gihyo.jp/book/2022/978-4-297-12562-2" data-auto-fetch="false">
+  <a href="https://gihyo.jp/book/2022/978-4-297-12562-2" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://gihyo.jp/assets/images/ogp/2022/9784297125622.jpg" alt="コンセプトから理解するRust | 技術評論社" loading="lazy">
     </div><div class="blogcard-content">
-      <div class="blogcard-title">https://gihyo.jp/book/2022/978-4-297-12562-2</div><div class="blogcard-url">https://gihyo.jp/book/2022/978-4-297-12562-2</div>
+      <div class="blogcard-title">コンセプトから理解するRust | 技術評論社</div><div class="blogcard-description">Rustはメモリ安全、スレッド安全を保ちつつ、高パフォーマンスなプログラムを開発できるプログラミング言語です。また、手続き型、オブジェクト指向型、関数型でのプログラミングに対応できるマルチパラダイムの言語でもあります。ただ、そういったRustのポテンシャルを引き出すには、所有権やライフタイム、ジェネリクスやトレイトといった特徴的な仕様の理解が求められ、これらは初学者の壁にもなっています。本書ではそれら難解な仕様をピックアップし、他のプログラミング言語とコードレベルで比較しながら、「なぜそのような仕様になっているか」という言語のコンセプトからRustの理解を試みます。加えて、Rustのこまやかなエラーメッセージを読みつつ、Rustをうまく書くための知識もお伝えします。</div><div class="blogcard-url">https://gihyo.jp/book/2022/978-4-297-12562-2</div>
     </div>
   </a>
 </div>
@@ -275,14 +272,11 @@ if (!doNotTrack) {
 <p>Rustの力がまた少しついた。</p>
 <p>Rustを学ぶとRust自体への理解が深まるだけでなく、少なからずコンピュータの仕組みに近い低レイヤな部分の理解も一緒に深まるので勉強になる感覚があって楽しめた。</p>
 <p>非同期処理周りはあまりちゃんと勉強したことがないので次はこの本を読んでみようと思う。（サンプルコードが主にRustで書かれているらしいのでこの本での学びも活かせそう）<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>
-<p><div class="blogcard" data-url="https://www.oreilly.co.jp/books/9784873119595/" data-auto-fetch="true">
-  <a href="https://www.oreilly.co.jp/books/9784873119595/" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
+<p><div class="blogcard" data-url="https://www.oreilly.co.jp/books/9784873119595/" data-auto-fetch="false">
+  <a href="https://www.oreilly.co.jp/books/9784873119595/" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://www.oreilly.co.jp/books/images/picture_large978-4-87311-959-5.jpeg" alt="並行プログラミング入門" loading="lazy">
     </div><div class="blogcard-content">
-      <div class="blogcard-title">https://www.oreilly.co.jp/books/9784873119595/</div><div class="blogcard-url">https://www.oreilly.co.jp/books/9784873119595/</div>
+      <div class="blogcard-title">並行プログラミング入門</div><div class="blogcard-description">複数のプログラムを同時に実行する「並行プログラミング」は、処理速度を飛躍的に向上させる手法で、タスク管理、プロセス管理、スレッド管理をはじめ、複雑な仕組みについての幅広い知識とテクニックが必要となります。本書はRustとアセンブリ、そして一部Cを用い、CPUのアトミック命令、グリーンスレッド、アクターモデル、π計算、ソフトウェア・トランザクショナルメモリ、async/awaitなど、並行プログラミングに関する理論的な背景から実装までをカバー。さらに、アセンブリ実装の理解を深めるため、AArch64とx86-64アーキテクチャの説明も付録として収録。一歩一歩、着実に理解できるように、その仕組みから順を追って詳しく説明します。GitHub上で公開されているソースコードを実際に動かしながら、並行プログラミングの知識と理解を深めることができます。</div><div class="blogcard-url">https://www.oreilly.co.jp/books/9784873119595/</div>
     </div>
   </a>
 </div>

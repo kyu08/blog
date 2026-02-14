@@ -18,27 +18,21 @@
       <content>&lt;p&gt;『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11/4でコミットした日数としてはおおよそ24日ほどだった。)&lt;/p&gt;
 &lt;p&gt;筆者は情報系の学部を出ておらず、CSなどの基礎知識があまりないので大変勉強になった。また、サンプルコードが豊富なので実際に自分のマシン上で動かしながら学ぶことができ解像度を上げながら理解を深めることができた。&lt;/p&gt;
 &lt;p&gt;低レイヤ、コンピューターサイエンスの学習に興味がある方にはとてもおすすめなのでぜひ買って読んでみてください。&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.lambdanote.com/products/go-2&#34; data-auto-fetch=&#34;true&#34;&gt;
-  &lt;a href=&#34;https://www.lambdanote.com/products/go-2&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
-      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
-        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
-        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.lambdanote.com/products/go-2&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://www.lambdanote.com/products/go-2&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;http://www.lambdanote.com/cdn/shop/products/web-asset-1_1024x1024.jpg?v=1647933491&#34; alt=&#34;Goならわかるシステムプログラミング 第2版&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;https://www.lambdanote.com/products/go-2&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.lambdanote.com/products/go-2&lt;/div&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;Goならわかるシステムプログラミング 第2版&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;Go言語による新時代のコンピュータシステム入門 渋川よしき 著 424ページ A5判 ISBN：978-4-908686-12-2 2022年3月23日 第2版第1刷 発行 いつも開発に使っている言語やライブラリの裏側は、いったいどうなっ&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.lambdanote.com/products/go-2&lt;/div&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;手元で実行したコードは以下のリポジトリにまとめた。&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/go-system-programming&#34; data-auto-fetch=&#34;true&#34;&gt;
-  &lt;a href=&#34;https://github.com/kyu08/go-system-programming&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
-      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
-        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
-        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/go-system-programming&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/go-system-programming&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/355ab1c4f0743bcf245b84b5a33ead3e075d2b755c79cbdc43e5e554867af726/kyu08/go-system-programming&#34; alt=&#34;GitHub - kyu08/go-system-programming: 『Goならわかるシステムプログラミング』の写経リポジトリ&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/go-system-programming&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/go-system-programming&lt;/div&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - kyu08/go-system-programming: 『Goならわかるシステムプログラミング』の写経リポジトリ&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;『Goならわかるシステムプログラミング』の写経リポジトリ. Contribute to kyu08/go-system-programming development by creating an account on GitHub.&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/go-system-programming&lt;/div&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;
@@ -947,17 +941,14 @@
       <pubDate>Wed, 22 Feb 2023 16:15:48 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/posts/fzf-bookmark-opener/</guid>
-      <description>つくったもの yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った。 https://github.com/kyu08/fzf-bookmark-openerhttps://github.com/kyu08/fzf-bookmark-opener こんな感じで動く。 コードの</description>
+      <description>つくったもの yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った。 GitHub - kyu08/fzf-bookmark-opener: A command line tool that opens bookmark using fzf.A command line</description>
       <content>&lt;h2 id=&#34;つくったもの&#34;&gt;つくったもの&lt;/h2&gt;
 &lt;p&gt;yamlに定義しておいたbookmarkをfzfで選択してブラウザで開くCLIツールをGoで作った。&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-bookmark-opener&#34; data-auto-fetch=&#34;true&#34;&gt;
-  &lt;a href=&#34;https://github.com/kyu08/fzf-bookmark-opener&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
-      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
-        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
-        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-bookmark-opener&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/fzf-bookmark-opener&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/d139e419d52297633132631fea0101b20a871eb91b1cb56c2a1ffb7780b41a17/kyu08/fzf-bookmark-opener&#34; alt=&#34;GitHub - kyu08/fzf-bookmark-opener: A command line tool that opens bookmark using fzf.&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/fzf-bookmark-opener&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-bookmark-opener&lt;/div&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - kyu08/fzf-bookmark-opener: A command line tool that opens bookmark using fzf.&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;A command line tool that opens bookmark using fzf. - kyu08/fzf-bookmark-opener&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-bookmark-opener&lt;/div&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;
@@ -982,14 +973,11 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install kyu08/tap/fzf-bookmark-opener
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これだけでインストールできるので気になった方もそうでない方もぜひ。issueやPRもお待ちしています。(&lt;code&gt;go install&lt;/code&gt;でインストールしたい方はこちら(&lt;code&gt;go install github.com/kyu08/fzf-bookmark-opener@latest&lt;/code&gt;))&lt;/p&gt;
 &lt;p&gt;brew公開に関してはこちらのブログを参考にしたら30分弱でサクッと公開できた(想像より簡単だった)&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.rasukarusan.com/entry/2019/11/03/211338&#34; data-auto-fetch=&#34;true&#34;&gt;
-  &lt;a href=&#34;https://www.rasukarusan.com/entry/2019/11/03/211338&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
-      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
-        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
-        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.rasukarusan.com/entry/2019/11/03/211338&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://www.rasukarusan.com/entry/2019/11/03/211338&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://cdn.image.st-hatena.com/image/scale/887da0d267a399928f4f3e7a0eb22ea2278d9656/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fr%2Frasukarusan%2F20191103%2F20191103211239.png&#34; alt=&#34;【備忘録】Homebrewで自作ツールを配布する - ハイパーマッスルエンジニア&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;https://www.rasukarusan.com/entry/2019/11/03/211338&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.rasukarusan.com/entry/2019/11/03/211338&lt;/div&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;【備忘録】Homebrewで自作ツールを配布する - ハイパーマッスルエンジニア&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;Homebrewでの配布は簡単だが毎回忘れる Goでバイナリ作ったり、ShellScript書いて配布したいなと思ったときにHomebrew使うことが割とある。 が、その都度毎回調べてやり方を思い出しながらするのが億劫だったので、一回まとめてみる。 ざっくり手順 Homebrew配布用のリポジトリを作る tagをpushしてReleaseノートを作る Formulaファイルを作ってpush 1. Homebrew配布用のリポジトリを作る 自作ツールのインストールファイルを置くためのリポジトリを作る。このリポジトリにバイナリとかの成果物を置くわけではない。置くのはインストールファイルである.rb…&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.rasukarusan.com/entry/2019/11/03/211338&lt;/div&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;
@@ -1050,14 +1038,11 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;h2 id=&#34;余談2&#34;&gt;余談2&lt;/h2&gt;
 &lt;p&gt;ふと気になってktr0731/go-fuzzyfinderをはじめとする依存ライブラリのライセンス表示はどうすればいいか気になって調べてみたところリポジトリに&lt;code&gt;NOTICES&lt;/code&gt;とか&lt;code&gt;CREDITS&lt;/code&gt;とか&lt;code&gt;ThirdPartyNotices&lt;/code&gt;みたいなファイルを置いてそこに依存ライブラリの著作権・ライセンス表示をするのが一般的なようだった。&lt;/p&gt;
 &lt;p&gt;手作業でやるのは辛いので自動生成ツールを探したところGoだとこれが使いやすそうだったので使ってみたけど簡単でとてもよかった。ありがたや&amp;hellip;。&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/Songmu/gocredits&#34; data-auto-fetch=&#34;true&#34;&gt;
-  &lt;a href=&#34;https://github.com/Songmu/gocredits&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
-      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
-        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
-        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/Songmu/gocredits&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://github.com/Songmu/gocredits&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/e988441e6034bc06ec50b0ad38ca1afba52744179f5c59d77afbb6cbb6764640/Songmu/gocredits&#34; alt=&#34;GitHub - Songmu/gocredits: creates CREDITS file from LICENSE files of dependencies&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/Songmu/gocredits&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/Songmu/gocredits&lt;/div&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - Songmu/gocredits: creates CREDITS file from LICENSE files of dependencies&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;creates CREDITS file from LICENSE files of dependencies - Songmu/gocredits&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/Songmu/gocredits&lt;/div&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;

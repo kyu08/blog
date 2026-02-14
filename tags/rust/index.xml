@@ -14,16 +14,13 @@
       <pubDate>Mon, 22 Dec 2025 00:13:06 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/rust-web-app-book/</guid>
-      <description>『RustによるWebアプリケーション開発 設計からリリース・運用まで』を読んだので感じたことをメモしておく。 https://www.kodansha.co.jp/book/products/0000398182https://www.kodansha.co.jp/book/products/0000398182 モチベーション Rustという言</description>
+      <description>『RustによるWebアプリケーション開発 設計からリリース・運用まで』を読んだので感じたことをメモしておく。 『ＲｕｓｔによるＷｅｂアプリケー</description>
       <content>&lt;p&gt;『RustによるWebアプリケーション開発 設計からリリース・運用まで』を読んだので感じたことをメモしておく。&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.kodansha.co.jp/book/products/0000398182&#34; data-auto-fetch=&#34;true&#34;&gt;
-  &lt;a href=&#34;https://www.kodansha.co.jp/book/products/0000398182&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
-      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
-        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
-        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.kodansha.co.jp/book/products/0000398182&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://www.kodansha.co.jp/book/products/0000398182&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://dvs-cover.kodansha.co.jp/0000398182/qlwQ4BgoUFJKQBFNNIbAbFmXHhhSS0R338o5wVij.jpg&#34; alt=&#34;『ＲｕｓｔによるＷｅｂアプリケーション開発　設計からリリース・運用まで』（豊田　優貴,松本　健太郎,吉川　哲史）　製品詳細　講談社&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;https://www.kodansha.co.jp/book/products/0000398182&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.kodansha.co.jp/book/products/0000398182&lt;/div&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;『ＲｕｓｔによるＷｅｂアプリケーション開発　設計からリリース・運用まで』（豊田　優貴,松本　健太郎,吉川　哲史）　製品詳細　講談社&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;★Rustによるアプリケーション開発のベストプラクティス！ 　Rustを現場で使うときがきた！ Rust経験豊富な筆者が、貴重な知識とテクニックを惜しみなく伝授。 「蔵書管理アプリケーション」の実装を通じて、Rustによる設計、開発、保守、運用までをハンズオンで学ぶ！ コードも丁寧に解説。 【目次】 第1章　本書で開発するもの 第2章　開発環境の構築 第3章　最小構成アプリケーションの実装 第4章　蔵書管理サーバーアプリケーションの設計 第5章　蔵書管理サーバーの実装 第6章　システムの結合とテスト 第7章　アプリケーションの運用 第8章　エコシステムの紹介&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.kodansha.co.jp/book/products/0000398182&lt;/div&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;
@@ -160,16 +157,13 @@
       <pubDate>Mon, 15 Dec 2025 19:21:35 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/understanding-rust-from-concepts/</guid>
-      <description>Rustのことをもっと理解りたくて『コンセプトから理解するRust』を読んだ。 https://gihyo.jp/book/2022/978-4-297-12562-2https://gihyo.jp/book/2022/978-4-297-12562-2 前提 筆者のRustの知識はTour of RustやThe Rust Programming La</description>
+      <description>Rustのことをもっと理解りたくて『コンセプトから理解するRust』を読んだ。 コンセプトから理解するRust | 技術評論社Rustはメモリ安全</description>
       <content>&lt;p&gt;Rustのことをもっと理解りたくて『コンセプトから理解するRust』を読んだ。&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://gihyo.jp/book/2022/978-4-297-12562-2&#34; data-auto-fetch=&#34;true&#34;&gt;
-  &lt;a href=&#34;https://gihyo.jp/book/2022/978-4-297-12562-2&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
-      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
-        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
-        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://gihyo.jp/book/2022/978-4-297-12562-2&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://gihyo.jp/book/2022/978-4-297-12562-2&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://gihyo.jp/assets/images/ogp/2022/9784297125622.jpg&#34; alt=&#34;コンセプトから理解するRust | 技術評論社&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;https://gihyo.jp/book/2022/978-4-297-12562-2&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://gihyo.jp/book/2022/978-4-297-12562-2&lt;/div&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;コンセプトから理解するRust | 技術評論社&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;Rustはメモリ安全、スレッド安全を保ちつつ、高パフォーマンスなプログラムを開発できるプログラミング言語です。また、手続き型、オブジェクト指向型、関数型でのプログラミングに対応できるマルチパラダイムの言語でもあります。ただ、そういったRustのポテンシャルを引き出すには、所有権やライフタイム、ジェネリクスやトレイトといった特徴的な仕様の理解が求められ、これらは初学者の壁にもなっています。本書ではそれら難解な仕様をピックアップし、他のプログラミング言語とコードレベルで比較しながら、「なぜそのような仕様になっているか」という言語のコンセプトからRustの理解を試みます。加えて、Rustのこまやかなエラーメッセージを読みつつ、Rustをうまく書くための知識もお伝えします。&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://gihyo.jp/book/2022/978-4-297-12562-2&lt;/div&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;
@@ -192,14 +186,11 @@
 &lt;p&gt;Rustの力がまた少しついた。&lt;/p&gt;
 &lt;p&gt;Rustを学ぶとRust自体への理解が深まるだけでなく、少なからずコンピュータの仕組みに近い低レイヤな部分の理解も一緒に深まるので勉強になる感覚があって楽しめた。&lt;/p&gt;
 &lt;p&gt;非同期処理周りはあまりちゃんと勉強したことがないので次はこの本を読んでみようと思う。（サンプルコードが主にRustで書かれているらしいのでこの本での学びも活かせそう）&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.oreilly.co.jp/books/9784873119595/&#34; data-auto-fetch=&#34;true&#34;&gt;
-  &lt;a href=&#34;https://www.oreilly.co.jp/books/9784873119595/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
-      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
-        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
-        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.oreilly.co.jp/books/9784873119595/&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://www.oreilly.co.jp/books/9784873119595/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://www.oreilly.co.jp/books/images/picture_large978-4-87311-959-5.jpeg&#34; alt=&#34;並行プログラミング入門&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;https://www.oreilly.co.jp/books/9784873119595/&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.oreilly.co.jp/books/9784873119595/&lt;/div&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;並行プログラミング入門&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;複数のプログラムを同時に実行する「並行プログラミング」は、処理速度を飛躍的に向上させる手法で、タスク管理、プロセス管理、スレッド管理をはじめ、複雑な仕組みについての幅広い知識とテクニックが必要となります。本書はRustとアセンブリ、そして一部Cを用い、CPUのアトミック命令、グリーンスレッド、アクターモデル、π計算、ソフトウェア・トランザクショナルメモリ、async/awaitなど、並行プログラミングに関する理論的な背景から実装までをカバー。さらに、アセンブリ実装の理解を深めるため、AArch64とx86-64アーキテクチャの説明も付録として収録。一歩一歩、着実に理解できるように、その仕組みから順を追って詳しく説明します。GitHub上で公開されているソースコードを実際に動かしながら、並行プログラミングの知識と理解を深めることができます。&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.oreilly.co.jp/books/9784873119595/&lt;/div&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;
@@ -257,14 +248,11 @@
 &lt;p&gt;筆者はElmやRustの開発体験を気に入っており、Webアプリケーションのサーバーサイドを関数型言語で書くことに興味があったので参加してみた。&lt;/p&gt;
 &lt;h2 id=&#34;関数型言語テイスティング-haskell-scala-clojure-elixirを比べて味わう関数型プログラミングの旨さ---lagénorhynqueカマイルカさん&#34;&gt;関数型言語テイスティング: Haskell, Scala, Clojure, Elixirを比べて味わう関数型プログラミングの旨さ - lagénorhynque/カマイルカさん&lt;/h2&gt;
 &lt;p&gt;lagénorhynque/カマイルカさんによるHaskell, Scala, Clojure, Elixirの紹介と比較を行う発表。&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-haskell-scala-clojure-elixir#p1&#34; data-auto-fetch=&#34;true&#34;&gt;
-  &lt;a href=&#34;https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-haskell-scala-clojure-elixir#p1&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
-      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
-        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
-        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-haskell-scala-clojure-elixir#p1&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-haskell-scala-clojure-elixir#p1&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://bcdn.docswell.com/page/PEXKP4NZJX.jpg?width=480&#34; alt=&#34;関数型言語テイスティング: Haskell, Scala, Clojure, Elixirを比べて味わう関数型プログラミングの旨さ | ドクセル&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-haskell-scala-clojure-elixir#p1&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-haskell-scala-clojure-elixir#p1&lt;/div&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;関数型言語テイスティング: Haskell, Scala, Clojure, Elixirを比べて味わう関数型プログラミングの旨さ | ドクセル&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;4つの関数型言語を例に、関数型プログラミング(言語)の本質を探ろう。  関数型まつり2025セッション概要: h...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-haskell-scala-clojure-elixir#p1&lt;/div&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;
@@ -289,14 +277,11 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;関数型言語を採用し維持し継続する---松澤-有さん&#34;&gt;関数型言語を採用し、維持し、継続する - 松澤 有さん&lt;/h2&gt;
 &lt;p&gt;Siiibo証券株式会社のCTOである松澤さんによる自社プロダクトのフロントエンド、バックエンドの開発言語として関数型言語(Elm, Elixir)をなぜ採用したのか、そしていかにして維持し、継続しているかについての発表。実は主にこの発表を聞くために関数型まつりに参加したので良い発表を聞けてよかった。&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://zenn.dev/siiibo_tech/articles/adopting-fp-languages&#34; data-auto-fetch=&#34;true&#34;&gt;
-  &lt;a href=&#34;https://zenn.dev/siiibo_tech/articles/adopting-fp-languages&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
-      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
-        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
-        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://zenn.dev/siiibo_tech/articles/adopting-fp-languages&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://zenn.dev/siiibo_tech/articles/adopting-fp-languages&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://res.cloudinary.com/zenn/image/upload/s--264zsvWh--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E9%2596%25A2%25E6%2595%25B0%25E5%259E%258B%25E8%25A8%2580%25E8%25AA%259E%25E3%2582%2592%25E6%258E%25A1%25E7%2594%25A8%25E3%2581%2597%25E3%2580%2581%25E7%25B6%25AD%25E6%258C%2581%25E3%2581%2597%25E3%2580%2581%25E7%25B6%2599%25E7%25B6%259A%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Yu%2520Matsuzawa%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBmMzgxMmZkZWEuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Siiibo%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dwd3pXbm9hSUl4bEVZcUtBSnRicVVheWljRmlJVExYVGZNN0EyPXMyNTAtYw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACAGSGT&#34; alt=&#34;関数型言語を採用し、維持し、継続する&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;https://zenn.dev/siiibo_tech/articles/adopting-fp-languages&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://zenn.dev/siiibo_tech/articles/adopting-fp-languages&lt;/div&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;関数型言語を採用し、維持し、継続する&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://zenn.dev/siiibo_tech/articles/adopting-fp-languages&lt;/div&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;
@@ -505,14 +490,11 @@
 &lt;p&gt;プログラマーが命令的なコーディングから関数型のコーディングへ移行する際のハードルを下げることを意識した設計になっているらしい。&lt;/p&gt;
 &lt;h2 id=&#34;マイクロサービス内で動くapiをfで書いている---ayato-pさん&#34;&gt;マイクロサービス内で動くAPIをF#で書いている - ayato-pさん&lt;/h2&gt;
 &lt;p&gt;ayato-pさんによるマイクロサービスの1サービスをF#で書く際の設計や悩みどころを紹介する発表。&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://speakerdeck.com/ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru&#34; data-auto-fetch=&#34;true&#34;&gt;
-  &lt;a href=&#34;https://speakerdeck.com/ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
-      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
-        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
-        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://speakerdeck.com/ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://speakerdeck.com/ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://files.speakerdeck.com/presentations/9efe648f23514385a48f5c5608d5f1c3/slide_0.jpg?35472263&#34; alt=&#34;マイクロサービス内で動くAPIをF#で書いている&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;https://speakerdeck.com/ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://speakerdeck.com/ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru&lt;/div&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;マイクロサービス内で動くAPIをF#で書いている&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;関数型まつり2025の発表資料&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://speakerdeck.com/ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru&lt;/div&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;
@@ -892,14 +874,11 @@
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;make targetをプレビューウィンドウ付きであいまい検索によって選択&amp;amp;実行できるツール。brewやcargoでインストールできるのでぜひ。 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-make&#34; data-auto-fetch=&#34;true&#34;&gt;
-  &lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
-      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
-        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
-        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+&lt;p&gt;make targetをプレビューウィンドウ付きであいまい検索によって選択&amp;amp;実行できるツール。brewやcargoでインストールできるのでぜひ。 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-make&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://repository-images.githubusercontent.com/611369838/a30cf798-2e08-47a5-9443-978329275d2c&#34; alt=&#34;GitHub - kyu08/fzf-make: A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task.&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/fzf-make&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-make&lt;/div&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - kyu08/fzf-make: A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task.&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task. - kyu08/fzf-make&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-make&lt;/div&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;
@@ -922,14 +901,11 @@
 &lt;p&gt;&lt;a href=&#34;https://zenn.dev/kyu08/articles/974fd8bc25c303&#34; target=&#34;_blank&#34; &gt;[make,pnpm,yarnに対応]タスクランナーのコマンドをfuzzy finder形式で選択できるCLIツール fzf-makeの紹介&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった。&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-make&#34; data-auto-fetch=&#34;true&#34;&gt;
-  &lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
-      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
-        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
-        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-make&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://repository-images.githubusercontent.com/611369838/a30cf798-2e08-47a5-9443-978329275d2c&#34; alt=&#34;GitHub - kyu08/fzf-make: A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task.&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/fzf-make&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-make&lt;/div&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - kyu08/fzf-make: A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task.&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task. - kyu08/fzf-make&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-make&lt;/div&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;
@@ -950,14 +926,11 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew tap kyu08/tap
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install kyu08/tap/fzf-make
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ソースも公開しているので、「こう書くといいよ」とかバグとかありましたらぜひissueやPRで教えてください。&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-make&#34; data-auto-fetch=&#34;true&#34;&gt;
-  &lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
-      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
-        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
-        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-make&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://repository-images.githubusercontent.com/611369838/a30cf798-2e08-47a5-9443-978329275d2c&#34; alt=&#34;GitHub - kyu08/fzf-make: A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task.&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/fzf-make&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-make&lt;/div&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - kyu08/fzf-make: A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task.&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task. - kyu08/fzf-make&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-make&lt;/div&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;
@@ -967,27 +940,21 @@
 &lt;p&gt;ただskimをライブラリとして利用する実装サンプルがあまりなかったのがちょっと大変だった。特にプレビューウィンドウの表示にfzfの候補文字列を変数としたシェルコマンドの形で渡すことができることに気づくまでに時間がかかった&lt;/p&gt;
 &lt;p&gt;↓の&lt;code&gt;{}&lt;/code&gt;にtarget名が入るイメージ。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; preview_command &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;line=$(bat Makefile | grep -nE &amp;#39;^{}\s*:&amp;#39; | sed -e &amp;#39;s/:.*//g&amp;#39;); bat --style=numbers --color=always --line-range $line: --highlight-line $line Makefile&amp;#34;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18&#34; data-auto-fetch=&#34;true&#34;&gt;
-  &lt;a href=&#34;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
-      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
-        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
-        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://repository-images.githubusercontent.com/611369838/a30cf798-2e08-47a5-9443-978329275d2c&#34; alt=&#34;fzf-make/src/misc.rs at 3a627d0a1aa75b1bf1ff87f3443f63393afbcf10 · kyu08/fzf-make&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18&lt;/div&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;fzf-make/src/misc.rs at 3a627d0a1aa75b1bf1ff87f3443f63393afbcf10 · kyu08/fzf-make&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task. - kyu08/fzf-make&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18&lt;/div&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;あとはgoでいつもやっている感じでテーブル駆動テストっぽくテストを書いてみた。可読性も保守性も高いので割と気に入っている。&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145&#34; data-auto-fetch=&#34;true&#34;&gt;
-  &lt;a href=&#34;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
-      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
-        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
-        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://repository-images.githubusercontent.com/611369838/a30cf798-2e08-47a5-9443-978329275d2c&#34; alt=&#34;fzf-make/src/misc.rs at 3a627d0a1aa75b1bf1ff87f3443f63393afbcf10 · kyu08/fzf-make&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145&lt;/div&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;fzf-make/src/misc.rs at 3a627d0a1aa75b1bf1ff87f3443f63393afbcf10 · kyu08/fzf-make&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task. - kyu08/fzf-make&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145&lt;/div&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;
@@ -1022,14 +989,11 @@
 &lt;/li&gt;
 &lt;li&gt;コミュニティの初学者をサポートする姿勢がすごい
 &lt;ul&gt;
-&lt;li&gt;RustのOSSプロジェクトへのcontributionについては &lt;a href=&#34;https://zenn.dev/fraternite/articles/4e11063bf05aac&#34; target=&#34;_blank&#34; &gt;rust-lang/rustへのcode contributionをはじめからていねいに&lt;/a&gt; が詳しいが、Rust製のOSSプロジェクトには&lt;code&gt;E-mentor&lt;/code&gt;というタグがありissueを進めるに当たってメンターが指針を記してくれているらしい。（&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/rust-lang/rust/issues/109099&#34; data-auto-fetch=&#34;true&#34;&gt;
-  &lt;a href=&#34;https://github.com/rust-lang/rust/issues/109099&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
-      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
-        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
-        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+&lt;li&gt;RustのOSSプロジェクトへのcontributionについては &lt;a href=&#34;https://zenn.dev/fraternite/articles/4e11063bf05aac&#34; target=&#34;_blank&#34; &gt;rust-lang/rustへのcode contributionをはじめからていねいに&lt;/a&gt; が詳しいが、Rust製のOSSプロジェクトには&lt;code&gt;E-mentor&lt;/code&gt;というタグがありissueを進めるに当たってメンターが指針を記してくれているらしい。（&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/rust-lang/rust/issues/109099&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://github.com/rust-lang/rust/issues/109099&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/5861212f462c4d9f4ef7947b66986b7b268ec1d002733db3df0f1b4f0f36a040/rust-lang/rust/issues/109099&#34; alt=&#34;Check tier 3 targets in CI · Issue #109099 · rust-lang/rust&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/rust-lang/rust/issues/109099&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/rust-lang/rust/issues/109099&lt;/div&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;Check tier 3 targets in CI · Issue #109099 · rust-lang/rust&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;NOTE: this issue does not affect the documented target tier policy of the Rust project. We reserve the right to break tier 3 targets at any time, according to the guidelines at https://doc.rust-lan...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/rust-lang/rust/issues/109099&lt;/div&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;

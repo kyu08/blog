@@ -214,7 +214,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2023/03/31</time>
       
-    <span class="post-reading-time">5 min read (2218 words)</span></div>
+    <span class="post-reading-time">5 min read (2402 words)</span></div>
 
   
     <span class="post-tags">
@@ -250,14 +250,11 @@ if (!doNotTrack) {
 <p><a href="https://zenn.dev/kyu08/articles/974fd8bc25c303" target="_blank" >[make,pnpm,yarnに対応]タスクランナーのコマンドをfuzzy finder形式で選択できるCLIツール fzf-makeの紹介</a></p>
 </blockquote>
 <p>Makefileに定義されたtargetをfzfで選択して実行するCLIツールをRustでつくった。</p>
-<p><div class="blogcard" data-url="https://github.com/kyu08/fzf-make" data-auto-fetch="true">
-  <a href="https://github.com/kyu08/fzf-make" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
+<p><div class="blogcard" data-url="https://github.com/kyu08/fzf-make" data-auto-fetch="false">
+  <a href="https://github.com/kyu08/fzf-make" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://repository-images.githubusercontent.com/611369838/a30cf798-2e08-47a5-9443-978329275d2c" alt="GitHub - kyu08/fzf-make: A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task." loading="lazy">
     </div><div class="blogcard-content">
-      <div class="blogcard-title">https://github.com/kyu08/fzf-make</div><div class="blogcard-url">https://github.com/kyu08/fzf-make</div>
+      <div class="blogcard-title">GitHub - kyu08/fzf-make: A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task.</div><div class="blogcard-description">A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task. - kyu08/fzf-make</div><div class="blogcard-url">https://github.com/kyu08/fzf-make</div>
     </div>
   </a>
 </div>
@@ -278,14 +275,11 @@ if (!doNotTrack) {
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>brew tap kyu08/tap
 </span></span><span style="display:flex;"><span>brew install kyu08/tap/fzf-make
 </span></span></code></pre></div><p>ソースも公開しているので、「こう書くといいよ」とかバグとかありましたらぜひissueやPRで教えてください。</p>
-<p><div class="blogcard" data-url="https://github.com/kyu08/fzf-make" data-auto-fetch="true">
-  <a href="https://github.com/kyu08/fzf-make" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
+<p><div class="blogcard" data-url="https://github.com/kyu08/fzf-make" data-auto-fetch="false">
+  <a href="https://github.com/kyu08/fzf-make" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://repository-images.githubusercontent.com/611369838/a30cf798-2e08-47a5-9443-978329275d2c" alt="GitHub - kyu08/fzf-make: A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task." loading="lazy">
     </div><div class="blogcard-content">
-      <div class="blogcard-title">https://github.com/kyu08/fzf-make</div><div class="blogcard-url">https://github.com/kyu08/fzf-make</div>
+      <div class="blogcard-title">GitHub - kyu08/fzf-make: A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task.</div><div class="blogcard-description">A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task. - kyu08/fzf-make</div><div class="blogcard-url">https://github.com/kyu08/fzf-make</div>
     </div>
   </a>
 </div>
@@ -295,27 +289,21 @@ if (!doNotTrack) {
 <p>ただskimをライブラリとして利用する実装サンプルがあまりなかったのがちょっと大変だった。特にプレビューウィンドウの表示にfzfの候補文字列を変数としたシェルコマンドの形で渡すことができることに気づくまでに時間がかかった</p>
 <p>↓の<code>{}</code>にtarget名が入るイメージ。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> preview_command <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;line=$(bat Makefile | grep -nE &#39;^{}\s*:&#39; | sed -e &#39;s/:.*//g&#39;); bat --style=numbers --color=always --line-range $line: --highlight-line $line Makefile&#34;</span>;
-</span></span></code></pre></div><p><div class="blogcard" data-url="https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18" data-auto-fetch="true">
-  <a href="https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
+</span></span></code></pre></div><p><div class="blogcard" data-url="https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18" data-auto-fetch="false">
+  <a href="https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://repository-images.githubusercontent.com/611369838/a30cf798-2e08-47a5-9443-978329275d2c" alt="fzf-make/src/misc.rs at 3a627d0a1aa75b1bf1ff87f3443f63393afbcf10 · kyu08/fzf-make" loading="lazy">
     </div><div class="blogcard-content">
-      <div class="blogcard-title">https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18</div><div class="blogcard-url">https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18</div>
+      <div class="blogcard-title">fzf-make/src/misc.rs at 3a627d0a1aa75b1bf1ff87f3443f63393afbcf10 · kyu08/fzf-make</div><div class="blogcard-description">A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task. - kyu08/fzf-make</div><div class="blogcard-url">https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L18</div>
     </div>
   </a>
 </div>
 </p>
 <p>あとはgoでいつもやっている感じでテーブル駆動テストっぽくテストを書いてみた。可読性も保守性も高いので割と気に入っている。</p>
-<p><div class="blogcard" data-url="https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145" data-auto-fetch="true">
-  <a href="https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
+<p><div class="blogcard" data-url="https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145" data-auto-fetch="false">
+  <a href="https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://repository-images.githubusercontent.com/611369838/a30cf798-2e08-47a5-9443-978329275d2c" alt="fzf-make/src/misc.rs at 3a627d0a1aa75b1bf1ff87f3443f63393afbcf10 · kyu08/fzf-make" loading="lazy">
     </div><div class="blogcard-content">
-      <div class="blogcard-title">https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145</div><div class="blogcard-url">https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145</div>
+      <div class="blogcard-title">fzf-make/src/misc.rs at 3a627d0a1aa75b1bf1ff87f3443f63393afbcf10 · kyu08/fzf-make</div><div class="blogcard-description">A command line tool that executes commands using fuzzy finder with preview window for make, npm, pnpm, yarn, just and task. - kyu08/fzf-make</div><div class="blogcard-url">https://github.com/kyu08/fzf-make/blob/3a627d0a1aa75b1bf1ff87f3443f63393afbcf10/src/misc.rs#L145</div>
     </div>
   </a>
 </div>
@@ -350,14 +338,11 @@ if (!doNotTrack) {
 </li>
 <li>コミュニティの初学者をサポートする姿勢がすごい
 <ul>
-<li>RustのOSSプロジェクトへのcontributionについては <a href="https://zenn.dev/fraternite/articles/4e11063bf05aac" target="_blank" >rust-lang/rustへのcode contributionをはじめからていねいに</a> が詳しいが、Rust製のOSSプロジェクトには<code>E-mentor</code>というタグがありissueを進めるに当たってメンターが指針を記してくれているらしい。（<div class="blogcard" data-url="https://github.com/rust-lang/rust/issues/109099" data-auto-fetch="true">
-  <a href="https://github.com/rust-lang/rust/issues/109099" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
+<li>RustのOSSプロジェクトへのcontributionについては <a href="https://zenn.dev/fraternite/articles/4e11063bf05aac" target="_blank" >rust-lang/rustへのcode contributionをはじめからていねいに</a> が詳しいが、Rust製のOSSプロジェクトには<code>E-mentor</code>というタグがありissueを進めるに当たってメンターが指針を記してくれているらしい。（<div class="blogcard" data-url="https://github.com/rust-lang/rust/issues/109099" data-auto-fetch="false">
+  <a href="https://github.com/rust-lang/rust/issues/109099" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://opengraph.githubassets.com/5861212f462c4d9f4ef7947b66986b7b268ec1d002733db3df0f1b4f0f36a040/rust-lang/rust/issues/109099" alt="Check tier 3 targets in CI · Issue #109099 · rust-lang/rust" loading="lazy">
     </div><div class="blogcard-content">
-      <div class="blogcard-title">https://github.com/rust-lang/rust/issues/109099</div><div class="blogcard-url">https://github.com/rust-lang/rust/issues/109099</div>
+      <div class="blogcard-title">Check tier 3 targets in CI · Issue #109099 · rust-lang/rust</div><div class="blogcard-description">NOTE: this issue does not affect the documented target tier policy of the Rust project. We reserve the right to break tier 3 targets at any time, according to the guidelines at https://doc.rust-lan...</div><div class="blogcard-url">https://github.com/rust-lang/rust/issues/109099</div>
     </div>
   </a>
 </div>

@@ -16,7 +16,7 @@
       <guid>https://blog.kyu08.com/posts/cqrs-documents-by-greg-young/</guid>
       <description>CQRSに興味があったのでGreg Young氏のCQRS Documentsを読んでみた。 https://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdfhttps://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdf CQRSに興味を持ったきっかけ ドメイン層のメンテナ</description>
       <content>&lt;p&gt;CQRSに興味があったのでGreg Young氏の&lt;a href=&#34;https://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdf&#34; target=&#34;_blank&#34; &gt;CQRS Documents&lt;/a&gt;を読んでみた。&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdf&#34; data-auto-fetch=&#34;true&#34;&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdf&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
         &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
@@ -310,16 +310,13 @@ CQRS Documents by Greg Young P22より引用&lt;/p&gt;
       <pubDate>Wed, 01 Feb 2023 16:15:48 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/posts/learn-design-pattern/</guid>
-      <description>ずっと気になってはいたが2つ~3つくらいしか知らなかったデザインパターンをやっと勉強する気になったのでこのサイトを一通り眺めてみた。 https://refactoring.guru/ja/design-patternshttps://refactoring.guru/ja/design-patterns こちら</description>
+      <description>ずっと気になってはいたが2つ~3つくらいしか知らなかったデザインパターンをやっと勉強する気になったのでこのサイトを一通り眺めてみた。 デザイン</description>
       <content>&lt;p&gt;ずっと気になってはいたが2つ~3つくらいしか知らなかったデザインパターンをやっと勉強する気になったのでこのサイトを一通り眺めてみた。&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://refactoring.guru/ja/design-patterns&#34; data-auto-fetch=&#34;true&#34;&gt;
-  &lt;a href=&#34;https://refactoring.guru/ja/design-patterns&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
-      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
-        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
-        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://refactoring.guru/ja/design-patterns&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://refactoring.guru/ja/design-patterns&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://refactoring.guru/ja/images/refactoring/social/facebook-share-preview.png?id=dbf9e98269595be86eb668f365be6868&#34; alt=&#34;デザインパターン&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;https://refactoring.guru/ja/design-patterns&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://refactoring.guru/ja/design-patterns&lt;/div&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;デザインパターン&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;デザインパターンは、ソフトウェア設計でよく起きる問題に対する典型的な解決方法です。これらは、事前に用意された、問題解決のための設計図で、適宜変更して、自分のコードにおける特定の設計上の問題の解決に使えます。&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://refactoring.guru/ja/design-patterns&lt;/div&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;

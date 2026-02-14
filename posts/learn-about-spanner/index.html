@@ -214,7 +214,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2024/09/23</time>
       
-    <span class="post-reading-time">12 min read (5675 words)</span></div>
+    <span class="post-reading-time">15 min read (7470 words)</span></div>
 
   
     <span class="post-tags">
@@ -288,14 +288,11 @@ if (!doNotTrack) {
   <div class="post-content"><div>
         <p>普段業務でCloud Spannerを使っているが、雰囲気で使っている自覚が大いにあるのでドキュメントやブログを読んで知らなかったことを自分用のメモとしてまとめてみる。</p>
 <h2 id="spanner-のスキーマ設計の最適化--google-cloud">Spanner のスキーマ設計の最適化  |  Google Cloud<a href="#spanner-のスキーマ設計の最適化--google-cloud" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p><div class="blogcard" data-url="https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja" data-auto-fetch="true">
-  <a href="https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
+<p><div class="blogcard" data-url="https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja" data-auto-fetch="false">
+  <a href="https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://docs.cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png?hl=ja" alt="Spanner のスキーマ設計の最適化  |  Google Cloud Documentation" loading="lazy">
     </div><div class="blogcard-content">
-      <div class="blogcard-title">https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja</div><div class="blogcard-url">https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja</div>
+      <div class="blogcard-title">Spanner のスキーマ設計の最適化  |  Google Cloud Documentation</div><div class="blogcard-url">https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja</div>
     </div>
   </a>
 </div>
@@ -350,14 +347,11 @@ if (!doNotTrack) {
 <p>現在はインデックスキーは16個、合計サイズが6KiBまでに制限されているため、<code>STORING</code>句を使用することで任意のインデックスに対してデータを格納することができる。</p>
 <p>つまり<code>STORING</code>を使用すると<strong>WRITEコストおよびストレージコストの上昇</strong>と引き換えに<strong>READコストを削減</strong>できる。</p>
 <p>また、ドキュメントでは<code>STORING</code>の便利な応用例として<code>NULL_FILTERED</code>インデックスとの併用を紹介している。それについてはこちらの記事が大変詳しいので参照されたい。</p>
-<p><div class="blogcard" data-url="https://zenn.dev/facengineer/articles/15e7a68fcc2fad" data-auto-fetch="true">
-  <a href="https://zenn.dev/facengineer/articles/15e7a68fcc2fad" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
+<p><div class="blogcard" data-url="https://zenn.dev/facengineer/articles/15e7a68fcc2fad" data-auto-fetch="false">
+  <a href="https://zenn.dev/facengineer/articles/15e7a68fcc2fad" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://res.cloudinary.com/zenn/image/upload/s--zSlZX7Xu--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Cloud%2520Spanner%25E3%2581%25AENull%2520Filtered%2520INDEX%25E3%2581%25AE%25E7%2594%25A8%25E9%2580%2594%25E3%2582%2592%25E8%2580%2583%25E5%25AF%259F%25E3%2581%2599%25E3%2582%258B%2520%25E3%2580%259C%25E3%2582%25B5%25E3%2583%2596%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%2597%25E5%25AE%259F%25E8%25A3%2585%25E3%2580%259C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kngnr%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc3YmY1NTZjODYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACAGSGT" alt="Cloud SpannerのNull Filtered INDEXの用途を考察する 〜サブタイプ実装〜" loading="lazy">
     </div><div class="blogcard-content">
-      <div class="blogcard-title">https://zenn.dev/facengineer/articles/15e7a68fcc2fad</div><div class="blogcard-url">https://zenn.dev/facengineer/articles/15e7a68fcc2fad</div>
+      <div class="blogcard-title">Cloud SpannerのNull Filtered INDEXの用途を考察する 〜サブタイプ実装〜</div><div class="blogcard-url">https://zenn.dev/facengineer/articles/15e7a68fcc2fad</div>
     </div>
   </a>
 </div>
@@ -372,14 +366,11 @@ if (!doNotTrack) {
 <p>この例ではPKに<code>ShardId</code>(0~N-1)を追加する方法を紹介している。</p>
 <p><img src="spanner-sharding.webp" alt="spanner-sharding.webp"></p>
 <h2 id="スキーマ設計のベスト-プラクティス--spanner--google-cloud">スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud<a href="#スキーマ設計のベスト-プラクティス--spanner--google-cloud" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p><div class="blogcard" data-url="https://cloud.google.com/spanner/docs/schema-design?hl=ja" data-auto-fetch="true">
-  <a href="https://cloud.google.com/spanner/docs/schema-design?hl=ja" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
+<p><div class="blogcard" data-url="https://cloud.google.com/spanner/docs/schema-design?hl=ja" data-auto-fetch="false">
+  <a href="https://cloud.google.com/spanner/docs/schema-design?hl=ja" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://docs.cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png?hl=ja" alt="スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud Documentation" loading="lazy">
     </div><div class="blogcard-content">
-      <div class="blogcard-title">https://cloud.google.com/spanner/docs/schema-design?hl=ja</div><div class="blogcard-url">https://cloud.google.com/spanner/docs/schema-design?hl=ja</div>
+      <div class="blogcard-title">スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud Documentation</div><div class="blogcard-url">https://cloud.google.com/spanner/docs/schema-design?hl=ja</div>
     </div>
   </a>
 </div>
@@ -414,14 +405,11 @@ if (!doNotTrack) {
 <li>（そもそも）インデックスをインターリーブする</li>
 </ol>
 <h2 id="セカンダリ-インデックス--spanner--google-cloud">セカンダリ インデックス  |  Spanner  |  Google Cloud<a href="#セカンダリ-インデックス--spanner--google-cloud" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p><div class="blogcard" data-url="https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja" data-auto-fetch="true">
-  <a href="https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
+<p><div class="blogcard" data-url="https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja" data-auto-fetch="false">
+  <a href="https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://docs.cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png?hl=ja" alt="セカンダリ インデックス  |  Spanner  |  Google Cloud Documentation" loading="lazy">
     </div><div class="blogcard-content">
-      <div class="blogcard-title">https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja</div><div class="blogcard-url">https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja</div>
+      <div class="blogcard-title">セカンダリ インデックス  |  Spanner  |  Google Cloud Documentation</div><div class="blogcard-url">https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja</div>
     </div>
   </a>
 </div>
@@ -452,14 +440,14 @@ if (!doNotTrack) {
 </span></span></code></pre></div><p>このようなケースでは次のようにPK降順のインデックスを明示的に作成することで読み取りパフォーマンスを向上させることができる。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">INDEX</span> SongIdDesc <span style="color:#66d9ef">On</span> Songs(SongId <span style="color:#66d9ef">DESC</span>);
 </span></span></code></pre></div><h2 id="sharding-of-timestamp-ordered-data-in-cloud-spanner---googblogscom">Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com<a href="#sharding-of-timestamp-ordered-data-in-cloud-spanner---googblogscom" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p><div class="blogcard" data-url="https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/" data-auto-fetch="true">
+<p><div class="blogcard" data-url="https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/" data-auto-fetch="false">
   <a href="https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
         <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
       </svg>
     </div><div class="blogcard-content">
-      <div class="blogcard-title">https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/</div><div class="blogcard-url">https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/</div>
+      <div class="blogcard-title">Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com</div><div class="blogcard-description">By Karthi Thyagarajan, Solutions Architect Cloud Spanner was designed from the ground up to offer horizontal scalability and a developer-friendly SQL interface. As a managed service, Google Cloud handles most database management tasks, but it’s up to you to ensure that there are no hotspots, as described in Schema Design Best Practices and Optimizing Schema Design for Cloud Spanner. In this article, we’ll look at how to efficiently insert and retrieve records with timestamp ordering. We’ll start with the high-level guidance provided in Anti-pattern: timestamp ordering and explore the scenario in more detail with a concrete example. Scenario Let’s say we’re building an app that logs user activity along with timestamps and also allows users to query this activity by user id and time range. A good primary key for the table storing user activity (let’s call it LogEntries) is (UserId, Timestamp), as this gives us a uniform distribution of activity logs. Cloud Spanner inserts log entries sequentially, but they’re naturally sharded by UserId, resulting in uniform key distribution. Table LogEntries UserId (PK) Timestamp (PK) LogEntry 15b7bd1f-8473 2018-05-01T15:16:03.386257Z Here’s a sample query to retrieve a list of log entries by user and time range:SELECT UserId, Timestamp, LogEntry FROM LogEntries WHERE UserID = &#39;15b7bd1f-8473&#39; AND Timestamp BETWEEN &#39;2018-05-01T15:14:10.386257Z&#39; AND &#39;2018-05-01T15:16:10.386257Z&#39;; This query takes advantage of the primary key and thus performs well. Now let’s make things more interesting. What if we wanted to group users by the company they work for so we can segment reports by company? This is a fairly common use case for Cloud Spanner, especially with multi-tenant SaaS applications. To support this, we create a table with the following schema.Table LogEntries CompanyId (PK) UserId (PK) Timestamp (PK) LogEntry Acme 15b7bd1f-8473 2018-05-01T15:16:03.386257Z And here’s the corresponding query to retrieve the log entries: SELECT CompanyId, UserId, Timestamp, LogEntry FROM LogEntries WHERE CompanyID = &#39;Acme&#39; AND UserID = &#39;15b7bd1f-8473&#39; AND Timestamp BETWEEN &#39;2018-05-01T15:14:10.386257Z&#39; AND &#39;2018-05-01T15:16:10.386257Z&#39;; Here’s the query to retrieve log entries by CompanyId and time range (user field not specified):SELECT CompanyId, UserId, Timestamp, LogEntry FROM LogEntries WHERE CompanyID = &#39;Acme&#39; AND Timestamp BETWEEN &#39;2018-05-01T15:14:10.386257Z&#39; AND &#39;2018-05-01T15:16:10.386257Z&#39;; To support the above query, we add a separate, secondary index. Initially, we include just two columns:CREATE INDEX LogEntriesByCompany ON UserActivity(CompanyId, Timestamp) Challenge: hotspots during inserts The challenge here is that some companies may have a lot more (orders of magnitude more) users than others, resulting in a very skewed distribution of log entries. The challenge is particularly acute during inserts as described in the opening paragraph above. And even if Cloud Spanner helps out by creating additional splits, nodes that service new splits become hotspots due to uneven key distribution. The above diagram depicts a scenario where Company B has three times more users than Company A or Company C. Therefore, log entries corresponding to Company B grow at a higher rate, resulting in the hotspotting of nodes that service the splits where Company B’s log entries are being inserted. Hotspot mitigation There are multiple aspects to our hotspot mitigation strategy: schema design, index design and querying. Let’s look at each of these below. Schema and index design  As described in Anti-pattern: timestamp ordering, we’ll use application-level sharding to distribute data evenly. Let’s look at one particular approach for our scenario: instead of (CompanyId, UserId, Timestamp), we’ll use (UserId, CompanyId, Timestamp).Table LogEntries (reorder columns CompanyId and UserId in Primary Key) UserId (PK) CompanyId (PK) Timestamp (PK) LogEntry 15b7bd1f-8473 Acme 2018-05-01T15:16:03.386257Z By placing UserId before CompanyId in the primary key, we can mitigate the hotspots caused by the non-uniform distribution of log entries across companies. Now let’s look at the secondary index on CompanyId and timestamp. Since this index is meant to support queries that specify just CompanyId and timestamp, we cannot address the distribution problem by simply incorporating UserId. Keep in mind that indexes are also susceptible to hotspots and we need to design them so that their distribution is uniform. To address this, we’ll add a new column, EntryShardId, where (in pseudo-code): entryShardId = hash(CompanyId &#43; timestamp) % num_shards The hash function here could be a simple crc32 operation. Here’s a python snippet illustrating how to calculate this hash function before a log entry is inserted:... import datetime import zlib ... timestamp = datetime.datetime.utcnow() companyId = &#39;Acme&#39; entryShardId = (zlib.crc32(companyId &#43; timestamp.isoformat()) &amp; 0xffffffff) % 10 ... In this case, num_shards = 10. You can adjust this value based on the characteristics of your workload. For instance, if one company in our scenario generates 100 times more log entries on average than the other companies, then we would pick 100 for num_shards in order to achieve a uniform distribution across entries from all companies. This hashing approach essentially takes the sequential, timestamp-ordered LogEntriesByCompany index entries for a particular company and distributes them across multiple application (or logical) shards. In this case, we have 10 such shards per company, resulting from the crc32 and modulo operations shown above.Table LogEntries (with EntryShardId added) CompanyId (PK) UserId (PK) Timestamp (PK) EntryShardId LogEntry ‘Acme’ 1 2018-05-01T15:16:03.386257Z 8 And the index: CREATE INDEX LogEntriesByCompany ON LogEntries(EntryShardId, CompanyId, Timestamp) Querying Evenly distributing data using a sharding approach is great for inserts but how does it affect retrieval? Application-level sharding is no good to us if we cannot retrieve the data efficiently. Let’s look at how we would query for a list of log entries by CompanyId and time range, but without UserId:SELECT CompanyId, UserId, Timestamp, LogEntry FROM LogEntries@{FORCE_INDEX=LogEntriesbyCompany} WHERE CompanyId = &#39;Acme&#39; AND ShardedEntryId BETWEEN 0 AND 9 AND Timestamp &gt; &#39;2018-05-01T15:14:10.386257Z&#39; AND Timestamp The above query illustrates how to perform a timestamp range retrieval while taking sharding into account. By including the ShardedEntryId in the query above, we tell Spanner to ‘look’ in all 10 logical shards to retrieve the timestamp entries for CompanyId ‘Acme’ for a particular range. Cloud Spanner is a full-featured relational database service that relieves you of most—but not all—database management tasks. For more information on Cloud Spanner management best practices, check out the recommended reading.Anti-pattern: timestamp orderingOptimizing Schema Design for Cloud SpannerBest Practices for Schema Design</div><div class="blogcard-url">https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/</div>
     </div>
   </a>
 </div>
@@ -577,14 +565,11 @@ if (!doNotTrack) {
 <p>CompanyId, EntryShardIdの順番を逆にしてみたクエリ
 <img src="swap.webp" alt="swap.webp"></p>
 <h2 id="cloud-spanner-におけるトランザクションのロックについて">Cloud Spanner におけるトランザクションのロックについて<a href="#cloud-spanner-におけるトランザクションのロックについて" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p><div class="blogcard" data-url="https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner" data-auto-fetch="true">
-  <a href="https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
+<p><div class="blogcard" data-url="https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner" data-auto-fetch="false">
+  <a href="https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://storage.googleapis.com/gweb-cloudblog-publish/images/10_-_Databases.max-2600x2600.jpg" alt="Cloud Spanner におけるトランザクションのロックについて | Google Cloud 公式ブログ" loading="lazy">
     </div><div class="blogcard-content">
-      <div class="blogcard-title">https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner</div><div class="blogcard-url">https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner</div>
+      <div class="blogcard-title">Cloud Spanner におけるトランザクションのロックについて | Google Cloud 公式ブログ</div><div class="blogcard-url">https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner</div>
     </div>
   </a>
 </div>
@@ -595,27 +580,21 @@ if (!doNotTrack) {
 <p>なのでREAD, WRITEの範囲(行および列)を最小限にすることでロック範囲を最小限にすることができる。結果として他のトランザクションに与えるパフォーマンス影響を最小限にすることができる。</p>
 <p>他には複数のトランザクションが同時に実行された際の優先度について詳しく解説してあった。</p>
 <h2 id="spanner-の読み取りと書き込みのライフサイクル--google-cloud">Spanner の読み取りと書き込みのライフサイクル  |  Google Cloud<a href="#spanner-の読み取りと書き込みのライフサイクル--google-cloud" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p><div class="blogcard" data-url="https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja" data-auto-fetch="true">
-  <a href="https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
+<p><div class="blogcard" data-url="https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja" data-auto-fetch="false">
+  <a href="https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://docs.cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png?hl=ja" alt="Spanner の読み取りと書き込みの有効期間  |  Google Cloud Documentation" loading="lazy">
     </div><div class="blogcard-content">
-      <div class="blogcard-title">https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja</div><div class="blogcard-url">https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja</div>
+      <div class="blogcard-title">Spanner の読み取りと書き込みの有効期間  |  Google Cloud Documentation</div><div class="blogcard-url">https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja</div>
     </div>
   </a>
 </div>
 </p>
 <p>Spannerのレプリカセットの構成については次の記事が非常にわかりやすい。</p>
-<p><div class="blogcard" data-url="https://zenn.dev/facengineer/articles/bca8790087b0e4" data-auto-fetch="true">
-  <a href="https://zenn.dev/facengineer/articles/bca8790087b0e4" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
+<p><div class="blogcard" data-url="https://zenn.dev/facengineer/articles/bca8790087b0e4" data-auto-fetch="false">
+  <a href="https://zenn.dev/facengineer/articles/bca8790087b0e4" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://res.cloudinary.com/zenn/image/upload/s--_d0bBcdy--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Cloud%2520Spanner%25E3%2581%25AE%25E3%2582%25B9%25E3%2583%2597%25E3%2583%25AA%25E3%2583%2583%25E3%2583%2588%25E5%2588%2586%25E6%2595%25A3%25E3%2582%2592%25E3%2582%258F%25E3%2581%258B%25E3%2581%25A3%25E3%2581%259F%25E6%25B0%2597%25E3%2581%25AB%25E3%2581%25AA%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kngnr%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc3YmY1NTZjODYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACAGSGT" alt="Cloud Spannerのスプリット分散をわかった気になる" loading="lazy">
     </div><div class="blogcard-content">
-      <div class="blogcard-title">https://zenn.dev/facengineer/articles/bca8790087b0e4</div><div class="blogcard-url">https://zenn.dev/facengineer/articles/bca8790087b0e4</div>
+      <div class="blogcard-title">Cloud Spannerのスプリット分散をわかった気になる</div><div class="blogcard-url">https://zenn.dev/facengineer/articles/bca8790087b0e4</div>
     </div>
   </a>
 </div>
@@ -636,27 +615,21 @@ if (!doNotTrack) {
 <li>書き込む行に対して排他ロックを取得する</li>
 </ul>
 <p>ちなみに複数のトランザクションが同時に実行された場合の挙動については次の記事が詳しかった。</p>
-<p><div class="blogcard" data-url="https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner" data-auto-fetch="true">
-  <a href="https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
+<p><div class="blogcard" data-url="https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner" data-auto-fetch="false">
+  <a href="https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://storage.googleapis.com/gweb-cloudblog-publish/images/10_-_Databases.max-2600x2600.jpg" alt="Cloud Spanner におけるトランザクションのロックについて | Google Cloud 公式ブログ" loading="lazy">
     </div><div class="blogcard-content">
-      <div class="blogcard-title">https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner</div><div class="blogcard-url">https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner</div>
+      <div class="blogcard-title">Cloud Spanner におけるトランザクションのロックについて | Google Cloud 公式ブログ</div><div class="blogcard-url">https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner</div>
     </div>
   </a>
 </div>
 </p>
 <h2 id="sql-のベスト-プラクティス--spanner--google-cloud">SQL のベスト プラクティス  |  Spanner  |  Google Cloud<a href="#sql-のベスト-プラクティス--spanner--google-cloud" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p><div class="blogcard" data-url="https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja" data-auto-fetch="true">
-  <a href="https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
+<p><div class="blogcard" data-url="https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja" data-auto-fetch="false">
+  <a href="https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://docs.cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png?hl=ja" alt="SQL のベスト プラクティス  |  Spanner  |  Google Cloud Documentation" loading="lazy">
     </div><div class="blogcard-content">
-      <div class="blogcard-title">https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja</div><div class="blogcard-url">https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja</div>
+      <div class="blogcard-title">SQL のベスト プラクティス  |  Spanner  |  Google Cloud Documentation</div><div class="blogcard-url">https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja</div>
     </div>
   </a>
 </div>
@@ -692,14 +665,11 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Singers s <span style="color:#66d9ef">JOIN</span><span style="color:#f92672">@</span><span style="color:#960050;background-color:#1e0010">{</span>JOIN_METHOD<span style="color:#f92672">=</span>HASH_JOIN<span style="color:#960050;background-color:#1e0010">}</span> Albums <span style="color:#66d9ef">AS</span> a
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">ON</span> a.SingerId <span style="color:#f92672">=</span> a.SingerId
 </span></span></code></pre></div><p>JOINアルゴリズムについては次の記事が詳しい。</p>
-<p><div class="blogcard" data-url="https://zenn.dev/facengineer/articles/cc0cab5c7e9a1c#join%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" data-auto-fetch="true">
-  <a href="https://zenn.dev/facengineer/articles/cc0cab5c7e9a1c#join%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
+<p><div class="blogcard" data-url="https://zenn.dev/facengineer/articles/cc0cab5c7e9a1c#join%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" data-auto-fetch="false">
+  <a href="https://zenn.dev/facengineer/articles/cc0cab5c7e9a1c#join%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://res.cloudinary.com/zenn/image/upload/s--0QeUHHkH--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Cloud%2520Spanner%25E3%2581%25AE%25E3%2583%2591%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25BC%25E3%2583%259E%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2581%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%258B%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%25AE%25E5%258B%2598%25E6%2589%2580%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kngnr%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc3YmY1NTZjODYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACAGSGT" alt="Cloud Spannerのパフォーマンスチューニングの勘所" loading="lazy">
     </div><div class="blogcard-content">
-      <div class="blogcard-title">https://zenn.dev/facengineer/articles/cc0cab5c7e9a1c#join%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0</div><div class="blogcard-url">https://zenn.dev/facengineer/articles/cc0cab5c7e9a1c#join%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0</div>
+      <div class="blogcard-title">Cloud Spannerのパフォーマンスチューニングの勘所</div><div class="blogcard-url">https://zenn.dev/facengineer/articles/cc0cab5c7e9a1c#join%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0</div>
     </div>
   </a>
 </div>
@@ -715,28 +685,22 @@ if (!doNotTrack) {
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> a.AlbumTitle <span style="color:#66d9ef">FROM</span> Albums a
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> STARTS_WITH(a.AlbumTitle, <span style="color:#f92672">@</span><span style="color:#66d9ef">prefix</span>);
 </span></span></code></pre></div><h2 id="クエリ実行プラン--spanner--google-cloud">クエリ実行プラン  |  Spanner  |  Google Cloud<a href="#クエリ実行プラン--spanner--google-cloud" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p><div class="blogcard" data-url="https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja" data-auto-fetch="true">
-  <a href="https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
+<p><div class="blogcard" data-url="https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja" data-auto-fetch="false">
+  <a href="https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://docs.cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png?hl=ja" alt="クエリ実行プラン  |  Spanner  |  Google Cloud Documentation" loading="lazy">
     </div><div class="blogcard-content">
-      <div class="blogcard-title">https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja</div><div class="blogcard-url">https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja</div>
+      <div class="blogcard-title">クエリ実行プラン  |  Spanner  |  Google Cloud Documentation</div><div class="blogcard-url">https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja</div>
     </div>
   </a>
 </div>
 </p>
 <p>CPUの消費量が多いクエリの場合、実行計画は30日間保存されている。</p>
 <p>確認方法は以下。</p>
-<p><div class="blogcard" data-url="https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries" data-auto-fetch="true">
-  <a href="https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
+<p><div class="blogcard" data-url="https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries" data-auto-fetch="false">
+  <a href="https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://docs.cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png?hl=ja" alt="クエリプラン ビジュアライザーを使用したクエリのチューニング  |  Spanner  |  Google Cloud Documentation" loading="lazy">
     </div><div class="blogcard-content">
-      <div class="blogcard-title">https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries</div><div class="blogcard-url">https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries</div>
+      <div class="blogcard-title">クエリプラン ビジュアライザーを使用したクエリのチューニング  |  Spanner  |  Google Cloud Documentation</div><div class="blogcard-url">https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries</div>
     </div>
   </a>
 </div>

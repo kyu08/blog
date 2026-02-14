@@ -14,16 +14,55 @@
       <pubDate>Wed, 10 Dec 2025 00:04:41 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/posts/bbf_kubernetes/</guid>
-      <description>0からKubernetesのキャッチアップがしたくて、高橋 あおいさん著の『つくって、壊して、直して学ぶ Kubernetes入門』を読んだ。 https://www.shoeisha.co.jp/book/detail/9784798183961https://www.shoeisha.co.jp/book/detail/9784798183961</description>
+      <description>0からKubernetesのキャッチアップがしたくて、高橋 あおいさん著の『つくって、壊して、直して学ぶ Kubernetes入門』を読んだ。 つ</description>
       <content>&lt;p&gt;0からKubernetesのキャッチアップがしたくて、高橋 あおいさん著の『つくって、壊して、直して学ぶ Kubernetes入門』を読んだ。&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; data-auto-fetch=&#34;true&#34;&gt;
-  &lt;a href=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
-      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
-        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
-        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://www.shoeisha.co.jp/static/book/og_image/9784798183961.jpg&#34; alt=&#34;つくって、壊して、直して学ぶ Kubernetes入門 | 翔泳社&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;https://www.shoeisha.co.jp/book/detail/9784798183961&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.shoeisha.co.jp/book/detail/9784798183961&lt;/div&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;つくって、壊して、直して学ぶ Kubernetes入門 | 翔泳社&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;動かなくっても、もう怖くない！
+
+トラブルシューティングを体験しながら学ぶ、実践的入門書。
+
+
+本書は、Kubernetesの実践的な知識をハンズオン形式で解説する書籍です。本書の特徴は、壊れにくいKubernetesをあえて壊しながら学ぶことで、初心者が挫折しやすいトラブルシューティングの知識や対応力が身に付けられることです。初心者でも、経験者でも、今度こそKubernetesがわかる！
+マンガや図解を多く掲載しているため視覚的に理解したい方にもおすすめです。
+
+
+・つくって、壊して、直して学ぶ
+- DockerfileからDockerコンテナをつくる
+- Kubernetesクラスタ上にアプリケーションをつくって、壊す
+- Serviceを壊す
+- kubectlでデバッグする
+- OutOfMemoryを発生させて、直す　...
+
+
+
+・Kubernetesの構築、運用だけでなくオブザーバビリティも解説
+トラブル解決にむけてより多くの情報を得るための「オブザーバビリティ」、そしてトラブルを検知するための「モニタリング」についても説明します。
+
+
+
+・豊富なイラストとマンガで見てわかる
+章ごと、ハンズオンごとに導入マンガを掲載し、視覚的にも学習内容を理解できるようにしています。むずかしい概念もイラストで丁寧に図解してあります。
+
+
+
+Part 1：つくってみようKubernetes
+Chapter 1　Dockerコンテナをつくってみる
+Chapter 2　Kubernetesクラスタをつくってみる
+Chapter 3　全体像の説明
+Chapter 4　アプリケーションをKubernetesクラスタ上につくる
+Part 2：アプリケーションを壊して学ぶKubernetes
+Chapter 5　トラブルシューティングガイドとkubectlコマンドの使い方
+Chapter 6　Kubernetes リソースをつくって壊そう
+Chapter 7　安全なステートレス・アプリケーションをつくるために
+Chapter 8　総復習：アプリケーションを直そう
+Part 3：壊れても動くKubernetes
+Chapter 9　Kubernetesの仕組み、アーキテクチャーを理解しよう
+Chapter 10　Kubernetesの開発ワークフローを理解しよう
+Chapter 11　オブザーバビリティとモニタリングに触れてみよう
+Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.shoeisha.co.jp/book/detail/9784798183961&lt;/div&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;
@@ -39,14 +78,11 @@
 &lt;/blockquote&gt;
 &lt;p&gt;という書籍説明の通り、ハンズオン形式でKubernetesを学ぶことができる。&lt;/p&gt;
 &lt;p&gt;また、&lt;a href=&#34;https://github.com/kubernetes-sigs/kind&#34; target=&#34;_blank&#34; &gt;Kind&lt;/a&gt;というツールを使ってローカルでKubernetesクラスタを構築するのでクラウドの登録や課金を気にする必要がないのも手軽でよかった。&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kubernetes-sigs/kind&#34; data-auto-fetch=&#34;true&#34;&gt;
-  &lt;a href=&#34;https://github.com/kubernetes-sigs/kind&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
-      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
-        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
-        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kubernetes-sigs/kind&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://github.com/kubernetes-sigs/kind&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/7d235d01400d5d3a46cae744bdb61e68f19d5013be26ea2092894efc5773af45/kubernetes-sigs/kind&#34; alt=&#34;GitHub - kubernetes-sigs/kind: Kubernetes IN Docker - local clusters for testing Kubernetes&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kubernetes-sigs/kind&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kubernetes-sigs/kind&lt;/div&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - kubernetes-sigs/kind: Kubernetes IN Docker - local clusters for testing Kubernetes&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;Kubernetes IN Docker - local clusters for testing Kubernetes - kubernetes-sigs/kind&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kubernetes-sigs/kind&lt;/div&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;
@@ -61,14 +97,11 @@
 &lt;a href=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; target=&#34;_blank&#34; &gt;商品ページ&lt;/a&gt;より引用&lt;/p&gt;
 &lt;p&gt;こんな感じでk9sを常時起動しながらコマンドを実行するスタイルで進めたところリアルタイムでPodの変化が見れて理解が捗った。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;k9s.webp&#34; alt=&#34;k9s.webp&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/derailed/k9s/&#34; data-auto-fetch=&#34;true&#34;&gt;
-  &lt;a href=&#34;https://github.com/derailed/k9s/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
-      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
-        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
-        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
-      &lt;/svg&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/derailed/k9s/&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://github.com/derailed/k9s/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://repository-images.githubusercontent.com/167596393/6dd20780-5c0e-11ea-8e26-7754ad171192&#34; alt=&#34;GitHub - derailed/k9s: 🐶 Kubernetes CLI To Manage Your Clusters In Style!&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/derailed/k9s/&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/derailed/k9s/&lt;/div&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - derailed/k9s: 🐶 Kubernetes CLI To Manage Your Clusters In Style!&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;🐶 Kubernetes CLI To Manage Your Clusters In Style! - derailed/k9s&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/derailed/k9s/&lt;/div&gt;
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;

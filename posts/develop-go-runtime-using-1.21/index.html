@@ -214,7 +214,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2023/09/11</time>
       
-    <span class="post-reading-time">1 min read (416 words)</span></div>
+    <span class="post-reading-time">1 min read (456 words)</span></div>
 
   
   
@@ -239,14 +239,11 @@ if (!doNotTrack) {
         <p>gc(go compiler)のコード（具体的には<a href="https://github.com/golang/go/tree/master/src/cmd/compile" target="_blank" ><code>go/src/cmd/compile</code></a>配下）を読むために必要な手順があったのでメモ代わりに書いておく。neovimでしか確認していないが他のエディタでもきっと同じような感じなはず。</p>
 <h2 id="packagesload-error-err-exit-status-2-stderr-panic-runtime-error-index-out-of-range--1--goroutine-1-running-cmdgointernallistcollectdepserrors"><code>packages.Load error: err: exit status 2: stderr: panic: runtime error: index out of range [-1]  goroutine 1 [running]: cmd/go/internal/list.collectDepsErrors...</code><a href="#packagesload-error-err-exit-status-2-stderr-panic-runtime-error-index-out-of-range--1--goroutine-1-running-cmdgointernallistcollectdepserrors" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>というエラーを出力してLSPが停止する。go1.21.0のバグだった模様。</p>
-<p><div class="blogcard" data-url="https://github.com/golang/go/issues/61816" data-auto-fetch="true">
-  <a href="https://github.com/golang/go/issues/61816" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
+<p><div class="blogcard" data-url="https://github.com/golang/go/issues/61816" data-auto-fetch="false">
+  <a href="https://github.com/golang/go/issues/61816" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://opengraph.githubassets.com/9647cb688b3d9d6ab029f32776ee5c4694abad4a3321a44235fe3234173cb10d/golang/go/issues/61816" alt="cmd/go: panic: runtime error: index out of range [-1] in collectDepsErrors · Issue #61816 · golang/go" loading="lazy">
     </div><div class="blogcard-content">
-      <div class="blogcard-title">https://github.com/golang/go/issues/61816</div><div class="blogcard-url">https://github.com/golang/go/issues/61816</div>
+      <div class="blogcard-title">cmd/go: panic: runtime error: index out of range [-1] in collectDepsErrors · Issue #61816 · golang/go</div><div class="blogcard-description">Related: #59905. Just observed this panic while looking into golang/vscode-go#2923: From the root directory of https://github.com/yaklang/yaklang: &gt; go list -e -compiled -test ./... panic: runtime ...</div><div class="blogcard-url">https://github.com/golang/go/issues/61816</div>
     </div>
   </a>
 </div>
