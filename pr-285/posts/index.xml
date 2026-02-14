@@ -15,7 +15,8 @@
       
       <guid>https://blog.kyu08.com/pr-285/posts/development-environment-2026/</guid>
       <description>2026年年始に複数の方（や会社）が開発環境について書いていたので2026年時点のスナップショットも兼ねて自分も流行りに乗って書いてみる。 https://blog-dry.com/entry/2026/01/02/145952https://blog-dry.com/entry/2026/01/02/145952</description>
-      <content>&lt;p&gt;2026年年始に複数の方（や会社）が開発環境について書いていたので2026年時点のスナップショットも兼ねて自分も流行りに乗って書いてみる。&lt;/p&gt;
+      <content>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;2026年年始に複数の方（や会社）が開発環境について書いていたので2026年時点のスナップショットも兼ねて自分も流行りに乗って書いてみる。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://blog-dry.com/entry/2026/01/02/145952&#34; data-auto-fetch=&#34;true&#34;&gt;
   &lt;a href=&#34;https://blog-dry.com/entry/2026/01/02/145952&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -338,14 +339,43 @@
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&amp;lt;/PRここまで&amp;gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;キーリマッパー&#34;&gt;キーリマッパー&lt;/h2&gt;
+&lt;p&gt;Karabiner-Elementsを使っています。&lt;/p&gt;
+&lt;p&gt;vimmerなのでAの左側のキーを&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;単押しでesc&lt;/li&gt;
+&lt;li&gt;長押しでctrl&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;となるように設定している。&lt;/p&gt;
+&lt;p&gt;あとはよくある左cmdを英数、右cmdをかなにリマップする設定とか、ctrl+shift+hjklで←↓↑→が入力する設定とかを入れている。&lt;/p&gt;
 &lt;h2 id=&#34;キーボード&#34;&gt;キーボード&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;7sPro&lt;/li&gt;
-&lt;li&gt;EPOMAKER SPLIT70&lt;/li&gt;
+&lt;li&gt;7sPro
+&lt;img src=&#34;7spro.webp&#34; alt=&#34;&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;2021/8から使っている。今は家でメインのキーボードとして使っている。&lt;/li&gt;
+&lt;li&gt;キースイッチは&lt;a href=&#34;https://shop.yushakobo.jp/products/5659&#34; target=&#34;_blank&#34; &gt;Yushakobo Fairy Silent Linear Switch&lt;/a&gt;を使用。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;/li&gt;
+&lt;li&gt;EPOMAKER SPLIT70
+&lt;ul&gt;
+&lt;li&gt;2026/1に買って職場で使っている。分割キーボードかつガスケットマウントでとても打鍵感が良い。&lt;/li&gt;
+&lt;li&gt;キースイッチは同じく&lt;a href=&#34;https://shop.yushakobo.jp/products/5659&#34; target=&#34;_blank&#34; &gt;Yushakobo Fairy Silent Linear Switch&lt;/a&gt;を使用。&lt;/li&gt;
+&lt;li&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://epomaker.jp/products/epomaker-split70&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://epomaker.jp/products/epomaker-split70&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://epomaker.jp/products/epomaker-split70&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://epomaker.jp/products/epomaker-split70&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;fuwari&lt;/li&gt;
