@@ -214,10 +214,46 @@ azookeyも試したが辞書登録した単語の優先度が低いのが使い�
 ならissueを立てようよ...という話ではあるがちょっとこのところ忙しくそこまではできていない。
 
 ## CLI/TUIツール
+よく使っているCLI/TUIツールはこのあたり。
+
 - fzf
+    - ディレクトリ履歴移動やファイル検索などあらゆるスクリプトで使っている。
 - lazygit
+    - gitの操作はすべてlazygitでやっている。
+        ![](lazygit.webp)
+    - add commit push pullなどの日常の操作やブランチ操作などをかなり少ないキー入力で行えるのがとても便利。
+    - `git rebase -i`相当のことができたり、commitの一部だけstagingに戻したりと細かいこともできる。
+    - ここ2年くらいで細々とPRを送っており、去年末頃に9番目にcommitが多い人になれた。
+        ![](lazygit-contibutors.webp)
 - k9s
-- fzf-make
+    - GKEのリソースを見たり操作したりするときに使っている。とても便利。
+        ![](k9s.webp)
+        ![](k9s-pulse.webp)
+    - ログはあまり使いこなせてないのでDatadogやCloud Loggingを見ていることが多い。
+
+**<PRここから>**
+
+fzf-makeというmake targetやpnpm script, yarn script, npm script, just recipe, taskfileに定義されたtaskをfuzzy finder形式で選択、実行できるTUIを開発しています。
+
+![](fzf-make.gif)
+
+コマンド名やその内容を覚えずとも楽に実行できたり、履歴機能があるのが特徴です。
+
+次のようなコマンドでインストールできるのでぜひ使ってみてください。
+
+```sh
+brew install fzf-make
+```
+
+```sh
+cargo +1.90.0 install --locked fzf-make
+```
+
+スターもしてもらえると嬉しいです🙏
+
+https://github.com/kyu08/fzf-make
+
+**</PRここまで>**
 
 <!-- TODO: それぞれスクショかgifをはる -->
 
