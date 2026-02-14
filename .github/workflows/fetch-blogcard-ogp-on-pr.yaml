@@ -2,7 +2,7 @@ name: Fetch Blogcard OGP on PR
 
 on:
   pull_request:
-    types: [opened, synchronize]
+    types: [opened, synchronize, reopened]
 
 jobs:
   fetch-blogcard-ogp:
