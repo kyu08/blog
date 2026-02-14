@@ -214,7 +214,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/02/15</time>
       
-    <span class="post-reading-time">14 min read (6614 words)</span></div>
+    <span class="post-reading-time">14 min read (6664 words)</span></div>
 
   
     <span class="post-tags">
@@ -253,7 +253,14 @@ if (!doNotTrack) {
     <li><a href="#タスク管理">タスク管理</a></li>
     <li><a href="#ブラウザ">ブラウザ</a></li>
     <li><a href="#ime">IME</a></li>
-    <li><a href="#clituiツール">CLI/TUIツール</a></li>
+    <li><a href="#clituiツール">CLI/TUIツール</a>
+      <ul>
+        <li><a href="#fzf">fzf</a></li>
+        <li><a href="#lazygit">lazygit</a></li>
+        <li><a href="#k9s">k9s</a></li>
+        <li><a href="#fzf-make">fzf-make</a></li>
+      </ul>
+    </li>
     <li><a href="#キーリマッパー">キーリマッパー</a></li>
     <li><a href="#キーボード">キーボード</a></li>
     <li><a href="#その他">その他</a></li>
@@ -500,17 +507,22 @@ if (!doNotTrack) {
 <p>ならissueを立てんかい&hellip;という話ではあるがちょっとこのところ忙しくそこまではできていない。</p>
 <h2 id="clituiツール">CLI/TUIツール<a href="#clituiツール" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>よく使っているCLI/TUIツールはこのあたり。</p>
+<h3 id="fzf">fzf<a href="#fzf" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p><div class="blogcard" data-url="https://github.com/junegunn/fzf" data-auto-fetch="false">
+  <a href="https://github.com/junegunn/fzf" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://repository-images.githubusercontent.com/13807606/b261cfc9-ec9c-4842-a7dd-366e6674cb50" alt="GitHub - junegunn/fzf: :cherry_blossom: A command-line fuzzy finder" loading="lazy">
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">GitHub - junegunn/fzf: :cherry_blossom: A command-line fuzzy finder</div><div class="blogcard-description">:cherry_blossom: A command-line fuzzy finder. Contribute to junegunn/fzf development by creating an account on GitHub.</div><div class="blogcard-url">https://github.com/junegunn/fzf</div>
+    </div>
+  </a>
+</div>
+</p>
 <ul>
-<li>fzf
-<ul>
-<li><a href="https://github.com/junegunn/fzf" target="_blank" >https://github.com/junegunn/fzf</a></li>
 <li>言わずと知れたあいまい検索ツール。</li>
 <li>ディレクトリ履歴移動やファイル検索などあらゆるスクリプトで使っている。</li>
 </ul>
-</li>
-<li>lazygit
-<ul>
-<li><div class="blogcard" data-url="https://github.com/jesseduffield/lazygit" data-auto-fetch="false">
+<h3 id="lazygit">lazygit<a href="#lazygit" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p><div class="blogcard" data-url="https://github.com/jesseduffield/lazygit" data-auto-fetch="false">
   <a href="https://github.com/jesseduffield/lazygit" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
       <img src="https://opengraph.githubassets.com/d087a11950ff92ffeca5c9f07caf921b1648e797b44d25854544099a69d2c482/jesseduffield/lazygit" alt="GitHub - jesseduffield/lazygit: simple terminal UI for git commands" loading="lazy">
     </div><div class="blogcard-content">
@@ -518,31 +530,38 @@ if (!doNotTrack) {
     </div>
   </a>
 </div>
-</li>
+
+<img src="lazygit.webp" alt=""></p>
+<ul>
 <li>gitのTUIクライアント。</li>
-<li>gitの操作はすべてlazygitでやっている。
-<img src="lazygit.webp" alt=""></li>
+<li>gitの操作はすべてlazygitでやっている。</li>
 <li>add commit push pullなどの日常の操作やブランチ操作などをかなり少ないキー入力で行えるのがとても便利。</li>
 <li><code>git rebase -i</code>相当のことができたり、commitの一部だけstagingに戻したりと細かいこともできる。</li>
-<li>ここ2年くらいで細々とPRを送っており、去年末頃に9番目にcommitが多い人になれた。
-<img src="lazygit-contibutors.webp" alt=""></li>
+<li>ここ2年くらいで細々とPRを送っており、去年末頃に9番目にcommitが多い人になることができた。</li>
 </ul>
-</li>
-<li>k9s
-<ul>
-<li><a href="https://github.com/derailed/k9s" target="_blank" >https://github.com/derailed/k9s</a></li>
-<li>GKEのリソースを見たり操作したりするときに使っている。とても便利。（画像はサンプル用にkindでローカル起動したクラスタのもの）
+<p><img src="lazygit-contibutors.webp" alt=""></p>
+<h3 id="k9s">k9s<a href="#k9s" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p><div class="blogcard" data-url="https://github.com/derailed/k9s" data-auto-fetch="false">
+  <a href="https://github.com/derailed/k9s" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://repository-images.githubusercontent.com/167596393/6dd20780-5c0e-11ea-8e26-7754ad171192" alt="GitHub - derailed/k9s: 🐶 Kubernetes CLI To Manage Your Clusters In Style!" loading="lazy">
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">GitHub - derailed/k9s: 🐶 Kubernetes CLI To Manage Your Clusters In Style!</div><div class="blogcard-description">🐶 Kubernetes CLI To Manage Your Clusters In Style! - derailed/k9s</div><div class="blogcard-url">https://github.com/derailed/k9s</div>
+    </div>
+  </a>
+</div>
+
 <img src="k9s.webp" alt="">
-<img src="k9s-pulse.webp" alt=""></li>
+<img src="k9s-pulse.webp" alt=""></p>
+<ul>
+<li>GKEのリソースを見たり操作したりするときに使っている。とても便利。（画像はサンプル用にkindでローカル起動したクラスタのもの）</li>
 <li>ログはあまり使いこなせてないので普段の開発ではDatadogやCloud Loggingを見ていることが多い。</li>
 </ul>
-</li>
-</ul>
 <p><strong>&lt;PRここから&gt;</strong></p>
-<p>fzf-makeというmake targetをfuzzy finder形式で選択、実行できるTUIを開発しています。</p>
+<h3 id="fzf-make">fzf-make<a href="#fzf-make" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>fzf-makeというmake targetをfuzzy finder形式で選択、実行できるTUIを開発している。</p>
 <p><img src="fzf-make.gif" alt=""></p>
-<p>コマンド名やその内容を覚えずとも楽に実行できたり、履歴機能があるのが特徴です。</p>
-<p>現在は<code>Makefile</code>に定義されたmake target以外にも以下のようなコマンドに対応しています。</p>
+<p>コマンド名やその内容を覚えずとも楽に実行できたり、履歴機能があるのが特徴。</p>
+<p>現在は<code>Makefile</code>に定義されたmake target以外にも以下のようなコマンドに対応している。</p>
 <ul>
 <li><code>package.json</code>の<code>scripts</code>に定義されたコマンド(pnpm, yarn, npmに対応)</li>
 <li><code>justfile</code>に定義されたrecipe</li>
@@ -677,7 +696,14 @@ if (!doNotTrack) {
     <li><a href="#タスク管理">タスク管理</a></li>
     <li><a href="#ブラウザ">ブラウザ</a></li>
     <li><a href="#ime">IME</a></li>
-    <li><a href="#clituiツール">CLI/TUIツール</a></li>
+    <li><a href="#clituiツール">CLI/TUIツール</a>
+      <ul>
+        <li><a href="#fzf">fzf</a></li>
+        <li><a href="#lazygit">lazygit</a></li>
+        <li><a href="#k9s">k9s</a></li>
+        <li><a href="#fzf-make">fzf-make</a></li>
+      </ul>
+    </li>
     <li><a href="#キーリマッパー">キーリマッパー</a></li>
     <li><a href="#キーボード">キーボード</a></li>
     <li><a href="#その他">その他</a></li>

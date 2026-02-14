@@ -252,17 +252,22 @@
 &lt;p&gt;ならissueを立てんかい&amp;hellip;という話ではあるがちょっとこのところ忙しくそこまではできていない。&lt;/p&gt;
 &lt;h2 id=&#34;clituiツール&#34;&gt;CLI/TUIツール&lt;/h2&gt;
 &lt;p&gt;よく使っているCLI/TUIツールはこのあたり。&lt;/p&gt;
+&lt;h3 id=&#34;fzf&#34;&gt;fzf&lt;/h3&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/junegunn/fzf&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://github.com/junegunn/fzf&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://repository-images.githubusercontent.com/13807606/b261cfc9-ec9c-4842-a7dd-366e6674cb50&#34; alt=&#34;GitHub - junegunn/fzf: :cherry_blossom: A command-line fuzzy finder&#34; loading=&#34;lazy&#34;&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - junegunn/fzf: :cherry_blossom: A command-line fuzzy finder&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;:cherry_blossom: A command-line fuzzy finder. Contribute to junegunn/fzf development by creating an account on GitHub.&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/junegunn/fzf&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;fzf
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/junegunn/fzf&#34; target=&#34;_blank&#34; &gt;https://github.com/junegunn/fzf&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;言わずと知れたあいまい検索ツール。&lt;/li&gt;
 &lt;li&gt;ディレクトリ履歴移動やファイル検索などあらゆるスクリプトで使っている。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;lazygit
-&lt;ul&gt;
-&lt;li&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/jesseduffield/lazygit&#34; data-auto-fetch=&#34;false&#34;&gt;
+&lt;h3 id=&#34;lazygit&#34;&gt;lazygit&lt;/h3&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/jesseduffield/lazygit&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/jesseduffield/lazygit&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
       &lt;img src=&#34;https://opengraph.githubassets.com/d087a11950ff92ffeca5c9f07caf921b1648e797b44d25854544099a69d2c482/jesseduffield/lazygit&#34; alt=&#34;GitHub - jesseduffield/lazygit: simple terminal UI for git commands&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
@@ -270,31 +275,38 @@
     &lt;/div&gt;
   &lt;/a&gt;
 &lt;/div&gt;
-&lt;/li&gt;
+
+&lt;img src=&#34;lazygit.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;gitのTUIクライアント。&lt;/li&gt;
-&lt;li&gt;gitの操作はすべてlazygitでやっている。
-&lt;img src=&#34;lazygit.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;gitの操作はすべてlazygitでやっている。&lt;/li&gt;
 &lt;li&gt;add commit push pullなどの日常の操作やブランチ操作などをかなり少ないキー入力で行えるのがとても便利。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git rebase -i&lt;/code&gt;相当のことができたり、commitの一部だけstagingに戻したりと細かいこともできる。&lt;/li&gt;
-&lt;li&gt;ここ2年くらいで細々とPRを送っており、去年末頃に9番目にcommitが多い人になれた。
-&lt;img src=&#34;lazygit-contibutors.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;ここ2年くらいで細々とPRを送っており、去年末頃に9番目にcommitが多い人になることができた。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;k9s
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/derailed/k9s&#34; target=&#34;_blank&#34; &gt;https://github.com/derailed/k9s&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;GKEのリソースを見たり操作したりするときに使っている。とても便利。（画像はサンプル用にkindでローカル起動したクラスタのもの）
+&lt;p&gt;&lt;img src=&#34;lazygit-contibutors.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;k9s&#34;&gt;k9s&lt;/h3&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/derailed/k9s&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://github.com/derailed/k9s&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://repository-images.githubusercontent.com/167596393/6dd20780-5c0e-11ea-8e26-7754ad171192&#34; alt=&#34;GitHub - derailed/k9s: 🐶 Kubernetes CLI To Manage Your Clusters In Style!&#34; loading=&#34;lazy&#34;&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - derailed/k9s: 🐶 Kubernetes CLI To Manage Your Clusters In Style!&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;🐶 Kubernetes CLI To Manage Your Clusters In Style! - derailed/k9s&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/derailed/k9s&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
 &lt;img src=&#34;k9s.webp&#34; alt=&#34;&#34;&gt;
-&lt;img src=&#34;k9s-pulse.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;k9s-pulse.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GKEのリソースを見たり操作したりするときに使っている。とても便利。（画像はサンプル用にkindでローカル起動したクラスタのもの）&lt;/li&gt;
 &lt;li&gt;ログはあまり使いこなせてないので普段の開発ではDatadogやCloud Loggingを見ていることが多い。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;&amp;lt;PRここから&amp;gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;fzf-makeというmake targetをfuzzy finder形式で選択、実行できるTUIを開発しています。&lt;/p&gt;
+&lt;h3 id=&#34;fzf-make&#34;&gt;fzf-make&lt;/h3&gt;
+&lt;p&gt;fzf-makeというmake targetをfuzzy finder形式で選択、実行できるTUIを開発している。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;fzf-make.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;コマンド名やその内容を覚えずとも楽に実行できたり、履歴機能があるのが特徴です。&lt;/p&gt;
-&lt;p&gt;現在は&lt;code&gt;Makefile&lt;/code&gt;に定義されたmake target以外にも以下のようなコマンドに対応しています。&lt;/p&gt;
+&lt;p&gt;コマンド名やその内容を覚えずとも楽に実行できたり、履歴機能があるのが特徴。&lt;/p&gt;
+&lt;p&gt;現在は&lt;code&gt;Makefile&lt;/code&gt;に定義されたmake target以外にも以下のようなコマンドに対応している。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;package.json&lt;/code&gt;の&lt;code&gt;scripts&lt;/code&gt;に定義されたコマンド(pnpm, yarn, npmに対応)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;justfile&lt;/code&gt;に定義されたrecipe&lt;/li&gt;
