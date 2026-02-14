@@ -222,9 +222,11 @@ azooKeyも試したが辞書登録した単語の優先度が低いのが使い�
 よく使っているCLI/TUIツールはこのあたり。
 
 - fzf
+    - https://github.com/junegunn/fzf
     - 言わずと知れたあいまい検索ツール。
     - ディレクトリ履歴移動やファイル検索などあらゆるスクリプトで使っている。
 - lazygit
+    - https://github.com/jesseduffield/lazygit
     - gitのTUIクライアント。
     - gitの操作はすべてlazygitでやっている。
         ![](lazygit.webp)
@@ -233,6 +235,7 @@ azooKeyも試したが辞書登録した単語の優先度が低いのが使い�
     - ここ2年くらいで細々とPRを送っており、去年末頃に9番目にcommitが多い人になれた。
         ![](lazygit-contibutors.webp)
 - k9s
+    - https://github.com/derailed/k9s
     - GKEのリソースを見たり操作したりするときに使っている。とても便利。（画像はサンプル用にkindでローカル起動したクラスタのもの）
         ![](k9s.webp)
         ![](k9s-pulse.webp)
