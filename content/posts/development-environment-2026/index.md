@@ -37,7 +37,7 @@ https://tech.pepabo.com/2026/01/23/development-environment-2026/ [^1]
 
 https://store.steampowered.com/sale/steammachine
 
-（厳密にはOSの話ではないが）5年くらい前に買ったM1 MacBook Airの物持ちが良すぎて新しいMacを買うタイミングがなかなか来ない。新しいMacを買うのは楽しいので買いたい気持ちもありつついかんせん困ってないのでなあ...の気持ち。
+5年くらい前に買ったM1 MacBook Air(16GB RAM)の物持ちが良すぎて新しいMacを買うタイミングがなかなか来ない。新しいMacを買うのは楽しいので買いたい気持ちもありつついかんせん困ってないのでなあ...の気持ち。
 
 ## エディタ
 （就職した）2021年くらいからNeovimを使っている。厳密には2022年ごろまではJetBrains系のエディタと併用していたが、そこからはNeovimのみを使っている。
@@ -46,25 +46,26 @@ https://store.steampowered.com/sale/steammachine
 
 AI時代になって設定を自分好みにするコストが格段に減ったのでNeovimのカスタマイズが捗っており嬉しい。（luaの書き方を覚える前にAI時代が来てしまった...）
 
-少し前にこの記事を参考にして起動を高速化したりした。（最近は測ってないが多分今も30msくらいで起動するはず）
+久々に測ってみたら起動時間が60msくらいになっていたので気が向いたらもうちょっとチューニングしてもいいかもしれない。
 
 <!-- TODO: neovimまわりはもうちょい書くことありそう? -->
 <!-- TODO: スクショを貼る？ -->
 
 ## AIツール
 <!-- TODO: GitHub Copilotを追加する。インライン補完とGitHub上でいい感じに依頼するときに使っている -->
-ClaudeとDevinを使っている。
+ClaudeとDevin、GitHub Copilotを使っている。
 
 ClaudeはDesktop App経由で壁打ちや検索用途で使ったり、Claude Codeでコードを書いてもらったりしている。
 
 Claude Codeを使うときはNeovim plugin等ではなくtmuxのpaneを切ってそこで直接動かしている。
 
-Devinは主にAsk Devinを使ってコードベースの調査などに使っている。
+Devinは主にAsk Devinを使ってコードベースの調査などに使っている。レスポンスがめっちゃ早くてありがたい。
 
+GitHub Copilotはエディタのインライン補完で使ったり、GitHubのWebUI上でタスクを依頼したりするときに使っている。特にこのブログの機能開発ではよく使っている。（issueさえ書けばそのままWebUIからタスクを依頼できるのが便利）
 
 
 ## ターミナルエミュレータ
-Alacrittyを使っている。ターミナルにはタブがない方がcmd+wで誤爆したりとかが起きないので好きで使っている。正直早いかどうかはあまりわかってないが特に不満もない。
+Alacrittyを使っている。ターミナルにはタブ機能がない方がcmd+wで誤爆したりとかが起きないので好きで使っている。正直早いかどうかはあまりわかってないが特に不満もない。（少し前に日本語入力もいい感じになったし）
 
 https://github.com/alacritty/alacritty
 
@@ -77,17 +78,25 @@ tmux-fzfでのwindow切り替えが快適すぎて手放せない。（動作イ
 
 https://blog.kyu08.com/posts/tmux-fzf-window/
 
-<!-- TODO: スクショを貼る？ -->
+
+前述の通りalacrittyとの相性がいい感じなのでよほどのことがない限りこの組み合わせは変えなさそう。[^2]
+
+Status Lineはこんな感じにしている。
+
+![](tmux.webp)
+
+詳しくは後述するが、[nvim-orgmode/orgmode](https://github.com/nvim-orgmode/orgmode)でClock In(時間計測)しているタスクがあるときはそのタスク名と経過時間をStatus Lineに表示するようにしている。
+![](tmux-org-task.webp)
 
 <!-- TODO: gifを貼る？ -->
 
-前述の通りalacrittyとの相性がいい感じなのでよほどのことがない限りこの組み合わせは変えなさそう。[^2]
+![](tmux.mp4)
+
+tmuxの設定とか工夫を紹介する記事は別で書きたい。
 
 Zellijも試したことはあるが、自分の環境だとなぜか表示が崩れてしまうので使っていない。
 
 https://github.com/zellij-org/zellij
-
-tmuxの設定とか工夫を紹介する記事は別で書きたい。
 
 ## シェル
 zshを使っている。
@@ -129,6 +138,7 @@ https://github.com/asmvik/yabai
 
 https://github.com/asmvik/skhd
 
+<!-- TODO: 書き方が適当すぎる割にちゃんと書くのが面倒なので消してもいいかも -->
 よく使うのはこの辺のやつ。
 
 - windowを右半分に表示
@@ -176,6 +186,7 @@ Google日本語入力を使っている。
 <!-- TODO: azookeyも試したが... -->
 
 ## CLI/TUIツール
+- fzf
 - lazygit
 - k9s
 - fzf-make
