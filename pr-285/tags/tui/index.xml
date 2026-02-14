@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Thu, 12 Feb 2026 00:00:08 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-285/tags/tui/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Feb 2026 00:00:08 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-285/tags/tui/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>開発環境現状確認 2026</title>
       <link>https://blog.kyu08.com/pr-285/posts/development-environment-2026/</link>
-      <pubDate>Thu, 12 Feb 2026 00:00:08 +0900</pubDate>
+      <pubDate>Sat, 14 Feb 2026 00:00:08 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/pr-285/posts/development-environment-2026/</guid>
       <description>2026年年始に複数の方（や会社）が開発環境について書いていたので2026年時点のスナップショットも兼ねて自分も流行りに乗って書いてみる。 https://blog-dry.com/entry/2026/01/02/145952https://blog-dry.com/entry/2026/01/02/145952</description>
@@ -100,7 +100,14 @@
 &lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;ターミナルマルチプレクサ&#34;&gt;ターミナルマルチプレクサ&lt;/h2&gt;
 &lt;p&gt;tmuxを使っている。1セッションに好きなだけウィンドウを開く運用で使っている。&lt;/p&gt;
-&lt;p&gt;tmux-fzfでのwindow切り替えが快適すぎて手放せない。（動作イメージとか設定手順は過去にこちらに書いた。）&lt;/p&gt;
+&lt;p&gt;tmux-fzfでのwindow切り替えが便利すぎる。&lt;/p&gt;
+&lt;figure class=&#34;video&#34;&gt;
+  &lt;video controls preload=&#34;metadata&#34; width=&#34;800&#34;   &gt;
+    &lt;source src=&#34;https://blog.kyu08.com/pr-285/pr-285/posts/development-environment-2026/tmux.mp4&#34; type=&#34;video/mp4&#34;&gt;
+  &lt;/video&gt;
+  &lt;/figure&gt;
+
+&lt;p&gt;設定手順は過去にこちらに書いた。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://blog.kyu08.com/posts/tmux-fzf-window/&#34; data-auto-fetch=&#34;true&#34;&gt;
   &lt;a href=&#34;https://blog.kyu08.com/posts/tmux-fzf-window/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -118,9 +125,7 @@
 &lt;p&gt;&lt;img src=&#34;tmux.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;詳しくは後述するが、&lt;a href=&#34;https://github.com/nvim-orgmode/orgmode&#34; target=&#34;_blank&#34; &gt;nvim-orgmode/orgmode&lt;/a&gt;でClock In(時間計測)しているタスクがあるときはそのタスク名と経過時間をStatus Lineに表示するようにしている。
 &lt;img src=&#34;tmux-org-task.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;img src=&#34;tmux.mp4&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;tmuxの設定とか工夫を紹介する記事は別で書きたい。&lt;/p&gt;
+&lt;p&gt;その他のtmuxの設定とか工夫を紹介する記事は別で書きたい。&lt;/p&gt;
 &lt;p&gt;Zellijも試したことはあるが、自分の環境だとなぜか表示が崩れてしまうので使っていない。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/zellij-org/zellij&#34; data-auto-fetch=&#34;true&#34;&gt;
   &lt;a href=&#34;https://github.com/zellij-org/zellij&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
@@ -136,7 +141,7 @@
 &lt;/p&gt;
 &lt;h2 id=&#34;シェル&#34;&gt;シェル&lt;/h2&gt;
 &lt;p&gt;zshを使っている。&lt;/p&gt;
-&lt;p&gt;元々はネットに落ちているshellのコードが（fishよりも）動きやすいから、という理由で使っていたのを惰性で使っている。&lt;/p&gt;
+&lt;p&gt;元々はネットに落ちているshellのコードが（fishよりも）動きやすいから、という理由で使っていたのを惰性で使い続けている。&lt;/p&gt;
 &lt;p&gt;少し前にこの記事を参考にして起動を高速化したりした。（最近は測ってないが多分今も数10msくらいで起動するはず）&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://zenn.dev/fuzmare/articles/zsh-plugin-manager-cache&#34; data-auto-fetch=&#34;true&#34;&gt;
   &lt;a href=&#34;https://zenn.dev/fuzmare/articles/zsh-plugin-manager-cache&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
@@ -163,7 +168,32 @@
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;プロンプト表示にはstarshipを使っている。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/starship/starship&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/starship/starship&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/starship/starship&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/starship/starship&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;こんな感じでk8sのcontextとnamespaceを表示するようにしている。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;zsh.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;誤ってprod環境を壊すことがないようにこんな感じでcontextに&lt;code&gt;prod&lt;/code&gt;という文字列が含まれていたら目立つようにしている。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;zsh-k8s.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;設定はこんな感じ。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;kubernetes&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;format&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;[[$symbol]($style)\[ctx\]$context \[ns\]$namespace]($style) &amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;disabled&lt;/span&gt; = &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;contexts&lt;/span&gt; = [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  { &lt;span style=&#34;color:#a6e22e&#34;&gt;context_pattern&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.*dev.*&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;blue&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;symbol&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  { &lt;span style=&#34;color:#a6e22e&#34;&gt;context_pattern&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.*prod.*&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bold red&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;symbol&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;🔥 &amp;#34;&lt;/span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;その他の設定とか便利スクリプトを紹介する記事は別で書きたい。&lt;/p&gt;
 &lt;h2 id=&#34;ランチャー&#34;&gt;ランチャー&lt;/h2&gt;
 &lt;p&gt;AlfredとRaycastを併用している。&lt;/p&gt;
 &lt;p&gt;基本的に不満がないかつ操作性がRaycastよりも好みなので基本的にはAlfredを使っている。&lt;/p&gt;
