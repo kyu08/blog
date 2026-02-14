@@ -90,7 +90,7 @@ https://blog.kyu08.com/posts/tmux-fzf-window/
 
 前述の通りalacrittyとの相性がいい感じなのでよほどのことがない限りこの組み合わせは変えなさそう。[^2]
 
-Status Lineはこんな感じで画面下側に表示している。
+Status Lineはこんな感じで画面下側にwindow名と現在時刻を表示している。
 
 ![](tmux.webp)
 
@@ -100,9 +100,7 @@ Status Lineはこんな感じで画面下側に表示している。
 
 その他のtmuxの設定とか工夫を紹介する記事は別で書きたい。
 
-Zellijも試したことはあるが、自分の環境だとなぜか表示が崩れてしまうので使っていない。
-
-https://github.com/zellij-org/zellij
+[Zellij](https://github.com/zellij-org/zellij)も試したことはあるが、自分の環境だとなぜか表示が崩れてしまうので使っていない。
 
 ## シェル
 zshを使っている。
@@ -113,7 +111,7 @@ zshを使っている。
 
 https://zenn.dev/fuzmare/articles/zsh-plugin-manager-cache
 
-2024/4頃からzeno.zshを使っていてかなりよく使うコマンドの入力が効率化できた。snippetがいい感じに展開されるのは言わずもがな嬉しいが、`zeno-insert-snippet`でzenoに登録したsnippetをfzfで選択&挿入できるのがとても便利。設定ファイルはまだyaml形式で書いている。
+2024/4頃から[zeno.zsh](https://github.com/yuki-yano/zeno.zsh)を使っていてよく使うコマンドの実行がかなり効率化できている。snippetがいい感じに展開されるのは言わずもがな嬉しいが、`zeno-insert-snippet`でzenoに登録したsnippetをfzfで選択&挿入できるのがとても便利。設定ファイルはまだyaml形式で書いている。
 
 https://github.com/yuki-yano/zeno.zsh
 
@@ -186,7 +184,7 @@ M+1Code Nerd Font Monoを使っている。まるっとしていて好き。nerd
 
 https://github.com/nvim-orgmode/orgmode
 
-少し前まで素朴にこんな感じのファイルを毎日生成して管理していたが、期日が違うタスクをいい感じに管理したくて使い出した。
+少し前まで素朴にこんな感じのマークダウンファイルを毎日生成して管理していたが、期日が違うタスクをいい感じに管理したくて使い出した。
 ```markdown
 ## TODO
 - 実装
@@ -217,7 +215,7 @@ Google日本語入力を使っている。
 
 azookeyも試したが辞書登録した単語の優先度が低いのが使いづらくて使うのをやめてしまった。（ライブ変換はとても便利だった。）
 
-ならissueを立てようよ...という話ではあるがちょっとこのところ忙しくそこまではできていない。
+ならissueを立てんかい...という話ではあるがちょっとこのところ忙しくそこまではできていない。
 
 ## CLI/TUIツール
 よく使っているCLI/TUIツールはこのあたり。
