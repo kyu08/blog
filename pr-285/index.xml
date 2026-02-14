@@ -378,7 +378,23 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;fuwari&lt;/li&gt;
+&lt;li&gt;fuwari
+&lt;ul&gt;
+&lt;li&gt;スクリーンショットを付箋のように画面上に貼り付けておけるmacアプリ。ちょっとメモとしてみたいときにとても便利&lt;/li&gt;
+&lt;li&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kentya6/Fuwari&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/kentya6/Fuwari&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kentya6/Fuwari&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kentya6/Fuwari&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
