@@ -214,7 +214,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/02/14</time>
       
-    <span class="post-reading-time">9 min read (4121 words)</span></div>
+    <span class="post-reading-time">9 min read (4439 words)</span></div>
 
   
     <span class="post-tags">
@@ -319,18 +319,31 @@ if (!doNotTrack) {
 <p>5年くらい前に買ったM1 MacBook Air(16GB RAM)の物持ちが良すぎて新しいMacを買うタイミングがなかなか来ない。新しいMacを買うのは楽しいので買いたい気持ちもありつついかんせん困ってないのでなあ&hellip;の気持ち。</p>
 <h2 id="エディタ">エディタ<a href="#エディタ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>（就職した）2021年くらいからNeovimを使っている。厳密には2022年ごろまではJetBrains系のエディタと併用していたが、そこからはNeovimのみを使っている。</p>
-<p>キーボードだけで操作しやすいのと起動が早いのとカスタマイズしやすいのが好きでつかっている。（もちろんvimの操作性も気に入っている）</p>
-<p>AI時代になって設定を自分好みにするコストが格段に減ったのでNeovimのカスタマイズが捗っており嬉しい。（luaの書き方を覚える前にAI時代が来てしまった&hellip;）</p>
-<p>久々に測ってみたら起動時間が60msくらいになっていたので気が向いたらもうちょっとチューニングしてもいいかもしれない。</p>
 <p><img src="neovim.webp" alt=""></p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<p>キーボードだけで操作しやすいのと起動が早いのとカスタマイズしやすいのが好きでつかっている。（もちろんvimの操作性も気に入っている）</p>
+<p>最近は<a href="https://github.com/sindrets/diffview.nvim" target="_blank" >diffview.nvim</a>を使ってPRのdiffはすべてNeovim上で見るようにしている。（octo.nvimにコメント周りのバグがあったのでレビューコメントの書き込みはGitHubのWebUIから行っている。）</p>
+<p><div class="blogcard" data-url="https://github.com/sindrets/diffview.nvim" data-auto-fetch="true">
+  <a href="https://github.com/sindrets/diffview.nvim" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail blogcard-thumbnail-placeholder">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">https://github.com/sindrets/diffview.nvim</div><div class="blogcard-url">https://github.com/sindrets/diffview.nvim</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>今はGo/TypeScript/Rustあたりしか書いてないので特に困ってないが、JVM系をNeovimで書こうとすると若干辛みがあるかもしれない。（ちょっとだけJava/ScalaをNeovimで書いたことがあるが重かったり不安定だったりして辛かった）</p>
+<p>AI時代になって設定を自分好みにするコストが格段に減ったのでNeovimのカスタマイズが捗っており嬉しい。（luaの書き方を覚える前にAI時代が来てしまった&hellip;）</p>
+<p>久々に起動時間を測ってみたら60msくらいになっていたので気が向いたらもうちょっとチューニングしてもいいかもしれない。</p>
+<p>一時期cursorも頑張って設定ファイルを作り込んだうえで慣れようとしてみたが、どうもVSCode系エディタとは思想が合わなかったので結局数日で戻ってきてしまった。</p>
 <h2 id="aiツール">AIツール<a href="#aiツール" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>ClaudeとDevin、GitHub Copilotを使っている。</p>
 <p>ClaudeはDesktop App経由で壁打ちや検索用途で使ったり、Claude Codeでコードを書いてもらったりしている。</p>
 <p>Claude Codeを使うときはNeovim plugin等ではなくtmuxのpaneを切ってそこで直接動かしている。</p>
 <p>Devinは主にAsk Devinを使ってコードベースの調査などに使っている。レスポンスがめっちゃ早くてありがたい。</p>
-<p>GitHub Copilotはエディタのインライン補完で使ったり、GitHubのWebUI上でタスクを依頼したりするときに使っている。特にこのブログの機能開発ではよく使っている。（issueさえ書けばそのままWebUIからタスクを依頼できるのが便利）</p>
+<p>GitHub Copilotはエディタのインライン補完で使ったり、GitHubのWebUI上でタスクを依頼したりするときに使っている。特にこのブログの機能開発ではよく使っている。（issueさえ書けばそのままWebUIからタスクを依頼できて便利）</p>
 <h2 id="ターミナルエミュレータ">ターミナルエミュレータ<a href="#ターミナルエミュレータ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>Alacrittyを使っている。ターミナルにはタブ機能がない方がcmd+wで誤爆したりとかが起きないので好きで使っている。正直早いかどうかはあまりわかってないが特に不満もない。（少し前に日本語入力もいい感じになったし）</p>
 <p><div class="blogcard" data-url="https://github.com/alacritty/alacritty" data-auto-fetch="true">
