@@ -4,8 +4,17 @@
 {{- $image := .image -}}
 {{- $autoFetch := .autoFetch | default "true" -}}
 
-{{- /* title/description/imageが指定されていない場合は自動取得を有効化 */ -}}
-{{- if and (not $title) (not $description) (not $image) -}}
+{{- /* キャッシュデータを確認 */ -}}
+{{- $cachedData := index site.Data.blogcard_cache $url -}}
+
+{{- /* キャッシュがある場合はそれを使用 */ -}}
+{{- if $cachedData -}}
+  {{- $title = $cachedData.title -}}
+  {{- $description = $cachedData.description -}}
+  {{- $image = $cachedData.image -}}
+  {{- $autoFetch = "false" -}}
+{{- else if and (not $title) (not $description) (not $image) -}}
+  {{- /* title/description/imageが指定されていない場合は自動取得を有効化 */ -}}
   {{- $autoFetch = "true" -}}
 {{- end -}}
 
