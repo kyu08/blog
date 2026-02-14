@@ -13,7 +13,7 @@
   }
 
   // タイムアウト付きfetch
-  async function fetchWithTimeout(url, timeout = 5000) {
+  async function fetchWithTimeout(url, timeout = 10000) {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), timeout);
 
@@ -44,7 +44,7 @@
       log(`Trying proxy ${i + 1}/${PROXY_SERVICES.length}:`, proxyUrl);
 
       try {
-        const response = await fetchWithTimeout(proxyUrl, 5000);
+        const response = await fetchWithTimeout(proxyUrl, 10000);
 
         if (!response.ok) {
           log(`Proxy ${i + 1} failed with status:`, response.status);
@@ -264,13 +264,14 @@
 
     log('Processing', cardsToProcess.length, 'blog cards (excluded footnotes)');
 
-    await Promise.all(cardsToProcess.map(async (card) => {
+    // 順次処理に変更して、プロキシへの負荷とレート制限を回避
+    for (const card of cardsToProcess) {
       const url = card.getAttribute('data-url');
       log('Processing card for URL:', url);
 
       if (!url) {
         log('No URL found, skipping');
-        return;
+        continue;
       }
 
       // ローディング状態を追加
@@ -288,7 +289,7 @@
       if (ogpData) {
         updateBlogCard(card, ogpData);
       }
-    }));
+    }
   }
 
   // DOMContentLoaded後に初期化
