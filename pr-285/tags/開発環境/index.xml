@@ -291,12 +291,53 @@
 &lt;p&gt;azookeyも試したが辞書登録した単語の優先度が低いのが使いづらくて使うのをやめてしまった。（ライブ変換はとても便利だった。）&lt;/p&gt;
 &lt;p&gt;ならissueを立てようよ&amp;hellip;という話ではあるがちょっとこのところ忙しくそこまではできていない。&lt;/p&gt;
 &lt;h2 id=&#34;clituiツール&#34;&gt;CLI/TUIツール&lt;/h2&gt;
+&lt;p&gt;よく使っているCLI/TUIツールはこのあたり。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;fzf&lt;/li&gt;
-&lt;li&gt;lazygit&lt;/li&gt;
-&lt;li&gt;k9s&lt;/li&gt;
-&lt;li&gt;fzf-make&lt;/li&gt;
+&lt;li&gt;fzf
+&lt;ul&gt;
+&lt;li&gt;ディレクトリ履歴移動やファイル検索などあらゆるスクリプトで使っている。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;lazygit
+&lt;ul&gt;
+&lt;li&gt;gitの操作はすべてlazygitでやっている。
+&lt;img src=&#34;lazygit.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;add commit push pullなどの日常の操作やブランチ操作などをかなり少ないキー入力で行えるのがとても便利。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git rebase -i&lt;/code&gt;相当のことができたり、commitの一部だけstagingに戻したりと細かいこともできる。&lt;/li&gt;
+&lt;li&gt;ここ2年くらいで細々とPRを送っており、去年末頃に9番目にcommitが多い人になれた。
+&lt;img src=&#34;lazygit-contibutors.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;k9s
+&lt;ul&gt;
+&lt;li&gt;GKEのリソースを見たり操作したりするときに使っている。とても便利。
+&lt;img src=&#34;k9s.webp&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;k9s-pulse.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;ログはあまり使いこなせてないのでDatadogやCloud Loggingを見ていることが多い。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&amp;lt;PRここから&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;fzf-makeというmake targetやpnpm script, yarn script, npm script, just recipe, taskfileに定義されたtaskをfuzzy finder形式で選択、実行できるTUIを開発しています。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;コマンド名やその内容を覚えずとも楽に実行できたり、履歴機能があるのが特徴です。&lt;/p&gt;
+&lt;p&gt;次のようなコマンドでインストールできるのでぜひ使ってみてください。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install fzf-make
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cargo +1.90.0 install --locked fzf-make
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;スターもしてもらえると嬉しいです🙏&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/fzf-make&#34; data-auto-fetch=&#34;true&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
+      &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
+        &lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34;&gt;&lt;/path&gt;
+        &lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;https://github.com/kyu08/fzf-make&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/fzf-make&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;lt;/PRここまで&amp;gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;キーリマッパー&#34;&gt;キーリマッパー&lt;/h2&gt;
 &lt;h2 id=&#34;キーボード&#34;&gt;キーボード&lt;/h2&gt;
