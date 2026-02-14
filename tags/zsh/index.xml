@@ -323,7 +323,7 @@
 &lt;p&gt;Git操作のほとんどはGitのTUIクライアントであるLazygitを使っています。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/jesseduffield/lazygit&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/jesseduffield/lazygit&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
-      &lt;img src=&#34;https://opengraph.githubassets.com/4910850cd1865fe081e0dc56aafe1cd46178b8ceab0bb9f29e4022121b3621b4/jesseduffield/lazygit&#34; alt=&#34;GitHub - jesseduffield/lazygit: simple terminal UI for git commands&#34; loading=&#34;lazy&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/d087a11950ff92ffeca5c9f07caf921b1648e797b44d25854544099a69d2c482/jesseduffield/lazygit&#34; alt=&#34;GitHub - jesseduffield/lazygit: simple terminal UI for git commands&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
       &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - jesseduffield/lazygit: simple terminal UI for git commands&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;simple terminal UI for git commands. Contribute to jesseduffield/lazygit development by creating an account on GitHub.&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/jesseduffield/lazygit&lt;/div&gt;
     &lt;/div&gt;
@@ -376,7 +376,7 @@
 &lt;p&gt;前述の通りAlacrittyにはタブ機能がないため、tmuxを使ってターミナルのタブ管理を行っています。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/tmux/tmux&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/tmux/tmux&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
-      &lt;img src=&#34;https://opengraph.githubassets.com/834b5e4e3bbd4874c0119836f87d69c8dcb969a7a69297f4d90457fcf86320bb/tmux/tmux&#34; alt=&#34;GitHub - tmux/tmux: tmux source code&#34; loading=&#34;lazy&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/e4d9c1e7f99ff1bb5238392dde864d29fe0c2e1ff7b34db961910fe4de974d5b/tmux/tmux&#34; alt=&#34;GitHub - tmux/tmux: tmux source code&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
       &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - tmux/tmux: tmux source code&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;tmux source code. Contribute to tmux/tmux development by creating an account on GitHub.&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/tmux/tmux&lt;/div&gt;
     &lt;/div&gt;
@@ -406,7 +406,7 @@
 &lt;p&gt;どうにかもう少し楽にウィンドウ切り替えをできないかと探していたところsainnhe/tmux-fzfに出会いました。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/sainnhe/tmux-fzf&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/sainnhe/tmux-fzf&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
-      &lt;img src=&#34;https://opengraph.githubassets.com/fcc847e60558715c04cf39a2e5495f4c1fb67f1ac39ae1766253352d68d737bf/sainnhe/tmux-fzf&#34; alt=&#34;GitHub - sainnhe/tmux-fzf: Use fzf to manage your tmux work environment!&#34; loading=&#34;lazy&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/11d50a74eea5bfeadad3d6f126081de1866d3b6f19e43a9bccdf635c0e58b4b2/sainnhe/tmux-fzf&#34; alt=&#34;GitHub - sainnhe/tmux-fzf: Use fzf to manage your tmux work environment!&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
       &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - sainnhe/tmux-fzf: Use fzf to manage your tmux work environment!&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;Use fzf to manage your tmux work environment! Contribute to sainnhe/tmux-fzf development by creating an account on GitHub.&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/sainnhe/tmux-fzf&lt;/div&gt;
     &lt;/div&gt;

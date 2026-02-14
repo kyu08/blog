@@ -2,16 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.kyu08.com/posts/kaizodo-wo-ageru/</loc>
-    <lastmod>2026-02-11T13:00:41+09:00</lastmod>
-  </url><url>
     <loc>https://blog.kyu08.com/</loc>
-    <lastmod>2026-02-11T13:00:41+09:00</lastmod>
+    <lastmod>2026-02-15T00:00:08+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/cli/</loc>
+    <lastmod>2026-02-15T00:00:08+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/neovim/</loc>
+    <lastmod>2026-02-15T00:00:08+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/</loc>
-    <lastmod>2026-02-11T13:00:41+09:00</lastmod>
+    <lastmod>2026-02-15T00:00:08+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/</loc>
+    <lastmod>2026-02-15T00:00:08+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/tui/</loc>
+    <lastmod>2026-02-15T00:00:08+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB/</loc>
+    <lastmod>2026-02-15T00:00:08+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83/</loc>
+    <lastmod>2026-02-15T00:00:08+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/development-environment-2026/</loc>
+    <lastmod>2026-02-15T00:00:08+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/kaizodo-wo-ageru/</loc>
     <lastmod>2026-02-11T13:00:41+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/%E3%82%BD%E3%83%95%E3%83%88%E3%82%B9%E3%82%AD%E3%83%AB/</loc>
@@ -70,9 +88,6 @@
   </url><url>
     <loc>https://blog.kyu08.com/tags/%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%9E%E3%83%8D%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88/</loc>
     <lastmod>2025-11-23T10:43:53+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/neovim/</loc>
-    <lastmod>2025-11-02T01:07:08+00:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/vim/</loc>
     <lastmod>2025-11-02T01:07:08+00:00</lastmod>
@@ -176,9 +191,6 @@
     <loc>https://blog.kyu08.com/posts/renew-oss-sponsoring/</loc>
     <lastmod>2024-09-23T15:02:46+00:00</lastmod>
   </url><url>
-    <loc>https://blog.kyu08.com/tags/tui/</loc>
-    <lastmod>2024-09-23T15:02:46+00:00</lastmod>
-  </url><url>
     <loc>https://blog.kyu08.com/tags/cloud-spanner/</loc>
     <lastmod>2024-09-23T01:44:54+00:00</lastmod>
   </url><url>
@@ -187,9 +199,6 @@
   </url><url>
     <loc>https://blog.kyu08.com/tags/google-cloud/</loc>
     <lastmod>2024-09-23T01:44:54+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/cli/</loc>
-    <lastmod>2024-09-02T15:54:12+00:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/gh-sync-remote-and-pull/</loc>
     <lastmod>2024-09-02T15:54:12+00:00</lastmod>
@@ -222,9 +231,6 @@
     <lastmod>2024-04-10T14:12:22+00:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/tmux-fzf-window/</loc>
-    <lastmod>2024-04-10T14:12:22+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB/</loc>
     <lastmod>2024-04-10T14:12:22+00:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/mac-clamshell-mode-best-mic-earpods/</loc>
@@ -309,9 +315,6 @@
     <lastmod>2023-02-22T16:15:48+00:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/tmux-neovim-scratch/</loc>
-    <lastmod>2023-02-04T16:15:48+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83/</loc>
     <lastmod>2023-02-04T16:15:48+00:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/learn-design-pattern/</loc>
