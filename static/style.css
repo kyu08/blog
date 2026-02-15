@@ -358,17 +358,7 @@ blockquote::before {
   white-space: nowrap;
 }
 
-/* レスポンシブ対応 */
-@media (max-width: 600px) {
-  .blogcard-link {
-    flex-direction: column;
-  }
 
-  .blogcard-thumbnail {
-    width: 100%;
-    height: 200px;
-  }
-}
 
 /* モバイルでもデスクトップメニューを表示する */
 @media (max-width: 684px) {
