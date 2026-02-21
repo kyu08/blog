@@ -193,9 +193,9 @@ https://docs.google.com/presentation/d/1we1bAhUH-_hCEZTYFy2DOyFjWN0fp7VWBkWBha8n
     - Code Rabbitでレビュー負荷を下げている
     - PRレビューはチーム全員で分担して特定の誰かに負担が偏らないようにしている
 
-
-
 ## 【実装公開】Goで実現する堅牢なアーキテクチャ：DDD、gRPC-connect、そしてAI協調開発の実践
+株式会社テレシーのDaisuke Sasakiさんによる発表。
+
 - application層でCommandとQueryを分けるパターン
 - [AS]
     - application層のQuery Serviceからdomain packageへの依存はOKにしている？それとも独自のreturn typeをquery serviceで定義している？
