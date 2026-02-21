@@ -180,7 +180,7 @@ https://docs.google.com/presentation/d/1we1bAhUH-_hCEZTYFy2DOyFjWN0fp7VWBkWBha8n
         - 実際のプロダクションに導入するならある程度テストが整備されたあとにやるのが優先順位としていいのだろうか
             - というよりは品質が重要な箇所に必要に応じて追加していくのがいい？
         - ライブラリを作成されたとのことだが、あまりMutation Testingの事例はない？ないとしたらk8sの内部実装などではどのように品質担保している？
-
+        - mutation testing以外ではどのようにテストコードの品質や正当性を保証するのがよさそう？k8sの内部実装などではどのように品質担保している？
 
 ## Goから学ぶGCの仕組みとGreen Tea GCによる次世代最適化
 - 並行GCってなんだろう
@@ -203,5 +203,6 @@ https://docs.google.com/presentation/d/1we1bAhUH-_hCEZTYFy2DOyFjWN0fp7VWBkWBha8n
     - ドメインモデルのフィールドを公開するとパッケージ外から自由に更新できてしまうと思うが課題等はあるか。
 
 ## 上記以外に参加したセッションは以下。
+- Goだから出来るProduction ready ジャッジシステム
 
-[^1]: 大AI時代になりPRレビュー
+[^1]: 大AI時代になりPRレビュー負担が肥大化しているのでCIで機械的にコード品質を担保するためにLinterを増やそうと思っているため。
