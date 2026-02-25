@@ -327,12 +327,6 @@
 &lt;h2 id=&#34;つけ麺情報&#34;&gt;つけ麺情報&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://tabelog.com/tokyo/A1319/A131902/13115487&#34; target=&#34;_blank&#34; &gt;二代目えん寺&lt;/a&gt;がとても美味しかった。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;tsukemen.webp&#34; alt=&#34;tsukemen&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;埋め込みテスト&#34;&gt;埋め込みテスト&lt;/h2&gt;
-&lt;p&gt;以下は埋め込み機能のテストです。&lt;/p&gt;
-&lt;h3 id=&#34;google-slidesのテスト&#34;&gt;Google Slidesのテスト&lt;/h3&gt;
-&lt;p&gt;&lt;div class=&#34;embed-container google-slides&#34;&gt;
-      &lt;iframe src=&#34;https://docs.google.com/presentation/d/1BW4_TkaZjqaKK_ejTdatIGmVCKjWJCkmghGe9YvYmWs/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
-    &lt;/div&gt;&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
