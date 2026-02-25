@@ -41,14 +41,12 @@
     {{- /* Speaker Deckの埋め込み */ -}}
     {{- $slideId := "" -}}
     {{- $parts := split $dest "/" -}}
-    {{- $cleanParts := slice -}}
-    {{- range $parts -}}
-      {{- if ne . "" -}}
-        {{- $cleanParts = $cleanParts | append . -}}
+    {{- range $index, $part := $parts -}}
+      {{- if eq $part "speakerdeck.com" -}}
+        {{- if gt (len $parts) (add $index 2) -}}
+          {{- $slideId = printf "%s/%s" (index $parts (add $index 1)) (index $parts (add $index 2)) -}}
+        {{- end -}}
       {{- end -}}
-    {{- end -}}
-    {{- if ge (len $cleanParts) 2 -}}
-      {{- $slideId = printf "%s/%s" (index $cleanParts (sub (len $cleanParts) 2)) (index $cleanParts (sub (len $cleanParts) 1)) -}}
     {{- end -}}
     <div class="embed-container speakerdeck">
       <script async class="speakerdeck-embed" data-id="{{ $slideId }}" data-ratio="1.7777777777777777" src="//speakerdeck.com/assets/embed.js"></script>
