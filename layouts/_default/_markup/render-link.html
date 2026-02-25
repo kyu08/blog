@@ -56,7 +56,11 @@
   {{- else if $isDocswell -}}
     {{- /* Docswellの埋め込み（スライドモード） */ -}}
     {{- /* #フラグメントを削除し、?slide=1を追加してスライドのみ表示 */ -}}
-    {{- $cleanUrl := $dest | replaceRE "#.*$" "" -}}
+    {{- $cleanUrl := $dest -}}
+    {{- if strings.Contains $dest "#" -}}
+      {{- $parts := split $dest "#" -}}
+      {{- $cleanUrl = index $parts 0 -}}
+    {{- end -}}
     <div class="embed-container docswell">
       <iframe src="{{ $cleanUrl }}?slide=1" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>

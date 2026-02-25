@@ -266,10 +266,4 @@ Nulabさんのノベルティのマイクロファイバークロス。実用的
 
 ![tsukemen](tsukemen.webp)
 
-## 埋め込みテスト
-以下は埋め込み機能のテストです。
-
-### Google Slidesのテスト
-https://docs.google.com/presentation/d/1BW4_TkaZjqaKK_ejTdatIGmVCKjWJCkmghGe9YvYmWs/edit
-
 [^1]: [Elm Patternsでも紹介されていた](https://sporto.github.io/elm-patterns/advanced/railway.html)のを思い出した。改めて読み直してみよう。
