@@ -141,6 +141,9 @@ Go誕生の背景とUNIX思想
 - なので既存のドライバーをラップしたドライバーを作成することにした
 - [AS](本筋じゃないけどsqlcの使い心地が気になった)
     - 引数に応じてwhere句を一部変更するとかができないのでどうやっているのか気になる。
+        - そういうケースでは複数パターンのクエリをrepository層に書いている。
+        - そもそも巨大で複雑なクエリにはsqlcはあっていないので使うべきではないかも知れない。
+            - 今の使い方は割とシンプルなクエリが多いアプリケーションなので適している。
 
 ## nilとは何か 〜言語仕様と設計者の葛藤から理解する〜
 Goのキーワード数を即答している人が数人いてすごかった
@@ -201,8 +204,13 @@ https://docs.google.com/presentation/d/1we1bAhUH-_hCEZTYFy2DOyFjWN0fp7VWBkWBha8n
 - application層でCommandとQueryを分けるパターン
 - [AS]
     - application層のQuery Serviceからdomain packageへの依存はOKにしている？それとも独自のreturn typeをquery serviceで定義している？
-    - `type OrgazanitionName string`と書くと`OrgazanitionName("foo")`とかで勝手に初期化できると思うが、どう対処しているか。
+        - yes
+        - domain層に以下の2種類がある。
+            - commandとqueryの両方から参照される型
+            - queryからのみ参照される型
     - ドメインモデルのフィールドを公開するとパッケージ外から自由に更新できてしまうと思うが課題等はあるか。
+        - 特に強いこだわりがあってそうしているわけではない。
+        - まだ運用して半年なのでこれから課題が出てくる可能性はある。
 
 ## 上記以外に参加したセッションは以下。
 - Goだから出来るProduction ready ジャッジシステム
