@@ -79,12 +79,11 @@ SODA inc.のmagavelさんによる発表。
 https://speakerdeck.com/magavel/moziyuramonorisuniokerujing-jie-wogonointernalpatukezideshou-ru
 
 - 「結合はむしろ、忘れてはならない設計ツールだ。」
-- bounded contextディレクトリを切っているのが印象的だった 
-    - (自分たちもこれからモジュールを切っていこうと思っていてどんなディレクトリ構成になっているのか気になった)
+- `bounded_context`ディレクトリを切っているのが印象的だった 
 
 - お話したこと
-    - ディレクトリ構成はどんな感じになっているのか。
-        - `bounded_context`ディレクトリの横には`monolish`ディレクトリがある
+    - ディレクトリ構成はどんな感じになっている？
+        - `bounded_context`ディレクトリの同階層には`monolish`ディレクトリがある
             - これらは現状ワンバイナリになっている
         - `bounded_context`ディレクトリの中には購入、xxx、yyyなどの境界づけられたコンテキストが並ぶ。
         - たとえば購入コンテキストの中には購入モジュール、決済モジュールなどがある。
