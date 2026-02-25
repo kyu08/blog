@@ -1,0 +1,27 @@
+{{- $url := .Get "url" -}}
+{{- $id := .Get "id" -}}
+
+{{- if not (or $url $id) -}}
+  {{- errorf "speakerdeck shortcode requires either 'url' or 'id' parameter" -}}
+{{- end -}}
+
+{{- if $url -}}
+  {{- /* URLからoEmbedキャッシュを参照 */ -}}
+  {{- $cachedData := false -}}
+  {{- if site.Data.speakerdeck_cache -}}
+    {{- $cachedData = index site.Data.speakerdeck_cache $url -}}
+  {{- end -}}
+  {{- if $cachedData -}}
+    <div class="embed-container speakerdeck">
+      <iframe src="{{ $cachedData.playerUrl }}" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>
+  {{- else -}}
+    {{- /* フォールバック: 通常リンクとして表示 */ -}}
+    <a href="{{ $url }}" target="_blank">{{ $url }}</a>
+  {{- end -}}
+{{- else if $id -}}
+  {{- /* IDが直接指定された場合（プレイヤーIDとして扱う） */ -}}
+  <div class="embed-container speakerdeck">
+    <iframe src="https://speakerdeck.com/player/{{ $id }}" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+  </div>
+{{- end -}}

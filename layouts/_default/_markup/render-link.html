@@ -1,5 +1,8 @@
 {{- /*
-  リンクテキストとURLが同じ、かつキャッシュに存在する場合はblogcardとして表示
+  リンクテキストとURLが同じ場合の処理:
+  1. スライドサービス（Google Slides, Speaker Deck, Docswell）の場合は埋め込み表示
+  2. キャッシュに存在する場合はblogcardとして表示
+  3. それ以外は通常のリンクとして表示
 
   キャッシュに存在するURLのみブログカードにする理由:
   - 箇条書き内のURLはブログカードではなく通常のリンクとして表示したい
@@ -13,16 +16,68 @@
 {{- $normalizedText := $text | replaceRE "^https?://" "" | strings.TrimSuffix "/" -}}
 {{- $normalizedDest := $dest | replaceRE "^https?://" "" | strings.TrimSuffix "/" -}}
 
-{{- /* キャッシュデータを確認 */ -}}
-{{- $cachedData := false -}}
-{{- if site.Data.blogcard_cache -}}
-  {{- $cachedData = index site.Data.blogcard_cache $dest -}}
-{{- end -}}
-
-{{- if and (eq $normalizedText $normalizedDest) $cachedData -}}
-  {{- /* キャッシュがある場合のみblogcardとして表示 */ -}}
-  {{- partial "blogcard.html" (dict "url" $dest "autoFetch" "false") -}}
+{{- /* リンクテキストとURLが同じ場合のみ特別処理 */ -}}
+{{- if eq $normalizedText $normalizedDest -}}
+  {{- /* スライドサービスのドメインチェック */ -}}
+  {{- $isGoogleSlides := or (strings.Contains $dest "docs.google.com/presentation") (strings.Contains $dest "docs.google.com/presentation") -}}
+  {{- $isSpeakerDeck := strings.Contains $dest "speakerdeck.com" -}}
+  {{- $isDocswell := strings.Contains $dest "docswell.com" -}}
+  
+  {{- if $isGoogleSlides -}}
+    {{- /* Google Slidesの埋め込み */ -}}
+    {{- $slideId := "" -}}
+    {{- $parts := split $dest "/" -}}
+    {{- range $index, $part := $parts -}}
+      {{- if eq $part "d" -}}
+        {{- if gt (len $parts) (add $index 1) -}}
+          {{- $slideId = index $parts (add $index 1) -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    <div class="embed-container google-slides">
+      <iframe src="https://docs.google.com/presentation/d/{{ $slideId }}/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>
+  {{- else if $isSpeakerDeck -}}
+    {{- /* Speaker Deckの埋め込み（oEmbedキャッシュから取得） */ -}}
+    {{- $cachedData := false -}}
+    {{- if site.Data.speakerdeck_cache -}}
+      {{- $cachedData = index site.Data.speakerdeck_cache $dest -}}
+    {{- end -}}
+    {{- if $cachedData -}}
+      <div class="embed-container speakerdeck">
+        <iframe src="{{ $cachedData.playerUrl }}" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      </div>
+    {{- else -}}
+      {{- /* フォールバック: 通常リンクとして表示 */ -}}
+      <a href="{{ $dest | safeURL }}" target="_blank">{{ $text | safeHTML }}</a>
+    {{- end -}}
+  {{- else if $isDocswell -}}
+    {{- /* Docswellの埋め込み（スライドモード） */ -}}
+    {{- /* #フラグメントを削除し、?slide=1を追加してスライドのみ表示 */ -}}
+    {{- $cleanUrl := $dest -}}
+    {{- if strings.Contains $dest "#" -}}
+      {{- $parts := split $dest "#" -}}
+      {{- $cleanUrl = index $parts 0 -}}
+    {{- end -}}
+    <div class="embed-container docswell">
+      <iframe src="{{ $cleanUrl }}?slide=1" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>
+  {{- else -}}
+    {{- /* キャッシュデータを確認 */ -}}
+    {{- $cachedData := false -}}
+    {{- if site.Data.blogcard_cache -}}
+      {{- $cachedData = index site.Data.blogcard_cache $dest -}}
+    {{- end -}}
+    
+    {{- if $cachedData -}}
+      {{- /* キャッシュがある場合のみblogcardとして表示 */ -}}
+      {{- partial "blogcard.html" (dict "url" $dest "autoFetch" "false") -}}
+    {{- else -}}
+      {{- /* 通常のリンクとして表示 */ -}}
+      <a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if or (strings.HasPrefix .Destination "http") (strings.HasPrefix .Destination "https") }} target="_blank"{{ end }} >{{ .Text | safeHTML }}</a>
+    {{- end -}}
+  {{- end -}}
 {{- else -}}
-  {{- /* 通常のリンクとして表示 */ -}}
+  {{- /* リンクテキストとURLが異なる場合は通常のリンク */ -}}
   <a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if or (strings.HasPrefix .Destination "http") (strings.HasPrefix .Destination "https") }} target="_blank"{{ end }} >{{ .Text | safeHTML }}</a>
 {{- end -}}
