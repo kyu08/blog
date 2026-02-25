@@ -27,12 +27,10 @@
     {{- /* Google Slidesの埋め込み */ -}}
     {{- $slideId := "" -}}
     {{- $parts := split $dest "/" -}}
-    {{- range $parts -}}
-      {{- if and (ne . "") (ne . "presentation") (ne . "d") (ne . "edit") (ne . "pub") -}}
-        {{- if not (hasPrefix . "http") -}}
-          {{- if not (hasPrefix . "docs.google.com") -}}
-            {{- $slideId = . -}}
-          {{- end -}}
+    {{- range $index, $part := $parts -}}
+      {{- if eq $part "d" -}}
+        {{- if gt (len $parts) (add $index 1) -}}
+          {{- $slideId = index $parts (add $index 1) -}}
         {{- end -}}
       {{- end -}}
     {{- end -}}
@@ -43,8 +41,14 @@
     {{- /* Speaker Deckの埋め込み */ -}}
     {{- $slideId := "" -}}
     {{- $parts := split $dest "/" -}}
-    {{- if ge (len $parts) 2 -}}
-      {{- $slideId = index $parts (sub (len $parts) 1) -}}
+    {{- $cleanParts := slice -}}
+    {{- range $parts -}}
+      {{- if ne . "" -}}
+        {{- $cleanParts = $cleanParts | append . -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if ge (len $cleanParts) 2 -}}
+      {{- $slideId = printf "%s/%s" (index $cleanParts (sub (len $cleanParts) 2)) (index $cleanParts (sub (len $cleanParts) 1)) -}}
     {{- end -}}
     <div class="embed-container speakerdeck">
       <script async class="speakerdeck-embed" data-id="{{ $slideId }}" data-ratio="1.7777777777777777" src="//speakerdeck.com/assets/embed.js"></script>
