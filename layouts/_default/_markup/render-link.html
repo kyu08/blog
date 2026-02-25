@@ -54,9 +54,11 @@
       <script async class="speakerdeck-embed" data-id="{{ $slideId }}" data-ratio="1.7777777777777777" src="//speakerdeck.com/assets/embed.js"></script>
     </div>
   {{- else if $isDocswell -}}
-    {{- /* Docswellの埋め込み */ -}}
+    {{- /* Docswellの埋め込み（スライドモード） */ -}}
+    {{- /* #フラグメントを削除し、?slide=1を追加してスライドのみ表示 */ -}}
+    {{- $cleanUrl := $dest | replaceRE "#.*$" "" -}}
     <div class="embed-container docswell">
-      <iframe src="{{ $dest }}" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      <iframe src="{{ $cleanUrl }}?slide=1" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
   {{- else -}}
     {{- /* キャッシュデータを確認 */ -}}
