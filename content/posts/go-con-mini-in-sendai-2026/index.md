@@ -16,10 +16,10 @@ color: ""
 cover: "cover.png"
 ---
 
-memo: [AS]はask the speakerで聞きたいこと
-
 ## 【KeyNote】静的解析からみるGoの過去と未来
-tenntennさんによるKeyNote。
+https://docs.google.com/presentation/d/14e9PiaKbyqcZTu5mYCKBqa9MokJhxmT0WePHxwPzCmg/edit?slide=id.p#slide=id.p
+
+tenntennさんによるキーノート。
 
 <!-- TODO: かく -->
 最後に紹介されていたGo1.27のアノテーションで静的解析をできるようにする機能は今まさに自分が欲している機能[^1]なので調べてみようと思った。
@@ -113,7 +113,8 @@ magavelさん
 - 「結合はむしろ、忘れてはならない設計ツールだ。」
 - bounded contextディレクトリを切っているのが印象的だった 
     - (自分たちもこれからモジュールを切っていこうと思っていてどんなディレクトリ構成になっているのか気になった)
-- [AS]
+
+- お話したこと
     - ディレクトリ構成はどんな感じになっている？
         - bounded_contextディレクトリの横にはmonolishディレクトリがある
             - これらは現状ワンバイナリになっている
@@ -139,7 +140,8 @@ Go誕生の背景とUNIX思想
 - sqlcを使っているが、sqlcが生成したコードに手を加えていくのは避けたい
 - 本体をforkしてしまうと本体に追従するのが大変
 - なので既存のドライバーをラップしたドライバーを作成することにした
-- [AS](本筋じゃないけどsqlcの使い心地が気になった)
+
+- お話したこと(本筋じゃないけどsqlcの使い心地が気になった)
     - 引数に応じてwhere句を一部変更するとかができないのでどうやっているのか気になる。
         - そういうケースでは複数パターンのクエリをrepository層に書いている。
         - そもそも巨大で複雑なクエリにはsqlcはあっていないので使うべきではないかも知れない。
@@ -178,8 +180,9 @@ https://docs.google.com/presentation/d/1we1bAhUH-_hCEZTYFy2DOyFjWN0fp7VWBkWBha8n
 - 感想
     - 四則演算は適用するイメージが持てた。
         - ドメインメソッドではif elseとかもあるがそこも対応できるのか
-    - overlay
-    - [AS]
+    - overlayすごそう
+
+    - 気になったこと
         - mutation testingの使い所について
             - 実際のプロダクションに導入するならある程度テストが整備されたあとにやるのが優先順位としていいのだろうか
             - というよりは品質が重要な箇所に必要に応じて追加していくのがいい？
@@ -202,7 +205,8 @@ https://docs.google.com/presentation/d/1we1bAhUH-_hCEZTYFy2DOyFjWN0fp7VWBkWBha8n
 株式会社テレシーのDaisuke Sasakiさんによる発表。
 
 - application層でCommandとQueryを分けるパターン
-- [AS]
+
+- お話したこと
     - application層のQuery Serviceからdomain packageへの依存はOKにしている？それとも独自のreturn typeをquery serviceで定義している？
         - yes
         - domain層に以下の2種類がある。
