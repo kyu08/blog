@@ -247,6 +247,37 @@ blockquote::before {
   display: none;
 }
 
+/* 埋め込みコンテンツ（Google Slides, Speaker Deck, Docswell） */
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 24px 0;
+  border-radius: 8px;
+}
+
+.embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.embed-container.speakerdeck {
+  position: relative;
+  padding-bottom: 0;
+  height: auto;
+  overflow: visible;
+}
+
+.embed-container.speakerdeck iframe {
+  position: relative;
+}
+
 /* ブログカード */
 .blogcard {
   margin: 24px 0;

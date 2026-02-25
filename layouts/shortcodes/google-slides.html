@@ -1,0 +1,26 @@
+{{- $url := .Get "url" -}}
+{{- $id := .Get "id" -}}
+
+{{- if not (or $url $id) -}}
+  {{- errorf "google-slides shortcode requires either 'url' or 'id' parameter" -}}
+{{- end -}}
+
+{{- $slideId := "" -}}
+{{- if $id -}}
+  {{- $slideId = $id -}}
+{{- else if $url -}}
+  {{- $parts := split $url "/" -}}
+  {{- range $parts -}}
+    {{- if and (ne . "") (ne . "presentation") (ne . "d") (ne . "edit") (ne . "pub") -}}
+      {{- if not (hasPrefix . "http") -}}
+        {{- if not (hasPrefix . "docs.google.com") -}}
+          {{- $slideId = . -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+<div class="embed-container google-slides">
+  <iframe src="https://docs.google.com/presentation/d/{{ $slideId }}/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>

@@ -1,0 +1,17 @@
+{{- $url := .Get "url" -}}
+{{- $id := .Get "id" -}}
+
+{{- if not (or $url $id) -}}
+  {{- errorf "docswell shortcode requires either 'url' or 'id' parameter" -}}
+{{- end -}}
+
+{{- $slideUrl := "" -}}
+{{- if $url -}}
+  {{- $slideUrl = $url -}}
+{{- else if $id -}}
+  {{- $slideUrl = printf "https://www.docswell.com/s/%s" $id -}}
+{{- end -}}
+
+<div class="embed-container docswell">
+  <iframe src="{{ $slideUrl }}" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>

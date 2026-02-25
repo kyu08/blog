@@ -1,0 +1,20 @@
+{{- $url := .Get "url" -}}
+{{- $id := .Get "id" -}}
+
+{{- if not (or $url $id) -}}
+  {{- errorf "speakerdeck shortcode requires either 'url' or 'id' parameter" -}}
+{{- end -}}
+
+{{- $slideId := "" -}}
+{{- if $id -}}
+  {{- $slideId = $id -}}
+{{- else if $url -}}
+  {{- $parts := split $url "/" -}}
+  {{- if ge (len $parts) 2 -}}
+    {{- $slideId = index $parts (sub (len $parts) 1) -}}
+  {{- end -}}
+{{- end -}}
+
+<div class="embed-container speakerdeck">
+  <script async class="speakerdeck-embed" data-id="{{ $slideId }}" data-ratio="1.7777777777777777" src="//speakerdeck.com/assets/embed.js"></script>
+</div>
