@@ -92,15 +92,21 @@ https://speakerdeck.com/magavel/moziyuramonorisuniokerujing-jie-wogonointernalpa
         - 他にも`depguard`を使って依存関係を制御している。
 
 ## Go設計思想の深掘り
-Go誕生の背景とUNIX思想
-<!-- TODO: 一部しか書けてない -->
-- 巨大コードを大人数で早く安全に開発したい
+https://speakerdeck.com/ykf1999/gonoshe-ji-si-xiang-woshen-jue-risuru-unixkaraji-kumono-slidev
 
-発表者の型がOO言語に慣れていてGoに暮らすがないことに驚いてGo誕生の背景を深ぼろうと思った、というきっかけがめっちゃいいと思った。
+メモ:
 
-「設計思想を知るとどこで使うべきかわかる」いい言葉だー
+- 発表者の型がオブジェクト指向言語に慣れていてGoにクラスがないことに驚いてGo誕生の背景を深ぼろうと思った、という自分の疑問に向き合う姿勢がとても素敵だと思った。
+- `設計思想は「どこで使うべきか」を教えてくれる`いい言葉だ。
 
 ## database/sql/driverを理解してカスタムデータベースドライバーを作る
+https://speakerdeck.com/replu/driver-to-create-a-custom-database-driver
+
+
+ここから
+
+メモ:
+
 - ログをだしたい
 - リクエストをDBのwriteインスタンスとreadインスタンスに振り分けたい
 - sqlcを使っているが、sqlcが生成したコードに手を加えていくのは避けたい
