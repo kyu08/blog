@@ -2259,8 +2259,8 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
 &lt;h2 id=&#34;マイクロサービス内で動くapiをfで書いている---ayato-pさん&#34;&gt;マイクロサービス内で動くAPIをF#で書いている - ayato-pさん&lt;/h2&gt;
 &lt;p&gt;ayato-pさんによるマイクロサービスの1サービスをF#で書く際の設計や悩みどころを紹介する発表。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;embed-container speakerdeck&#34;&gt;
-      &lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru&#34; data-ratio=&#34;1.7777777777777777&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-    &lt;/div&gt;&lt;/p&gt;
+        &lt;iframe src=&#34;https://speakerdeck.com/player/9efe648f23514385a48f5c5608d5f1c3&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+      &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;ドメイン設計の際に容易にOptionを使わずにenumの別のvariantとして表現する、という考え方はRustなどでも活かせそうだと思った。別の概念であれば別の型として表現するのが大事そう。&lt;/p&gt;
 &lt;p&gt;以下メモ。&lt;/p&gt;
 &lt;ul&gt;

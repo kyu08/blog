@@ -267,17 +267,6 @@ blockquote::before {
   border: 0;
 }
 
-.embed-container.speakerdeck {
-  position: relative;
-  padding-bottom: 0;
-  height: auto;
-  overflow: visible;
-}
-
-.embed-container.speakerdeck iframe {
-  position: relative;
-}
-
 /* ブログカード */
 .blogcard {
   margin: 24px 0;
