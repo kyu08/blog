@@ -5,16 +5,23 @@
   {{- errorf "speakerdeck shortcode requires either 'url' or 'id' parameter" -}}
 {{- end -}}
 
-{{- $slideId := "" -}}
-{{- if $id -}}
-  {{- $slideId = $id -}}
-{{- else if $url -}}
-  {{- $parts := split $url "/" -}}
-  {{- if ge (len $parts) 2 -}}
-    {{- $slideId = index $parts (sub (len $parts) 1) -}}
+{{- if $url -}}
+  {{- /* URLからoEmbedキャッシュを参照 */ -}}
+  {{- $cachedData := false -}}
+  {{- if site.Data.speakerdeck_cache -}}
+    {{- $cachedData = index site.Data.speakerdeck_cache $url -}}
   {{- end -}}
+  {{- if $cachedData -}}
+    <div class="embed-container speakerdeck">
+      <iframe src="{{ $cachedData.playerUrl }}" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>
+  {{- else -}}
+    {{- /* フォールバック: 通常リンクとして表示 */ -}}
+    <a href="{{ $url }}" target="_blank">{{ $url }}</a>
+  {{- end -}}
+{{- else if $id -}}
+  {{- /* IDが直接指定された場合（プレイヤーIDとして扱う） */ -}}
+  <div class="embed-container speakerdeck">
+    <iframe src="https://speakerdeck.com/player/{{ $id }}" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+  </div>
 {{- end -}}
-
-<div class="embed-container speakerdeck">
-  <script async class="speakerdeck-embed" data-id="{{ $slideId }}" data-ratio="1.7777777777777777" src="//speakerdeck.com/assets/embed.js"></script>
-</div>

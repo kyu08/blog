@@ -38,19 +38,19 @@
       <iframe src="https://docs.google.com/presentation/d/{{ $slideId }}/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
   {{- else if $isSpeakerDeck -}}
-    {{- /* Speaker Deckの埋め込み */ -}}
-    {{- $slideId := "" -}}
-    {{- $parts := split $dest "/" -}}
-    {{- range $index, $part := $parts -}}
-      {{- if eq $part "speakerdeck.com" -}}
-        {{- if gt (len $parts) (add $index 2) -}}
-          {{- $slideId = printf "%s/%s" (index $parts (add $index 1)) (index $parts (add $index 2)) -}}
-        {{- end -}}
-      {{- end -}}
+    {{- /* Speaker Deckの埋め込み（oEmbedキャッシュから取得） */ -}}
+    {{- $cachedData := false -}}
+    {{- if site.Data.speakerdeck_cache -}}
+      {{- $cachedData = index site.Data.speakerdeck_cache $dest -}}
     {{- end -}}
-    <div class="embed-container speakerdeck">
-      <script async class="speakerdeck-embed" data-id="{{ $slideId }}" data-ratio="1.7777777777777777" src="//speakerdeck.com/assets/embed.js"></script>
-    </div>
+    {{- if $cachedData -}}
+      <div class="embed-container speakerdeck">
+        <iframe src="{{ $cachedData.playerUrl }}" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      </div>
+    {{- else -}}
+      {{- /* フォールバック: 通常リンクとして表示 */ -}}
+      <a href="{{ $dest | safeURL }}" target="_blank">{{ $text | safeHTML }}</a>
+    {{- end -}}
   {{- else if $isDocswell -}}
     {{- /* Docswellの埋め込み（スライドモード） */ -}}
     {{- /* #フラグメントを削除し、?slide=1を追加してスライドのみ表示 */ -}}
