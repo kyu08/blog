@@ -30,7 +30,7 @@ cover: cover.png
 ## 関数型言語テイスティング: Haskell, Scala, Clojure, Elixirを比べて味わう関数型プログラミングの旨さ - lagénorhynque/カマイルカさん
 lagénorhynque/カマイルカさんによるHaskell, Scala, Clojure, Elixirの紹介と比較を行う発表。
 
-{{<docswell url="https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-haskell-scala-clojure-elixir#p1">}}
+https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-haskell-scala-clojure-elixir#p1
 
 部分適用や関数合成やパイプ演算子などElmで便利だった言語機能を思い出しながら聞いていた。
 
@@ -199,7 +199,7 @@ Scott Wlaschinさんによる関数型プログラミングでの学びを共有
 ## マイクロサービス内で動くAPIをF#で書いている - ayato-pさん
 ayato-pさんによるマイクロサービスの1サービスをF#で書く際の設計や悩みどころを紹介する発表。
 
-{{<speakerdeck url="https://speakerdeck.com/ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru">}}
+https://speakerdeck.com/ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru
 
 ドメイン設計の際に容易にOptionを使わずにenumの別のvariantとして表現する、という考え方はRustなどでも活かせそうだと思った。別の概念であれば別の型として表現するのが大事そう。
 
@@ -270,6 +270,6 @@ Nulabさんのノベルティのマイクロファイバークロス。実用的
 以下は埋め込み機能のテストです。
 
 ### Google Slidesのテスト
-{{<google-slides url="https://docs.google.com/presentation/d/1BW4_TkaZjqaKK_ejTdatIGmVCKjWJCkmghGe9YvYmWs/edit">}}
+https://docs.google.com/presentation/d/1BW4_TkaZjqaKK_ejTdatIGmVCKjWJCkmghGe9YvYmWs/edit
 
 [^1]: [Elm Patternsでも紹介されていた](https://sporto.github.io/elm-patterns/advanced/railway.html)のを思い出した。改めて読み直してみよう。
