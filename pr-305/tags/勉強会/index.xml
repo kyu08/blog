@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Thu, 26 Feb 2026 00:11:32 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-305/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Feb 2026 00:00:32 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-305/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go Conference mini in Sendai 2026に参加した</title>
       <link>https://blog.kyu08.com/pr-305/posts/go-con-mini-in-sendai-2026/</link>
-      <pubDate>Thu, 26 Feb 2026 00:11:32 +0900</pubDate>
+      <pubDate>Fri, 27 Feb 2026 00:00:32 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/pr-305/posts/go-con-mini-in-sendai-2026/</guid>
       <description>2026/02/21(土)に仙台で行われGo Conference mini in Sendai 2026に参加したのでその内容をまとめる。 Go Conference mini in Sendai 20262026年2月21日（土）開</description>
@@ -263,7 +263,9 @@
 &lt;p&gt;とても高度だったので途中でついていけなくなってしまったのでいつかリベンジしたい。&lt;/p&gt;
 &lt;h2 id=&#34;実装公開goで実現する堅牢なアーキテクチャdddgrpc-connectそしてai協調開発の実践&#34;&gt;【実装公開】Goで実現する堅牢なアーキテクチャ：DDD、gRPC-connect、そしてAI協調開発の実践&lt;/h2&gt;
 &lt;p&gt;株式会社テレシーのDaisuke Sasakiさんによる発表。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://speakerdeck.com/fujidomoe/godeshi-xian-surujian-lao-naakitekutiya-ddd-grpc-connect-sositeaixie-diao-kai-fa-noshi-jian&#34; target=&#34;_blank&#34;&gt;https://speakerdeck.com/fujidomoe/godeshi-xian-surujian-lao-naakitekutiya-ddd-grpc-connect-sositeaixie-diao-kai-fa-noshi-jian&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;embed-container speakerdeck&#34;&gt;
+        &lt;iframe src=&#34;https://speakerdeck.com/player/0592dd9c358e4ea9b74adf758ddb546a&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+      &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;お話したこと:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;application層のQuery Serviceからdomain packageへの依存はOKにしている？それとも独自のreturn typeをQuery serviceで定義している？
@@ -277,18 +279,6 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;ドメインモデルのフィールドを公開するとパッケージ外から自由に更新できてしまうと思うが課題等はあるか。
-&lt;ul&gt;
-&lt;li&gt;特に強いこだわりがあってそうしているわけではない。&lt;/li&gt;
-&lt;li&gt;まだ運用して半年なのでこれから課題が出てくる可能性はある。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;h2 id=&#34;上記以外に参加したセッションは以下&#34;&gt;上記以外に参加したセッションは以下。&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Goだから出来るProduction ready ジャッジシステム&lt;/li&gt;
-&lt;li&gt;はじめての Go 〜 きっかけは TinyGo だった&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;スポンサーブースで話したこと&#34;&gt;スポンサーブースで話したこと&lt;/h2&gt;
