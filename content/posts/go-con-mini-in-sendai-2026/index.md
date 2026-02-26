@@ -27,10 +27,12 @@ https://docs.google.com/presentation/d/14e9PiaKbyqcZTu5mYCKBqa9MokJhxmT0WePHxwPz
 
 最後に紹介されていたGo1.27のアノテーションで静的解析をできるようにする機能は今まさに自分が欲している機能[^1]なので調べてみようと思った。
 
-
 以下メモ。
 
-- `//line a.go:1`しらなかった 
+- `//line a.go:1`のような記法は知らなかった。
+    - 調べてみたところ`line directive`という名前がついているようだった。[^2]
+    - こんな感じでコンパイラが出力するエラーメッセージなどが上書きされる。
+    - https://go.dev/play/p/Thvs9U8Twvj
 - `go test -cover`を実行すると裏側では`go tool -cover`が実行され、計測用のコードが挿入される
 - Goがセルフホスティングされるようになったのは2015年（Go1.5）（それまではC）
     - (まだ10年しかたってないんだなー)
@@ -209,3 +211,4 @@ https://docs.google.com/presentation/d/1we1bAhUH-_hCEZTYFy2DOyFjWN0fp7VWBkWBha8n
 - セッションの合間は発表者の方に質問するためにウロウロしている時間が長かったのもあり、全スポンサーブースを回れなかった。もうちょっといい感じに時間を使えるとよさそう。（スポンサーブースで各社の方とお話するはとても楽しいので全部回りたい）
 
 [^1]: 大AI時代になりPRレビュー負担が肥大化しているのでCIで機械的にコード品質を担保するためにLinterを増やそうと思っているため。
+[^2]: https://pkg.go.dev/cmd/compile#hdr-Line_Directives
