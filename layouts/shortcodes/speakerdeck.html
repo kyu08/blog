@@ -13,7 +13,7 @@
   {{- end -}}
   {{- if $cachedData -}}
     <div class="embed-container speakerdeck">
-      <iframe src="{{ $cachedData.playerUrl }}" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      <iframe src="{{ $cachedData.playerUrl }}" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" loading="lazy"></iframe>
     </div>
   {{- else -}}
     {{- /* フォールバック: 通常リンクとして表示 */ -}}
@@ -22,6 +22,6 @@
 {{- else if $id -}}
   {{- /* IDが直接指定された場合（プレイヤーIDとして扱う） */ -}}
   <div class="embed-container speakerdeck">
-    <iframe src="https://speakerdeck.com/player/{{ $id }}" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    <iframe src="https://speakerdeck.com/player/{{ $id }}" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" loading="lazy"></iframe>
   </div>
 {{- end -}}
