@@ -82,10 +82,14 @@
 &lt;p&gt;最近PRレビューをする機会が増えてレビュワーとPR作成者双方の負担を減らす方法を考えていたのとても参考になった。&lt;/p&gt;
 &lt;p&gt;以下メモ。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Rules / Skillsでも防げるが、非決定的であるため、すり抜けてしまう可能性があるため、ハード制約を設けることが重要。&lt;/li&gt;
+&lt;li&gt;AIの予期せぬ変更はRules / Skillsでもある程度は防げるがあくまで挙動は非決定的なためすり抜けてしまう可能性がある。そのためハード制約（決定的な処理による制約）を設けることが重要。&lt;/li&gt;
+&lt;li&gt;ハード制約の例
+&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;internal&lt;/code&gt; packageで予期せぬ外部参照から保護する&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;depguard&lt;/code&gt;による依存性ルールの強制&lt;/li&gt;
 &lt;li&gt;Package by Featureで凝集性を向上させることでコンテキストをうまく制御する&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Fuzzing Test, Mutation Testingなどのテスト手法を活用してコード品質を保つ&lt;/li&gt;
 &lt;li&gt;開発者体験 = エージェント体験
 &lt;ul&gt;

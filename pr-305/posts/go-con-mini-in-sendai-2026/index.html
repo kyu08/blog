@@ -217,7 +217,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/02/26</time>
       
-    <span class="post-reading-time">9 min read (4268 words)</span></div>
+    <span class="post-reading-time">9 min read (4312 words)</span></div>
 
   
     <span class="post-tags">
@@ -329,10 +329,14 @@ if (!doNotTrack) {
 <p>最近PRレビューをする機会が増えてレビュワーとPR作成者双方の負担を減らす方法を考えていたのとても参考になった。</p>
 <p>以下メモ。</p>
 <ul>
-<li>Rules / Skillsでも防げるが、非決定的であるため、すり抜けてしまう可能性があるため、ハード制約を設けることが重要。</li>
+<li>AIの予期せぬ変更はRules / Skillsでもある程度は防げるがあくまで挙動は非決定的なためすり抜けてしまう可能性がある。そのためハード制約（決定的な処理による制約）を設けることが重要。</li>
+<li>ハード制約の例
+<ul>
 <li><code>internal</code> packageで予期せぬ外部参照から保護する</li>
 <li><code>depguard</code>による依存性ルールの強制</li>
 <li>Package by Featureで凝集性を向上させることでコンテキストをうまく制御する</li>
+</ul>
+</li>
 <li>Fuzzing Test, Mutation Testingなどのテスト手法を活用してコード品質を保つ</li>
 <li>開発者体験 = エージェント体験
 <ul>
