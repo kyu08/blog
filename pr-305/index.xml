@@ -119,17 +119,14 @@
 &lt;p&gt;&lt;div class=&#34;embed-container speakerdeck&#34;&gt;
         &lt;iframe src=&#34;https://speakerdeck.com/player/52cdc21278874c8dafb7a21812d6bd81&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
       &lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;メモ:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;「結合はむしろ、忘れてはならない設計ツールだ。」&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;bounded_context&lt;/code&gt;ディレクトリを切っているのが印象的だった&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;お話したこと&lt;/p&gt;
+&lt;li&gt;「結合はむしろ、忘れてはならない設計ツールだ。」&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bounded_context&lt;/code&gt;ディレクトリを切っているのが印象的だった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;お話したこと:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;ディレクトリ構成はどんな感じになっている？
+&lt;li&gt;ディレクトリ構成について
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;bounded_context&lt;/code&gt;ディレクトリの同階層には&lt;code&gt;monolish&lt;/code&gt;ディレクトリがある
 &lt;ul&gt;
@@ -144,8 +141,6 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h2 id=&#34;go設計思想の深掘り&#34;&gt;Go設計思想の深掘り&lt;/h2&gt;
 &lt;p&gt;k_program510さんによる発表。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;embed-container speakerdeck&#34;&gt;
@@ -157,7 +152,7 @@
 &lt;li&gt;&lt;code&gt;設計思想は「どこで使うべきか」を教えてくれる&lt;/code&gt;いい言葉だ。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;databasesqldriverを理解してカスタムデータベースドライバーを作る&#34;&gt;database/sql/driverを理解してカスタムデータベースドライバーを作る&lt;/h2&gt;
-&lt;p&gt;replu5による発表。&lt;/p&gt;
+&lt;p&gt;replu5さんによる発表。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;embed-container speakerdeck&#34;&gt;
         &lt;iframe src=&#34;https://speakerdeck.com/player/71c311a482f14af59e5808230f22dae3&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
       &lt;/div&gt;&lt;/p&gt;
