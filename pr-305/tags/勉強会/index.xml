@@ -33,7 +33,13 @@
 &lt;p&gt;最後に紹介されていたGo1.27のアノテーションで静的解析をできるようにする機能は今まさに自分が欲している機能&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;なので調べてみようと思った。&lt;/p&gt;
 &lt;p&gt;以下メモ。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;//line a.go:1&lt;/code&gt;しらなかった&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;//line a.go:1&lt;/code&gt;のような記法は知らなかった。
+&lt;ul&gt;
+&lt;li&gt;調べてみたところ&lt;code&gt;line directive&lt;/code&gt;という名前がついているようだった。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;こんな感じでコンパイラが出力するエラーメッセージなどが上書きされる。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://go.dev/play/p/Thvs9U8Twvj&#34; target=&#34;_blank&#34; &gt;https://go.dev/play/p/Thvs9U8Twvj&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;go test -cover&lt;/code&gt;を実行すると裏側では&lt;code&gt;go tool -cover&lt;/code&gt;が実行され、計測用のコードが挿入される&lt;/li&gt;
 &lt;li&gt;Goがセルフホスティングされるようになったのは2015年（Go1.5）（それまではC）
 &lt;ul&gt;
@@ -336,6 +342,9 @@
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34;&gt;
 &lt;p&gt;大AI時代になりPRレビュー負担が肥大化しているのでCIで機械的にコード品質を担保するためにLinterを増やそうと思っているため。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://pkg.go.dev/cmd/compile#hdr-Line_Directives&#34; target=&#34;_blank&#34; &gt;https://pkg.go.dev/cmd/compile#hdr-Line_Directives&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
