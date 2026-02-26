@@ -237,24 +237,19 @@
 &lt;/ul&gt;
 &lt;p&gt;感想:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;四則演算は適用するイメージが持てた。
-&lt;ul&gt;
-&lt;li&gt;ドメインメソッドではif elseとかもあるがそこも対応できるのか&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;li&gt;overlayすごそう&lt;/li&gt;
 &lt;li&gt;気になったこと
 &lt;ul&gt;
 &lt;li&gt;mutation testingの使い所について
 &lt;ul&gt;
-&lt;li&gt;実際のプロダクションに導入するならある程度テストが整備されたあとにやるのが優先順位としてよさそう？（自信なし）&lt;/li&gt;
-&lt;li&gt;というよりは品質が重要な箇所に必要に応じて追加していくのがいい？&lt;/li&gt;
+&lt;li&gt;実際のプロダクションに導入するならある程度テストが整備されたあとにやるのが優先順位としてよい？（Mutation Testingがちゃんと動作することの前提としてある程度のカバレッジが必要そう）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;mutation testing以外のテスト品質保証手法について
 &lt;ul&gt;
+&lt;li&gt;あまりテストの品質を定量的、機械的に保証する方法をカバレッジ以外に考えたことがなかった。&lt;/li&gt;
 &lt;li&gt;mutation testing以外ではどのようにテストコードの品質や正当性を保証するのがよさそう？&lt;/li&gt;
-&lt;li&gt;たとえばk8sの内部実装などではどのように品質担保しているのか気になった（調べられてはいない）&lt;/li&gt;
+&lt;li&gt;たとえばk8sの内部実装などではどのように品質担保しているのか気になった（気になっただけで調べられてはいない）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
