@@ -574,5 +574,11 @@
     "description": "Go Conference mini in Sendai 2026で使うスライドです。",
     "image": "https://files.speakerdeck.com/presentations/a0086a4f622f413b83f12560bf8fb2a2/slide_0.jpg?38491306",
     "fetchedAt": "2026-02-26T14:58:27.673Z"
+  },
+  "https://speakerdeck.com/fujidomoe/godeshi-xian-surujian-lao-naakitekutiya-ddd-grpc-connect-sositeaixie-diao-kai-fa-noshi-jian": {
+    "title": "Goで実現する堅牢なアーキテクチャ：DDD、gRPC-connect、そしてAI協調開発の実践",
+    "description": "https://sendaigo.jp/\nGo Conference mini in Sendai 2026\n2026.02.21 SAT\n杜の都・仙台",
+    "image": "https://files.speakerdeck.com/presentations/0592dd9c358e4ea9b74adf758ddb546a/slide_0.jpg?38489544",
+    "fetchedAt": "2026-02-26T15:09:11.107Z"
   }
 }

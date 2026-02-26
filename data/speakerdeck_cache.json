@@ -40,5 +40,11 @@
     "title": "nilとは何か 〜interfaceの構造とnil!=nilから理解する〜 / Understanding nil in Go Interface Representation and Why nil != nil",
     "ratio": "1.7794486215538847",
     "fetchedAt": "2026-02-26T14:58:30.488Z"
+  },
+  "https://speakerdeck.com/fujidomoe/godeshi-xian-surujian-lao-naakitekutiya-ddd-grpc-connect-sositeaixie-diao-kai-fa-noshi-jian": {
+    "playerUrl": "https://speakerdeck.com/player/0592dd9c358e4ea9b74adf758ddb546a",
+    "title": "Goで実現する堅牢なアーキテクチャ：DDD、gRPC-connect、そしてAI協調開発の実践",
+    "ratio": "1.7794486215538847",
+    "fetchedAt": "2026-02-26T15:09:13.956Z"
   }
 }
