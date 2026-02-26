@@ -34,5 +34,11 @@
     "title": "Goから学ぶGC -Green Tea GCによる次世代最適化-",
     "ratio": "1.7794486215538847",
     "fetchedAt": "2026-02-26T14:56:20.158Z"
+  },
+  "https://speakerdeck.com/kuro_kurorrr/understanding-nil-in-go-interface-representation-and-why-nil-equals-nil": {
+    "playerUrl": "https://speakerdeck.com/player/a0086a4f622f413b83f12560bf8fb2a2",
+    "title": "nilとは何か 〜interfaceの構造とnil!=nilから理解する〜 / Understanding nil in Go Interface Representation and Why nil != nil",
+    "ratio": "1.7794486215538847",
+    "fetchedAt": "2026-02-26T14:58:30.488Z"
   }
 }

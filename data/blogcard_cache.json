@@ -568,5 +568,11 @@
     "description": "GCの基本概念と、GoにおけるGCの実装、そしてGreen Tea GCによる次世代最適化について解説しています",
     "image": "https://files.speakerdeck.com/presentations/17dc2bf5b4ed4a1d8c289ad77f26cd8c/slide_0.jpg?38491879",
     "fetchedAt": "2026-02-26T14:56:17.110Z"
+  },
+  "https://speakerdeck.com/kuro_kurorrr/understanding-nil-in-go-interface-representation-and-why-nil-equals-nil": {
+    "title": "nilとは何か 〜interfaceの構造とnil!=nilから理解する〜 / Understanding nil in Go Interface Representation and Why nil != nil",
+    "description": "Go Conference mini in Sendai 2026で使うスライドです。",
+    "image": "https://files.speakerdeck.com/presentations/a0086a4f622f413b83f12560bf8fb2a2/slide_0.jpg?38491306",
+    "fetchedAt": "2026-02-26T14:58:27.673Z"
   }
 }
