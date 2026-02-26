@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sat, 21 Feb 2026 10:11:32 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-305/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Feb 2026 00:11:32 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-305/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go Conference mini in Sendai 2026に参加した</title>
       <link>https://blog.kyu08.com/pr-305/posts/go-con-mini-in-sendai-2026/</link>
-      <pubDate>Sat, 21 Feb 2026 10:11:32 +0900</pubDate>
+      <pubDate>Thu, 26 Feb 2026 00:11:32 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/pr-305/posts/go-con-mini-in-sendai-2026/</guid>
       <description>2026/02/21(土)に仙台で行われGo Conference mini in Sendai 2026に参加したのでその内容をまとめる。 Go Conference mini in Sendai 20262026年2月21日（土）開</description>
@@ -321,11 +321,12 @@
 &lt;li&gt;Goだから出来るProduction ready ジャッジシステム&lt;/li&gt;
 &lt;li&gt;はじめての Go 〜 きっかけは TinyGo だった&lt;/li&gt;
 &lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;ソロだったけどセッションの合間や懇親感でたくさんの人と交流できてとても楽しかった。&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;振り返り&#34;&gt;振り返り&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;セッションの合間は発表者の方に質問するためにウロウロしている時間が長かったのもあり、全スポンサーブースを回れなかった。もうちょっといい感じに時間を使えるとよさそう。（スポンサーブースで各社の方とお話するはとても楽しいので全部回りたい）&lt;/li&gt;
