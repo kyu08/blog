@@ -136,6 +136,8 @@ https://speakerdeck.com/replu/driver-to-create-a-custom-database-driver
 ## nilとは何か 〜言語仕様と設計者の葛藤から理解する〜
 株式会社サイバーエージェント kurodaさんによる発表。
 
+https://speakerdeck.com/kuro_kurorrr/understanding-nil-in-go-interface-representation-and-why-nil-equals-nil
+
 以下メモ。
 
 - Goのキーワード数を即答している人が数人いてすごかったw
