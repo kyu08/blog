@@ -9,13 +9,23 @@
     <copyright>blog.kyu08.com</copyright>
     <lastBuildDate>Sat, 21 Feb 2026 10:11:32 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-305/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Go Conference mini in Sendai 2026</title>
+      <title>Go Conference mini in Sendai 2026に参加した</title>
       <link>https://blog.kyu08.com/pr-305/posts/go-con-mini-in-sendai-2026/</link>
       <pubDate>Sat, 21 Feb 2026 10:11:32 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/pr-305/posts/go-con-mini-in-sendai-2026/</guid>
-      <description>【KeyNote】静的解析からみるGoの過去と未来 tenntennさんによるキーノート。 最後に紹介されていたGo1.27のアノテーションで静</description>
-      <content>&lt;h2 id=&#34;keynote静的解析からみるgoの過去と未来&#34;&gt;【KeyNote】静的解析からみるGoの過去と未来&lt;/h2&gt;
+      <description>2026/02/21(土)に仙台で行われGo Conference mini in Sendai 2026に参加したのでその内容をまとめる。 Go Conference mini in Sendai 20262026年2月21日（土）開</description>
+      <content>&lt;p&gt;2026/02/21(土)に仙台で行われGo Conference mini in Sendai 2026に参加したのでその内容をまとめる。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://sendaigo.jp/&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://sendaigo.jp/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://sendaigo.jp/ogp.png&#34; alt=&#34;Go Conference mini in Sendai 2026&#34; loading=&#34;lazy&#34;&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;Go Conference mini in Sendai 2026&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;2026年2月21日（土）開催 - Go Forward Together - 東北から広がるGoコミュニティ&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://sendaigo.jp/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;keynote静的解析からみるgoの過去と未来&#34;&gt;【KeyNote】静的解析からみるGoの過去と未来&lt;/h2&gt;
 &lt;p&gt;tenntennさんによるキーノート。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;embed-container google-slides&#34;&gt;
       &lt;iframe src=&#34;https://docs.google.com/presentation/d/14e9PiaKbyqcZTu5mYCKBqa9MokJhxmT0WePHxwPzCmg/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
@@ -90,7 +100,9 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;モジュラモノリスにおける境界をgoのinternalパッケージで守る&#34;&gt;モジュラモノリスにおける境界をGoのinternalパッケージで守る&lt;/h2&gt;
 &lt;p&gt;SODA inc.のmagavelさんによる発表。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://speakerdeck.com/magavel/moziyuramonorisuniokerujing-jie-wogonointernalpatukezideshou-ru&#34; target=&#34;_blank&#34;&gt;https://speakerdeck.com/magavel/moziyuramonorisuniokerujing-jie-wogonointernalpatukezideshou-ru&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;embed-container speakerdeck&#34;&gt;
+        &lt;iframe src=&#34;https://speakerdeck.com/player/52cdc21278874c8dafb7a21812d6bd81&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+      &lt;/div&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;「結合はむしろ、忘れてはならない設計ツールだ。」&lt;/p&gt;
@@ -119,14 +131,18 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;go設計思想の深掘り&#34;&gt;Go設計思想の深掘り&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://speakerdeck.com/ykf1999/gonoshe-ji-si-xiang-woshen-jue-risuru-unixkaraji-kumono-slidev&#34; target=&#34;_blank&#34;&gt;https://speakerdeck.com/ykf1999/gonoshe-ji-si-xiang-woshen-jue-risuru-unixkaraji-kumono-slidev&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;embed-container speakerdeck&#34;&gt;
+        &lt;iframe src=&#34;https://speakerdeck.com/player/bf88016d5fe349edb4eee19de56f94c2&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+      &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;メモ:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;発表者の型がオブジェクト指向言語に慣れていてGoにクラスがないことに驚いてGo誕生の背景を深ぼろうと思った、という自分の疑問に向き合う姿勢がとても素敵だと思った。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;設計思想は「どこで使うべきか」を教えてくれる&lt;/code&gt;いい言葉だ。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;databasesqldriverを理解してカスタムデータベースドライバーを作る&#34;&gt;database/sql/driverを理解してカスタムデータベースドライバーを作る&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://speakerdeck.com/replu/driver-to-create-a-custom-database-driver&#34; target=&#34;_blank&#34;&gt;https://speakerdeck.com/replu/driver-to-create-a-custom-database-driver&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;embed-container speakerdeck&#34;&gt;
+        &lt;iframe src=&#34;https://speakerdeck.com/player/71c311a482f14af59e5808230f22dae3&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+      &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;ここから
 ここから
 ここから
@@ -299,10 +315,16 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;上記以外に参加したセッションは以下&#34;&gt;上記以外に参加したセッションは以下。&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Goだから出来るProduction ready ジャッジシステム&lt;/li&gt;
 &lt;li&gt;はじめての Go 〜 きっかけは TinyGo だった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ソロだったけどセッションの合間や懇親感でたくさんの人と交流できてとても楽しかった。&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
