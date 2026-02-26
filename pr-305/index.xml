@@ -178,21 +178,26 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;nilとは何か-言語仕様と設計者の葛藤から理解する&#34;&gt;nilとは何か 〜言語仕様と設計者の葛藤から理解する〜&lt;/h2&gt;
 &lt;p&gt;株式会社サイバーエージェント kurodaさんによる発表。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://speakerdeck.com/kuro_kurorrr/understanding-nil-in-go-interface-representation-and-why-nil-equals-nil&#34; target=&#34;_blank&#34;&gt;https://speakerdeck.com/kuro_kurorrr/understanding-nil-in-go-interface-representation-and-why-nil-equals-nil&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;embed-container speakerdeck&#34;&gt;
+        &lt;iframe src=&#34;https://speakerdeck.com/player/a0086a4f622f413b83f12560bf8fb2a2&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+      &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;以下メモ。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Goのキーワード数を即答している人が数人いてすごかったw&lt;/li&gt;
-&lt;li&gt;nilはキーワードではない。true, false, iotaと同じpredeclared identifier(事前宣言された識別子)である。&lt;/li&gt;
-&lt;li&gt;predeclared identifierのなかでデフォルト型を持たないのはnilだけ。&lt;/li&gt;
-&lt;li&gt;ちょいちょいクイズが挟まっていて三k社を空きさせない工夫があって発表の仕方が参考になった&lt;/li&gt;
+&lt;li&gt;Goで定義されているキーワード数を即答している人が数人いてすごかったw（25個らしい）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nil&lt;/code&gt;はキーワードではない。&lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt;, &lt;code&gt;iota&lt;/code&gt;と同じpredeclared identifier(事前宣言された識別子)である。&lt;/li&gt;
+&lt;li&gt;predeclared identifierのなかでデフォルト型を持たないのは&lt;code&gt;nil&lt;/code&gt;だけ。&lt;/li&gt;
+&lt;li&gt;（ちょいちょいクイズが挟まっていて参加者を飽きさせない工夫があって発表の仕方が参考になった）&lt;/li&gt;
 &lt;li&gt;interfaceが==nilになるのは型情報もデータも両方ゼロのときのみ。
 &lt;ul&gt;
-&lt;li&gt;なのでtyped nilは==nilにならない。&lt;code&gt;var err *MyError = nil&lt;/code&gt;のように初期化した値は==nilにならないのでnilをreturnしたい場合は明示的にnilを返す必要がある。（全然知らなかった）&lt;/li&gt;
+&lt;li&gt;なのでtyped nilは==nilにならない。
+&lt;ul&gt;
+&lt;li&gt;-&amp;gt; &lt;code&gt;var err *MyError = nil&lt;/code&gt;のように初期化した値は==nilにならないのでnilをreturnしたい場合は明示的にnilを返す必要がある。（全然知らなかった）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;nilに関する問題をどう解決するかの議論がなかなか前に進んでいないことを説明してからの&lt;code&gt;errors.AsType&lt;/code&gt;をセマンティクスを変えずにうまく問題を解決した例として説明する流れがめっちゃ綺麗だった&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;実務での向き合い方&#34;&gt;実務での向き合い方&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;nilに関する問題をどう解決するかの議論がなかなか前に進んでいないことを説明してからの&lt;code&gt;errors.AsType&lt;/code&gt;をセマンティクスを変えずにうまく問題を解決した例として説明する流れがめっちゃ綺麗だった。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;who-tests-the-tests-&#34;&gt;Who tests the &lt;code&gt;Tests&lt;/code&gt; ?&lt;/h2&gt;
 &lt;p&gt;sivchariさんの発表。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;embed-container google-slides&#34;&gt;

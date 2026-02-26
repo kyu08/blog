@@ -217,7 +217,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/02/26</time>
       
-    <span class="post-reading-time">9 min read (4359 words)</span></div>
+    <span class="post-reading-time">9 min read (4366 words)</span></div>
 
   
     <span class="post-tags">
@@ -245,11 +245,7 @@ if (!doNotTrack) {
     <li><a href="#モジュラモノリスにおける境界をgoのinternalパッケージで守る">モジュラモノリスにおける境界をGoのinternalパッケージで守る</a></li>
     <li><a href="#go設計思想の深掘り">Go設計思想の深掘り</a></li>
     <li><a href="#databasesqldriverを理解してカスタムデータベースドライバーを作る">database/sql/driverを理解してカスタムデータベースドライバーを作る</a></li>
-    <li><a href="#nilとは何か-言語仕様と設計者の葛藤から理解する">nilとは何か 〜言語仕様と設計者の葛藤から理解する〜</a>
-      <ul>
-        <li><a href="#実務での向き合い方">実務での向き合い方</a></li>
-      </ul>
-    </li>
+    <li><a href="#nilとは何か-言語仕様と設計者の葛藤から理解する">nilとは何か 〜言語仕様と設計者の葛藤から理解する〜</a></li>
     <li><a href="#who-tests-the-tests-">Who tests the <code>Tests</code> ?</a></li>
     <li><a href="#goから学ぶgcの仕組みとgreen-tea-gcによる次世代最適化">Goから学ぶGCの仕組みとGreen Tea GCによる次世代最適化</a></li>
     <li><a href="#実装公開goで実現する堅牢なアーキテクチャdddgrpc-connectそしてai協調開発の実践">【実装公開】Goで実現する堅牢なアーキテクチャ：DDD、gRPC-connect、そしてAI協調開発の実践</a></li>
@@ -425,21 +421,26 @@ if (!doNotTrack) {
 </ul>
 <h2 id="nilとは何か-言語仕様と設計者の葛藤から理解する">nilとは何か 〜言語仕様と設計者の葛藤から理解する〜<a href="#nilとは何か-言語仕様と設計者の葛藤から理解する" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>株式会社サイバーエージェント kurodaさんによる発表。</p>
-<p><a href="https://speakerdeck.com/kuro_kurorrr/understanding-nil-in-go-interface-representation-and-why-nil-equals-nil" target="_blank">https://speakerdeck.com/kuro_kurorrr/understanding-nil-in-go-interface-representation-and-why-nil-equals-nil</a></p>
+<p><div class="embed-container speakerdeck">
+        <iframe src="https://speakerdeck.com/player/a0086a4f622f413b83f12560bf8fb2a2" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      </div></p>
 <p>以下メモ。</p>
 <ul>
-<li>Goのキーワード数を即答している人が数人いてすごかったw</li>
-<li>nilはキーワードではない。true, false, iotaと同じpredeclared identifier(事前宣言された識別子)である。</li>
-<li>predeclared identifierのなかでデフォルト型を持たないのはnilだけ。</li>
-<li>ちょいちょいクイズが挟まっていて三k社を空きさせない工夫があって発表の仕方が参考になった</li>
+<li>Goで定義されているキーワード数を即答している人が数人いてすごかったw（25個らしい）</li>
+<li><code>nil</code>はキーワードではない。<code>true</code>, <code>false</code>, <code>iota</code>と同じpredeclared identifier(事前宣言された識別子)である。</li>
+<li>predeclared identifierのなかでデフォルト型を持たないのは<code>nil</code>だけ。</li>
+<li>（ちょいちょいクイズが挟まっていて参加者を飽きさせない工夫があって発表の仕方が参考になった）</li>
 <li>interfaceが==nilになるのは型情報もデータも両方ゼロのときのみ。
 <ul>
-<li>なのでtyped nilは==nilにならない。<code>var err *MyError = nil</code>のように初期化した値は==nilにならないのでnilをreturnしたい場合は明示的にnilを返す必要がある。（全然知らなかった）</li>
+<li>なのでtyped nilは==nilにならない。
+<ul>
+<li>-&gt; <code>var err *MyError = nil</code>のように初期化した値は==nilにならないのでnilをreturnしたい場合は明示的にnilを返す必要がある。（全然知らなかった）</li>
 </ul>
 </li>
-<li>nilに関する問題をどう解決するかの議論がなかなか前に進んでいないことを説明してからの<code>errors.AsType</code>をセマンティクスを変えずにうまく問題を解決した例として説明する流れがめっちゃ綺麗だった</li>
 </ul>
-<h3 id="実務での向き合い方">実務での向き合い方<a href="#実務での向き合い方" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+</li>
+<li>nilに関する問題をどう解決するかの議論がなかなか前に進んでいないことを説明してからの<code>errors.AsType</code>をセマンティクスを変えずにうまく問題を解決した例として説明する流れがめっちゃ綺麗だった。</li>
+</ul>
 <h2 id="who-tests-the-tests-">Who tests the <code>Tests</code> ?<a href="#who-tests-the-tests-" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>sivchariさんの発表。</p>
 <p><div class="embed-container google-slides">
@@ -644,11 +645,7 @@ if (!doNotTrack) {
     <li><a href="#モジュラモノリスにおける境界をgoのinternalパッケージで守る">モジュラモノリスにおける境界をGoのinternalパッケージで守る</a></li>
     <li><a href="#go設計思想の深掘り">Go設計思想の深掘り</a></li>
     <li><a href="#databasesqldriverを理解してカスタムデータベースドライバーを作る">database/sql/driverを理解してカスタムデータベースドライバーを作る</a></li>
-    <li><a href="#nilとは何か-言語仕様と設計者の葛藤から理解する">nilとは何か 〜言語仕様と設計者の葛藤から理解する〜</a>
-      <ul>
-        <li><a href="#実務での向き合い方">実務での向き合い方</a></li>
-      </ul>
-    </li>
+    <li><a href="#nilとは何か-言語仕様と設計者の葛藤から理解する">nilとは何か 〜言語仕様と設計者の葛藤から理解する〜</a></li>
     <li><a href="#who-tests-the-tests-">Who tests the <code>Tests</code> ?</a></li>
     <li><a href="#goから学ぶgcの仕組みとgreen-tea-gcによる次世代最適化">Goから学ぶGCの仕組みとGreen Tea GCによる次世代最適化</a></li>
     <li><a href="#実装公開goで実現する堅牢なアーキテクチャdddgrpc-connectそしてai協調開発の実践">【実装公開】Goで実現する堅牢なアーキテクチャ：DDD、gRPC-connect、そしてAI協調開発の実践</a></li>
