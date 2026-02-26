@@ -60,7 +60,7 @@
       {{- $cleanUrl = index $parts 0 -}}
     {{- end -}}
     <div class="embed-container docswell">
-      <iframe src="{{ $cleanUrl }}?slide=1" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      <iframe src="{{ $cleanUrl }}?slide=1" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" loading="lazy"></iframe>
     </div>
   {{- else -}}
     {{- /* キャッシュデータを確認 */ -}}
