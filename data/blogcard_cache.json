@@ -556,5 +556,11 @@
     "description": "Who tests the Tests ? ~ Go Conference mini in Sendai 2026 ~ The Go gopher was designed by Renee French",
     "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyKotDYe1gzwvdo9kIXBtbdIqEXcgZizQzJSJT-WsIkpq-UHkdhHhV607t7ZW8NfuxgGW40TtB9LWrUFzDU1SLS3EMgzv7flu6jjPpgmrPkuvfeQvhdU=w1200-h630-p",
     "fetchedAt": "2026-02-26T02:09:20.888Z"
+  },
+  "https://sendaigo.jp/": {
+    "title": "Go Conference mini in Sendai 2026",
+    "description": "2026年2月21日（土）開催 - Go Forward Together - 東北から広がるGoコミュニティ",
+    "image": "https://sendaigo.jp/ogp.png",
+    "fetchedAt": "2026-02-26T13:34:25.811Z"
   }
 }
