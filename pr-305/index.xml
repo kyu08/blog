@@ -103,20 +103,17 @@
 &lt;p&gt;&lt;div class=&#34;embed-container google-slides&#34;&gt;
       &lt;iframe src=&#34;https://docs.google.com/presentation/d/1SpK9Pxsh2QOOXwIirNe3YiN6U5ujAxiottt4ZNPdBkg/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
     &lt;/div&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;並行処理の原理だけでなく、パターンを身に着けておくといざ実装するとなったときに役に立ちそうだと思った。（なかなか毎月書くような処理ではないのであまり身につかない&amp;hellip;）&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;並行処理の原理だけでなく、パターンを身に着けておくといざ実装するとなったときに役に立ちそうだと思った。（なかなか毎月書くような機会がないのであまり定着してない&amp;hellip;）&lt;/p&gt;
 &lt;p&gt;以下メモ。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Goは同期で書いておいて高速化したい箇所だけ並列化する、という書き方がやりやすいのが特徴。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;go126のruntimemetricsが便利そうな件&#34;&gt;Go.1.26のruntime/metricsが便利そうな件（？）&lt;/h2&gt;
+&lt;p&gt;o_ga09さんによる発表。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;embed-container google-slides&#34;&gt;
       &lt;iframe src=&#34;https://docs.google.com/presentation/d/1mamepeOir5fiEh3ZcGuRM9kkEvQohCcKeZIsKwZ6_L4/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
     &lt;/div&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;goroutineリークをリアルタイムに検出できるの便利そう&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;goroutineリークをリアルタイムに検出できるの便利そう。&lt;/p&gt;
 &lt;h2 id=&#34;モジュラモノリスにおける境界をgoのinternalパッケージで守る&#34;&gt;モジュラモノリスにおける境界をGoのinternalパッケージで守る&lt;/h2&gt;
 &lt;p&gt;SODA inc.のmagavelさんによる発表。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;embed-container speakerdeck&#34;&gt;
@@ -150,6 +147,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;go設計思想の深掘り&#34;&gt;Go設計思想の深掘り&lt;/h2&gt;
+&lt;p&gt;k_program510さんによる発表。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;embed-container speakerdeck&#34;&gt;
         &lt;iframe src=&#34;https://speakerdeck.com/player/bf88016d5fe349edb4eee19de56f94c2&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
       &lt;/div&gt;&lt;/p&gt;
@@ -159,6 +157,7 @@
 &lt;li&gt;&lt;code&gt;設計思想は「どこで使うべきか」を教えてくれる&lt;/code&gt;いい言葉だ。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;databasesqldriverを理解してカスタムデータベースドライバーを作る&#34;&gt;database/sql/driverを理解してカスタムデータベースドライバーを作る&lt;/h2&gt;
+&lt;p&gt;replu5による発表。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;embed-container speakerdeck&#34;&gt;
         &lt;iframe src=&#34;https://speakerdeck.com/player/71c311a482f14af59e5808230f22dae3&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
       &lt;/div&gt;&lt;/p&gt;
@@ -200,8 +199,10 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;nilとは何か-言語仕様と設計者の葛藤から理解する&#34;&gt;nilとは何か 〜言語仕様と設計者の葛藤から理解する〜&lt;/h2&gt;
-&lt;p&gt;Goのキーワード数を即答している人が数人いてすごかった&lt;/p&gt;
+&lt;p&gt;株式会社サイバーエージェント kurodaさんによる発表。&lt;/p&gt;
+&lt;p&gt;以下メモ。&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;Goのキーワード数を即答している人が数人いてすごかったw&lt;/li&gt;
 &lt;li&gt;nilはキーワードではない。true, false, iotaと同じpredeclared identifier(事前宣言された識別子)である。&lt;/li&gt;
 &lt;li&gt;predeclared identifierのなかでデフォルト型を持たないのはnilだけ。&lt;/li&gt;
 &lt;li&gt;ちょいちょいクイズが挟まっていて三k社を空きさせない工夫があって発表の仕方が参考になった&lt;/li&gt;
@@ -214,7 +215,7 @@
 &lt;/ul&gt;
 &lt;h3 id=&#34;実務での向き合い方&#34;&gt;実務での向き合い方&lt;/h3&gt;
 &lt;h2 id=&#34;who-tests-the-tests-&#34;&gt;Who tests the &lt;code&gt;Tests&lt;/code&gt; ?&lt;/h2&gt;
-&lt;p&gt;sivchariさんの発表&lt;/p&gt;
+&lt;p&gt;sivchariさんの発表。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;embed-container google-slides&#34;&gt;
       &lt;iframe src=&#34;https://docs.google.com/presentation/d/1we1bAhUH-_hCEZTYFy2DOyFjWN0fp7VWBkWBha8nwk4/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
     &lt;/div&gt;&lt;/p&gt;
@@ -284,26 +285,10 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;goから学ぶgcの仕組みとgreen-tea-gcによる次世代最適化&#34;&gt;Goから学ぶGCの仕組みとGreen Tea GCによる次世代最適化&lt;/h2&gt;
+&lt;p&gt;go_poron10さんによる発表。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://speakerdeck.com/yuporon/gokaraxue-bugc-green-tea-gcniyoruci-shi-dai-zui-shi-hua&#34; target=&#34;_blank&#34;&gt;https://speakerdeck.com/yuporon/gokaraxue-bugc-green-tea-gcniyoruci-shi-dai-zui-shi-hua&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;並行GCってなんだろう&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;スポンサーブースで話したこと&#34;&gt;スポンサーブースで話したこと&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;ANDPAD
-&lt;ul&gt;
-&lt;li&gt;意外にもGo関連の勉強会でブースを出すのは初とのこと
-&lt;ul&gt;
-&lt;li&gt;スポンサーブースは抽選なのでなかなか機会が得られない&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Soda
-&lt;ul&gt;
-&lt;li&gt;Code Rabbitでレビュー負荷を下げている&lt;/li&gt;
-&lt;li&gt;PRレビューはチーム全員で分担して特定の誰かに負担が偏らないようにしている&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;実装公開goで実現する堅牢なアーキテクチャdddgrpc-connectそしてai協調開発の実践&#34;&gt;【実装公開】Goで実現する堅牢なアーキテクチャ：DDD、gRPC-connect、そしてAI協調開発の実践&lt;/h2&gt;
 &lt;p&gt;株式会社テレシーのDaisuke Sasakiさんによる発表。&lt;/p&gt;
@@ -339,6 +324,25 @@
 &lt;ul&gt;
 &lt;li&gt;Goだから出来るProduction ready ジャッジシステム&lt;/li&gt;
 &lt;li&gt;はじめての Go 〜 きっかけは TinyGo だった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;スポンサーブースで話したこと&#34;&gt;スポンサーブースで話したこと&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ANDPAD
+&lt;ul&gt;
+&lt;li&gt;意外にもGo関連の勉強会でブースを出すのは初とのこと
+&lt;ul&gt;
+&lt;li&gt;スポンサーブースは抽選なのでなかなか機会が得られない&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Soda
+&lt;ul&gt;
+&lt;li&gt;Code Rabbitでレビュー負荷を下げている&lt;/li&gt;
+&lt;li&gt;PRレビューはチーム全員で分担して特定の誰かに負担が偏らないようにしている&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;

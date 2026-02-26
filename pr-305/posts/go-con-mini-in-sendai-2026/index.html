@@ -217,7 +217,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/02/26</time>
       
-    <span class="post-reading-time">9 min read (4312 words)</span></div>
+    <span class="post-reading-time">9 min read (4412 words)</span></div>
 
   
     <span class="post-tags">
@@ -252,9 +252,9 @@ if (!doNotTrack) {
     </li>
     <li><a href="#who-tests-the-tests-">Who tests the <code>Tests</code> ?</a></li>
     <li><a href="#goから学ぶgcの仕組みとgreen-tea-gcによる次世代最適化">Goから学ぶGCの仕組みとGreen Tea GCによる次世代最適化</a></li>
-    <li><a href="#スポンサーブースで話したこと">スポンサーブースで話したこと</a></li>
     <li><a href="#実装公開goで実現する堅牢なアーキテクチャdddgrpc-connectそしてai協調開発の実践">【実装公開】Goで実現する堅牢なアーキテクチャ：DDD、gRPC-connect、そしてAI協調開発の実践</a></li>
     <li><a href="#上記以外に参加したセッションは以下">上記以外に参加したセッションは以下。</a></li>
+    <li><a href="#スポンサーブースで話したこと">スポンサーブースで話したこと</a></li>
     <li><a href="#感想">感想</a></li>
     <li><a href="#振り返り">振り返り</a></li>
   </ul>
@@ -350,20 +350,17 @@ if (!doNotTrack) {
 <p><div class="embed-container google-slides">
       <iframe src="https://docs.google.com/presentation/d/1SpK9Pxsh2QOOXwIirNe3YiN6U5ujAxiottt4ZNPdBkg/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div></p>
-<ul>
-<li>並行処理の原理だけでなく、パターンを身に着けておくといざ実装するとなったときに役に立ちそうだと思った。（なかなか毎月書くような処理ではないのであまり身につかない&hellip;）</li>
-</ul>
+<p>並行処理の原理だけでなく、パターンを身に着けておくといざ実装するとなったときに役に立ちそうだと思った。（なかなか毎月書くような機会がないのであまり定着してない&hellip;）</p>
 <p>以下メモ。</p>
 <ul>
 <li>Goは同期で書いておいて高速化したい箇所だけ並列化する、という書き方がやりやすいのが特徴。</li>
 </ul>
 <h2 id="go126のruntimemetricsが便利そうな件">Go.1.26のruntime/metricsが便利そうな件（？）<a href="#go126のruntimemetricsが便利そうな件" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>o_ga09さんによる発表。</p>
 <p><div class="embed-container google-slides">
       <iframe src="https://docs.google.com/presentation/d/1mamepeOir5fiEh3ZcGuRM9kkEvQohCcKeZIsKwZ6_L4/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div></p>
-<ul>
-<li>goroutineリークをリアルタイムに検出できるの便利そう</li>
-</ul>
+<p>goroutineリークをリアルタイムに検出できるの便利そう。</p>
 <h2 id="モジュラモノリスにおける境界をgoのinternalパッケージで守る">モジュラモノリスにおける境界をGoのinternalパッケージで守る<a href="#モジュラモノリスにおける境界をgoのinternalパッケージで守る" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>SODA inc.のmagavelさんによる発表。</p>
 <p><div class="embed-container speakerdeck">
@@ -397,6 +394,7 @@ if (!doNotTrack) {
 </li>
 </ul>
 <h2 id="go設計思想の深掘り">Go設計思想の深掘り<a href="#go設計思想の深掘り" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>k_program510さんによる発表。</p>
 <p><div class="embed-container speakerdeck">
         <iframe src="https://speakerdeck.com/player/bf88016d5fe349edb4eee19de56f94c2" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
       </div></p>
@@ -406,6 +404,7 @@ if (!doNotTrack) {
 <li><code>設計思想は「どこで使うべきか」を教えてくれる</code>いい言葉だ。</li>
 </ul>
 <h2 id="databasesqldriverを理解してカスタムデータベースドライバーを作る">database/sql/driverを理解してカスタムデータベースドライバーを作る<a href="#databasesqldriverを理解してカスタムデータベースドライバーを作る" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>replu5による発表。</p>
 <p><div class="embed-container speakerdeck">
         <iframe src="https://speakerdeck.com/player/71c311a482f14af59e5808230f22dae3" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
       </div></p>
@@ -447,8 +446,10 @@ if (!doNotTrack) {
 </li>
 </ul>
 <h2 id="nilとは何か-言語仕様と設計者の葛藤から理解する">nilとは何か 〜言語仕様と設計者の葛藤から理解する〜<a href="#nilとは何か-言語仕様と設計者の葛藤から理解する" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p>Goのキーワード数を即答している人が数人いてすごかった</p>
+<p>株式会社サイバーエージェント kurodaさんによる発表。</p>
+<p>以下メモ。</p>
 <ul>
+<li>Goのキーワード数を即答している人が数人いてすごかったw</li>
 <li>nilはキーワードではない。true, false, iotaと同じpredeclared identifier(事前宣言された識別子)である。</li>
 <li>predeclared identifierのなかでデフォルト型を持たないのはnilだけ。</li>
 <li>ちょいちょいクイズが挟まっていて三k社を空きさせない工夫があって発表の仕方が参考になった</li>
@@ -461,7 +462,7 @@ if (!doNotTrack) {
 </ul>
 <h3 id="実務での向き合い方">実務での向き合い方<a href="#実務での向き合い方" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <h2 id="who-tests-the-tests-">Who tests the <code>Tests</code> ?<a href="#who-tests-the-tests-" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p>sivchariさんの発表</p>
+<p>sivchariさんの発表。</p>
 <p><div class="embed-container google-slides">
       <iframe src="https://docs.google.com/presentation/d/1we1bAhUH-_hCEZTYFy2DOyFjWN0fp7VWBkWBha8nwk4/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div></p>
@@ -531,26 +532,10 @@ if (!doNotTrack) {
 </li>
 </ul>
 <h2 id="goから学ぶgcの仕組みとgreen-tea-gcによる次世代最適化">Goから学ぶGCの仕組みとGreen Tea GCによる次世代最適化<a href="#goから学ぶgcの仕組みとgreen-tea-gcによる次世代最適化" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>go_poron10さんによる発表。</p>
+<p><a href="https://speakerdeck.com/yuporon/gokaraxue-bugc-green-tea-gcniyoruci-shi-dai-zui-shi-hua" target="_blank">https://speakerdeck.com/yuporon/gokaraxue-bugc-green-tea-gcniyoruci-shi-dai-zui-shi-hua</a></p>
 <ul>
 <li>並行GCってなんだろう</li>
-</ul>
-<h2 id="スポンサーブースで話したこと">スポンサーブースで話したこと<a href="#スポンサーブースで話したこと" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<ul>
-<li>ANDPAD
-<ul>
-<li>意外にもGo関連の勉強会でブースを出すのは初とのこと
-<ul>
-<li>スポンサーブースは抽選なのでなかなか機会が得られない</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Soda
-<ul>
-<li>Code Rabbitでレビュー負荷を下げている</li>
-<li>PRレビューはチーム全員で分担して特定の誰かに負担が偏らないようにしている</li>
-</ul>
-</li>
 </ul>
 <h2 id="実装公開goで実現する堅牢なアーキテクチャdddgrpc-connectそしてai協調開発の実践">【実装公開】Goで実現する堅牢なアーキテクチャ：DDD、gRPC-connect、そしてAI協調開発の実践<a href="#実装公開goで実現する堅牢なアーキテクチャdddgrpc-connectそしてai協調開発の実践" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>株式会社テレシーのDaisuke Sasakiさんによる発表。</p>
@@ -586,6 +571,25 @@ if (!doNotTrack) {
 <ul>
 <li>Goだから出来るProduction ready ジャッジシステム</li>
 <li>はじめての Go 〜 きっかけは TinyGo だった</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="スポンサーブースで話したこと">スポンサーブースで話したこと<a href="#スポンサーブースで話したこと" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>ANDPAD
+<ul>
+<li>意外にもGo関連の勉強会でブースを出すのは初とのこと
+<ul>
+<li>スポンサーブースは抽選なのでなかなか機会が得られない</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Soda
+<ul>
+<li>Code Rabbitでレビュー負荷を下げている</li>
+<li>PRレビューはチーム全員で分担して特定の誰かに負担が偏らないようにしている</li>
+</ul>
+</li>
 </ul>
 <!-- raw HTML omitted -->
 <h2 id="感想">感想<a href="#感想" class="hanchor" ariaLabel="Anchor">#</a> </h2>
@@ -666,9 +670,9 @@ if (!doNotTrack) {
     </li>
     <li><a href="#who-tests-the-tests-">Who tests the <code>Tests</code> ?</a></li>
     <li><a href="#goから学ぶgcの仕組みとgreen-tea-gcによる次世代最適化">Goから学ぶGCの仕組みとGreen Tea GCによる次世代最適化</a></li>
-    <li><a href="#スポンサーブースで話したこと">スポンサーブースで話したこと</a></li>
     <li><a href="#実装公開goで実現する堅牢なアーキテクチャdddgrpc-connectそしてai協調開発の実践">【実装公開】Goで実現する堅牢なアーキテクチャ：DDD、gRPC-connect、そしてAI協調開発の実践</a></li>
     <li><a href="#上記以外に参加したセッションは以下">上記以外に参加したセッションは以下。</a></li>
+    <li><a href="#スポンサーブースで話したこと">スポンサーブースで話したこと</a></li>
     <li><a href="#感想">感想</a></li>
     <li><a href="#振り返り">振り返り</a></li>
   </ul>
