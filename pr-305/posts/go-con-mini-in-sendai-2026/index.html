@@ -217,7 +217,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/02/26</time>
       
-    <span class="post-reading-time">9 min read (4396 words)</span></div>
+    <span class="post-reading-time">9 min read (4425 words)</span></div>
 
   
     <span class="post-tags">
@@ -503,25 +503,19 @@ if (!doNotTrack) {
 <p><div class="embed-container speakerdeck">
         <iframe src="https://speakerdeck.com/player/17dc2bf5b4ed4a1d8c289ad77f26cd8c" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
       </div></p>
-<ul>
-<li>並行GCってなんだろう</li>
-</ul>
+<p>とても高度だったので途中でついていけなくなってしまったのでいつかリベンジしたい。</p>
 <h2 id="実装公開goで実現する堅牢なアーキテクチャdddgrpc-connectそしてai協調開発の実践">【実装公開】Goで実現する堅牢なアーキテクチャ：DDD、gRPC-connect、そしてAI協調開発の実践<a href="#実装公開goで実現する堅牢なアーキテクチャdddgrpc-connectそしてai協調開発の実践" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>株式会社テレシーのDaisuke Sasakiさんによる発表。</p>
+<p><a href="https://speakerdeck.com/fujidomoe/godeshi-xian-surujian-lao-naakitekutiya-ddd-grpc-connect-sositeaixie-diao-kai-fa-noshi-jian" target="_blank">https://speakerdeck.com/fujidomoe/godeshi-xian-surujian-lao-naakitekutiya-ddd-grpc-connect-sositeaixie-diao-kai-fa-noshi-jian</a></p>
+<p>お話したこと:</p>
 <ul>
-<li>
-<p>application層でCommandとQueryを分けるパターン</p>
-</li>
-<li>
-<p>お話したこと</p>
-<ul>
-<li>application層のQuery Serviceからdomain packageへの依存はOKにしている？それとも独自のreturn typeをquery serviceで定義している？
+<li>application層のQuery Serviceからdomain packageへの依存はOKにしている？それとも独自のreturn typeをQuery serviceで定義している？
 <ul>
 <li>yes</li>
-<li>domain層に以下の2種類がある。
+<li>domain層に以下の2種類があり、それぞれ別パッケージに定義している。
 <ul>
-<li>commandとqueryの両方から参照される型</li>
-<li>queryからのみ参照される型</li>
+<li>commandとqueryの両方から参照される型(tier1)</li>
+<li>queryからのみ参照される型(tier2)</li>
 </ul>
 </li>
 </ul>
@@ -530,8 +524,6 @@ if (!doNotTrack) {
 <ul>
 <li>特に強いこだわりがあってそうしているわけではない。</li>
 <li>まだ運用して半年なのでこれから課題が出てくる可能性はある。</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>

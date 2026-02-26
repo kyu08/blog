@@ -260,25 +260,19 @@
 &lt;p&gt;&lt;div class=&#34;embed-container speakerdeck&#34;&gt;
         &lt;iframe src=&#34;https://speakerdeck.com/player/17dc2bf5b4ed4a1d8c289ad77f26cd8c&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
       &lt;/div&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;並行GCってなんだろう&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;とても高度だったので途中でついていけなくなってしまったのでいつかリベンジしたい。&lt;/p&gt;
 &lt;h2 id=&#34;実装公開goで実現する堅牢なアーキテクチャdddgrpc-connectそしてai協調開発の実践&#34;&gt;【実装公開】Goで実現する堅牢なアーキテクチャ：DDD、gRPC-connect、そしてAI協調開発の実践&lt;/h2&gt;
 &lt;p&gt;株式会社テレシーのDaisuke Sasakiさんによる発表。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://speakerdeck.com/fujidomoe/godeshi-xian-surujian-lao-naakitekutiya-ddd-grpc-connect-sositeaixie-diao-kai-fa-noshi-jian&#34; target=&#34;_blank&#34;&gt;https://speakerdeck.com/fujidomoe/godeshi-xian-surujian-lao-naakitekutiya-ddd-grpc-connect-sositeaixie-diao-kai-fa-noshi-jian&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;お話したこと:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;application層でCommandとQueryを分けるパターン&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;お話したこと&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;application層のQuery Serviceからdomain packageへの依存はOKにしている？それとも独自のreturn typeをquery serviceで定義している？
+&lt;li&gt;application層のQuery Serviceからdomain packageへの依存はOKにしている？それとも独自のreturn typeをQuery serviceで定義している？
 &lt;ul&gt;
 &lt;li&gt;yes&lt;/li&gt;
-&lt;li&gt;domain層に以下の2種類がある。
+&lt;li&gt;domain層に以下の2種類があり、それぞれ別パッケージに定義している。
 &lt;ul&gt;
-&lt;li&gt;commandとqueryの両方から参照される型&lt;/li&gt;
-&lt;li&gt;queryからのみ参照される型&lt;/li&gt;
+&lt;li&gt;commandとqueryの両方から参照される型(tier1)&lt;/li&gt;
+&lt;li&gt;queryからのみ参照される型(tier2)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -287,8 +281,6 @@
 &lt;ul&gt;
 &lt;li&gt;特に強いこだわりがあってそうしているわけではない。&lt;/li&gt;
 &lt;li&gt;まだ運用して半年なのでこれから課題が出てくる可能性はある。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
