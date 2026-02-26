@@ -45,8 +45,9 @@ https://docs.google.com/presentation/d/14e9PiaKbyqcZTu5mYCKBqa9MokJhxmT0WePHxwPz
 - Go 1.27
     - アノテーションによる静的解析
         - 一点もののlinterを作らなくてよくなる。
-        - xxしたあとにyyする、みたいな制約をアノテーションで表現できるようになる（らしい）
-        <!-- TODO: 調べてかく -->
+        - `//go:fix inline`
+            - https://go.dev/doc/go1.26#go-command
+        - xxしたあとにyyする、みたいな制約をアノテーションで表現できるようになる（らしい。が一次情報は見つけられていない）
 
 ## AI時代のGo開発2026 爆速開発のためのガードレール
 UPSIDERのRyo MimuraさんによるAIを時代の開発生産性を保つにあたっての課題と対策についてのセッション。
