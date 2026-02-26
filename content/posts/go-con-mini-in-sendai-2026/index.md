@@ -40,7 +40,7 @@ https://docs.google.com/presentation/d/14e9PiaKbyqcZTu5mYCKBqa9MokJhxmT0WePHxwPz
     - (まだ10年しかたってないんだなー)
     - ここからコンパイラのコードが既存標準パッケージと共通化されたりするようになった
 - 2019
-    - goplsがでてきた
+    - goplsが登場
     - 最初はgolspだったがしれっと名前が変わったらしいw
 - Go 1.27
     - アノテーションによる静的解析
@@ -51,7 +51,8 @@ https://docs.google.com/presentation/d/14e9PiaKbyqcZTu5mYCKBqa9MokJhxmT0WePHxwPz
 ## AI時代のGo開発2026 爆速開発のためのガードレール
 UPSIDERのRyo MimuraさんによるAIを時代の開発生産性を保つにあたっての課題と対策についてのセッション。
 
-https://www.docswell.com/s/r4mimu/ZQXGNY-2026-02-21-102435
+<!-- TODO: バグがなおったらコメントインする -->
+<!-- https://www.docswell.com/s/r4mimu/ZQXGNY-2026-02-21-102435 -->
 
 最近PRレビューをする機会が増えてレビュワーとPR作成者双方の負担を減らす方法を考えていたのとても参考になった。
 
