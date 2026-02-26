@@ -72,8 +72,9 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;ai時代のgo開発2026-爆速開発のためのガードレール&#34;&gt;AI時代のGo開発2026 爆速開発のためのガードレール&lt;/h2&gt;
 &lt;p&gt;UPSIDERのRyo MimuraさんによるAIを時代の開発生産性を保つにあたっての課題と対策についてのセッション。&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;div class=&#34;embed-container docswell&#34;&gt;
+      &lt;iframe src=&#34;https://www.docswell.com/s/r4mimu/ZQXGNY-2026-02-21-102435?slide=1&#34; frameborder=&#34;0&#34; width=&#34;100%&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;最近PRレビューをする機会が増えてレビュワーとPR作成者双方の負担を減らす方法を考えていたのとても参考になった。&lt;/p&gt;
 &lt;p&gt;以下メモ。&lt;/p&gt;
 &lt;ul&gt;
