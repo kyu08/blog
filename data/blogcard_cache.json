@@ -508,5 +508,53 @@
     "description": "🐶 Kubernetes CLI To Manage Your Clusters In Style! - derailed/k9s",
     "image": "https://repository-images.githubusercontent.com/167596393/6dd20780-5c0e-11ea-8e26-7754ad171192",
     "fetchedAt": "2026-02-14T15:13:45.714Z"
+  },
+  "https://docs.google.com/presentation/d/14e9PiaKbyqcZTu5mYCKBqa9MokJhxmT0WePHxwPzCmg": {
+    "title": "静的解析からみるGoの過去と未来",
+    "description": "静的解析からみる Goの過去と未来 2026/02/21 Go Conference mini 2026 in SENDAI https://tenn.in/goconmini26",
+    "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyLwxORsNt-pwW3BB9Bn95JXcB7mez-bGtlz7M7x3p1MR9A_9dHE6q0jH8BOqoJun0E0tpvHJHBx2Eg_rV9XafUEjoi_Sd9po49WSYhavx9IBA5aKO5Z=w1200-h630-p",
+    "fetchedAt": "2026-02-26T02:09:17.858Z"
+  },
+  "https://www.docswell.com/s/r4mimu/ZQXGNY-2026-02-21-102435": {
+    "title": "AI時代のGo開発2026 爆速開発のためのガードレール | ドクセル",
+    "description": "AI時代のGo開発2026 爆速開発のためのガードレール by Ryo Mimura",
+    "image": "https://bcdn.docswell.com/page/LE1YVVND7G.jpg?width=480",
+    "fetchedAt": "2026-02-26T02:09:17.521Z"
+  },
+  "https://docs.google.com/presentation/d/1SpK9Pxsh2QOOXwIirNe3YiN6U5ujAxiottt4ZNPdBkg/edit": {
+    "title": "2026/02/21 Go での並行処理 - 最初の一歩 @ Go Conference mini in Sendai 2026",
+    "description": "Go での並列処理 「最初の一歩」から「次の一歩」へ Go Conference mini in Sendai 2026 2026/02/21 Masaaki Takasago",
+    "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyLY8p7jbQ5sNcP_QZfWnbVxj99qm2jLGXla5NbkvJl5E55pz2Py7Ej0gmLqVV4lMIf4uowsqOlEC-cfc3Yqy2TLEkYIjVQo39PGpYLKdSm6tWDsM0Zo=w1200-h630-p",
+    "fetchedAt": "2026-02-26T02:09:17.750Z"
+  },
+  "https://docs.google.com/presentation/d/1mamepeOir5fiEh3ZcGuRM9kkEvQohCcKeZIsKwZ6_L4/edit?slide=id.SLIDES_API254050862_0#slide=id.SLIDES_API254050862_0": {
+    "title": "GoConferenceMini2026inSendai - 2026.02.21",
+    "description": "Go.1.26のruntime/metricsが 便利そうな件（？） Speaker: Taichi Abe この？が大事というかこのLTのみそです",
+    "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyKsOpNRP-KrwGpUHT96fVUxXXK8WZJ7K4zWmQzeVLpWwMy6HuZgVdoK8t0gwkf7FzCo5VlEbCXxYmYUpe5xuMiavftNHKjQIbvvee-KmyRa816wAu0=w1200-h630-p",
+    "fetchedAt": "2026-02-26T02:09:17.631Z"
+  },
+  "https://speakerdeck.com/magavel/moziyuramonorisuniokerujing-jie-wogonointernalpatukezideshou-ru": {
+    "title": "モジュラモノリスにおける境界をGoのinternalパッケージで守る",
+    "description": "Go Conference mini 2026 in Sendai: https://sendaigo.jp/",
+    "image": "https://files.speakerdeck.com/presentations/52cdc21278874c8dafb7a21812d6bd81/slide_0.jpg?38499136",
+    "fetchedAt": "2026-02-26T02:09:21.257Z"
+  },
+  "https://speakerdeck.com/ykf1999/gonoshe-ji-si-xiang-woshen-jue-risuru-unixkaraji-kumono-slidev": {
+    "title": "Goの設計思想を深掘りする___Unixから継ぐもの_-_Slidev.pdf",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/bf88016d5fe349edb4eee19de56f94c2/slide_0.jpg?38492836",
+    "fetchedAt": "2026-02-26T02:09:21.045Z"
+  },
+  "https://speakerdeck.com/replu/driver-to-create-a-custom-database-driver": {
+    "title": "Go Conference mini in Sendai 2026: database/sql/driverを理解してカスタムデータベースドライバーを作る",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/71c311a482f14af59e5808230f22dae3/slide_0.jpg?38490465",
+    "fetchedAt": "2026-02-26T02:09:21.194Z"
+  },
+  "https://docs.google.com/presentation/d/1we1bAhUH-_hCEZTYFy2DOyFjWN0fp7VWBkWBha8nwk4/edit?usp=sharing": {
+    "title": "Who tests the Tests ?",
+    "description": "Who tests the Tests ? ~ Go Conference mini in Sendai 2026 ~ The Go gopher was designed by Renee French",
+    "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyKotDYe1gzwvdo9kIXBtbdIqEXcgZizQzJSJT-WsIkpq-UHkdhHhV607t7ZW8NfuxgGW40TtB9LWrUFzDU1SLS3EMgzv7flu6jjPpgmrPkuvfeQvhdU=w1200-h630-p",
+    "fetchedAt": "2026-02-26T02:09:20.888Z"
   }
 }

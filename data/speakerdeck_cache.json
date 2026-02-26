@@ -10,5 +10,23 @@
     "title": "満を持して始めるRust",
     "ratio": "1.7794486215538847",
     "fetchedAt": "2026-02-25T15:59:10.520Z"
+  },
+  "https://speakerdeck.com/magavel/moziyuramonorisuniokerujing-jie-wogonointernalpatukezideshou-ru": {
+    "playerUrl": "https://speakerdeck.com/player/52cdc21278874c8dafb7a21812d6bd81",
+    "title": "モジュラモノリスにおける境界をGoのinternalパッケージで守る",
+    "ratio": "1.7794486215538847",
+    "fetchedAt": "2026-02-26T02:09:21.824Z"
+  },
+  "https://speakerdeck.com/ykf1999/gonoshe-ji-si-xiang-woshen-jue-risuru-unixkaraji-kumono-slidev": {
+    "playerUrl": "https://speakerdeck.com/player/bf88016d5fe349edb4eee19de56f94c2",
+    "title": "Goの設計思想を深掘りする___Unixから継ぐもの_-_Slidev.pdf",
+    "ratio": "1.7794486215538847",
+    "fetchedAt": "2026-02-26T02:09:21.690Z"
+  },
+  "https://speakerdeck.com/replu/driver-to-create-a-custom-database-driver": {
+    "playerUrl": "https://speakerdeck.com/player/71c311a482f14af59e5808230f22dae3",
+    "title": "Go Conference mini in Sendai 2026: database/sql/driverを理解してカスタムデータベースドライバーを作る",
+    "ratio": "1.7794486215538847",
+    "fetchedAt": "2026-02-26T02:09:21.773Z"
   }
 }
