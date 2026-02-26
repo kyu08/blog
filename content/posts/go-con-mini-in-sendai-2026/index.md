@@ -19,7 +19,7 @@ cover: "cover.png"
 ## 【KeyNote】静的解析からみるGoの過去と未来
 tenntennさんによるキーノート。
 
-https://docs.google.com/presentation/d/14e9PiaKbyqcZTu5mYCKBqa9MokJhxmT0WePHxwPzCmg/edit?slide=id.p#slide=id.p
+https://docs.google.com/presentation/d/14e9PiaKbyqcZTu5mYCKBqa9MokJhxmT0WePHxwPzCmg
 
 最後に紹介されていたGo1.27のアノテーションで静的解析をできるようにする機能は今まさに自分が欲している機能[^1]なので調べてみようと思った。
 
