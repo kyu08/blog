@@ -214,7 +214,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/02/26</time>
       
-    <span class="post-reading-time">9 min read (4152 words)</span></div>
+    <span class="post-reading-time">9 min read (4250 words)</span></div>
 
   
     <span class="post-tags">
@@ -280,8 +280,13 @@ if (!doNotTrack) {
 <li><code>//line a.go:1</code>のような記法は知らなかった。
 <ul>
 <li>調べてみたところ<code>line directive</code>という名前がついているようだった。<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></li>
-<li>こんな感じでコンパイラが出力するエラーメッセージなどが上書きされる。</li>
+<li>こんな感じでコンパイラが出力するエラーメッセージなどが上書きされる。
+<ul>
+<li><img src="line-directive.webp" alt=""></li>
 <li><a href="https://go.dev/play/p/Thvs9U8Twvj" target="_blank" >https://go.dev/play/p/Thvs9U8Twvj</a></li>
+</ul>
+</li>
+<li>自動生成されたコードのエラーを元のコードの行番号で表示したいときなどに使われるらしい。(例えば自動生成されたGoファイルでのエラーに対してprotoファイルの行番号をエラーに表示したいケースなど)</li>
 </ul>
 </li>
 <li><code>go test -cover</code>を実行すると裏側では<code>go tool -cover</code>が実行され、計測用のコードが挿入される</li>
