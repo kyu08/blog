@@ -14,8 +14,9 @@
       <pubDate>Fri, 27 Feb 2026 00:00:32 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/pr-305/posts/go-con-mini-in-sendai-2026/</guid>
-      <description>2026/02/21(土)に仙台で行われGo Conference mini in Sendai 2026に参加したのでその内容をまとめる。 Go Conference mini in Sendai 20262026年2月21日（土）開</description>
-      <content>&lt;p&gt;2026/02/21(土)に仙台で行われGo Conference mini in Sendai 2026に参加したのでその内容をまとめる。&lt;/p&gt;
+      <description>2026/02/21(土)に仙台で行われたGo Conference mini in Sendai 2026に参加したのでその内容をまとめる。 Go Conference mini in Sendai 20262026年2月21日（土）</description>
+      <content>&lt;p&gt;&lt;img src=&#34;closing-slide.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;2026/02/21(土)に仙台で行われたGo Conference mini in Sendai 2026に参加したのでその内容をまとめる。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://sendaigo.jp/&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://sendaigo.jp/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
       &lt;img src=&#34;https://sendaigo.jp/ogp.png&#34; alt=&#34;Go Conference mini in Sendai 2026&#34; loading=&#34;lazy&#34;&gt;
@@ -299,16 +300,38 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;ソロだったけどセッションの合間や懇親感でたくさんの人と交流できてとても楽しかった。&lt;/li&gt;
+&lt;li&gt;ソロ参加だったがセッションの合間や懇親感でたくさんの人と交流できてとても楽しかった。
+&lt;ul&gt;
+&lt;li&gt;社外のエンジニアと話せるとかなり刺激&amp;amp;学びになるので今後も機会を見つけていろんな勉強会に参加してみようと思った。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;/li&gt;
+&lt;li&gt;今年はCSの勉強&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;と並行してGoのインプット &amp;amp; アウトプットを頑張っていこうと思っているのでモチベがいい感じに上がった。
+&lt;ul&gt;
+&lt;li&gt;たくさんの強者を見たことで自分が目指す技術力の基準を上げられた感覚がある。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;運営、登壇者、発表者、スポンサーの皆様ありがとうございました！&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;振り返り&#34;&gt;振り返り&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;セッションの合間は発表者の方に質問するためにウロウロしている時間が長かったのもあり、全スポンサーブースを回れなかった。もうちょっといい感じに時間を使えるとよさそう。（スポンサーブースで各社の方とお話するは楽しいので全部回りたい気持ち）&lt;/li&gt;
-&lt;li&gt;懇親会の途中から他の人に自分から話しかけたりできたけど次回は最初からできるともっとよさそう。&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;懇親会の途中から他の人に自分から話しかけたりできたけど次回は最初からできるともっとよさそう。&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;おまけ&#34;&gt;おまけ&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;土日に仙台でKing Gnuのライブがあった影響か、土曜は仙台駅付近のホテルがめっちゃ高かったので福島まで移動して宿泊してgot aことなきした。（ありがとうアパ）&lt;/li&gt;
+&lt;li&gt;福島で食べたお寿司が美味しかった。観光までする（体力的）余裕がなかったのが残念。
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;sushi.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;なんか新幹線が長かった。
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;long-shinkansen.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
@@ -320,7 +343,10 @@
 &lt;p&gt;&lt;a href=&#34;https://pkg.go.dev/cmd/compile#hdr-Line_Directives&#34; target=&#34;_blank&#34; &gt;https://pkg.go.dev/cmd/compile#hdr-Line_Directives&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:3&#34;&gt;
-&lt;p&gt;普通に「お疲れ様です〜」とかでいいんだなというのが学び。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;今は（今更ながら）『ネットワークはなぜつながるのか』を読んでいる。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34;&gt;
+&lt;p&gt;普通に「お疲れ様です〜」とかでいいんだなというのが学び。&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
