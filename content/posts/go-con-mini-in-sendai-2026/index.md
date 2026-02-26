@@ -90,18 +90,21 @@ SODA inc.のmagavelさんによる発表。
 
 https://speakerdeck.com/magavel/moziyuramonorisuniokerujing-jie-wogonointernalpatukezideshou-ru
 
+メモ: 
+
 - 「結合はむしろ、忘れてはならない設計ツールだ。」
 - `bounded_context`ディレクトリを切っているのが印象的だった 
 
-- お話したこと
-    - ディレクトリ構成はどんな感じになっている？
-        - `bounded_context`ディレクトリの同階層には`monolish`ディレクトリがある
-            - これらは現状ワンバイナリになっている
-        - `bounded_context`ディレクトリの中には購入、xxx、yyyなどの境界づけられたコンテキストが並ぶ。
-        - たとえば購入コンテキストの中には購入モジュール、決済モジュールなどがある。
-        - 購入モジュールからは決済モジュールの公開されたIFを呼び出すようになっている。
-        - 公開したくないパッケージはすべてinternal配下に置くことで予期しない依存を防いでいる。
-        - 他にも`depguard`を使って依存関係を制御している。
+お話したこと:
+
+- ディレクトリ構成について
+    - `bounded_context`ディレクトリの同階層には`monolish`ディレクトリがある
+        - これらは現状ワンバイナリになっている
+    - `bounded_context`ディレクトリの中には購入、xxx、yyyなどの境界づけられたコンテキストが並ぶ。
+    - たとえば購入コンテキストの中には購入モジュール、決済モジュールなどがある。
+    - 購入モジュールからは決済モジュールの公開されたIFを呼び出すようになっている。
+    - 公開したくないパッケージはすべてinternal配下に置くことで予期しない依存を防いでいる。
+    - 他にも`depguard`を使って依存関係を制御している。
 
 ## Go設計思想の深掘り
 k_program510さんによる発表。
@@ -114,7 +117,7 @@ https://speakerdeck.com/ykf1999/gonoshe-ji-si-xiang-woshen-jue-risuru-unixkaraji
 - `設計思想は「どこで使うべきか」を教えてくれる`いい言葉だ。
 
 ## database/sql/driverを理解してカスタムデータベースドライバーを作る
-replu5による発表。
+replu5さんによる発表。
 
 https://speakerdeck.com/replu/driver-to-create-a-custom-database-driver
 
