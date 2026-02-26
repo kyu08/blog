@@ -63,9 +63,13 @@
 &lt;li&gt;アノテーションによる静的解析
 &lt;ul&gt;
 &lt;li&gt;一点もののlinterを作らなくてよくなる。&lt;/li&gt;
-&lt;li&gt;xxしたあとにyyする、みたいな制約をアノテーションで表現できるようになる（らしい）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;//go:fix inline&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://go.dev/doc/go1.26#go-command&#34; target=&#34;_blank&#34; &gt;https://go.dev/doc/go1.26#go-command&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;/li&gt;
+&lt;li&gt;xxしたあとにyyする、みたいな制約をアノテーションで表現できるようになる（らしい。が一次情報は見つけられていない）&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
