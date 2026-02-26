@@ -562,5 +562,11 @@
     "description": "2026年2月21日（土）開催 - Go Forward Together - 東北から広がるGoコミュニティ",
     "image": "https://sendaigo.jp/ogp.png",
     "fetchedAt": "2026-02-26T13:34:25.811Z"
+  },
+  "https://speakerdeck.com/yuporon/gokaraxue-bugc-green-tea-gcniyoruci-shi-dai-zui-shi-hua": {
+    "title": "Goから学ぶGC -Green Tea GCによる次世代最適化-",
+    "description": "GCの基本概念と、GoにおけるGCの実装、そしてGreen Tea GCによる次世代最適化について解説しています",
+    "image": "https://files.speakerdeck.com/presentations/17dc2bf5b4ed4a1d8c289ad77f26cd8c/slide_0.jpg?38491879",
+    "fetchedAt": "2026-02-26T14:56:17.110Z"
   }
 }

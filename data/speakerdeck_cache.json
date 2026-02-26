@@ -28,5 +28,11 @@
     "title": "Go Conference mini in Sendai 2026: database/sql/driverを理解してカスタムデータベースドライバーを作る",
     "ratio": "1.7794486215538847",
     "fetchedAt": "2026-02-26T02:09:21.773Z"
+  },
+  "https://speakerdeck.com/yuporon/gokaraxue-bugc-green-tea-gcniyoruci-shi-dai-zui-shi-hua": {
+    "playerUrl": "https://speakerdeck.com/player/17dc2bf5b4ed4a1d8c289ad77f26cd8c",
+    "title": "Goから学ぶGC -Green Tea GCによる次世代最適化-",
+    "ratio": "1.7794486215538847",
+    "fetchedAt": "2026-02-26T14:56:20.158Z"
   }
 }
