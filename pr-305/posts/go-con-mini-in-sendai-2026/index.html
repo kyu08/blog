@@ -217,7 +217,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/02/26</time>
       
-    <span class="post-reading-time">9 min read (4409 words)</span></div>
+    <span class="post-reading-time">9 min read (4359 words)</span></div>
 
   
     <span class="post-tags">
@@ -403,45 +403,29 @@ if (!doNotTrack) {
 <p><div class="embed-container speakerdeck">
         <iframe src="https://speakerdeck.com/player/71c311a482f14af59e5808230f22dae3" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
       </div></p>
-<p>ここから
-ここから
-ここから
-ここから</p>
 <p>メモ:</p>
 <ul>
-<li>
-<p>ログをだしたい</p>
-</li>
-<li>
-<p>リクエストをDBのwriteインスタンスとreadインスタンスに振り分けたい</p>
-</li>
-<li>
-<p>sqlcを使っているが、sqlcが生成したコードに手を加えていくのは避けたい</p>
-</li>
-<li>
-<p>本体をforkしてしまうと本体に追従するのが大変</p>
-</li>
-<li>
-<p>なので既存のドライバーをラップしたドライバーを作成することにした</p>
-</li>
-<li>
-<p>お話したこと(本筋じゃないけどsqlcの使い心地が気になった)</p>
+<li>カスタムデータベースドライバーを作る理由
 <ul>
-<li>引数に応じてwhere句を一部変更するとかができないのでどうやっているのか気になる。
-<ul>
-<li>そういうケースでは複数パターンのクエリをrepository層に書いている。</li>
-<li>そもそも巨大で複雑なクエリにはsqlcはあっていないので使うべきではないかも知れない。
-<ul>
-<li>今の使い方は割とシンプルなクエリが多いアプリケーションなので適している。</li>
+<li>ログをだしたい</li>
+<li>リクエストをDBのwriteインスタンスとreadインスタンスに振り分けたい</li>
+<li>sqlcを使っているが、sqlcが生成したコードに手を加えていくのは避けたい</li>
+<li>本体をforkしてしまうと本体に追従するのが大変なので既存のドライバーをラップしたドライバーを作成することにした</li>
 </ul>
 </li>
 </ul>
-</li>
+<p>お話したこと</p>
+<ul>
+<li>sqlcだと引数に応じてwhere句を一部変更するとかができないのでどうやっているのか。
+<ul>
+<li>そういうケースでは複数パターンのクエリを（愚直に）repository層に書いている。</li>
+<li>そもそも巨大で複雑なクエリにはsqlcはあっていないので使うべきではないかも知れない。</li>
 </ul>
 </li>
 </ul>
 <h2 id="nilとは何か-言語仕様と設計者の葛藤から理解する">nilとは何か 〜言語仕様と設計者の葛藤から理解する〜<a href="#nilとは何か-言語仕様と設計者の葛藤から理解する" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>株式会社サイバーエージェント kurodaさんによる発表。</p>
+<p><a href="https://speakerdeck.com/kuro_kurorrr/understanding-nil-in-go-interface-representation-and-why-nil-equals-nil" target="_blank">https://speakerdeck.com/kuro_kurorrr/understanding-nil-in-go-interface-representation-and-why-nil-equals-nil</a></p>
 <p>以下メモ。</p>
 <ul>
 <li>Goのキーワード数を即答している人が数人いてすごかったw</li>
@@ -528,7 +512,9 @@ if (!doNotTrack) {
 </ul>
 <h2 id="goから学ぶgcの仕組みとgreen-tea-gcによる次世代最適化">Goから学ぶGCの仕組みとGreen Tea GCによる次世代最適化<a href="#goから学ぶgcの仕組みとgreen-tea-gcによる次世代最適化" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>go_poron10さんによる発表。</p>
-<p><a href="https://speakerdeck.com/yuporon/gokaraxue-bugc-green-tea-gcniyoruci-shi-dai-zui-shi-hua" target="_blank">https://speakerdeck.com/yuporon/gokaraxue-bugc-green-tea-gcniyoruci-shi-dai-zui-shi-hua</a></p>
+<p><div class="embed-container speakerdeck">
+        <iframe src="https://speakerdeck.com/player/17dc2bf5b4ed4a1d8c289ad77f26cd8c" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      </div></p>
 <ul>
 <li>並行GCってなんだろう</li>
 </ul>

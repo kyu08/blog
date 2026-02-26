@@ -156,45 +156,29 @@
 &lt;p&gt;&lt;div class=&#34;embed-container speakerdeck&#34;&gt;
         &lt;iframe src=&#34;https://speakerdeck.com/player/71c311a482f14af59e5808230f22dae3&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
       &lt;/div&gt;&lt;/p&gt;
-&lt;p&gt;ここから
-ここから
-ここから
-ここから&lt;/p&gt;
 &lt;p&gt;メモ:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;ログをだしたい&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;リクエストをDBのwriteインスタンスとreadインスタンスに振り分けたい&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;sqlcを使っているが、sqlcが生成したコードに手を加えていくのは避けたい&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;本体をforkしてしまうと本体に追従するのが大変&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;なので既存のドライバーをラップしたドライバーを作成することにした&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;お話したこと(本筋じゃないけどsqlcの使い心地が気になった)&lt;/p&gt;
+&lt;li&gt;カスタムデータベースドライバーを作る理由
 &lt;ul&gt;
-&lt;li&gt;引数に応じてwhere句を一部変更するとかができないのでどうやっているのか気になる。
-&lt;ul&gt;
-&lt;li&gt;そういうケースでは複数パターンのクエリをrepository層に書いている。&lt;/li&gt;
-&lt;li&gt;そもそも巨大で複雑なクエリにはsqlcはあっていないので使うべきではないかも知れない。
-&lt;ul&gt;
-&lt;li&gt;今の使い方は割とシンプルなクエリが多いアプリケーションなので適している。&lt;/li&gt;
+&lt;li&gt;ログをだしたい&lt;/li&gt;
+&lt;li&gt;リクエストをDBのwriteインスタンスとreadインスタンスに振り分けたい&lt;/li&gt;
+&lt;li&gt;sqlcを使っているが、sqlcが生成したコードに手を加えていくのは避けたい&lt;/li&gt;
+&lt;li&gt;本体をforkしてしまうと本体に追従するのが大変なので既存のドライバーをラップしたドライバーを作成することにした&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
+&lt;p&gt;お話したこと&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sqlcだと引数に応じてwhere句を一部変更するとかができないのでどうやっているのか。
+&lt;ul&gt;
+&lt;li&gt;そういうケースでは複数パターンのクエリを（愚直に）repository層に書いている。&lt;/li&gt;
+&lt;li&gt;そもそも巨大で複雑なクエリにはsqlcはあっていないので使うべきではないかも知れない。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;nilとは何か-言語仕様と設計者の葛藤から理解する&#34;&gt;nilとは何か 〜言語仕様と設計者の葛藤から理解する〜&lt;/h2&gt;
 &lt;p&gt;株式会社サイバーエージェント kurodaさんによる発表。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://speakerdeck.com/kuro_kurorrr/understanding-nil-in-go-interface-representation-and-why-nil-equals-nil&#34; target=&#34;_blank&#34;&gt;https://speakerdeck.com/kuro_kurorrr/understanding-nil-in-go-interface-representation-and-why-nil-equals-nil&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;以下メモ。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Goのキーワード数を即答している人が数人いてすごかったw&lt;/li&gt;
@@ -281,7 +265,9 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;goから学ぶgcの仕組みとgreen-tea-gcによる次世代最適化&#34;&gt;Goから学ぶGCの仕組みとGreen Tea GCによる次世代最適化&lt;/h2&gt;
 &lt;p&gt;go_poron10さんによる発表。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://speakerdeck.com/yuporon/gokaraxue-bugc-green-tea-gcniyoruci-shi-dai-zui-shi-hua&#34; target=&#34;_blank&#34;&gt;https://speakerdeck.com/yuporon/gokaraxue-bugc-green-tea-gcniyoruci-shi-dai-zui-shi-hua&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;embed-container speakerdeck&#34;&gt;
+        &lt;iframe src=&#34;https://speakerdeck.com/player/17dc2bf5b4ed4a1d8c289ad77f26cd8c&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+      &lt;/div&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;並行GCってなんだろう&lt;/li&gt;
 &lt;/ul&gt;
