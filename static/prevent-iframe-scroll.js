@@ -5,6 +5,12 @@
 (function() {
   'use strict';
 
+  // Configuration constants
+  const MONITOR_DURATION_MS = 1000; // Monitor for unwanted scrolling for 1 second
+  const EXPECTED_FPS = 60; // Expected frames per second
+  const FALLBACK_CHECK_DELAY_MS = 100; // First fallback check delay
+  const EXTENDED_CHECK_DELAY_MS = 300; // Extended fallback check delay
+
   // Check if there's a hash in the URL (intentional navigation to an anchor)
   if (window.location.hash) {
     // User intentionally navigated to a specific section, don't interfere
@@ -36,7 +42,7 @@
   // Check for unwanted scroll changes during early page load
   // Use requestAnimationFrame for smooth detection
   let frameCount = 0;
-  const maxFrames = 60; // Check for about 1 second (60fps)
+  const maxFrames = (MONITOR_DURATION_MS / 1000) * EXPECTED_FPS;
 
   function monitorScroll() {
     checkAndRestoreScroll();
@@ -59,7 +65,7 @@
 
   // Also set up a fallback check on window load event
   window.addEventListener('load', function() {
-    setTimeout(checkAndRestoreScroll, 100);
-    setTimeout(checkAndRestoreScroll, 300);
+    setTimeout(checkAndRestoreScroll, FALLBACK_CHECK_DELAY_MS);
+    setTimeout(checkAndRestoreScroll, EXTENDED_CHECK_DELAY_MS);
   });
 })();
