@@ -187,22 +187,22 @@ go_poron10さんによる発表。
 
 https://speakerdeck.com/yuporon/gokaraxue-bugc-green-tea-gcniyoruci-shi-dai-zui-shi-hua
 
-- 並行GCってなんだろう
+とても高度だったので途中でついていけなくなってしまったのでいつかリベンジしたい。
 
 ## 【実装公開】Goで実現する堅牢なアーキテクチャ：DDD、gRPC-connect、そしてAI協調開発の実践
 株式会社テレシーのDaisuke Sasakiさんによる発表。
 
-- application層でCommandとQueryを分けるパターン
+https://speakerdeck.com/fujidomoe/godeshi-xian-surujian-lao-naakitekutiya-ddd-grpc-connect-sositeaixie-diao-kai-fa-noshi-jian
 
-- お話したこと
-    - application層のQuery Serviceからdomain packageへの依存はOKにしている？それとも独自のreturn typeをquery serviceで定義している？
-        - yes
-        - domain層に以下の2種類がある。
-            - commandとqueryの両方から参照される型
-            - queryからのみ参照される型
-    - ドメインモデルのフィールドを公開するとパッケージ外から自由に更新できてしまうと思うが課題等はあるか。
-        - 特に強いこだわりがあってそうしているわけではない。
-        - まだ運用して半年なのでこれから課題が出てくる可能性はある。
+お話したこと:
+- application層のQuery Serviceからdomain packageへの依存はOKにしている？それとも独自のreturn typeをQuery serviceで定義している？
+    - yes
+    - domain層に以下の2種類があり、それぞれ別パッケージに定義している。
+        - commandとqueryの両方から参照される型(tier1)
+        - queryからのみ参照される型(tier2)
+- ドメインモデルのフィールドを公開するとパッケージ外から自由に更新できてしまうと思うが課題等はあるか。
+    - 特に強いこだわりがあってそうしているわけではない。
+    - まだ運用して半年なのでこれから課題が出てくる可能性はある。
 
 <!-- TODO: これ書かないほうが発表者にとって嬉しいのかな? -->
 ## 上記以外に参加したセッションは以下。
