@@ -217,7 +217,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/02/26</time>
       
-    <span class="post-reading-time">9 min read (4366 words)</span></div>
+    <span class="post-reading-time">9 min read (4385 words)</span></div>
 
   
     <span class="post-tags">
@@ -446,66 +446,58 @@ if (!doNotTrack) {
 <p><div class="embed-container google-slides">
       <iframe src="https://docs.google.com/presentation/d/1we1bAhUH-_hCEZTYFy2DOyFjWN0fp7VWBkWBha8nwk4/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div></p>
+<p>メモ:</p>
 <ul>
-<li>AI時代になってCIの重要性がましている</li>
-<li>カバレッジだけを追っていくと本質的でないテストコードが増えてしまう</li>
-<li>テストコードのテストとしてMutation Testingという手法を紹介する。
-<ul>
-<li>Mutation Testingで壊れるテストを書くと</li>
-</ul>
-</li>
+<li>AI時代になってCIの重要性が増している。</li>
+<li>カバレッジだけを追っていくと本質的でないテストコードが増えてしまう。</li>
+<li>テストコードのテストとしてMutation Testingという手法を紹介する。</li>
 <li>Mutation Testing
 <ul>
 <li>プログラムの一部を意図的に書き換え、生成したミュータントに対してテストを実行し、失敗するかどうかを検証する手法。
 <ul>
-<li>演算子の変更、elseブロックの削除など</li>
+<li>演算子の変更、<code>else</code>ブロックの削除など</li>
 </ul>
 </li>
-<li>失敗することを期待するテスト(KILLED: テスト失敗 == 期待した挙動、SERVIVED: テスト成功 == 期待した挙動ではない)</li>
-<li>どれくらい失敗したかを指標にする</li>
-<li>ただこれは銀の弾丸ではない。実行時間とのトレードオフになる
+<li>失敗することを期待するテスト(<code>KILLED</code>: テスト失敗 == 期待した挙動、<code>SERVIVED</code>: テスト成功 == 期待した挙動ではない)</li>
+<li>どれくらい失敗したかを指標にする。</li>
+<li>ただこれは銀の弾丸ではない。実行時間とのトレードオフになる。
 <ul>
-<li>100% KILLEDを目指すべきではない。</li>
+<li>100% <code>KILLED</code>を目指すべきではない。</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>Mutation Testingをどう実装するか
 <ul>
-<li>sivchari/gomuというMutation Testingを作成した。</li>
-</ul>
-</li>
+<li><a href="https://github.com/sivchari/gomu" target="_blank" >sivchari/gomu</a>というMutation Testingライブラリを作成した。</li>
 <li>overlayを使うと実際のファイルを仮想的に変更して実行できる
 <ul>
 <li>ソースコードを汚さずに好きなように変更できる</li>
 </ul>
 </li>
-<li>感想
+</ul>
+</li>
+</ul>
+<p>感想:</p>
 <ul>
-<li>
-<p>四則演算は適用するイメージが持てた。</p>
+<li>四則演算は適用するイメージが持てた。
 <ul>
 <li>ドメインメソッドではif elseとかもあるがそこも対応できるのか</li>
 </ul>
 </li>
-<li>
-<p>overlayすごそう</p>
-</li>
-<li>
-<p>気になったこと</p>
+<li>overlayすごそう</li>
+<li>気になったこと
 <ul>
 <li>mutation testingの使い所について
 <ul>
-<li>実際のプロダクションに導入するならある程度テストが整備されたあとにやるのが優先順位としていいのだろうか</li>
+<li>実際のプロダクションに導入するならある程度テストが整備されたあとにやるのが優先順位としてよさそう？（自信なし）</li>
 <li>というよりは品質が重要な箇所に必要に応じて追加していくのがいい？</li>
 </ul>
 </li>
 <li>mutation testing以外のテスト品質保証手法について
 <ul>
 <li>mutation testing以外ではどのようにテストコードの品質や正当性を保証するのがよさそう？</li>
-<li>k8sの内部実装などではどのように品質担保している？</li>
-</ul>
-</li>
+<li>たとえばk8sの内部実装などではどのように品質担保しているのか気になった（調べられてはいない）</li>
 </ul>
 </li>
 </ul>

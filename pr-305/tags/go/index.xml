@@ -203,66 +203,58 @@
 &lt;p&gt;&lt;div class=&#34;embed-container google-slides&#34;&gt;
       &lt;iframe src=&#34;https://docs.google.com/presentation/d/1we1bAhUH-_hCEZTYFy2DOyFjWN0fp7VWBkWBha8nwk4/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
     &lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;メモ:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;AI時代になってCIの重要性がましている&lt;/li&gt;
-&lt;li&gt;カバレッジだけを追っていくと本質的でないテストコードが増えてしまう&lt;/li&gt;
-&lt;li&gt;テストコードのテストとしてMutation Testingという手法を紹介する。
-&lt;ul&gt;
-&lt;li&gt;Mutation Testingで壊れるテストを書くと&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;AI時代になってCIの重要性が増している。&lt;/li&gt;
+&lt;li&gt;カバレッジだけを追っていくと本質的でないテストコードが増えてしまう。&lt;/li&gt;
+&lt;li&gt;テストコードのテストとしてMutation Testingという手法を紹介する。&lt;/li&gt;
 &lt;li&gt;Mutation Testing
 &lt;ul&gt;
 &lt;li&gt;プログラムの一部を意図的に書き換え、生成したミュータントに対してテストを実行し、失敗するかどうかを検証する手法。
 &lt;ul&gt;
-&lt;li&gt;演算子の変更、elseブロックの削除など&lt;/li&gt;
+&lt;li&gt;演算子の変更、&lt;code&gt;else&lt;/code&gt;ブロックの削除など&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;失敗することを期待するテスト(KILLED: テスト失敗 == 期待した挙動、SERVIVED: テスト成功 == 期待した挙動ではない)&lt;/li&gt;
-&lt;li&gt;どれくらい失敗したかを指標にする&lt;/li&gt;
-&lt;li&gt;ただこれは銀の弾丸ではない。実行時間とのトレードオフになる
+&lt;li&gt;失敗することを期待するテスト(&lt;code&gt;KILLED&lt;/code&gt;: テスト失敗 == 期待した挙動、&lt;code&gt;SERVIVED&lt;/code&gt;: テスト成功 == 期待した挙動ではない)&lt;/li&gt;
+&lt;li&gt;どれくらい失敗したかを指標にする。&lt;/li&gt;
+&lt;li&gt;ただこれは銀の弾丸ではない。実行時間とのトレードオフになる。
 &lt;ul&gt;
-&lt;li&gt;100% KILLEDを目指すべきではない。&lt;/li&gt;
+&lt;li&gt;100% &lt;code&gt;KILLED&lt;/code&gt;を目指すべきではない。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Mutation Testingをどう実装するか
 &lt;ul&gt;
-&lt;li&gt;sivchari/gomuというMutation Testingを作成した。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sivchari/gomu&#34; target=&#34;_blank&#34; &gt;sivchari/gomu&lt;/a&gt;というMutation Testingライブラリを作成した。&lt;/li&gt;
 &lt;li&gt;overlayを使うと実際のファイルを仮想的に変更して実行できる
 &lt;ul&gt;
 &lt;li&gt;ソースコードを汚さずに好きなように変更できる&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;感想
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;感想:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;四則演算は適用するイメージが持てた。&lt;/p&gt;
+&lt;li&gt;四則演算は適用するイメージが持てた。
 &lt;ul&gt;
 &lt;li&gt;ドメインメソッドではif elseとかもあるがそこも対応できるのか&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;overlayすごそう&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;気になったこと&lt;/p&gt;
+&lt;li&gt;overlayすごそう&lt;/li&gt;
+&lt;li&gt;気になったこと
 &lt;ul&gt;
 &lt;li&gt;mutation testingの使い所について
 &lt;ul&gt;
-&lt;li&gt;実際のプロダクションに導入するならある程度テストが整備されたあとにやるのが優先順位としていいのだろうか&lt;/li&gt;
+&lt;li&gt;実際のプロダクションに導入するならある程度テストが整備されたあとにやるのが優先順位としてよさそう？（自信なし）&lt;/li&gt;
 &lt;li&gt;というよりは品質が重要な箇所に必要に応じて追加していくのがいい？&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;mutation testing以外のテスト品質保証手法について
 &lt;ul&gt;
 &lt;li&gt;mutation testing以外ではどのようにテストコードの品質や正当性を保証するのがよさそう？&lt;/li&gt;
-&lt;li&gt;k8sの内部実装などではどのように品質担保している？&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;たとえばk8sの内部実装などではどのように品質担保しているのか気になった（調べられてはいない）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
