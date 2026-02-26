@@ -140,15 +140,14 @@ https://speakerdeck.com/kuro_kurorrr/understanding-nil-in-go-interface-represent
 
 以下メモ。
 
-- Goのキーワード数を即答している人が数人いてすごかったw
-- nilはキーワードではない。true, false, iotaと同じpredeclared identifier(事前宣言された識別子)である。
-- predeclared identifierのなかでデフォルト型を持たないのはnilだけ。
-- ちょいちょいクイズが挟まっていて三k社を空きさせない工夫があって発表の仕方が参考になった
+- Goで定義されているキーワード数を即答している人が数人いてすごかったw（25個らしい）
+- `nil`はキーワードではない。`true`, `false`, `iota`と同じpredeclared identifier(事前宣言された識別子)である。
+- predeclared identifierのなかでデフォルト型を持たないのは`nil`だけ。
+- （ちょいちょいクイズが挟まっていて参加者を飽きさせない工夫があって発表の仕方が参考になった）
 - interfaceが==nilになるのは型情報もデータも両方ゼロのときのみ。
-    - なのでtyped nilは==nilにならない。`var err *MyError = nil`のように初期化した値は==nilにならないのでnilをreturnしたい場合は明示的にnilを返す必要がある。（全然知らなかった）
-- nilに関する問題をどう解決するかの議論がなかなか前に進んでいないことを説明してからの`errors.AsType`をセマンティクスを変えずにうまく問題を解決した例として説明する流れがめっちゃ綺麗だった
-
-### 実務での向き合い方
+    - なのでtyped nilは==nilにならない。
+        - -> `var err *MyError = nil`のように初期化した値は==nilにならないのでnilをreturnしたい場合は明示的にnilを返す必要がある。（全然知らなかった）
+- nilに関する問題をどう解決するかの議論がなかなか前に進んでいないことを説明してからの`errors.AsType`をセマンティクスを変えずにうまく問題を解決した例として説明する流れがめっちゃ綺麗だった。
 
 ## Who tests the `Tests` ?
 sivchariさんの発表。
