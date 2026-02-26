@@ -32,7 +32,9 @@ https://docs.google.com/presentation/d/14e9PiaKbyqcZTu5mYCKBqa9MokJhxmT0WePHxwPz
 - `//line a.go:1`のような記法は知らなかった。
     - 調べてみたところ`line directive`という名前がついているようだった。[^2]
     - こんな感じでコンパイラが出力するエラーメッセージなどが上書きされる。
-    - https://go.dev/play/p/Thvs9U8Twvj
+        - ![](line-directive.webp)
+        - https://go.dev/play/p/Thvs9U8Twvj
+    - 自動生成されたコードのエラーを元のコードの行番号で表示したいときなどに使われるらしい。(例えば自動生成されたGoファイルでのエラーに対してprotoファイルの行番号をエラーに表示したいケースなど)
 - `go test -cover`を実行すると裏側では`go tool -cover`が実行され、計測用のコードが挿入される
 - Goがセルフホスティングされるようになったのは2015年（Go1.5）（それまではC）
     - (まだ10年しかたってないんだなー)
