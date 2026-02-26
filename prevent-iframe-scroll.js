@@ -1,71 +1,122 @@
 // Prevent automatic scrolling to iframes on page load
 // This script prevents the browser from automatically scrolling to embedded iframes
 // (such as Docswell, Google Slides, Speaker Deck) when the page loads.
+// Only active on fresh navigation, not on reload (to preserve browser's scroll restoration).
 
 (function() {
   'use strict';
 
-  // Configuration constants
-  const MONITOR_DURATION_MS = 1000; // Monitor for unwanted scrolling for 1 second
-  const EXPECTED_FPS = 60; // Expected frames per second
-  const FALLBACK_CHECK_DELAY_MS = 100; // First fallback check delay
-  const EXTENDED_CHECK_DELAY_MS = 300; // Extended fallback check delay
-
-  // Check if there's a hash in the URL (intentional navigation to an anchor)
-  if (window.location.hash) {
-    // User intentionally navigated to a specific section, don't interfere
+  // Check if this is a page reload - if so, let browser handle scroll restoration naturally
+  const navEntries = performance.getEntriesByType('navigation');
+  if (navEntries.length > 0 && navEntries[0].type === 'reload') {
     return;
   }
 
-  // Store the initial scroll position (should be 0 for new page loads)
-  const initialScrollY = window.scrollY || window.pageYOffset || 0;
-  
-  // Flag to track if we've already corrected unwanted scrolling
-  let hasRestoredScroll = false;
+  // Check if there's a hash in the URL (intentional navigation to an anchor)
+  if (window.location.hash) {
+    return;
+  }
+
+  // Configuration
+  const MONITOR_DURATION_MS = 2000;
+
+  // Store the initial scroll position (should be 0 for fresh page loads)
+  const initialScrollY = window.scrollY || 0;
+
+  // If already scrolled on fresh load, something else is at play - don't interfere
+  if (initialScrollY > 0) {
+    return;
+  }
+
+  // Flag to track if user has intentionally interacted
+  let userHasInteracted = false;
+
+  function stopMonitoring() {
+    userHasInteracted = true;
+    window.removeEventListener('wheel', stopMonitoring);
+    window.removeEventListener('touchstart', stopMonitoring);
+    window.removeEventListener('keydown', stopMonitoring);
+    window.removeEventListener('mousedown', stopMonitoring);
+    window.removeEventListener('scroll', onScroll);
+  }
+
+  // Detect user-initiated scroll via scroll event timing
+  // If scroll happens after user interaction, it's intentional
+  let lastInteractionTime = 0;
+
+  function onInteraction() {
+    lastInteractionTime = Date.now();
+  }
+
+  function onScroll() {
+    // If scroll happened within 100ms of user interaction, it's user-initiated
+    if (Date.now() - lastInteractionTime < 100) {
+      stopMonitoring();
+    }
+  }
+
+  // Listen for user interaction
+  window.addEventListener('wheel', onInteraction, { passive: true });
+  window.addEventListener('touchstart', onInteraction, { passive: true });
+  window.addEventListener('keydown', onInteraction, { passive: true });
+  window.addEventListener('mousedown', onInteraction, { passive: true });
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Also stop immediately on wheel (most common scroll method)
+  window.addEventListener('wheel', stopMonitoring, { passive: true });
 
   // Function to restore scroll position if changed unexpectedly
   function checkAndRestoreScroll() {
-    const currentScrollY = window.scrollY || window.pageYOffset || 0;
-    
-    // If scroll position changed from initial and we haven't restored yet
-    if (currentScrollY !== initialScrollY && !hasRestoredScroll) {
-      // Restore to initial position
+    if (userHasInteracted) {
+      return;
+    }
+
+    const currentScrollY = window.scrollY || 0;
+
+    if (currentScrollY !== initialScrollY) {
       window.scrollTo({
         top: initialScrollY,
         left: 0,
-        behavior: 'instant' // Use instant to avoid visible scrolling animation
+        behavior: 'instant'
       });
-      hasRestoredScroll = true;
     }
   }
 
-  // Check for unwanted scroll changes during early page load
-  // Use requestAnimationFrame for smooth detection
-  let frameCount = 0;
-  const maxFrames = (MONITOR_DURATION_MS / 1000) * EXPECTED_FPS;
+  // Monitor for unwanted scroll changes
+  let startTime = null;
 
-  function monitorScroll() {
+  function monitorScroll(timestamp) {
+    if (userHasInteracted) {
+      return;
+    }
+
+    if (startTime === null) {
+      startTime = timestamp;
+    }
+
     checkAndRestoreScroll();
-    
-    frameCount++;
-    if (frameCount < maxFrames && !hasRestoredScroll) {
+
+    if (timestamp - startTime < MONITOR_DURATION_MS) {
       requestAnimationFrame(monitorScroll);
+    } else {
+      stopMonitoring();
     }
   }
 
-  // Start monitoring as soon as possible
+  // Start monitoring
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
       requestAnimationFrame(monitorScroll);
     });
   } else {
-    // DOM already loaded
     requestAnimationFrame(monitorScroll);
   }
 
-  // Also set up a fallback check on window load event
+  // Fallback checks
   window.addEventListener('load', function() {
-    setTimeout(checkAndRestoreScroll, FALLBACK_CHECK_DELAY_MS);
-    setTimeout(checkAndRestoreScroll, EXTENDED_CHECK_DELAY_MS);
+    if (!userHasInteracted) setTimeout(checkAndRestoreScroll, 100);
+    if (!userHasInteracted) setTimeout(checkAndRestoreScroll, 300);
+    if (!userHasInteracted) setTimeout(checkAndRestoreScroll, 500);
+    if (!userHasInteracted) setTimeout(checkAndRestoreScroll, 1000);
   });
 })();
