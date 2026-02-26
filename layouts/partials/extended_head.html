@@ -1,7 +1,7 @@
 <link rel="author" href="http://www.hatena.ne.jp/kyu08/" />
 
-<!-- Prevent automatic scrolling to iframes on page load -->
-<script src="{{ "prevent-iframe-scroll.js" | absURL }}"></script>
+<!-- Lazy load Docswell iframes to prevent auto-scroll on page load -->
+<script src="{{ "docswell-loader.js" | absURL }}"></script>
 
 {{ if not .Site.IsServer }}
 {{ with .Site.GoogleAnalytics }}
