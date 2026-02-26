@@ -1,5 +1,5 @@
 ---
-title: "Go Conference mini in Sendai 2026"
+title: "Go Conference mini in Sendai 2026に参加した"
 tags:
   - "Go"
   - "勉強会"
@@ -15,6 +15,10 @@ hideComments: false
 color: ""
 cover: "cover.png"
 ---
+
+2026/02/21(土)に仙台で行われGo Conference mini in Sendai 2026に参加したのでその内容をまとめる。
+
+https://sendaigo.jp/
 
 ## 【KeyNote】静的解析からみるGoの過去と未来
 tenntennさんによるキーノート。
@@ -191,8 +195,13 @@ https://docs.google.com/presentation/d/1we1bAhUH-_hCEZTYFy2DOyFjWN0fp7VWBkWBha8n
         - 特に強いこだわりがあってそうしているわけではない。
         - まだ運用して半年なのでこれから課題が出てくる可能性はある。
 
+<!-- TODO: これ書かないほうが発表者にとって嬉しいのかな -->
 ## 上記以外に参加したセッションは以下。
 - Goだから出来るProduction ready ジャッジシステム
 - はじめての Go 〜 きっかけは TinyGo だった
+
+## 感想
+- ソロだったけどセッションの合間や懇親感でたくさんの人と交流できてとても楽しかった。
+- 
 
 [^1]: 大AI時代になりPRレビュー負担が肥大化しているのでCIで機械的にコード品質を担保するためにLinterを増やそうと思っているため。
