@@ -72,16 +72,18 @@ TakasagoさんによるGoでの並行処理についてのセッション。
 
 https://docs.google.com/presentation/d/1SpK9Pxsh2QOOXwIirNe3YiN6U5ujAxiottt4ZNPdBkg/edit
 
-- 並行処理の原理だけでなく、パターンを身に着けておくといざ実装するとなったときに役に立ちそうだと思った。（なかなか毎月書くような処理ではないのであまり身につかない...）
+並行処理の原理だけでなく、パターンを身に着けておくといざ実装するとなったときに役に立ちそうだと思った。（なかなか毎月書くような機会がないのであまり定着してない...）
 
 以下メモ。
 
 - Goは同期で書いておいて高速化したい箇所だけ並列化する、という書き方がやりやすいのが特徴。
 
 ## Go.1.26のruntime/metricsが便利そうな件（？）
+o_ga09さんによる発表。
+
 https://docs.google.com/presentation/d/1mamepeOir5fiEh3ZcGuRM9kkEvQohCcKeZIsKwZ6_L4/edit?slide=id.SLIDES_API254050862_0#slide=id.SLIDES_API254050862_0
 
-- goroutineリークをリアルタイムに検出できるの便利そう
+goroutineリークをリアルタイムに検出できるの便利そう。
 
 ## モジュラモノリスにおける境界をGoのinternalパッケージで守る
 SODA inc.のmagavelさんによる発表。
@@ -102,6 +104,8 @@ https://speakerdeck.com/magavel/moziyuramonorisuniokerujing-jie-wogonointernalpa
         - 他にも`depguard`を使って依存関係を制御している。
 
 ## Go設計思想の深掘り
+k_program510さんによる発表。
+
 https://speakerdeck.com/ykf1999/gonoshe-ji-si-xiang-woshen-jue-risuru-unixkaraji-kumono-slidev
 
 メモ:
@@ -110,6 +114,8 @@ https://speakerdeck.com/ykf1999/gonoshe-ji-si-xiang-woshen-jue-risuru-unixkaraji
 - `設計思想は「どこで使うべきか」を教えてくれる`いい言葉だ。
 
 ## database/sql/driverを理解してカスタムデータベースドライバーを作る
+replu5による発表。
+
 https://speakerdeck.com/replu/driver-to-create-a-custom-database-driver
 
 
@@ -133,7 +139,11 @@ https://speakerdeck.com/replu/driver-to-create-a-custom-database-driver
             - 今の使い方は割とシンプルなクエリが多いアプリケーションなので適している。
 
 ## nilとは何か 〜言語仕様と設計者の葛藤から理解する〜
-Goのキーワード数を即答している人が数人いてすごかった
+株式会社サイバーエージェント kurodaさんによる発表。
+
+以下メモ。
+
+- Goのキーワード数を即答している人が数人いてすごかったw
 - nilはキーワードではない。true, false, iotaと同じpredeclared identifier(事前宣言された識別子)である。
 - predeclared identifierのなかでデフォルト型を持たないのはnilだけ。
 - ちょいちょいクイズが挟まっていて三k社を空きさせない工夫があって発表の仕方が参考になった
@@ -144,9 +154,10 @@ Goのキーワード数を即答している人が数人いてすごかった
 ### 実務での向き合い方
 
 ## Who tests the `Tests` ?
-sivchariさんの発表
+sivchariさんの発表。
 
 https://docs.google.com/presentation/d/1we1bAhUH-_hCEZTYFy2DOyFjWN0fp7VWBkWBha8nwk4/edit?usp=sharing
+
 - AI時代になってCIの重要性がましている
 - カバレッジだけを追っていくと本質的でないテストコードが増えてしまう
 - テストコードのテストとしてMutation Testingという手法を紹介する。
@@ -176,15 +187,11 @@ https://docs.google.com/presentation/d/1we1bAhUH-_hCEZTYFy2DOyFjWN0fp7VWBkWBha8n
             - k8sの内部実装などではどのように品質担保している？
 
 ## Goから学ぶGCの仕組みとGreen Tea GCによる次世代最適化
-- 並行GCってなんだろう
+go_poron10さんによる発表。
 
-## スポンサーブースで話したこと
-- ANDPAD
-    - 意外にもGo関連の勉強会でブースを出すのは初とのこと
-        - スポンサーブースは抽選なのでなかなか機会が得られない
-- Soda
-    - Code Rabbitでレビュー負荷を下げている
-    - PRレビューはチーム全員で分担して特定の誰かに負担が偏らないようにしている
+https://speakerdeck.com/yuporon/gokaraxue-bugc-green-tea-gcniyoruci-shi-dai-zui-shi-hua
+
+- 並行GCってなんだろう
 
 ## 【実装公開】Goで実現する堅牢なアーキテクチャ：DDD、gRPC-connect、そしてAI協調開発の実践
 株式会社テレシーのDaisuke Sasakiさんによる発表。
@@ -205,6 +212,15 @@ https://docs.google.com/presentation/d/1we1bAhUH-_hCEZTYFy2DOyFjWN0fp7VWBkWBha8n
 ## 上記以外に参加したセッションは以下。
 - Goだから出来るProduction ready ジャッジシステム
 - はじめての Go 〜 きっかけは TinyGo だった
+
+<!-- TODO: これ公開してもいいのか検討 -->
+## スポンサーブースで話したこと
+- ANDPAD
+    - 意外にもGo関連の勉強会でブースを出すのは初とのこと
+        - スポンサーブースは抽選なのでなかなか機会が得られない
+- Soda
+    - Code Rabbitでレビュー負荷を下げている
+    - PRレビューはチーム全員で分担して特定の誰かに負担が偏らないようにしている
 
 <!-- TODO: もうちょいかく -->
 ## 感想
