@@ -179,6 +179,7 @@ https://docs.google.com/presentation/d/1we1bAhUH-_hCEZTYFy2DOyFjWN0fp7VWBkWBha8n
 - 気になったこと
     - mutation testingの使い所について
         - 実際のプロダクションに導入するならある程度テストが整備されたあとにやるのが優先順位としてよい？（Mutation Testingがちゃんと動作することの前提としてある程度のカバレッジが必要そう）
+        - あとは不慣れな巨大コードと向き合うときにmutation testを実行してみてテスト品質を把握する、というのもいいかもしれない。
     - mutation testing以外のテスト品質保証手法について
         - あまりテストの品質を定量的、機械的に保証する方法をカバレッジ以外に考えたことがなかった。
         - mutation testing以外ではどのようにテストコードの品質や正当性を保証するのがよさそう？
