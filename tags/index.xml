@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sun, 15 Feb 2026 00:00:08 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Mar 2026 09:00:32 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go</title>
+      <link>https://blog.kyu08.com/tags/go/</link>
+      <pubDate>Sun, 01 Mar 2026 09:00:32 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/go/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>勉強会</title>
+      <link>https://blog.kyu08.com/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</link>
+      <pubDate>Sun, 01 Mar 2026 09:00:32 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
     <item>
       <title>cli</title>
       <link>https://blog.kyu08.com/tags/cli/</link>
@@ -189,16 +209,6 @@
     </item>
     
     <item>
-      <title>勉強会</title>
-      <link>https://blog.kyu08.com/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</link>
-      <pubDate>Sun, 02 Nov 2025 01:07:08 +0000</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
       <title>diary</title>
       <link>https://blog.kyu08.com/tags/diary/</link>
       <pubDate>Thu, 28 Aug 2025 14:24:39 +0000</pubDate>
@@ -354,16 +364,6 @@
       <pubDate>Fri, 08 Nov 2024 14:34:37 +0000</pubDate>
       
       <guid>https://blog.kyu08.com/tags/notion/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>Go</title>
-      <link>https://blog.kyu08.com/tags/go/</link>
-      <pubDate>Sun, 03 Nov 2024 12:42:30 +0000</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/go/</guid>
       <description></description>
       <content></content>
     </item>

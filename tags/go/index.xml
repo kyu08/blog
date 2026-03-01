@@ -7,7 +7,358 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sun, 03 Nov 2024 12:42:30 +0000</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Mar 2026 09:00:32 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go Conference mini in Sendai 2026に参加した</title>
+      <link>https://blog.kyu08.com/posts/go-con-mini-in-sendai-2026/</link>
+      <pubDate>Sun, 01 Mar 2026 09:00:32 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/posts/go-con-mini-in-sendai-2026/</guid>
+      <description>2026/02/21(土)に仙台で行われたGo Conference mini in Sendai 2026に参加したのでその内容をまとめる。 Go Conference mini in Sendai 20262026年2月21日（土）</description>
+      <content>&lt;p&gt;&lt;img src=&#34;closing-slide.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;2026/02/21(土)に仙台で行われたGo Conference mini in Sendai 2026に参加したのでその内容をまとめる。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://sendaigo.jp/&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://sendaigo.jp/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://sendaigo.jp/ogp.png&#34; alt=&#34;Go Conference mini in Sendai 2026&#34; loading=&#34;lazy&#34;&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;Go Conference mini in Sendai 2026&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;2026年2月21日（土）開催 - Go Forward Together - 東北から広がるGoコミュニティ&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://sendaigo.jp/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;keynote静的解析からみるgoの過去と未来&#34;&gt;【KeyNote】静的解析からみるGoの過去と未来&lt;/h2&gt;
+&lt;p&gt;tenntennさんによるキーノート。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;embed-container google-slides&#34;&gt;
+      &lt;iframe src=&#34;https://docs.google.com/presentation/d/14e9PiaKbyqcZTu5mYCKBqa9MokJhxmT0WePHxwPzCmg/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;最後に紹介されていたGo1.27のアノテーションで静的解析をできるようにする機能は今まさに自分が欲している機能&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;なので調べてみようと思った。&lt;/p&gt;
+&lt;p&gt;以下メモ。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;//line a.go:1&lt;/code&gt;のような記法は知らなかった。
+&lt;ul&gt;
+&lt;li&gt;調べてみたところ&lt;code&gt;line directive&lt;/code&gt;という名前がついているようだった。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;こんな感じでコンパイラが出力するエラーメッセージなどが上書きされる。
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;line-directive.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://go.dev/play/p/Thvs9U8Twvj&#34; target=&#34;_blank&#34; &gt;https://go.dev/play/p/Thvs9U8Twvj&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;自動生成されたコードのエラーを元のコードの行番号で表示したいときなどに使われるらしい。(例えば自動生成されたGoファイルでのエラーに対してprotoファイルの行番号をエラーに表示したいケースなど)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;go test -cover&lt;/code&gt;を実行すると裏側では&lt;code&gt;go tool cover&lt;/code&gt;が実行され、計測用のコードが挿入される&lt;/li&gt;
+&lt;li&gt;Goがセルフホスティングされるようになったのは2015年（Go1.5）（それまではC）
+&lt;ul&gt;
+&lt;li&gt;(まだ10年しかたってないんだなー)&lt;/li&gt;
+&lt;li&gt;ここからコンパイラのコードが既存標準パッケージと共通化されたりするようになった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2019
+&lt;ul&gt;
+&lt;li&gt;goplsが登場&lt;/li&gt;
+&lt;li&gt;最初はgolspだったがしれっと名前が変わったらしいw&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Go 1.27
+&lt;ul&gt;
+&lt;li&gt;アノテーションによる静的解析
+&lt;ul&gt;
+&lt;li&gt;一点もののlinterを作らなくてよくなる。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;//go:fix inline&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://go.dev/doc/go1.26#go-command&#34; target=&#34;_blank&#34; &gt;https://go.dev/doc/go1.26#go-command&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;xxしたあとにyyする、みたいな制約をアノテーションで表現できるようになる（らしい。が一次情報は見つけられていない）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ai時代のgo開発2026-爆速開発のためのガードレール&#34;&gt;AI時代のGo開発2026 爆速開発のためのガードレール&lt;/h2&gt;
+&lt;p&gt;UPSIDERのRyo MimuraさんによるAI時代の開発生産性を保つにあたっての課題と対策についてのセッション。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;embed-container docswell&#34;&gt;
+      &lt;div class=&#34;docswell-placeholder&#34; data-src=&#34;https://www.docswell.com/s/r4mimu/ZQXGNY-2026-02-21-102435?slide=1&#34; style=&#34;width:100%;height:569px;background:#f0f0f0;display:flex;align-items:center;justify-content:center;color:#666;&#34;&gt;Loading...&lt;/div&gt;
+    &lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;最近PRレビューをする機会が増えてレビュワーとPR作成者双方の負担を減らす方法を考えていたのでとても参考になった。&lt;/p&gt;
+&lt;p&gt;以下メモ。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AIの予期せぬ変更はRules / Skillsでもある程度は防げるがあくまで挙動は非決定的なためすり抜けてしまう可能性がある。そのためハード制約（決定的な処理による制約）を設けることが重要。&lt;/li&gt;
+&lt;li&gt;ハード制約の例
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;internal&lt;/code&gt; packageで予期せぬ外部参照から保護する&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;depguard&lt;/code&gt;による依存性ルールの強制&lt;/li&gt;
+&lt;li&gt;Package by Featureで凝集性を向上させることでコンテキストをうまく制御する&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Fuzzing Test, Mutation Testingなどのテスト手法を活用してコード品質を保つ&lt;/li&gt;
+&lt;li&gt;開発者体験 = エージェント体験
+&lt;ul&gt;
+&lt;li&gt;両者は同じもの。&lt;/li&gt;
+&lt;li&gt;環境構築、テストとフィードバック、可観測性等開発者体験が悪ければAI Agentもうまく開発を進めることはできなくなる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;go-での並列処理-最初の一歩から次の一歩へ&#34;&gt;Go での並列処理 「最初の一歩」から「次の一歩」へ&lt;/h2&gt;
+&lt;p&gt;TakasagoさんによるGoでの並行処理についてのセッション。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;embed-container google-slides&#34;&gt;
+      &lt;iframe src=&#34;https://docs.google.com/presentation/d/1SpK9Pxsh2QOOXwIirNe3YiN6U5ujAxiottt4ZNPdBkg/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;並行処理の原理だけでなく、パターンを身につけておくといざ実装するとなったときに役に立ちそうだと思った。（なかなか毎月書くような機会がないのであまり定着してない&amp;hellip;）&lt;/p&gt;
+&lt;p&gt;以下メモ。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Goは同期で書いておいて高速化したい箇所だけ並列化する、という書き方がやりやすいのが特徴。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;go126のruntimemetricsが便利そうな件&#34;&gt;Go.1.26のruntime/metricsが便利そうな件（？）&lt;/h2&gt;
+&lt;p&gt;o_ga09さんによる発表。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;embed-container google-slides&#34;&gt;
+      &lt;iframe src=&#34;https://docs.google.com/presentation/d/1mamepeOir5fiEh3ZcGuRM9kkEvQohCcKeZIsKwZ6_L4/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;goroutineリークをリアルタイムに検出できるの便利そう。&lt;/p&gt;
+&lt;h2 id=&#34;モジュラモノリスにおける境界をgoのinternalパッケージで守る&#34;&gt;モジュラモノリスにおける境界をGoのinternalパッケージで守る&lt;/h2&gt;
+&lt;p&gt;SODA inc.のmagavelさんによる発表。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;embed-container speakerdeck&#34;&gt;
+        &lt;iframe src=&#34;https://speakerdeck.com/player/52cdc21278874c8dafb7a21812d6bd81&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+      &lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;メモ:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;「結合はむしろ、忘れてはならない設計ツールだ。」&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bounded_context&lt;/code&gt;ディレクトリを切っているのが印象的だった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;お話したこと:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ディレクトリ構成について
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;bounded_context&lt;/code&gt;ディレクトリの同階層には&lt;code&gt;monolish&lt;/code&gt;ディレクトリがある
+&lt;ul&gt;
+&lt;li&gt;これらは現状ワンバイナリになっている&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bounded_context&lt;/code&gt;ディレクトリの中には購入、xxx、yyyなどの境界づけられたコンテキストが並ぶ。&lt;/li&gt;
+&lt;li&gt;たとえば購入コンテキストの中には購入モジュール、決済モジュールなどがある。&lt;/li&gt;
+&lt;li&gt;購入モジュールからは決済モジュールの公開されたIFを呼び出すようになっている。&lt;/li&gt;
+&lt;li&gt;公開したくないパッケージはすべてinternal配下に置くことで予期しない依存を防いでいる。&lt;/li&gt;
+&lt;li&gt;他にも&lt;code&gt;depguard&lt;/code&gt;を使って依存関係を制御している。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;go設計思想の深掘り&#34;&gt;Go設計思想の深掘り&lt;/h2&gt;
+&lt;p&gt;k_program510さんによる発表。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;embed-container speakerdeck&#34;&gt;
+        &lt;iframe src=&#34;https://speakerdeck.com/player/bf88016d5fe349edb4eee19de56f94c2&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+      &lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;メモ:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;発表者の方がオブジェクト指向言語に慣れていてGoにクラスがないことに驚いてGo誕生の背景を深ぼろうと思った、という自分の疑問に向き合う姿勢がとても素敵だと思った。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;設計思想は「どこで使うべきか」を教えてくれる&lt;/code&gt;いい言葉だ。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;databasesqldriverを理解してカスタムデータベースドライバーを作る&#34;&gt;database/sql/driverを理解してカスタムデータベースドライバーを作る&lt;/h2&gt;
+&lt;p&gt;replu5さんによる発表。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;embed-container speakerdeck&#34;&gt;
+        &lt;iframe src=&#34;https://speakerdeck.com/player/71c311a482f14af59e5808230f22dae3&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+      &lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;メモ:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;カスタムデータベースドライバーを作る理由
+&lt;ul&gt;
+&lt;li&gt;ログをだしたい&lt;/li&gt;
+&lt;li&gt;リクエストをDBのwriteインスタンスとreadインスタンスに振り分けたい&lt;/li&gt;
+&lt;li&gt;sqlcを使っているが、sqlcが生成したコードに手を加えていくのは避けたい&lt;/li&gt;
+&lt;li&gt;本体をforkしてしまうと本体に追従するのが大変なので既存のドライバーをラップしたドライバーを作成することにした&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;お話したこと&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sqlcだと引数に応じてwhere句を一部変更することができないと思うがどうやっているのか。
+&lt;ul&gt;
+&lt;li&gt;そういうケースでは複数パターンのクエリを（愚直に）repository層に書いている。&lt;/li&gt;
+&lt;li&gt;そもそも巨大で複雑なクエリにはsqlcは適していないので使うべきではないかもしれない。
+&lt;ul&gt;
+&lt;li&gt;（技術の思想や特徴を理解し適切な場所で使うべき、という姿勢は↑のk_program510さんの『Go設計思想の深掘り』とも通じることがあると感じた。）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;nilとは何か-言語仕様と設計者の葛藤から理解する&#34;&gt;nilとは何か 〜言語仕様と設計者の葛藤から理解する〜&lt;/h2&gt;
+&lt;p&gt;株式会社サイバーエージェント kurodaさんによる発表。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;embed-container speakerdeck&#34;&gt;
+        &lt;iframe src=&#34;https://speakerdeck.com/player/a0086a4f622f413b83f12560bf8fb2a2&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+      &lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;以下メモ。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Goで定義されているキーワード数を即答している人が数人いてすごかったw（25個らしい）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nil&lt;/code&gt;はキーワードではない。&lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt;, &lt;code&gt;iota&lt;/code&gt;と同じpredeclared identifier(事前宣言された識別子)である。&lt;/li&gt;
+&lt;li&gt;predeclared identifierのなかでデフォルト型を持たないのは&lt;code&gt;nil&lt;/code&gt;だけ。&lt;/li&gt;
+&lt;li&gt;（ちょいちょいクイズが挟まっていて参加者を飽きさせない工夫があって発表の仕方が参考になった）&lt;/li&gt;
+&lt;li&gt;interfaceが==nilになるのは型情報もデータも両方ゼロのときのみ。
+&lt;ul&gt;
+&lt;li&gt;なのでtyped nilは==nilにならない。
+&lt;ul&gt;
+&lt;li&gt;-&amp;gt; &lt;code&gt;var err *MyError = nil&lt;/code&gt;のように初期化した値は==nilにならないのでnilをreturnしたい場合は明示的にnilを返す必要がある。（全然知らなかった）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;nilに関する問題をどう解決するかの議論がなかなか前に進んでいないことを説明してからの&lt;code&gt;errors.AsType&lt;/code&gt;をセマンティクスを変えずにうまく問題を解決した例として説明する流れがめっちゃ綺麗だった。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;who-tests-the-tests-&#34;&gt;Who tests the &lt;code&gt;Tests&lt;/code&gt; ?&lt;/h2&gt;
+&lt;p&gt;sivchariさんの発表。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;embed-container google-slides&#34;&gt;
+      &lt;iframe src=&#34;https://docs.google.com/presentation/d/1we1bAhUH-_hCEZTYFy2DOyFjWN0fp7VWBkWBha8nwk4/embed?start=false&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;メモ:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AI時代になってCIの重要性が増している。&lt;/li&gt;
+&lt;li&gt;カバレッジだけを追っていくと本質的でないテストコードが増えてしまう。&lt;/li&gt;
+&lt;li&gt;テストコードのテストとしてMutation Testingという手法を紹介する。&lt;/li&gt;
+&lt;li&gt;Mutation Testing
+&lt;ul&gt;
+&lt;li&gt;プログラムの一部を意図的に書き換え、生成したミュータントに対してテストを実行し、失敗するかどうかを検証する手法。
+&lt;ul&gt;
+&lt;li&gt;演算子の変更、&lt;code&gt;else&lt;/code&gt;ブロックの削除など&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;失敗することを期待するテスト(&lt;code&gt;KILLED&lt;/code&gt;: テスト失敗 == 期待した挙動、&lt;code&gt;SURVIVED&lt;/code&gt;: テスト成功 == 期待した挙動ではない)&lt;/li&gt;
+&lt;li&gt;どれくらい失敗したかを指標にする。&lt;/li&gt;
+&lt;li&gt;ただこれは銀の弾丸ではない。実行時間とのトレードオフになる。
+&lt;ul&gt;
+&lt;li&gt;100% &lt;code&gt;KILLED&lt;/code&gt;を目指すべきではない。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Mutation Testingをどう実装するか
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sivchari/gomu&#34; target=&#34;_blank&#34; &gt;sivchari/gomu&lt;/a&gt;というMutation Testingライブラリを作成した。&lt;/li&gt;
+&lt;li&gt;overlayを使うと実際のファイルを仮想的に変更して実行できる
+&lt;ul&gt;
+&lt;li&gt;ソースコードを汚さずに好きなように変更できる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;感想:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;overlayすごそう&lt;/li&gt;
+&lt;li&gt;気になったこと
+&lt;ul&gt;
+&lt;li&gt;mutation testingの使い所について
+&lt;ul&gt;
+&lt;li&gt;実際のプロダクションに導入するならある程度テストが整備されたあとにやるのが優先順位としてよい？（Mutation Testingがちゃんと動作することの前提としてある程度のカバレッジが必要そう）&lt;/li&gt;
+&lt;li&gt;あとは不慣れな巨大コードと向き合うときにmutation testを実行してみてテスト品質を把握する、というのもいいかもしれない。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;mutation testing以外のテスト品質保証手法について
+&lt;ul&gt;
+&lt;li&gt;あまりテストの品質を定量的、機械的に保証する方法をカバレッジ以外に考えたことがなかった。&lt;/li&gt;
+&lt;li&gt;mutation testing以外ではどのようにテストコードの品質や正当性を保証するのがよさそう？&lt;/li&gt;
+&lt;li&gt;たとえばk8sの内部実装などではどのように品質担保しているのか気になった（気になっただけで調べられてはいない）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;goから学ぶgcの仕組みとgreen-tea-gcによる次世代最適化&#34;&gt;Goから学ぶGCの仕組みとGreen Tea GCによる次世代最適化&lt;/h2&gt;
+&lt;p&gt;go_poron10さんによる発表。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;embed-container speakerdeck&#34;&gt;
+        &lt;iframe src=&#34;https://speakerdeck.com/player/17dc2bf5b4ed4a1d8c289ad77f26cd8c&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+      &lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;とても内容が高度で途中でついていけなくなってしまったのでいつかリベンジしたい。&lt;/p&gt;
+&lt;h2 id=&#34;実装公開goで実現する堅牢なアーキテクチャdddgrpc-connectそしてai協調開発の実践&#34;&gt;【実装公開】Goで実現する堅牢なアーキテクチャ：DDD、gRPC-connect、そしてAI協調開発の実践&lt;/h2&gt;
+&lt;p&gt;株式会社テレシーのDaisuke Sasakiさんによる発表。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;embed-container speakerdeck&#34;&gt;
+        &lt;iframe src=&#34;https://speakerdeck.com/player/0592dd9c358e4ea9b74adf758ddb546a&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+      &lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;お話したこと:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;application層のQuery Serviceからdomain packageへの依存はOKにしている？それとも独自のreturn typeをQuery serviceで定義している？
+&lt;ul&gt;
+&lt;li&gt;依存OKにしている。&lt;/li&gt;
+&lt;li&gt;domain層に以下の2種類があり、それぞれ別パッケージに定義している。
+&lt;ul&gt;
+&lt;li&gt;commandとqueryの両方から参照される型(tier1)&lt;/li&gt;
+&lt;li&gt;queryからのみ参照される型(tier2)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;スポンサーブースで話したこと一部抜粋&#34;&gt;スポンサーブースで話したこと（一部抜粋）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ANDPAD
+&lt;ul&gt;
+&lt;li&gt;意外にもGo関連の勉強会でスポンサーブースを出すのは初とのこと。
+&lt;ul&gt;
+&lt;li&gt;スポンサーブースが抽選なので出展の機会を得るのは簡単ではないらしい。&lt;/li&gt;
+&lt;li&gt;個人的にはGoに力を入れている会社のイメージを2年くらい前から持っていたので意外だった。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SODA
+&lt;ul&gt;
+&lt;li&gt;CodeRabbitでレビュー負荷を下げている&lt;/li&gt;
+&lt;li&gt;PRレビューはチーム全員で分担して特定の誰かに負担が偏らないようにしている&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ソロ参加だったがセッションの合間や懇親会でたくさんの人と交流できてとても楽しかった。
+&lt;ul&gt;
+&lt;li&gt;社外のエンジニアと話せるとかなり刺激&amp;amp;学びになるので今後も機会を見つけていろんな勉強会に参加してみようと思った。&lt;/li&gt;
+&lt;li&gt;勉強会に参加している人は自分の時間を使って勉強会に参加するくらいなのでモチベが高い（あるいは技術が好きな）人が多いというのはあるかもしれない。（考えてみれば当たり前だが実際に行ってみてそのことを実感できた）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;今年はCSの勉強&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;と並行してGoのインプット &amp;amp; アウトプットを頑張っていこうと思っているのでモチベがいい感じに上がった。
+&lt;ul&gt;
+&lt;li&gt;たくさんの強者を見たことで自分が目指す技術力の基準を上げられた感覚がある。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;運営、登壇者、スポンサー、参加者の皆様ありがとうございました！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;振り返り&#34;&gt;振り返り&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;セッションの合間は発表者の方に質問するためにウロウロしている時間が長かったのもあり、全スポンサーブースを回れなかった。もうちょっといい感じに時間を使えるとよさそう。（スポンサーブースで各社の方とお話するのは楽しいので全部回りたい気持ち）&lt;/li&gt;
+&lt;li&gt;懇親会の途中から他の人に自分から話しかけたりできたけど次回は最初からできるともっとよさそう。&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;おまけ&#34;&gt;おまけ&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;土日に仙台でKing Gnuのライブがあった影響か、土曜は仙台駅付近のホテルがめっちゃ高かったので福島まで移動して宿泊してgot aことなきした。（ありがとうアパホテル）&lt;/li&gt;
+&lt;li&gt;福島で食べたお寿司が美味しかった。観光までする（体力的）余裕がなかったのが残念。
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;sushi.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;なんか新幹線が長かった。
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;long-shinkansen.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;大AI時代になりPRレビュー負担が肥大化しているのでCIで機械的にコード品質を担保するためにLinterを増やそうと思っているため。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://pkg.go.dev/cmd/compile#hdr-Line_Directives&#34; target=&#34;_blank&#34; &gt;https://pkg.go.dev/cmd/compile#hdr-Line_Directives&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;今は（今更ながら）『ネットワークはなぜつながるのか』を読んでいる。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34;&gt;
+&lt;p&gt;話しかけるときは普通に「お疲れ様です〜」とかでいいんだなという学びを得た。&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
     <item>
       <title>『Goならわかるシステムプログラミング 第2版』を読んだ</title>
       <link>https://blog.kyu08.com/posts/go-system-programming/</link>
