@@ -37,7 +37,7 @@ https://docs.google.com/presentation/d/14e9PiaKbyqcZTu5mYCKBqa9MokJhxmT0WePHxwPz
         - ![](line-directive.webp)
         - https://go.dev/play/p/Thvs9U8Twvj
     - 自動生成されたコードのエラーを元のコードの行番号で表示したいときなどに使われるらしい。(例えば自動生成されたGoファイルでのエラーに対してprotoファイルの行番号をエラーに表示したいケースなど)
-- `go test -cover`を実行すると裏側では`go tool -cover`が実行され、計測用のコードが挿入される
+- `go test -cover`を実行すると裏側では`go tool cover`が実行され、計測用のコードが挿入される
 - Goがセルフホスティングされるようになったのは2015年（Go1.5）（それまではC）
     - (まだ10年しかたってないんだなー)
     - ここからコンパイラのコードが既存標準パッケージと共通化されたりするようになった
@@ -211,7 +211,7 @@ https://speakerdeck.com/fujidomoe/godeshi-xian-surujian-lao-naakitekutiya-ddd-gr
         - スポンサーブースが抽選なので出展の機会を得るのは簡単ではないらしい。
         - 個人的にはGoに力を入れている会社のイメージを2年くらい前から持っていたので意外だった。
 - SODA
-    - Code Rabbitでレビュー負荷を下げている
+    - CodeRabbitでレビュー負荷を下げている
     - PRレビューはチーム全員で分担して特定の誰かに負担が偏らないようにしている
 
 ## 感想
