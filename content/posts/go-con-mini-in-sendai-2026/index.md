@@ -233,8 +233,6 @@ https://speakerdeck.com/fujidomoe/godeshi-xian-surujian-lao-naakitekutiya-ddd-gr
 - なんか新幹線が長かった。
     - ![](long-shinkansen.webp)
 
-<!-- TODO: ノベルティとかを乗せるか迷い -->
-
 [^1]: 大AI時代になりPRレビュー負担が肥大化しているのでCIで機械的にコード品質を担保するためにLinterを増やそうと思っているため。
 [^2]: https://pkg.go.dev/cmd/compile#hdr-Line_Directives
 [^3]: 今は（今更ながら）『ネットワークはなぜつながるのか』を読んでいる。
