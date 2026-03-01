@@ -46,7 +46,7 @@
 &lt;li&gt;自動生成されたコードのエラーを元のコードの行番号で表示したいときなどに使われるらしい。(例えば自動生成されたGoファイルでのエラーに対してprotoファイルの行番号をエラーに表示したいケースなど)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;go test -cover&lt;/code&gt;を実行すると裏側では&lt;code&gt;go tool -cover&lt;/code&gt;が実行され、計測用のコードが挿入される&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;go test -cover&lt;/code&gt;を実行すると裏側では&lt;code&gt;go tool cover&lt;/code&gt;が実行され、計測用のコードが挿入される&lt;/li&gt;
 &lt;li&gt;Goがセルフホスティングされるようになったのは2015年（Go1.5）（それまではC）
 &lt;ul&gt;
 &lt;li&gt;(まだ10年しかたってないんだなー)&lt;/li&gt;
@@ -300,7 +300,7 @@
 &lt;/li&gt;
 &lt;li&gt;SODA
 &lt;ul&gt;
-&lt;li&gt;Code Rabbitでレビュー負荷を下げている&lt;/li&gt;
+&lt;li&gt;CodeRabbitでレビュー負荷を下げている&lt;/li&gt;
 &lt;li&gt;PRレビューはチーム全員で分担して特定の誰かに負担が偏らないようにしている&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
