@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+    <title>Go Conference mini in Sendai 2026に参加した :: blog.kyu08.com</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="2026/02/21(土)に仙台で行われたGo Conference mini in Sendai 2026に参加したのでその内容をまとめる。 Go Conference mini in Sendai 20262026年2月21日（土）" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://blog.kyu08.com/pr-312/posts/go-con-mini-in-sendai-2026/" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BDQ408J45J', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-312/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-312/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-312/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-312/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-312/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-312/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-312/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-312/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-312/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-312/css/post.min.f049fef13af1dfd5ea526cc59ea5a3fc7be11a05911ca7198c5bb9225250119c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-312/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-312/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-312/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-312/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+<link rel="stylesheet" href="https://blog.kyu08.com/pr-312/style.css">
+
+
+<link rel="shortcut icon" href="https://blog.kyu08.com/pr-312/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/pr-312/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="kyu08_" />
+
+
+
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Go Conference mini in Sendai 2026に参加した">
+<meta property="og:description" content="2026/02/21(土)に仙台で行われたGo Conference mini in Sendai 2026に参加したのでその内容をまとめる。 Go Conference mini in Sendai 20262026年2月21日（土）" />
+<meta property="og:url" content="https://blog.kyu08.com/pr-312/posts/go-con-mini-in-sendai-2026/" />
+<meta property="og:site_name" content="blog.kyu08.com" />
+
+
+  
+  
+    
+  
+
+
+  <meta property="og:image" content="https://blog.kyu08.com/pr-312/posts/go-con-mini-in-sendai-2026/cover.png">
+  <meta name="twitter:image" content="https://blog.kyu08.com/pr-312/posts/go-con-mini-in-sendai-2026/cover.png">
+  <meta name="twitter:image:alt" content="Go Conference mini in Sendai 2026に参加した">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+  <meta property="article:published_time" content="2026-03-01 09:00:32 &#43;0900 &#43;0900" />
+
+
+
+
+
+
+
+
+
+<link rel="author" href="http://www.hatena.ne.jp/kyu08/" />
+
+
+<script src="https://blog.kyu08.com/pr-312/docswell-loader.js"></script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BDQ408J45J');
+</script>
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    blog.kyu08.com
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/pr-312/tags/diary/">_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-312/about">about</a></li>
+        
+      
+        
+          <li><a href="/pr-312/index.xml">rss</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/pr-312/tags/diary/" >_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-312/about" >about</a></li>
+        
+      
+        
+          <li><a href="/pr-312/index.xml" >rss</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://blog.kyu08.com/pr-312/posts/go-con-mini-in-sendai-2026/">Go Conference mini in Sendai 2026に参加した</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2026/03/01</time>
+      
+    <span class="post-reading-time">11 min read (5066 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://blog.kyu08.com/pr-312/tags/go/">Go</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-312/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/">勉強会</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="/pr-312/posts/go-con-mini-in-sendai-2026/cover.png"
+    class="post-cover"
+    alt="Go Conference mini in Sendai 2026に参加した"
+    title="Cover Image" />
+
+
+  
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#keynote静的解析からみるgoの過去と未来">【KeyNote】静的解析からみるGoの過去と未来</a></li>
+    <li><a href="#ai時代のgo開発2026-爆速開発のためのガードレール">AI時代のGo開発2026 爆速開発のためのガードレール</a></li>
+    <li><a href="#go-での並列処理-最初の一歩から次の一歩へ">Go での並列処理 「最初の一歩」から「次の一歩」へ</a></li>
+    <li><a href="#go126のruntimemetricsが便利そうな件">Go.1.26のruntime/metricsが便利そうな件（？）</a></li>
+    <li><a href="#モジュラモノリスにおける境界をgoのinternalパッケージで守る">モジュラモノリスにおける境界をGoのinternalパッケージで守る</a></li>
+    <li><a href="#go設計思想の深掘り">Go設計思想の深掘り</a></li>
+    <li><a href="#databasesqldriverを理解してカスタムデータベースドライバーを作る">database/sql/driverを理解してカスタムデータベースドライバーを作る</a></li>
+    <li><a href="#nilとは何か-言語仕様と設計者の葛藤から理解する">nilとは何か 〜言語仕様と設計者の葛藤から理解する〜</a></li>
+    <li><a href="#who-tests-the-tests-">Who tests the <code>Tests</code> ?</a></li>
+    <li><a href="#goから学ぶgcの仕組みとgreen-tea-gcによる次世代最適化">Goから学ぶGCの仕組みとGreen Tea GCによる次世代最適化</a></li>
+    <li><a href="#実装公開goで実現する堅牢なアーキテクチャdddgrpc-connectそしてai協調開発の実践">【実装公開】Goで実現する堅牢なアーキテクチャ：DDD、gRPC-connect、そしてAI協調開発の実践</a></li>
+    <li><a href="#スポンサーブースで話したこと一部抜粋">スポンサーブースで話したこと（一部抜粋）</a></li>
+    <li><a href="#感想">感想</a></li>
+    <li><a href="#振り返り">振り返り</a></li>
+    <li><a href="#おまけ">おまけ</a></li>
+  </ul>
+</nav>
+  
+
+  <div class="post-content"><div>
+        <p><img src="closing-slide.webp" alt=""></p>
+<p>2026/02/21(土)に仙台で行われたGo Conference mini in Sendai 2026に参加したのでその内容をまとめる。</p>
+<p><div class="blogcard" data-url="https://sendaigo.jp/" data-auto-fetch="false">
+  <a href="https://sendaigo.jp/" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://sendaigo.jp/ogp.png" alt="Go Conference mini in Sendai 2026" loading="lazy">
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">Go Conference mini in Sendai 2026</div><div class="blogcard-description">2026年2月21日（土）開催 - Go Forward Together - 東北から広がるGoコミュニティ</div><div class="blogcard-url">https://sendaigo.jp/</div>
+    </div>
+  </a>
+</div>
+</p>
+<h2 id="keynote静的解析からみるgoの過去と未来">【KeyNote】静的解析からみるGoの過去と未来<a href="#keynote静的解析からみるgoの過去と未来" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>tenntennさんによるキーノート。</p>
+<p><div class="embed-container google-slides">
+      <iframe src="https://docs.google.com/presentation/d/14e9PiaKbyqcZTu5mYCKBqa9MokJhxmT0WePHxwPzCmg/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div></p>
+<p>最後に紹介されていたGo1.27のアノテーションで静的解析をできるようにする機能は今まさに自分が欲している機能<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>なので調べてみようと思った。</p>
+<p>以下メモ。</p>
+<ul>
+<li><code>//line a.go:1</code>のような記法は知らなかった。
+<ul>
+<li>調べてみたところ<code>line directive</code>という名前がついているようだった。<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></li>
+<li>こんな感じでコンパイラが出力するエラーメッセージなどが上書きされる。
+<ul>
+<li><img src="line-directive.webp" alt=""></li>
+<li><a href="https://go.dev/play/p/Thvs9U8Twvj" target="_blank" >https://go.dev/play/p/Thvs9U8Twvj</a></li>
+</ul>
+</li>
+<li>自動生成されたコードのエラーを元のコードの行番号で表示したいときなどに使われるらしい。(例えば自動生成されたGoファイルでのエラーに対してprotoファイルの行番号をエラーに表示したいケースなど)</li>
+</ul>
+</li>
+<li><code>go test -cover</code>を実行すると裏側では<code>go tool cover</code>が実行され、計測用のコードが挿入される</li>
+<li>Goがセルフホスティングされるようになったのは2015年（Go1.5）（それまではC）
+<ul>
+<li>(まだ10年しかたってないんだなー)</li>
+<li>ここからコンパイラのコードが既存標準パッケージと共通化されたりするようになった</li>
+</ul>
+</li>
+<li>2019
+<ul>
+<li>goplsが登場</li>
+<li>最初はgolspだったがしれっと名前が変わったらしいw</li>
+</ul>
+</li>
+<li>Go 1.27
+<ul>
+<li>アノテーションによる静的解析
+<ul>
+<li>一点もののlinterを作らなくてよくなる。</li>
+<li><code>//go:fix inline</code>
+<ul>
+<li><a href="https://go.dev/doc/go1.26#go-command" target="_blank" >https://go.dev/doc/go1.26#go-command</a></li>
+</ul>
+</li>
+<li>xxしたあとにyyする、みたいな制約をアノテーションで表現できるようになる（らしい。が一次情報は見つけられていない）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="ai時代のgo開発2026-爆速開発のためのガードレール">AI時代のGo開発2026 爆速開発のためのガードレール<a href="#ai時代のgo開発2026-爆速開発のためのガードレール" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>UPSIDERのRyo MimuraさんによるAI時代の開発生産性を保つにあたっての課題と対策についてのセッション。</p>
+<p><div class="embed-container docswell">
+      <div class="docswell-placeholder" data-src="https://www.docswell.com/s/r4mimu/ZQXGNY-2026-02-21-102435?slide=1" style="width:100%;height:569px;background:#f0f0f0;display:flex;align-items:center;justify-content:center;color:#666;">Loading...</div>
+    </div></p>
+<p>最近PRレビューをする機会が増えてレビュワーとPR作成者双方の負担を減らす方法を考えていたのでとても参考になった。</p>
+<p>以下メモ。</p>
+<ul>
+<li>AIの予期せぬ変更はRules / Skillsでもある程度は防げるがあくまで挙動は非決定的なためすり抜けてしまう可能性がある。そのためハード制約（決定的な処理による制約）を設けることが重要。</li>
+<li>ハード制約の例
+<ul>
+<li><code>internal</code> packageで予期せぬ外部参照から保護する</li>
+<li><code>depguard</code>による依存性ルールの強制</li>
+<li>Package by Featureで凝集性を向上させることでコンテキストをうまく制御する</li>
+</ul>
+</li>
+<li>Fuzzing Test, Mutation Testingなどのテスト手法を活用してコード品質を保つ</li>
+<li>開発者体験 = エージェント体験
+<ul>
+<li>両者は同じもの。</li>
+<li>環境構築、テストとフィードバック、可観測性等開発者体験が悪ければAI Agentもうまく開発を進めることはできなくなる。</li>
+</ul>
+</li>
+</ul>
+<h2 id="go-での並列処理-最初の一歩から次の一歩へ">Go での並列処理 「最初の一歩」から「次の一歩」へ<a href="#go-での並列処理-最初の一歩から次の一歩へ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>TakasagoさんによるGoでの並行処理についてのセッション。</p>
+<p><div class="embed-container google-slides">
+      <iframe src="https://docs.google.com/presentation/d/1SpK9Pxsh2QOOXwIirNe3YiN6U5ujAxiottt4ZNPdBkg/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div></p>
+<p>並行処理の原理だけでなく、パターンを身につけておくといざ実装するとなったときに役に立ちそうだと思った。（なかなか毎月書くような機会がないのであまり定着してない&hellip;）</p>
+<p>以下メモ。</p>
+<ul>
+<li>Goは同期で書いておいて高速化したい箇所だけ並列化する、という書き方がやりやすいのが特徴。</li>
+</ul>
+<h2 id="go126のruntimemetricsが便利そうな件">Go.1.26のruntime/metricsが便利そうな件（？）<a href="#go126のruntimemetricsが便利そうな件" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>o_ga09さんによる発表。</p>
+<p><div class="embed-container google-slides">
+      <iframe src="https://docs.google.com/presentation/d/1mamepeOir5fiEh3ZcGuRM9kkEvQohCcKeZIsKwZ6_L4/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div></p>
+<p>goroutineリークをリアルタイムに検出できるの便利そう。</p>
+<h2 id="モジュラモノリスにおける境界をgoのinternalパッケージで守る">モジュラモノリスにおける境界をGoのinternalパッケージで守る<a href="#モジュラモノリスにおける境界をgoのinternalパッケージで守る" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>SODA inc.のmagavelさんによる発表。</p>
+<p><div class="embed-container speakerdeck">
+        <iframe src="https://speakerdeck.com/player/52cdc21278874c8dafb7a21812d6bd81" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      </div></p>
+<p>メモ:</p>
+<ul>
+<li>「結合はむしろ、忘れてはならない設計ツールだ。」</li>
+<li><code>bounded_context</code>ディレクトリを切っているのが印象的だった</li>
+</ul>
+<p>お話したこと:</p>
+<ul>
+<li>ディレクトリ構成について
+<ul>
+<li><code>bounded_context</code>ディレクトリの同階層には<code>monolish</code>ディレクトリがある
+<ul>
+<li>これらは現状ワンバイナリになっている</li>
+</ul>
+</li>
+<li><code>bounded_context</code>ディレクトリの中には購入、xxx、yyyなどの境界づけられたコンテキストが並ぶ。</li>
+<li>たとえば購入コンテキストの中には購入モジュール、決済モジュールなどがある。</li>
+<li>購入モジュールからは決済モジュールの公開されたIFを呼び出すようになっている。</li>
+<li>公開したくないパッケージはすべてinternal配下に置くことで予期しない依存を防いでいる。</li>
+<li>他にも<code>depguard</code>を使って依存関係を制御している。</li>
+</ul>
+</li>
+</ul>
+<h2 id="go設計思想の深掘り">Go設計思想の深掘り<a href="#go設計思想の深掘り" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>k_program510さんによる発表。</p>
+<p><div class="embed-container speakerdeck">
+        <iframe src="https://speakerdeck.com/player/bf88016d5fe349edb4eee19de56f94c2" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      </div></p>
+<p>メモ:</p>
+<ul>
+<li>発表者の方がオブジェクト指向言語に慣れていてGoにクラスがないことに驚いてGo誕生の背景を深ぼろうと思った、という自分の疑問に向き合う姿勢がとても素敵だと思った。</li>
+<li><code>設計思想は「どこで使うべきか」を教えてくれる</code>いい言葉だ。</li>
+</ul>
+<h2 id="databasesqldriverを理解してカスタムデータベースドライバーを作る">database/sql/driverを理解してカスタムデータベースドライバーを作る<a href="#databasesqldriverを理解してカスタムデータベースドライバーを作る" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>replu5さんによる発表。</p>
+<p><div class="embed-container speakerdeck">
+        <iframe src="https://speakerdeck.com/player/71c311a482f14af59e5808230f22dae3" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      </div></p>
+<p>メモ:</p>
+<ul>
+<li>カスタムデータベースドライバーを作る理由
+<ul>
+<li>ログをだしたい</li>
+<li>リクエストをDBのwriteインスタンスとreadインスタンスに振り分けたい</li>
+<li>sqlcを使っているが、sqlcが生成したコードに手を加えていくのは避けたい</li>
+<li>本体をforkしてしまうと本体に追従するのが大変なので既存のドライバーをラップしたドライバーを作成することにした</li>
+</ul>
+</li>
+</ul>
+<p>お話したこと</p>
+<ul>
+<li>sqlcだと引数に応じてwhere句を一部変更することができないと思うがどうやっているのか。
+<ul>
+<li>そういうケースでは複数パターンのクエリを（愚直に）repository層に書いている。</li>
+<li>そもそも巨大で複雑なクエリにはsqlcは適していないので使うべきではないかもしれない。
+<ul>
+<li>（技術の思想や特徴を理解し適切な場所で使うべき、という姿勢は↑のk_program510さんの『Go設計思想の深掘り』とも通じることがあると感じた。）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="nilとは何か-言語仕様と設計者の葛藤から理解する">nilとは何か 〜言語仕様と設計者の葛藤から理解する〜<a href="#nilとは何か-言語仕様と設計者の葛藤から理解する" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>株式会社サイバーエージェント kurodaさんによる発表。</p>
+<p><div class="embed-container speakerdeck">
+        <iframe src="https://speakerdeck.com/player/a0086a4f622f413b83f12560bf8fb2a2" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      </div></p>
+<p>以下メモ。</p>
+<ul>
+<li>Goで定義されているキーワード数を即答している人が数人いてすごかったw（25個らしい）</li>
+<li><code>nil</code>はキーワードではない。<code>true</code>, <code>false</code>, <code>iota</code>と同じpredeclared identifier(事前宣言された識別子)である。</li>
+<li>predeclared identifierのなかでデフォルト型を持たないのは<code>nil</code>だけ。</li>
+<li>（ちょいちょいクイズが挟まっていて参加者を飽きさせない工夫があって発表の仕方が参考になった）</li>
+<li>interfaceが==nilになるのは型情報もデータも両方ゼロのときのみ。
+<ul>
+<li>なのでtyped nilは==nilにならない。
+<ul>
+<li>-&gt; <code>var err *MyError = nil</code>のように初期化した値は==nilにならないのでnilをreturnしたい場合は明示的にnilを返す必要がある。（全然知らなかった）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>nilに関する問題をどう解決するかの議論がなかなか前に進んでいないことを説明してからの<code>errors.AsType</code>をセマンティクスを変えずにうまく問題を解決した例として説明する流れがめっちゃ綺麗だった。</li>
+</ul>
+<h2 id="who-tests-the-tests-">Who tests the <code>Tests</code> ?<a href="#who-tests-the-tests-" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>sivchariさんの発表。</p>
+<p><div class="embed-container google-slides">
+      <iframe src="https://docs.google.com/presentation/d/1we1bAhUH-_hCEZTYFy2DOyFjWN0fp7VWBkWBha8nwk4/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div></p>
+<p>メモ:</p>
+<ul>
+<li>AI時代になってCIの重要性が増している。</li>
+<li>カバレッジだけを追っていくと本質的でないテストコードが増えてしまう。</li>
+<li>テストコードのテストとしてMutation Testingという手法を紹介する。</li>
+<li>Mutation Testing
+<ul>
+<li>プログラムの一部を意図的に書き換え、生成したミュータントに対してテストを実行し、失敗するかどうかを検証する手法。
+<ul>
+<li>演算子の変更、<code>else</code>ブロックの削除など</li>
+</ul>
+</li>
+<li>失敗することを期待するテスト(<code>KILLED</code>: テスト失敗 == 期待した挙動、<code>SURVIVED</code>: テスト成功 == 期待した挙動ではない)</li>
+<li>どれくらい失敗したかを指標にする。</li>
+<li>ただこれは銀の弾丸ではない。実行時間とのトレードオフになる。
+<ul>
+<li>100% <code>KILLED</code>を目指すべきではない。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Mutation Testingをどう実装するか
+<ul>
+<li><a href="https://github.com/sivchari/gomu" target="_blank" >sivchari/gomu</a>というMutation Testingライブラリを作成した。</li>
+<li>overlayを使うと実際のファイルを仮想的に変更して実行できる
+<ul>
+<li>ソースコードを汚さずに好きなように変更できる</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>感想:</p>
+<ul>
+<li>overlayすごそう</li>
+<li>気になったこと
+<ul>
+<li>mutation testingの使い所について
+<ul>
+<li>実際のプロダクションに導入するならある程度テストが整備されたあとにやるのが優先順位としてよい？（Mutation Testingがちゃんと動作することの前提としてある程度のカバレッジが必要そう）</li>
+<li>あとは不慣れな巨大コードと向き合うときにmutation testを実行してみてテスト品質を把握する、というのもいいかもしれない。</li>
+</ul>
+</li>
+<li>mutation testing以外のテスト品質保証手法について
+<ul>
+<li>あまりテストの品質を定量的、機械的に保証する方法をカバレッジ以外に考えたことがなかった。</li>
+<li>mutation testing以外ではどのようにテストコードの品質や正当性を保証するのがよさそう？</li>
+<li>たとえばk8sの内部実装などではどのように品質担保しているのか気になった（気になっただけで調べられてはいない）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="goから学ぶgcの仕組みとgreen-tea-gcによる次世代最適化">Goから学ぶGCの仕組みとGreen Tea GCによる次世代最適化<a href="#goから学ぶgcの仕組みとgreen-tea-gcによる次世代最適化" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>go_poron10さんによる発表。</p>
+<p><div class="embed-container speakerdeck">
+        <iframe src="https://speakerdeck.com/player/17dc2bf5b4ed4a1d8c289ad77f26cd8c" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      </div></p>
+<p>とても内容が高度で途中でついていけなくなってしまったのでいつかリベンジしたい。</p>
+<h2 id="実装公開goで実現する堅牢なアーキテクチャdddgrpc-connectそしてai協調開発の実践">【実装公開】Goで実現する堅牢なアーキテクチャ：DDD、gRPC-connect、そしてAI協調開発の実践<a href="#実装公開goで実現する堅牢なアーキテクチャdddgrpc-connectそしてai協調開発の実践" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>株式会社テレシーのDaisuke Sasakiさんによる発表。</p>
+<p><div class="embed-container speakerdeck">
+        <iframe src="https://speakerdeck.com/player/0592dd9c358e4ea9b74adf758ddb546a" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      </div></p>
+<p>お話したこと:</p>
+<ul>
+<li>application層のQuery Serviceからdomain packageへの依存はOKにしている？それとも独自のreturn typeをQuery serviceで定義している？
+<ul>
+<li>依存OKにしている。</li>
+<li>domain層に以下の2種類があり、それぞれ別パッケージに定義している。
+<ul>
+<li>commandとqueryの両方から参照される型(tier1)</li>
+<li>queryからのみ参照される型(tier2)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="スポンサーブースで話したこと一部抜粋">スポンサーブースで話したこと（一部抜粋）<a href="#スポンサーブースで話したこと一部抜粋" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>ANDPAD
+<ul>
+<li>意外にもGo関連の勉強会でスポンサーブースを出すのは初とのこと。
+<ul>
+<li>スポンサーブースが抽選なので出展の機会を得るのは簡単ではないらしい。</li>
+<li>個人的にはGoに力を入れている会社のイメージを2年くらい前から持っていたので意外だった。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>SODA
+<ul>
+<li>CodeRabbitでレビュー負荷を下げている</li>
+<li>PRレビューはチーム全員で分担して特定の誰かに負担が偏らないようにしている</li>
+</ul>
+</li>
+</ul>
+<h2 id="感想">感想<a href="#感想" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>ソロ参加だったがセッションの合間や懇親会でたくさんの人と交流できてとても楽しかった。
+<ul>
+<li>社外のエンジニアと話せるとかなり刺激&amp;学びになるので今後も機会を見つけていろんな勉強会に参加してみようと思った。</li>
+<li>勉強会に参加している人は自分の時間を使って勉強会に参加するくらいなのでモチベが高い（あるいは技術が好きな）人が多いというのはあるかもしれない。（考えてみれば当たり前だが実際に行ってみてそのことを実感できた）</li>
+</ul>
+</li>
+<li>今年はCSの勉強<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>と並行してGoのインプット &amp; アウトプットを頑張っていこうと思っているのでモチベがいい感じに上がった。
+<ul>
+<li>たくさんの強者を見たことで自分が目指す技術力の基準を上げられた感覚がある。</li>
+</ul>
+</li>
+<li>運営、登壇者、スポンサー、参加者の皆様ありがとうございました！</li>
+</ul>
+<h2 id="振り返り">振り返り<a href="#振り返り" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>セッションの合間は発表者の方に質問するためにウロウロしている時間が長かったのもあり、全スポンサーブースを回れなかった。もうちょっといい感じに時間を使えるとよさそう。（スポンサーブースで各社の方とお話するのは楽しいので全部回りたい気持ち）</li>
+<li>懇親会の途中から他の人に自分から話しかけたりできたけど次回は最初からできるともっとよさそう。<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></li>
+</ul>
+<h2 id="おまけ">おまけ<a href="#おまけ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>土日に仙台でKing Gnuのライブがあった影響か、土曜は仙台駅付近のホテルがめっちゃ高かったので福島まで移動して宿泊してgot aことなきした。（ありがとうアパホテル）</li>
+<li>福島で食べたお寿司が美味しかった。観光までする（体力的）余裕がなかったのが残念。
+<ul>
+<li><img src="sushi.webp" alt=""></li>
+</ul>
+</li>
+<li>なんか新幹線が長かった。
+<ul>
+<li><img src="long-shinkansen.webp" alt=""></li>
+</ul>
+</li>
+</ul>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>大AI時代になりPRレビュー負担が肥大化しているのでCIで機械的にコード品質を担保するためにLinterを増やそうと思っているため。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://pkg.go.dev/cmd/compile#hdr-Line_Directives" target="_blank" >https://pkg.go.dev/cmd/compile#hdr-Line_Directives</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>今は（今更ながら）『ネットワークはなぜつながるのか』を読んでいる。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>話しかけるときは普通に「お疲れ様です〜」とかでいいんだなという学びを得た。&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+      </div></div>
+
+  
+  
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+    
+      <a href="https://blog.kyu08.com/pr-312/posts/development-environment-2026/" class="button inline next">
+        開発環境現状確認 2026
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+        repo="kyu08/blog-comments"
+        issue-term="pathname"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  
+
+  
+    <div class="table-of-contents-sidebar">
+      <h2>
+        目次
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#keynote静的解析からみるgoの過去と未来">【KeyNote】静的解析からみるGoの過去と未来</a></li>
+    <li><a href="#ai時代のgo開発2026-爆速開発のためのガードレール">AI時代のGo開発2026 爆速開発のためのガードレール</a></li>
+    <li><a href="#go-での並列処理-最初の一歩から次の一歩へ">Go での並列処理 「最初の一歩」から「次の一歩」へ</a></li>
+    <li><a href="#go126のruntimemetricsが便利そうな件">Go.1.26のruntime/metricsが便利そうな件（？）</a></li>
+    <li><a href="#モジュラモノリスにおける境界をgoのinternalパッケージで守る">モジュラモノリスにおける境界をGoのinternalパッケージで守る</a></li>
+    <li><a href="#go設計思想の深掘り">Go設計思想の深掘り</a></li>
+    <li><a href="#databasesqldriverを理解してカスタムデータベースドライバーを作る">database/sql/driverを理解してカスタムデータベースドライバーを作る</a></li>
+    <li><a href="#nilとは何か-言語仕様と設計者の葛藤から理解する">nilとは何か 〜言語仕様と設計者の葛藤から理解する〜</a></li>
+    <li><a href="#who-tests-the-tests-">Who tests the <code>Tests</code> ?</a></li>
+    <li><a href="#goから学ぶgcの仕組みとgreen-tea-gcによる次世代最適化">Goから学ぶGCの仕組みとGreen Tea GCによる次世代最適化</a></li>
+    <li><a href="#実装公開goで実現する堅牢なアーキテクチャdddgrpc-connectそしてai協調開発の実践">【実装公開】Goで実現する堅牢なアーキテクチャ：DDD、gRPC-connect、そしてAI協調開発の実践</a></li>
+    <li><a href="#スポンサーブースで話したこと一部抜粋">スポンサーブースで話したこと（一部抜粋）</a></li>
+    <li><a href="#感想">感想</a></li>
+    <li><a href="#振り返り">振り返り</a></li>
+    <li><a href="#おまけ">おまけ</a></li>
+  </ul>
+</nav>
+    </div>
+    <script src="https://blog.kyu08.com/pr-312/toc.js"></script>
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>blog.kyu08.com</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/pr-312/bundle.min.js"></script>
+
+
+<font color="#808080">
+  <span>
+    This site uses Google Analytics for access analysis.
+    Google Analytics uses cookies to collect traffic data, but this traffic data is collected anonymously and does not personally identify you.
+    Cookies can be disabled in your browser.
+  </span>
+</font>
+
+
+<script src="https://blog.kyu08.com/pr-312/blogcard.js"></script>
+
+
+  
+</div>
+
+</body>
+</html>
