@@ -62,7 +62,8 @@ function extractMetadata(filePath, content) {
       ? new Date(data.date).toLocaleDateString('ja-JP', {
           year: 'numeric',
           month: '2-digit',
-          day: '2-digit'
+          day: '2-digit',
+          timeZone: 'Asia/Tokyo'
         }).replace(/\//g, '/')
       : '',
     author: data.author || 'kyu08',
