@@ -171,7 +171,7 @@ function extractBlogcardUrls(content) {
 
   // リスト項目内を検出するヘルパー関数
   const isInListItem = (content, matchIndex) => {
-    // matchIndexから行の先頭まで遡る
+    // matchIndexから行の先頭まで遡る。
     const beforeMatch = content.substring(0, matchIndex);
     const lastNewline = beforeMatch.lastIndexOf('\n');
     const lineStart = lastNewline === -1 ? 0 : lastNewline + 1;
