@@ -202,5 +202,371 @@
     "description": "Contribute to atusy/treemonkey.nvim development by creating an account on GitHub.",
     "image": "https://opengraph.githubassets.com/804219f33da8a500a826d1d11eba82298c6ccc5bb6beaa63485762164a54cbbf/atusy/treemonkey.nvim",
     "fetchedAt": "2026-03-03T04:00:32.621Z"
+  },
+  "https://www.shoeisha.co.jp/book/detail/9784798183961": {
+    "title": "つくって、壊して、直して学ぶ Kubernetes入門 | 翔泳社",
+    "description": "動かなくっても、もう怖くない！\n\nトラブルシューティングを体験しながら学ぶ、実践的入門書。\n\n\n本書は、Kubernetesの実践的な知識をハンズオン形式で解説する書籍です。本書の特徴は、壊れにくいKubernetesをあえて壊しながら学ぶことで、初心者が挫折しやすいトラブルシューティングの知識や対応力が身に付けられることです。初心者でも、経験者でも、今度こそKubernetesがわかる！\nマンガや図解を多く掲載しているため視覚的に理解したい方にもおすすめです。\n\n\n・つくって、壊して、直して学ぶ\n- DockerfileからDockerコンテナをつくる\n- Kubernetesクラスタ上にアプリケーションをつくって、壊す\n- Serviceを壊す\n- kubectlでデバッグする\n- OutOfMemoryを発生させて、直す　...\n\n\n\n・Kubernetesの構築、運用だけでなくオブザーバビリティも解説\nトラブル解決にむけてより多くの情報を得るための「オブザーバビリティ」、そしてトラブルを検知するための「モニタリング」についても説明します。\n\n\n\n・豊富なイラストとマンガで見てわかる\n章ごと、ハンズオンごとに導入マンガを掲載し、視覚的にも学習内容を理解できるようにしています。むずかしい概念もイラストで丁寧に図解してあります。\n\n\n\nPart 1：つくってみようKubernetes\nChapter 1　Dockerコンテナをつくってみる\nChapter 2　Kubernetesクラスタをつくってみる\nChapter 3　全体像の説明\nChapter 4　アプリケーションをKubernetesクラスタ上につくる\nPart 2：アプリケーションを壊して学ぶKubernetes\nChapter 5　トラブルシューティングガイドとkubectlコマンドの使い方\nChapter 6　Kubernetes リソースをつくって壊そう\nChapter 7　安全なステートレス・アプリケーションをつくるために\nChapter 8　総復習：アプリケーションを直そう\nPart 3：壊れても動くKubernetes\nChapter 9　Kubernetesの仕組み、アーキテクチャーを理解しよう\nChapter 10　Kubernetesの開発ワークフローを理解しよう\nChapter 11　オブザーバビリティとモニタリングに触れてみよう\nChapter 12　この先の歩み方",
+    "image": "https://www.shoeisha.co.jp/static/book/og_image/9784798183961.jpg",
+    "fetchedAt": "2026-03-03T08:41:19.981Z"
+  },
+  "https://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdf": {
+    "title": "https://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdf",
+    "description": "",
+    "image": "",
+    "fetchedAt": "2026-03-03T08:41:17.976Z"
+  },
+  "https://blog-dry.com/entry/2026/01/02/145952": {
+    "title": "開発環境現状確認（2026年） - Don't Repeat Yourself",
+    "description": "覚えてたのでやります。 blog-dry.com 前提として、macOSです。 エディタ Neovimを使っています。仕事ではKotlinを使用しています。KotlinのLanguage Serverは登場しましたが、相変わらずまだ安定的に使える状態にはないのでKotlinを書くときだけ仕方なくIntelliJを使っています。ちなみに別にIntelliJに強い不満があるわけではなく、がんばってlazygitをfloating windowで開かせてそれっぽい動作をさせるなどの涙ぐましいカスタマイズをしています。 なお今年は一瞬Rustのコードレビューなどをする時間を仕事で得たのですが、Neov…",
+    "image": "https://ogimage.blog.st-hatena.com/8599973812298536260/17179246901338085482/1768574867",
+    "fetchedAt": "2026-03-03T08:41:18.826Z"
+  },
+  "https://k0kubun.hatenablog.com/entry/development-environment-2026": {
+    "title": "開発環境現状確認 2026 - k0kubun's blog",
+    "description": "@helloyuki_ さんと @giginet さんがやってて、自分との違いを眺めるのも面白いかと思ったので書いてみる*1。僕の以前の環境は 後悔しているがやめられない開発効率向上術、Neovimを一瞬でVSCode並みに便利にする、自作PC2023: Ryzenをやめた あたりで書いた。 OS Linux、macOS、Windows の3つを、この順に多く使用している。使っている環境が多いほど面倒毎が増えるので、本当なら3つも使わない方が良い。 LinuxはUbuntu 24.04を使っている。よく使うDockerイメージやGitHub Actions環境と同じパッケージ名が使えたり、デス…",
+    "image": "https://cdn.image.st-hatena.com/image/scale/9f7e3bf4789f918b60a5c29199c495e03354b3f6/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fk%2Fk0kubun%2F20260114%2F20260114221351.jpg",
+    "fetchedAt": "2026-03-03T08:41:18.611Z"
+  },
+  "https://tech.pepabo.com/2026/01/23/development-environment-2026/": {
+    "title": "ペパボパートナーの開発環境現状確認 2026 - Pepabo Tech Portal",
+    "description": "「開発環境現状確認2026」に寄せて、ペパボパートナーの有志の開発環境を紹介します！@名前の環境詳細をみる をクリックして、各メンバーの詳細な環境を確認してみてください。",
+    "image": "https://tech.pepabo.com/blog/2026/01/23/development-environment-2026/images/pepabo-development-environment-2026.png",
+    "fetchedAt": "2026-03-03T08:41:18.409Z"
+  },
+  "https://store.steampowered.com/sale/steammachine": {
+    "title": "Steam Machine",
+    "description": "Your games on the big screen",
+    "image": "https://clan.fastly.steamstatic.com/images/45479024/d2ce7e96bb0ab51817ba37cf61e3ca919d6f7209.jpg",
+    "fetchedAt": "2026-03-03T08:41:20.280Z"
+  },
+  "https://blog.kyu08.com/posts/tmux-fzf-window/": {
+    "title": "tmux-fzfを使ってwindow切り替えをできるようにする手順",
+    "description": "これはなに こんな感じでtmuxでwindowをfzfで切り替えられるようにするための設定方法 手順 .tmux.confに以下を追記 set -g @plugin &#39;tmux-plugins/tpm&#39; # す",
+    "image": "https://blog.kyu08.com/posts/tmux-fzf-window/cover.png",
+    "fetchedAt": "2026-03-03T08:41:20.320Z"
+  },
+  "https://zenn.dev/fuzmare/articles/zsh-plugin-manager-cache": {
+    "title": "究極のzshプラグイン読み込み高速化: プラグインマネージャーの限界を越えろ【起動時間14.6ms】",
+    "description": "",
+    "image": "https://res.cloudinary.com/zenn/image/upload/s--kunWWsQu--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%25A9%25B6%25E6%25A5%25B5%25E3%2581%25AEzsh%25E3%2583%2597%25E3%2583%25A9%25E3%2582%25B0%25E3%2582%25A4%25E3%2583%25B3%25E8%25AA%25AD%25E3%2581%25BF%25E8%25BE%25BC%25E3%2581%25BF%25E9%25AB%2598%25E9%2580%259F%25E5%258C%2596%253A%2520%25E3%2583%2597%25E3%2583%25A9%25E3%2582%25B0%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%259E%25E3%2583%258D%25E3%2583%25BC%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%25BC%25E3%2581%25AE%25E9%2599%2590%25E7%2595%258C%25E3%2582%2592%25E8%25B6%258A%25E3%2581%2588%25E3%2582%258D%25E3%2580%2590%25E8%25B5%25B7%25E5%258B%2595%25E6%2599%2582%25E9%2596%259314.6ms%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:fuzmare%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2hXeXNFR1h2VTVUX0ZodzJHYnNQX3M2Z3A5YXpjWWVDanVBaENkcmc9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACAGSGT",
+    "fetchedAt": "2026-03-03T08:41:20.564Z"
+  },
+  "https://blog.kyu08.com/posts/chrome-extensions-for-dev-2024/": {
+    "title": "ソフトウェアエンジニア目線で使ってみて便利だったChrome拡張を紹介する",
+    "description": "本記事はUnipos Advent Calendar 2024の13日目の記事です。 本記事では使ってみて便利だったChrome拡張を紹介します。 Stylus Stylus ユーザー定義のCSSを",
+    "image": "https://blog.kyu08.com/posts/chrome-extensions-for-dev-2024/cover.png",
+    "fetchedAt": "2026-03-03T08:41:20.353Z"
+  },
+  "https://www.docswell.com/s/lagenorhynque/Z6VX6E-functional-language-tasting-haskell-scala-clojure-elixir#p1": {
+    "title": "関数型言語テイスティング: Haskell, Scala, Clojure, Elixirを比べて味わう関数型プログラミングの旨さ | ドクセル",
+    "description": "4つの関数型言語を例に、関数型プログラミング(言語)の本質を探ろう。  関数型まつり2025セッション概要: h...",
+    "image": "https://bcdn.docswell.com/page/PEXKP4NZJX.jpg?width=480",
+    "fetchedAt": "2026-03-03T08:41:22.976Z"
+  },
+  "https://zenn.dev/siiibo_tech/articles/adopting-fp-languages": {
+    "title": "関数型言語を採用し、維持し、継続する",
+    "description": "",
+    "image": "https://res.cloudinary.com/zenn/image/upload/s--264zsvWh--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E9%2596%25A2%25E6%2595%25B0%25E5%259E%258B%25E8%25A8%2580%25E8%25AA%259E%25E3%2582%2592%25E6%258E%25A1%25E7%2594%25A8%25E3%2581%2597%25E3%2580%2581%25E7%25B6%25AD%25E6%258C%2581%25E3%2581%2597%25E3%2580%2581%25E7%25B6%2599%25E7%25B6%259A%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Yu%2520Matsuzawa%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBmMzgxMmZkZWEuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Siiibo%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dwd3pXbm9hSUl4bEVZcUtBSnRicVVheWljRmlJVExYVGZNN0EyPXMyNTAtYw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png?_a=BACAGSGT",
+    "fetchedAt": "2026-03-03T08:41:23.558Z"
+  },
+  "https://speakerdeck.com/ayato0211/maikurosabisunei-dedong-kuapiwof-number-deshu-iteiru": {
+    "title": "マイクロサービス内で動くAPIをF#で書いている",
+    "description": "関数型まつり2025の発表資料",
+    "image": "https://files.speakerdeck.com/presentations/9efe648f23514385a48f5c5608d5f1c3/slide_0.jpg?35472263",
+    "fetchedAt": "2026-03-03T08:41:23.422Z"
+  },
+  "https://www.rasukarusan.com/entry/2019/11/03/211338": {
+    "title": "【備忘録】Homebrewで自作ツールを配布する - ハイパーマッスルエンジニア",
+    "description": "Homebrewでの配布は簡単だが毎回忘れる Goでバイナリ作ったり、ShellScript書いて配布したいなと思ったときにHomebrew使うことが割とある。 が、その都度毎回調べてやり方を思い出しながらするのが億劫だったので、一回まとめてみる。 ざっくり手順 Homebrew配布用のリポジトリを作る tagをpushしてReleaseノートを作る Formulaファイルを作ってpush 1. Homebrew配布用のリポジトリを作る 自作ツールのインストールファイルを置くためのリポジトリを作る。このリポジトリにバイナリとかの成果物を置くわけではない。置くのはインストールファイルである.rb…",
+    "image": "https://cdn.image.st-hatena.com/image/scale/887da0d267a399928f4f3e7a0eb22ea2278d9656/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fr%2Frasukarusan%2F20191103%2F20191103211239.png",
+    "fetchedAt": "2026-03-03T08:41:24.277Z"
+  },
+  "https://sendaigo.jp/": {
+    "title": "Go Conference mini in Sendai 2026",
+    "description": "2026年2月21日（土）開催 - Go Forward Together - 東北から広がるGoコミュニティ",
+    "image": "https://sendaigo.jp/ogp.png",
+    "fetchedAt": "2026-03-03T08:41:23.353Z"
+  },
+  "https://docs.google.com/presentation/d/14e9PiaKbyqcZTu5mYCKBqa9MokJhxmT0WePHxwPzCmg": {
+    "title": "静的解析からみるGoの過去と未来",
+    "description": "静的解析からみる Goの過去と未来 2026/02/21 Go Conference mini 2026 in SENDAI https://tenn.in/goconmini26",
+    "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyJ8uaZIYOdWT_qp1kRFwVhDEv0tr1bdSsZhjjfWLzXHTpWzFQpQLSWQ9VHP79Sc4eUjhrwBtShduI8KtDdJAW1t2SnGYdxe5fKYr34e1OJMISPmuX2R=w1200-h630-p",
+    "fetchedAt": "2026-03-03T08:41:27.159Z"
+  },
+  "https://www.docswell.com/s/r4mimu/ZQXGNY-2026-02-21-102435": {
+    "title": "AI時代のGo開発2026 爆速開発のためのガードレール | ドクセル",
+    "description": "AI時代のGo開発2026 爆速開発のためのガードレール by Ryo Mimura",
+    "image": "https://bcdn.docswell.com/page/LE1YVVND7G.jpg?width=480",
+    "fetchedAt": "2026-03-03T08:41:26.690Z"
+  },
+  "https://docs.google.com/presentation/d/1SpK9Pxsh2QOOXwIirNe3YiN6U5ujAxiottt4ZNPdBkg/edit": {
+    "title": "2026/02/21 Go での並行処理 - 最初の一歩 @ Go Conference mini in Sendai 2026",
+    "description": "Go での並列処理 「最初の一歩」から「次の一歩」へ Go Conference mini in Sendai 2026 2026/02/21 Masaaki Takasago",
+    "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyLdkz_m8aLYt8Pyye34X-1UD3Rh58b2rWHIDjlrKLPl9y3z9cmQSHqcTPS8DNVhPbl6GDbmKXW5trynvK7WvnJheBoIrDqUSb-87Ke78K5ROmnXJAU8=w1200-h630-p",
+    "fetchedAt": "2026-03-03T08:41:26.786Z"
+  },
+  "https://docs.google.com/presentation/d/1mamepeOir5fiEh3ZcGuRM9kkEvQohCcKeZIsKwZ6_L4/edit?slide=id.SLIDES_API254050862_0#slide=id.SLIDES_API254050862_0": {
+    "title": "GoConferenceMini2026inSendai - 2026.02.21",
+    "description": "Go.1.26のruntime/metricsが 便利そうな件（？） Speaker: Taichi Abe この？が大事というかこのLTのみそです",
+    "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyI-LF1O4rg445dV6rpt5pP9Sa9NSp-BvA3bx5VIpqjb9JOGlcae0kQbyG_rqyjIzrdch6rf4Mi3CUFNO5Axj6Kjsz_jPSRMBPxT9y4BL9Kichi5uxk=w1200-h630-p",
+    "fetchedAt": "2026-03-03T08:41:26.625Z"
+  },
+  "https://speakerdeck.com/magavel/moziyuramonorisuniokerujing-jie-wogonointernalpatukezideshou-ru": {
+    "title": "モジュラモノリスにおける境界をGoのinternalパッケージで守る",
+    "description": "Go Conference mini 2026 in Sendai: https://sendaigo.jp/",
+    "image": "https://files.speakerdeck.com/presentations/52cdc21278874c8dafb7a21812d6bd81/slide_0.jpg?38558599",
+    "fetchedAt": "2026-03-03T08:41:26.438Z"
+  },
+  "https://speakerdeck.com/ykf1999/gonoshe-ji-si-xiang-woshen-jue-risuru-unixkaraji-kumono-slidev": {
+    "title": "Goの設計思想を深掘りする___Unixから継ぐもの_-_Slidev.pdf",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/bf88016d5fe349edb4eee19de56f94c2/slide_0.jpg?38492836",
+    "fetchedAt": "2026-03-03T08:41:27.358Z"
+  },
+  "https://speakerdeck.com/replu/driver-to-create-a-custom-database-driver": {
+    "title": "Go Conference mini in Sendai 2026: database/sql/driverを理解してカスタムデータベースドライバーを作る",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/71c311a482f14af59e5808230f22dae3/slide_0.jpg?38490465",
+    "fetchedAt": "2026-03-03T08:41:27.534Z"
+  },
+  "https://speakerdeck.com/kuro_kurorrr/understanding-nil-in-go-interface-representation-and-why-nil-equals-nil": {
+    "title": "nilとは何か 〜interfaceの構造とnil!=nilから理解する〜 / Understanding nil in Go Interface Representation and Why nil != nil",
+    "description": "Go Conference mini in Sendai 2026で使うスライドです。",
+    "image": "https://files.speakerdeck.com/presentations/a0086a4f622f413b83f12560bf8fb2a2/slide_0.jpg?38491306",
+    "fetchedAt": "2026-03-03T08:41:27.608Z"
+  },
+  "https://docs.google.com/presentation/d/1we1bAhUH-_hCEZTYFy2DOyFjWN0fp7VWBkWBha8nwk4/edit?usp=sharing": {
+    "title": "Who tests the Tests ?",
+    "description": "Who tests the Tests ? ~ Go Conference mini in Sendai 2026 ~ The Go gopher was designed by Renee French",
+    "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyLgEmdH5LnWXwI9xXXbq04IlgznIhJJkPpXnjoXc2Zjmm1HAmLIXIAlnAJtyBh9kG9JqgNHXaxXf-JkpQP0x7F6oqfy2jbv1WYWzrIEFIiAobHWLCcc=w1200-h630-p",
+    "fetchedAt": "2026-03-03T08:41:27.664Z"
+  },
+  "https://speakerdeck.com/yuporon/gokaraxue-bugc-green-tea-gcniyoruci-shi-dai-zui-shi-hua": {
+    "title": "Goから学ぶGC -Green Tea GCによる次世代最適化-",
+    "description": "GCの基本概念と、GoにおけるGCの実装、そしてGreen Tea GCによる次世代最適化について解説しています",
+    "image": "https://files.speakerdeck.com/presentations/17dc2bf5b4ed4a1d8c289ad77f26cd8c/slide_0.jpg?38491879",
+    "fetchedAt": "2026-03-03T08:41:27.470Z"
+  },
+  "https://speakerdeck.com/fujidomoe/godeshi-xian-surujian-lao-naakitekutiya-ddd-grpc-connect-sositeaixie-diao-kai-fa-noshi-jian": {
+    "title": "Goで実現する堅牢なアーキテクチャ：DDD、gRPC-connect、そしてAI協調開発の実践",
+    "description": "https://sendaigo.jp/\nGo Conference mini in Sendai 2026\n2026.02.21 SAT\n杜の都・仙台",
+    "image": "https://files.speakerdeck.com/presentations/0592dd9c358e4ea9b74adf758ddb546a/slide_0.jpg?38489544",
+    "fetchedAt": "2026-03-03T08:41:27.928Z"
+  },
+  "https://www.lambdanote.com/products/go-2": {
+    "title": "Goならわかるシステムプログラミング 第2版",
+    "description": "Go言語による新時代のコンピュータシステム入門 渋川よしき 著 424ページ A5判 ISBN：978-4-908686-12-2 2022年3月23日 第2版第1刷 発行 いつも開発に使っている言語やライブラリの裏側は、いったいどうなっ",
+    "image": "http://www.lambdanote.com/cdn/shop/products/web-asset-1_1024x1024.jpg?v=1647933491",
+    "fetchedAt": "2026-03-03T08:41:28.221Z"
+  },
+  "https://www.youtube.com/watch?v=nMHxdz-N7EU": {
+    "title": "- YouTube",
+    "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
+    "image": "",
+    "fetchedAt": "2026-03-03T08:41:28.446Z"
+  },
+  "https://cloud.google.com/spanner/docs/whitepapers/optimizing-schema-design?hl=ja": {
+    "title": "Spanner のスキーマ設計の最適化  |  Google Cloud Documentation",
+    "description": "",
+    "image": "https://docs.cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png?hl=ja",
+    "fetchedAt": "2026-03-03T08:41:28.900Z"
+  },
+  "https://zenn.dev/facengineer/articles/15e7a68fcc2fad": {
+    "title": "Cloud SpannerのNull Filtered INDEXの用途を考察する 〜サブタイプ実装〜",
+    "description": "",
+    "image": "https://res.cloudinary.com/zenn/image/upload/s--zSlZX7Xu--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Cloud%2520Spanner%25E3%2581%25AENull%2520Filtered%2520INDEX%25E3%2581%25AE%25E7%2594%25A8%25E9%2580%2594%25E3%2582%2592%25E8%2580%2583%25E5%25AF%259F%25E3%2581%2599%25E3%2582%258B%2520%25E3%2580%259C%25E3%2582%25B5%25E3%2583%2596%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%2597%25E5%25AE%259F%25E8%25A3%2585%25E3%2580%259C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kngnr%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc3YmY1NTZjODYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACAGSGT",
+    "fetchedAt": "2026-03-03T08:41:28.120Z"
+  },
+  "https://cloud.google.com/spanner/docs/schema-design?hl=ja": {
+    "title": "スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud Documentation",
+    "description": "",
+    "image": "https://docs.cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png?hl=ja",
+    "fetchedAt": "2026-03-03T08:41:29.759Z"
+  },
+  "https://cloud.google.com/spanner/docs/secondary-indexes?hl=ja": {
+    "title": "セカンダリ インデックス  |  Spanner  |  Google Cloud Documentation",
+    "description": "",
+    "image": "https://docs.cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png?hl=ja",
+    "fetchedAt": "2026-03-03T08:41:30.197Z"
+  },
+  "https://www.googblogs.com/sharding-of-timestamp-ordered-data-in-cloud-spanner/": {
+    "title": "Sharding of timestamp-ordered data in Cloud Spanner - googblogs.com",
+    "description": "By Karthi Thyagarajan, Solutions Architect Cloud Spanner was designed from the ground up to offer horizontal scalability and a developer-friendly SQL interface. As a managed service, Google Cloud handles most database management tasks, but it’s up to you to ensure that there are no hotspots, as described in Schema Design Best Practices and Optimizing Schema Design for Cloud Spanner. In this article, we’ll look at how to efficiently insert and retrieve records with timestamp ordering. We’ll start with the high-level guidance provided in Anti-pattern: timestamp ordering and explore the scenario in more detail with a concrete example. Scenario Let’s say we’re building an app that logs user activity along with timestamps and also allows users to query this activity by user id and time range. A good primary key for the table storing user activity (let’s call it LogEntries) is (UserId, Timestamp), as this gives us a uniform distribution of activity logs. Cloud Spanner inserts log entries sequentially, but they’re naturally sharded by UserId, resulting in uniform key distribution. Table LogEntries UserId (PK) Timestamp (PK) LogEntry 15b7bd1f-8473 2018-05-01T15:16:03.386257Z Here’s a sample query to retrieve a list of log entries by user and time range:SELECT UserId, Timestamp, LogEntry FROM LogEntries WHERE UserID = '15b7bd1f-8473' AND Timestamp BETWEEN '2018-05-01T15:14:10.386257Z' AND '2018-05-01T15:16:10.386257Z'; This query takes advantage of the primary key and thus performs well. Now let’s make things more interesting. What if we wanted to group users by the company they work for so we can segment reports by company? This is a fairly common use case for Cloud Spanner, especially with multi-tenant SaaS applications. To support this, we create a table with the following schema.Table LogEntries CompanyId (PK) UserId (PK) Timestamp (PK) LogEntry Acme 15b7bd1f-8473 2018-05-01T15:16:03.386257Z And here’s the corresponding query to retrieve the log entries: SELECT CompanyId, UserId, Timestamp, LogEntry FROM LogEntries WHERE CompanyID = 'Acme' AND UserID = '15b7bd1f-8473' AND Timestamp BETWEEN '2018-05-01T15:14:10.386257Z' AND '2018-05-01T15:16:10.386257Z'; Here’s the query to retrieve log entries by CompanyId and time range (user field not specified):SELECT CompanyId, UserId, Timestamp, LogEntry FROM LogEntries WHERE CompanyID = 'Acme' AND Timestamp BETWEEN '2018-05-01T15:14:10.386257Z' AND '2018-05-01T15:16:10.386257Z'; To support the above query, we add a separate, secondary index. Initially, we include just two columns:CREATE INDEX LogEntriesByCompany ON UserActivity(CompanyId, Timestamp) Challenge: hotspots during inserts The challenge here is that some companies may have a lot more (orders of magnitude more) users than others, resulting in a very skewed distribution of log entries. The challenge is particularly acute during inserts as described in the opening paragraph above. And even if Cloud Spanner helps out by creating additional splits, nodes that service new splits become hotspots due to uneven key distribution. The above diagram depicts a scenario where Company B has three times more users than Company A or Company C. Therefore, log entries corresponding to Company B grow at a higher rate, resulting in the hotspotting of nodes that service the splits where Company B’s log entries are being inserted. Hotspot mitigation There are multiple aspects to our hotspot mitigation strategy: schema design, index design and querying. Let’s look at each of these below. Schema and index design  As described in Anti-pattern: timestamp ordering, we’ll use application-level sharding to distribute data evenly. Let’s look at one particular approach for our scenario: instead of (CompanyId, UserId, Timestamp), we’ll use (UserId, CompanyId, Timestamp).Table LogEntries (reorder columns CompanyId and UserId in Primary Key) UserId (PK) CompanyId (PK) Timestamp (PK) LogEntry 15b7bd1f-8473 Acme 2018-05-01T15:16:03.386257Z By placing UserId before CompanyId in the primary key, we can mitigate the hotspots caused by the non-uniform distribution of log entries across companies. Now let’s look at the secondary index on CompanyId and timestamp. Since this index is meant to support queries that specify just CompanyId and timestamp, we cannot address the distribution problem by simply incorporating UserId. Keep in mind that indexes are also susceptible to hotspots and we need to design them so that their distribution is uniform. To address this, we’ll add a new column, EntryShardId, where (in pseudo-code): entryShardId = hash(CompanyId + timestamp) % num_shards The hash function here could be a simple crc32 operation. Here’s a python snippet illustrating how to calculate this hash function before a log entry is inserted:... import datetime import zlib ... timestamp = datetime.datetime.utcnow() companyId = 'Acme' entryShardId = (zlib.crc32(companyId + timestamp.isoformat()) & 0xffffffff) % 10 ... In this case, num_shards = 10. You can adjust this value based on the characteristics of your workload. For instance, if one company in our scenario generates 100 times more log entries on average than the other companies, then we would pick 100 for num_shards in order to achieve a uniform distribution across entries from all companies. This hashing approach essentially takes the sequential, timestamp-ordered LogEntriesByCompany index entries for a particular company and distributes them across multiple application (or logical) shards. In this case, we have 10 such shards per company, resulting from the crc32 and modulo operations shown above.Table LogEntries (with EntryShardId added) CompanyId (PK) UserId (PK) Timestamp (PK) EntryShardId LogEntry ‘Acme’ 1 2018-05-01T15:16:03.386257Z 8 And the index: CREATE INDEX LogEntriesByCompany ON LogEntries(EntryShardId, CompanyId, Timestamp) Querying Evenly distributing data using a sharding approach is great for inserts but how does it affect retrieval? Application-level sharding is no good to us if we cannot retrieve the data efficiently. Let’s look at how we would query for a list of log entries by CompanyId and time range, but without UserId:SELECT CompanyId, UserId, Timestamp, LogEntry FROM LogEntries@{FORCE_INDEX=LogEntriesbyCompany} WHERE CompanyId = 'Acme' AND ShardedEntryId BETWEEN 0 AND 9 AND Timestamp > '2018-05-01T15:14:10.386257Z' AND Timestamp The above query illustrates how to perform a timestamp range retrieval while taking sharding into account. By including the ShardedEntryId in the query above, we tell Spanner to ‘look’ in all 10 logical shards to retrieve the timestamp entries for CompanyId ‘Acme’ for a particular range. Cloud Spanner is a full-featured relational database service that relieves you of most—but not all—database management tasks. For more information on Cloud Spanner management best practices, check out the recommended reading.Anti-pattern: timestamp orderingOptimizing Schema Design for Cloud SpannerBest Practices for Schema Design",
+    "image": "",
+    "fetchedAt": "2026-03-03T08:41:29.606Z"
+  },
+  "https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner": {
+    "title": "Cloud Spanner におけるトランザクションのロックについて | Google Cloud 公式ブログ",
+    "description": "",
+    "image": "https://storage.googleapis.com/gweb-cloudblog-publish/images/10_-_Databases.max-2600x2600.jpg",
+    "fetchedAt": "2026-03-03T08:41:32.865Z"
+  },
+  "https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes?hl=ja": {
+    "title": "Spanner の読み取りと書き込みの有効期間  |  Google Cloud Documentation",
+    "description": "",
+    "image": "https://docs.cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png?hl=ja",
+    "fetchedAt": "2026-03-03T08:41:29.819Z"
+  },
+  "https://zenn.dev/facengineer/articles/bca8790087b0e4": {
+    "title": "Cloud Spannerのスプリット分散をわかった気になる",
+    "description": "",
+    "image": "https://res.cloudinary.com/zenn/image/upload/s--_d0bBcdy--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Cloud%2520Spanner%25E3%2581%25AE%25E3%2582%25B9%25E3%2583%2597%25E3%2583%25AA%25E3%2583%2583%25E3%2583%2588%25E5%2588%2586%25E6%2595%25A3%25E3%2582%2592%25E3%2582%258F%25E3%2581%258B%25E3%2581%25A3%25E3%2581%259F%25E6%25B0%2597%25E3%2581%25AB%25E3%2581%25AA%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kngnr%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc3YmY1NTZjODYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACAGSGT",
+    "fetchedAt": "2026-03-03T08:41:33.145Z"
+  },
+  "https://cloud.google.com/spanner/docs/sql-best-practices?hl=ja": {
+    "title": "SQL のベスト プラクティス  |  Spanner  |  Google Cloud Documentation",
+    "description": "",
+    "image": "https://docs.cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png?hl=ja",
+    "fetchedAt": "2026-03-03T08:41:34.176Z"
+  },
+  "https://zenn.dev/facengineer/articles/cc0cab5c7e9a1c#join%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0": {
+    "title": "Cloud Spannerのパフォーマンスチューニングの勘所",
+    "description": "",
+    "image": "https://res.cloudinary.com/zenn/image/upload/s--0QeUHHkH--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Cloud%2520Spanner%25E3%2581%25AE%25E3%2583%2591%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25BC%25E3%2583%259E%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2581%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%258B%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%25AE%25E5%258B%2598%25E6%2589%2580%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kngnr%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc3YmY1NTZjODYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACAGSGT",
+    "fetchedAt": "2026-03-03T08:41:33.335Z"
+  },
+  "https://cloud.google.com/spanner/docs/query-execution-plans?hl=ja": {
+    "title": "クエリ実行プラン  |  Spanner  |  Google Cloud Documentation",
+    "description": "",
+    "image": "https://docs.cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png?hl=ja",
+    "fetchedAt": "2026-03-03T08:41:33.716Z"
+  },
+  "https://cloud.google.com/spanner/docs/tune-query-with-visualizer?hl=ja#view-sampled-queries": {
+    "title": "クエリプラン ビジュアライザーを使用したクエリのチューニング  |  Spanner  |  Google Cloud Documentation",
+    "description": "",
+    "image": "https://docs.cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png?hl=ja",
+    "fetchedAt": "2026-03-03T08:41:33.555Z"
+  },
+  "https://refactoring.guru/ja/design-patterns": {
+    "title": "デザインパターン",
+    "description": "デザインパターンは、ソフトウェア設計でよく起きる問題に対する典型的な解決方法です。これらは、事前に用意された、問題解決のための設計図で、適宜変更して、自分のコードにおける特定の設計上の問題の解決に使えます。",
+    "image": "https://refactoring.guru/ja/images/refactoring/social/facebook-share-preview.png?id=dbf9e98269595be86eb668f365be6868",
+    "fetchedAt": "2026-03-03T08:41:34.377Z"
+  },
+  "https://blog.kyu08.com/posts/renew-oss-sponsoring/": {
+    "title": "GitHub Sponsorsの寄付先にratatuiを追加した",
+    "description": "OSSへの寄付の月予算を$10にした - laiso こちらの記事で寄付するOSSプロジェクトの選び方として次のような基準が紹介されていた。 寄付するプロジ",
+    "image": "https://blog.kyu08.com/posts/renew-oss-sponsoring/cover.png",
+    "fetchedAt": "2026-03-03T08:41:34.270Z"
+  },
+  "https://blog.kyu08.com/posts/fp-matsuri-2025/": {
+    "title": "関数型まつり2025に参加した",
+    "description": "2025/06/14(土)、2025/06/15(日)に中野セントラルパークで行われた関数型まつり2025に参加した。 筆者はElmやRust",
+    "image": "https://blog.kyu08.com/posts/fp-matsuri-2025/cover.png",
+    "fetchedAt": "2026-03-03T08:41:34.308Z"
+  },
+  "https://blog.kyu08.com/posts/vim-conf-2025/": {
+    "title": "VimConf 2025 Smallに参加した",
+    "description": "2025年11月2日（日）にアキバプラザ・アキバホールで開催されたVimConf 2025 Smallに参加した。 こちらはノベルティ。食器とかお箸はた",
+    "image": "https://blog.kyu08.com/posts/vim-conf-2025/cover.png",
+    "fetchedAt": "2026-03-03T08:41:34.250Z"
+  },
+  "https://qiita.com/sou_lab/items/1ca051a1f3b906a23dc8": {
+    "title": "Macの「Too many open files」エラーを解消 - Qiita",
+    "description": "「Too many open files」と出てで、ファイルが保存できないことがあった。 Railsを起動して、Gulpも起動してほげほげしてるとよく起こる。 Sublime Textでこのエラーが出ると設定も何もかも保存されないし、HotExitも効かないし、ファイルは開...",
+    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.0.0%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnFpaXRhLWltYWdlLXN0b3JlLnMzLmFtYXpvbmF3cy5jb20lMkYwJTJGMTY1NDglMkZwcm9maWxlLWltYWdlcyUyRjE0NzM2ODE4OTE_aXhsaWI9cmItNC4wLjAmYXI9MSUzQTEmZml0PWNyb3AmbWFzaz1lbGxpcHNlJmJnPUZGRkZGRiZmbT1wbmczMiZzPTI1MWJiNGI5MDdkYWI1ZDQyYTNhYzllOTRmZGUwNzgw%26blend-x%3D120%26blend-y%3D462%26blend-w%3D90%26blend-h%3D90%26blend-mode%3Dnormal%26mark64%3DaHR0cHM6Ly9xaWl0YS1vcmdhbml6YXRpb24taW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnMzLWFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkZxaWl0YS1vcmdhbml6YXRpb24taW1hZ2UlMkY2MTQxMmE3YjhlYjUzOWJjNDhjOGMyMDVjYjBlY2RlNGIzN2Q5ZTZhJTJGb3JpZ2luYWwuanBnJTNGMTU2Mzc3MTYzNT9peGxpYj1yYi00LjAuMCZ3PTQ0Jmg9NDQmZml0PWNyb3AmbWFzaz1jb3JuZXJzJmNvcm5lci1yYWRpdXM9OCZiZz1GRkZGRkYmYm9yZGVyPTIlMkNGRkZGRkYmZm09cG5nMzImcz01NDM1N2FlYzZkODY1MDg2MzhhMTcxMGU5Y2ZkNzE2Zg%26mark-x%3D186%26mark-y%3D515%26mark-w%3D40%26mark-h%3D40%26s%3Db61af12191ef888837427d5dd76a2325?ixlib=rb-4.0.0&w=1200&fm=jpg&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTk2MCZoPTMyNCZ0eHQ9TWFjJUUzJTgxJUFFJUUzJTgwJThDVG9vJTIwbWFueSUyMG9wZW4lMjBmaWxlcyVFMyU4MCU4RCVFMyU4MiVBOCVFMyU4MyVBOSVFMyU4MyVCQyVFMyU4MiU5MiVFOCVBNyVBMyVFNiVCNiU4OCZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZ0eHQtY29sb3I9JTIzMUUyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1wYWQ9MCZzPWVkMzhmZWEwOTIyMWQxYzIxMGYzNDA5NWYzOTM5MTc4&mark-x=120&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTgzOCZoPTU4JnR4dD0lNDBzb3VfbGFiJnR4dC1jb2xvcj0lMjMxRTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LXBhZD0wJnM9MGE5YWVlODU1ODVmMDAyZjRhNzQ2ZDlhNDIxMjUzM2Q&blend-x=242&blend-y=454&blend-w=838&blend-h=46&blend-fit=crop&blend-crop=left%2Cbottom&blend-mode=normal&txt64=5qCq5byP5Lya56S-R2FqaS1MYWJv&txt-x=242&txt-y=539&txt-width=838&txt-clip=end%2Cellipsis&txt-color=%231E2121&txt-font=Hiragino%20Sans%20W6&txt-size=28&s=2b4e151676316b1328695062166862ef",
+    "fetchedAt": "2026-03-03T08:41:34.692Z"
+  },
+  "https://www.youtube.com/watch?v=EClom7Y_hO0": {
+    "title": "- YouTube",
+    "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
+    "image": "",
+    "fetchedAt": "2026-03-03T08:41:35.535Z"
+  },
+  "https://takuya-1st.hatenablog.jp/entry/2017/05/30/093000": {
+    "title": "pbcopy で標準出力の内容をecho表示を維持しつつコピーしたい - それマグで！",
+    "description": "pbcopy コマンドはクリップボードのコピーが出来て便利。 pbcopy コマンドを使うと、ターミナルの出力内容をコピーが出来る。便利なコマンド でも困ったことが有る。クリップボードにコピーされた内容を見れない。 takuya@~$ ls / Applications Network Users bin dev home lost+found net private tmp var Library System Volumes cores etc installer.failurerequests mnt opt sbin usr takuya@~$ ls / | pbcopy コピーされる…",
+    "image": "https://ogimage.blog.st-hatena.com/12704830469097614513/10328749687248132970/1496127744",
+    "fetchedAt": "2026-03-03T08:41:35.387Z"
+  },
+  "https://www.rasukarusan.com/entry/2018/08/14/083000": {
+    "title": "fzfで捗る自作コマンド一覧(zsh) - ハイパーマッスルエンジニア",
+    "description": "みんな大好きfzf fzfは結果をインタラクティブに絞り込むだけのコマンドだが、組み合わせ次第でかなり使えるコマンドだ。日本ではpecoの方が有名だが海外ではfzfの方が人気らしい。 github.com 筆者が思うpecoと比較したときのfzfのメリットを述べる。 画面クリアがなく目に優しい fuzzy search(曖昧検索)が可能 絞り込んだものをパイプつなぎでコマンドを適用でき、結果をpreviewとして画面に表示できる カスタマイズが豊富 特にfuzzy searchとpreviewできる点が素晴らしい。またfzfの絞り込み結果の画面サイズを指定できたりとカスタマイズ性が高いのもGO…",
+    "image": "https://cdn.image.st-hatena.com/image/scale/9b31fbd938705281a7c2b0ea30268e113c6e1f95/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fr%2Frasukarusan%2F20180812%2F20180812205449.gif",
+    "fetchedAt": "2026-03-03T08:41:35.611Z"
+  },
+  "https://techblog.sgr-ksmt.dev/2016/12/10/smart_fzf_history/": {
+    "title": "fzfを使ってzshのコマンド履歴検索をスマートに",
+    "description": "",
+    "image": "https://tech-blog.sgr-ksmt.org/avatar.jpg",
+    "fetchedAt": "2026-03-03T08:41:34.908Z"
+  },
+  "https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view": {
+    "title": "lecture 7.pdf",
+    "description": "",
+    "image": "",
+    "fetchedAt": "2026-03-03T08:41:35.416Z"
+  },
+  "https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view": {
+    "title": "lecture 3.pdf",
+    "description": "",
+    "image": "",
+    "fetchedAt": "2026-03-03T08:41:36.111Z"
+  },
+  "https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view": {
+    "title": "lecture 4.pdf",
+    "description": "",
+    "image": "",
+    "fetchedAt": "2026-03-03T08:41:36.316Z"
+  },
+  "https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view": {
+    "title": "lecture 5.pdf",
+    "description": "",
+    "image": "",
+    "fetchedAt": "2026-03-03T08:41:36.168Z"
+  },
+  "https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view": {
+    "title": "lecture 8.pdf",
+    "description": "",
+    "image": "",
+    "fetchedAt": "2026-03-03T08:41:36.054Z"
+  },
+  "https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view": {
+    "title": "lecture 10.pdf",
+    "description": "",
+    "image": "",
+    "fetchedAt": "2026-03-03T08:41:36.030Z"
+  },
+  "https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view": {
+    "title": "lecture 11.pdf",
+    "description": "",
+    "image": "",
+    "fetchedAt": "2026-03-03T08:41:36.698Z"
+  },
+  "http://nuphy.refr.cc/kyusubsub": {
+    "title": "I can get you a discount at NUPHY®",
+    "description": "Hey, if you're ever looking for NUPHY® products, let me know and I can get you a discount at NUPHY®. Here's a coupon if you need one now:",
+    "image": "https://client-assets.referralcandy.com/tf8IcClKVX-qiv7AQJHWv_%25E5%25BE%25AE%25E4%25BF%25A1%25E5%259B%25BE%25E7%2589%2587_20230707181614.jpg",
+    "fetchedAt": "2026-03-03T08:41:38.468Z"
+  },
+  "https://nuphy.com/collections/keycaps/products/oblivion": {
+    "title": "Oblivion",
+    "description": "Emerges from the structured chaos of programming, where logic dances with creativity and every line of code tells a story. Inspired by the stark elegance of terminal interfaces and the rhythmic flow of syntax highlighting, its deep gray foundation is illuminated by vibrant accents of green, blue, and orange—a palette that feels as timeless as the tools of a coder’s trade.",
+    "image": "http://nuphy.com/cdn/shop/files/Mechanical_keyboard_keycaps_on_a_gray_background_with_Oblivion_branding..jpg?v=1758089460",
+    "fetchedAt": "2026-03-03T08:41:37.069Z"
+  },
+  "https://www.kodansha.co.jp/book/products/0000398182": {
+    "title": "『ＲｕｓｔによるＷｅｂアプリケーション開発　設計からリリース・運用まで』（豊田　優貴,松本　健太郎,吉川　哲史）　製品詳細　講談社",
+    "description": "★Rustによるアプリケーション開発のベストプラクティス！ 　Rustを現場で使うときがきた！ Rust経験豊富な筆者が、貴重な知識とテクニックを惜しみなく伝授。 「蔵書管理アプリケーション」の実装を通じて、Rustによる設計、開発、保守、運用までをハンズオンで学ぶ！ コードも丁寧に解説。 【目次】 第1章　本書で開発するもの 第2章　開発環境の構築 第3章　最小構成アプリケーションの実装 第4章　蔵書管理サーバーアプリケーションの設計 第5章　蔵書管理サーバーの実装 第6章　システムの結合とテスト 第7章　アプリケーションの運用 第8章　エコシステムの紹介",
+    "image": "https://dvs-cover.kodansha.co.jp/0000398182/qlwQ4BgoUFJKQBFNNIbAbFmXHhhSS0R338o5wVij.jpg",
+    "fetchedAt": "2026-03-03T08:41:37.690Z"
+  },
+  "https://blog.kyu08.com/posts/my-dev-setup-terminal/tmux-fzf.gif": {
+    "title": "https://blog.kyu08.com/posts/my-dev-setup-terminal/tmux-fzf.gif",
+    "description": "",
+    "image": "",
+    "fetchedAt": "2026-03-03T08:41:36.595Z"
+  },
+  "https://gihyo.jp/book/2022/978-4-297-12562-2": {
+    "title": "コンセプトから理解するRust | 技術評論社",
+    "description": "Rustはメモリ安全、スレッド安全を保ちつつ、高パフォーマンスなプログラムを開発できるプログラミング言語です。また、手続き型、オブジェクト指向型、関数型でのプログラミングに対応できるマルチパラダイムの言語でもあります。ただ、そういったRustのポテンシャルを引き出すには、所有権やライフタイム、ジェネリクスやトレイトといった特徴的な仕様の理解が求められ、これらは初学者の壁にもなっています。本書ではそれら難解な仕様をピックアップし、他のプログラミング言語とコードレベルで比較しながら、「なぜそのような仕様になっているか」という言語のコンセプトからRustの理解を試みます。加えて、Rustのこまやかなエラーメッセージを読みつつ、Rustをうまく書くための知識もお伝えします。",
+    "image": "https://gihyo.jp/assets/images/ogp/2022/9784297125622.jpg",
+    "fetchedAt": "2026-03-03T08:41:38.848Z"
+  },
+  "https://www.oreilly.co.jp/books/9784873119595/": {
+    "title": "並行プログラミング入門",
+    "description": "複数のプログラムを同時に実行する「並行プログラミング」は、処理速度を飛躍的に向上させる手法で、タスク管理、プロセス管理、スレッド管理をはじめ、複雑な仕組みについての幅広い知識とテクニックが必要となります。本書はRustとアセンブリ、そして一部Cを用い、CPUのアトミック命令、グリーンスレッド、アクターモデル、π計算、ソフトウェア・トランザクショナルメモリ、async/awaitなど、並行プログラミングに関する理論的な背景から実装までをカバー。さらに、アセンブリ実装の理解を深めるため、AArch64とx86-64アーキテクチャの説明も付録として収録。一歩一歩、着実に理解できるように、その仕組みから順を追って詳しく説明します。GitHub上で公開されているソースコードを実際に動かしながら、並行プログラミングの知識と理解を深めることができます。",
+    "image": "https://www.oreilly.co.jp/books/images/picture_large978-4-87311-959-5.jpeg",
+    "fetchedAt": "2026-03-03T08:41:39.303Z"
   }
 }
