@@ -149,7 +149,9 @@ async function getMarkdownFiles(dir) {
  * パターン1: リンクテキストとURLが同じ場合（[https://example.com](https://example.com)）
  * パターン2: 単独行のURL（autolink） - 脚注参照などが続く場合も含む
  * 
- * 脚注定義内のURL（[^N]: で始まる行）は除外する
+ * 以下のURLは除外する:
+ * - 脚注定義内のURL（[^N]: で始まる行）
+ * - リスト項目内のURL（番号付きリスト、箇条書きを含む）
  */
 function extractBlogcardUrls(content) {
   const urls = new Set();
@@ -167,6 +169,19 @@ function extractBlogcardUrls(content) {
     return /^\[\^[0-9]+\]:\s*/.test(linePrefix);
   };
 
+  // リスト項目内を検出するヘルパー関数
+  const isInListItem = (content, matchIndex) => {
+    // matchIndexから行の先頭まで遡る
+    const beforeMatch = content.substring(0, matchIndex);
+    const lastNewline = beforeMatch.lastIndexOf('\n');
+    const lineStart = lastNewline === -1 ? 0 : lastNewline + 1;
+    const linePrefix = content.substring(lineStart, matchIndex);
+    
+    // 行が番号付きリスト（1. など）または箇条書き（-, *, +）で始まっているかチェック
+    // インデントにも対応（スペースやタブ）
+    return /^\s*(\d+\.|[-*+])\s+/.test(linePrefix);
+  };
+
   // パターン1: Markdownリンク [text](url) でテキストとURLが同じ場合
   const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
 
@@ -176,6 +191,11 @@ function extractBlogcardUrls(content) {
 
     // 脚注定義内のリンクはスキップ
     if (isInFootnoteDefinition(content, match.index)) {
+      continue;
+    }
+
+    // リスト項目内のリンクはスキップ
+    if (isInListItem(content, match.index)) {
       continue;
     }
 

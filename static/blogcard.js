@@ -202,11 +202,19 @@
     const allCards = document.querySelectorAll('.blogcard');
     log('Found', allCards.length, 'blog cards');
 
-    // 脚注内のブログカードを通常のリンクに変換（キャッシュの有無に関わらず）
+    // 脚注内、リスト内のブログカードを通常のリンクに変換（キャッシュの有無に関わらず）
     const cardsToProcess = Array.from(allCards).filter(card => {
       const isInFootnotes = card.closest('.footnotes') !== null;
       if (isInFootnotes) {
         log('Converting blog card in footnotes to normal link:', card.getAttribute('data-url'));
+        convertBlogCardToLink(card);
+        return false;
+      }
+
+      // リスト内のブログカードをチェック
+      const isInList = card.closest('ul, ol') !== null;
+      if (isInList) {
+        log('Converting blog card in list to normal link:', card.getAttribute('data-url'));
         convertBlogCardToLink(card);
         return false;
       }
