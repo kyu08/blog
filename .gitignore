@@ -13,4 +13,3 @@ hugo.linux
 /.hugo_build.lock
 
 node_modules/
-hugo_extended_*.tar.gz
