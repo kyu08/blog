@@ -422,7 +422,7 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
 &lt;p&gt;また、&lt;a href=&#34;https://github.com/kubernetes-sigs/kind&#34; target=&#34;_blank&#34; &gt;Kind&lt;/a&gt;というツールを使ってローカルでKubernetesクラスタを構築するのでクラウドの登録や課金を気にする必要がないのも手軽でよかった。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kubernetes-sigs/kind&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/kubernetes-sigs/kind&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
-      &lt;img src=&#34;https://opengraph.githubassets.com/7d235d01400d5d3a46cae744bdb61e68f19d5013be26ea2092894efc5773af45/kubernetes-sigs/kind&#34; alt=&#34;GitHub - kubernetes-sigs/kind: Kubernetes IN Docker - local clusters for testing Kubernetes&#34; loading=&#34;lazy&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/e5385189a4eed3dc941cdea81786f9bc35ee61e7d561ac65491e3e21916d3adb/kubernetes-sigs/kind&#34; alt=&#34;GitHub - kubernetes-sigs/kind: Kubernetes IN Docker - local clusters for testing Kubernetes&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
       &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - kubernetes-sigs/kind: Kubernetes IN Docker - local clusters for testing Kubernetes&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;Kubernetes IN Docker - local clusters for testing Kubernetes - kubernetes-sigs/kind&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kubernetes-sigs/kind&lt;/div&gt;
     &lt;/div&gt;
@@ -2143,7 +2143,7 @@ add
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
-      &lt;img src=&#34;https://opengraph.githubassets.com/7cb941a7189d226424cc134022030fc00165a6a16ef4388e4eaf39a7978d35e4/colored-rs/colored&#34; alt=&#34;colored/src/lib.rs at 775ec9f19f099a987a604b85dc72ca83784f4e38 · colored-rs/colored&#34; loading=&#34;lazy&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/1072123a6eb5d0eb1781edd6afa28fd10244f3ba273a0bc5e3f5e1c1801ffba9/colored-rs/colored&#34; alt=&#34;colored/src/lib.rs at 775ec9f19f099a987a604b85dc72ca83784f4e38 · colored-rs/colored&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
       &lt;div class=&#34;blogcard-title&#34;&gt;colored/src/lib.rs at 775ec9f19f099a987a604b85dc72ca83784f4e38 · colored-rs/colored&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;(Rust) Coloring terminal so simple you already know how to do it ! - colored-rs/colored&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/colored-rs/colored/blob/775ec9f19f099a987a604b85dc72ca83784f4e38/src/lib.rs#L805-L811&lt;/div&gt;
     &lt;/div&gt;

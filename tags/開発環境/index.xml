@@ -65,7 +65,7 @@
 &lt;p&gt;&lt;img src=&#34;neovim-pr-review.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/sindrets/diffview.nvim&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/sindrets/diffview.nvim&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
-      &lt;img src=&#34;https://opengraph.githubassets.com/0b05fc6e64de155389ddc1c55a93ccd0958087bbe8ca24a1d5736d8079156fec/sindrets/diffview.nvim&#34; alt=&#34;GitHub - sindrets/diffview.nvim: Single tabpage interface for easily cycling through diffs for all modified files for any git rev.&#34; loading=&#34;lazy&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/25191950b2cb7462c7f1cc4e494445fb712741740f320073014779957dc0fdab/sindrets/diffview.nvim&#34; alt=&#34;GitHub - sindrets/diffview.nvim: Single tabpage interface for easily cycling through diffs for all modified files for any git rev.&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
       &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - sindrets/diffview.nvim: Single tabpage interface for easily cycling through diffs for all modified files for any git rev.&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;Single tabpage interface for easily cycling through diffs for all modified files for any git rev. - sindrets/diffview.nvim&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/sindrets/diffview.nvim&lt;/div&gt;
     &lt;/div&gt;
@@ -194,7 +194,7 @@
 &lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/asmvik/skhd&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/asmvik/skhd&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
-      &lt;img src=&#34;https://opengraph.githubassets.com/6f2034655fbe9ddc8b68bfbfe4301163dcf88a0daac59ce7cda5776a5a75eff8/asmvik/skhd&#34; alt=&#34;GitHub - asmvik/skhd: Simple hotkey daemon for macOS&#34; loading=&#34;lazy&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/aa4145926f55661b08174cbf129ebbdd62108dcfc5d658b4c37f00812bf61d25/asmvik/skhd&#34; alt=&#34;GitHub - asmvik/skhd: Simple hotkey daemon for macOS&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
       &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - asmvik/skhd: Simple hotkey daemon for macOS&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;Simple hotkey daemon for macOS. Contribute to asmvik/skhd development by creating an account on GitHub.&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/asmvik/skhd&lt;/div&gt;
     &lt;/div&gt;
@@ -216,7 +216,7 @@
 &lt;p&gt;ここ1年くらいは&lt;a href=&#34;https://github.com/nvim-orgmode/orgmode&#34; target=&#34;_blank&#34; &gt;nvim-orgmode/orgmode&lt;/a&gt;を使っている。emacsのorg-modeライクな機能をNeovimで使えるようにしたプラグイン。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/nvim-orgmode/orgmode&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/nvim-orgmode/orgmode&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
-      &lt;img src=&#34;https://opengraph.githubassets.com/da47d94b6e270c8219d1a55731764f11fb2bb4a60ed24277bd6f1641587837bd/nvim-orgmode/orgmode&#34; alt=&#34;GitHub - nvim-orgmode/orgmode: Orgmode clone written in Lua for Neovim 0.11.0&amp;#43;.&#34; loading=&#34;lazy&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/bf4256a31866e947ec66e92605e2963c21d3bec42091a8b95e34a4f2db36e5ef/nvim-orgmode/orgmode&#34; alt=&#34;GitHub - nvim-orgmode/orgmode: Orgmode clone written in Lua for Neovim 0.11.0&amp;#43;.&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
       &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - nvim-orgmode/orgmode: Orgmode clone written in Lua for Neovim 0.11.0&amp;#43;.&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;Orgmode clone written in Lua for Neovim 0.11.0&amp;#43;. Contribute to nvim-orgmode/orgmode development by creating an account on GitHub.&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/nvim-orgmode/orgmode&lt;/div&gt;
     &lt;/div&gt;
@@ -269,7 +269,7 @@
 &lt;h3 id=&#34;lazygit&#34;&gt;lazygit&lt;/h3&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/jesseduffield/lazygit&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/jesseduffield/lazygit&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
-      &lt;img src=&#34;https://opengraph.githubassets.com/d087a11950ff92ffeca5c9f07caf921b1648e797b44d25854544099a69d2c482/jesseduffield/lazygit&#34; alt=&#34;GitHub - jesseduffield/lazygit: simple terminal UI for git commands&#34; loading=&#34;lazy&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/d2896804693595df8f89ef1047e17c57f1da3702622b4710dd2032efea7b3518/jesseduffield/lazygit&#34; alt=&#34;GitHub - jesseduffield/lazygit: simple terminal UI for git commands&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
       &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - jesseduffield/lazygit: simple terminal UI for git commands&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;simple terminal UI for git commands. Contribute to jesseduffield/lazygit development by creating an account on GitHub.&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/jesseduffield/lazygit&lt;/div&gt;
     &lt;/div&gt;
@@ -603,7 +603,7 @@
 &lt;p&gt;Git操作のほとんどはGitのTUIクライアントであるLazygitを使っています。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/jesseduffield/lazygit&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/jesseduffield/lazygit&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
-      &lt;img src=&#34;https://opengraph.githubassets.com/d087a11950ff92ffeca5c9f07caf921b1648e797b44d25854544099a69d2c482/jesseduffield/lazygit&#34; alt=&#34;GitHub - jesseduffield/lazygit: simple terminal UI for git commands&#34; loading=&#34;lazy&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/d2896804693595df8f89ef1047e17c57f1da3702622b4710dd2032efea7b3518/jesseduffield/lazygit&#34; alt=&#34;GitHub - jesseduffield/lazygit: simple terminal UI for git commands&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
       &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - jesseduffield/lazygit: simple terminal UI for git commands&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;simple terminal UI for git commands. Contribute to jesseduffield/lazygit development by creating an account on GitHub.&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/jesseduffield/lazygit&lt;/div&gt;
     &lt;/div&gt;
@@ -617,7 +617,7 @@
 &lt;p&gt;ちなみに筆者はkdheepak/lazygit.nvimというプラグインを使ってNeovim上からLazygitを呼び出しています。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kdheepak/lazygit.nvim&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/kdheepak/lazygit.nvim&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
-      &lt;img src=&#34;https://opengraph.githubassets.com/b05199cb36703e693b0b97f6b66893fb8a90270205ba915d359d97a0f1073e07/kdheepak/lazygit.nvim&#34; alt=&#34;GitHub - kdheepak/lazygit.nvim: Plugin for calling lazygit from within neovim.&#34; loading=&#34;lazy&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/f747a1925f1a95560347d0452451542ec9da819063a2f3f0e10568d443dc2249/kdheepak/lazygit.nvim&#34; alt=&#34;GitHub - kdheepak/lazygit.nvim: Plugin for calling lazygit from within neovim.&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
       &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - kdheepak/lazygit.nvim: Plugin for calling lazygit from within neovim.&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;Plugin for calling lazygit from within neovim. Contribute to kdheepak/lazygit.nvim development by creating an account on GitHub.&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kdheepak/lazygit.nvim&lt;/div&gt;
     &lt;/div&gt;
@@ -641,7 +641,7 @@
 &lt;p&gt;カラースキームはTokyo Nightを利用しています。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/zatchheems/tokyo-night-alacritty-theme&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/zatchheems/tokyo-night-alacritty-theme&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
-      &lt;img src=&#34;https://opengraph.githubassets.com/25e9532bd413c0fa13c5ce5c53c1b8a47eb4152da22c1c6056a9ea61878e8987/zatchheems/tokyo-night-alacritty-theme&#34; alt=&#34;GitHub - zatchheems/tokyo-night-alacritty-theme: A slick dark theme for Alacritty based on the Tokyo Night VS Code theme and ported from the Vim theme of the same name.&#34; loading=&#34;lazy&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/a9d2942739260f0c7dbd81ae838b71cf8fc8f5b9f16c8cdce820926b1c7fde4c/zatchheems/tokyo-night-alacritty-theme&#34; alt=&#34;GitHub - zatchheems/tokyo-night-alacritty-theme: A slick dark theme for Alacritty based on the Tokyo Night VS Code theme and ported from the Vim theme of the same name.&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
       &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - zatchheems/tokyo-night-alacritty-theme: A slick dark theme for Alacritty based on the Tokyo Night VS Code theme and ported from the Vim theme of the same name.&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;A slick dark theme for Alacritty based on the Tokyo Night VS Code theme and ported from the Vim theme of the same name. - zatchheems/tokyo-night-alacritty-theme&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/zatchheems/tokyo-night-alacritty-theme&lt;/div&gt;
     &lt;/div&gt;
@@ -656,7 +656,7 @@
 &lt;p&gt;前述の通りAlacrittyにはタブ機能がないため、tmuxを使ってターミナルのタブ管理を行っています。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/tmux/tmux&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/tmux/tmux&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
-      &lt;img src=&#34;https://opengraph.githubassets.com/e4d9c1e7f99ff1bb5238392dde864d29fe0c2e1ff7b34db961910fe4de974d5b/tmux/tmux&#34; alt=&#34;GitHub - tmux/tmux: tmux source code&#34; loading=&#34;lazy&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/71fd2cba28fec19272d3ad5aba36b0c8e03bcd24d55a2a9ebad2517c96317849/tmux/tmux&#34; alt=&#34;GitHub - tmux/tmux: tmux source code&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
       &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - tmux/tmux: tmux source code&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;tmux source code. Contribute to tmux/tmux development by creating an account on GitHub.&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/tmux/tmux&lt;/div&gt;
     &lt;/div&gt;
@@ -686,7 +686,7 @@
 &lt;p&gt;どうにかもう少し楽にウィンドウ切り替えをできないかと探していたところsainnhe/tmux-fzfに出会いました。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/sainnhe/tmux-fzf&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/sainnhe/tmux-fzf&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
-      &lt;img src=&#34;https://opengraph.githubassets.com/11d50a74eea5bfeadad3d6f126081de1866d3b6f19e43a9bccdf635c0e58b4b2/sainnhe/tmux-fzf&#34; alt=&#34;GitHub - sainnhe/tmux-fzf: Use fzf to manage your tmux work environment!&#34; loading=&#34;lazy&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/402a4a1d7416da13fdb8297946d8dc1650593bdee43d8257a4dd707d67ac85cf/sainnhe/tmux-fzf&#34; alt=&#34;GitHub - sainnhe/tmux-fzf: Use fzf to manage your tmux work environment!&#34; loading=&#34;lazy&#34;&gt;
     &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
       &lt;div class=&#34;blogcard-title&#34;&gt;GitHub - sainnhe/tmux-fzf: Use fzf to manage your tmux work environment!&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;Use fzf to manage your tmux work environment! Contribute to sainnhe/tmux-fzf development by creating an account on GitHub.&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/sainnhe/tmux-fzf&lt;/div&gt;
     &lt;/div&gt;

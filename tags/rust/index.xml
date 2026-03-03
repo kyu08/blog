@@ -966,15 +966,7 @@
 &lt;/li&gt;
 &lt;li&gt;コミュニティの初学者をサポートする姿勢がすごい
 &lt;ul&gt;
-&lt;li&gt;RustのOSSプロジェクトへのcontributionについては &lt;a href=&#34;https://zenn.dev/fraternite/articles/4e11063bf05aac&#34; target=&#34;_blank&#34; &gt;rust-lang/rustへのcode contributionをはじめからていねいに&lt;/a&gt; が詳しいが、Rust製のOSSプロジェクトには&lt;code&gt;E-mentor&lt;/code&gt;というタグがありissueを進めるに当たってメンターが指針を記してくれているらしい。（&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/rust-lang/rust/issues/109099&#34; data-auto-fetch=&#34;false&#34;&gt;
-  &lt;a href=&#34;https://github.com/rust-lang/rust/issues/109099&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
-      &lt;img src=&#34;https://opengraph.githubassets.com/5861212f462c4d9f4ef7947b66986b7b268ec1d002733db3df0f1b4f0f36a040/rust-lang/rust/issues/109099&#34; alt=&#34;Check tier 3 targets in CI · Issue #109099 · rust-lang/rust&#34; loading=&#34;lazy&#34;&gt;
-    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
-      &lt;div class=&#34;blogcard-title&#34;&gt;Check tier 3 targets in CI · Issue #109099 · rust-lang/rust&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;NOTE: this issue does not affect the documented target tier policy of the Rust project. We reserve the right to break tier 3 targets at any time, according to the guidelines at https://doc.rust-lan...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/rust-lang/rust/issues/109099&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
- これとかすごい。）&lt;/li&gt;
+&lt;li&gt;RustのOSSプロジェクトへのcontributionについては &lt;a href=&#34;https://zenn.dev/fraternite/articles/4e11063bf05aac&#34; target=&#34;_blank&#34; &gt;rust-lang/rustへのcode contributionをはじめからていねいに&lt;/a&gt; が詳しいが、Rust製のOSSプロジェクトには&lt;code&gt;E-mentor&lt;/code&gt;というタグがありissueを進めるに当たってメンターが指針を記してくれているらしい。（&lt;a href=&#34;https://github.com/rust-lang/rust/issues/109099&#34; target=&#34;_blank&#34; &gt;https://github.com/rust-lang/rust/issues/109099&lt;/a&gt; これとかすごい。）&lt;/li&gt;
 &lt;li&gt;いつかRustのOSSプロジェクトにもcontributionしてみたい&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
