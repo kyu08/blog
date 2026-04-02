@@ -228,7 +228,7 @@ ol {
   margin-bottom: 10px;
 }
 
-.post ol li:not(:empty)::before {
+.post ol > li:not(:empty)::before {
   content: none;
 }
 
