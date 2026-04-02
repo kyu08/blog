@@ -13,7 +13,7 @@ hideComments: false
 color: "" #color from the theme settings
 ---
 
-Go Elm TypeScript Neovim tmux Rust CLIが好きな5年目エンジニャーです。ご連絡はTwitterまで。
+Go Elm TypeScript Neovim tmux Rust CLIが好きな6年目ソフトウェアエンジニアです。ご連絡はTwitterまで。
 
 |site|account|
 |---|---|
