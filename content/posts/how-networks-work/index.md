@@ -66,7 +66,26 @@ cover: "cover.png"
 1. プロトコルスタックにリクエストの送信を依頼する
 1. 通信が終わったらソケットを抹消する
 
-<!-- TODO: HTTP ClientをCとGoでそれぞれ書いた話を追加する -->
+どんなシステムコールが呼ばれるのか気になったのでCで簡単なHTTP Clientを書いてみた。
+
+https://github.com/kyu08/sunaba/blob/ea1ba354678e5c1616ea13a62ddcdb04ed34859f/network/how_networks_work/myhttpclient-c/main.c
+
+今回自分が実装したHTTP Clientでは以下のような流れでシステムコールや関数が呼ばれる。
+
+1. [`getaddrinfo(3)`](https://man7.org/linux/man-pages/man3/getaddrinfo.3.html) を使ってドメイン名に合致するIPアドレス（の配列）を取得
+2. [`socket(2)`](https://man7.org/linux/man-pages/man2/socket.2.html)でソケットを作成しソケットへのファイルディスクリプタを取得する
+3. [`connect(2)`](https://man7.org/linux/man-pages/man2/connect.2.html)サーバーへの接続を確立する
+4. `2.`で取得したファイルディスクリプタに対して[`write(2)`](https://man7.org/linux/man-pages/man2/write.2.html) でリクエストを書き込む
+5. [`read(2)`](https://man7.org/linux/man-pages/man2/read.2.html) でレスポンスを読み込む
+6. サーバー側がソケットをクローズしたらクライアント側でも[`close(2)`](https://man7.org/linux/man-pages/man2/close.2.html)を使ってソケットをクローズする
+
+なお、実装は`getaddrinfo(3)`の`EXAMPLES`を参考にしたらほとんど完成してしまった。
+
+https://man7.org/linux/man-pages/man3/getaddrinfo.3.html
+
+比較のためにGoでも`syscall`パッケージを使って書いてみた。
+
+https://github.com/kyu08/sunaba/blob/ea1ba354678e5c1616ea13a62ddcdb04ed34859f/network/how_networks_work/myhttpclient-go/main.go#L1
 
 ### 2. DNSが何をしているか
 <!-- TODO: review this -->
