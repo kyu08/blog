@@ -229,11 +229,11 @@
 &lt;li&gt;問い合わせはルートドメインから順番にたどるので以下のような流れになる
 2. 最寄りのDNSサーバが&lt;code&gt;ルートドメイン&lt;/code&gt;のDNSサーバに&lt;code&gt;blog.example.com&lt;/code&gt; のIPアドレスを問い合わせる
 → レコードのIPアドレスはわからないが、&lt;code&gt;com&lt;/code&gt;ドメインのDNSサーバのIPアドレスはわかるからそっちに聞いてくれ、と&lt;code&gt;com&lt;/code&gt;ドメインのDNSサーバのIPアドレスが返ってくる
-3. 最寄りのDNSサーバが&lt;code&gt;com&lt;/code&gt;ドメインのDNSサーバに&lt;code&gt;blog.[example.com](http://example.com)&lt;/code&gt; のIPアドレスを問い合わせる
+3. 最寄りのDNSサーバが&lt;code&gt;com&lt;/code&gt;ドメインのDNSサーバに&lt;code&gt;blog.example.com&lt;/code&gt; のIPアドレスを問い合わせる
 → 同じ要領で &lt;code&gt;example.com&lt;/code&gt; のDNSサーバのIPアドレスが返ってくる
-4. 最寄りのDNSサーバが&lt;code&gt;example.com&lt;/code&gt;ドメインのDNSサーバに&lt;code&gt;blog.[example.com](http://example.com)&lt;/code&gt; のIPアドレスを問い合わせる
+4. 最寄りのDNSサーバが&lt;code&gt;example.com&lt;/code&gt;ドメインのDNSサーバに&lt;code&gt;blog.example.com&lt;/code&gt; のIPアドレスを問い合わせる
 → 同じ要領で &lt;code&gt;blog.example.com&lt;/code&gt; のDNSサーバのIPアドレスが返ってくる
-5. 最寄りのDNSサーバが&lt;code&gt;blog.example.com&lt;/code&gt;ドメインのDNSサーバに&lt;code&gt;blog.[example.com](http://example.com)&lt;/code&gt; のIPアドレスを問い合わせる
+5. 最寄りのDNSサーバが&lt;code&gt;blog.example.com&lt;/code&gt;ドメインのDNSサーバに&lt;code&gt;blog.example.com&lt;/code&gt; のIPアドレスを問い合わせる
 → &lt;a href=&#34;http://blog.example.com/&#34; target=&#34;_blank&#34; &gt;&lt;code&gt;blog.example.com&lt;/code&gt;&lt;/a&gt; のIPアドレスが返ってくる&lt;/li&gt;
 &lt;li&gt;DNSサーバにはキャッシュ機能があるので必ずしも毎回このようなステップになるとは限らない。
 &lt;ul&gt;
