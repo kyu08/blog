@@ -217,7 +217,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/04/04</time>
       
-    <span class="post-reading-time">17 min read (8504 words)</span></div>
+    <span class="post-reading-time">17 min read (8500 words)</span></div>
 
   
     <span class="post-tags">
@@ -471,14 +471,17 @@ if (!doNotTrack) {
 </ul>
 </li>
 <li>問い合わせはルートドメインから順番にたどるので以下のような流れになる
-2. 最寄りのDNSサーバが<code>ルートドメイン</code>のDNSサーバに<code>blog.example.com</code> のIPアドレスを問い合わせる
-→ レコードのIPアドレスはわからないが、<code>com</code>ドメインのDNSサーバのIPアドレスはわかるからそっちに聞いてくれ、と<code>com</code>ドメインのDNSサーバのIPアドレスが返ってくる
-3. 最寄りのDNSサーバが<code>com</code>ドメインのDNSサーバに<code>blog.example.com</code> のIPアドレスを問い合わせる
-→ 同じ要領で <code>example.com</code> のDNSサーバのIPアドレスが返ってくる
-4. 最寄りのDNSサーバが<code>example.com</code>ドメインのDNSサーバに<code>blog.example.com</code> のIPアドレスを問い合わせる
-→ 同じ要領で <code>blog.example.com</code> のDNSサーバのIPアドレスが返ってくる
-5. 最寄りのDNSサーバが<code>blog.example.com</code>ドメインのDNSサーバに<code>blog.example.com</code> のIPアドレスを問い合わせる
+<ol>
+<li>最寄りのDNSサーバが<code>ルートドメイン</code>のDNSサーバに<code>blog.example.com</code> のIPアドレスを問い合わせる
+→ レコードのIPアドレスはわからないが、<code>com</code>ドメインのDNSサーバのIPアドレスはわかるからそっちに聞いてくれ、と<code>com</code>ドメインのDNSサーバのIPアドレスが返ってくる</li>
+<li>最寄りのDNSサーバが<code>com</code>ドメインのDNSサーバに<code>blog.example.com</code> のIPアドレスを問い合わせる
+→ 同じ要領で <code>example.com</code> のDNSサーバのIPアドレスが返ってくる</li>
+<li>最寄りのDNSサーバが<code>example.com</code>ドメインのDNSサーバに<code>blog.example.com</code> のIPアドレスを問い合わせる
+→ 同じ要領で <code>blog.example.com</code> のDNSサーバのIPアドレスが返ってくる</li>
+<li>最寄りのDNSサーバが<code>blog.example.com</code>ドメインのDNSサーバに<code>blog.example.com</code> のIPアドレスを問い合わせる
 → <a href="http://blog.example.com/" target="_blank" ><code>blog.example.com</code></a> のIPアドレスが返ってくる</li>
+</ol>
+</li>
 <li>DNSサーバにはキャッシュ機能があるので必ずしも毎回このようなステップになるとは限らない。
 <ul>
 <li>当然TTLも存在するので最新のデータが返ってくるとも限らない。</li>
