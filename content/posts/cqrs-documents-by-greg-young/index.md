@@ -3,6 +3,7 @@ title: "『CQRS Documents by Greg Young』を読んだ"
 tags:
   - "CQRS"
   - "設計"
+  - "読書ログ"
 
 description: ""
 date: 2026-01-12T00:27:58+09:00
