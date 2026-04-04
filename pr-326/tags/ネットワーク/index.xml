@@ -67,7 +67,7 @@
 &lt;li&gt;問題解決やスキル獲得の速度を上げたい&lt;/li&gt;
 &lt;li&gt;知的好奇心を満たしたい&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;去年は&lt;a href=&#34;https://www.oreilly.co.jp/books/9784814400874/&#34; target=&#34;_blank&#34; &gt;コンピュータシステムの理論と実装&lt;/a&gt;を読んでコンピューターについて広く浅く理解することができたので次はネットワーク周りを強化しようと思い、読んでみた。(他にもセキュリティ、データ構造とアルゴリズム、データベース、プロトコルスタック、シェルなど色々やりたいとは思っている)&lt;/p&gt;
+&lt;p&gt;去年は&lt;a href=&#34;https://www.oreilly.co.jp/books/9784814400874/&#34; target=&#34;_blank&#34; &gt;コンピュータシステムの理論と実装&lt;/a&gt;を読んでコンピューターについて広く浅く理解することができたので次はネットワーク周りを強化しようと思い、読んでみた。(他にもセキュリティ、データ構造とアルゴリズム、データベース、プロトコルスタック、シェルあたりが気になっている)&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://blog.kyu08.com/posts/nand2tetris/&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://blog.kyu08.com/posts/nand2tetris/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
       &lt;img src=&#34;https://blog.kyu08.com/posts/nand2tetris/cover.png&#34; alt=&#34;『コンピュータシステムの理論と実装 第2版』を読んだ&#34; loading=&#34;lazy&#34;&gt;
@@ -78,9 +78,7 @@
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;h2 id=&#34;学びや気付き&#34;&gt;学びや気付き&lt;/h2&gt;
-&lt;p&gt;読んでよかった点:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;「ブラウザにURLを打ち込んでエンターキーを押すと何が起こるか」という質問に暗記ではなく理解をもとに答えられるようになった。(はず) 特に以下に関しては今までより詳しく理解できた。
+&lt;p&gt;「ブラウザにURLを打ち込んでエンターキーを押すと何が起こるか」という質問に暗記ではなく理解をもとに答えられるようになった。(はず) 特に以下に関しては今までより詳しく理解できた。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;ブラウザが何をしているか&lt;/li&gt;
 &lt;li&gt;DNSが何をしているか&lt;/li&gt;
@@ -89,9 +87,7 @@
 &lt;li&gt;イーサネットとは何か&lt;/li&gt;
 &lt;li&gt;インターネットとは何か&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;ネットワークの基礎を学んだことで今後の問題解決や技術理解の助けにもなってくれそう。&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;ネットワークの基礎を学んだことで今後の問題解決や技術理解の助けにもなってくれそう。&lt;/p&gt;
 &lt;p&gt;それぞれ現時点での自分の理解を書いてみる。&lt;/p&gt;
 &lt;h3 id=&#34;1-ブラウザが何をしているか&#34;&gt;1. ブラウザが何をしているか&lt;/h3&gt;
 &lt;ol&gt;
