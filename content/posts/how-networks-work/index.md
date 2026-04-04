@@ -291,7 +291,7 @@ https://pages.cs.wisc.edu/~remzi/OSTEP/
 
 軽く読んだ感じ、英語ではあるもののかなり平易に書いてくれているので読みやすそうだった。やっていく。[^2]
 
-(C言語は[CS50](../cs50-jp)で軽くキャッチアップした程度なのでせっかくなので[『プログラミング言語C 第2版』](https://www.kyoritsu-pub.co.jp/book/b10011596.html)あたりの入門書を一冊読むのもいいかもしれない...迷い中)
+(C言語は[CS50](../cs50-jp)で軽くさらった程度なのでせっかくなので[『プログラミング言語C 第2版』](https://www.kyoritsu-pub.co.jp/book/b10011596.html)あたりの入門書を一冊読むのもいいかもしれない)
 
 [^1]: "you will also learn the practical, including how an operating system does things like schedule the CPU, manage memory, and store files persistently." とのこと。
 [^2]: なお、内容は無料でWebで公開されているので無課金で学習することも可能です。自分は移動時間に読んだり書き込んだりしたかったので[PDF](https://remzi.gumroad.com/l/exGpf)を購入しました。(それでも$10という破格)
