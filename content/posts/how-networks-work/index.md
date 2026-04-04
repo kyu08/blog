@@ -124,13 +124,13 @@ DNSサーバーには以下のようなデータが格納されている。
     - `blog.example.com`
 - 問い合わせはルートドメインから順番にたどるので以下のような流れになる
     1. 最寄りのDNSサーバが`ルートドメイン`のDNSサーバに`blog.example.com` のIPアドレスを問い合わせる
-    → レコードのIPアドレスはわからないが、`com`ドメインのDNSサーバのIPアドレスはわかるからそっちに聞いてくれ、と`com`ドメインのDNSサーバのIPアドレスが返ってくる
+        - レコードのIPアドレスはわからないが、`com`ドメインのDNSサーバのIPアドレスはわかるからそっちに聞いてくれ、と`com`ドメインのDNSサーバのIPアドレスが返ってくる
     1. 最寄りのDNSサーバが`com`ドメインのDNSサーバに`blog.example.com` のIPアドレスを問い合わせる
-    → 同じ要領で `example.com` のDNSサーバのIPアドレスが返ってくる
+        - 同じ要領で `example.com` のDNSサーバのIPアドレスが返ってくる
     1. 最寄りのDNSサーバが`example.com`ドメインのDNSサーバに`blog.example.com` のIPアドレスを問い合わせる
-    → 同じ要領で `blog.example.com` のDNSサーバのIPアドレスが返ってくる
+        - 同じ要領で `blog.example.com` のDNSサーバのIPアドレスが返ってくる
     1. 最寄りのDNSサーバが`blog.example.com`ドメインのDNSサーバに`blog.example.com` のIPアドレスを問い合わせる
-    → [`blog.example.com`](http://blog.example.com/) のIPアドレスが返ってくる
+        - [`blog.example.com`](http://blog.example.com/) のIPアドレスが返ってくる
 - DNSサーバにはキャッシュ機能があるので必ずしも毎回このようなステップになるとは限らない。
     - 当然TTLも存在するので最新のデータが返ってくるとも限らない。
 
