@@ -6,7 +6,7 @@ tags:
   - 読書ログ
 
 description: ""
-date: 2026-04-01T17:45:52+09:00
+date: 2026-04-04T16:45:52+09:00
 author: "kyu08"
 authorTwitter: "kyu08_"
 draft: false
