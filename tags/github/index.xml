@@ -45,9 +45,9 @@
       <guid>https://blog.kyu08.com/posts/gh-repo-fork-script/</guid>
       <description>モチベーション GitHubにホストされているOSSにPRを出す時にforkしてからローカルにcloneするが、ブラウザのforkボタンを使っ</description>
       <content>&lt;h2 id=&#34;モチベーション&#34;&gt;モチベーション&lt;/h2&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- textlint-disable ja-technical-writing/no-doubled-joshi --&gt;
 &lt;p&gt;GitHubにホストされているOSSにPRを出す時にforkしてからローカルにcloneするが、ブラウザのforkボタンを使ってforkすると時間がかかることが多くストレスに感じていた。&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- textlint-enable ja-technical-writing/no-doubled-joshi --&gt;
 &lt;p&gt;そのためCLI上でforkとcloneを行うスクリプトを書いた。&lt;/p&gt;
 &lt;p&gt;これまでの手順は以下のような手順が必要だった。&lt;/p&gt;
 &lt;ol&gt;

@@ -380,8 +380,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Points4&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;StaticArray&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Index&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Four&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Point&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Points5&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;StaticArray&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Index&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Five&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Point&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;elm-static-arrayを使うことで型に配列の長さの情報を持たせることができるため、&lt;strong&gt;仕様を型で表現しやすくなり&lt;/strong&gt;コードの可読性向上に繋がります。&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- 注釈で動画リンクを貼りたい --&gt;
+&lt;!-- 仕様上ありえない状態を表現できないようなコードを書くべきである、という指針 --&gt;
 &lt;p&gt;また、それにともなって &lt;strong&gt;仕様上ありえない状態が存在できないコードを書きやすくなる&lt;/strong&gt;ため&lt;strong&gt;バグの可能性を減らす&lt;/strong&gt; ことができます。&lt;/p&gt;
 &lt;p&gt;たとえば以下の &lt;code&gt;isDefaultRound&lt;/code&gt;関数は引数に取った値がデフォルト値かどうかを判定する関数です。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Round&lt;/span&gt;

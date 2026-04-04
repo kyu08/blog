@@ -313,9 +313,9 @@ if (!doNotTrack) {
 <p>各Spannerレプリカ内のデータは<code>スプリット</code>と<code>ブロック</code>という2つの物理階層レベルで編成される。</p>
 <h3 id="インターリーブ">インターリーブ<a href="#インターリーブ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>ルートテーブルの各行をルート行と呼び、インターリーブされたテーブルの各行を子行と呼ぶ。ルート行とそのすべての子孫のコレクションは行ツリーと呼ばれる。</p>
-<!-- raw HTML omitted -->
+<!-- textlint-disable ja-technical-writing/no-doubled-joshi -->
 <p>行ツリー内のオペレーションは他のスプリットとの通信を必要としないケースが多いため基本的には効率性が高い。ただし子行にホットスポットがある場合Spannerはホットスポットの行とそれ以降の子行を分離するためにスプリット境界を追加しようとする。そのため必ずしも効率性が高いという保証はない。</p>
-<!-- raw HTML omitted -->
+<!-- textlint-disable ja-technical-writing/no-doubled-joshi -->
 <h3 id="局所性のトレードオフ">局所性のトレードオフ<a href="#局所性のトレードオフ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>以下の理由で局所性を高めることが重要。</p>
 <ul>
@@ -328,7 +328,7 @@ if (!doNotTrack) {
 <li>すべてのオペレーションの局所性を完璧にするのではなく最も重要なルートエンティティと最も一般的なアクセスパターンについて必要な局所性を実現することが重要。その他のオペレーションについてはそのままにすることを推奨。</li>
 </ul>
 <h3 id="インデックスのオプション">インデックスのオプション<a href="#インデックスのオプション" class="hanchor" ariaLabel="Anchor">#</a> </h3>
-<!-- raw HTML omitted -->
+<!-- textlint-disable ja-technical-writing/ja-no-redundant-expression -->
 <ul>
 <li>デフォルトではインターリーブされていないインデックスを作成されるが、インターリーブされたインデックスを作成することもできる。
 <ul>
@@ -336,7 +336,7 @@ if (!doNotTrack) {
 </ul>
 </li>
 </ul>
-<!-- raw HTML omitted -->
+<!-- textlint-disable ja-technical-writing/ja-no-redundant-expression -->
 <ul>
 <li><strong>Spannerはテーブルと同じ方法でインデックスデータを格納する。</strong> 換言すると、インターリーブされていないインデックスはルートテーブルにデータを格納する。</li>
 </ul>
@@ -398,9 +398,9 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>LastAccess <span style="color:#66d9ef">TIMESTAMP</span>,
 </span></span><span style="display:flex;"><span>...
 </span></span><span style="display:flex;"><span>) <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (UserId);
-</span></span></code></pre></div><!-- raw HTML omitted -->
+</span></span></code></pre></div><!-- textlint-disable ja-technical-writing/sentence-length -->
 <p>このテーブルに対して次のような(インターリーブされていない &amp;&amp; 最初のキーが単調増加する)インデックスを作成した場合、<code>LastAccess</code>は単調増加する値なので最後のスプリットに書き込みが集中し、ホットスポットが発生してしまう。</p>
-<!-- raw HTML omitted -->
+<!-- textlint-disable ja-technical-writing/sentence-length -->
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> NULL_FILTERED <span style="color:#66d9ef">INDEX</span> UsersByLastAccess <span style="color:#66d9ef">ON</span> Users(LastAccess);
 </span></span></code></pre></div><p>このようなケースでは次のような対処が考えられる。</p>
 <ol>
