@@ -568,5 +568,29 @@
     "description": "複数のプログラムを同時に実行する「並行プログラミング」は、処理速度を飛躍的に向上させる手法で、タスク管理、プロセス管理、スレッド管理をはじめ、複雑な仕組みについての幅広い知識とテクニックが必要となります。本書はRustとアセンブリ、そして一部Cを用い、CPUのアトミック命令、グリーンスレッド、アクターモデル、π計算、ソフトウェア・トランザクショナルメモリ、async/awaitなど、並行プログラミングに関する理論的な背景から実装までをカバー。さらに、アセンブリ実装の理解を深めるため、AArch64とx86-64アーキテクチャの説明も付録として収録。一歩一歩、着実に理解できるように、その仕組みから順を追って詳しく説明します。GitHub上で公開されているソースコードを実際に動かしながら、並行プログラミングの知識と理解を深めることができます。",
     "image": "https://www.oreilly.co.jp/books/images/picture_large978-4-87311-959-5.jpeg",
     "fetchedAt": "2026-03-03T08:41:39.303Z"
+  },
+  "https://blog.kyu08.com/posts/nand2tetris/": {
+    "title": "『コンピュータシステムの理論と実装 第2版』を読んだ",
+    "description": "『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は## 学び、得た経験までジャンプして",
+    "image": "https://blog.kyu08.com/posts/nand2tetris/cover.png",
+    "fetchedAt": "2026-04-04T08:47:13.414Z"
+  },
+  "https://github.com/kyu08/sunaba/blob/ea1ba354678e5c1616ea13a62ddcdb04ed34859f/network/how_networks_work/myhttpclient-c/main.c": {
+    "title": "sunaba/network/how_networks_work/myhttpclient-c/main.c at ea1ba354678e5c1616ea13a62ddcdb04ed34859f · kyu08/sunaba",
+    "description": "Personal sandbox. Contribute to kyu08/sunaba development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/82a16aa8925c3f1388909b52c7915e23f6e885acaad0a645b25119d749296664/kyu08/sunaba",
+    "fetchedAt": "2026-04-04T08:47:13.669Z"
+  },
+  "https://man7.org/linux/man-pages/man3/getaddrinfo.3.html#EXAMPLES": {
+    "title": "getaddrinfo(3) - Linux manual page",
+    "description": "",
+    "image": "",
+    "fetchedAt": "2026-04-04T08:47:14.030Z"
+  },
+  "https://github.com/kyu08/sunaba/blob/ea1ba354678e5c1616ea13a62ddcdb04ed34859f/network/how_networks_work/myhttpclient-go/main.go#L1": {
+    "title": "sunaba/network/how_networks_work/myhttpclient-go/main.go at ea1ba354678e5c1616ea13a62ddcdb04ed34859f · kyu08/sunaba",
+    "description": "Personal sandbox. Contribute to kyu08/sunaba development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/82a16aa8925c3f1388909b52c7915e23f6e885acaad0a645b25119d749296664/kyu08/sunaba",
+    "fetchedAt": "2026-04-04T08:47:13.854Z"
   }
 }
