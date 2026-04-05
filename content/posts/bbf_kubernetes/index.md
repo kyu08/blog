@@ -17,6 +17,8 @@ color: ""
 cover: "cover.png"
 ---
 
+![book](./book.webp)
+
 0からKubernetesのキャッチアップがしたくて、高橋 あおいさん著の『つくって、壊して、直して学ぶ Kubernetes入門』を読んだ。
 
 https://www.shoeisha.co.jp/book/detail/9784798183961
