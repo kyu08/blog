@@ -16,6 +16,8 @@ color: ""
 cover: "cover.png"
 ---
 
+![book](./book.webp)
+
 Rustのことをもっと理解りたくて『コンセプトから理解するRust』を読んだ。
 
 https://gihyo.jp/book/2022/978-4-297-12562-2

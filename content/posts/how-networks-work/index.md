@@ -17,6 +17,8 @@ color: ""
 cover: "cover.png"
 ---
 
+![book](./book.webp)
+
 [ネットワークはなぜつながるのか 第2版](https://bookplus.nikkei.com/atcl/catalog/07/P83110/)を読んだので感想などをまとめる。
 
 ## どんな本か
