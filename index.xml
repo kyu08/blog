@@ -15,7 +15,8 @@
       
       <guid>https://blog.kyu08.com/posts/how-networks-work/</guid>
       <description>ネットワークはなぜつながるのか 第2版を読んだので感想などをまとめる。 どんな本か ブラウザにURLを入力してからサーバーから返ってきたレスポンス</description>
-      <content>&lt;p&gt;&lt;a href=&#34;https://bookplus.nikkei.com/atcl/catalog/07/P83110/&#34; target=&#34;_blank&#34; &gt;ネットワークはなぜつながるのか 第2版&lt;/a&gt;を読んだので感想などをまとめる。&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://bookplus.nikkei.com/atcl/catalog/07/P83110/&#34; target=&#34;_blank&#34; &gt;ネットワークはなぜつながるのか 第2版&lt;/a&gt;を読んだので感想などをまとめる。&lt;/p&gt;
 &lt;h2 id=&#34;どんな本か&#34;&gt;どんな本か&lt;/h2&gt;
 &lt;p&gt;ブラウザにURLを入力してからサーバーから返ってきたレスポンスをブラウザで表示するまでの間に起きることを順を追って説明してくれる本。&lt;/p&gt;
 &lt;p&gt;章の構成は以下。&lt;/p&gt;
@@ -2052,7 +2053,8 @@ Responsive design with d...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;h
       
       <guid>https://blog.kyu08.com/posts/understanding-rust-from-concepts/</guid>
       <description>Rustのことをもっと理解りたくて『コンセプトから理解するRust』を読んだ。 コンセプトから理解するRust | 技術評論社Rustはメモリ安全</description>
-      <content>&lt;p&gt;Rustのことをもっと理解りたくて『コンセプトから理解するRust』を読んだ。&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Rustのことをもっと理解りたくて『コンセプトから理解するRust』を読んだ。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://gihyo.jp/book/2022/978-4-297-12562-2&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://gihyo.jp/book/2022/978-4-297-12562-2&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
       &lt;img src=&#34;https://gihyo.jp/assets/images/ogp/2022/9784297125622.jpg&#34; alt=&#34;コンセプトから理解するRust | 技術評論社&#34; loading=&#34;lazy&#34;&gt;
@@ -2125,7 +2127,8 @@ Responsive design with d...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;h
       
       <guid>https://blog.kyu08.com/posts/bbf_kubernetes/</guid>
       <description>0からKubernetesのキャッチアップがしたくて、高橋 あおいさん著の『つくって、壊して、直して学ぶ Kubernetes入門』を読んだ。 つ</description>
-      <content>&lt;p&gt;0からKubernetesのキャッチアップがしたくて、高橋 あおいさん著の『つくって、壊して、直して学ぶ Kubernetes入門』を読んだ。&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34;&gt;&lt;/p&gt;
+&lt;p&gt;0からKubernetesのキャッチアップがしたくて、高橋 あおいさん著の『つくって、壊して、直して学ぶ Kubernetes入門』を読んだ。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
       &lt;img src=&#34;https://www.shoeisha.co.jp/static/book/og_image/9784798183961.jpg&#34; alt=&#34;つくって、壊して、直して学ぶ Kubernetes入門 | 翔泳社&#34; loading=&#34;lazy&#34;&gt;
@@ -3529,7 +3532,8 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
       
       <guid>https://blog.kyu08.com/posts/nand2tetris/</guid>
       <description>『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は## 学び、得た経験までジャンプして</description>
-      <content>&lt;p&gt;『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は&lt;a href=&#34;#%e5%ad%a6%e3%81%b3%e5%be%97%e3%81%9f%e7%b5%8c%e9%a8%93&#34; &gt;## 学び、得た経験&lt;/a&gt;までジャンプしてください。&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34;&gt;&lt;/p&gt;
+&lt;p&gt;『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は&lt;a href=&#34;#%e5%ad%a6%e3%81%b3%e5%be%97%e3%81%9f%e7%b5%8c%e9%a8%93&#34; &gt;## 学び、得た経験&lt;/a&gt;までジャンプしてください。&lt;/p&gt;
 &lt;h2 id=&#34;本書の構成&#34;&gt;本書の構成&lt;/h2&gt;
 &lt;p&gt;本書はnand2tetrisという通称の通り、NANDゲートからスタートして、CPUやコンパイラやOSなどを実装し、最終的にはそのプラットフォーム上でテトリス(のようなアプリケーション)&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;が動くところまで実装するという内容のコースになっている。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;roadmap.webp&#34; alt=&#34;roadmap&#34;&gt;
@@ -5034,7 +5038,8 @@ English.&lt;/p&gt;
       
       <guid>https://blog.kyu08.com/posts/go-system-programming/</guid>
       <description>『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11</description>
-      <content>&lt;p&gt;『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11/4でコミットした日数としてはおおよそ24日ほどだった。)&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34;&gt;&lt;/p&gt;
+&lt;p&gt;『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11/4でコミットした日数としてはおおよそ24日ほどだった。)&lt;/p&gt;
 &lt;p&gt;筆者は情報系の学部を出ておらず、CSなどの基礎知識があまりないので大変勉強になった。また、サンプルコードが豊富なので実際に自分のマシン上で動かしながら学ぶことができ解像度を上げながら理解を深めることができた。&lt;/p&gt;
 &lt;p&gt;低レイヤ、コンピューターサイエンスの学習に興味がある方にはとてもおすすめなのでぜひ買って読んでみてください。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.lambdanote.com/products/go-2&#34; data-auto-fetch=&#34;false&#34;&gt;
@@ -7309,7 +7314,8 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
       
       <guid>https://blog.kyu08.com/posts/how-world-class-engineers-think/</guid>
       <description>Microsoftのエンジニアとしてアメリカで働いている牛尾剛さんが優秀な同僚から学んだ思考法について書いた著書『世界一流エンジニアの思考法</description>
-      <content>&lt;p&gt;Microsoftのエンジニアとしてアメリカで働いている牛尾剛さんが優秀な同僚から学んだ思考法について書いた著書『世界一流エンジニアの思考法』を読んだので学びになったトピックについて簡単に書こうと思う。&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Microsoftのエンジニアとしてアメリカで働いている牛尾剛さんが優秀な同僚から学んだ思考法について書いた著書『世界一流エンジニアの思考法』を読んだので学びになったトピックについて簡単に書こうと思う。&lt;/p&gt;
 &lt;h2 id=&#34;頭がよくても理解には時間がかかる&#34;&gt;頭がよくても「理解」には時間がかかる&lt;/h2&gt;
 &lt;p&gt;ある若くて優秀な同僚が新しいプロジェクトに参加するときにアーキテクチャの説明ビデオを「難しいので何回も見直している」と言っていたのに対して著者が衝撃を受けたというエピソードが紹介されていた。&lt;/p&gt;
 &lt;p&gt;なかなか他人の作業過程を観察する機会もないのでついつい「優秀な人は複雑な物事でも一瞬で理解してしまうのだろう」と想像してしまいがちだが、&lt;strong&gt;Microsoftの凄腕エンジニアでも理解に時間がかかることがある&lt;/strong&gt;という実例を知り、何だかとても励まされた気分になった。&lt;/p&gt;
