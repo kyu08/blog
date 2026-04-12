@@ -62,6 +62,7 @@ https://github.com/kyu08/sunaba/tree/d15fb4fa20d3e478cc0f5ac6f9e89e7d0c668b21/c/
     - 結構使うのが難しそうなので相当パフォーマンスを重視したいときにしか使わないかも...?
 - 関数ポインタ
 - マクロの基礎
+- etc.
 
 ## まとめ
 ということで[OSTEP](https://pages.cs.wisc.edu/~remzi/OSTEP/)に取り組む準備ができたので次は実際に着手していこうと思う。
