@@ -598,5 +598,23 @@
     "description": "",
     "image": "",
     "fetchedAt": "2026-04-04T09:01:49.753Z"
+  },
+  "https://www.kyoritsu-pub.co.jp/book/b10011596.html": {
+    "title": "プログラミング言語C - 共立出版",
+    "description": "Brian W.カーニハン 著",
+    "image": "https://hondana-image.s3.amazonaws.com/book/image/10011596/fd17bee4-f762-49a3-b1ee-d888d2ac90ca.jpg",
+    "fetchedAt": "2026-04-12T09:38:22.460Z"
+  },
+  "https://blog.kyu08.com/posts/cs50-jp/": {
+    "title": "CS50.jpでCSに入門した",
+    "description": "CS50.jpの気になっていたトピックを学んでみたので振り返っておく。 CS50.jpとは CS50.jpの説明はサイトから引用する。 このページ",
+    "image": "https://blog.kyu08.com/posts/cs50-jp/cover.png",
+    "fetchedAt": "2026-04-12T09:38:21.042Z"
+  },
+  "https://github.com/kyu08/sunaba/tree/d15fb4fa20d3e478cc0f5ac6f9e89e7d0c668b21/c/k_and_r": {
+    "title": "sunaba/c/k_and_r at d15fb4fa20d3e478cc0f5ac6f9e89e7d0c668b21 · kyu08/sunaba",
+    "description": "Personal sandbox. Contribute to kyu08/sunaba development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/903bd6d6dd437fe6ffdcd00ef3a9bd8fa1acb8191443eed7373f3f2a5d7c9de1/kyu08/sunaba",
+    "fetchedAt": "2026-04-12T09:38:21.480Z"
   }
 }
