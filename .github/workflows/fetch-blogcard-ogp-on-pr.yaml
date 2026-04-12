@@ -48,4 +48,5 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add data/
           git commit -m "chore: update OGP and embed cache"
+          git pull --rebase origin ${{ github.head_ref }}
           git push origin HEAD:${{ github.head_ref }}
