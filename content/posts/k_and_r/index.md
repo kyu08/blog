@@ -54,7 +54,7 @@ https://github.com/kyu08/sunaba/tree/d15fb4fa20d3e478cc0f5ac6f9e89e7d0c668b21/c/
 
 ## 学び
 - 変数、関数の可視性の制御方法
-- `#include`の機能(`"foo.h"`と`<foo.h>`の違い)
+- `#include`の機能(`"foo.h"`と`<foo.h>`の違いなど)
 - aが配列のとき`a[i]`と`*(a + i)`は同じ
 - 共用体
     - 結構使うのが難しそうなので相当パフォーマンスを重視したいときにしか使わないかも...?
