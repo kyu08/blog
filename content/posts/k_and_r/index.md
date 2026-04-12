@@ -17,7 +17,7 @@ color: ""
 cover: "cover.png"
 ---
 
-<!-- TODO: 写真はる -->
+![book](./book.webp)
 
 [Operating Systems: Three Easy Pieces](https://pages.cs.wisc.edu/~remzi/OSTEP/)(以下、[OSTEP](https://pages.cs.wisc.edu/~remzi/OSTEP/))に取り組むにあたって、C言語の知識があるとスムーズそうだったので読んだ。
 
