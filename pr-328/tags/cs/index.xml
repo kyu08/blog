@@ -71,7 +71,7 @@
 &lt;/p&gt;
 &lt;h2 id=&#34;学び&#34;&gt;学び&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;変数、関数の可視性の制御方法&lt;/li&gt;
+&lt;li&gt;変数、関数の可視性の制御方法(&lt;code&gt;static&lt;/code&gt;、&lt;code&gt;extern&lt;/code&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;#include&lt;/code&gt;の機能(&lt;code&gt;&amp;quot;foo.h&amp;quot;&lt;/code&gt;と&lt;code&gt;&amp;lt;foo.h&amp;gt;&lt;/code&gt;の違いなど)&lt;/li&gt;
 &lt;li&gt;aが配列のとき&lt;code&gt;a[i]&lt;/code&gt;と&lt;code&gt;*(a + i)&lt;/code&gt;は同じ&lt;/li&gt;
 &lt;li&gt;共用体
@@ -79,6 +79,8 @@
 &lt;li&gt;結構使うのが難しそうなので相当パフォーマンスを重視したいときにしか使わないかも&amp;hellip;?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;関数ポインタ&lt;/li&gt;
+&lt;li&gt;マクロの基礎&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;ということで&lt;a href=&#34;https://pages.cs.wisc.edu/~remzi/OSTEP/&#34; target=&#34;_blank&#34; &gt;OSTEP&lt;/a&gt;に取り組む準備ができたので次は実際に着手していこうと思う。&lt;/p&gt;
