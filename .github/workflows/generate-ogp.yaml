@@ -49,6 +49,7 @@ jobs:
           shopt -s globstar
           git add content/**/cover.png static/cover.png 2>/dev/null || true
           git commit -m "chore: update OGP images"
+          git pull --rebase origin ${{ github.head_ref }}
           git push origin HEAD:${{ github.head_ref }}
 
       - name: Check for OGP changes in PR
