@@ -38,7 +38,7 @@
 &lt;/p&gt;
 &lt;h2 id=&#34;どんな本か&#34;&gt;どんな本か&lt;/h2&gt;
 &lt;p&gt;C言語の開発者であるB.W.カーニハンとD.M.リッチーによるC言語の解説書。&lt;/p&gt;
-&lt;p&gt;二人のイニシャルをとってK&amp;amp;Rと呼ばれることもある。&lt;/p&gt;
+&lt;p&gt;二人のイニシャルをとってK&amp;amp;Rと呼ばれることもあるらしい。&lt;/p&gt;
 &lt;p&gt;ちなみに、&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;1.1 Getting Started に、例として掲載されている&amp;quot;hello, world&amp;quot;プログラムは、あらゆる「プログラミングの最初の例題」として定番となった。&lt;/p&gt;
@@ -72,7 +72,7 @@
 &lt;h2 id=&#34;学び&#34;&gt;学び&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;変数、関数の可視性の制御方法&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;#include&lt;/code&gt;の機能(&lt;code&gt;&amp;quot;foo.h&amp;quot;&lt;/code&gt;と&lt;code&gt;&amp;lt;foo.h&amp;gt;&lt;/code&gt;の違い)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#include&lt;/code&gt;の機能(&lt;code&gt;&amp;quot;foo.h&amp;quot;&lt;/code&gt;と&lt;code&gt;&amp;lt;foo.h&amp;gt;&lt;/code&gt;の違いなど)&lt;/li&gt;
 &lt;li&gt;aが配列のとき&lt;code&gt;a[i]&lt;/code&gt;と&lt;code&gt;*(a + i)&lt;/code&gt;は同じ&lt;/li&gt;
 &lt;li&gt;共用体
 &lt;ul&gt;
