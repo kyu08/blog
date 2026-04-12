@@ -7,13 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sat, 04 Apr 2026 16:45:52 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Apr 2026 17:48:08 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C</title>
+      <link>https://blog.kyu08.com/tags/c/</link>
+      <pubDate>Sun, 12 Apr 2026 17:48:08 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/c/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
     <item>
       <title>CS</title>
       <link>https://blog.kyu08.com/tags/cs/</link>
-      <pubDate>Sat, 04 Apr 2026 16:45:52 +0900</pubDate>
+      <pubDate>Sun, 12 Apr 2026 17:48:08 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/tags/cs/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>読書ログ</title>
+      <link>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</link>
+      <pubDate>Sun, 12 Apr 2026 17:48:08 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</guid>
       <description></description>
       <content></content>
     </item>
@@ -24,16 +44,6 @@
       <pubDate>Sat, 04 Apr 2026 16:45:52 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/tags/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>読書ログ</title>
-      <link>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</link>
-      <pubDate>Sat, 04 Apr 2026 16:45:52 +0900</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</guid>
       <description></description>
       <content></content>
     </item>

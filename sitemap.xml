@@ -2,25 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.kyu08.com/posts/k_and_r/</loc>
+    <lastmod>2026-04-12T17:48:08+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/</loc>
+    <lastmod>2026-04-12T17:48:08+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/c/</loc>
+    <lastmod>2026-04-12T17:48:08+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/cs/</loc>
+    <lastmod>2026-04-12T17:48:08+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/</loc>
+    <lastmod>2026-04-12T17:48:08+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/</loc>
+    <lastmod>2026-04-12T17:48:08+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</loc>
+    <lastmod>2026-04-12T17:48:08+09:00</lastmod>
+  </url><url>
     <loc>https://blog.kyu08.com/posts/how-networks-work/</loc>
     <lastmod>2026-04-04T16:45:52+09:00</lastmod>
   </url><url>
-    <loc>https://blog.kyu08.com/</loc>
-    <lastmod>2026-04-04T16:45:52+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/cs/</loc>
-    <lastmod>2026-04-04T16:45:52+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/posts/</loc>
-    <lastmod>2026-04-04T16:45:52+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/</loc>
-    <lastmod>2026-04-04T16:45:52+09:00</lastmod>
-  </url><url>
     <loc>https://blog.kyu08.com/tags/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF/</loc>
-    <lastmod>2026-04-04T16:45:52+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</loc>
     <lastmod>2026-04-04T16:45:52+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/go/</loc>
