@@ -1,0 +1,14 @@
+{{- /* 画像をfigure要素で囲み、title属性をキャプションとして表示 */ -}}
+{{- /* Markdown: ![alt](src "caption") の "caption" 部分が figcaption になる */ -}}
+{{- $alt := .Text -}}
+{{- $src := .Destination -}}
+{{- $caption := .Title -}}
+
+{{- if $caption -}}
+  <figure class="image-with-caption">
+    <img src="{{ $src | safeURL }}" alt="{{ $alt }}" loading="lazy" />
+    <figcaption>{{ $caption }}</figcaption>
+  </figure>
+{{- else -}}
+  <img src="{{ $src | safeURL }}" alt="{{ $alt }}" loading="lazy" />
+{{- end -}}
