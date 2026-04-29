@@ -18,7 +18,7 @@ cover: cover.png
 
 2025年11月2日（日）にアキバプラザ・アキバホールで開催された[VimConf 2025 Small](https://vimconf.org/2025/ja/)に参加した。
 
-![vim-conf-2025.webp](vim-conf-2025.webp "test")
+![vim-conf-2025.webp](vim-conf-2025.webp)
 
 こちらはノベルティ。食器とかお箸はたくさんあっても困らないのでありがたい。
 

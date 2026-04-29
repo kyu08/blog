@@ -143,10 +143,11 @@ figure.image-with-caption img {
 }
 
 figure.image-with-caption figcaption {
-  margin-top: 8px;
   font-size: 0.9em;
   color: var(--color-gray);
   font-style: italic;
+  background: transparent;
+  border-radius: 0;
 }
 
 /* 動画のレスポンシブ対応 */
