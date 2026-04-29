@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+    <title>『プログラミング言語C 第2版』を読んだ :: blog.kyu08.com</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Operating Systems: Three Easy Pieces(以下、OSTEP)に取り組むにあたって、C言語の知識があるとスムーズそうだったので読んだ。 プログラミング言語C - 共立出" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://blog.kyu08.com/pr-333/posts/k_and_r/" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BDQ408J45J', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-333/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-333/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-333/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-333/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-333/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-333/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-333/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-333/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-333/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-333/css/post.min.f049fef13af1dfd5ea526cc59ea5a3fc7be11a05911ca7198c5bb9225250119c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-333/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-333/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-333/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-333/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+<link rel="stylesheet" href="https://blog.kyu08.com/pr-333/style.css">
+
+
+<link rel="shortcut icon" href="https://blog.kyu08.com/pr-333/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/pr-333/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="kyu08_" />
+
+
+
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="『プログラミング言語C 第2版』を読んだ">
+<meta property="og:description" content="Operating Systems: Three Easy Pieces(以下、OSTEP)に取り組むにあたって、C言語の知識があるとスムーズそうだったので読んだ。 プログラミング言語C - 共立出" />
+<meta property="og:url" content="https://blog.kyu08.com/pr-333/posts/k_and_r/" />
+<meta property="og:site_name" content="blog.kyu08.com" />
+
+
+  
+  
+    
+  
+
+
+  <meta property="og:image" content="https://blog.kyu08.com/pr-333/posts/k_and_r/cover.png">
+  <meta name="twitter:image" content="https://blog.kyu08.com/pr-333/posts/k_and_r/cover.png">
+  <meta name="twitter:image:alt" content="『プログラミング言語C 第2版』を読んだ">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+  <meta property="article:published_time" content="2026-04-12 17:48:08 &#43;0900 &#43;0900" />
+
+
+
+
+
+
+
+
+
+<link rel="author" href="http://www.hatena.ne.jp/kyu08/" />
+
+
+<script src="https://blog.kyu08.com/pr-333/docswell-loader.js"></script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BDQ408J45J');
+</script>
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    blog.kyu08.com
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/pr-333/tags/diary/">_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-333/about">about</a></li>
+        
+      
+        
+          <li><a href="/pr-333/index.xml">rss</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/pr-333/tags/diary/" >_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-333/about" >about</a></li>
+        
+      
+        
+          <li><a href="/pr-333/index.xml" >rss</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://blog.kyu08.com/pr-333/posts/k_and_r/">『プログラミング言語C 第2版』を読んだ</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2026/04/12</time>
+      
+    <span class="post-reading-time">3 min read (1188 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://blog.kyu08.com/pr-333/tags/cs/">CS</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-333/tags/c/">C</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-333/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/">読書ログ</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="/pr-333/posts/k_and_r/cover.png"
+    class="post-cover"
+    alt="『プログラミング言語C 第2版』を読んだ"
+    title="Cover Image" />
+
+
+  
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#どんな本か">どんな本か</a></li>
+    <li><a href="#読み方">読み方</a></li>
+    <li><a href="#学び">学び</a></li>
+    <li><a href="#まとめ">まとめ</a></li>
+  </ul>
+</nav>
+  
+
+  <div class="post-content"><div>
+        <p><img src="./book.webp" alt="book" loading="lazy" /></p>
+<p><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/" target="_blank" >Operating Systems: Three Easy Pieces</a>(以下、<a href="https://pages.cs.wisc.edu/~remzi/OSTEP/" target="_blank" >OSTEP</a>)に取り組むにあたって、C言語の知識があるとスムーズそうだったので読んだ。</p>
+<p><div class="blogcard" data-url="https://www.kyoritsu-pub.co.jp/book/b10011596.html" data-auto-fetch="false">
+  <a href="https://www.kyoritsu-pub.co.jp/book/b10011596.html" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://hondana-image.s3.amazonaws.com/book/image/10011596/fd17bee4-f762-49a3-b1ee-d888d2ac90ca.jpg" alt="プログラミング言語C - 共立出版" loading="lazy">
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">プログラミング言語C - 共立出版</div><div class="blogcard-description">Brian W.カーニハン 著</div><div class="blogcard-url">https://www.kyoritsu-pub.co.jp/book/b10011596.html</div>
+    </div>
+  </a>
+</div>
+</p>
+<p>Cに関してはCS50で基本的な文法を学んだ程度であまり体系的には学んでいなかったので、CS50の内容を補完するような感じで読んだ。</p>
+<p><div class="blogcard" data-url="https://blog.kyu08.com/posts/cs50-jp/" data-auto-fetch="false">
+  <a href="https://blog.kyu08.com/posts/cs50-jp/" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://blog.kyu08.com/posts/cs50-jp/cover.png" alt="CS50.jpでCSに入門した" loading="lazy">
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">CS50.jpでCSに入門した</div><div class="blogcard-description">CS50.jpの気になっていたトピックを学んでみたので振り返っておく。 CS50.jpとは CS50.jpの説明はサイトから引用する。 このページ</div><div class="blogcard-url">https://blog.kyu08.com/posts/cs50-jp/</div>
+    </div>
+  </a>
+</div>
+</p>
+<h2 id="どんな本か">どんな本か<a href="#どんな本か" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>C言語の開発者であるB.W.カーニハンとD.M.リッチーによるC言語の解説書。</p>
+<p>1989/06/15発売と、約40年前の本だが入門書としての評価が未だに高いようだったので買ってみた。(結果的にも普通に勉強になったので良かった)</p>
+<p>二人のイニシャルをとってK&amp;Rと呼ばれることもあるらしい。</p>
+<p>ちなみに、</p>
+<blockquote>
+<p>1.1 Getting Started に、例として掲載されている&quot;hello, world&quot;プログラムは、あらゆる「プログラミングの最初の例題」として定番となった。</p>
+<p><a href="https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9EC" target="_blank" >https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9EC</a></p>
+</blockquote>
+<p>とあるように、<code>hello, world</code>の生みの親としても有名らしい。（！）</p>
+<p>各章に演習問題が豊富に用意されているので手を動かしながら学びやすかった。</p>
+<p>また、付録を除くと231ページと比較的コンパクトなので、Cの全体像をざっと把握するのにちょうどいいボリューム感だった。</p>
+<h2 id="読み方">読み方<a href="#読み方" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>1,2章は演習問題をやりつつ読み、他の章は演習問題をスキップして本文だけ読んだ。
+<ul>
+<li>Cを完全理解したり人に教えられるレベルになりたい、というよりは<a href="https://pages.cs.wisc.edu/~remzi/OSTEP/" target="_blank" >OSTEP</a>での実装がスムーズになれば嬉しいなーくらいの温度感だったのと、手を動かすのは<a href="https://pages.cs.wisc.edu/~remzi/OSTEP/" target="_blank" >OSTEP</a>でできそうだったので知らない文法や仕組みを軽く頭に入れておくくらいの感じで読んだ。</li>
+</ul>
+</li>
+<li><code>#include</code>なしでboolが使えると多少楽そうだったのでC23で動かした。
+<ul>
+<li>演習問題を解いた実装はこちら。</li>
+</ul>
+</li>
+</ul>
+<p><div class="blogcard" data-url="https://github.com/kyu08/sunaba/tree/d15fb4fa20d3e478cc0f5ac6f9e89e7d0c668b21/c/k_and_r" data-auto-fetch="false">
+  <a href="https://github.com/kyu08/sunaba/tree/d15fb4fa20d3e478cc0f5ac6f9e89e7d0c668b21/c/k_and_r" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://opengraph.githubassets.com/903bd6d6dd437fe6ffdcd00ef3a9bd8fa1acb8191443eed7373f3f2a5d7c9de1/kyu08/sunaba" alt="sunaba/c/k_and_r at d15fb4fa20d3e478cc0f5ac6f9e89e7d0c668b21 · kyu08/sunaba" loading="lazy">
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">sunaba/c/k_and_r at d15fb4fa20d3e478cc0f5ac6f9e89e7d0c668b21 · kyu08/sunaba</div><div class="blogcard-description">Personal sandbox. Contribute to kyu08/sunaba development by creating an account on GitHub.</div><div class="blogcard-url">https://github.com/kyu08/sunaba/tree/d15fb4fa20d3e478cc0f5ac6f9e89e7d0c668b21/c/k_and_r</div>
+    </div>
+  </a>
+</div>
+</p>
+<h2 id="学び">学び<a href="#学び" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>変数、関数の可視性の制御方法(<code>static</code>、<code>extern</code>)</li>
+<li><code>#include</code>の機能(<code>&quot;foo.h&quot;</code>と<code>&lt;foo.h&gt;</code>の違いなど)</li>
+<li>aが配列のとき<code>a[i]</code>と<code>*(a + i)</code>は同じ</li>
+<li>共用体
+<ul>
+<li>結構使うのが難しそうなので相当パフォーマンスを重視したいときにしか使わないかも&hellip;?</li>
+</ul>
+</li>
+<li>関数ポインタ</li>
+<li>マクロの基礎</li>
+<li>etc.</li>
+</ul>
+<h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>(すべての演習問題をやったわけではないのもあって)1週間ちょっとでCについて一通り簡単に学べて、ちょうどいいボリューム感だった。</p>
+<p>ということで<a href="https://pages.cs.wisc.edu/~remzi/OSTEP/" target="_blank" >OSTEP</a>に取り組む準備ができたので次は実際に着手していこうと思う。</p>
+
+      </div></div>
+
+  
+  
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+    
+      <a href="https://blog.kyu08.com/pr-333/posts/how-networks-work/" class="button inline next">
+        『ネットワークはなぜつながるのか』を読んだ
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+        repo="kyu08/blog-comments"
+        issue-term="pathname"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  
+
+  
+    <div class="table-of-contents-sidebar">
+      <h2>
+        目次
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#どんな本か">どんな本か</a></li>
+    <li><a href="#読み方">読み方</a></li>
+    <li><a href="#学び">学び</a></li>
+    <li><a href="#まとめ">まとめ</a></li>
+  </ul>
+</nav>
+    </div>
+    <script src="https://blog.kyu08.com/pr-333/toc.js"></script>
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>blog.kyu08.com</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/pr-333/bundle.min.js"></script>
+
+
+<font color="#808080">
+  <span>
+    This site uses Google Analytics for access analysis.
+    Google Analytics uses cookies to collect traffic data, but this traffic data is collected anonymously and does not personally identify you.
+    Cookies can be disabled in your browser.
+  </span>
+</font>
+
+
+<script src="https://blog.kyu08.com/pr-333/blogcard.js"></script>
+
+
+  
+</div>
+
+</body>
+</html>
