@@ -265,7 +265,7 @@ if (!doNotTrack) {
 <p>全然大したことをやっているわけではないですがTmux, Neovimやそれらのプラグインの普及活動になれば嬉しいので書いてみます。</p>
 <h2 id="動作イメージ">動作イメージ<a href="#動作イメージ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>こんな感じでvanillaのGoプロジェクトをTmuxのwindowに開いておいて、確認したくなったときにすぐwindowを切り替えてコードを書いて実行結果を確認できるようにしている。(Gifの例はGoの書式指定子<code>%+v</code>の動作を忘れて試してみているところ)</p>
-<p><img src="go-playground.gif" alt="go-playground"></p>
+<p><img src="go-playground.gif" alt="go-playground" loading="lazy" /></p>
 <p>Gifでやっていることは以下</p>
 <ol>
 <li>GoのSandbox環境を開いたNeovimが起動しているwindowに切り替え</li>
@@ -320,14 +320,14 @@ if (!doNotTrack) {
 <p>最後に補足としてGif内で使っているNeovimのプラグインを紹介します。</p>
 <h3 id="ターミナル表示">ターミナル表示<a href="#ターミナル表示" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p><a href="https://github.com/voldikss/vim-floaterm" target="_blank" >voldikss/vim-floaterm</a></p>
-<p><img src="floaterm.gif" alt="floaterm"></p>
+<p><img src="floaterm.gif" alt="floaterm" loading="lazy" /></p>
 <p>GoのSandbox環境の<code>main.go</code>に書いたスクリプトを実行するために、Neovimからターミナルを表示するシーンで使っている。</p>
 <p>コード編集してサクっと動作確認したいときなどに便利。(といいつつ最近動作の重さが目立ってきたので<code>&lt;C-z&gt;</code>でNeovimの起動元に戻ってターミナルを操作することが多い)</p>
 <h3 id="カーソル移動">カーソル移動<a href="#カーソル移動" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p><a href="https://github.com/yuki-yano/fuzzy-motion.vim" target="_blank" >yuki-yano/fuzzy-motion.vim</a></p>
 <p><code>fmt.Printf(&quot;u: %v\n&quot;, u)</code>の<code>u</code>から<code>%v</code>の位置にカーソル移動する際に使っているプラグイン。</p>
 <p>動作のイメージはこんな感じ。</p>
-<p><img src="fuzzy-motion.gif" alt="fuzzy-motion"></p>
+<p><img src="fuzzy-motion.gif" alt="fuzzy-motion" loading="lazy" /></p>
 <p>起動すると文字がグレーアウトするのでジャンプしたい文字列を入力するとその文字にジャンプするためのキーワードを表示してくれるというプラグイン。</p>
 <p>同様の機能をもつプラグインとしてはeasy-motionなどのプラグインが有名だが、fuzzy-motionはジャンプしたい文字列をfuzzy-finder形式で絞り込んでくれるのが大きな特徴。(詳しくはリポジトリのREADME参照)</p>
 <p>筆者はノーマルモードで<code>f</code>キーを押下するとプラグインが起動するように設定している。</p>
@@ -336,7 +336,7 @@ if (!doNotTrack) {
 <p><a href="https://github.com/neoclide/coc.nvim" target="_blank" >neoclide/coc.nvim</a></p>
 <p>Language Serverをホストするためのプラグイン。</p>
 <p>すごく簡単にいうと補完や関数定義を表示したり定義ジャンプできるようにしたりしてくれる。</p>
-<p><img src="coc-nvim.gif" alt="coc-nvim"></p>
+<p><img src="coc-nvim.gif" alt="coc-nvim" loading="lazy" /></p>
 <p>以上です。ここまで読んでくれてありがとうございました。</p>
 
       </div></div>

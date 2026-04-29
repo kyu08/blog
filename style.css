@@ -130,6 +130,26 @@ img {
   margin: 0;
 }
 
+/* 画像キャプションのスタイル */
+figure.image-with-caption {
+  margin: 20px 0;
+  text-align: center;
+}
+
+figure.image-with-caption img {
+  display: block;
+  margin: 0 auto;
+  border: none;
+}
+
+figure.image-with-caption figcaption {
+  font-size: 0.9em;
+  color: var(--color-gray);
+  font-style: italic;
+  background: transparent;
+  border-radius: 0;
+}
+
 /* 動画のレスポンシブ対応 */
 figure.video {
   width: 100%;

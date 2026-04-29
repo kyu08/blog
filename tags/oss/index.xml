@@ -107,7 +107,7 @@
 &lt;ul&gt;
 &lt;li&gt;去年と同じくらいのペースでPRを送ることができた。（平均約4.5件/月ペース）&lt;/li&gt;
 &lt;li&gt;LazygitのトップページのContributors一覧に表示されるようになった。
-&lt;img src=&#34;lazygit-contibutors.webp&#34; alt=&#34;lazygit-contibutors.webp&#34;&gt;
+&lt;img src=&#34;lazygit-contibutors.webp&#34; alt=&#34;lazygit-contibutors.webp&#34; loading=&#34;lazy&#34; /&gt;
 &lt;ul&gt;
 &lt;li&gt;GitHubではcommit数が多い順に12人目くらいまでのアイコンがContributorsに表示される。&lt;/li&gt;
 &lt;li&gt;細々とcontributionを続けたところの9番目にcommitが多い人になれた。（2025/12/23現在）&lt;/li&gt;
@@ -136,7 +136,7 @@
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;タスクランナー側で定義したコマンドをfuzzy finder形式で選択できるCLIツールを趣味でRustで開発している。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;現在は以下のタスクランナーに対応している。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;make&lt;/li&gt;
@@ -148,9 +148,9 @@
 &lt;p&gt;gifを見てもらえれば分かる通り、プレビューウィンドウでコマンド内容を確認しながらコマンドを選択できるのが特徴の一つ。&lt;/p&gt;
 &lt;h4 id=&#34;スター数&#34;&gt;スター数&lt;/h4&gt;
 &lt;p&gt;2025/12/23現在では245スターを獲得している。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-make-star.webp&#34; alt=&#34;fzf-make-star.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make-star.webp&#34; alt=&#34;fzf-make-star.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.star-history.com/#kyu08/fzf-make&amp;amp;type=date&amp;amp;legend=top-left&#34; target=&#34;_blank&#34; &gt;Star History&lt;/a&gt;によると2024/12/19時点では129スターだったので1年で大体倍くらいになった。🎉&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-make-star-history-20251223-last-year.webp&#34; alt=&#34;fzf-make-star-history-20251223-last-year.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make-star-history-20251223-last-year.webp&#34; alt=&#34;fzf-make-star-history-20251223-last-year.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;来年も適度なペースで細々とメンテしていきます。(npm対応は早めにやりたい&amp;hellip;！)&lt;/p&gt;
 &lt;h4 id=&#34;今年の変更点&#34;&gt;今年の変更点&lt;/h4&gt;
 &lt;p&gt;2025年は&lt;a href=&#34;https://github.com/pulls?q=is%3Apr&amp;#43;archived%3Afalse&amp;#43;author%3Akyu08&amp;#43;is%3Apublic&amp;#43;repo%3Akyu08%2Ffzf-make&amp;#43;created%3A2025-01-01..2025-12-31&amp;#43;is%3Amerged&amp;#43;&#34; target=&#34;_blank&#34; &gt;筆者が74件のPRを作成&amp;amp;マージし&lt;/a&gt;、&lt;a href=&#34;https://github.com/kyu08/fzf-make/compare/v0.54.0...v0.65.0&#34; target=&#34;_blank&#34; &gt;12個のバージョンがリリースされ、筆者とrenovateを含めて5人の貢献者により102のcommitが追加された。&lt;/a&gt;&lt;/p&gt;
@@ -219,24 +219,24 @@ Add OGP template with dark theme design (b...&lt;/div&gt;&lt;div class=&#34;blog
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;こんな感じの画像が自動生成される。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;cover.png&#34; alt=&#34;cover.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;cover.png&#34; alt=&#34;cover.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Twitterで投稿したときに追加されるタイトル要素とOGPのメタ情報が被らないようになっているのが地味なこだわりポイント。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;twitter-caption.webp&#34; alt=&#34;twitter-caption.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;twitter-caption.webp&#34; alt=&#34;twitter-caption.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;ついでにこんな感じでPRにコメントとして表示されるようにしたので投稿前に確認できる。（日本語だとたまーに特定の記号などが豆腐になってしまうのチェックしておきたい）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;ogp-pr-comment.webp&#34; alt=&#34;ogp-pr-comment.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ogp-pr-comment.webp&#34; alt=&#34;ogp-pr-comment.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;heading要素のデザインを変えた&#34;&gt;Heading要素のデザインを変えた&lt;/h3&gt;
 &lt;p&gt;これまではレベルの異なるHeading要素の区別が付きづらかったので&lt;code&gt;## OSS&lt;/code&gt;のようにHeading要素のレベルに合わせて&lt;code&gt;#&lt;/code&gt;が表示されるデザインにした。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;BEFORE&lt;/th&gt;
-&lt;th&gt;&lt;img src=&#34;heading-before.webp&#34; alt=&#34;heading-before.webp&#34;&gt;&lt;/th&gt;
+&lt;th&gt;&lt;img src=&#34;heading-before.webp&#34; alt=&#34;heading-before.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;AFTER&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;img src=&#34;heading-after.webp&#34; alt=&#34;heading-after.webp&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;heading-after.webp&#34; alt=&#34;heading-after.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -254,7 +254,7 @@ Add OGP template with dark theme design (b...&lt;/div&gt;&lt;div class=&#34;blog
 &lt;/p&gt;
 &lt;h3 id=&#34;ブログカードの表示&#34;&gt;ブログカードの表示&lt;/h3&gt;
 &lt;p&gt;こんな感じでリンク先の情報を表示するようにした。便利。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;blog-card.webp&#34; alt=&#34;blog-card.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;blog-card.webp&#34; alt=&#34;blog-card.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/blog/pull/246&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/kyu08/blog/pull/246&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
       &lt;img src=&#34;https://opengraph.githubassets.com/eb445efdb9b6351b5b509ccdfd909411c138798d6e689ba8c4fa3ef3c235b314/kyu08/blog/pull/246&#34; alt=&#34;Implement blog card link preview feature by kyu08 · Pull Request #246 · kyu08/blog&#34; loading=&#34;lazy&#34;&gt;
@@ -324,7 +324,7 @@ Responsive design with d...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;h
 &lt;h3 id=&#34;サッカー&#34;&gt;サッカー&lt;/h3&gt;
 &lt;p&gt;今年からJリーグ（カップ戦も含む）観戦にいくようになった。&lt;/p&gt;
 &lt;p&gt;非日常でめっちゃ楽しい。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;soccer.webp&#34; alt=&#34;soccer.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;soccer.webp&#34; alt=&#34;soccer.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;仕事&#34;&gt;仕事&lt;/h2&gt;
 &lt;p&gt;転職し、2/1から新しい職場で働きはじめた。&lt;/p&gt;
 &lt;p&gt;プロダクトがたくさんのお客様に価値提供をできている実感があり、モチベーション高く働けている。&lt;/p&gt;
@@ -419,7 +419,7 @@ Responsive design with d...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;h
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;detect-unused-dependencies&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; tool-detect-unused-dependencies
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	cargo machete
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以下は不必要な依存関係として&lt;code&gt;tempfile&lt;/code&gt;が検出されている様子。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;cargo-machete.webp&#34; alt=&#34;cargo-machete&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;cargo-machete.webp&#34; alt=&#34;cargo-machete&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;howci&#34;&gt;how(CI)&lt;/h3&gt;
 &lt;p&gt;以下のようなyamlを定義しておくと不要な依存関係がある場合にCIが落ちてくれる。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Detect unused dependencies&lt;/span&gt;
@@ -475,7 +475,7 @@ Responsive design with d...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;h
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;check-licenses&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; tool-check-licenses
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	cargo deny check licenses
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;許可していないライセンスのライブラリに依存していることがわかると以下のようなエラーが出力される。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;cargo-deny.webp&#34; alt=&#34;cargo-deny.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;cargo-deny.webp&#34; alt=&#34;cargo-deny.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;howci-1&#34;&gt;how(CI)&lt;/h3&gt;
 &lt;p&gt;以下のようなyamlを定義しておくと不要な依存関係があるとCIが落ちてくれる。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Check licenses&lt;/span&gt;
@@ -644,15 +644,15 @@ Responsive design with d...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;h
 &lt;h2 id=&#34;というわけで&#34;&gt;というわけで&lt;/h2&gt;
 &lt;p&gt;タイトルの通りだが、GitHub Sponsorsの寄付先に&lt;a href=&#34;https://github.com/sponsors/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;を追加した。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/ratatui/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;とは、手軽にTUIアプリケーションを作成できるRust用のライブラリで、筆者が個人開発しているOSSである&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;fzf-make&lt;/a&gt;でも利用している。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/kyu08/fzf-make/main/static/demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/kyu08/fzf-make/main/static/demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34; loading=&#34;lazy&#34; /&gt;
 &lt;a href=&#34;https://github.com/ratatui/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;のおかげでこんな感じのUIを手軽に実装できている。&lt;/p&gt;
 &lt;!-- textlint-disable ja-technical-writing/ja-no-weak-phrase --&gt;
 &lt;p&gt;Rust製のTUIツールでは非常に幅広く利用されている印象だが、現在のスポンサー数が9人と少なかったので少しでも力になれればということで寄付先に追加した。長期間メンテされる状態が続いてくれると嬉しい。自分にもできそうなバグ修正があれば挑戦してみようと思う。&lt;/p&gt;
 &lt;!-- textlint-disable ja-technical-writing/ja-no-weak-phrase --&gt;
-&lt;p&gt;&lt;img src=&#34;ratatuis-10th-sponsor.webp&#34; alt=&#34;ratatuis-10th-sponsor.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;ratatuis-10th-sponsor.webp&#34; alt=&#34;ratatuis-10th-sponsor.webp&#34; loading=&#34;lazy&#34; /&gt;
 10番目のスポンサーになった様子。&lt;/p&gt;
 &lt;p&gt;これで現在の寄付額は$10/月で、&lt;a href=&#34;https://github.com/sponsors/neovim&#34; target=&#34;_blank&#34; &gt;neovim&lt;/a&gt;と&lt;a href=&#34;https://github.com/sponsors/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;にそれぞれ$5ずつ寄付していることになる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;github-sponsors-logos.webp&#34; alt=&#34;github-sponsors-logos.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;github-sponsors-logos.webp&#34; alt=&#34;github-sponsors-logos.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;他にも寄付したいプロジェクトは山ほどあるので山ほど稼いでいきたい。(あと円高頼む&amp;hellip;)&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;今後ともOSSコミュニティの持続可能性を高めていきたい。&lt;/p&gt;
@@ -774,7 +774,7 @@ Responsive design with d...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;h
 &lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;kyu08/fzf-make&lt;/a&gt;&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;h3 id=&#34;fzf-makeを公開した&#34;&gt;fzf-makeを公開した&lt;/h3&gt;
 &lt;p&gt;こんな感じでMakefileに定義したtargetを曖昧検索で絞り込んで実行できるツールを作った。プレビューウィンドウがあるのが地味に便利なポイントでtargetの内容を確認しつつ実行できる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Rustの理解を深めるのと自分の普段の作業を効率化したくて作ったがその両方が割と達成できているので満足している。特に所有権やスマートポインタに関しては&lt;a href=&#34;https://doc.rust-jp.rs/book-ja/&#34; target=&#34;_blank&#34; &gt;The Rust Programming Language&lt;/a&gt;を読んだときにはイマイチ理解できなかったが実際に自分でコードを書いてコンパイラに指摘されてコードを修正することで理解を深めることができた。&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;最初は身近な人に紹介して使ってもらったりしていたが、ある日面識のない日本人の開発者の方がバグ報告issue&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;を立ててくれて、インターネットの向こう側の人に自分のアイディアが届いて気に入ってもらえて、しかもわざわざバグ報告をしてくれたという事実がとても嬉しかった。&lt;/p&gt;
 &lt;p&gt;当然個人の趣味開発なので副業などとは違い時給を得て開発しているわけではないが、ものづくりを通して他者に喜んでもらうということが自分にとって最高の喜びだとわかっただけでも非常に良い経験だった。自分がOSSコミュニティに貢献したいと考えているのも究極は「人に喜んで欲しいから」なのかもしれない。&lt;/p&gt;
@@ -795,7 +795,7 @@ Responsive design with d...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;h
 &lt;h3 id=&#34;fzf-bookmark-openerを公開した&#34;&gt;fzf-bookmark-openerを公開した&lt;/h3&gt;
 &lt;p&gt;ブックマークをfzfで絞り込んで開くことができるCLIツール。自分が欲しかったので作った。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-bookmark-opener&#34; target=&#34;_blank&#34; &gt;kyu08/fzf-bookmark-opener&lt;/a&gt;&lt;sup id=&#34;fnref:11&#34;&gt;&lt;a href=&#34;#fn:11&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;11&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-bookmark-opener-demo.gif&#34; alt=&#34;fzf-bookmark-opener-demo.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-bookmark-opener-demo.gif&#34; alt=&#34;fzf-bookmark-opener-demo.gif&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;同時期に書いた&lt;a href=&#34;https://github.com/kyu08/gcp-url-generator&#34; target=&#34;_blank&#34; &gt;kyu08/gcp-url-generator&lt;/a&gt;と組み合わせて業務でよく使っている。特定のGCPプロジェクトの特定のGCPサービスのコンソールをターミナルから開きたいことが多いので重宝している。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/ktr0731/go-fuzzyfinder&#34; target=&#34;_blank&#34; &gt;ktr0731/go-fuzzyfinder&lt;/a&gt;のおかげで100行程度のコードでやりたいことが実現できて大変助かった。&lt;/p&gt;
 &lt;h3 id=&#34;買ってよかったもの&#34;&gt;買ってよかったもの&lt;/h3&gt;
@@ -898,9 +898,9 @@ Responsive design with d...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;h
 &lt;/ul&gt;
 &lt;p&gt;くらいだったので5分もかからずにできた。&lt;/p&gt;
 &lt;p&gt;手続きが完了するとこんな感じでSponsorsに自分のアイコンが表示される。(嬉しい)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;sponsors.webp&#34; alt=&#34;sponsors.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;sponsors.webp&#34; alt=&#34;sponsors.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;さらには自分のプロフィール画面にNeovimのアイコンが表示される。組織の一員感がでて地味にいいですねこれ。(結構嬉しい)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;github-profile.webp&#34; alt=&#34;github-profile.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;github-profile.webp&#34; alt=&#34;github-profile.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;日頃から「OSSにお世話になっている分コードを書いて恩返ししたい&amp;hellip;。けどなかなかすぐに解決できそうなissueも見当たらない&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;」みたいなことを思っていたのでまずは寄付という形でOSSに貢献できてよかった。&lt;/p&gt;
 &lt;p&gt;今後はPRでもOSSコミュニティに貢献していくぞという気持ちになった。&lt;/p&gt;
 &lt;h2 id=&#34;と思っていた矢先&#34;&gt;と思っていた矢先&lt;/h2&gt;
@@ -977,16 +977,16 @@ close #56
 &lt;h2 id=&#34;prの作成&#34;&gt;PRの作成&lt;/h2&gt;
 &lt;p&gt;修正内容としては非推奨となった&lt;code&gt;set-output&lt;/code&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;をenvironment filesに置き換えるという簡単なもの。
 ちょうど業務で同様の修正を行っていたので特に詰まることなく修正できた。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;diff.webp&#34; alt=&#34;diff.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;diff.webp&#34; alt=&#34;diff.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;修正内容はたった1行だったが、非同期だし時差もあるしでコミュニケーションの往復が増えることはお互い避けたいはずなのでできるだけ一発でマージしてもらえるように丁寧に背景や動作確認のログを書いた。(自分としても早くマージしてもらえた方が嬉しいし)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;pr.webp&#34; alt=&#34;pr.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;pr.webp&#34; alt=&#34;pr.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;若干ソワソワしながら過ごしていると&#34;&gt;若干ソワソワしながら過ごしていると&lt;/h2&gt;
 &lt;p&gt;PRを送った1日後には見事マージしてもらえた。念願の初OSS contribution！やったね！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;approve.webp&#34; alt=&#34;approve.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;approve.webp&#34; alt=&#34;approve.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;2.2kものrepositoryで使われてるworkflowのcontributorsに自分のアイコンが載るのは結構嬉しい。(自分のプロジェクト&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;でも利用し始めたタイミングだったのでちゃっかりUsed byにもアイコンが載っているｗ)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;contributors.webp&#34; alt=&#34;contributors.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;contributors.webp&#34; alt=&#34;contributors.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;commit logに載っている様子。嬉しい。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;commit-log.webp&#34; alt=&#34;commit-log.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;commit-log.webp&#34; alt=&#34;commit-log.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;ということで&#34;&gt;ということで&lt;/h2&gt;
 &lt;p&gt;これからもOSSコミュニティへの貢献やっていくぞ〜！&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;

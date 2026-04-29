@@ -320,7 +320,7 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">detect-unused-dependencies</span><span style="color:#f92672">:</span> tool-detect-unused-dependencies
 </span></span><span style="display:flex;"><span>	cargo machete
 </span></span></code></pre></div><p>以下は不必要な依存関係として<code>tempfile</code>が検出されている様子。</p>
-<p><img src="cargo-machete.webp" alt="cargo-machete"></p>
+<p><img src="cargo-machete.webp" alt="cargo-machete" loading="lazy" /></p>
 <h3 id="howci">how(CI)<a href="#howci" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>以下のようなyamlを定義しておくと不要な依存関係がある場合にCIが落ちてくれる。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Detect unused dependencies</span>
@@ -376,7 +376,7 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">check-licenses</span><span style="color:#f92672">:</span> tool-check-licenses
 </span></span><span style="display:flex;"><span>	cargo deny check licenses
 </span></span></code></pre></div><p>許可していないライセンスのライブラリに依存していることがわかると以下のようなエラーが出力される。</p>
-<p><img src="cargo-deny.webp" alt="cargo-deny.webp"></p>
+<p><img src="cargo-deny.webp" alt="cargo-deny.webp" loading="lazy" /></p>
 <h3 id="howci-1">how(CI)<a href="#howci-1" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>以下のようなyamlを定義しておくと不要な依存関係があるとCIが落ちてくれる。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Check licenses</span>

@@ -15,7 +15,7 @@
       
       <guid>https://blog.kyu08.com/posts/go-con-mini-in-sendai-2026/</guid>
       <description>2026/02/21(土)に仙台で行われたGo Conference mini in Sendai 2026に参加したのでその内容をまとめる。 Go Conference mini in Sendai 20262026年2月21日（土）</description>
-      <content>&lt;p&gt;&lt;img src=&#34;closing-slide.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;closing-slide.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;2026/02/21(土)に仙台で行われたGo Conference mini in Sendai 2026に参加したのでその内容をまとめる。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://sendaigo.jp/&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://sendaigo.jp/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
@@ -39,7 +39,7 @@
 &lt;li&gt;調べてみたところ&lt;code&gt;line directive&lt;/code&gt;という名前がついているようだった。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
 &lt;li&gt;こんな感じでコンパイラが出力するエラーメッセージなどが上書きされる。
 &lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;line-directive.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;line-directive.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://go.dev/play/p/Thvs9U8Twvj&#34; target=&#34;_blank&#34; &gt;https://go.dev/play/p/Thvs9U8Twvj&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -330,12 +330,12 @@
 &lt;li&gt;土日に仙台でKing Gnuのライブがあった影響か、土曜は仙台駅付近のホテルがめっちゃ高かったので福島まで移動して宿泊してgot aことなきした。（ありがとうアパホテル）&lt;/li&gt;
 &lt;li&gt;福島で食べたお寿司が美味しかった。観光までする（体力的）余裕がなかったのが残念。
 &lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;sushi.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;sushi.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;なんか新幹線が長かった。
 &lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;long-shinkansen.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;long-shinkansen.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -366,7 +366,7 @@
       
       <guid>https://blog.kyu08.com/posts/go-system-programming/</guid>
       <description>『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11</description>
-      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11/4でコミットした日数としてはおおよそ24日ほどだった。)&lt;/p&gt;
 &lt;p&gt;筆者は情報系の学部を出ておらず、CSなどの基礎知識があまりないので大変勉強になった。また、サンプルコードが豊富なので実際に自分のマシン上で動かしながら学ぶことができ解像度を上げながら理解を深めることができた。&lt;/p&gt;
 &lt;p&gt;低レイヤ、コンピューターサイエンスの学習に興味がある方にはとてもおすすめなのでぜひ買って読んでみてください。&lt;/p&gt;
@@ -411,7 +411,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;複数のファイル&lt;code&gt;f1&lt;/code&gt;, &lt;code&gt;f2&lt;/code&gt;を&lt;code&gt;os.Create()&lt;/code&gt;する処理をデバッガーで追ってみたところ、それぞれファイルディスクリプタの値が&lt;code&gt;3&lt;/code&gt;, &lt;code&gt;4&lt;/code&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;となっておりファイルディスクリプタの値が&lt;code&gt;3&lt;/code&gt;からインクリメントされる様子を確認できた。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;delve-neovim.webp&#34; alt=&#34;delve-neovim.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;delve-neovim.webp&#34; alt=&#34;delve-neovim.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;第3章-低レベルアクセスへの入口1ioreader&#34;&gt;第3章 低レベルアクセスへの入口1：io.Reader&lt;/h2&gt;
 &lt;h3 id=&#34;エンディアン変換&#34;&gt;エンディアン変換&lt;/h3&gt;
 &lt;ul&gt;
@@ -614,7 +614,7 @@
 &lt;li&gt;Unixドメインソケットで作成されるのはソケットファイルと呼ばれる特殊なファイルであり、通常のファイルのような実体を持たない。あくまでもプロセス間の高速な通信としてファイルというインターフェースを利用するだけ。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;以下はソケットファイルが作成されている様子。ソケットファイルは先頭が&amp;quot;s&amp;quot;で始まる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;socket-file.webp&#34; alt=&#34;socket-file.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;socket-file.webp&#34; alt=&#34;socket-file.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;unixドメインソケットとtcpのベンチマーク&#34;&gt;UnixドメインソケットとTCPのベンチマーク&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Unixドメインソケットを使った実装とTCPを経由した実装のベンチマークの比較をすると筆者の環境だとUnixドメインソケットの方が10倍ほど高速だった。&lt;/li&gt;
@@ -1259,7 +1259,7 @@
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;こんな感じで動く。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/49891479/218272272-e693c10d-c810-458a-bf46-9c3a4a2fe45a.gif&#34; alt=&#34;demo&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/49891479/218272272-e693c10d-c810-458a-bf46-9c3a4a2fe45a.gif&#34; alt=&#34;demo&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;コードの話&#34;&gt;コードの話&lt;/h2&gt;
 &lt;p&gt;コード自体は大変シンプルで&lt;/p&gt;
 &lt;ol&gt;

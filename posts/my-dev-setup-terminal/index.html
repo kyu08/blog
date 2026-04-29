@@ -280,7 +280,7 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span># done
 </span></span></code></pre></div><p>をファイルに書き込んだうえでvimで開く、という内容のワンライナーです。</p>
 <p>実際に呼び出すとこんな感じです。</p>
-<p><img src="memo.gif" alt="memo"></p>
+<p><img src="memo.gif" alt="memo" loading="lazy" /></p>
 <p>ちなみに筆者は</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span># todo
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> タスクA
@@ -299,7 +299,7 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 子タスクb
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>alias ghw<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gh repo view -w&#39;</span>
 </span></span></code></pre></div><p><code>gh</code>コマンドを利用して現在いるリポジトリをブラウザでGitHubで開くコマンド</p>
-<p><img src="ghw.gif" alt="ghw"></p>
+<p><img src="ghw.gif" alt="ghw" loading="lazy" /></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>alias pbc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;pbcopy &amp;&amp; pbpaste&#39;</span>
 </span></span></code></pre></div><p><code>make test | pbc</code>のように出力をパイプで<code>pbc</code>に渡すとクリップボードにコピーしつつ標準出力に出力してくれる。</p>
 <p>コマンドの出力をコピーしたいけど出力内容もその場で確認したいときに便利。</p>
@@ -353,7 +353,7 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># fzfの設定</span>
 </span></span><span style="display:flex;"><span>export FZF_DEFAULT_OPTS<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;--color=fg+:11 --height 70% --reverse --exit-0 --multi&#39;</span>
 </span></span></code></pre></div><p>これを実際に使うとこんな感じになります。ファジーファインダーを利用して効率的にディレクトリ移動できます。</p>
-<p><img src="fzf-cdr.gif" alt="cdr"></p>
+<p><img src="fzf-cdr.gif" alt="cdr" loading="lazy" /></p>
 <p>やっていることは以下です。</p>
 <ol>
 <li><code>.zshrc</code>に定義したfzf-cdrを実行</li>
@@ -379,7 +379,7 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>zle -N <span style="color:#66d9ef">select</span>-history
 </span></span><span style="display:flex;"><span>bindkey <span style="color:#e6db74">&#39;^r&#39;</span> <span style="color:#66d9ef">select</span>-history
-</span></span></code></pre></div><p><img src="command-history.gif" alt="command-history"></p>
+</span></span></code></pre></div><p><img src="command-history.gif" alt="command-history" loading="lazy" /></p>
 <h2 id="git操作">Git操作<a href="#git操作" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>Git操作のほとんどはGitのTUIクライアントであるLazygitを使っています。</p>
 <p><div class="blogcard" data-url="https://github.com/jesseduffield/lazygit" data-auto-fetch="false">
@@ -393,7 +393,7 @@ if (!doNotTrack) {
 </p>
 <p>Lazygitはターミナル上で動作するリッチなGitクライアントでGitに関する大抵のことを行うことができます。(機能が豊富すぎて何ができて何ができないのかを正確に把握できていない)</p>
 <p>以下はLazygitを使って変更をaddしてcommitしてpushする例です。</p>
-<p><img src="lazygit-push.gif" alt="lazygit-push"></p>
+<p><img src="lazygit-push.gif" alt="lazygit-push" loading="lazy" /></p>
 <p>見やすいですし、<strong>少ないタイプ数で操作できる</strong>点でおすすめです。他にも基本的なブランチ操作はもちろんのこと、<code>git rebase -i</code>相当のこともスピーディーにできるのでよく使っています。</p>
 <p>ちなみに筆者はkdheepak/lazygit.nvimというプラグインを使ってNeovim上からLazygitを呼び出しています。</p>
 <p><div class="blogcard" data-url="https://github.com/kdheepak/lazygit.nvim" data-auto-fetch="false">
@@ -429,7 +429,7 @@ if (!doNotTrack) {
   </a>
 </div>
 </p>
-<p><img src="tokyonight.webp" alt="tokyonight"></p>
+<p><img src="tokyonight.webp" alt="tokyonight" loading="lazy" /></p>
 <p>Alacrittyにはタブ機能がなくタブ的な機能を実現するためにはtmuxなどのターミナルマルチプレクサを利用する必要があるため筆者はtmuxを利用しています。
 設定・プラグインなどは後述しますが、tmuxの操作感も好みなので割と満足しています。</p>
 <p>他にもRust製のターミナルとしてWarp, Weztermなどがありますが筆者の環境ではWarpはNeovimのcolorschemeの反映がうまくできず、Weztermは画面の再描画まわりの不具合が多少あったため、採用しませんでした。(Warp便利そうだしみやすいので使いたかった)</p>
@@ -451,7 +451,7 @@ if (!doNotTrack) {
 <li>現在時刻</li>
 </ul>
 <p>を表示するようにしています。</p>
-<p><img src="tmux-status-line.webp" alt="tmux-status-line"></p>
+<p><img src="tmux-status-line.webp" alt="tmux-status-line" loading="lazy" /></p>
 <p>普段の開発ではプロジェクトごとにウィンドウを開き、必要に応じて切り替える運用にしています。</p>
 <h3 id="ウィンドウの切り替え">ウィンドウの切り替え<a href="#ウィンドウの切り替え" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>筆者はふだんプロジェクトごとのウィンドウに加えてmemo用のウィンドウ・dotfiles用のウィンドウなども開いており、常時ウィンドウが15前後あります。筆者は簡単なタスク管理もmemo用ウィンドウに立ち上げたNeovim内で行っているため、ウィンドウの切り替えを頻繁に行います。</p>
@@ -463,7 +463,7 @@ if (!doNotTrack) {
 <li>選択する</li>
 </ol>
 <p>という手順で行っていましたがウィンドウが増えてくると地味にウィンドウ移動が大変になっていきました。以下は従来のウィンドウ切り替えの様子です。</p>
-<p><img src="tmux-window.gif" alt="tmux-window"></p>
+<p><img src="tmux-window.gif" alt="tmux-window" loading="lazy" /></p>
 <p>どうにかもう少し楽にウィンドウ切り替えをできないかと探していたところsainnhe/tmux-fzfに出会いました。</p>
 <p><div class="blogcard" data-url="https://github.com/sainnhe/tmux-fzf" data-auto-fetch="false">
   <a href="https://github.com/sainnhe/tmux-fzf" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
@@ -491,7 +491,7 @@ sainnhe/tmux-fzfを使うようにしたことでウィンドウ切り替えを<
 <li>選択する</li>
 </ol>
 <p>という手順でできるようになりました。文字にすると違いが伝わりづらいですが、ファジーファインダーを使ってウィンドウの選択を行うことができるようになったことでキーのタイプ数や切り替えの際の脳の負荷を大幅に減らすことができました。</p>
-<p><img src="tmux-fzf.gif" alt="tmux-fzf"></p>
+<p><img src="tmux-fzf.gif" alt="tmux-fzf" loading="lazy" /></p>
 <h2 id="おわりに">おわりに<a href="#おわりに" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>ここまで読んでくださってありがとうございました。</p>
 <p>需要がありそうだったら</p>

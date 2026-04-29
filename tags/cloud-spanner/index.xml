@@ -93,7 +93,7 @@
 &lt;li&gt;シャーディングを使用して時系列的に連続したデータを複数のスプリットに分散する&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;この例ではPKに&lt;code&gt;ShardId&lt;/code&gt;(0~N-1)を追加する方法を紹介している。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;spanner-sharding.webp&#34; alt=&#34;spanner-sharding.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;spanner-sharding.webp&#34; alt=&#34;spanner-sharding.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;スキーマ設計のベスト-プラクティス--spanner--google-cloud&#34;&gt;スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud&lt;/h2&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://cloud.google.com/spanner/docs/schema-design?hl=ja&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://cloud.google.com/spanner/docs/schema-design?hl=ja&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
@@ -290,9 +290,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;結果&#34;&gt;結果&lt;/h4&gt;
 &lt;p&gt;結論からいうとどちらのクエリでも同様にインデックスを利用できていた。おそらくSpannerのオプティマイザがいい感じに判断してくれていると思われる。以下が実際の実行計画。&lt;/p&gt;
 &lt;p&gt;記事で紹介されていたクエリ
-&lt;img src=&#34;original.webp&#34; alt=&#34;original.webp&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;original.webp&#34; alt=&#34;original.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;CompanyId, EntryShardIdの順番を逆にしてみたクエリ
-&lt;img src=&#34;swap.webp&#34; alt=&#34;swap.webp&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;swap.webp&#34; alt=&#34;swap.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;cloud-spanner-におけるトランザクションのロックについて&#34;&gt;Cloud Spanner におけるトランザクションのロックについて&lt;/h2&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;

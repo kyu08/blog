@@ -121,7 +121,7 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;is:pr archived:false is:closed author:@me is:public -user:@me created:2024-01-01..2024-12-31 
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;を指定して検索するとこんな感じで表示される。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;pulls.webp&#34; alt=&#34;pulls&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;pulls.webp&#34; alt=&#34;pulls&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;余談&#34;&gt;余談&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;orgを所属組織とかに絞って検索すれば仕事の振り返りとかにも使えそう。&lt;/li&gt;

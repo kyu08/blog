@@ -59,10 +59,10 @@
 &lt;p&gt;5年くらい前に買ったM1 MacBook Air(16GB RAM)の物持ちが良すぎて新しいMacを買うタイミングがなかなか来ない。新しいMacを買うのは楽しいので買いたい気持ちもありつついかんせん困ってないのでなあ&amp;hellip;の気持ち。&lt;/p&gt;
 &lt;h2 id=&#34;エディタ&#34;&gt;エディタ&lt;/h2&gt;
 &lt;p&gt;（就職した）2021年くらいからNeovimを使っている。厳密には2022年ごろまではJetBrains系のエディタと併用していたが、そこからはNeovimのみを使っている。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;neovim.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;neovim.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;キーボードだけで操作しやすいのと起動が早いのとカスタマイズしやすいのが好きでつかっている。（もちろんvimの操作性も気に入っている）&lt;/p&gt;
 &lt;p&gt;最近はこんな感じで&lt;a href=&#34;https://github.com/sindrets/diffview.nvim&#34; target=&#34;_blank&#34; &gt;diffview.nvim&lt;/a&gt;を使ってPRのdiffはすべてNeovim上で見るようにしている。コードをレビューしていると周辺の実装も含めて確認したいことがよくあるので、エディタ上でレビューしているとすぐに該当ファイルに飛べて便利。（&lt;a href=&#34;https://github.com/pwntester/octo.nvim&#34; target=&#34;_blank&#34; &gt;octo.nvim&lt;/a&gt;にコメント周りのバグがあったのでレビューコメントの書き込みはGitHubのWebUIから行っている。）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;neovim-pr-review.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;neovim-pr-review.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/sindrets/diffview.nvim&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/sindrets/diffview.nvim&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
       &lt;img src=&#34;https://opengraph.githubassets.com/25191950b2cb7462c7f1cc4e494445fb712741740f320073014779957dc0fdab/sindrets/diffview.nvim&#34; alt=&#34;GitHub - sindrets/diffview.nvim: Single tabpage interface for easily cycling through diffs for all modified files for any git rev.&#34; loading=&#34;lazy&#34;&gt;
@@ -115,9 +115,9 @@
 &lt;/p&gt;
 &lt;p&gt;前述の通りalacrittyとの相性がいい感じなのでよほどのことがない限りこの組み合わせは変えなさそう。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;Status Lineはこんな感じで画面下側にwindow名と現在時刻を表示している。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;tmux.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tmux.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;詳しくは後述するが、&lt;a href=&#34;https://github.com/nvim-orgmode/orgmode&#34; target=&#34;_blank&#34; &gt;nvim-orgmode/orgmode&lt;/a&gt;でClock In(時間計測)しているタスクがあるときはそのタスク名と経過時間をStatus Lineに表示するようにしている。1つのタスクに集中できて割と作業が捗っている。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;tmux-org-task.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tmux-org-task.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;その他のtmuxの設定とか工夫を紹介する記事は別で書きたい。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/zellij-org/zellij&#34; target=&#34;_blank&#34; &gt;Zellij&lt;/a&gt;も試したことはあるが、自分の環境だとなぜか表示が崩れてしまったので使っていない。&lt;/p&gt;
 &lt;h2 id=&#34;シェル&#34;&gt;シェル&lt;/h2&gt;
@@ -154,9 +154,9 @@
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;こんな感じでk8sのcontextとnamespaceを表示するようにしている。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;zsh.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;zsh.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;誤ってprod環境を壊すことがないようにこんな感じでcontextに&lt;code&gt;prod&lt;/code&gt;という文字列が含まれていたら目立つようにしている。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;zsh-k8s.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;zsh-k8s.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;設定はこんな感じ。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;kubernetes&lt;/span&gt;]
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;format&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;[[$symbol]($style)\[ctx\]$context \[ns\]$namespace]($style) &amp;#39;&lt;/span&gt;
@@ -230,7 +230,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## DONE
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; コードレビュー
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Neovimでタスク管理できるのとタスクに優先度、期日を設定してそれをいい感じにソートして表示してくれるのがかなり肌にあっていて気に入っている。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;nvim-orgmode.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;nvim-orgmode.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;最近は時間の使い方を振り返る目的でClock In的な機能を使ってタスクごとの所要時間も管理してみている。&lt;/p&gt;
 &lt;p&gt;これに関してはそのうち別の記事として詳しく書きたい。&lt;/p&gt;
 &lt;h2 id=&#34;ブラウザ&#34;&gt;ブラウザ&lt;/h2&gt;
@@ -276,7 +276,7 @@
   &lt;/a&gt;
 &lt;/div&gt;
 
-&lt;img src=&#34;lazygit.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;lazygit.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;gitのTUIクライアント。&lt;/li&gt;
 &lt;li&gt;gitの操作はすべてlazygitでやっている。&lt;/li&gt;
@@ -284,7 +284,7 @@
 &lt;li&gt;&lt;code&gt;git rebase -i&lt;/code&gt;相当のことができたり、commitの一部だけstagingに戻したりと細かいこともできる。&lt;/li&gt;
 &lt;li&gt;ここ2年くらいで細々とPRを送っており、去年末頃に9番目にcommitが多い人になることができた。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;lazygit-contibutors.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;lazygit-contibutors.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;k9s&#34;&gt;k9s&lt;/h3&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/derailed/k9s&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/derailed/k9s&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
@@ -295,8 +295,8 @@
   &lt;/a&gt;
 &lt;/div&gt;
 
-&lt;img src=&#34;k9s.webp&#34; alt=&#34;&#34;&gt;
-&lt;img src=&#34;k9s-pulse.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;k9s.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;
+&lt;img src=&#34;k9s-pulse.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;GKEのリソースを見たり操作したりするときに使っている。とても便利。（画像はサンプル用にkindでローカル起動したクラスタのもの）&lt;/li&gt;
 &lt;li&gt;ログはあまり使いこなせてないので普段の開発ではDatadogやCloud Loggingを見ていることが多い。&lt;/li&gt;
@@ -304,7 +304,7 @@
 &lt;p&gt;&lt;strong&gt;&amp;lt;PRここから&amp;gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h3 id=&#34;fzf-make&#34;&gt;fzf-make&lt;/h3&gt;
 &lt;p&gt;fzf-makeというmake targetをfuzzy finder形式で選択、実行できるTUIを開発している。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-make.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make.gif&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;コマンド名やその内容を覚えずとも楽に実行できたり、履歴機能があるのが特徴。&lt;/p&gt;
 &lt;p&gt;現在は&lt;code&gt;Makefile&lt;/code&gt;に定義されたmake target以外にも以下のようなコマンドに対応している。&lt;/p&gt;
 &lt;ul&gt;
@@ -338,7 +338,7 @@
 &lt;h2 id=&#34;キーボード&#34;&gt;キーボード&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;7sPro
-&lt;img src=&#34;7spro.webp&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;7spro.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;
 &lt;ul&gt;
 &lt;li&gt;2021/8から使っている。今は家でメインのキーボードとして使っている。&lt;/li&gt;
 &lt;li&gt;キースイッチは&lt;a href=&#34;https://shop.yushakobo.jp/products/5659&#34; target=&#34;_blank&#34; &gt;Yushakobo Fairy Silent Linear Switch&lt;/a&gt;を使用。&lt;/li&gt;
@@ -396,7 +396,7 @@
       <guid>https://blog.kyu08.com/posts/vim-conf-2025/</guid>
       <description>2025年11月2日（日）にアキバプラザ・アキバホールで開催されたVimConf 2025 Smallに参加した。 こちらはノベルティ。食器とかお箸はた</description>
       <content>&lt;p&gt;2025年11月2日（日）にアキバプラザ・アキバホールで開催された&lt;a href=&#34;https://vimconf.org/2025/ja/&#34; target=&#34;_blank&#34; &gt;VimConf 2025 Small&lt;/a&gt;に参加した。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;vim-conf-2025.webp&#34; alt=&#34;vim-conf-2025.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;vim-conf-2025.webp&#34; alt=&#34;vim-conf-2025.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;こちらはノベルティ。食器とかお箸はたくさんあっても困らないのでありがたい。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;お茶碗&lt;/li&gt;
@@ -405,7 +405,7 @@
 &lt;li&gt;巾着&lt;/li&gt;
 &lt;li&gt;お茶&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;vim-conf-novelty.webp&#34; alt=&#34;vim-conf-novelty.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;vim-conf-novelty.webp&#34; alt=&#34;vim-conf-novelty.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;nvim-cmp-retrospective-exploring-completion-and-facing-foss-challenges&#34;&gt;nvim-cmp retrospective: Exploring Completion and Facing FOSS Challenges&lt;/h2&gt;
 &lt;p&gt;hrsh7thさんによる発表。&lt;/p&gt;
 &lt;h3 id=&#34;explore-completion&#34;&gt;Explore Completion&lt;/h3&gt;
@@ -788,7 +788,7 @@
 &lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;kyu08/fzf-make&lt;/a&gt;&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;h3 id=&#34;fzf-makeを公開した&#34;&gt;fzf-makeを公開した&lt;/h3&gt;
 &lt;p&gt;こんな感じでMakefileに定義したtargetを曖昧検索で絞り込んで実行できるツールを作った。プレビューウィンドウがあるのが地味に便利なポイントでtargetの内容を確認しつつ実行できる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Rustの理解を深めるのと自分の普段の作業を効率化したくて作ったがその両方が割と達成できているので満足している。特に所有権やスマートポインタに関しては&lt;a href=&#34;https://doc.rust-jp.rs/book-ja/&#34; target=&#34;_blank&#34; &gt;The Rust Programming Language&lt;/a&gt;を読んだときにはイマイチ理解できなかったが実際に自分でコードを書いてコンパイラに指摘されてコードを修正することで理解を深めることができた。&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;最初は身近な人に紹介して使ってもらったりしていたが、ある日面識のない日本人の開発者の方がバグ報告issue&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;を立ててくれて、インターネットの向こう側の人に自分のアイディアが届いて気に入ってもらえて、しかもわざわざバグ報告をしてくれたという事実がとても嬉しかった。&lt;/p&gt;
 &lt;p&gt;当然個人の趣味開発なので副業などとは違い時給を得て開発しているわけではないが、ものづくりを通して他者に喜んでもらうということが自分にとって最高の喜びだとわかっただけでも非常に良い経験だった。自分がOSSコミュニティに貢献したいと考えているのも究極は「人に喜んで欲しいから」なのかもしれない。&lt;/p&gt;
@@ -809,7 +809,7 @@
 &lt;h3 id=&#34;fzf-bookmark-openerを公開した&#34;&gt;fzf-bookmark-openerを公開した&lt;/h3&gt;
 &lt;p&gt;ブックマークをfzfで絞り込んで開くことができるCLIツール。自分が欲しかったので作った。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-bookmark-opener&#34; target=&#34;_blank&#34; &gt;kyu08/fzf-bookmark-opener&lt;/a&gt;&lt;sup id=&#34;fnref:11&#34;&gt;&lt;a href=&#34;#fn:11&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;11&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-bookmark-opener-demo.gif&#34; alt=&#34;fzf-bookmark-opener-demo.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-bookmark-opener-demo.gif&#34; alt=&#34;fzf-bookmark-opener-demo.gif&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;同時期に書いた&lt;a href=&#34;https://github.com/kyu08/gcp-url-generator&#34; target=&#34;_blank&#34; &gt;kyu08/gcp-url-generator&lt;/a&gt;と組み合わせて業務でよく使っている。特定のGCPプロジェクトの特定のGCPサービスのコンソールをターミナルから開きたいことが多いので重宝している。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/ktr0731/go-fuzzyfinder&#34; target=&#34;_blank&#34; &gt;ktr0731/go-fuzzyfinder&lt;/a&gt;のおかげで100行程度のコードでやりたいことが実現できて大変助かった。&lt;/p&gt;
 &lt;h3 id=&#34;買ってよかったもの&#34;&gt;買ってよかったもの&lt;/h3&gt;
@@ -904,10 +904,10 @@
 &lt;p&gt;ファイルをマークしてquick_menu(マークしたファイルの一覧)からファイルを開くことができる。操作している様子は以下の通り。&lt;/p&gt;
 &lt;h3 id=&#34;1-ファイルをマークして&#34;&gt;1. ファイルをマークして&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;:lua require(&amp;quot;harpoon.mark&amp;quot;).add_file()&lt;/code&gt;を実行してファイルをマーク&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;add-file.gif&#34; alt=&#34;add-file&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;add-file.gif&#34; alt=&#34;add-file&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;2-quick_menuからファイルを開く&#34;&gt;2. quick_menuからファイルを開く&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;:lua require(&amp;quot;harpoon.ui&amp;quot;).toggle_quick_menu()&lt;/code&gt;を実行してマークしたファイル一覧からファイルを開く&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;toggle-quick-menu.gif&#34; alt=&#34;toggle-quick-menu&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;toggle-quick-menu.gif&#34; alt=&#34;toggle-quick-menu&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;機能は他にもありそう&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;だが筆者はこの機能しか使ってないので割愛。&lt;/p&gt;
 &lt;h2 id=&#34;嬉しさ&#34;&gt;嬉しさ&lt;/h2&gt;
 &lt;p&gt;個人開発などファイル数が少ないプロジェクトだとそこまで効果を感じないが業務では(当然だが)一定数のファイルがあり、かつ定義ジャンプを繰り返しているとバッファにはたくさんファイルが存在しているのでtelescopeなどのfuzzy-finderプラグインを使ったとしてもファイルの行き来には多少時間がかかってしまっていた。&lt;/p&gt;
@@ -916,12 +916,12 @@
 &lt;h3 id=&#34;1-マークしたファイルが一度エディタを閉じても保持される&#34;&gt;1. マークしたファイルが一度エディタを閉じても保持される&lt;/h3&gt;
 &lt;p&gt;LSPが不調だったりしてNeovimを再起動することがたまにあるので地味に便利。&lt;/p&gt;
 &lt;p&gt;(一度Neovimを閉じてもマークしたファイルが保持されている様子。)
-&lt;img src=&#34;saved-quick-menu.gif&#34; alt=&#34;saved-quick-menu&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;saved-quick-menu.gif&#34; alt=&#34;saved-quick-menu&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;2-自由に編集できる-quick_menu&#34;&gt;2. 自由に編集できる quick_menu&lt;/h3&gt;
 &lt;p&gt;作者自身もお気に入りと言及しているが&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;quick_menuは純粋なテキストなので自由に編集できる。&lt;/p&gt;
 &lt;p&gt;つまりこんな感じで&lt;code&gt;dd&lt;/code&gt; -&amp;gt; &lt;code&gt;y&lt;/code&gt;のようなコマンドで自由に順番を入れ替えたり削除したりできる。普段のvimの操作感で扱えるのでとても直感的で使いやすくて嬉しい。&lt;/p&gt;
 &lt;p&gt;quick_menuを自由に編集している様子&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;
-&lt;img src=&#34;editable-quick-menu.gif&#34; alt=&#34;editable-quick-menu&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;editable-quick-menu.gif&#34; alt=&#34;editable-quick-menu&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;気になった方はぜひ試してみてください。&lt;/p&gt;
 &lt;p&gt;インストール方法はこちら&lt;/p&gt;
@@ -985,9 +985,9 @@
 &lt;/ul&gt;
 &lt;p&gt;くらいだったので5分もかからずにできた。&lt;/p&gt;
 &lt;p&gt;手続きが完了するとこんな感じでSponsorsに自分のアイコンが表示される。(嬉しい)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;sponsors.webp&#34; alt=&#34;sponsors.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;sponsors.webp&#34; alt=&#34;sponsors.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;さらには自分のプロフィール画面にNeovimのアイコンが表示される。組織の一員感がでて地味にいいですねこれ。(結構嬉しい)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;github-profile.webp&#34; alt=&#34;github-profile.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;github-profile.webp&#34; alt=&#34;github-profile.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;日頃から「OSSにお世話になっている分コードを書いて恩返ししたい&amp;hellip;。けどなかなかすぐに解決できそうなissueも見当たらない&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;」みたいなことを思っていたのでまずは寄付という形でOSSに貢献できてよかった。&lt;/p&gt;
 &lt;p&gt;今後はPRでもOSSコミュニティに貢献していくぞという気持ちになった。&lt;/p&gt;
 &lt;h2 id=&#34;と思っていた矢先&#34;&gt;と思っていた矢先&lt;/h2&gt;
@@ -1050,7 +1050,7 @@ close #56
 &lt;p&gt;全然大したことをやっているわけではないですがTmux, Neovimやそれらのプラグインの普及活動になれば嬉しいので書いてみます。&lt;/p&gt;
 &lt;h2 id=&#34;動作イメージ&#34;&gt;動作イメージ&lt;/h2&gt;
 &lt;p&gt;こんな感じでvanillaのGoプロジェクトをTmuxのwindowに開いておいて、確認したくなったときにすぐwindowを切り替えてコードを書いて実行結果を確認できるようにしている。(Gifの例はGoの書式指定子&lt;code&gt;%+v&lt;/code&gt;の動作を忘れて試してみているところ)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;go-playground.gif&#34; alt=&#34;go-playground&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;go-playground.gif&#34; alt=&#34;go-playground&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Gifでやっていることは以下&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;GoのSandbox環境を開いたNeovimが起動しているwindowに切り替え&lt;/li&gt;
@@ -1105,14 +1105,14 @@ close #56
 &lt;p&gt;最後に補足としてGif内で使っているNeovimのプラグインを紹介します。&lt;/p&gt;
 &lt;h3 id=&#34;ターミナル表示&#34;&gt;ターミナル表示&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/voldikss/vim-floaterm&#34; target=&#34;_blank&#34; &gt;voldikss/vim-floaterm&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;floaterm.gif&#34; alt=&#34;floaterm&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;floaterm.gif&#34; alt=&#34;floaterm&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;GoのSandbox環境の&lt;code&gt;main.go&lt;/code&gt;に書いたスクリプトを実行するために、Neovimからターミナルを表示するシーンで使っている。&lt;/p&gt;
 &lt;p&gt;コード編集してサクっと動作確認したいときなどに便利。(といいつつ最近動作の重さが目立ってきたので&lt;code&gt;&amp;lt;C-z&amp;gt;&lt;/code&gt;でNeovimの起動元に戻ってターミナルを操作することが多い)&lt;/p&gt;
 &lt;h3 id=&#34;カーソル移動&#34;&gt;カーソル移動&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/yuki-yano/fuzzy-motion.vim&#34; target=&#34;_blank&#34; &gt;yuki-yano/fuzzy-motion.vim&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;fmt.Printf(&amp;quot;u: %v\n&amp;quot;, u)&lt;/code&gt;の&lt;code&gt;u&lt;/code&gt;から&lt;code&gt;%v&lt;/code&gt;の位置にカーソル移動する際に使っているプラグイン。&lt;/p&gt;
 &lt;p&gt;動作のイメージはこんな感じ。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fuzzy-motion.gif&#34; alt=&#34;fuzzy-motion&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fuzzy-motion.gif&#34; alt=&#34;fuzzy-motion&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;起動すると文字がグレーアウトするのでジャンプしたい文字列を入力するとその文字にジャンプするためのキーワードを表示してくれるというプラグイン。&lt;/p&gt;
 &lt;p&gt;同様の機能をもつプラグインとしてはeasy-motionなどのプラグインが有名だが、fuzzy-motionはジャンプしたい文字列をfuzzy-finder形式で絞り込んでくれるのが大きな特徴。(詳しくはリポジトリのREADME参照)&lt;/p&gt;
 &lt;p&gt;筆者はノーマルモードで&lt;code&gt;f&lt;/code&gt;キーを押下するとプラグインが起動するように設定している。&lt;/p&gt;
@@ -1121,7 +1121,7 @@ close #56
 &lt;p&gt;&lt;a href=&#34;https://github.com/neoclide/coc.nvim&#34; target=&#34;_blank&#34; &gt;neoclide/coc.nvim&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Language Serverをホストするためのプラグイン。&lt;/p&gt;
 &lt;p&gt;すごく簡単にいうと補完や関数定義を表示したり定義ジャンプできるようにしたりしてくれる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;coc-nvim.gif&#34; alt=&#34;coc-nvim&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;coc-nvim.gif&#34; alt=&#34;coc-nvim&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;以上です。ここまで読んでくれてありがとうございました。&lt;/p&gt;
 </content>
     </item>

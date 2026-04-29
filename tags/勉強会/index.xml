@@ -15,7 +15,7 @@
       
       <guid>https://blog.kyu08.com/posts/go-con-mini-in-sendai-2026/</guid>
       <description>2026/02/21(土)に仙台で行われたGo Conference mini in Sendai 2026に参加したのでその内容をまとめる。 Go Conference mini in Sendai 20262026年2月21日（土）</description>
-      <content>&lt;p&gt;&lt;img src=&#34;closing-slide.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;closing-slide.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;2026/02/21(土)に仙台で行われたGo Conference mini in Sendai 2026に参加したのでその内容をまとめる。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://sendaigo.jp/&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://sendaigo.jp/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
@@ -39,7 +39,7 @@
 &lt;li&gt;調べてみたところ&lt;code&gt;line directive&lt;/code&gt;という名前がついているようだった。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
 &lt;li&gt;こんな感じでコンパイラが出力するエラーメッセージなどが上書きされる。
 &lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;line-directive.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;line-directive.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://go.dev/play/p/Thvs9U8Twvj&#34; target=&#34;_blank&#34; &gt;https://go.dev/play/p/Thvs9U8Twvj&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -330,12 +330,12 @@
 &lt;li&gt;土日に仙台でKing Gnuのライブがあった影響か、土曜は仙台駅付近のホテルがめっちゃ高かったので福島まで移動して宿泊してgot aことなきした。（ありがとうアパホテル）&lt;/li&gt;
 &lt;li&gt;福島で食べたお寿司が美味しかった。観光までする（体力的）余裕がなかったのが残念。
 &lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;sushi.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;sushi.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;なんか新幹線が長かった。
 &lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;long-shinkansen.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;long-shinkansen.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -367,7 +367,7 @@
       <guid>https://blog.kyu08.com/posts/vim-conf-2025/</guid>
       <description>2025年11月2日（日）にアキバプラザ・アキバホールで開催されたVimConf 2025 Smallに参加した。 こちらはノベルティ。食器とかお箸はた</description>
       <content>&lt;p&gt;2025年11月2日（日）にアキバプラザ・アキバホールで開催された&lt;a href=&#34;https://vimconf.org/2025/ja/&#34; target=&#34;_blank&#34; &gt;VimConf 2025 Small&lt;/a&gt;に参加した。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;vim-conf-2025.webp&#34; alt=&#34;vim-conf-2025.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;vim-conf-2025.webp&#34; alt=&#34;vim-conf-2025.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;こちらはノベルティ。食器とかお箸はたくさんあっても困らないのでありがたい。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;お茶碗&lt;/li&gt;
@@ -376,7 +376,7 @@
 &lt;li&gt;巾着&lt;/li&gt;
 &lt;li&gt;お茶&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;vim-conf-novelty.webp&#34; alt=&#34;vim-conf-novelty.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;vim-conf-novelty.webp&#34; alt=&#34;vim-conf-novelty.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;nvim-cmp-retrospective-exploring-completion-and-facing-foss-challenges&#34;&gt;nvim-cmp retrospective: Exploring Completion and Facing FOSS Challenges&lt;/h2&gt;
 &lt;p&gt;hrsh7thさんによる発表。&lt;/p&gt;
 &lt;h3 id=&#34;explore-completion&#34;&gt;Explore Completion&lt;/h3&gt;
@@ -547,8 +547,8 @@
       <guid>https://blog.kyu08.com/posts/fp-matsuri-2025/</guid>
       <description>2025/06/14(土)、2025/06/15(日)に中野セントラルパークで行われた関数型まつり2025に参加した。 筆者はElmやRust</description>
       <content>&lt;p&gt;2025/06/14(土)、2025/06/15(日)に中野セントラルパークで行われた関数型まつり2025に参加した。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;nakano-central-park.webp&#34; alt=&#34;nakano-central-park&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;pop.webp&#34; alt=&#34;pop&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;nakano-central-park.webp&#34; alt=&#34;nakano-central-park&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;pop.webp&#34; alt=&#34;pop&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;筆者はElmやRustの開発体験を気に入っており、Webアプリケーションのサーバーサイドを関数型言語で書くことに興味があったので参加してみた。&lt;/p&gt;
 &lt;h2 id=&#34;関数型言語テイスティング-haskell-scala-clojure-elixirを比べて味わう関数型プログラミングの旨さ---lagénorhynqueカマイルカさん&#34;&gt;関数型言語テイスティング: Haskell, Scala, Clojure, Elixirを比べて味わう関数型プログラミングの旨さ - lagénorhynque/カマイルカさん&lt;/h2&gt;
 &lt;p&gt;lagénorhynque/カマイルカさんによるHaskell, Scala, Clojure, Elixirの紹介と比較を行う発表。&lt;/p&gt;
@@ -846,18 +846,18 @@
 &lt;h2 id=&#34;スポンサーブース&#34;&gt;スポンサーブース&lt;/h2&gt;
 &lt;p&gt;Jane Streetのエンジニアの方にお聞きしたがJane StreetではフロントエンドとサーバーサイドをOCamlで書いているらしい（！）ブースでお話した方も関数型言語が書きたくて入社したそうで、関数型言語への愛を感じた。&lt;/p&gt;
 &lt;p&gt;ブースでいただいたノベルティのTシャツもめっちゃOCamlだった。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;jane-street.webp&#34; alt=&#34;jane-street&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;jane-street.webp&#34; alt=&#34;jane-street&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;ノベルティ&#34;&gt;ノベルティ&lt;/h2&gt;
 &lt;p&gt;入場時にロゴ入りのトートバッグがもらえた。
-&lt;img src=&#34;bag.webp&#34; alt=&#34;bag&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;bag.webp&#34; alt=&#34;bag&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Nulabさんのノベルティのマイクロファイバークロス。実用的でありがたい。
-&lt;img src=&#34;nulab.webp&#34; alt=&#34;nulab&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;nulab.webp&#34; alt=&#34;nulab&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;今は業務で関数型言語を使うことはないが、関数型言語の考え方を取り入れることで非関数型言語でもより良いコードを書けるようになると改めて感じた。&lt;/p&gt;
 &lt;p&gt;個人で初めてオフラインの勉強会/カンファレンスに参加したが普通に楽しかったのでまた行ってみようと思う。&lt;/p&gt;
 &lt;h2 id=&#34;つけ麺情報&#34;&gt;つけ麺情報&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://tabelog.com/tokyo/A1319/A131902/13115487&#34; target=&#34;_blank&#34; &gt;二代目えん寺&lt;/a&gt;がとても美味しかった。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;tsukemen.webp&#34; alt=&#34;tsukemen&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tsukemen.webp&#34; alt=&#34;tsukemen&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;

@@ -107,7 +107,7 @@
 &lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;kyu08/fzf-make&lt;/a&gt;&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;h3 id=&#34;fzf-makeを公開した&#34;&gt;fzf-makeを公開した&lt;/h3&gt;
 &lt;p&gt;こんな感じでMakefileに定義したtargetを曖昧検索で絞り込んで実行できるツールを作った。プレビューウィンドウがあるのが地味に便利なポイントでtargetの内容を確認しつつ実行できる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Rustの理解を深めるのと自分の普段の作業を効率化したくて作ったがその両方が割と達成できているので満足している。特に所有権やスマートポインタに関しては&lt;a href=&#34;https://doc.rust-jp.rs/book-ja/&#34; target=&#34;_blank&#34; &gt;The Rust Programming Language&lt;/a&gt;を読んだときにはイマイチ理解できなかったが実際に自分でコードを書いてコンパイラに指摘されてコードを修正することで理解を深めることができた。&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;最初は身近な人に紹介して使ってもらったりしていたが、ある日面識のない日本人の開発者の方がバグ報告issue&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;を立ててくれて、インターネットの向こう側の人に自分のアイディアが届いて気に入ってもらえて、しかもわざわざバグ報告をしてくれたという事実がとても嬉しかった。&lt;/p&gt;
 &lt;p&gt;当然個人の趣味開発なので副業などとは違い時給を得て開発しているわけではないが、ものづくりを通して他者に喜んでもらうということが自分にとって最高の喜びだとわかっただけでも非常に良い経験だった。自分がOSSコミュニティに貢献したいと考えているのも究極は「人に喜んで欲しいから」なのかもしれない。&lt;/p&gt;
@@ -128,7 +128,7 @@
 &lt;h3 id=&#34;fzf-bookmark-openerを公開した&#34;&gt;fzf-bookmark-openerを公開した&lt;/h3&gt;
 &lt;p&gt;ブックマークをfzfで絞り込んで開くことができるCLIツール。自分が欲しかったので作った。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-bookmark-opener&#34; target=&#34;_blank&#34; &gt;kyu08/fzf-bookmark-opener&lt;/a&gt;&lt;sup id=&#34;fnref:11&#34;&gt;&lt;a href=&#34;#fn:11&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;11&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-bookmark-opener-demo.gif&#34; alt=&#34;fzf-bookmark-opener-demo.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-bookmark-opener-demo.gif&#34; alt=&#34;fzf-bookmark-opener-demo.gif&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;同時期に書いた&lt;a href=&#34;https://github.com/kyu08/gcp-url-generator&#34; target=&#34;_blank&#34; &gt;kyu08/gcp-url-generator&lt;/a&gt;と組み合わせて業務でよく使っている。特定のGCPプロジェクトの特定のGCPサービスのコンソールをターミナルから開きたいことが多いので重宝している。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/ktr0731/go-fuzzyfinder&#34; target=&#34;_blank&#34; &gt;ktr0731/go-fuzzyfinder&lt;/a&gt;のおかげで100行程度のコードでやりたいことが実現できて大変助かった。&lt;/p&gt;
 &lt;h3 id=&#34;買ってよかったもの&#34;&gt;買ってよかったもの&lt;/h3&gt;

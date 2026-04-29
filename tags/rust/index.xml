@@ -158,7 +158,7 @@
       
       <guid>https://blog.kyu08.com/posts/understanding-rust-from-concepts/</guid>
       <description>Rustのことをもっと理解りたくて『コンセプトから理解するRust』を読んだ。 コンセプトから理解するRust | 技術評論社Rustはメモリ安全</description>
-      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Rustのことをもっと理解りたくて『コンセプトから理解するRust』を読んだ。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://gihyo.jp/book/2022/978-4-297-12562-2&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://gihyo.jp/book/2022/978-4-297-12562-2&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
@@ -233,8 +233,8 @@
       <guid>https://blog.kyu08.com/posts/fp-matsuri-2025/</guid>
       <description>2025/06/14(土)、2025/06/15(日)に中野セントラルパークで行われた関数型まつり2025に参加した。 筆者はElmやRust</description>
       <content>&lt;p&gt;2025/06/14(土)、2025/06/15(日)に中野セントラルパークで行われた関数型まつり2025に参加した。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;nakano-central-park.webp&#34; alt=&#34;nakano-central-park&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;pop.webp&#34; alt=&#34;pop&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;nakano-central-park.webp&#34; alt=&#34;nakano-central-park&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;pop.webp&#34; alt=&#34;pop&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;筆者はElmやRustの開発体験を気に入っており、Webアプリケーションのサーバーサイドを関数型言語で書くことに興味があったので参加してみた。&lt;/p&gt;
 &lt;h2 id=&#34;関数型言語テイスティング-haskell-scala-clojure-elixirを比べて味わう関数型プログラミングの旨さ---lagénorhynqueカマイルカさん&#34;&gt;関数型言語テイスティング: Haskell, Scala, Clojure, Elixirを比べて味わう関数型プログラミングの旨さ - lagénorhynque/カマイルカさん&lt;/h2&gt;
 &lt;p&gt;lagénorhynque/カマイルカさんによるHaskell, Scala, Clojure, Elixirの紹介と比較を行う発表。&lt;/p&gt;
@@ -532,18 +532,18 @@
 &lt;h2 id=&#34;スポンサーブース&#34;&gt;スポンサーブース&lt;/h2&gt;
 &lt;p&gt;Jane Streetのエンジニアの方にお聞きしたがJane StreetではフロントエンドとサーバーサイドをOCamlで書いているらしい（！）ブースでお話した方も関数型言語が書きたくて入社したそうで、関数型言語への愛を感じた。&lt;/p&gt;
 &lt;p&gt;ブースでいただいたノベルティのTシャツもめっちゃOCamlだった。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;jane-street.webp&#34; alt=&#34;jane-street&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;jane-street.webp&#34; alt=&#34;jane-street&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;ノベルティ&#34;&gt;ノベルティ&lt;/h2&gt;
 &lt;p&gt;入場時にロゴ入りのトートバッグがもらえた。
-&lt;img src=&#34;bag.webp&#34; alt=&#34;bag&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;bag.webp&#34; alt=&#34;bag&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Nulabさんのノベルティのマイクロファイバークロス。実用的でありがたい。
-&lt;img src=&#34;nulab.webp&#34; alt=&#34;nulab&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;nulab.webp&#34; alt=&#34;nulab&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;今は業務で関数型言語を使うことはないが、関数型言語の考え方を取り入れることで非関数型言語でもより良いコードを書けるようになると改めて感じた。&lt;/p&gt;
 &lt;p&gt;個人で初めてオフラインの勉強会/カンファレンスに参加したが普通に楽しかったのでまた行ってみようと思う。&lt;/p&gt;
 &lt;h2 id=&#34;つけ麺情報&#34;&gt;つけ麺情報&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://tabelog.com/tokyo/A1319/A131902/13115487&#34; target=&#34;_blank&#34; &gt;二代目えん寺&lt;/a&gt;がとても美味しかった。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;tsukemen.webp&#34; alt=&#34;tsukemen&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tsukemen.webp&#34; alt=&#34;tsukemen&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
@@ -611,7 +611,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;detect-unused-dependencies&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; tool-detect-unused-dependencies
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	cargo machete
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以下は不必要な依存関係として&lt;code&gt;tempfile&lt;/code&gt;が検出されている様子。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;cargo-machete.webp&#34; alt=&#34;cargo-machete&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;cargo-machete.webp&#34; alt=&#34;cargo-machete&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;howci&#34;&gt;how(CI)&lt;/h3&gt;
 &lt;p&gt;以下のようなyamlを定義しておくと不要な依存関係がある場合にCIが落ちてくれる。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Detect unused dependencies&lt;/span&gt;
@@ -667,7 +667,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;check-licenses&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; tool-check-licenses
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	cargo deny check licenses
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;許可していないライセンスのライブラリに依存していることがわかると以下のようなエラーが出力される。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;cargo-deny.webp&#34; alt=&#34;cargo-deny.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;cargo-deny.webp&#34; alt=&#34;cargo-deny.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;howci-1&#34;&gt;how(CI)&lt;/h3&gt;
 &lt;p&gt;以下のようなyamlを定義しておくと不要な依存関係があるとCIが落ちてくれる。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Check licenses&lt;/span&gt;
@@ -836,15 +836,15 @@
 &lt;h2 id=&#34;というわけで&#34;&gt;というわけで&lt;/h2&gt;
 &lt;p&gt;タイトルの通りだが、GitHub Sponsorsの寄付先に&lt;a href=&#34;https://github.com/sponsors/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;を追加した。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/ratatui/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;とは、手軽にTUIアプリケーションを作成できるRust用のライブラリで、筆者が個人開発しているOSSである&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;fzf-make&lt;/a&gt;でも利用している。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/kyu08/fzf-make/main/static/demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/kyu08/fzf-make/main/static/demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34; loading=&#34;lazy&#34; /&gt;
 &lt;a href=&#34;https://github.com/ratatui/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;のおかげでこんな感じのUIを手軽に実装できている。&lt;/p&gt;
 &lt;!-- textlint-disable ja-technical-writing/ja-no-weak-phrase --&gt;
 &lt;p&gt;Rust製のTUIツールでは非常に幅広く利用されている印象だが、現在のスポンサー数が9人と少なかったので少しでも力になれればということで寄付先に追加した。長期間メンテされる状態が続いてくれると嬉しい。自分にもできそうなバグ修正があれば挑戦してみようと思う。&lt;/p&gt;
 &lt;!-- textlint-disable ja-technical-writing/ja-no-weak-phrase --&gt;
-&lt;p&gt;&lt;img src=&#34;ratatuis-10th-sponsor.webp&#34; alt=&#34;ratatuis-10th-sponsor.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;ratatuis-10th-sponsor.webp&#34; alt=&#34;ratatuis-10th-sponsor.webp&#34; loading=&#34;lazy&#34; /&gt;
 10番目のスポンサーになった様子。&lt;/p&gt;
 &lt;p&gt;これで現在の寄付額は$10/月で、&lt;a href=&#34;https://github.com/sponsors/neovim&#34; target=&#34;_blank&#34; &gt;neovim&lt;/a&gt;と&lt;a href=&#34;https://github.com/sponsors/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;にそれぞれ$5ずつ寄付していることになる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;github-sponsors-logos.webp&#34; alt=&#34;github-sponsors-logos.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;github-sponsors-logos.webp&#34; alt=&#34;github-sponsors-logos.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;他にも寄付したいプロジェクトは山ほどあるので山ほど稼いでいきたい。(あと円高頼む&amp;hellip;)&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;今後ともOSSコミュニティの持続可能性を高めていきたい。&lt;/p&gt;
@@ -889,7 +889,7 @@
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;こんな感じで動く。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;fzf-makeがやっていること&#34;&gt;fzf-makeがやっていること&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;Makefile&lt;/code&gt;からtargetを正規表現で抜き出す&lt;/li&gt;
@@ -977,9 +977,9 @@
 &lt;h2 id=&#34;余談&#34;&gt;余談&lt;/h2&gt;
 &lt;p&gt;テスト実行に &lt;a href=&#34;nextest-rs/nextest&#34; &gt;https://github.com/nextest-rs/nextest&lt;/a&gt; を使ってみたがテスト結果が見やすくて便利だった。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;cargo run&lt;/code&gt;の結果
-&lt;img src=&#34;cargo-run.webp&#34; alt=&#34;cargo run&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;cargo-run.webp&#34; alt=&#34;cargo run&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;cargo nextest run&lt;/code&gt;の結果
-&lt;img src=&#34;nextest-run.webp&#34; alt=&#34;cargo nextest run&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;nextest-run.webp&#34; alt=&#34;cargo nextest run&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;カラフルで見やすい。&lt;/p&gt;
 </content>
     </item>

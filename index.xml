@@ -15,7 +15,7 @@
       
       <guid>https://blog.kyu08.com/posts/k_and_r/</guid>
       <description>Operating Systems: Three Easy Pieces(以下、OSTEP)に取り組むにあたって、C言語の知識があるとスムーズそうだったので読んだ。 プログラミング言語C - 共立出</description>
-      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://pages.cs.wisc.edu/~remzi/OSTEP/&#34; target=&#34;_blank&#34; &gt;Operating Systems: Three Easy Pieces&lt;/a&gt;(以下、&lt;a href=&#34;https://pages.cs.wisc.edu/~remzi/OSTEP/&#34; target=&#34;_blank&#34; &gt;OSTEP&lt;/a&gt;)に取り組むにあたって、C言語の知識があるとスムーズそうだったので読んだ。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.kyoritsu-pub.co.jp/book/b10011596.html&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://www.kyoritsu-pub.co.jp/book/b10011596.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
@@ -97,7 +97,7 @@
       
       <guid>https://blog.kyu08.com/posts/how-networks-work/</guid>
       <description>ネットワークはなぜつながるのか 第2版を読んだので感想などをまとめる。 どんな本か ブラウザにURLを入力してからサーバーから返ってきたレスポンス</description>
-      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://bookplus.nikkei.com/atcl/catalog/07/P83110/&#34; target=&#34;_blank&#34; &gt;ネットワークはなぜつながるのか 第2版&lt;/a&gt;を読んだので感想などをまとめる。&lt;/p&gt;
 &lt;h2 id=&#34;どんな本か&#34;&gt;どんな本か&lt;/h2&gt;
 &lt;p&gt;ブラウザにURLを入力してからサーバーから返ってきたレスポンスをブラウザで表示するまでの間に起きることを順を追って説明してくれる本。&lt;/p&gt;
@@ -622,7 +622,7 @@
       
       <guid>https://blog.kyu08.com/posts/go-con-mini-in-sendai-2026/</guid>
       <description>2026/02/21(土)に仙台で行われたGo Conference mini in Sendai 2026に参加したのでその内容をまとめる。 Go Conference mini in Sendai 20262026年2月21日（土）</description>
-      <content>&lt;p&gt;&lt;img src=&#34;closing-slide.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;closing-slide.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;2026/02/21(土)に仙台で行われたGo Conference mini in Sendai 2026に参加したのでその内容をまとめる。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://sendaigo.jp/&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://sendaigo.jp/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
@@ -646,7 +646,7 @@
 &lt;li&gt;調べてみたところ&lt;code&gt;line directive&lt;/code&gt;という名前がついているようだった。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
 &lt;li&gt;こんな感じでコンパイラが出力するエラーメッセージなどが上書きされる。
 &lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;line-directive.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;line-directive.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://go.dev/play/p/Thvs9U8Twvj&#34; target=&#34;_blank&#34; &gt;https://go.dev/play/p/Thvs9U8Twvj&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -937,12 +937,12 @@
 &lt;li&gt;土日に仙台でKing Gnuのライブがあった影響か、土曜は仙台駅付近のホテルがめっちゃ高かったので福島まで移動して宿泊してgot aことなきした。（ありがとうアパホテル）&lt;/li&gt;
 &lt;li&gt;福島で食べたお寿司が美味しかった。観光までする（体力的）余裕がなかったのが残念。
 &lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;sushi.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;sushi.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;なんか新幹線が長かった。
 &lt;ul&gt;
-&lt;li&gt;&lt;img src=&#34;long-shinkansen.webp&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;long-shinkansen.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1017,10 +1017,10 @@
 &lt;p&gt;5年くらい前に買ったM1 MacBook Air(16GB RAM)の物持ちが良すぎて新しいMacを買うタイミングがなかなか来ない。新しいMacを買うのは楽しいので買いたい気持ちもありつついかんせん困ってないのでなあ&amp;hellip;の気持ち。&lt;/p&gt;
 &lt;h2 id=&#34;エディタ&#34;&gt;エディタ&lt;/h2&gt;
 &lt;p&gt;（就職した）2021年くらいからNeovimを使っている。厳密には2022年ごろまではJetBrains系のエディタと併用していたが、そこからはNeovimのみを使っている。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;neovim.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;neovim.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;キーボードだけで操作しやすいのと起動が早いのとカスタマイズしやすいのが好きでつかっている。（もちろんvimの操作性も気に入っている）&lt;/p&gt;
 &lt;p&gt;最近はこんな感じで&lt;a href=&#34;https://github.com/sindrets/diffview.nvim&#34; target=&#34;_blank&#34; &gt;diffview.nvim&lt;/a&gt;を使ってPRのdiffはすべてNeovim上で見るようにしている。コードをレビューしていると周辺の実装も含めて確認したいことがよくあるので、エディタ上でレビューしているとすぐに該当ファイルに飛べて便利。（&lt;a href=&#34;https://github.com/pwntester/octo.nvim&#34; target=&#34;_blank&#34; &gt;octo.nvim&lt;/a&gt;にコメント周りのバグがあったのでレビューコメントの書き込みはGitHubのWebUIから行っている。）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;neovim-pr-review.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;neovim-pr-review.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/sindrets/diffview.nvim&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/sindrets/diffview.nvim&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
       &lt;img src=&#34;https://opengraph.githubassets.com/25191950b2cb7462c7f1cc4e494445fb712741740f320073014779957dc0fdab/sindrets/diffview.nvim&#34; alt=&#34;GitHub - sindrets/diffview.nvim: Single tabpage interface for easily cycling through diffs for all modified files for any git rev.&#34; loading=&#34;lazy&#34;&gt;
@@ -1073,9 +1073,9 @@
 &lt;/p&gt;
 &lt;p&gt;前述の通りalacrittyとの相性がいい感じなのでよほどのことがない限りこの組み合わせは変えなさそう。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;Status Lineはこんな感じで画面下側にwindow名と現在時刻を表示している。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;tmux.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tmux.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;詳しくは後述するが、&lt;a href=&#34;https://github.com/nvim-orgmode/orgmode&#34; target=&#34;_blank&#34; &gt;nvim-orgmode/orgmode&lt;/a&gt;でClock In(時間計測)しているタスクがあるときはそのタスク名と経過時間をStatus Lineに表示するようにしている。1つのタスクに集中できて割と作業が捗っている。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;tmux-org-task.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tmux-org-task.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;その他のtmuxの設定とか工夫を紹介する記事は別で書きたい。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/zellij-org/zellij&#34; target=&#34;_blank&#34; &gt;Zellij&lt;/a&gt;も試したことはあるが、自分の環境だとなぜか表示が崩れてしまったので使っていない。&lt;/p&gt;
 &lt;h2 id=&#34;シェル&#34;&gt;シェル&lt;/h2&gt;
@@ -1112,9 +1112,9 @@
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;こんな感じでk8sのcontextとnamespaceを表示するようにしている。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;zsh.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;zsh.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;誤ってprod環境を壊すことがないようにこんな感じでcontextに&lt;code&gt;prod&lt;/code&gt;という文字列が含まれていたら目立つようにしている。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;zsh-k8s.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;zsh-k8s.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;設定はこんな感じ。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;kubernetes&lt;/span&gt;]
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;format&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;[[$symbol]($style)\[ctx\]$context \[ns\]$namespace]($style) &amp;#39;&lt;/span&gt;
@@ -1188,7 +1188,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## DONE
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; コードレビュー
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Neovimでタスク管理できるのとタスクに優先度、期日を設定してそれをいい感じにソートして表示してくれるのがかなり肌にあっていて気に入っている。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;nvim-orgmode.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;nvim-orgmode.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;最近は時間の使い方を振り返る目的でClock In的な機能を使ってタスクごとの所要時間も管理してみている。&lt;/p&gt;
 &lt;p&gt;これに関してはそのうち別の記事として詳しく書きたい。&lt;/p&gt;
 &lt;h2 id=&#34;ブラウザ&#34;&gt;ブラウザ&lt;/h2&gt;
@@ -1234,7 +1234,7 @@
   &lt;/a&gt;
 &lt;/div&gt;
 
-&lt;img src=&#34;lazygit.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;lazygit.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;gitのTUIクライアント。&lt;/li&gt;
 &lt;li&gt;gitの操作はすべてlazygitでやっている。&lt;/li&gt;
@@ -1242,7 +1242,7 @@
 &lt;li&gt;&lt;code&gt;git rebase -i&lt;/code&gt;相当のことができたり、commitの一部だけstagingに戻したりと細かいこともできる。&lt;/li&gt;
 &lt;li&gt;ここ2年くらいで細々とPRを送っており、去年末頃に9番目にcommitが多い人になることができた。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;lazygit-contibutors.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;lazygit-contibutors.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;k9s&#34;&gt;k9s&lt;/h3&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/derailed/k9s&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/derailed/k9s&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
@@ -1253,8 +1253,8 @@
   &lt;/a&gt;
 &lt;/div&gt;
 
-&lt;img src=&#34;k9s.webp&#34; alt=&#34;&#34;&gt;
-&lt;img src=&#34;k9s-pulse.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;k9s.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;
+&lt;img src=&#34;k9s-pulse.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;GKEのリソースを見たり操作したりするときに使っている。とても便利。（画像はサンプル用にkindでローカル起動したクラスタのもの）&lt;/li&gt;
 &lt;li&gt;ログはあまり使いこなせてないので普段の開発ではDatadogやCloud Loggingを見ていることが多い。&lt;/li&gt;
@@ -1262,7 +1262,7 @@
 &lt;p&gt;&lt;strong&gt;&amp;lt;PRここから&amp;gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h3 id=&#34;fzf-make&#34;&gt;fzf-make&lt;/h3&gt;
 &lt;p&gt;fzf-makeというmake targetをfuzzy finder形式で選択、実行できるTUIを開発している。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-make.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make.gif&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;コマンド名やその内容を覚えずとも楽に実行できたり、履歴機能があるのが特徴。&lt;/p&gt;
 &lt;p&gt;現在は&lt;code&gt;Makefile&lt;/code&gt;に定義されたmake target以外にも以下のようなコマンドに対応している。&lt;/p&gt;
 &lt;ul&gt;
@@ -1296,7 +1296,7 @@
 &lt;h2 id=&#34;キーボード&#34;&gt;キーボード&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;7sPro
-&lt;img src=&#34;7spro.webp&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;7spro.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;
 &lt;ul&gt;
 &lt;li&gt;2021/8から使っている。今は家でメインのキーボードとして使っている。&lt;/li&gt;
 &lt;li&gt;キースイッチは&lt;a href=&#34;https://shop.yushakobo.jp/products/5659&#34; target=&#34;_blank&#34; &gt;Yushakobo Fairy Silent Linear Switch&lt;/a&gt;を使用。&lt;/li&gt;
@@ -1498,7 +1498,7 @@
 &lt;p&gt;ここからは&lt;a href=&#34;https://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdf&#34; target=&#34;_blank&#34; &gt;CQRS Documents&lt;/a&gt;の内容をまとめていく。&lt;/p&gt;
 &lt;h2 id=&#34;a-stereotypical-architecture-典型的なアーキテクチャ&#34;&gt;&amp;ldquo;A Stereotypical Architecture&amp;rdquo;: 典型的なアーキテクチャ&lt;/h2&gt;
 &lt;p&gt;&amp;ldquo;A Stereotypical Architecture&amp;quot;として、典型的なアーキテクチャが紹介されている。CQRS Documentsではこのアーキテクチャに対して段階的にCQRSを導入していく形で説明が進んでいく。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;a-stereotypical-architecture.webp&#34; alt=&#34;a-stereotypical-architecture.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;a-stereotypical-architecture.webp&#34; alt=&#34;a-stereotypical-architecture.webp&#34; loading=&#34;lazy&#34; /&gt;
 CQRS Documents by Greg Young P2より引用&lt;/p&gt;
 &lt;p&gt;このアーキテクチャではシステムはCRUDのみの機能を持ち、クライアントとは&lt;strong&gt;常にDTOを介して通信する。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;おそらくクライアントが&lt;code&gt;UpdateUserName&lt;/code&gt;のようなエンドポイントに更新後のユーザーネームだけを渡すのではなく&lt;code&gt;/user&lt;/code&gt;に更新後のDTOを丸ごと渡す、というようなことだと思われる。&lt;/p&gt;
@@ -1540,13 +1540,13 @@ CQRS Documents by Greg Young P2より引用&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;とあるように、CQRSを適用することでCommandとQueryの処理経路が明確に分離される。この段階ではドメインモデルをDTOの生成に使用しない方が合理的である。&lt;/p&gt;
 &lt;p&gt;その代わりに&amp;quot;Thin Read Layer&amp;quot;という方法でDTOを生成することができる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;thin-read-layer.webp&#34; alt=&#34;thin-read-layer.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;thin-read-layer.webp&#34; alt=&#34;thin-read-layer.webp&#34; loading=&#34;lazy&#34; /&gt;
 CQRS Documents by Greg Young P21より引用&lt;/p&gt;
 &lt;p&gt;この層はDBから直接データを読み取り（ドメインモデルを迂回し）DTOを生成する。&lt;/p&gt;
 &lt;p&gt;こうすることで、&lt;strong&gt;ドメイン層からQueryの責務を切り離すことができ、ドメイン層の純度を上げることができる。&lt;/strong&gt;&lt;/p&gt;
 &lt;h3 id=&#34;command&#34;&gt;Command&lt;/h3&gt;
 &lt;p&gt;CQRSを適用するとCommand側のアーキテクチャは以下のようになる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;the-command-site.webp&#34; alt=&#34;the-command-site.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;the-command-site.webp&#34; alt=&#34;the-command-site.webp&#34; loading=&#34;lazy&#34; /&gt;
 CQRS Documents by Greg Young P22より引用&lt;/p&gt;
 &lt;p&gt;元のアーキテクチャでは書き込み系の処理をする際もDTOをクライアントから受け取っていたが、CQRS適用後はデータ中心ではなく振る舞い中心の契約を採用している点と読み取り処理が分離されている点が大きな違い。（元のアーキテクチャでは書き込み時にクライアントからDTOを渡していたが、ここではメッセージが渡されるようになっている）&lt;/p&gt;
 &lt;p&gt;また、元のアーキテクチャでドメイン層に存在していた次のような課題が解決されている。&lt;/p&gt;
@@ -1696,7 +1696,7 @@ CQRS Documents by Greg Young P22より引用&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;去年と同じくらいのペースでPRを送ることができた。（平均約4.5件/月ペース）&lt;/li&gt;
 &lt;li&gt;LazygitのトップページのContributors一覧に表示されるようになった。
-&lt;img src=&#34;lazygit-contibutors.webp&#34; alt=&#34;lazygit-contibutors.webp&#34;&gt;
+&lt;img src=&#34;lazygit-contibutors.webp&#34; alt=&#34;lazygit-contibutors.webp&#34; loading=&#34;lazy&#34; /&gt;
 &lt;ul&gt;
 &lt;li&gt;GitHubではcommit数が多い順に12人目くらいまでのアイコンがContributorsに表示される。&lt;/li&gt;
 &lt;li&gt;細々とcontributionを続けたところの9番目にcommitが多い人になれた。（2025/12/23現在）&lt;/li&gt;
@@ -1725,7 +1725,7 @@ CQRS Documents by Greg Young P22より引用&lt;/p&gt;
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;タスクランナー側で定義したコマンドをfuzzy finder形式で選択できるCLIツールを趣味でRustで開発している。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;現在は以下のタスクランナーに対応している。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;make&lt;/li&gt;
@@ -1737,9 +1737,9 @@ CQRS Documents by Greg Young P22より引用&lt;/p&gt;
 &lt;p&gt;gifを見てもらえれば分かる通り、プレビューウィンドウでコマンド内容を確認しながらコマンドを選択できるのが特徴の一つ。&lt;/p&gt;
 &lt;h4 id=&#34;スター数&#34;&gt;スター数&lt;/h4&gt;
 &lt;p&gt;2025/12/23現在では245スターを獲得している。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-make-star.webp&#34; alt=&#34;fzf-make-star.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make-star.webp&#34; alt=&#34;fzf-make-star.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.star-history.com/#kyu08/fzf-make&amp;amp;type=date&amp;amp;legend=top-left&#34; target=&#34;_blank&#34; &gt;Star History&lt;/a&gt;によると2024/12/19時点では129スターだったので1年で大体倍くらいになった。🎉&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-make-star-history-20251223-last-year.webp&#34; alt=&#34;fzf-make-star-history-20251223-last-year.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make-star-history-20251223-last-year.webp&#34; alt=&#34;fzf-make-star-history-20251223-last-year.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;来年も適度なペースで細々とメンテしていきます。(npm対応は早めにやりたい&amp;hellip;！)&lt;/p&gt;
 &lt;h4 id=&#34;今年の変更点&#34;&gt;今年の変更点&lt;/h4&gt;
 &lt;p&gt;2025年は&lt;a href=&#34;https://github.com/pulls?q=is%3Apr&amp;#43;archived%3Afalse&amp;#43;author%3Akyu08&amp;#43;is%3Apublic&amp;#43;repo%3Akyu08%2Ffzf-make&amp;#43;created%3A2025-01-01..2025-12-31&amp;#43;is%3Amerged&amp;#43;&#34; target=&#34;_blank&#34; &gt;筆者が74件のPRを作成&amp;amp;マージし&lt;/a&gt;、&lt;a href=&#34;https://github.com/kyu08/fzf-make/compare/v0.54.0...v0.65.0&#34; target=&#34;_blank&#34; &gt;12個のバージョンがリリースされ、筆者とrenovateを含めて5人の貢献者により102のcommitが追加された。&lt;/a&gt;&lt;/p&gt;
@@ -1808,24 +1808,24 @@ Add OGP template with dark theme design (b...&lt;/div&gt;&lt;div class=&#34;blog
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;こんな感じの画像が自動生成される。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;cover.png&#34; alt=&#34;cover.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;cover.png&#34; alt=&#34;cover.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Twitterで投稿したときに追加されるタイトル要素とOGPのメタ情報が被らないようになっているのが地味なこだわりポイント。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;twitter-caption.webp&#34; alt=&#34;twitter-caption.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;twitter-caption.webp&#34; alt=&#34;twitter-caption.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;ついでにこんな感じでPRにコメントとして表示されるようにしたので投稿前に確認できる。（日本語だとたまーに特定の記号などが豆腐になってしまうのチェックしておきたい）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;ogp-pr-comment.webp&#34; alt=&#34;ogp-pr-comment.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ogp-pr-comment.webp&#34; alt=&#34;ogp-pr-comment.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;heading要素のデザインを変えた&#34;&gt;Heading要素のデザインを変えた&lt;/h3&gt;
 &lt;p&gt;これまではレベルの異なるHeading要素の区別が付きづらかったので&lt;code&gt;## OSS&lt;/code&gt;のようにHeading要素のレベルに合わせて&lt;code&gt;#&lt;/code&gt;が表示されるデザインにした。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;BEFORE&lt;/th&gt;
-&lt;th&gt;&lt;img src=&#34;heading-before.webp&#34; alt=&#34;heading-before.webp&#34;&gt;&lt;/th&gt;
+&lt;th&gt;&lt;img src=&#34;heading-before.webp&#34; alt=&#34;heading-before.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;AFTER&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;img src=&#34;heading-after.webp&#34; alt=&#34;heading-after.webp&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;heading-after.webp&#34; alt=&#34;heading-after.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -1843,7 +1843,7 @@ Add OGP template with dark theme design (b...&lt;/div&gt;&lt;div class=&#34;blog
 &lt;/p&gt;
 &lt;h3 id=&#34;ブログカードの表示&#34;&gt;ブログカードの表示&lt;/h3&gt;
 &lt;p&gt;こんな感じでリンク先の情報を表示するようにした。便利。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;blog-card.webp&#34; alt=&#34;blog-card.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;blog-card.webp&#34; alt=&#34;blog-card.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/blog/pull/246&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/kyu08/blog/pull/246&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
       &lt;img src=&#34;https://opengraph.githubassets.com/eb445efdb9b6351b5b509ccdfd909411c138798d6e689ba8c4fa3ef3c235b314/kyu08/blog/pull/246&#34; alt=&#34;Implement blog card link preview feature by kyu08 · Pull Request #246 · kyu08/blog&#34; loading=&#34;lazy&#34;&gt;
@@ -1913,7 +1913,7 @@ Responsive design with d...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;h
 &lt;h3 id=&#34;サッカー&#34;&gt;サッカー&lt;/h3&gt;
 &lt;p&gt;今年からJリーグ（カップ戦も含む）観戦にいくようになった。&lt;/p&gt;
 &lt;p&gt;非日常でめっちゃ楽しい。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;soccer.webp&#34; alt=&#34;soccer.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;soccer.webp&#34; alt=&#34;soccer.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;仕事&#34;&gt;仕事&lt;/h2&gt;
 &lt;p&gt;転職し、2/1から新しい職場で働きはじめた。&lt;/p&gt;
 &lt;p&gt;プロダクトがたくさんのお客様に価値提供をできている実感があり、モチベーション高く働けている。&lt;/p&gt;
@@ -1964,14 +1964,14 @@ Responsive design with d...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;h
 &lt;p&gt;以下にアクセスする。&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;repo-url&amp;gt;/q/owner:&amp;lt;your-email&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;こんな感じで表示される。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;result.webp&#34; alt=&#34;result.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;result.webp&#34; alt=&#34;result.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;たとえばgoのrepositoryだったら&lt;code&gt;https://go-review.googlesource.com/q/owner:&amp;lt;your-email&amp;gt;&lt;/code&gt;のような感じ。&lt;/p&gt;
 &lt;p&gt;以降はおまけ。&lt;/p&gt;
 &lt;h2 id=&#34;経緯&#34;&gt;経緯&lt;/h2&gt;
 &lt;p&gt;ここから行けるか&amp;hellip;?とか思ったが&amp;hellip;
-&lt;img src=&#34;menu.webp&#34; alt=&#34;menu.webp&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;menu.webp&#34; alt=&#34;menu.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;マージ済みが表示されそうな項目はRecently closedしかないが、これだと最近のCLしか見れなさそうだった。
-&lt;img src=&#34;dashboard.webp&#34; alt=&#34;dashboard.webp&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;dashboard.webp&#34; alt=&#34;dashboard.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;検索ボックスに打ち込むクエリを試行錯誤したところ冒頭の指定方法を見つけた。&lt;/p&gt;
 &lt;p&gt;GitHubと違ってrepository横断で検索できないっぽいので複数のGerrit repositoryから活動を集計するのは大変そう。（調べてないだけでやり方はあるのかもだが）&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
@@ -2135,7 +2135,7 @@ Responsive design with d...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;h
       
       <guid>https://blog.kyu08.com/posts/understanding-rust-from-concepts/</guid>
       <description>Rustのことをもっと理解りたくて『コンセプトから理解するRust』を読んだ。 コンセプトから理解するRust | 技術評論社Rustはメモリ安全</description>
-      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Rustのことをもっと理解りたくて『コンセプトから理解するRust』を読んだ。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://gihyo.jp/book/2022/978-4-297-12562-2&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://gihyo.jp/book/2022/978-4-297-12562-2&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
@@ -2209,7 +2209,7 @@ Responsive design with d...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;h
       
       <guid>https://blog.kyu08.com/posts/bbf_kubernetes/</guid>
       <description>0からKubernetesのキャッチアップがしたくて、高橋 あおいさん著の『つくって、壊して、直して学ぶ Kubernetes入門』を読んだ。 つ</description>
-      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;0からKubernetesのキャッチアップがしたくて、高橋 あおいさん著の『つくって、壊して、直して学ぶ Kubernetes入門』を読んだ。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
@@ -2285,13 +2285,13 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
 &lt;p&gt;1つ1つの解説はそこまで文量がないので結構サクサク進めることができる。なので本書でKubernetesの全体感を本書で学び、深く学ぶのは別のリソースで補うのがよさそうだと感じた。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;誤解のないように書いておくと、自分のようなKubernetes初心者にとっては各リソースの説明の文量が多すぎないお陰で短期間で全体感を把握できてとてもよかった。(気になったところは別途公式ドキュメントやLLMを使って深堀ったりした)&lt;/p&gt;
 &lt;p&gt;こんな雰囲気。漫画があって文量も多すぎず読みやすい。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;manga.webp&#34; alt=&#34;manga.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;manga.webp&#34; alt=&#34;manga.webp&#34; loading=&#34;lazy&#34; /&gt;
 &lt;a href=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; target=&#34;_blank&#34; &gt;商品ページ&lt;/a&gt;より引用&lt;/p&gt;
 &lt;p&gt;以下の画像のように実行すべきコマンドとその結果がどうなるかが書いてあるのでKubernetesの経験が少なくても進めやすい。（実際自分もほぼ知識0で臨んだ）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;command.webp&#34; alt=&#34;command.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;command.webp&#34; alt=&#34;command.webp&#34; loading=&#34;lazy&#34; /&gt;
 &lt;a href=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; target=&#34;_blank&#34; &gt;商品ページ&lt;/a&gt;より引用&lt;/p&gt;
 &lt;p&gt;こんな感じでk9sを常時起動しながらコマンドを実行するスタイルで進めたところリアルタイムでPodの変化が見れて理解が捗った。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;k9s.webp&#34; alt=&#34;k9s.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;k9s.webp&#34; alt=&#34;k9s.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/derailed/k9s/&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/derailed/k9s/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
       &lt;img src=&#34;https://repository-images.githubusercontent.com/167596393/6dd20780-5c0e-11ea-8e26-7754ad171192&#34; alt=&#34;GitHub - derailed/k9s: 🐶 Kubernetes CLI To Manage Your Clusters In Style!&#34; loading=&#34;lazy&#34;&gt;
@@ -2337,7 +2337,7 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
       
       <guid>https://blog.kyu08.com/posts/the-deadline/</guid>
       <description>少し前にTwitterで紹介されていて気になっていた1トム デマルコの『デッドライン』を読んだ。新品で売ってるところが見つからなかったのでAm</description>
-      <content>&lt;p&gt;&lt;img src=&#34;the-deadline.webp&#34; alt=&#34;the-deadline.webp&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;the-deadline.webp&#34; alt=&#34;the-deadline.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;少し前にTwitterで紹介されていて気になっていた&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;トム デマルコの『デッドライン』を読んだ。新品で売ってるところが見つからなかったのでAmazonで中古を購入した。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;プロジェクトマネジメントをするたびにその難しさを痛感しているので知見が得られたり思考が整理できたりすることを期待して読んだ。&lt;/p&gt;
 &lt;p&gt;同著者の本だと『ピープルウエア』が有名だがそちらは未読。『ゆとりの法則』とかも面白そうなのでいつか読みたい。&lt;/p&gt;
@@ -2518,7 +2518,7 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
       <guid>https://blog.kyu08.com/posts/vim-conf-2025/</guid>
       <description>2025年11月2日（日）にアキバプラザ・アキバホールで開催されたVimConf 2025 Smallに参加した。 こちらはノベルティ。食器とかお箸はた</description>
       <content>&lt;p&gt;2025年11月2日（日）にアキバプラザ・アキバホールで開催された&lt;a href=&#34;https://vimconf.org/2025/ja/&#34; target=&#34;_blank&#34; &gt;VimConf 2025 Small&lt;/a&gt;に参加した。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;vim-conf-2025.webp&#34; alt=&#34;vim-conf-2025.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;vim-conf-2025.webp&#34; alt=&#34;vim-conf-2025.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;こちらはノベルティ。食器とかお箸はたくさんあっても困らないのでありがたい。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;お茶碗&lt;/li&gt;
@@ -2527,7 +2527,7 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
 &lt;li&gt;巾着&lt;/li&gt;
 &lt;li&gt;お茶&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;vim-conf-novelty.webp&#34; alt=&#34;vim-conf-novelty.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;vim-conf-novelty.webp&#34; alt=&#34;vim-conf-novelty.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;nvim-cmp-retrospective-exploring-completion-and-facing-foss-challenges&#34;&gt;nvim-cmp retrospective: Exploring Completion and Facing FOSS Challenges&lt;/h2&gt;
 &lt;p&gt;hrsh7thさんによる発表。&lt;/p&gt;
 &lt;h3 id=&#34;explore-completion&#34;&gt;Explore Completion&lt;/h3&gt;
@@ -2803,8 +2803,8 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
       
       <guid>https://blog.kyu08.com/posts/second-keychron-v4-max/</guid>
       <description>Keychron V4 Max を買ったで紹介したV4 MAXはオフィス用のV4 MAXになった。あまりにも使い心地がいいので家用のV4 MAXを買い足した。 前回はキーキャ</description>
-      <content>&lt;p&gt;&lt;img src=&#34;box.webp&#34; alt=&#34;box.webp&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;v4-max.webp&#34; alt=&#34;v4-max.webp&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;box.webp&#34; alt=&#34;box.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;v4-max.webp&#34; alt=&#34;v4-max.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.kyu08.com/posts/keychron-v4-max&#34; &gt;Keychron V4 Max を買った&lt;/a&gt;で紹介したV4 MAXはオフィス用のV4 MAXになった。あまりにも使い心地がいいので家用のV4 MAXを買い足した。&lt;/p&gt;
 &lt;p&gt;前回はキーキャップとスイッチが家に余ってたのでベアボーンを買ったが、もう在庫はないし20$足せばキーキャップがついてくるので今回はフルセットの方を買った。（どうせ赤軸は苦手だからどのみちキースイッチは買うつもりだった）&lt;/p&gt;
 &lt;p&gt;送料込みで$112.99(¥17,400 JPY)だった。&lt;/p&gt;
@@ -2833,7 +2833,7 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
       <guid>https://blog.kyu08.com/posts/keychron-v4-max/</guid>
       <description>持ち運び用に軽めの60%メカニカルキーボードが欲しくなり、いくつか検討した結果、Keychron V4 Max(Barebone)を買った。 候補 持</description>
       <content>&lt;p&gt;持ち運び用に軽めの60%メカニカルキーボードが欲しくなり、いくつか検討した結果、&lt;a href=&#34;https://www.keychron.com/products/keychron-v4-max-qmk-via-wireless-custom-mechanical-keyboard?variant=41285926682713&#34; target=&#34;_blank&#34; &gt;Keychron V4 Max(Barebone)&lt;/a&gt;を買った。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;with-keycaps.webp&#34; alt=&#34;with-keycaps&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;with-keycaps.webp&#34; alt=&#34;with-keycaps&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;候補&#34;&gt;候補&lt;/h2&gt;
 &lt;p&gt;持ち運び用として考えていたので以下のような条件で探していた。&lt;/p&gt;
 &lt;ul&gt;
@@ -2937,17 +2937,17 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
 &lt;/table&gt;
 &lt;p&gt;+$20でキーキャップとキースイッチがつくのでコスパでいえばFully Assembledの方がいいが、ちょうど家にキーキャップとキースイッチが1セットずつ余っていたのでBareboneにした。&lt;/p&gt;
 &lt;p&gt;価格は送料込みで$92.99(¥14,093)だった。注文から5日後に届いた。（意外と早かった）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;box.webp&#34; alt=&#34;box&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;box.webp&#34; alt=&#34;box&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;ベアボーンな様子。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;barebone.webp&#34; alt=&#34;barebone&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;barebone.webp&#34; alt=&#34;barebone&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;キースイッチキーキャップ&#34;&gt;キースイッチ、キーキャップ&lt;/h2&gt;
 &lt;p&gt;キースイッチはもともと使っていたKailh Box Silent Pinkを装着した。（今は廃盤らしい&amp;hellip;）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;with-switches.webp&#34; alt=&#34;with-switches&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;with-switches.webp&#34; alt=&#34;with-switches&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;普段7sProに装着して使っている&lt;a href=&#34;https://shop.yushakobo.jp/products/5659&#34; target=&#34;_blank&#34; &gt;Yushakobo Fairy Silent Linear Switch&lt;/a&gt;より若干重くて押してる感じが適度にあってよい。&lt;/p&gt;
 &lt;p&gt;キーキャップは家にあった&lt;a href=&#34;https://sanyollc.com/products/%E4%BA%88%E7%B4%84%E8%B2%A9%E5%A3%B2-the-old-seaside-abs-cherry-profile-keycaps&#34; target=&#34;_blank&#34; &gt;Keyreative The Old Seaside ABS Cherry Profile&lt;/a&gt;を装着した。
-&lt;img src=&#34;with-keycaps.webp&#34; alt=&#34;with-keycaps&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;with-keycaps.webp&#34; alt=&#34;with-keycaps&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;なぜか光る。
-&lt;img src=&#34;gaaaaaaming.webp&#34; alt=&#34;gaaaaaaming&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;gaaaaaaming.webp&#34; alt=&#34;gaaaaaaming&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;使ってみた感想&#34;&gt;使ってみた感想&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;ガスケットマウントのおかげか打鍵感もよいし音もうるさくないので大満足。&lt;/li&gt;
@@ -2955,7 +2955,7 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
 &lt;li&gt;軽いが使っていて位置がずれたりすることもなく、よい。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;あとちゃんと技適申請が通っていて、かつ技適マークも表示されていて嬉しい。
-&lt;img src=&#34;giteki.webp&#34; alt=&#34;giteki&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;giteki.webp&#34; alt=&#34;giteki&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
 &lt;p&gt;円高はよ〜。&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
@@ -2977,8 +2977,8 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
       <guid>https://blog.kyu08.com/posts/fp-matsuri-2025/</guid>
       <description>2025/06/14(土)、2025/06/15(日)に中野セントラルパークで行われた関数型まつり2025に参加した。 筆者はElmやRust</description>
       <content>&lt;p&gt;2025/06/14(土)、2025/06/15(日)に中野セントラルパークで行われた関数型まつり2025に参加した。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;nakano-central-park.webp&#34; alt=&#34;nakano-central-park&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;pop.webp&#34; alt=&#34;pop&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;nakano-central-park.webp&#34; alt=&#34;nakano-central-park&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;pop.webp&#34; alt=&#34;pop&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;筆者はElmやRustの開発体験を気に入っており、Webアプリケーションのサーバーサイドを関数型言語で書くことに興味があったので参加してみた。&lt;/p&gt;
 &lt;h2 id=&#34;関数型言語テイスティング-haskell-scala-clojure-elixirを比べて味わう関数型プログラミングの旨さ---lagénorhynqueカマイルカさん&#34;&gt;関数型言語テイスティング: Haskell, Scala, Clojure, Elixirを比べて味わう関数型プログラミングの旨さ - lagénorhynque/カマイルカさん&lt;/h2&gt;
 &lt;p&gt;lagénorhynque/カマイルカさんによるHaskell, Scala, Clojure, Elixirの紹介と比較を行う発表。&lt;/p&gt;
@@ -3276,18 +3276,18 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
 &lt;h2 id=&#34;スポンサーブース&#34;&gt;スポンサーブース&lt;/h2&gt;
 &lt;p&gt;Jane Streetのエンジニアの方にお聞きしたがJane StreetではフロントエンドとサーバーサイドをOCamlで書いているらしい（！）ブースでお話した方も関数型言語が書きたくて入社したそうで、関数型言語への愛を感じた。&lt;/p&gt;
 &lt;p&gt;ブースでいただいたノベルティのTシャツもめっちゃOCamlだった。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;jane-street.webp&#34; alt=&#34;jane-street&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;jane-street.webp&#34; alt=&#34;jane-street&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;ノベルティ&#34;&gt;ノベルティ&lt;/h2&gt;
 &lt;p&gt;入場時にロゴ入りのトートバッグがもらえた。
-&lt;img src=&#34;bag.webp&#34; alt=&#34;bag&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;bag.webp&#34; alt=&#34;bag&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Nulabさんのノベルティのマイクロファイバークロス。実用的でありがたい。
-&lt;img src=&#34;nulab.webp&#34; alt=&#34;nulab&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;nulab.webp&#34; alt=&#34;nulab&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;今は業務で関数型言語を使うことはないが、関数型言語の考え方を取り入れることで非関数型言語でもより良いコードを書けるようになると改めて感じた。&lt;/p&gt;
 &lt;p&gt;個人で初めてオフラインの勉強会/カンファレンスに参加したが普通に楽しかったのでまた行ってみようと思う。&lt;/p&gt;
 &lt;h2 id=&#34;つけ麺情報&#34;&gt;つけ麺情報&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://tabelog.com/tokyo/A1319/A131902/13115487&#34; target=&#34;_blank&#34; &gt;二代目えん寺&lt;/a&gt;がとても美味しかった。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;tsukemen.webp&#34; alt=&#34;tsukemen&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tsukemen.webp&#34; alt=&#34;tsukemen&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
@@ -3355,7 +3355,7 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;detect-unused-dependencies&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; tool-detect-unused-dependencies
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	cargo machete
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以下は不必要な依存関係として&lt;code&gt;tempfile&lt;/code&gt;が検出されている様子。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;cargo-machete.webp&#34; alt=&#34;cargo-machete&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;cargo-machete.webp&#34; alt=&#34;cargo-machete&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;howci&#34;&gt;how(CI)&lt;/h3&gt;
 &lt;p&gt;以下のようなyamlを定義しておくと不要な依存関係がある場合にCIが落ちてくれる。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Detect unused dependencies&lt;/span&gt;
@@ -3411,7 +3411,7 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;check-licenses&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; tool-check-licenses
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	cargo deny check licenses
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;許可していないライセンスのライブラリに依存していることがわかると以下のようなエラーが出力される。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;cargo-deny.webp&#34; alt=&#34;cargo-deny.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;cargo-deny.webp&#34; alt=&#34;cargo-deny.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;howci-1&#34;&gt;how(CI)&lt;/h3&gt;
 &lt;p&gt;以下のようなyamlを定義しておくと不要な依存関係があるとCIが落ちてくれる。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Check licenses&lt;/span&gt;
@@ -3567,7 +3567,7 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
       
       <guid>https://blog.kyu08.com/posts/oblivion-keycaps/</guid>
       <description>傾斜付きロープロファイルキーキャップであるNuPhy Oblivionを買った。 OblivionEmerges from the structured chaos of programming, where logic dances with creativity and every line of code tells a story. Inspired by the stark elegance of terminal interfaces and the rhythmic</description>
-      <content>&lt;p&gt;&lt;img src=&#34;lets-unbox.webp&#34; alt=&#34;lets-unbox&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;lets-unbox.webp&#34; alt=&#34;lets-unbox&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;傾斜付きロープロファイルキーキャップであるNuPhy Oblivionを買った。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://nuphy.com/collections/keycaps/products/oblivion&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://nuphy.com/collections/keycaps/products/oblivion&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
@@ -3580,7 +3580,7 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
 &lt;/p&gt;
 &lt;p&gt;価格は送料込みで$53.98(8,000円)だった。注文から6日後に届いた。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.kyu08.com/posts/magi65&#34; &gt;IQUNIX Magi65を買った&lt;/a&gt;でも書いていた通りロープロファイルでも傾斜付きのキーキャップがないかな〜と思っていたところ突如としてOblivionのリリース情報がTwitterで流れてきたので買ってMagi65に装着してみた。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;with-magi65.webp&#34; alt=&#34;with-magi65.web&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;with-magi65.webp&#34; alt=&#34;with-magi65.web&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;良かった点&#34;&gt;良かった点&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;傾斜があって打ちやすい&lt;/li&gt;
@@ -3588,14 +3588,14 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
 &lt;li&gt;ロープロファイル用なだけあって干渉せずに問題なく使える&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;手前の白いのがオリジナルのフラットなキーキャップ。
-&lt;img src=&#34;original.webp&#34; alt=&#34;original.webp&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;original.webp&#34; alt=&#34;original.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;これが今回購入したoblivionのキーキャップ。Cherry Profileに近い形状で傾斜がついている。
-&lt;img src=&#34;oblivion.webp&#34; alt=&#34;oblivion.webp&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;oblivion.webp&#34; alt=&#34;oblivion.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;気になった点&#34;&gt;気になった点&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;ホーミングキーの凹凸(よくFキーとJキーについてるアレです)が結構低いので若干わかりづらい。が、慣れればそんなに問題なさそう&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;homing-key.webp&#34; alt=&#34;homing-key.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;homing-key.webp&#34; alt=&#34;homing-key.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
@@ -3614,11 +3614,11 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
       
       <guid>https://blog.kyu08.com/posts/nand2tetris/</guid>
       <description>『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は## 学び、得た経験までジャンプして</description>
-      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は&lt;a href=&#34;#%e5%ad%a6%e3%81%b3%e5%be%97%e3%81%9f%e7%b5%8c%e9%a8%93&#34; &gt;## 学び、得た経験&lt;/a&gt;までジャンプしてください。&lt;/p&gt;
 &lt;h2 id=&#34;本書の構成&#34;&gt;本書の構成&lt;/h2&gt;
 &lt;p&gt;本書はnand2tetrisという通称の通り、NANDゲートからスタートして、CPUやコンパイラやOSなどを実装し、最終的にはそのプラットフォーム上でテトリス(のようなアプリケーション)&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;が動くところまで実装するという内容のコースになっている。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;roadmap.webp&#34; alt=&#34;roadmap&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;roadmap.webp&#34; alt=&#34;roadmap&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -3743,7 +3743,7 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
 &lt;/ul&gt;
 &lt;h2 id=&#34;第3章-メモリ&#34;&gt;第3章 メモリ&lt;/h2&gt;
 &lt;p&gt;この章では、DFF(Data Flip-Flop)を用いて1-bit registerを作成し、それを組み合わせて16-bit registerを作成し、さらにそれを組み合わせてRAMを作成した。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;from-dff-to-ram.webp&#34; alt=&#34;from-dff-to-ram.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;from-dff-to-ram.webp&#34; alt=&#34;from-dff-to-ram.webp&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -3778,7 +3778,7 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
 &lt;li&gt;ただしクロックサイクルは「システム内のチップ間で信号が伝播するのにかかる時間の最大値」と「1チップ内で最も処理時間がかかる演算を完了するのにかかる時間」の合計値よりも大きく設定する必要がある。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;DFFは&lt;code&gt;out(t+1) = in(t)&lt;/code&gt;で表される出力を持つ。DFFを用いることで過去の状態を論理回路上で表現できる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;dff.webp&#34; alt=&#34;dff.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;dff.webp&#34; alt=&#34;dff.webp&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -3801,7 +3801,7 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
     DFF(in=mux, out=out, out=dffOut);
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;1-bit registerは時刻&lt;code&gt;t&lt;/code&gt;において&lt;code&gt;load&lt;/code&gt;ビットがアサートされると&lt;code&gt;out(t+1)&lt;/code&gt;が&lt;code&gt;in(t)&lt;/code&gt;の値になり、アサートされていない場合は&lt;code&gt;out(t+1)&lt;/code&gt;は&lt;code&gt;out(t)&lt;/code&gt;の値になる。換言するとレジスタを利用することで過去の状態を保持できる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;1-bit-register.webp&#34; alt=&#34;1-bit-register.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;1-bit-register.webp&#34; alt=&#34;1-bit-register.webp&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -3849,7 +3849,7 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
 &lt;/ul&gt;
 &lt;h3 id=&#34;hackコンピュータのアーキテクチャ&#34;&gt;Hackコンピュータのアーキテクチャ&lt;/h3&gt;
 &lt;p&gt;Hackコンピュータは以下のようなアーキテクチャを持つ。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;hack-computer-architecture.webp&#34; alt=&#34;hack-computer-architecture.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;hack-computer-architecture.webp&#34; alt=&#34;hack-computer-architecture.webp&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -3901,7 +3901,7 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;the-hack-language-specification.webp&#34; alt=&#34;the-hack-language-specification&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;the-hack-language-specification.webp&#34; alt=&#34;the-hack-language-specification&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -4003,9 +4003,9 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
 &lt;/ul&gt;
 &lt;p&gt;正直CPUの実装、デバッグがはかなり大変だったが公式が提供してくれているテストツールとデバッガのおかげで効率的にバグを見つけることができた。&lt;/p&gt;
 &lt;p&gt;こんな感じで各ピンの出力や期待する結果とのdiffを比較的見やすい形式で表示してくれるのでありがたかった。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;cpu-debug.webp&#34; alt=&#34;cpu-debug.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;cpu-debug.webp&#34; alt=&#34;cpu-debug.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;ここで作成したCPUの回路は次のようなもの。ここではヒントとして大まかな回路設計が与えられておりそれを参考にしつつ足りない部分を埋めていく形で実装を進めた。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;cpu-implementation.webp&#34; alt=&#34;cpu-implementation.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;cpu-implementation.webp&#34; alt=&#34;cpu-implementation.webp&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -4349,7 +4349,7 @@ add
 &lt;li&gt;&lt;code&gt;func_b&lt;/code&gt;のコマンドが定義されているアドレスにジャンプ&lt;/li&gt;
 &lt;li&gt;リターンアドレスラベルをコードに挿入&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;call.webp&#34; alt=&#34;call.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;call.webp&#34; alt=&#34;call.webp&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -4373,7 +4373,7 @@ add
 &lt;li&gt;&lt;code&gt;THAT&lt;/code&gt;, &lt;code&gt;THIS&lt;/code&gt;, &lt;code&gt;ARG&lt;/code&gt;, &lt;code&gt;LCL&lt;/code&gt;を復元&lt;/li&gt;
 &lt;li&gt;リターンアドレスにジャンプ&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;return.webp&#34; alt=&#34;return.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;return.webp&#34; alt=&#34;return.webp&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -4420,7 +4420,7 @@ add
 &lt;/pre&gt;
 
 &lt;p&gt;Jackコンパイラは構文解析器とコード生成器からなり構文解析器はトークナイザとパーサ&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;からなる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;compiler-roadmap.webp&#34; alt=&#34;compiler-roadmap&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;compiler-roadmap.webp&#34; alt=&#34;compiler-roadmap&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -4494,10 +4494,10 @@ add
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;パーサはトークン列を言語の構文ルールに照らし合わせその構造を構文上の要素に変換する処理を担う。&lt;/p&gt;
 &lt;p&gt;ここでは再帰下降構文解析というアルゴリズムを使って構文解析を行った。&lt;/p&gt;
 &lt;p&gt;ちなみに、Jack言語の構文は次のように定義されている。簡単な部類の言語とはいえ実装量はこれまでの課題と比べると多めだった。趣味でCコンパイラを書く人をたまにTwitterで見かけたりするがすごいなぁという気持ちになった。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;jack-grammer.webp&#34; alt=&#34;jack-grammer&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;jack-grammer.webp&#34; alt=&#34;jack-grammer&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;第11章-コンパイラiiコード生成&#34;&gt;第11章 コンパイラII：コード生成&lt;/h2&gt;
 &lt;p&gt;第11章では、コード生成器を実装する。具体的には構文解析した結果をもとにVMコードを生成する。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;compiler-roadmap.webp&#34; alt=&#34;compiler-roadmap&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;compiler-roadmap.webp&#34; alt=&#34;compiler-roadmap&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -4515,7 +4515,7 @@ add
 &lt;p&gt;コンパイラが&lt;code&gt;let y = foo(x);&lt;/code&gt;のような文に遭遇するたびに&lt;code&gt;x&lt;/code&gt;, &lt;code&gt;y&lt;/code&gt;が何を表しているのかを知る必要がある。&lt;/p&gt;
 &lt;p&gt;Jackではクラススコープとサブルーチンスコープの2つのスコープがある。クラススコープの変数にはフィールド変数、スタティック変数の2種類があり、サブルーチンスコープの変数にはローカル変数、引数の2種類がある。&lt;/p&gt;
 &lt;p&gt;ここではこれらの変数の情報は&lt;strong&gt;シンボルテーブル&lt;/strong&gt;と呼ばれるデータ構造に格納することで管理する手法が紹介されていた。シンボルテーブルは変数の名前、型、スコープ、種類、インデックスを保持する。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;symbol-table.webp&#34; alt=&#34;symbol-table&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;symbol-table.webp&#34; alt=&#34;symbol-table&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -4622,7 +4622,7 @@ add
       <guid>https://blog.kyu08.com/posts/magi65/</guid>
       <description>ある日YouTube Shortsで流れてきて打鍵感と打鍵音がよさそうで気になっていたIQUNIX Magi65を買ってみた。 画像は公式サイトよ</description>
       <content>&lt;p&gt;ある日YouTube Shortsで流れてきて打鍵感と打鍵音がよさそうで気になっていた&lt;a href=&#34;https://iqunix.com/products/magi65&#34; target=&#34;_blank&#34; &gt;IQUNIX Magi65&lt;/a&gt;を買ってみた。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;iqunix-magi65-official.webp&#34; alt=&#34;iqunix-magi65-official.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;iqunix-magi65-official.webp&#34; alt=&#34;iqunix-magi65-official.webp&#34; loading=&#34;lazy&#34; /&gt;
 画像は公式サイトより引用: &lt;a href=&#34;https://iqunix.com/products/magi65&#34; target=&#34;_blank&#34; &gt;Magi65 Aluminum Low Profile Mechanical Keyboard&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;価格は送料込みで$128(20,169円)だった。注文から14日後に届いた。中国から送られてきたので妥当そう。（？）&lt;/p&gt;
 &lt;p&gt;Magi65はコトコト系の打鍵音 &amp;amp; いい感じの打鍵感なので普段使っている7sPro&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;とはまた違った感じで気分転換になって楽しい。&lt;/p&gt;
@@ -4640,10 +4640,10 @@ add
 &lt;/p&gt;
 &lt;p&gt;重さも900gと適度にあるので安定感がありつつも持ち運びもそこまで辛くない。&lt;/p&gt;
 &lt;p&gt;ロープロファイルのキーボードには傾斜がないキーキャップが使われていることが多いがMagi65も例に漏れず傾斜のないタイプのキーキャップが採用されていた。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;flat-keycaps.webp&#34; alt=&#34;flat-keycaps&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;flat-keycaps.webp&#34; alt=&#34;flat-keycaps&#34; loading=&#34;lazy&#34; /&gt;
 画像は公式サイトより引用: &lt;a href=&#34;https://iqunix.com/products/magi65&#34; target=&#34;_blank&#34; &gt;Magi65 Aluminum Low Profile Mechanical Keyboard&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;傾斜があったほうが打ちやすい派なのでNuPhy Halo65のキーキャップが使えたらいいなーと思いおもむろに装着してみたところなぜか普通に使えてしまったのでそのまま使ってみている。（色味が合ってないのが若干アレではあるが打ちやすさには代えられないのでよしとした&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;magi65-with-nuphy-keycaps.webp&#34; alt=&#34;magi65-with-nuphy-keycaps&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;magi65-with-nuphy-keycaps.webp&#34; alt=&#34;magi65-with-nuphy-keycaps&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;あと通常プロファイルのキーボードよりも高さがないので尊師スタイルでも使っても手が疲れにくいのも嬉しいポイント。&lt;/p&gt;
 &lt;p&gt;[追記]その後&lt;a href=&#34;../oblivion-keycaps/&#34; &gt;傾斜付きロープロファイルキーキャップNuPhy Oblivionを買った&lt;/a&gt;ので記事を書いた。&lt;/p&gt;
 &lt;p&gt;欲を言えばスペースキーが3つくらいに割れていて傾斜のあるキーキャップの選択肢が多いと嬉しい。（ハイパー高望み）&lt;/p&gt;
@@ -4727,7 +4727,7 @@ add
 &lt;li&gt;yarn&lt;/li&gt;
 &lt;li&gt;just&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-make-pnpm.gif&#34; alt=&#34;fzf-make-pnpm&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make-pnpm.gif&#34; alt=&#34;fzf-make-pnpm&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;プレビューウィンドウが表示されるのでコマンドの内容を確認しながら選択できるのが特徴。履歴機能もあるので前回実行したコマンドを簡単に再実行することもできる。(&lt;code&gt;fzf-make repeat&lt;/code&gt;)&lt;/p&gt;
 &lt;p&gt;2024年は&lt;a href=&#34;https://github.com/pulls?q=is%3Apr&amp;#43;archived%3Afalse&amp;#43;author%3Akyu08&amp;#43;is%3Apublic&amp;#43;repo%3Akyu08%2Ffzf-make&amp;#43;created%3A2024-01-01..2024-12-31&amp;#43;is%3Amerged&#34; target=&#34;_blank&#34; &gt;筆者が108件のPRを作成&amp;amp;マージし、&lt;/a&gt;41個のバージョンがリリースされ、&lt;a href=&#34;https://github.com/kyu08/fzf-make/compare/v0.13.0...v0.53.0&#34; target=&#34;_blank&#34; &gt;筆者とrenovateを含めて8人の貢献者により184のcommitが追加された。&lt;/a&gt;時折issueを立ててくれたりPRを送ってくれる方もいて大変ありがたい限り&amp;hellip;！🙏&lt;/p&gt;
 &lt;p&gt;自分や自分の身の回りのエンジニアに使ってもらえてるのでFBをもらいやすいこと、Rustを書くのが楽しいことが要因で熱量高く取り組めている。&lt;/p&gt;
@@ -4748,7 +4748,7 @@ add
 &lt;li&gt;Hacker News: &lt;a href=&#34;https://news.ycombinator.com/item?id=42357587&#34; target=&#34;_blank&#34; &gt;Show HN: fzf-make – a command runner with a fuzzy finder for make, pnpm and yarn - Hacker News&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;広報活動の甲斐もあってかGitHubのstar数が100を突破した。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;star-history-20241230.webp&#34; alt=&#34;star-history-20241230&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;star-history-20241230.webp&#34; alt=&#34;star-history-20241230&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;記事へのリアクションはHacker News &amp;lt; Zenn &amp;lt; Redditの順で多かったが、流入数が一番多かったのはHacker Newsだった。おそらくアクティブユーザーのケタが違いそう。&lt;/p&gt;
 &lt;p&gt;さらには夢の1つだった自分のツールがhomebrew-coreに取り込まれるということも達成できた。実は本家homebrewに取り込まれるためには&lt;a href=&#34;https://docs.brew.sh/Acceptable-Formulae#niche-or-self-submitted-stuff&#34; target=&#34;_blank&#34; &gt;ある程度有名でユーザー数が多いこと、などの基準がある&lt;/a&gt;ためいつかfzf-makeがある程度有名になったといえるタイミングでPRを送ろうと&lt;a href=&#34;https://github.com/kyu08/fzf-make/issues/195&#34; target=&#34;_blank&#34; &gt;考えていた。&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;が、あるときたまたまhomebrewのメンテナによって&lt;a href=&#34;https://github.com/Homebrew/homebrew-core/pull/200454&#34; target=&#34;_blank&#34; &gt;fzf-makeがhomebrew/homebrew-coreに追加されるPR&lt;/a&gt;を発見しfzf-makeがhomebrewに取り込まれたことを知ることとなった。自分としては思わぬ早めのクリスマスプレゼントのような感じで本当に嬉しかった。&lt;/p&gt;
@@ -4787,7 +4787,7 @@ add
 &lt;/ul&gt;
 &lt;p&gt;3月に書いた&lt;a href=&#34;https://blog.kyu08.com/posts/better-programmer/&#34; target=&#34;_blank&#34; &gt;『ベタープログラマ』 を読んだ&lt;/a&gt;がたくさんの人の読んでいただけて、はてぶのトップページに掲載された。&lt;/p&gt;
 &lt;p&gt;優秀なエンジニアの振る舞いについて様々な角度から考察されていて大変参考になった。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;better-programmer-hatebu.webp&#34; alt=&#34;better-programmer-hatebu&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;better-programmer-hatebu.webp&#34; alt=&#34;better-programmer-hatebu&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;他に印象に残っている記事は以下。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://blog.kyu08.com/posts/cs50-jp/&#34; target=&#34;_blank&#34; &gt;CS50.jpでCSに入門した&lt;/a&gt;&lt;/li&gt;
@@ -5000,7 +5000,7 @@ English.&lt;/p&gt;
 &lt;li&gt;Enter: 選択中の検索結果を開く&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;以下のような操作がキーボードだけでできるようになります。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;google-search-results-shortcuts.gif&#34; alt=&#34;google-search-results-shortcuts.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;google-search-results-shortcuts.gif&#34; alt=&#34;google-search-results-shortcuts.gif&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;vimium&#34;&gt;Vimium&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://chromewebstore.google.com/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=ja&#34; target=&#34;_blank&#34; &gt;Vimium&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;言わずと知れたvimのような操作感でChromeを操作できるChrome拡張です。&lt;/p&gt;
@@ -5018,7 +5018,7 @@ English.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;という記述を見つけました。&lt;/p&gt;
 &lt;p&gt;フォーカスできるテキストボックスが1つの場合はその要素にフォーカスが当たり、複数の場合はタブで切り替えることができます。
 これまではマウスを使ってフォーカスを当てていましたがこれを知ってからマウスへの依存をより下げることができました。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;vimium-gi.gif&#34; alt=&#34;vimium-gi.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;vimium-gi.gif&#34; alt=&#34;vimium-gi.gif&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;gcp-console-colorize&#34;&gt;GCP console colorize&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://chromewebstore.google.com/detail/gcp-console-colorize/higjahjicmccalicmgfpokdmooopdhej?hl=ja&#34; target=&#34;_blank&#34; &gt;GCP console colorize&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Google Cloudのプロジェクトごとにヘッダーの色を変更するChrome拡張です。&lt;/p&gt;
@@ -5033,11 +5033,11 @@ English.&lt;/p&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;project-a&lt;/td&gt;
-&lt;td&gt;&lt;img src=&#34;gcp-console-colorize-red.webp&#34; alt=&#34;gcp-console-colorize-red.webp&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;gcp-console-colorize-red.webp&#34; alt=&#34;gcp-console-colorize-red.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;project-b&lt;/td&gt;
-&lt;td&gt;&lt;img src=&#34;gcp-console-colorize-yellow.webp&#34; alt=&#34;gcp-console-colorize-yellow.webp&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;gcp-console-colorize-yellow.webp&#34; alt=&#34;gcp-console-colorize-yellow.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -5045,7 +5045,7 @@ English.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://chromewebstore.google.com/detail/lttm/jdidcgkdggndpodjbipodfefnpgjooeh&#34; target=&#34;_blank&#34; &gt;LTTM&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;PRレビューの際にいい感じの画像を手早く貼ることができるChrome拡張です。&lt;/p&gt;
 &lt;p&gt;PR上でのコミュニケーションが捗っています。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;lttm.webp&#34; alt=&#34;lttm.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;lttm.webp&#34; alt=&#34;lttm.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;find--regex-find-in-page-tool&#34;&gt;find+ | Regex Find-in-Page Tool&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://chromewebstore.google.com/detail/find&amp;#43;-regex-find-in-page/fddffkdncgkkdjobemgbpojjeffmmofb&#34; target=&#34;_blank&#34; &gt;find+ | Regex Find-in-Page Tool&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;正規表現を使ってページ内を検索できるChrome拡張です。&lt;/p&gt;
@@ -5055,11 +5055,11 @@ English.&lt;/p&gt;
 &lt;p&gt;Notionのサイドバーにマウスカーソルが近づいたときにサイドバーが表示されるのを防ぐChrome拡張です。&lt;/p&gt;
 &lt;p&gt;1日に1回はこの挙動にストレスを感じていたのでQOLが上がりました。&lt;/p&gt;
 &lt;p&gt;たとえば次のようなNotionページの赤枠部分をコピーしたいとします。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;notion-sidebar-tamer.webp&#34; alt=&#34;notion-sidebar-tamer.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;notion-sidebar-tamer.webp&#34; alt=&#34;notion-sidebar-tamer.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;コピーするには赤枠の左あたりにカーソルを持っていく必要がある&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;のですが判定が結構厳しいので意図せずサイドバーが表示されてしまうことがよくあります。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;notion-sidebar-tamer-before.gif&#34; alt=&#34;notion-sidebar-tamer-before.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;notion-sidebar-tamer-before.gif&#34; alt=&#34;notion-sidebar-tamer-before.gif&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;そこでNotion Sidebar Tamerを使うとカーソルをサイドバー付近に移動してもサイドバーが表示されなくなります。やったね！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;notion-sidebar-tamer-after.gif&#34; alt=&#34;notion-sidebar-tamer-after.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;notion-sidebar-tamer-after.gif&#34; alt=&#34;notion-sidebar-tamer-after.gif&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
 &lt;p&gt;Chrome拡張開発者のみなさんに圧倒的感謝&amp;hellip;！&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
@@ -5089,9 +5089,9 @@ English.&lt;/p&gt;
       <content>&lt;h2 id=&#34;できること&#34;&gt;できること&lt;/h2&gt;
 &lt;p&gt;Notionのガントチャートが見づらいのをなんとかするスクリプト&lt;/p&gt;
 &lt;h3 id=&#34;before&#34;&gt;Before&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;before.webp&#34; alt=&#34;before.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;before.webp&#34; alt=&#34;before.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;after&#34;&gt;After&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;after.webp&#34; alt=&#34;after.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;after.webp&#34; alt=&#34;after.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;前提条件&#34;&gt;前提条件&lt;/h2&gt;
 &lt;p&gt;NotionをChromium系のブラウザで利用していること&lt;/p&gt;
 &lt;h2 id=&#34;やり方&#34;&gt;やり方&lt;/h2&gt;
@@ -5099,16 +5099,16 @@ English.&lt;/p&gt;
 &lt;li&gt;下記のリンクからStylusをインストール
 &lt;a href=&#34;https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=ja&#34; target=&#34;_blank&#34; &gt;https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=ja&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Manageをクリックして管理画面を開く
-&lt;img src=&#34;open-management-window.webp&#34; alt=&#34;open-management-window.webp&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;open-management-window.webp&#34; alt=&#34;open-management-window.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
 &lt;li&gt;Write new styleをクリック
-&lt;img src=&#34;click-write-new-style.webp&#34; alt=&#34;click-write-new-style.webp&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;click-write-new-style.webp&#34; alt=&#34;click-write-new-style.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
 &lt;li&gt;次のCSSを入力しURLのブロックに&lt;code&gt;URLs starting with: https://www.notion.so/&lt;/code&gt;を指定しSaveをクリック
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;notion-selectable&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;notion-page-block&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;notion-timeline-item&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;background&lt;/span&gt;: rgba(&lt;span style=&#34;color:#ae81ff&#34;&gt;255&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;255&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;255&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.15&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;set-configs.webp&#34; alt=&#34;set-configs.webp&#34;&gt;&lt;/li&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;set-configs.webp&#34; alt=&#34;set-configs.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
 &lt;li&gt;みやすくなる
-&lt;img src=&#34;after.webp&#34; alt=&#34;after.webp&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;after.webp&#34; alt=&#34;after.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </content>
     </item>
@@ -5120,7 +5120,7 @@ English.&lt;/p&gt;
       
       <guid>https://blog.kyu08.com/posts/go-system-programming/</guid>
       <description>『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11</description>
-      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11/4でコミットした日数としてはおおよそ24日ほどだった。)&lt;/p&gt;
 &lt;p&gt;筆者は情報系の学部を出ておらず、CSなどの基礎知識があまりないので大変勉強になった。また、サンプルコードが豊富なので実際に自分のマシン上で動かしながら学ぶことができ解像度を上げながら理解を深めることができた。&lt;/p&gt;
 &lt;p&gt;低レイヤ、コンピューターサイエンスの学習に興味がある方にはとてもおすすめなのでぜひ買って読んでみてください。&lt;/p&gt;
@@ -5165,7 +5165,7 @@ English.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;複数のファイル&lt;code&gt;f1&lt;/code&gt;, &lt;code&gt;f2&lt;/code&gt;を&lt;code&gt;os.Create()&lt;/code&gt;する処理をデバッガーで追ってみたところ、それぞれファイルディスクリプタの値が&lt;code&gt;3&lt;/code&gt;, &lt;code&gt;4&lt;/code&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;となっておりファイルディスクリプタの値が&lt;code&gt;3&lt;/code&gt;からインクリメントされる様子を確認できた。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;delve-neovim.webp&#34; alt=&#34;delve-neovim.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;delve-neovim.webp&#34; alt=&#34;delve-neovim.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;第3章-低レベルアクセスへの入口1ioreader&#34;&gt;第3章 低レベルアクセスへの入口1：io.Reader&lt;/h2&gt;
 &lt;h3 id=&#34;エンディアン変換&#34;&gt;エンディアン変換&lt;/h3&gt;
 &lt;ul&gt;
@@ -5368,7 +5368,7 @@ English.&lt;/p&gt;
 &lt;li&gt;Unixドメインソケットで作成されるのはソケットファイルと呼ばれる特殊なファイルであり、通常のファイルのような実体を持たない。あくまでもプロセス間の高速な通信としてファイルというインターフェースを利用するだけ。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;以下はソケットファイルが作成されている様子。ソケットファイルは先頭が&amp;quot;s&amp;quot;で始まる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;socket-file.webp&#34; alt=&#34;socket-file.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;socket-file.webp&#34; alt=&#34;socket-file.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;unixドメインソケットとtcpのベンチマーク&#34;&gt;UnixドメインソケットとTCPのベンチマーク&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Unixドメインソケットを使った実装とTCPを経由した実装のベンチマークの比較をすると筆者の環境だとUnixドメインソケットの方が10倍ほど高速だった。&lt;/li&gt;
@@ -5975,15 +5975,15 @@ English.&lt;/p&gt;
 &lt;h2 id=&#34;というわけで&#34;&gt;というわけで&lt;/h2&gt;
 &lt;p&gt;タイトルの通りだが、GitHub Sponsorsの寄付先に&lt;a href=&#34;https://github.com/sponsors/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;を追加した。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/ratatui/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;とは、手軽にTUIアプリケーションを作成できるRust用のライブラリで、筆者が個人開発しているOSSである&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;fzf-make&lt;/a&gt;でも利用している。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/kyu08/fzf-make/main/static/demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/kyu08/fzf-make/main/static/demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34; loading=&#34;lazy&#34; /&gt;
 &lt;a href=&#34;https://github.com/ratatui/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;のおかげでこんな感じのUIを手軽に実装できている。&lt;/p&gt;
 &lt;!-- textlint-disable ja-technical-writing/ja-no-weak-phrase --&gt;
 &lt;p&gt;Rust製のTUIツールでは非常に幅広く利用されている印象だが、現在のスポンサー数が9人と少なかったので少しでも力になれればということで寄付先に追加した。長期間メンテされる状態が続いてくれると嬉しい。自分にもできそうなバグ修正があれば挑戦してみようと思う。&lt;/p&gt;
 &lt;!-- textlint-disable ja-technical-writing/ja-no-weak-phrase --&gt;
-&lt;p&gt;&lt;img src=&#34;ratatuis-10th-sponsor.webp&#34; alt=&#34;ratatuis-10th-sponsor.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;ratatuis-10th-sponsor.webp&#34; alt=&#34;ratatuis-10th-sponsor.webp&#34; loading=&#34;lazy&#34; /&gt;
 10番目のスポンサーになった様子。&lt;/p&gt;
 &lt;p&gt;これで現在の寄付額は$10/月で、&lt;a href=&#34;https://github.com/sponsors/neovim&#34; target=&#34;_blank&#34; &gt;neovim&lt;/a&gt;と&lt;a href=&#34;https://github.com/sponsors/ratatui&#34; target=&#34;_blank&#34; &gt;ratatui&lt;/a&gt;にそれぞれ$5ずつ寄付していることになる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;github-sponsors-logos.webp&#34; alt=&#34;github-sponsors-logos.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;github-sponsors-logos.webp&#34; alt=&#34;github-sponsors-logos.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;他にも寄付したいプロジェクトは山ほどあるので山ほど稼いでいきたい。(あと円高頼む&amp;hellip;)&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;今後ともOSSコミュニティの持続可能性を高めていきたい。&lt;/p&gt;
@@ -6091,7 +6091,7 @@ English.&lt;/p&gt;
 &lt;li&gt;シャーディングを使用して時系列的に連続したデータを複数のスプリットに分散する&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;この例ではPKに&lt;code&gt;ShardId&lt;/code&gt;(0~N-1)を追加する方法を紹介している。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;spanner-sharding.webp&#34; alt=&#34;spanner-sharding.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;spanner-sharding.webp&#34; alt=&#34;spanner-sharding.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;スキーマ設計のベスト-プラクティス--spanner--google-cloud&#34;&gt;スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud&lt;/h2&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://cloud.google.com/spanner/docs/schema-design?hl=ja&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://cloud.google.com/spanner/docs/schema-design?hl=ja&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
@@ -6288,9 +6288,9 @@ English.&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;結果&#34;&gt;結果&lt;/h4&gt;
 &lt;p&gt;結論からいうとどちらのクエリでも同様にインデックスを利用できていた。おそらくSpannerのオプティマイザがいい感じに判断してくれていると思われる。以下が実際の実行計画。&lt;/p&gt;
 &lt;p&gt;記事で紹介されていたクエリ
-&lt;img src=&#34;original.webp&#34; alt=&#34;original.webp&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;original.webp&#34; alt=&#34;original.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;CompanyId, EntryShardIdの順番を逆にしてみたクエリ
-&lt;img src=&#34;swap.webp&#34; alt=&#34;swap.webp&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;swap.webp&#34; alt=&#34;swap.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;cloud-spanner-におけるトランザクションのロックについて&#34;&gt;Cloud Spanner におけるトランザクションのロックについて&lt;/h2&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
@@ -6687,7 +6687,7 @@ English.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;図表22-2&lt;/code&gt;が示すように自己組織化チームとはひとことでいうと「自走できるチーム」です。自分たちがなぜここにいるのかを理解し、またお互いの得意分野がわかっているため自分たちで最適なフォーメーションを組みながらビジョンへと向かっていきます。リーダーの意思決定を待つことなく自己修復的に課題を解決していく。それが自己組織化チームの底力です。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;self-organizing-team.webp&#34; alt=&#34;self-organizing-team.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;self-organizing-team.webp&#34; alt=&#34;self-organizing-team.webp&#34; loading=&#34;lazy&#34; /&gt;
 『いちばんやさしいアジャイル開発の教本』P76より引用&lt;/p&gt;
 &lt;p&gt;チームの振り返りなんかでも、「どうすれば自己組織化チームに近付けるか」という観点で考えてみてもいいかもしれない。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -6863,7 +6863,7 @@ English.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;各章はレジュメと課題で構成されている。&lt;/p&gt;
 &lt;p&gt;課題を解いてコードを提出するとリモート環境でテストが実行され結果を確認できる。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;check50.webp&#34; alt=&#34;check50&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;check50.webp&#34; alt=&#34;check50&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;正直にいうと日本語訳がなかったら取り組もうと思わなかったと思うのでCS50.jpの翻訳コントリビュータであるCODEGYM社には感謝してもしきれない。本当にありがとうございます。&lt;/p&gt;
 &lt;h2 id=&#34;そもそもなぜcsを勉強しているか&#34;&gt;そもそもなぜCSを勉強しているか&lt;/h2&gt;
 &lt;p&gt;前提として筆者について補足しておくと筆者は電気系の学部・大学院を卒業しておりコンピューターサイエンスのバックグラウンドを持っていない。（かつSaaS企業でソフトウェアエンジニアとして働き初めて現在4年目）&lt;/p&gt;
@@ -6937,7 +6937,7 @@ English.&lt;/p&gt;
       <description>これはなに こんな感じでtmuxでwindowをfzfで切り替えられるようにするための設定方法 手順 .tmux.confに以下を追記 set -g @plugin &amp;#39;tmux-plugins/tpm&amp;#39; # す</description>
       <content>&lt;h2 id=&#34;これはなに&#34;&gt;これはなに&lt;/h2&gt;
 &lt;p&gt;こんな感じでtmuxでwindowをfzfで切り替えられるようにするための設定方法&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.kyu08.com/posts/my-dev-setup-terminal/tmux-fzf.gif&#34; alt=&#34;https://blog.kyu08.com/posts/my-dev-setup-terminal/tmux-fzf.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.kyu08.com/posts/my-dev-setup-terminal/tmux-fzf.gif&#34; alt=&#34;https://blog.kyu08.com/posts/my-dev-setup-terminal/tmux-fzf.gif&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;手順&#34;&gt;手順&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -6975,7 +6975,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;desk-without-earpods.webp&#34; alt=&#34;desk-without-earpods.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;desk-without-earpods.webp&#34; alt=&#34;desk-without-earpods.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;課題&#34;&gt;課題&lt;/h2&gt;
 &lt;p&gt;同僚に話しかけられた時には&lt;/p&gt;
 &lt;ol&gt;
@@ -6987,7 +6987,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
 &lt;h2 id=&#34;解決策&#34;&gt;解決策&lt;/h2&gt;
 &lt;p&gt;EarPods(AirPodsではなく)を買ってMacに常時接続しておくことで話しかけられたらGatherのマイクをONにするだけで話せるようにした。&lt;/p&gt;
 &lt;p&gt;これにより話しかけられてから1秒弱くらいで話せる状態にできるようになった。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;desk-with-earpods.webp&#34; alt=&#34;desk-with-earpods.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;desk-with-earpods.webp&#34; alt=&#34;desk-with-earpods.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;特に音質が悪かったり声が聞きづらいみたいなFBはもらっていないので今のところ特に問題はなさそう。&lt;/p&gt;
 </content>
     </item>
@@ -7285,7 +7285,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
 &lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;kyu08/fzf-make&lt;/a&gt;&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;h3 id=&#34;fzf-makeを公開した&#34;&gt;fzf-makeを公開した&lt;/h3&gt;
 &lt;p&gt;こんな感じでMakefileに定義したtargetを曖昧検索で絞り込んで実行できるツールを作った。プレビューウィンドウがあるのが地味に便利なポイントでtargetの内容を確認しつつ実行できる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Rustの理解を深めるのと自分の普段の作業を効率化したくて作ったがその両方が割と達成できているので満足している。特に所有権やスマートポインタに関しては&lt;a href=&#34;https://doc.rust-jp.rs/book-ja/&#34; target=&#34;_blank&#34; &gt;The Rust Programming Language&lt;/a&gt;を読んだときにはイマイチ理解できなかったが実際に自分でコードを書いてコンパイラに指摘されてコードを修正することで理解を深めることができた。&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;最初は身近な人に紹介して使ってもらったりしていたが、ある日面識のない日本人の開発者の方がバグ報告issue&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;を立ててくれて、インターネットの向こう側の人に自分のアイディアが届いて気に入ってもらえて、しかもわざわざバグ報告をしてくれたという事実がとても嬉しかった。&lt;/p&gt;
 &lt;p&gt;当然個人の趣味開発なので副業などとは違い時給を得て開発しているわけではないが、ものづくりを通して他者に喜んでもらうということが自分にとって最高の喜びだとわかっただけでも非常に良い経験だった。自分がOSSコミュニティに貢献したいと考えているのも究極は「人に喜んで欲しいから」なのかもしれない。&lt;/p&gt;
@@ -7306,7 +7306,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
 &lt;h3 id=&#34;fzf-bookmark-openerを公開した&#34;&gt;fzf-bookmark-openerを公開した&lt;/h3&gt;
 &lt;p&gt;ブックマークをfzfで絞り込んで開くことができるCLIツール。自分が欲しかったので作った。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-bookmark-opener&#34; target=&#34;_blank&#34; &gt;kyu08/fzf-bookmark-opener&lt;/a&gt;&lt;sup id=&#34;fnref:11&#34;&gt;&lt;a href=&#34;#fn:11&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;11&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-bookmark-opener-demo.gif&#34; alt=&#34;fzf-bookmark-opener-demo.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-bookmark-opener-demo.gif&#34; alt=&#34;fzf-bookmark-opener-demo.gif&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;同時期に書いた&lt;a href=&#34;https://github.com/kyu08/gcp-url-generator&#34; target=&#34;_blank&#34; &gt;kyu08/gcp-url-generator&lt;/a&gt;と組み合わせて業務でよく使っている。特定のGCPプロジェクトの特定のGCPサービスのコンソールをターミナルから開きたいことが多いので重宝している。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/ktr0731/go-fuzzyfinder&#34; target=&#34;_blank&#34; &gt;ktr0731/go-fuzzyfinder&lt;/a&gt;のおかげで100行程度のコードでやりたいことが実現できて大変助かった。&lt;/p&gt;
 &lt;h3 id=&#34;買ってよかったもの&#34;&gt;買ってよかったもの&lt;/h3&gt;
@@ -7396,7 +7396,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
       
       <guid>https://blog.kyu08.com/posts/how-world-class-engineers-think/</guid>
       <description>Microsoftのエンジニアとしてアメリカで働いている牛尾剛さんが優秀な同僚から学んだ思考法について書いた著書『世界一流エンジニアの思考法</description>
-      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Microsoftのエンジニアとしてアメリカで働いている牛尾剛さんが優秀な同僚から学んだ思考法について書いた著書『世界一流エンジニアの思考法』を読んだので学びになったトピックについて簡単に書こうと思う。&lt;/p&gt;
 &lt;h2 id=&#34;頭がよくても理解には時間がかかる&#34;&gt;頭がよくても「理解」には時間がかかる&lt;/h2&gt;
 &lt;p&gt;ある若くて優秀な同僚が新しいプロジェクトに参加するときにアーキテクチャの説明ビデオを「難しいので何回も見直している」と言っていたのに対して著者が衝撃を受けたというエピソードが紹介されていた。&lt;/p&gt;
@@ -7469,10 +7469,10 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
 &lt;p&gt;ファイルをマークしてquick_menu(マークしたファイルの一覧)からファイルを開くことができる。操作している様子は以下の通り。&lt;/p&gt;
 &lt;h3 id=&#34;1-ファイルをマークして&#34;&gt;1. ファイルをマークして&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;:lua require(&amp;quot;harpoon.mark&amp;quot;).add_file()&lt;/code&gt;を実行してファイルをマーク&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;add-file.gif&#34; alt=&#34;add-file&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;add-file.gif&#34; alt=&#34;add-file&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;2-quick_menuからファイルを開く&#34;&gt;2. quick_menuからファイルを開く&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;:lua require(&amp;quot;harpoon.ui&amp;quot;).toggle_quick_menu()&lt;/code&gt;を実行してマークしたファイル一覧からファイルを開く&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;toggle-quick-menu.gif&#34; alt=&#34;toggle-quick-menu&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;toggle-quick-menu.gif&#34; alt=&#34;toggle-quick-menu&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;機能は他にもありそう&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;だが筆者はこの機能しか使ってないので割愛。&lt;/p&gt;
 &lt;h2 id=&#34;嬉しさ&#34;&gt;嬉しさ&lt;/h2&gt;
 &lt;p&gt;個人開発などファイル数が少ないプロジェクトだとそこまで効果を感じないが業務では(当然だが)一定数のファイルがあり、かつ定義ジャンプを繰り返しているとバッファにはたくさんファイルが存在しているのでtelescopeなどのfuzzy-finderプラグインを使ったとしてもファイルの行き来には多少時間がかかってしまっていた。&lt;/p&gt;
@@ -7481,12 +7481,12 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
 &lt;h3 id=&#34;1-マークしたファイルが一度エディタを閉じても保持される&#34;&gt;1. マークしたファイルが一度エディタを閉じても保持される&lt;/h3&gt;
 &lt;p&gt;LSPが不調だったりしてNeovimを再起動することがたまにあるので地味に便利。&lt;/p&gt;
 &lt;p&gt;(一度Neovimを閉じてもマークしたファイルが保持されている様子。)
-&lt;img src=&#34;saved-quick-menu.gif&#34; alt=&#34;saved-quick-menu&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;saved-quick-menu.gif&#34; alt=&#34;saved-quick-menu&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;2-自由に編集できる-quick_menu&#34;&gt;2. 自由に編集できる quick_menu&lt;/h3&gt;
 &lt;p&gt;作者自身もお気に入りと言及しているが&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;quick_menuは純粋なテキストなので自由に編集できる。&lt;/p&gt;
 &lt;p&gt;つまりこんな感じで&lt;code&gt;dd&lt;/code&gt; -&amp;gt; &lt;code&gt;y&lt;/code&gt;のようなコマンドで自由に順番を入れ替えたり削除したりできる。普段のvimの操作感で扱えるのでとても直感的で使いやすくて嬉しい。&lt;/p&gt;
 &lt;p&gt;quick_menuを自由に編集している様子&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;
-&lt;img src=&#34;editable-quick-menu.gif&#34; alt=&#34;editable-quick-menu&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;editable-quick-menu.gif&#34; alt=&#34;editable-quick-menu&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;気になった方はぜひ試してみてください。&lt;/p&gt;
 &lt;p&gt;インストール方法はこちら&lt;/p&gt;
@@ -7589,7 +7589,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;is:pr archived:false is:closed author:@me is:public -user:@me created:2024-01-01..2024-12-31 
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;を指定して検索するとこんな感じで表示される。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;pulls.webp&#34; alt=&#34;pulls&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;pulls.webp&#34; alt=&#34;pulls&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;余談&#34;&gt;余談&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;orgを所属組織とかに絞って検索すれば仕事の振り返りとかにも使えそう。&lt;/li&gt;
@@ -7639,7 +7639,7 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;go work use ./compile
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;ということで&#34;&gt;ということで&lt;/h2&gt;
 &lt;p&gt;無事LSPを動作させることができた。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;running-lsp-on-go-runtime-repository.webp&#34; alt=&#34;running-lsp-on-go-runtime-repository.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;running-lsp-on-go-runtime-repository.webp&#34; alt=&#34;running-lsp-on-go-runtime-repository.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;これでgo本体のコードがサクサク読めるぞー。&lt;/p&gt;
 </content>
     </item>
@@ -7664,9 +7664,9 @@ run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39; # すでにある場合は不要
 &lt;/ul&gt;
 &lt;p&gt;くらいだったので5分もかからずにできた。&lt;/p&gt;
 &lt;p&gt;手続きが完了するとこんな感じでSponsorsに自分のアイコンが表示される。(嬉しい)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;sponsors.webp&#34; alt=&#34;sponsors.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;sponsors.webp&#34; alt=&#34;sponsors.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;さらには自分のプロフィール画面にNeovimのアイコンが表示される。組織の一員感がでて地味にいいですねこれ。(結構嬉しい)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;github-profile.webp&#34; alt=&#34;github-profile.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;github-profile.webp&#34; alt=&#34;github-profile.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;日頃から「OSSにお世話になっている分コードを書いて恩返ししたい&amp;hellip;。けどなかなかすぐに解決できそうなissueも見当たらない&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;」みたいなことを思っていたのでまずは寄付という形でOSSに貢献できてよかった。&lt;/p&gt;
 &lt;p&gt;今後はPRでもOSSコミュニティに貢献していくぞという気持ちになった。&lt;/p&gt;
 &lt;h2 id=&#34;と思っていた矢先&#34;&gt;と思っていた矢先&lt;/h2&gt;
@@ -7743,16 +7743,16 @@ close #56
 &lt;h2 id=&#34;prの作成&#34;&gt;PRの作成&lt;/h2&gt;
 &lt;p&gt;修正内容としては非推奨となった&lt;code&gt;set-output&lt;/code&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;をenvironment filesに置き換えるという簡単なもの。
 ちょうど業務で同様の修正を行っていたので特に詰まることなく修正できた。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;diff.webp&#34; alt=&#34;diff.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;diff.webp&#34; alt=&#34;diff.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;修正内容はたった1行だったが、非同期だし時差もあるしでコミュニケーションの往復が増えることはお互い避けたいはずなのでできるだけ一発でマージしてもらえるように丁寧に背景や動作確認のログを書いた。(自分としても早くマージしてもらえた方が嬉しいし)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;pr.webp&#34; alt=&#34;pr.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;pr.webp&#34; alt=&#34;pr.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;若干ソワソワしながら過ごしていると&#34;&gt;若干ソワソワしながら過ごしていると&lt;/h2&gt;
 &lt;p&gt;PRを送った1日後には見事マージしてもらえた。念願の初OSS contribution！やったね！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;approve.webp&#34; alt=&#34;approve.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;approve.webp&#34; alt=&#34;approve.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;2.2kものrepositoryで使われてるworkflowのcontributorsに自分のアイコンが載るのは結構嬉しい。(自分のプロジェクト&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;でも利用し始めたタイミングだったのでちゃっかりUsed byにもアイコンが載っているｗ)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;contributors.webp&#34; alt=&#34;contributors.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;contributors.webp&#34; alt=&#34;contributors.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;commit logに載っている様子。嬉しい。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;commit-log.webp&#34; alt=&#34;commit-log.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;commit-log.webp&#34; alt=&#34;commit-log.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;ということで&#34;&gt;ということで&lt;/h2&gt;
 &lt;p&gt;これからもOSSコミュニティへの貢献やっていくぞ〜！&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
@@ -7889,11 +7889,11 @@ close #56
       <guid>https://blog.kyu08.com/posts/nuphy-air60/</guid>
       <description>NuPhy Air60を買ったので簡単にレビューする 買った理由 普段は7sProを使っているが出社のときに持っていくのが大変だったり尊師スタイルで作業し</description>
       <content>&lt;p&gt;NuPhy Air60を買ったので簡単にレビューする&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;nuphy-air60.webp&#34; alt=&#34;nuphy-air60.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;nuphy-air60.webp&#34; alt=&#34;nuphy-air60.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;買った理由&#34;&gt;買った理由&lt;/h2&gt;
 &lt;p&gt;普段は7sProを使っているが出社のときに持っていくのが大変だったり尊師スタイルで作業したりしずらかったりするので出社用・家での尊師スタイル用にキーボードを探していた。&lt;/p&gt;
 &lt;p&gt;コンパクトなキーボードが好みなので60%で探したいたところNuPhy Air60を見つけ、社の先輩がAir75を使っていたので少し触らせてもらったところ打鍵感がいい感じだったので購入を決めた。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;sonshi.webp&#34; alt=&#34;sonshi.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;sonshi.webp&#34; alt=&#34;sonshi.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;nuphy-air60のいいところ&#34;&gt;NuPhy Air60のいいところ&lt;/h2&gt;
 &lt;h3 id=&#34;macのキーボードと比べて打ちやすい&#34;&gt;(macのキーボードと比べて)打ちやすい&lt;/h3&gt;
 &lt;p&gt;macの付属キーボードのような薄いタイプよりもメカニカルキーボードなどのようなキーストロークが深めなキーボードが好きなので(ロープロファイルとはいえ)比較的打ちやすい。&lt;/p&gt;
@@ -7902,15 +7902,15 @@ close #56
 &lt;p&gt;打鍵音はオフィスで何も気にせず使える程度には静か。&lt;/p&gt;
 &lt;h3 id=&#34;デザインがかわいい&#34;&gt;デザインがかわいい&lt;/h3&gt;
 &lt;p&gt;かわいい&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;nuphy-air60-2.webp&#34; alt=&#34;nuphy-air60-2.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;nuphy-air60-2.webp&#34; alt=&#34;nuphy-air60-2.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;コンパクト&#34;&gt;コンパクト&lt;/h3&gt;
 &lt;p&gt;60%なのでそれはそうという感じだがコンパクトで使いやすい。(65%のキーボードは一番右の列を間違って押してしまいがちなのでつらい)&lt;/p&gt;
 &lt;p&gt;ちなみに持ち歩く際はバード電子から発売されている &lt;a href=&#34;https://www.pfu.ricoh.com/direct/hhkb/hhkb-option/detail_smartcase2.html&#34; target=&#34;_blank&#34; &gt;HHKBスマートケース2&lt;/a&gt; に入れて持ち運んでいる。ぴったりフィットしている。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;with-cover.webp&#34; alt=&#34;with-cover.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;with-cover.webp&#34; alt=&#34;with-cover.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;気になったポイント&#34;&gt;気になったポイント&lt;/h2&gt;
 &lt;p&gt;唯一惜しいと思ったのはキーキャップがフラットで傾斜がついてないこと（軽く調べた感じロープロファイルだと傾斜がついてないのがスタンダードっぽいのでNuPhy Air60特有の微妙なところかと言われると微妙ではある）&lt;/p&gt;
 &lt;p&gt;普段はスカルプチャードなキーキャップ&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;を7sProに装着して使っているのでなかなか慣れない &amp;amp; 若干手が疲れる。(とはいえmacのキーボードよりははるかに打ちやすい)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;keycaps.webp&#34; alt=&#34;keycaps.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;keycaps.webp&#34; alt=&#34;keycaps.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;NuPhy Air60は打鍵感がよく持ち運びもしやすくてとても気に入っている。&lt;/p&gt;
 &lt;p&gt;あとは家で作業しているときもキーボードを変えると気分転換になることを発見したのでときどき意味もなくキーボードを入れ替えてみている。&lt;/p&gt;
@@ -8040,12 +8040,12 @@ close #56
 &lt;/ul&gt;
 &lt;h2 id=&#34;手順&#34;&gt;手順&lt;/h2&gt;
 &lt;h3 id=&#34;1-keycastrを起動&#34;&gt;1. Keycastrを起動&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;keycastr.gif&#34; alt=&#34;keycastr.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;keycastr.gif&#34; alt=&#34;keycastr.gif&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;2-kapでいい感じに範囲を選んで録画開始ボタンを押す&#34;&gt;2. Kapでいい感じに範囲を選んで録画開始ボタンを押す&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;select-window.webp&#34; alt=&#34;select-window.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;select-window.webp&#34; alt=&#34;select-window.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;3-いい感じのサイズで保存重要&#34;&gt;3. いい感じのサイズで保存(重要)&lt;/h3&gt;
 &lt;p&gt;(あとから圧縮しようとすると思いのほか大変なのでサイズを小さくしたい場合はいい感じのサイズにするのを忘れない)
-&lt;img src=&#34;select-size.webp&#34; alt=&#34;select-size.webp&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;select-size.webp&#34; alt=&#34;select-size.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
 &lt;p&gt;(いざ書いてみると書くほどでもなかった)&lt;/p&gt;
 </content>
@@ -8167,9 +8167,9 @@ close #56
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	@read -p &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;post id: &amp;#34;&lt;/span&gt; id; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;	hugo new &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;posts/&lt;/span&gt;$$&lt;span style=&#34;color:#e6db74&#34;&gt;{id}/index.md&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;こんな感じで動く。地味に楽。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;make-new.gif&#34; alt=&#34;make-new.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;make-new.gif&#34; alt=&#34;make-new.gif&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;ちなみにデプロイは1分くらいで完了するのでサクサク反映できて嬉しい。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;deploy.webp&#34; alt=&#34;deploy.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;deploy.webp&#34; alt=&#34;deploy.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
 &lt;p&gt;色々追加したい機能はあるけどとりあえず最低限の機能はできたのでヨシ！とする。&lt;/p&gt;
 &lt;p&gt;ブログたくさん書くぞ〜&lt;/p&gt;
@@ -8248,7 +8248,7 @@ close #56
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;こんな感じで動く。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;fzf-makeがやっていること&#34;&gt;fzf-makeがやっていること&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;Makefile&lt;/code&gt;からtargetを正規表現で抜き出す&lt;/li&gt;
@@ -8336,9 +8336,9 @@ close #56
 &lt;h2 id=&#34;余談&#34;&gt;余談&lt;/h2&gt;
 &lt;p&gt;テスト実行に &lt;a href=&#34;nextest-rs/nextest&#34; &gt;https://github.com/nextest-rs/nextest&lt;/a&gt; を使ってみたがテスト結果が見やすくて便利だった。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;cargo run&lt;/code&gt;の結果
-&lt;img src=&#34;cargo-run.webp&#34; alt=&#34;cargo run&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;cargo-run.webp&#34; alt=&#34;cargo run&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;cargo nextest run&lt;/code&gt;の結果
-&lt;img src=&#34;nextest-run.webp&#34; alt=&#34;cargo nextest run&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;nextest-run.webp&#34; alt=&#34;cargo nextest run&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;カラフルで見やすい。&lt;/p&gt;
 </content>
     </item>
@@ -8362,7 +8362,7 @@ close #56
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;こんな感じで動く。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/49891479/218272272-e693c10d-c810-458a-bf46-9c3a4a2fe45a.gif&#34; alt=&#34;demo&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/49891479/218272272-e693c10d-c810-458a-bf46-9c3a4a2fe45a.gif&#34; alt=&#34;demo&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;コードの話&#34;&gt;コードの話&lt;/h2&gt;
 &lt;p&gt;コード自体は大変シンプルで&lt;/p&gt;
 &lt;ol&gt;
@@ -8471,7 +8471,7 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;p&gt;全然大したことをやっているわけではないですがTmux, Neovimやそれらのプラグインの普及活動になれば嬉しいので書いてみます。&lt;/p&gt;
 &lt;h2 id=&#34;動作イメージ&#34;&gt;動作イメージ&lt;/h2&gt;
 &lt;p&gt;こんな感じでvanillaのGoプロジェクトをTmuxのwindowに開いておいて、確認したくなったときにすぐwindowを切り替えてコードを書いて実行結果を確認できるようにしている。(Gifの例はGoの書式指定子&lt;code&gt;%+v&lt;/code&gt;の動作を忘れて試してみているところ)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;go-playground.gif&#34; alt=&#34;go-playground&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;go-playground.gif&#34; alt=&#34;go-playground&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Gifでやっていることは以下&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;GoのSandbox環境を開いたNeovimが起動しているwindowに切り替え&lt;/li&gt;
@@ -8526,14 +8526,14 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;p&gt;最後に補足としてGif内で使っているNeovimのプラグインを紹介します。&lt;/p&gt;
 &lt;h3 id=&#34;ターミナル表示&#34;&gt;ターミナル表示&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/voldikss/vim-floaterm&#34; target=&#34;_blank&#34; &gt;voldikss/vim-floaterm&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;floaterm.gif&#34; alt=&#34;floaterm&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;floaterm.gif&#34; alt=&#34;floaterm&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;GoのSandbox環境の&lt;code&gt;main.go&lt;/code&gt;に書いたスクリプトを実行するために、Neovimからターミナルを表示するシーンで使っている。&lt;/p&gt;
 &lt;p&gt;コード編集してサクっと動作確認したいときなどに便利。(といいつつ最近動作の重さが目立ってきたので&lt;code&gt;&amp;lt;C-z&amp;gt;&lt;/code&gt;でNeovimの起動元に戻ってターミナルを操作することが多い)&lt;/p&gt;
 &lt;h3 id=&#34;カーソル移動&#34;&gt;カーソル移動&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/yuki-yano/fuzzy-motion.vim&#34; target=&#34;_blank&#34; &gt;yuki-yano/fuzzy-motion.vim&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;fmt.Printf(&amp;quot;u: %v\n&amp;quot;, u)&lt;/code&gt;の&lt;code&gt;u&lt;/code&gt;から&lt;code&gt;%v&lt;/code&gt;の位置にカーソル移動する際に使っているプラグイン。&lt;/p&gt;
 &lt;p&gt;動作のイメージはこんな感じ。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fuzzy-motion.gif&#34; alt=&#34;fuzzy-motion&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fuzzy-motion.gif&#34; alt=&#34;fuzzy-motion&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;起動すると文字がグレーアウトするのでジャンプしたい文字列を入力するとその文字にジャンプするためのキーワードを表示してくれるというプラグイン。&lt;/p&gt;
 &lt;p&gt;同様の機能をもつプラグインとしてはeasy-motionなどのプラグインが有名だが、fuzzy-motionはジャンプしたい文字列をfuzzy-finder形式で絞り込んでくれるのが大きな特徴。(詳しくはリポジトリのREADME参照)&lt;/p&gt;
 &lt;p&gt;筆者はノーマルモードで&lt;code&gt;f&lt;/code&gt;キーを押下するとプラグインが起動するように設定している。&lt;/p&gt;
@@ -8542,7 +8542,7 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;p&gt;&lt;a href=&#34;https://github.com/neoclide/coc.nvim&#34; target=&#34;_blank&#34; &gt;neoclide/coc.nvim&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Language Serverをホストするためのプラグイン。&lt;/p&gt;
 &lt;p&gt;すごく簡単にいうと補完や関数定義を表示したり定義ジャンプできるようにしたりしてくれる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;coc-nvim.gif&#34; alt=&#34;coc-nvim&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;coc-nvim.gif&#34; alt=&#34;coc-nvim&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;以上です。ここまで読んでくれてありがとうございました。&lt;/p&gt;
 </content>
     </item>
@@ -8610,7 +8610,7 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;# done
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;をファイルに書き込んだうえでvimで開く、という内容のワンライナーです。&lt;/p&gt;
 &lt;p&gt;実際に呼び出すとこんな感じです。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;memo.gif&#34; alt=&#34;memo&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;memo.gif&#34; alt=&#34;memo&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;ちなみに筆者は&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;# todo
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; タスクA
@@ -8629,7 +8629,7 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 子タスクb
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias ghw&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;gh repo view -w&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;gh&lt;/code&gt;コマンドを利用して現在いるリポジトリをブラウザでGitHubで開くコマンド&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;ghw.gif&#34; alt=&#34;ghw&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ghw.gif&#34; alt=&#34;ghw&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias pbc&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;pbcopy &amp;amp;&amp;amp; pbpaste&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;make test | pbc&lt;/code&gt;のように出力をパイプで&lt;code&gt;pbc&lt;/code&gt;に渡すとクリップボードにコピーしつつ標準出力に出力してくれる。&lt;/p&gt;
 &lt;p&gt;コマンドの出力をコピーしたいけど出力内容もその場で確認したいときに便利。&lt;/p&gt;
@@ -8683,7 +8683,7 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# fzfの設定&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;export FZF_DEFAULT_OPTS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;--color=fg+:11 --height 70% --reverse --exit-0 --multi&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これを実際に使うとこんな感じになります。ファジーファインダーを利用して効率的にディレクトリ移動できます。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-cdr.gif&#34; alt=&#34;cdr&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-cdr.gif&#34; alt=&#34;cdr&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;やっていることは以下です。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;.zshrc&lt;/code&gt;に定義したfzf-cdrを実行&lt;/li&gt;
@@ -8709,7 +8709,7 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;zle -N &lt;span style=&#34;color:#66d9ef&#34;&gt;select&lt;/span&gt;-history
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bindkey &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;^r&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;select&lt;/span&gt;-history
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;command-history.gif&#34; alt=&#34;command-history&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;command-history.gif&#34; alt=&#34;command-history&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;git操作&#34;&gt;Git操作&lt;/h2&gt;
 &lt;p&gt;Git操作のほとんどはGitのTUIクライアントであるLazygitを使っています。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/jesseduffield/lazygit&#34; data-auto-fetch=&#34;false&#34;&gt;
@@ -8723,7 +8723,7 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;/p&gt;
 &lt;p&gt;Lazygitはターミナル上で動作するリッチなGitクライアントでGitに関する大抵のことを行うことができます。(機能が豊富すぎて何ができて何ができないのかを正確に把握できていない)&lt;/p&gt;
 &lt;p&gt;以下はLazygitを使って変更をaddしてcommitしてpushする例です。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;lazygit-push.gif&#34; alt=&#34;lazygit-push&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;lazygit-push.gif&#34; alt=&#34;lazygit-push&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;見やすいですし、&lt;strong&gt;少ないタイプ数で操作できる&lt;/strong&gt;点でおすすめです。他にも基本的なブランチ操作はもちろんのこと、&lt;code&gt;git rebase -i&lt;/code&gt;相当のこともスピーディーにできるのでよく使っています。&lt;/p&gt;
 &lt;p&gt;ちなみに筆者はkdheepak/lazygit.nvimというプラグインを使ってNeovim上からLazygitを呼び出しています。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kdheepak/lazygit.nvim&#34; data-auto-fetch=&#34;false&#34;&gt;
@@ -8759,7 +8759,7 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;tokyonight.webp&#34; alt=&#34;tokyonight&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tokyonight.webp&#34; alt=&#34;tokyonight&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Alacrittyにはタブ機能がなくタブ的な機能を実現するためにはtmuxなどのターミナルマルチプレクサを利用する必要があるため筆者はtmuxを利用しています。
 設定・プラグインなどは後述しますが、tmuxの操作感も好みなので割と満足しています。&lt;/p&gt;
 &lt;p&gt;他にもRust製のターミナルとしてWarp, Weztermなどがありますが筆者の環境ではWarpはNeovimのcolorschemeの反映がうまくできず、Weztermは画面の再描画まわりの不具合が多少あったため、採用しませんでした。(Warp便利そうだしみやすいので使いたかった)&lt;/p&gt;
@@ -8781,7 +8781,7 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;li&gt;現在時刻&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;を表示するようにしています。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;tmux-status-line.webp&#34; alt=&#34;tmux-status-line&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tmux-status-line.webp&#34; alt=&#34;tmux-status-line&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;普段の開発ではプロジェクトごとにウィンドウを開き、必要に応じて切り替える運用にしています。&lt;/p&gt;
 &lt;h3 id=&#34;ウィンドウの切り替え&#34;&gt;ウィンドウの切り替え&lt;/h3&gt;
 &lt;p&gt;筆者はふだんプロジェクトごとのウィンドウに加えてmemo用のウィンドウ・dotfiles用のウィンドウなども開いており、常時ウィンドウが15前後あります。筆者は簡単なタスク管理もmemo用ウィンドウに立ち上げたNeovim内で行っているため、ウィンドウの切り替えを頻繁に行います。&lt;/p&gt;
@@ -8793,7 +8793,7 @@ Makefileに定義されたtargetをfzfで選択して実行するCLIツールを
 &lt;li&gt;選択する&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;という手順で行っていましたがウィンドウが増えてくると地味にウィンドウ移動が大変になっていきました。以下は従来のウィンドウ切り替えの様子です。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;tmux-window.gif&#34; alt=&#34;tmux-window&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tmux-window.gif&#34; alt=&#34;tmux-window&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;どうにかもう少し楽にウィンドウ切り替えをできないかと探していたところsainnhe/tmux-fzfに出会いました。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/sainnhe/tmux-fzf&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/sainnhe/tmux-fzf&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
@@ -8821,7 +8821,7 @@ sainnhe/tmux-fzfを使うようにしたことでウィンドウ切り替えを&
 &lt;li&gt;選択する&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;という手順でできるようになりました。文字にすると違いが伝わりづらいですが、ファジーファインダーを使ってウィンドウの選択を行うことができるようになったことでキーのタイプ数や切り替えの際の脳の負荷を大幅に減らすことができました。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;tmux-fzf.gif&#34; alt=&#34;tmux-fzf&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tmux-fzf.gif&#34; alt=&#34;tmux-fzf&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
 &lt;p&gt;ここまで読んでくださってありがとうございました。&lt;/p&gt;
 &lt;p&gt;需要がありそうだったら&lt;/p&gt;
@@ -8924,7 +8924,7 @@ sainnhe/tmux-fzfを使うようにしたことでウィンドウ切り替えを&
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;どんな場面で使ったか&#34;&gt;どんな場面で使ったか&lt;/h2&gt;
 &lt;p&gt;趣味で開発している麻雀の点数集計アプリで使いました。&lt;/p&gt;
 &lt;p&gt;各プレイヤーの試合毎のスコアを記録して合計を表示するだけの簡単なアプリケーションです。(※実際には順位点やトビ賞の計算などもやっていますがここでは割愛)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;jan-log-demo.webp&#34; alt=&#34;jan-log-demo.web&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;jan-log-demo.webp&#34; alt=&#34;jan-log-demo.web&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;ここで &lt;strong&gt;参加者の名前&lt;/strong&gt; および &lt;strong&gt;その試合のスコア&lt;/strong&gt; を &lt;code&gt;Array String&lt;/code&gt; として扱おうとすると以下のようになります。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Players&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Array&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;String&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;

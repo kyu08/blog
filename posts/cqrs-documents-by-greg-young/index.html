@@ -289,7 +289,7 @@ if (!doNotTrack) {
 <p>ここからは<a href="https://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdf" target="_blank" >CQRS Documents</a>の内容をまとめていく。</p>
 <h2 id="a-stereotypical-architecture-典型的なアーキテクチャ">&ldquo;A Stereotypical Architecture&rdquo;: 典型的なアーキテクチャ<a href="#a-stereotypical-architecture-典型的なアーキテクチャ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>&ldquo;A Stereotypical Architecture&quot;として、典型的なアーキテクチャが紹介されている。CQRS Documentsではこのアーキテクチャに対して段階的にCQRSを導入していく形で説明が進んでいく。</p>
-<p><img src="a-stereotypical-architecture.webp" alt="a-stereotypical-architecture.webp">
+<p><img src="a-stereotypical-architecture.webp" alt="a-stereotypical-architecture.webp" loading="lazy" />
 CQRS Documents by Greg Young P2より引用</p>
 <p>このアーキテクチャではシステムはCRUDのみの機能を持ち、クライアントとは<strong>常にDTOを介して通信する。</strong></p>
 <p>おそらくクライアントが<code>UpdateUserName</code>のようなエンドポイントに更新後のユーザーネームだけを渡すのではなく<code>/user</code>に更新後のDTOを丸ごと渡す、というようなことだと思われる。</p>
@@ -331,13 +331,13 @@ CQRS Documents by Greg Young P2より引用</p>
 </blockquote>
 <p>とあるように、CQRSを適用することでCommandとQueryの処理経路が明確に分離される。この段階ではドメインモデルをDTOの生成に使用しない方が合理的である。</p>
 <p>その代わりに&quot;Thin Read Layer&quot;という方法でDTOを生成することができる。</p>
-<p><img src="thin-read-layer.webp" alt="thin-read-layer.webp">
+<p><img src="thin-read-layer.webp" alt="thin-read-layer.webp" loading="lazy" />
 CQRS Documents by Greg Young P21より引用</p>
 <p>この層はDBから直接データを読み取り（ドメインモデルを迂回し）DTOを生成する。</p>
 <p>こうすることで、<strong>ドメイン層からQueryの責務を切り離すことができ、ドメイン層の純度を上げることができる。</strong></p>
 <h3 id="command">Command<a href="#command" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>CQRSを適用するとCommand側のアーキテクチャは以下のようになる。</p>
-<p><img src="the-command-site.webp" alt="the-command-site.webp">
+<p><img src="the-command-site.webp" alt="the-command-site.webp" loading="lazy" />
 CQRS Documents by Greg Young P22より引用</p>
 <p>元のアーキテクチャでは書き込み系の処理をする際もDTOをクライアントから受け取っていたが、CQRS適用後はデータ中心ではなく振る舞い中心の契約を採用している点と読み取り処理が分離されている点が大きな違い。（元のアーキテクチャでは書き込み時にクライアントからDTOを渡していたが、ここではメッセージが渡されるようになっている）</p>
 <p>また、元のアーキテクチャでドメイン層に存在していた次のような課題が解決されている。</p>

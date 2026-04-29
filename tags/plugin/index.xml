@@ -20,10 +20,10 @@
 &lt;p&gt;ファイルをマークしてquick_menu(マークしたファイルの一覧)からファイルを開くことができる。操作している様子は以下の通り。&lt;/p&gt;
 &lt;h3 id=&#34;1-ファイルをマークして&#34;&gt;1. ファイルをマークして&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;:lua require(&amp;quot;harpoon.mark&amp;quot;).add_file()&lt;/code&gt;を実行してファイルをマーク&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;add-file.gif&#34; alt=&#34;add-file&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;add-file.gif&#34; alt=&#34;add-file&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;2-quick_menuからファイルを開く&#34;&gt;2. quick_menuからファイルを開く&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;:lua require(&amp;quot;harpoon.ui&amp;quot;).toggle_quick_menu()&lt;/code&gt;を実行してマークしたファイル一覧からファイルを開く&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;toggle-quick-menu.gif&#34; alt=&#34;toggle-quick-menu&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;toggle-quick-menu.gif&#34; alt=&#34;toggle-quick-menu&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;機能は他にもありそう&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;だが筆者はこの機能しか使ってないので割愛。&lt;/p&gt;
 &lt;h2 id=&#34;嬉しさ&#34;&gt;嬉しさ&lt;/h2&gt;
 &lt;p&gt;個人開発などファイル数が少ないプロジェクトだとそこまで効果を感じないが業務では(当然だが)一定数のファイルがあり、かつ定義ジャンプを繰り返しているとバッファにはたくさんファイルが存在しているのでtelescopeなどのfuzzy-finderプラグインを使ったとしてもファイルの行き来には多少時間がかかってしまっていた。&lt;/p&gt;
@@ -32,12 +32,12 @@
 &lt;h3 id=&#34;1-マークしたファイルが一度エディタを閉じても保持される&#34;&gt;1. マークしたファイルが一度エディタを閉じても保持される&lt;/h3&gt;
 &lt;p&gt;LSPが不調だったりしてNeovimを再起動することがたまにあるので地味に便利。&lt;/p&gt;
 &lt;p&gt;(一度Neovimを閉じてもマークしたファイルが保持されている様子。)
-&lt;img src=&#34;saved-quick-menu.gif&#34; alt=&#34;saved-quick-menu&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;saved-quick-menu.gif&#34; alt=&#34;saved-quick-menu&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;2-自由に編集できる-quick_menu&#34;&gt;2. 自由に編集できる quick_menu&lt;/h3&gt;
 &lt;p&gt;作者自身もお気に入りと言及しているが&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;quick_menuは純粋なテキストなので自由に編集できる。&lt;/p&gt;
 &lt;p&gt;つまりこんな感じで&lt;code&gt;dd&lt;/code&gt; -&amp;gt; &lt;code&gt;y&lt;/code&gt;のようなコマンドで自由に順番を入れ替えたり削除したりできる。普段のvimの操作感で扱えるのでとても直感的で使いやすくて嬉しい。&lt;/p&gt;
 &lt;p&gt;quick_menuを自由に編集している様子&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;
-&lt;img src=&#34;editable-quick-menu.gif&#34; alt=&#34;editable-quick-menu&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;editable-quick-menu.gif&#34; alt=&#34;editable-quick-menu&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;気になった方はぜひ試してみてください。&lt;/p&gt;
 &lt;p&gt;インストール方法はこちら&lt;/p&gt;

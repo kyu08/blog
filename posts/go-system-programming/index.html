@@ -352,7 +352,7 @@ if (!doNotTrack) {
   
 
   <div class="post-content"><div>
-        <p><img src="./book.webp" alt="book"></p>
+        <p><img src="./book.webp" alt="book" loading="lazy" /></p>
 <p>『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11/4でコミットした日数としてはおおよそ24日ほどだった。)</p>
 <p>筆者は情報系の学部を出ておらず、CSなどの基礎知識があまりないので大変勉強になった。また、サンプルコードが豊富なので実際に自分のマシン上で動かしながら学ぶことができ解像度を上げながら理解を深めることができた。</p>
 <p>低レイヤ、コンピューターサイエンスの学習に興味がある方にはとてもおすすめなのでぜひ買って読んでみてください。</p>
@@ -397,7 +397,7 @@ if (!doNotTrack) {
 </li>
 </ul>
 <p>複数のファイル<code>f1</code>, <code>f2</code>を<code>os.Create()</code>する処理をデバッガーで追ってみたところ、それぞれファイルディスクリプタの値が<code>3</code>, <code>4</code><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>となっておりファイルディスクリプタの値が<code>3</code>からインクリメントされる様子を確認できた。</p>
-<p><img src="delve-neovim.webp" alt="delve-neovim.webp"></p>
+<p><img src="delve-neovim.webp" alt="delve-neovim.webp" loading="lazy" /></p>
 <h2 id="第3章-低レベルアクセスへの入口1ioreader">第3章 低レベルアクセスへの入口1：io.Reader<a href="#第3章-低レベルアクセスへの入口1ioreader" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <h3 id="エンディアン変換">エンディアン変換<a href="#エンディアン変換" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <ul>
@@ -600,7 +600,7 @@ if (!doNotTrack) {
 <li>Unixドメインソケットで作成されるのはソケットファイルと呼ばれる特殊なファイルであり、通常のファイルのような実体を持たない。あくまでもプロセス間の高速な通信としてファイルというインターフェースを利用するだけ。</li>
 </ul>
 <p>以下はソケットファイルが作成されている様子。ソケットファイルは先頭が&quot;s&quot;で始まる。</p>
-<p><img src="socket-file.webp" alt="socket-file.webp"></p>
+<p><img src="socket-file.webp" alt="socket-file.webp" loading="lazy" /></p>
 <h3 id="unixドメインソケットとtcpのベンチマーク">UnixドメインソケットとTCPのベンチマーク<a href="#unixドメインソケットとtcpのベンチマーク" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <ul>
 <li>Unixドメインソケットを使った実装とTCPを経由した実装のベンチマークの比較をすると筆者の環境だとUnixドメインソケットの方が10倍ほど高速だった。</li>

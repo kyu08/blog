@@ -107,7 +107,7 @@
 &lt;ul&gt;
 &lt;li&gt;去年と同じくらいのペースでPRを送ることができた。（平均約4.5件/月ペース）&lt;/li&gt;
 &lt;li&gt;LazygitのトップページのContributors一覧に表示されるようになった。
-&lt;img src=&#34;lazygit-contibutors.webp&#34; alt=&#34;lazygit-contibutors.webp&#34;&gt;
+&lt;img src=&#34;lazygit-contibutors.webp&#34; alt=&#34;lazygit-contibutors.webp&#34; loading=&#34;lazy&#34; /&gt;
 &lt;ul&gt;
 &lt;li&gt;GitHubではcommit数が多い順に12人目くらいまでのアイコンがContributorsに表示される。&lt;/li&gt;
 &lt;li&gt;細々とcontributionを続けたところの9番目にcommitが多い人になれた。（2025/12/23現在）&lt;/li&gt;
@@ -136,7 +136,7 @@
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;タスクランナー側で定義したコマンドをfuzzy finder形式で選択できるCLIツールを趣味でRustで開発している。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;現在は以下のタスクランナーに対応している。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;make&lt;/li&gt;
@@ -148,9 +148,9 @@
 &lt;p&gt;gifを見てもらえれば分かる通り、プレビューウィンドウでコマンド内容を確認しながらコマンドを選択できるのが特徴の一つ。&lt;/p&gt;
 &lt;h4 id=&#34;スター数&#34;&gt;スター数&lt;/h4&gt;
 &lt;p&gt;2025/12/23現在では245スターを獲得している。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-make-star.webp&#34; alt=&#34;fzf-make-star.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make-star.webp&#34; alt=&#34;fzf-make-star.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.star-history.com/#kyu08/fzf-make&amp;amp;type=date&amp;amp;legend=top-left&#34; target=&#34;_blank&#34; &gt;Star History&lt;/a&gt;によると2024/12/19時点では129スターだったので1年で大体倍くらいになった。🎉&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-make-star-history-20251223-last-year.webp&#34; alt=&#34;fzf-make-star-history-20251223-last-year.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make-star-history-20251223-last-year.webp&#34; alt=&#34;fzf-make-star-history-20251223-last-year.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;来年も適度なペースで細々とメンテしていきます。(npm対応は早めにやりたい&amp;hellip;！)&lt;/p&gt;
 &lt;h4 id=&#34;今年の変更点&#34;&gt;今年の変更点&lt;/h4&gt;
 &lt;p&gt;2025年は&lt;a href=&#34;https://github.com/pulls?q=is%3Apr&amp;#43;archived%3Afalse&amp;#43;author%3Akyu08&amp;#43;is%3Apublic&amp;#43;repo%3Akyu08%2Ffzf-make&amp;#43;created%3A2025-01-01..2025-12-31&amp;#43;is%3Amerged&amp;#43;&#34; target=&#34;_blank&#34; &gt;筆者が74件のPRを作成&amp;amp;マージし&lt;/a&gt;、&lt;a href=&#34;https://github.com/kyu08/fzf-make/compare/v0.54.0...v0.65.0&#34; target=&#34;_blank&#34; &gt;12個のバージョンがリリースされ、筆者とrenovateを含めて5人の貢献者により102のcommitが追加された。&lt;/a&gt;&lt;/p&gt;
@@ -219,24 +219,24 @@ Add OGP template with dark theme design (b...&lt;/div&gt;&lt;div class=&#34;blog
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;p&gt;こんな感じの画像が自動生成される。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;cover.png&#34; alt=&#34;cover.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;cover.png&#34; alt=&#34;cover.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Twitterで投稿したときに追加されるタイトル要素とOGPのメタ情報が被らないようになっているのが地味なこだわりポイント。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;twitter-caption.webp&#34; alt=&#34;twitter-caption.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;twitter-caption.webp&#34; alt=&#34;twitter-caption.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;ついでにこんな感じでPRにコメントとして表示されるようにしたので投稿前に確認できる。（日本語だとたまーに特定の記号などが豆腐になってしまうのチェックしておきたい）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;ogp-pr-comment.webp&#34; alt=&#34;ogp-pr-comment.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ogp-pr-comment.webp&#34; alt=&#34;ogp-pr-comment.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;heading要素のデザインを変えた&#34;&gt;Heading要素のデザインを変えた&lt;/h3&gt;
 &lt;p&gt;これまではレベルの異なるHeading要素の区別が付きづらかったので&lt;code&gt;## OSS&lt;/code&gt;のようにHeading要素のレベルに合わせて&lt;code&gt;#&lt;/code&gt;が表示されるデザインにした。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;BEFORE&lt;/th&gt;
-&lt;th&gt;&lt;img src=&#34;heading-before.webp&#34; alt=&#34;heading-before.webp&#34;&gt;&lt;/th&gt;
+&lt;th&gt;&lt;img src=&#34;heading-before.webp&#34; alt=&#34;heading-before.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;AFTER&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;img src=&#34;heading-after.webp&#34; alt=&#34;heading-after.webp&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;heading-after.webp&#34; alt=&#34;heading-after.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -254,7 +254,7 @@ Add OGP template with dark theme design (b...&lt;/div&gt;&lt;div class=&#34;blog
 &lt;/p&gt;
 &lt;h3 id=&#34;ブログカードの表示&#34;&gt;ブログカードの表示&lt;/h3&gt;
 &lt;p&gt;こんな感じでリンク先の情報を表示するようにした。便利。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;blog-card.webp&#34; alt=&#34;blog-card.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;blog-card.webp&#34; alt=&#34;blog-card.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/blog/pull/246&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/kyu08/blog/pull/246&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
       &lt;img src=&#34;https://opengraph.githubassets.com/eb445efdb9b6351b5b509ccdfd909411c138798d6e689ba8c4fa3ef3c235b314/kyu08/blog/pull/246&#34; alt=&#34;Implement blog card link preview feature by kyu08 · Pull Request #246 · kyu08/blog&#34; loading=&#34;lazy&#34;&gt;
@@ -324,7 +324,7 @@ Responsive design with d...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;h
 &lt;h3 id=&#34;サッカー&#34;&gt;サッカー&lt;/h3&gt;
 &lt;p&gt;今年からJリーグ（カップ戦も含む）観戦にいくようになった。&lt;/p&gt;
 &lt;p&gt;非日常でめっちゃ楽しい。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;soccer.webp&#34; alt=&#34;soccer.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;soccer.webp&#34; alt=&#34;soccer.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;仕事&#34;&gt;仕事&lt;/h2&gt;
 &lt;p&gt;転職し、2/1から新しい職場で働きはじめた。&lt;/p&gt;
 &lt;p&gt;プロダクトがたくさんのお客様に価値提供をできている実感があり、モチベーション高く働けている。&lt;/p&gt;
@@ -428,7 +428,7 @@ Responsive design with d...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;h
 &lt;li&gt;yarn&lt;/li&gt;
 &lt;li&gt;just&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-make-pnpm.gif&#34; alt=&#34;fzf-make-pnpm&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make-pnpm.gif&#34; alt=&#34;fzf-make-pnpm&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;プレビューウィンドウが表示されるのでコマンドの内容を確認しながら選択できるのが特徴。履歴機能もあるので前回実行したコマンドを簡単に再実行することもできる。(&lt;code&gt;fzf-make repeat&lt;/code&gt;)&lt;/p&gt;
 &lt;p&gt;2024年は&lt;a href=&#34;https://github.com/pulls?q=is%3Apr&amp;#43;archived%3Afalse&amp;#43;author%3Akyu08&amp;#43;is%3Apublic&amp;#43;repo%3Akyu08%2Ffzf-make&amp;#43;created%3A2024-01-01..2024-12-31&amp;#43;is%3Amerged&#34; target=&#34;_blank&#34; &gt;筆者が108件のPRを作成&amp;amp;マージし、&lt;/a&gt;41個のバージョンがリリースされ、&lt;a href=&#34;https://github.com/kyu08/fzf-make/compare/v0.13.0...v0.53.0&#34; target=&#34;_blank&#34; &gt;筆者とrenovateを含めて8人の貢献者により184のcommitが追加された。&lt;/a&gt;時折issueを立ててくれたりPRを送ってくれる方もいて大変ありがたい限り&amp;hellip;！🙏&lt;/p&gt;
 &lt;p&gt;自分や自分の身の回りのエンジニアに使ってもらえてるのでFBをもらいやすいこと、Rustを書くのが楽しいことが要因で熱量高く取り組めている。&lt;/p&gt;
@@ -449,7 +449,7 @@ Responsive design with d...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;h
 &lt;li&gt;Hacker News: &lt;a href=&#34;https://news.ycombinator.com/item?id=42357587&#34; target=&#34;_blank&#34; &gt;Show HN: fzf-make – a command runner with a fuzzy finder for make, pnpm and yarn - Hacker News&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;広報活動の甲斐もあってかGitHubのstar数が100を突破した。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;star-history-20241230.webp&#34; alt=&#34;star-history-20241230&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;star-history-20241230.webp&#34; alt=&#34;star-history-20241230&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;記事へのリアクションはHacker News &amp;lt; Zenn &amp;lt; Redditの順で多かったが、流入数が一番多かったのはHacker Newsだった。おそらくアクティブユーザーのケタが違いそう。&lt;/p&gt;
 &lt;p&gt;さらには夢の1つだった自分のツールがhomebrew-coreに取り込まれるということも達成できた。実は本家homebrewに取り込まれるためには&lt;a href=&#34;https://docs.brew.sh/Acceptable-Formulae#niche-or-self-submitted-stuff&#34; target=&#34;_blank&#34; &gt;ある程度有名でユーザー数が多いこと、などの基準がある&lt;/a&gt;ためいつかfzf-makeがある程度有名になったといえるタイミングでPRを送ろうと&lt;a href=&#34;https://github.com/kyu08/fzf-make/issues/195&#34; target=&#34;_blank&#34; &gt;考えていた。&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;が、あるときたまたまhomebrewのメンテナによって&lt;a href=&#34;https://github.com/Homebrew/homebrew-core/pull/200454&#34; target=&#34;_blank&#34; &gt;fzf-makeがhomebrew/homebrew-coreに追加されるPR&lt;/a&gt;を発見しfzf-makeがhomebrewに取り込まれたことを知ることとなった。自分としては思わぬ早めのクリスマスプレゼントのような感じで本当に嬉しかった。&lt;/p&gt;
@@ -488,7 +488,7 @@ Responsive design with d...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;h
 &lt;/ul&gt;
 &lt;p&gt;3月に書いた&lt;a href=&#34;https://blog.kyu08.com/posts/better-programmer/&#34; target=&#34;_blank&#34; &gt;『ベタープログラマ』 を読んだ&lt;/a&gt;がたくさんの人の読んでいただけて、はてぶのトップページに掲載された。&lt;/p&gt;
 &lt;p&gt;優秀なエンジニアの振る舞いについて様々な角度から考察されていて大変参考になった。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;better-programmer-hatebu.webp&#34; alt=&#34;better-programmer-hatebu&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;better-programmer-hatebu.webp&#34; alt=&#34;better-programmer-hatebu&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;他に印象に残っている記事は以下。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://blog.kyu08.com/posts/cs50-jp/&#34; target=&#34;_blank&#34; &gt;CS50.jpでCSに入門した&lt;/a&gt;&lt;/li&gt;
@@ -662,7 +662,7 @@ Responsive design with d...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;h
 &lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-make&#34; target=&#34;_blank&#34; &gt;kyu08/fzf-make&lt;/a&gt;&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;h3 id=&#34;fzf-makeを公開した&#34;&gt;fzf-makeを公開した&lt;/h3&gt;
 &lt;p&gt;こんな感じでMakefileに定義したtargetを曖昧検索で絞り込んで実行できるツールを作った。プレビューウィンドウがあるのが地味に便利なポイントでtargetの内容を確認しつつ実行できる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-make-demo.gif&#34; alt=&#34;fzf-make-demo.gif&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Rustの理解を深めるのと自分の普段の作業を効率化したくて作ったがその両方が割と達成できているので満足している。特に所有権やスマートポインタに関しては&lt;a href=&#34;https://doc.rust-jp.rs/book-ja/&#34; target=&#34;_blank&#34; &gt;The Rust Programming Language&lt;/a&gt;を読んだときにはイマイチ理解できなかったが実際に自分でコードを書いてコンパイラに指摘されてコードを修正することで理解を深めることができた。&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;最初は身近な人に紹介して使ってもらったりしていたが、ある日面識のない日本人の開発者の方がバグ報告issue&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;を立ててくれて、インターネットの向こう側の人に自分のアイディアが届いて気に入ってもらえて、しかもわざわざバグ報告をしてくれたという事実がとても嬉しかった。&lt;/p&gt;
 &lt;p&gt;当然個人の趣味開発なので副業などとは違い時給を得て開発しているわけではないが、ものづくりを通して他者に喜んでもらうということが自分にとって最高の喜びだとわかっただけでも非常に良い経験だった。自分がOSSコミュニティに貢献したいと考えているのも究極は「人に喜んで欲しいから」なのかもしれない。&lt;/p&gt;
@@ -683,7 +683,7 @@ Responsive design with d...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;h
 &lt;h3 id=&#34;fzf-bookmark-openerを公開した&#34;&gt;fzf-bookmark-openerを公開した&lt;/h3&gt;
 &lt;p&gt;ブックマークをfzfで絞り込んで開くことができるCLIツール。自分が欲しかったので作った。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/kyu08/fzf-bookmark-opener&#34; target=&#34;_blank&#34; &gt;kyu08/fzf-bookmark-opener&lt;/a&gt;&lt;sup id=&#34;fnref:11&#34;&gt;&lt;a href=&#34;#fn:11&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;11&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-bookmark-opener-demo.gif&#34; alt=&#34;fzf-bookmark-opener-demo.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-bookmark-opener-demo.gif&#34; alt=&#34;fzf-bookmark-opener-demo.gif&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;同時期に書いた&lt;a href=&#34;https://github.com/kyu08/gcp-url-generator&#34; target=&#34;_blank&#34; &gt;kyu08/gcp-url-generator&lt;/a&gt;と組み合わせて業務でよく使っている。特定のGCPプロジェクトの特定のGCPサービスのコンソールをターミナルから開きたいことが多いので重宝している。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/ktr0731/go-fuzzyfinder&#34; target=&#34;_blank&#34; &gt;ktr0731/go-fuzzyfinder&lt;/a&gt;のおかげで100行程度のコードでやりたいことが実現できて大変助かった。&lt;/p&gt;
 &lt;h3 id=&#34;買ってよかったもの&#34;&gt;買ってよかったもの&lt;/h3&gt;

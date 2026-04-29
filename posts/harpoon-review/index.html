@@ -266,10 +266,10 @@ if (!doNotTrack) {
 <p>ファイルをマークしてquick_menu(マークしたファイルの一覧)からファイルを開くことができる。操作している様子は以下の通り。</p>
 <h3 id="1-ファイルをマークして">1. ファイルをマークして<a href="#1-ファイルをマークして" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p><code>:lua require(&quot;harpoon.mark&quot;).add_file()</code>を実行してファイルをマーク</p>
-<p><img src="add-file.gif" alt="add-file"></p>
+<p><img src="add-file.gif" alt="add-file" loading="lazy" /></p>
 <h3 id="2-quick_menuからファイルを開く">2. quick_menuからファイルを開く<a href="#2-quick_menuからファイルを開く" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p><code>:lua require(&quot;harpoon.ui&quot;).toggle_quick_menu()</code>を実行してマークしたファイル一覧からファイルを開く</p>
-<p><img src="toggle-quick-menu.gif" alt="toggle-quick-menu"></p>
+<p><img src="toggle-quick-menu.gif" alt="toggle-quick-menu" loading="lazy" /></p>
 <p>機能は他にもありそう<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>だが筆者はこの機能しか使ってないので割愛。</p>
 <h2 id="嬉しさ">嬉しさ<a href="#嬉しさ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>個人開発などファイル数が少ないプロジェクトだとそこまで効果を感じないが業務では(当然だが)一定数のファイルがあり、かつ定義ジャンプを繰り返しているとバッファにはたくさんファイルが存在しているのでtelescopeなどのfuzzy-finderプラグインを使ったとしてもファイルの行き来には多少時間がかかってしまっていた。</p>
@@ -278,12 +278,12 @@ if (!doNotTrack) {
 <h3 id="1-マークしたファイルが一度エディタを閉じても保持される">1. マークしたファイルが一度エディタを閉じても保持される<a href="#1-マークしたファイルが一度エディタを閉じても保持される" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>LSPが不調だったりしてNeovimを再起動することがたまにあるので地味に便利。</p>
 <p>(一度Neovimを閉じてもマークしたファイルが保持されている様子。)
-<img src="saved-quick-menu.gif" alt="saved-quick-menu"></p>
+<img src="saved-quick-menu.gif" alt="saved-quick-menu" loading="lazy" /></p>
 <h3 id="2-自由に編集できる-quick_menu">2. 自由に編集できる quick_menu<a href="#2-自由に編集できる-quick_menu" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>作者自身もお気に入りと言及しているが<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>quick_menuは純粋なテキストなので自由に編集できる。</p>
 <p>つまりこんな感じで<code>dd</code> -&gt; <code>y</code>のようなコマンドで自由に順番を入れ替えたり削除したりできる。普段のvimの操作感で扱えるのでとても直感的で使いやすくて嬉しい。</p>
 <p>quick_menuを自由に編集している様子<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>
-<img src="editable-quick-menu.gif" alt="editable-quick-menu"></p>
+<img src="editable-quick-menu.gif" alt="editable-quick-menu" loading="lazy" /></p>
 <h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>気になった方はぜひ試してみてください。</p>
 <p>インストール方法はこちら</p>

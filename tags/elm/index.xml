@@ -16,8 +16,8 @@
       <guid>https://blog.kyu08.com/posts/fp-matsuri-2025/</guid>
       <description>2025/06/14(土)、2025/06/15(日)に中野セントラルパークで行われた関数型まつり2025に参加した。 筆者はElmやRust</description>
       <content>&lt;p&gt;2025/06/14(土)、2025/06/15(日)に中野セントラルパークで行われた関数型まつり2025に参加した。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;nakano-central-park.webp&#34; alt=&#34;nakano-central-park&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;pop.webp&#34; alt=&#34;pop&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;nakano-central-park.webp&#34; alt=&#34;nakano-central-park&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;pop.webp&#34; alt=&#34;pop&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;筆者はElmやRustの開発体験を気に入っており、Webアプリケーションのサーバーサイドを関数型言語で書くことに興味があったので参加してみた。&lt;/p&gt;
 &lt;h2 id=&#34;関数型言語テイスティング-haskell-scala-clojure-elixirを比べて味わう関数型プログラミングの旨さ---lagénorhynqueカマイルカさん&#34;&gt;関数型言語テイスティング: Haskell, Scala, Clojure, Elixirを比べて味わう関数型プログラミングの旨さ - lagénorhynque/カマイルカさん&lt;/h2&gt;
 &lt;p&gt;lagénorhynque/カマイルカさんによるHaskell, Scala, Clojure, Elixirの紹介と比較を行う発表。&lt;/p&gt;
@@ -315,18 +315,18 @@
 &lt;h2 id=&#34;スポンサーブース&#34;&gt;スポンサーブース&lt;/h2&gt;
 &lt;p&gt;Jane Streetのエンジニアの方にお聞きしたがJane StreetではフロントエンドとサーバーサイドをOCamlで書いているらしい（！）ブースでお話した方も関数型言語が書きたくて入社したそうで、関数型言語への愛を感じた。&lt;/p&gt;
 &lt;p&gt;ブースでいただいたノベルティのTシャツもめっちゃOCamlだった。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;jane-street.webp&#34; alt=&#34;jane-street&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;jane-street.webp&#34; alt=&#34;jane-street&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;ノベルティ&#34;&gt;ノベルティ&lt;/h2&gt;
 &lt;p&gt;入場時にロゴ入りのトートバッグがもらえた。
-&lt;img src=&#34;bag.webp&#34; alt=&#34;bag&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;bag.webp&#34; alt=&#34;bag&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Nulabさんのノベルティのマイクロファイバークロス。実用的でありがたい。
-&lt;img src=&#34;nulab.webp&#34; alt=&#34;nulab&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;nulab.webp&#34; alt=&#34;nulab&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;今は業務で関数型言語を使うことはないが、関数型言語の考え方を取り入れることで非関数型言語でもより良いコードを書けるようになると改めて感じた。&lt;/p&gt;
 &lt;p&gt;個人で初めてオフラインの勉強会/カンファレンスに参加したが普通に楽しかったのでまた行ってみようと思う。&lt;/p&gt;
 &lt;h2 id=&#34;つけ麺情報&#34;&gt;つけ麺情報&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://tabelog.com/tokyo/A1319/A131902/13115487&#34; target=&#34;_blank&#34; &gt;二代目えん寺&lt;/a&gt;がとても美味しかった。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;tsukemen.webp&#34; alt=&#34;tsukemen&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tsukemen.webp&#34; alt=&#34;tsukemen&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
@@ -358,7 +358,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;どんな場面で使ったか&#34;&gt;どんな場面で使ったか&lt;/h2&gt;
 &lt;p&gt;趣味で開発している麻雀の点数集計アプリで使いました。&lt;/p&gt;
 &lt;p&gt;各プレイヤーの試合毎のスコアを記録して合計を表示するだけの簡単なアプリケーションです。(※実際には順位点やトビ賞の計算などもやっていますがここでは割愛)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;jan-log-demo.webp&#34; alt=&#34;jan-log-demo.web&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;jan-log-demo.webp&#34; alt=&#34;jan-log-demo.web&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;ここで &lt;strong&gt;参加者の名前&lt;/strong&gt; および &lt;strong&gt;その試合のスコア&lt;/strong&gt; を &lt;code&gt;Array String&lt;/code&gt; として扱おうとすると以下のようになります。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elm&#34; data-lang=&#34;elm&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;alias&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Players&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Array&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;String&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;

@@ -367,7 +367,7 @@ if (!doNotTrack) {
 <li>シャーディングを使用して時系列的に連続したデータを複数のスプリットに分散する</li>
 </ol>
 <p>この例ではPKに<code>ShardId</code>(0~N-1)を追加する方法を紹介している。</p>
-<p><img src="spanner-sharding.webp" alt="spanner-sharding.webp"></p>
+<p><img src="spanner-sharding.webp" alt="spanner-sharding.webp" loading="lazy" /></p>
 <h2 id="スキーマ設計のベスト-プラクティス--spanner--google-cloud">スキーマ設計のベスト プラクティス  |  Spanner  |  Google Cloud<a href="#スキーマ設計のベスト-プラクティス--spanner--google-cloud" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p><div class="blogcard" data-url="https://cloud.google.com/spanner/docs/schema-design?hl=ja" data-auto-fetch="false">
   <a href="https://cloud.google.com/spanner/docs/schema-design?hl=ja" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
@@ -564,9 +564,9 @@ if (!doNotTrack) {
 </span></span></code></pre></div><h4 id="結果">結果<a href="#結果" class="hanchor" ariaLabel="Anchor">#</a> </h4>
 <p>結論からいうとどちらのクエリでも同様にインデックスを利用できていた。おそらくSpannerのオプティマイザがいい感じに判断してくれていると思われる。以下が実際の実行計画。</p>
 <p>記事で紹介されていたクエリ
-<img src="original.webp" alt="original.webp"></p>
+<img src="original.webp" alt="original.webp" loading="lazy" /></p>
 <p>CompanyId, EntryShardIdの順番を逆にしてみたクエリ
-<img src="swap.webp" alt="swap.webp"></p>
+<img src="swap.webp" alt="swap.webp" loading="lazy" /></p>
 <h2 id="cloud-spanner-におけるトランザクションのロックについて">Cloud Spanner におけるトランザクションのロックについて<a href="#cloud-spanner-におけるトランザクションのロックについて" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p><div class="blogcard" data-url="https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner" data-auto-fetch="false">
   <a href="https://cloud.google.com/blog/ja/products/databases/transaction-locking-in-cloud-spanner" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">

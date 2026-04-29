@@ -119,7 +119,7 @@
 &lt;p&gt;全然大したことをやっているわけではないですがTmux, Neovimやそれらのプラグインの普及活動になれば嬉しいので書いてみます。&lt;/p&gt;
 &lt;h2 id=&#34;動作イメージ&#34;&gt;動作イメージ&lt;/h2&gt;
 &lt;p&gt;こんな感じでvanillaのGoプロジェクトをTmuxのwindowに開いておいて、確認したくなったときにすぐwindowを切り替えてコードを書いて実行結果を確認できるようにしている。(Gifの例はGoの書式指定子&lt;code&gt;%+v&lt;/code&gt;の動作を忘れて試してみているところ)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;go-playground.gif&#34; alt=&#34;go-playground&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;go-playground.gif&#34; alt=&#34;go-playground&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Gifでやっていることは以下&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;GoのSandbox環境を開いたNeovimが起動しているwindowに切り替え&lt;/li&gt;
@@ -174,14 +174,14 @@
 &lt;p&gt;最後に補足としてGif内で使っているNeovimのプラグインを紹介します。&lt;/p&gt;
 &lt;h3 id=&#34;ターミナル表示&#34;&gt;ターミナル表示&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/voldikss/vim-floaterm&#34; target=&#34;_blank&#34; &gt;voldikss/vim-floaterm&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;floaterm.gif&#34; alt=&#34;floaterm&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;floaterm.gif&#34; alt=&#34;floaterm&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;GoのSandbox環境の&lt;code&gt;main.go&lt;/code&gt;に書いたスクリプトを実行するために、Neovimからターミナルを表示するシーンで使っている。&lt;/p&gt;
 &lt;p&gt;コード編集してサクっと動作確認したいときなどに便利。(といいつつ最近動作の重さが目立ってきたので&lt;code&gt;&amp;lt;C-z&amp;gt;&lt;/code&gt;でNeovimの起動元に戻ってターミナルを操作することが多い)&lt;/p&gt;
 &lt;h3 id=&#34;カーソル移動&#34;&gt;カーソル移動&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/yuki-yano/fuzzy-motion.vim&#34; target=&#34;_blank&#34; &gt;yuki-yano/fuzzy-motion.vim&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;fmt.Printf(&amp;quot;u: %v\n&amp;quot;, u)&lt;/code&gt;の&lt;code&gt;u&lt;/code&gt;から&lt;code&gt;%v&lt;/code&gt;の位置にカーソル移動する際に使っているプラグイン。&lt;/p&gt;
 &lt;p&gt;動作のイメージはこんな感じ。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fuzzy-motion.gif&#34; alt=&#34;fuzzy-motion&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fuzzy-motion.gif&#34; alt=&#34;fuzzy-motion&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;起動すると文字がグレーアウトするのでジャンプしたい文字列を入力するとその文字にジャンプするためのキーワードを表示してくれるというプラグイン。&lt;/p&gt;
 &lt;p&gt;同様の機能をもつプラグインとしてはeasy-motionなどのプラグインが有名だが、fuzzy-motionはジャンプしたい文字列をfuzzy-finder形式で絞り込んでくれるのが大きな特徴。(詳しくはリポジトリのREADME参照)&lt;/p&gt;
 &lt;p&gt;筆者はノーマルモードで&lt;code&gt;f&lt;/code&gt;キーを押下するとプラグインが起動するように設定している。&lt;/p&gt;
@@ -190,7 +190,7 @@
 &lt;p&gt;&lt;a href=&#34;https://github.com/neoclide/coc.nvim&#34; target=&#34;_blank&#34; &gt;neoclide/coc.nvim&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Language Serverをホストするためのプラグイン。&lt;/p&gt;
 &lt;p&gt;すごく簡単にいうと補完や関数定義を表示したり定義ジャンプできるようにしたりしてくれる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;coc-nvim.gif&#34; alt=&#34;coc-nvim&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;coc-nvim.gif&#34; alt=&#34;coc-nvim&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;以上です。ここまで読んでくれてありがとうございました。&lt;/p&gt;
 </content>
     </item>
@@ -219,7 +219,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;# done
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;をファイルに書き込んだうえでvimで開く、という内容のワンライナーです。&lt;/p&gt;
 &lt;p&gt;実際に呼び出すとこんな感じです。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;memo.gif&#34; alt=&#34;memo&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;memo.gif&#34; alt=&#34;memo&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;ちなみに筆者は&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;# todo
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; タスクA
@@ -238,7 +238,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 子タスクb
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias ghw&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;gh repo view -w&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;gh&lt;/code&gt;コマンドを利用して現在いるリポジトリをブラウザでGitHubで開くコマンド&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;ghw.gif&#34; alt=&#34;ghw&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ghw.gif&#34; alt=&#34;ghw&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias pbc&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;pbcopy &amp;amp;&amp;amp; pbpaste&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;make test | pbc&lt;/code&gt;のように出力をパイプで&lt;code&gt;pbc&lt;/code&gt;に渡すとクリップボードにコピーしつつ標準出力に出力してくれる。&lt;/p&gt;
 &lt;p&gt;コマンドの出力をコピーしたいけど出力内容もその場で確認したいときに便利。&lt;/p&gt;
@@ -292,7 +292,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# fzfの設定&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;export FZF_DEFAULT_OPTS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;--color=fg+:11 --height 70% --reverse --exit-0 --multi&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これを実際に使うとこんな感じになります。ファジーファインダーを利用して効率的にディレクトリ移動できます。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fzf-cdr.gif&#34; alt=&#34;cdr&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fzf-cdr.gif&#34; alt=&#34;cdr&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;やっていることは以下です。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;.zshrc&lt;/code&gt;に定義したfzf-cdrを実行&lt;/li&gt;
@@ -318,7 +318,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;zle -N &lt;span style=&#34;color:#66d9ef&#34;&gt;select&lt;/span&gt;-history
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bindkey &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;^r&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;select&lt;/span&gt;-history
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;command-history.gif&#34; alt=&#34;command-history&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;command-history.gif&#34; alt=&#34;command-history&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;git操作&#34;&gt;Git操作&lt;/h2&gt;
 &lt;p&gt;Git操作のほとんどはGitのTUIクライアントであるLazygitを使っています。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/jesseduffield/lazygit&#34; data-auto-fetch=&#34;false&#34;&gt;
@@ -332,7 +332,7 @@
 &lt;/p&gt;
 &lt;p&gt;Lazygitはターミナル上で動作するリッチなGitクライアントでGitに関する大抵のことを行うことができます。(機能が豊富すぎて何ができて何ができないのかを正確に把握できていない)&lt;/p&gt;
 &lt;p&gt;以下はLazygitを使って変更をaddしてcommitしてpushする例です。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;lazygit-push.gif&#34; alt=&#34;lazygit-push&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;lazygit-push.gif&#34; alt=&#34;lazygit-push&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;見やすいですし、&lt;strong&gt;少ないタイプ数で操作できる&lt;/strong&gt;点でおすすめです。他にも基本的なブランチ操作はもちろんのこと、&lt;code&gt;git rebase -i&lt;/code&gt;相当のこともスピーディーにできるのでよく使っています。&lt;/p&gt;
 &lt;p&gt;ちなみに筆者はkdheepak/lazygit.nvimというプラグインを使ってNeovim上からLazygitを呼び出しています。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kdheepak/lazygit.nvim&#34; data-auto-fetch=&#34;false&#34;&gt;
@@ -368,7 +368,7 @@
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;tokyonight.webp&#34; alt=&#34;tokyonight&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tokyonight.webp&#34; alt=&#34;tokyonight&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Alacrittyにはタブ機能がなくタブ的な機能を実現するためにはtmuxなどのターミナルマルチプレクサを利用する必要があるため筆者はtmuxを利用しています。
 設定・プラグインなどは後述しますが、tmuxの操作感も好みなので割と満足しています。&lt;/p&gt;
 &lt;p&gt;他にもRust製のターミナルとしてWarp, Weztermなどがありますが筆者の環境ではWarpはNeovimのcolorschemeの反映がうまくできず、Weztermは画面の再描画まわりの不具合が多少あったため、採用しませんでした。(Warp便利そうだしみやすいので使いたかった)&lt;/p&gt;
@@ -390,7 +390,7 @@
 &lt;li&gt;現在時刻&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;を表示するようにしています。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;tmux-status-line.webp&#34; alt=&#34;tmux-status-line&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tmux-status-line.webp&#34; alt=&#34;tmux-status-line&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;普段の開発ではプロジェクトごとにウィンドウを開き、必要に応じて切り替える運用にしています。&lt;/p&gt;
 &lt;h3 id=&#34;ウィンドウの切り替え&#34;&gt;ウィンドウの切り替え&lt;/h3&gt;
 &lt;p&gt;筆者はふだんプロジェクトごとのウィンドウに加えてmemo用のウィンドウ・dotfiles用のウィンドウなども開いており、常時ウィンドウが15前後あります。筆者は簡単なタスク管理もmemo用ウィンドウに立ち上げたNeovim内で行っているため、ウィンドウの切り替えを頻繁に行います。&lt;/p&gt;
@@ -402,7 +402,7 @@
 &lt;li&gt;選択する&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;という手順で行っていましたがウィンドウが増えてくると地味にウィンドウ移動が大変になっていきました。以下は従来のウィンドウ切り替えの様子です。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;tmux-window.gif&#34; alt=&#34;tmux-window&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tmux-window.gif&#34; alt=&#34;tmux-window&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;どうにかもう少し楽にウィンドウ切り替えをできないかと探していたところsainnhe/tmux-fzfに出会いました。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/sainnhe/tmux-fzf&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/sainnhe/tmux-fzf&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
@@ -430,7 +430,7 @@ sainnhe/tmux-fzfを使うようにしたことでウィンドウ切り替えを&
 &lt;li&gt;選択する&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;という手順でできるようになりました。文字にすると違いが伝わりづらいですが、ファジーファインダーを使ってウィンドウの選択を行うことができるようになったことでキーのタイプ数や切り替えの際の脳の負荷を大幅に減らすことができました。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;tmux-fzf.gif&#34; alt=&#34;tmux-fzf&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;tmux-fzf.gif&#34; alt=&#34;tmux-fzf&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
 &lt;p&gt;ここまで読んでくださってありがとうございました。&lt;/p&gt;
 &lt;p&gt;需要がありそうだったら&lt;/p&gt;

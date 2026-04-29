@@ -15,7 +15,7 @@
       
       <guid>https://blog.kyu08.com/posts/k_and_r/</guid>
       <description>Operating Systems: Three Easy Pieces(以下、OSTEP)に取り組むにあたって、C言語の知識があるとスムーズそうだったので読んだ。 プログラミング言語C - 共立出</description>
-      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://pages.cs.wisc.edu/~remzi/OSTEP/&#34; target=&#34;_blank&#34; &gt;Operating Systems: Three Easy Pieces&lt;/a&gt;(以下、&lt;a href=&#34;https://pages.cs.wisc.edu/~remzi/OSTEP/&#34; target=&#34;_blank&#34; &gt;OSTEP&lt;/a&gt;)に取り組むにあたって、C言語の知識があるとスムーズそうだったので読んだ。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.kyoritsu-pub.co.jp/book/b10011596.html&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://www.kyoritsu-pub.co.jp/book/b10011596.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
@@ -97,7 +97,7 @@
       
       <guid>https://blog.kyu08.com/posts/how-networks-work/</guid>
       <description>ネットワークはなぜつながるのか 第2版を読んだので感想などをまとめる。 どんな本か ブラウザにURLを入力してからサーバーから返ってきたレスポンス</description>
-      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://bookplus.nikkei.com/atcl/catalog/07/P83110/&#34; target=&#34;_blank&#34; &gt;ネットワークはなぜつながるのか 第2版&lt;/a&gt;を読んだので感想などをまとめる。&lt;/p&gt;
 &lt;h2 id=&#34;どんな本か&#34;&gt;どんな本か&lt;/h2&gt;
 &lt;p&gt;ブラウザにURLを入力してからサーバーから返ってきたレスポンスをブラウザで表示するまでの間に起きることを順を追って説明してくれる本。&lt;/p&gt;
@@ -767,7 +767,7 @@
 &lt;p&gt;ここからは&lt;a href=&#34;https://cqrs.wordpress.com/wp-content/uploads/2010/11/cqrs_documents.pdf&#34; target=&#34;_blank&#34; &gt;CQRS Documents&lt;/a&gt;の内容をまとめていく。&lt;/p&gt;
 &lt;h2 id=&#34;a-stereotypical-architecture-典型的なアーキテクチャ&#34;&gt;&amp;ldquo;A Stereotypical Architecture&amp;rdquo;: 典型的なアーキテクチャ&lt;/h2&gt;
 &lt;p&gt;&amp;ldquo;A Stereotypical Architecture&amp;quot;として、典型的なアーキテクチャが紹介されている。CQRS Documentsではこのアーキテクチャに対して段階的にCQRSを導入していく形で説明が進んでいく。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;a-stereotypical-architecture.webp&#34; alt=&#34;a-stereotypical-architecture.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;a-stereotypical-architecture.webp&#34; alt=&#34;a-stereotypical-architecture.webp&#34; loading=&#34;lazy&#34; /&gt;
 CQRS Documents by Greg Young P2より引用&lt;/p&gt;
 &lt;p&gt;このアーキテクチャではシステムはCRUDのみの機能を持ち、クライアントとは&lt;strong&gt;常にDTOを介して通信する。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;おそらくクライアントが&lt;code&gt;UpdateUserName&lt;/code&gt;のようなエンドポイントに更新後のユーザーネームだけを渡すのではなく&lt;code&gt;/user&lt;/code&gt;に更新後のDTOを丸ごと渡す、というようなことだと思われる。&lt;/p&gt;
@@ -809,13 +809,13 @@ CQRS Documents by Greg Young P2より引用&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;とあるように、CQRSを適用することでCommandとQueryの処理経路が明確に分離される。この段階ではドメインモデルをDTOの生成に使用しない方が合理的である。&lt;/p&gt;
 &lt;p&gt;その代わりに&amp;quot;Thin Read Layer&amp;quot;という方法でDTOを生成することができる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;thin-read-layer.webp&#34; alt=&#34;thin-read-layer.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;thin-read-layer.webp&#34; alt=&#34;thin-read-layer.webp&#34; loading=&#34;lazy&#34; /&gt;
 CQRS Documents by Greg Young P21より引用&lt;/p&gt;
 &lt;p&gt;この層はDBから直接データを読み取り（ドメインモデルを迂回し）DTOを生成する。&lt;/p&gt;
 &lt;p&gt;こうすることで、&lt;strong&gt;ドメイン層からQueryの責務を切り離すことができ、ドメイン層の純度を上げることができる。&lt;/strong&gt;&lt;/p&gt;
 &lt;h3 id=&#34;command&#34;&gt;Command&lt;/h3&gt;
 &lt;p&gt;CQRSを適用するとCommand側のアーキテクチャは以下のようになる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;the-command-site.webp&#34; alt=&#34;the-command-site.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;the-command-site.webp&#34; alt=&#34;the-command-site.webp&#34; loading=&#34;lazy&#34; /&gt;
 CQRS Documents by Greg Young P22より引用&lt;/p&gt;
 &lt;p&gt;元のアーキテクチャでは書き込み系の処理をする際もDTOをクライアントから受け取っていたが、CQRS適用後はデータ中心ではなく振る舞い中心の契約を採用している点と読み取り処理が分離されている点が大きな違い。（元のアーキテクチャでは書き込み時にクライアントからDTOを渡していたが、ここではメッセージが渡されるようになっている）&lt;/p&gt;
 &lt;p&gt;また、元のアーキテクチャでドメイン層に存在していた次のような課題が解決されている。&lt;/p&gt;
@@ -1016,7 +1016,7 @@ CQRS Documents by Greg Young P22より引用&lt;/p&gt;
       
       <guid>https://blog.kyu08.com/posts/understanding-rust-from-concepts/</guid>
       <description>Rustのことをもっと理解りたくて『コンセプトから理解するRust』を読んだ。 コンセプトから理解するRust | 技術評論社Rustはメモリ安全</description>
-      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Rustのことをもっと理解りたくて『コンセプトから理解するRust』を読んだ。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://gihyo.jp/book/2022/978-4-297-12562-2&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://gihyo.jp/book/2022/978-4-297-12562-2&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
@@ -1090,7 +1090,7 @@ CQRS Documents by Greg Young P22より引用&lt;/p&gt;
       
       <guid>https://blog.kyu08.com/posts/bbf_kubernetes/</guid>
       <description>0からKubernetesのキャッチアップがしたくて、高橋 あおいさん著の『つくって、壊して、直して学ぶ Kubernetes入門』を読んだ。 つ</description>
-      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;0からKubernetesのキャッチアップがしたくて、高橋 あおいさん著の『つくって、壊して、直して学ぶ Kubernetes入門』を読んだ。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
@@ -1166,13 +1166,13 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
 &lt;p&gt;1つ1つの解説はそこまで文量がないので結構サクサク進めることができる。なので本書でKubernetesの全体感を本書で学び、深く学ぶのは別のリソースで補うのがよさそうだと感じた。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;誤解のないように書いておくと、自分のようなKubernetes初心者にとっては各リソースの説明の文量が多すぎないお陰で短期間で全体感を把握できてとてもよかった。(気になったところは別途公式ドキュメントやLLMを使って深堀ったりした)&lt;/p&gt;
 &lt;p&gt;こんな雰囲気。漫画があって文量も多すぎず読みやすい。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;manga.webp&#34; alt=&#34;manga.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;manga.webp&#34; alt=&#34;manga.webp&#34; loading=&#34;lazy&#34; /&gt;
 &lt;a href=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; target=&#34;_blank&#34; &gt;商品ページ&lt;/a&gt;より引用&lt;/p&gt;
 &lt;p&gt;以下の画像のように実行すべきコマンドとその結果がどうなるかが書いてあるのでKubernetesの経験が少なくても進めやすい。（実際自分もほぼ知識0で臨んだ）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;command.webp&#34; alt=&#34;command.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;command.webp&#34; alt=&#34;command.webp&#34; loading=&#34;lazy&#34; /&gt;
 &lt;a href=&#34;https://www.shoeisha.co.jp/book/detail/9784798183961&#34; target=&#34;_blank&#34; &gt;商品ページ&lt;/a&gt;より引用&lt;/p&gt;
 &lt;p&gt;こんな感じでk9sを常時起動しながらコマンドを実行するスタイルで進めたところリアルタイムでPodの変化が見れて理解が捗った。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;k9s.webp&#34; alt=&#34;k9s.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;k9s.webp&#34; alt=&#34;k9s.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/derailed/k9s/&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/derailed/k9s/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
       &lt;img src=&#34;https://repository-images.githubusercontent.com/167596393/6dd20780-5c0e-11ea-8e26-7754ad171192&#34; alt=&#34;GitHub - derailed/k9s: 🐶 Kubernetes CLI To Manage Your Clusters In Style!&#34; loading=&#34;lazy&#34;&gt;
@@ -1218,7 +1218,7 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
       
       <guid>https://blog.kyu08.com/posts/the-deadline/</guid>
       <description>少し前にTwitterで紹介されていて気になっていた1トム デマルコの『デッドライン』を読んだ。新品で売ってるところが見つからなかったのでAm</description>
-      <content>&lt;p&gt;&lt;img src=&#34;the-deadline.webp&#34; alt=&#34;the-deadline.webp&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;the-deadline.webp&#34; alt=&#34;the-deadline.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;少し前にTwitterで紹介されていて気になっていた&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;トム デマルコの『デッドライン』を読んだ。新品で売ってるところが見つからなかったのでAmazonで中古を購入した。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;プロジェクトマネジメントをするたびにその難しさを痛感しているので知見が得られたり思考が整理できたりすることを期待して読んだ。&lt;/p&gt;
 &lt;p&gt;同著者の本だと『ピープルウエア』が有名だがそちらは未読。『ゆとりの法則』とかも面白そうなのでいつか読みたい。&lt;/p&gt;
@@ -1504,11 +1504,11 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
       
       <guid>https://blog.kyu08.com/posts/nand2tetris/</guid>
       <description>『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は## 学び、得た経験までジャンプして</description>
-      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;『コンピュータシステムの理論と実装 第2版』を読んだので感想を書く。割と長いので得られた学びだけ読みたい方は&lt;a href=&#34;#%e5%ad%a6%e3%81%b3%e5%be%97%e3%81%9f%e7%b5%8c%e9%a8%93&#34; &gt;## 学び、得た経験&lt;/a&gt;までジャンプしてください。&lt;/p&gt;
 &lt;h2 id=&#34;本書の構成&#34;&gt;本書の構成&lt;/h2&gt;
 &lt;p&gt;本書はnand2tetrisという通称の通り、NANDゲートからスタートして、CPUやコンパイラやOSなどを実装し、最終的にはそのプラットフォーム上でテトリス(のようなアプリケーション)&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;が動くところまで実装するという内容のコースになっている。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;roadmap.webp&#34; alt=&#34;roadmap&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;roadmap.webp&#34; alt=&#34;roadmap&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1BPmhMLu_4QTcte0I5bK4QBHI8SACnQSt/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -1633,7 +1633,7 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
 &lt;/ul&gt;
 &lt;h2 id=&#34;第3章-メモリ&#34;&gt;第3章 メモリ&lt;/h2&gt;
 &lt;p&gt;この章では、DFF(Data Flip-Flop)を用いて1-bit registerを作成し、それを組み合わせて16-bit registerを作成し、さらにそれを組み合わせてRAMを作成した。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;from-dff-to-ram.webp&#34; alt=&#34;from-dff-to-ram.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;from-dff-to-ram.webp&#34; alt=&#34;from-dff-to-ram.webp&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -1668,7 +1668,7 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
 &lt;li&gt;ただしクロックサイクルは「システム内のチップ間で信号が伝播するのにかかる時間の最大値」と「1チップ内で最も処理時間がかかる演算を完了するのにかかる時間」の合計値よりも大きく設定する必要がある。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;DFFは&lt;code&gt;out(t+1) = in(t)&lt;/code&gt;で表される出力を持つ。DFFを用いることで過去の状態を論理回路上で表現できる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;dff.webp&#34; alt=&#34;dff.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;dff.webp&#34; alt=&#34;dff.webp&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -1691,7 +1691,7 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
     DFF(in=mux, out=out, out=dffOut);
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;1-bit registerは時刻&lt;code&gt;t&lt;/code&gt;において&lt;code&gt;load&lt;/code&gt;ビットがアサートされると&lt;code&gt;out(t+1)&lt;/code&gt;が&lt;code&gt;in(t)&lt;/code&gt;の値になり、アサートされていない場合は&lt;code&gt;out(t+1)&lt;/code&gt;は&lt;code&gt;out(t)&lt;/code&gt;の値になる。換言するとレジスタを利用することで過去の状態を保持できる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;1-bit-register.webp&#34; alt=&#34;1-bit-register.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;1-bit-register.webp&#34; alt=&#34;1-bit-register.webp&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1boFooygPrxMX-AxzogFYIZ-8QsZiDz96/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -1739,7 +1739,7 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
 &lt;/ul&gt;
 &lt;h3 id=&#34;hackコンピュータのアーキテクチャ&#34;&gt;Hackコンピュータのアーキテクチャ&lt;/h3&gt;
 &lt;p&gt;Hackコンピュータは以下のようなアーキテクチャを持つ。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;hack-computer-architecture.webp&#34; alt=&#34;hack-computer-architecture.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;hack-computer-architecture.webp&#34; alt=&#34;hack-computer-architecture.webp&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -1791,7 +1791,7 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;the-hack-language-specification.webp&#34; alt=&#34;the-hack-language-specification&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;the-hack-language-specification.webp&#34; alt=&#34;the-hack-language-specification&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1HxjPmIZkFHl-BVW3qoz8eD9dqEuEyuBI/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -1893,9 +1893,9 @@ Chapter 12　この先の歩み方&lt;/div&gt;&lt;div class=&#34;blogcard-url&#3
 &lt;/ul&gt;
 &lt;p&gt;正直CPUの実装、デバッグがはかなり大変だったが公式が提供してくれているテストツールとデバッガのおかげで効率的にバグを見つけることができた。&lt;/p&gt;
 &lt;p&gt;こんな感じで各ピンの出力や期待する結果とのdiffを比較的見やすい形式で表示してくれるのでありがたかった。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;cpu-debug.webp&#34; alt=&#34;cpu-debug.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;cpu-debug.webp&#34; alt=&#34;cpu-debug.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;ここで作成したCPUの回路は次のようなもの。ここではヒントとして大まかな回路設計が与えられておりそれを参考にしつつ足りない部分を埋めていく形で実装を進めた。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;cpu-implementation.webp&#34; alt=&#34;cpu-implementation.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;cpu-implementation.webp&#34; alt=&#34;cpu-implementation.webp&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1Z_fxYmmRNXTkAzmZ6YMoX9NXZIRVCKiw/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -2239,7 +2239,7 @@ add
 &lt;li&gt;&lt;code&gt;func_b&lt;/code&gt;のコマンドが定義されているアドレスにジャンプ&lt;/li&gt;
 &lt;li&gt;リターンアドレスラベルをコードに挿入&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;call.webp&#34; alt=&#34;call.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;call.webp&#34; alt=&#34;call.webp&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -2263,7 +2263,7 @@ add
 &lt;li&gt;&lt;code&gt;THAT&lt;/code&gt;, &lt;code&gt;THIS&lt;/code&gt;, &lt;code&gt;ARG&lt;/code&gt;, &lt;code&gt;LCL&lt;/code&gt;を復元&lt;/li&gt;
 &lt;li&gt;リターンアドレスにジャンプ&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;return.webp&#34; alt=&#34;return.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;return.webp&#34; alt=&#34;return.webp&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1BexrNmdqYhKPkqD_Y81qNAUeyfzl-ZtO/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -2310,7 +2310,7 @@ add
 &lt;/pre&gt;
 
 &lt;p&gt;Jackコンパイラは構文解析器とコード生成器からなり構文解析器はトークナイザとパーサ&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;からなる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;compiler-roadmap.webp&#34; alt=&#34;compiler-roadmap&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;compiler-roadmap.webp&#34; alt=&#34;compiler-roadmap&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -2384,10 +2384,10 @@ add
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;パーサはトークン列を言語の構文ルールに照らし合わせその構造を構文上の要素に変換する処理を担う。&lt;/p&gt;
 &lt;p&gt;ここでは再帰下降構文解析というアルゴリズムを使って構文解析を行った。&lt;/p&gt;
 &lt;p&gt;ちなみに、Jack言語の構文は次のように定義されている。簡単な部類の言語とはいえ実装量はこれまでの課題と比べると多めだった。趣味でCコンパイラを書く人をたまにTwitterで見かけたりするがすごいなぁという気持ちになった。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;jack-grammer.webp&#34; alt=&#34;jack-grammer&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;jack-grammer.webp&#34; alt=&#34;jack-grammer&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;第11章-コンパイラiiコード生成&#34;&gt;第11章 コンパイラII：コード生成&lt;/h2&gt;
 &lt;p&gt;第11章では、コード生成器を実装する。具体的には構文解析した結果をもとにVMコードを生成する。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;compiler-roadmap.webp&#34; alt=&#34;compiler-roadmap&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;compiler-roadmap.webp&#34; alt=&#34;compiler-roadmap&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1CM_w6cxQpYnYHcP-OhNkNU6oD5rMnjzv/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -2405,7 +2405,7 @@ add
 &lt;p&gt;コンパイラが&lt;code&gt;let y = foo(x);&lt;/code&gt;のような文に遭遇するたびに&lt;code&gt;x&lt;/code&gt;, &lt;code&gt;y&lt;/code&gt;が何を表しているのかを知る必要がある。&lt;/p&gt;
 &lt;p&gt;Jackではクラススコープとサブルーチンスコープの2つのスコープがある。クラススコープの変数にはフィールド変数、スタティック変数の2種類があり、サブルーチンスコープの変数にはローカル変数、引数の2種類がある。&lt;/p&gt;
 &lt;p&gt;ここではこれらの変数の情報は&lt;strong&gt;シンボルテーブル&lt;/strong&gt;と呼ばれるデータ構造に格納することで管理する手法が紹介されていた。シンボルテーブルは変数の名前、型、スコープ、種類、インデックスを保持する。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;symbol-table.webp&#34; alt=&#34;symbol-table&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;symbol-table.webp&#34; alt=&#34;symbol-table&#34; loading=&#34;lazy&#34; /&gt;
 &lt;div class=&#34;blogcard&#34; data-url=&#34;https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://drive.google.com/file/d/1CYOcXKxfAwRHaOERvoyuNKSwdlxMo_e3/view&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail blogcard-thumbnail-placeholder&#34;&gt;
       &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;
@@ -2511,7 +2511,7 @@ add
       
       <guid>https://blog.kyu08.com/posts/go-system-programming/</guid>
       <description>『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11</description>
-      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;『Goならわかるシステムプログラミング第2版』をサンプルコードを手元で実行しつつ一通り読んだ。(期間としては2024/6/8 ~ 2024/11/4でコミットした日数としてはおおよそ24日ほどだった。)&lt;/p&gt;
 &lt;p&gt;筆者は情報系の学部を出ておらず、CSなどの基礎知識があまりないので大変勉強になった。また、サンプルコードが豊富なので実際に自分のマシン上で動かしながら学ぶことができ解像度を上げながら理解を深めることができた。&lt;/p&gt;
 &lt;p&gt;低レイヤ、コンピューターサイエンスの学習に興味がある方にはとてもおすすめなのでぜひ買って読んでみてください。&lt;/p&gt;
@@ -2556,7 +2556,7 @@ add
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;複数のファイル&lt;code&gt;f1&lt;/code&gt;, &lt;code&gt;f2&lt;/code&gt;を&lt;code&gt;os.Create()&lt;/code&gt;する処理をデバッガーで追ってみたところ、それぞれファイルディスクリプタの値が&lt;code&gt;3&lt;/code&gt;, &lt;code&gt;4&lt;/code&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;となっておりファイルディスクリプタの値が&lt;code&gt;3&lt;/code&gt;からインクリメントされる様子を確認できた。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;delve-neovim.webp&#34; alt=&#34;delve-neovim.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;delve-neovim.webp&#34; alt=&#34;delve-neovim.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;第3章-低レベルアクセスへの入口1ioreader&#34;&gt;第3章 低レベルアクセスへの入口1：io.Reader&lt;/h2&gt;
 &lt;h3 id=&#34;エンディアン変換&#34;&gt;エンディアン変換&lt;/h3&gt;
 &lt;ul&gt;
@@ -2759,7 +2759,7 @@ add
 &lt;li&gt;Unixドメインソケットで作成されるのはソケットファイルと呼ばれる特殊なファイルであり、通常のファイルのような実体を持たない。あくまでもプロセス間の高速な通信としてファイルというインターフェースを利用するだけ。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;以下はソケットファイルが作成されている様子。ソケットファイルは先頭が&amp;quot;s&amp;quot;で始まる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;socket-file.webp&#34; alt=&#34;socket-file.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;socket-file.webp&#34; alt=&#34;socket-file.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;unixドメインソケットとtcpのベンチマーク&#34;&gt;UnixドメインソケットとTCPのベンチマーク&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Unixドメインソケットを使った実装とTCPを経由した実装のベンチマークの比較をすると筆者の環境だとUnixドメインソケットの方が10倍ほど高速だった。&lt;/li&gt;
@@ -3479,7 +3479,7 @@ add
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;図表22-2&lt;/code&gt;が示すように自己組織化チームとはひとことでいうと「自走できるチーム」です。自分たちがなぜここにいるのかを理解し、またお互いの得意分野がわかっているため自分たちで最適なフォーメーションを組みながらビジョンへと向かっていきます。リーダーの意思決定を待つことなく自己修復的に課題を解決していく。それが自己組織化チームの底力です。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;self-organizing-team.webp&#34; alt=&#34;self-organizing-team.webp&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;self-organizing-team.webp&#34; alt=&#34;self-organizing-team.webp&#34; loading=&#34;lazy&#34; /&gt;
 『いちばんやさしいアジャイル開発の教本』P76より引用&lt;/p&gt;
 &lt;p&gt;チームの振り返りなんかでも、「どうすれば自己組織化チームに近付けるか」という観点で考えてみてもいいかもしれない。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -3669,7 +3669,7 @@ add
       
       <guid>https://blog.kyu08.com/posts/how-world-class-engineers-think/</guid>
       <description>Microsoftのエンジニアとしてアメリカで働いている牛尾剛さんが優秀な同僚から学んだ思考法について書いた著書『世界一流エンジニアの思考法</description>
-      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34;&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Microsoftのエンジニアとしてアメリカで働いている牛尾剛さんが優秀な同僚から学んだ思考法について書いた著書『世界一流エンジニアの思考法』を読んだので学びになったトピックについて簡単に書こうと思う。&lt;/p&gt;
 &lt;h2 id=&#34;頭がよくても理解には時間がかかる&#34;&gt;頭がよくても「理解」には時間がかかる&lt;/h2&gt;
 &lt;p&gt;ある若くて優秀な同僚が新しいプロジェクトに参加するときにアーキテクチャの説明ビデオを「難しいので何回も見直している」と言っていたのに対して著者が衝撃を受けたというエピソードが紹介されていた。&lt;/p&gt;
