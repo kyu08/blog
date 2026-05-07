@@ -8,6 +8,7 @@
     "generate-ogp": "node scripts/generate-ogp.mjs",
     "fetch-blogcard-ogp": "node scripts/fetch-blogcard-ogp.mjs",
     "fetch-speakerdeck-oembed": "node scripts/fetch-speakerdeck-oembed.mjs",
+    "fetch-github-activity": "node scripts/fetch-github-activity.mjs",
     "fetch-all-cache": "npm run fetch-blogcard-ogp && npm run fetch-speakerdeck-oembed"
   },
   "keywords": [],

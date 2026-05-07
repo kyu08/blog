@@ -1,0 +1,104 @@
+{{ define "main" }}
+{{ $data := site.Data.github_activity }}
+<div class="activity-page">
+  {{ if $data }}
+
+  {{/* 統計サマリー */}}
+  <section class="activity-section">
+    <h2>stats</h2>
+    <div class="activity-stats-grid">
+      <div class="activity-stat-card">
+        <span class="activity-stat-value">{{ add $data.stats.totalMergedInOwnRepos $data.stats.totalMergedInOtherRepos }}</span>
+        <span class="activity-stat-label">merged PRs（合計）</span>
+      </div>
+      <div class="activity-stat-card">
+        <span class="activity-stat-value">{{ $data.stats.totalMergedInOwnRepos }}</span>
+        <span class="activity-stat-label">自分のリポジトリ</span>
+      </div>
+      <div class="activity-stat-card">
+        <span class="activity-stat-value">{{ $data.stats.totalMergedInOtherRepos }}</span>
+        <span class="activity-stat-label">他のリポジトリ</span>
+      </div>
+    </div>
+  </section>
+
+  {{/* 直近50件のPR */}}
+  <section class="activity-section">
+    <h2>recent PRs</h2>
+    <div class="activity-filter-bar" id="pr-filter-bar">
+      <button class="activity-filter-btn active" data-filter="all">すべて</button>
+      <button class="activity-filter-btn" data-filter="own">自分のリポジトリのみ</button>
+      <button class="activity-filter-btn" data-filter="other">外部コントリビューションのみ</button>
+    </div>
+    <div class="activity-pr-list" id="pr-list">
+      {{ range $data.recentPRs }}
+      <article class="activity-pr-card" data-own-repo="{{ .isOwnRepo }}">
+        <div class="activity-pr-card-header">
+          <a href="{{ .url }}" class="activity-pr-title" target="_blank" rel="noopener noreferrer">{{ .title }}</a>
+          <a href="https://github.com/{{ .repo }}" class="activity-pr-repo" target="_blank" rel="noopener noreferrer">{{ .repo }}</a>
+        </div>
+        <div class="activity-pr-meta">
+          {{ if .mergedAt }}
+          <time class="activity-pr-date" datetime="{{ .mergedAt }}">{{ .mergedAt }}</time>
+          {{ end }}
+          <span class="activity-pr-badge {{ if .isOwnRepo }}activity-pr-badge--own{{ else }}activity-pr-badge--other{{ end }}">
+            {{ if .isOwnRepo }}own{{ else }}contrib{{ end }}
+          </span>
+        </div>
+        {{ if .summary }}
+        <p class="activity-pr-summary">{{ .summary }}</p>
+        {{ end }}
+      </article>
+      {{ end }}
+      {{ if not $data.recentPRs }}
+      <p class="activity-empty">PRデータを取得中です。しばらくお待ちください。</p>
+      {{ end }}
+    </div>
+  </section>
+
+  {{/* リポジトリ別統計 */}}
+  <section class="activity-section">
+    <h2>repos</h2>
+    <div class="activity-sort-bar" id="repo-sort-bar">
+      <button class="activity-sort-btn active" data-sort="stars">★ スター順</button>
+      <button class="activity-sort-btn" data-sort="count">↑ マージ数順</button>
+    </div>
+
+    {{/*
+      データをJS側に渡す。
+      jsonify はGoのencoding/jsonを使用し、< > & などの特殊文字をUnicodeエスケープ（\u003cなど）に変換するため
+      </script>等の文字列を含んでいてもXSSのリスクはない。
+      safeJS はHugoテンプレートエンジンが<script>内でJSONを二重エンコードしないようにするためのもの。
+    */}}
+    <script id="repo-data" type="application/json">{{ $data.stats.byRepo | jsonify | safeJS }}</script>
+
+    <div class="activity-repo-list" id="repo-list">
+      {{/* 初期描画: スター順 */}}
+      {{ range $data.stats.byRepo.byStars }}
+      <div class="activity-repo-item">
+        <a href="{{ .repoUrl }}" class="activity-repo-name" target="_blank" rel="noopener noreferrer">{{ .repo }}</a>
+        <div class="activity-repo-meta">
+          <span class="activity-repo-stars">★ {{ .stars }}</span>
+          <span class="activity-repo-count">{{ .mergedCount }} PRs</span>
+        </div>
+      </div>
+      {{ end }}
+      {{ if not $data.stats.byRepo.byStars }}
+      <p class="activity-empty">データを取得中です。しばらくお待ちください。</p>
+      {{ end }}
+    </div>
+  </section>
+
+  {{ if $data.lastUpdated }}
+  <footer class="activity-footer">
+    <time class="activity-last-updated" datetime="{{ $data.lastUpdated }}">最終更新: {{ $data.lastUpdated }}</time>
+  </footer>
+  {{ end }}
+
+  {{ else }}
+  <p class="activity-empty">データを取得中です。しばらくお待ちください。</p>
+  {{ end }}
+</div>
+
+<script src="{{ "activity.js" | absURL }}"></script>
+{{ end }}
