@@ -107,6 +107,10 @@ ignoreFiles = [
         name = "_misc"
         url = "/tags/diary/"
       [[languages.ja.menu.main]]
+        identifier = "tags"
+        name = "tags"
+        url = "/tags"
+      [[languages.ja.menu.main]]
         identifier = "about"
         name = "about"
         url = "/about"
