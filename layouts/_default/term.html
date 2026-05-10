@@ -1,4 +1,5 @@
 {{ define "main" }}
+  <h1>#{{ .Title }}</h1>
   {{ if .Content }}
     <div class="index-content {{ if .Params.framed -}}framed{{- end -}}">
       {{ .Content }}
