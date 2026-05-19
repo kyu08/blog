@@ -8,22 +8,22 @@ jobs:
     if: github.event.pull_request.draft == false
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
         # with:
         #   submodules: true
       - name: Setup Node/npm
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: 18
       - name: textlint-github-check
-        uses: tsuyoshicho/action-textlint@v3
+        uses: tsuyoshicho/action-textlint@ace6abb4fd6736f30f2319c7e21b7adf4e93dc46 # v3.11.2
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-check
           textlint_flags: "."
           level: 'error'
       - name: textlint-github-pr-review
-        uses: tsuyoshicho/action-textlint@v3
+        uses: tsuyoshicho/action-textlint@ace6abb4fd6736f30f2319c7e21b7adf4e93dc46 # v3.11.2
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
