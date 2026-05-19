@@ -13,31 +13,18 @@ jobs:
         with:
           submodules: true # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
-      - uses: jdx/mise-action@v4
+
+      - uses: jdx/mise-action@1648a7812b9aeae629881980618f079932869151 # v4.0.1
         with:
           version: 2026.3.10 # [default: latest] mise version to install
           install: true # [default: true] run `mise install`
-          install_args: "bun" # [default: ""] additional arguments to `mise install`
+          install_args: "" # [default: ""] additional arguments to `mise install`
           cache: true # [default: true] cache mise using GitHub's cache
           experimental: true # [default: false] enable experimental features
           log_level: debug # [default: info] log level
-          # automatically write this .tool-versions file
-          tool_versions: |
-            shellcheck 0.11.0
-          # or, if you prefer .mise.toml format:
-          mise_toml: |
-            [tools]
-            shellcheck = "0.11.0"
           working_directory: app # [default: .] directory to run mise in
           reshim: false # [default: false] run `mise reshim -f`
-          github_token: ${{ secrets.GITHUB_TOKEN }} # [default: ${{ github.token }}] GitHub token for API authentication
-
-
-      - name: Setup Node.js
-        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
-        with:
-          node-version: '20.18.1'
-          cache: 'npm'
+          # github_token: ${{ secrets.GITHUB_TOKEN }} # [default: ${{ github.token }}] GitHub token for API authentication
 
       - name: Install dependencies
         run: npm ci
