@@ -33,9 +33,6 @@ jobs:
       - name: Generate OGP images
         run: npm run generate-ogp
 
-      - name: Setup Hugo
-        uses: ./.github/actions/setup-hugo
-
       - name: Build
         run: hugo
 

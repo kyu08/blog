@@ -28,9 +28,6 @@ jobs:
       - name: Generate OGP images
         run: npm run generate-ogp
 
-      - name: Setup Hugo
-        uses: ./.github/actions/setup-hugo
-
       - name: Build
         run: hugo --baseURL https://blog.kyu08.com/pr-${{ github.event.pull_request.number }}/
 
