@@ -8,7 +8,7 @@ jobs:
     if: github.event.pull_request.draft == false
     steps:
       - name: Checkout
-        uses: ./.github/actions/checkout-source
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
       - uses: ./.github/actions/setup-mise
       - name: textlint-github-check
         uses: tsuyoshicho/action-textlint@ace6abb4fd6736f30f2319c7e21b7adf4e93dc46 # v3.11.2
