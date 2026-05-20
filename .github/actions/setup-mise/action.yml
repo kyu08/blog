@@ -11,6 +11,5 @@ runs:
         install_args: ""
         cache: true
         experimental: true
-        log_level: debug
         working_directory: .
         reshim: false
