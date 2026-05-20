@@ -1,0 +1,25 @@
+name: Checkout source
+description: actions/checkoutのラッパー。よく使うオプションをinputsで受け取る
+
+inputs:
+  ref:
+    description: チェックアウトするref(branch/tag/SHA)
+    required: false
+    default: ""
+  submodules:
+    description: サブモジュールを取得するか(true/recursive/false)
+    required: false
+    default: "false"
+  fetch-depth:
+    description: 取得する履歴の深さ(0で全履歴)
+    required: false
+    default: "1"
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+      with:
+        ref: ${{ inputs.ref }}
+        submodules: ${{ inputs.submodules }}
+        fetch-depth: ${{ inputs.fetch-depth }}
