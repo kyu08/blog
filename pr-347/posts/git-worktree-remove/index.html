@@ -225,7 +225,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/06/25</time>
       
-    <span class="post-reading-time">5 min read (2051 words)</span></div>
+    <span class="post-reading-time">5 min read (2096 words)</span></div>
 
   
     <span class="post-tags">
@@ -261,6 +261,25 @@ if (!doNotTrack) {
   </figure></p>
 <p>実際にやってみればすぐにわかることではあるが、そういえばgitのソースコードを読んだことがなく、読んでみたかったのであえてソースコードから挙動を追ってみた。</p>
 <p>（なお、タイトルが誤解を生みそうなので先に書いておきますが、lazygitでworktreeを削除したとしても<code>git worktree remove</code>コマンドでworktreeを削除したとしても挙動に大きな差はなさそうでした。）</p>
+<p>なお、調査に使用したrepositoryとcommit hashは以下の通り。</p>
+<table>
+<thead>
+<tr>
+<th>repository</th>
+<th>commit hash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>jesseduffield/lazygit</code></td>
+<td><code>16cf2ff1a9c18352c60d38655d9eb2c284dbec4b</code></td>
+</tr>
+<tr>
+<td><code>git/git</code></td>
+<td><code>8d96f09e9245ddf80c1981476fcbac8c4bb4125f</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="1-lazygitの挙動を追う">1. lazygitの挙動を追う<a href="#1-lazygitの挙動を追う" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <ol>
 <li>lazygitで削除したいworktreeにカーソルを合わせて<code>d</code>キーを押すとこのような確認モーダルが表示される。
@@ -316,7 +335,7 @@ if (!doNotTrack) {
 <p>ということでlazygitが<code>git worktree remove</code>を呼んでいることがわかったので次はgit本体のソースコードを見てみる。</p>
 <h2 id="2-gitの挙動を追う">2. gitの挙動を追う<a href="#2-gitの挙動を追う" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <ol>
-<li>gitのソースコードはGitHubにミラーがあるので以下のコマンドでcloneできる。
+<li>gitのソースコードはGitHubに<a href="https://github.com/git/git" target="_blank" >ミラー</a>があるので以下のコマンドでcloneできる。
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gh repo clone git/git
 </span></span></code></pre></div></li>
 <li><code>git grep -- &quot;worktree remove&quot;</code>したら104箇所も出てきてしまった。

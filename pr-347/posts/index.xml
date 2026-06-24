@@ -22,6 +22,25 @@
   &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;実際にやってみればすぐにわかることではあるが、そういえばgitのソースコードを読んだことがなく、読んでみたかったのであえてソースコードから挙動を追ってみた。&lt;/p&gt;
 &lt;p&gt;（なお、タイトルが誤解を生みそうなので先に書いておきますが、lazygitでworktreeを削除したとしても&lt;code&gt;git worktree remove&lt;/code&gt;コマンドでworktreeを削除したとしても挙動に大きな差はなさそうでした。）&lt;/p&gt;
+&lt;p&gt;なお、調査に使用したrepositoryとcommit hashは以下の通り。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;repository&lt;/th&gt;
+&lt;th&gt;commit hash&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;jesseduffield/lazygit&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;16cf2ff1a9c18352c60d38655d9eb2c284dbec4b&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;git/git&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;8d96f09e9245ddf80c1981476fcbac8c4bb4125f&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;h2 id=&#34;1-lazygitの挙動を追う&#34;&gt;1. lazygitの挙動を追う&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;lazygitで削除したいworktreeにカーソルを合わせて&lt;code&gt;d&lt;/code&gt;キーを押すとこのような確認モーダルが表示される。
@@ -77,7 +96,7 @@
 &lt;p&gt;ということでlazygitが&lt;code&gt;git worktree remove&lt;/code&gt;を呼んでいることがわかったので次はgit本体のソースコードを見てみる。&lt;/p&gt;
 &lt;h2 id=&#34;2-gitの挙動を追う&#34;&gt;2. gitの挙動を追う&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;gitのソースコードはGitHubにミラーがあるので以下のコマンドでcloneできる。
+&lt;li&gt;gitのソースコードはGitHubに&lt;a href=&#34;https://github.com/git/git&#34; target=&#34;_blank&#34; &gt;ミラー&lt;/a&gt;があるので以下のコマンドでcloneできる。
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gh repo clone git/git
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git grep -- &amp;quot;worktree remove&amp;quot;&lt;/code&gt;したら104箇所も出てきてしまった。
