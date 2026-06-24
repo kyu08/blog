@@ -260,10 +260,10 @@ if (!doNotTrack) {
     <figcaption>lazygitでworktreeを削除しようとすると表示されるモーダル</figcaption>
   </figure></p>
 <p>実際にやってみればすぐにわかることではあるが、そういえばgitのソースコードを読んだことがなく、読んでみたかったのであえてソースコードから挙動を追ってみた。</p>
-<p>（なお、タイトルが誤解を生みそうなので先に書いておきますが、lazygitでworktreeを削除したとしてもgit worktree removeコマンドでworktreeを削除したとしても挙動に大きな差はなさそうでした。）</p>
+<p>（なお、タイトルが誤解を生みそうなので先に書いておきますが、lazygitでworktreeを削除したとしても<code>git worktree remove</code>コマンドでworktreeを削除したとしても挙動に大きな差はなさそうでした。）</p>
 <h2 id="1-lazygitの挙動を追う">1. lazygitの挙動を追う<a href="#1-lazygitの挙動を追う" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <ol>
-<li>lazygitで削除したいworktreeにカーソルを合わせてd キーを押すとこのような確認モーダルが表示される。
+<li>lazygitで削除したいworktreeにカーソルを合わせて<code>d</code>キーを押すとこのような確認モーダルが表示される。
 <figure class="image-with-caption">
     <img src="lazygit.webp" alt="lazygit.webp" loading="lazy" />
     <figcaption>lazygitでworktreeを削除しようとすると表示されるモーダル(再掲)</figcaption>

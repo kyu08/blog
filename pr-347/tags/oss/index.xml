@@ -21,10 +21,10 @@
     &lt;figcaption&gt;lazygitでworktreeを削除しようとすると表示されるモーダル&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;実際にやってみればすぐにわかることではあるが、そういえばgitのソースコードを読んだことがなく、読んでみたかったのであえてソースコードから挙動を追ってみた。&lt;/p&gt;
-&lt;p&gt;（なお、タイトルが誤解を生みそうなので先に書いておきますが、lazygitでworktreeを削除したとしてもgit worktree removeコマンドでworktreeを削除したとしても挙動に大きな差はなさそうでした。）&lt;/p&gt;
+&lt;p&gt;（なお、タイトルが誤解を生みそうなので先に書いておきますが、lazygitでworktreeを削除したとしても&lt;code&gt;git worktree remove&lt;/code&gt;コマンドでworktreeを削除したとしても挙動に大きな差はなさそうでした。）&lt;/p&gt;
 &lt;h2 id=&#34;1-lazygitの挙動を追う&#34;&gt;1. lazygitの挙動を追う&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;lazygitで削除したいworktreeにカーソルを合わせてd キーを押すとこのような確認モーダルが表示される。
+&lt;li&gt;lazygitで削除したいworktreeにカーソルを合わせて&lt;code&gt;d&lt;/code&gt;キーを押すとこのような確認モーダルが表示される。
 &lt;figure class=&#34;image-with-caption&#34;&gt;
     &lt;img src=&#34;lazygit.webp&#34; alt=&#34;lazygit.webp&#34; loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;lazygitでworktreeを削除しようとすると表示されるモーダル(再掲)&lt;/figcaption&gt;
