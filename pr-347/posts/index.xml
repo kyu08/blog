@@ -7,15 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Wed, 24 Jun 2026 23:07:40 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-347/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Jun 2026 00:07:40 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-347/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>lazygitでworktreeを削除すると何が起こるのか</title>
       <link>https://blog.kyu08.com/pr-347/posts/git-worktree-remove/</link>
-      <pubDate>Wed, 24 Jun 2026 23:07:40 +0900</pubDate>
+      <pubDate>Thu, 25 Jun 2026 00:07:40 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/pr-347/posts/git-worktree-remove/</guid>
-      <description>lazygitでworktreeを削除したときにworktreeのworking directoryが削除されるのかどうかがふと気になった。（</description>
-      <content>&lt;p&gt;lazygitでworktreeを削除したときにworktreeのworking directoryが削除されるのかどうかがふと気になった。（普段はworktreeのworking directoryをrepository内に配置し、かつgit ignoreする運用にしているのでworktree削除後にworking directoryが残っているのかどうかを意識していない）&lt;/p&gt;
+      <description>lazygitでworktreeを削除したときにworktreeのworking directoryも一緒に削除されるのかどうかがふと気になっ</description>
+      <content>&lt;p&gt;lazygitでworktreeを削除したときにworktreeのworking directoryも一緒に削除されるのかどうかがふと気になった。（普段はworktreeのworking directoryをrepository内に配置し、かつgit ignoreする運用にしているのでworktree削除後にworking directoryが残っているのかどうかを意識していない）&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&#34;image-with-caption&#34;&gt;
     &lt;img src=&#34;lazygit.webp&#34; alt=&#34;lazygit.webp&#34; loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;lazygitでworktreeを削除しようとすると表示されるモーダル&lt;/figcaption&gt;
@@ -81,9 +81,9 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gh repo clone git/git
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git grep -- &amp;quot;worktree remove&amp;quot;&lt;/code&gt;したら104箇所も出てきてしまった。
-&lt;img src=&#34;git-grep1.png&#34; alt=&#34;git-grep1.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
+&lt;img src=&#34;git-grep1.webp&#34; alt=&#34;git-grep1.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
 &lt;li&gt;Cのファイルに絞ったところ&lt;code&gt;git worktree remove&lt;/code&gt;のhelpの文言のような部分が見つかったので該当ファイルを見てみる。
-&lt;img src=&#34;git-grep2.png&#34; alt=&#34;git-grep2.png&#34; loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
+&lt;img src=&#34;git-grep2.webp&#34; alt=&#34;git-grep2.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;builtin/worktree.c&lt;/code&gt;の関数一覧を眺めているとそれっぽい関数が見つかった。
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// https://github.com/git/git/blob/8d96f09e9245ddf80c1981476fcbac8c4bb4125f/builtin/worktree.c#L1378-L1431
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;remove_worktree&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; ac, &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;**&lt;/span&gt;av, &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;prefix,
@@ -129,26 +129,33 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;force)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#a6e22e&#34;&gt;check_clean_worktree&lt;/span&gt;(wt, av[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]);
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		ret &lt;span style=&#34;color:#f92672&#34;&gt;|=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;delete_git_work_tree&lt;/span&gt;(wt); &lt;span style=&#34;color:#75715e&#34;&gt;// まずは.git/worktrees/&amp;lt;id&amp;gt;を削除
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;// worktreeのworking directoryを削除
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;		ret &lt;span style=&#34;color:#f92672&#34;&gt;|=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;delete_git_work_tree&lt;/span&gt;(wt);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	}
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;/*
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;	 * continue on even if ret is non-zero, there&amp;#39;s no going back
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;	 * from here.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;	 */&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	ret &lt;span style=&#34;color:#f92672&#34;&gt;|=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;delete_git_dir&lt;/span&gt;(wt&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;id); &lt;span style=&#34;color:#75715e&#34;&gt;// 次にworktreeのworking directory自体を削除
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;delete_worktrees_dir_if_empty&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// .git/worktrees/&amp;lt;id&amp;gt;を削除
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	ret &lt;span style=&#34;color:#f92672&#34;&gt;|=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;delete_git_dir&lt;/span&gt;(wt&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;id);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;delete_worktrees_dir_if_empty&lt;/span&gt;();
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;free_worktrees&lt;/span&gt;(worktrees); &lt;span style=&#34;color:#75715e&#34;&gt;// 最後に削除対象のworktreeのメモリを解放
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; ret;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;free_worktrees&lt;/span&gt;(worktrees);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; ret;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;ということで、おおよそ以下のような処理をしていることがわかった。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;引数に指定されたworktreeを取得する&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.git/worktree/&amp;lt;id&amp;gt;&lt;/code&gt;を削除
+&lt;li&gt;worktreeのworking directoryを削除
 &lt;ul&gt;
-&lt;li&gt;ちなみに、&lt;code&gt;.git/worktree/&amp;lt;id&amp;gt;&lt;/code&gt;にはworktreeのメタ情報が入っている。
+&lt;li&gt;&lt;strong&gt;今回の調査の発端の処理。&lt;code&gt;git worktree remove&lt;/code&gt;を実行すると、worktreeのworking directoryも削除されることがわかった。&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.git/worktrees/&amp;lt;id&amp;gt;&lt;/code&gt;を削除
+&lt;ul&gt;
+&lt;li&gt;ちなみに、&lt;code&gt;.git/worktrees/&amp;lt;id&amp;gt;&lt;/code&gt;にはworktreeのメタ情報が入っている。
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;❯ tree .git/worktrees/myworktree&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;.git/worktrees/myworktree&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;├── commondir&lt;/span&gt;
@@ -168,26 +175,6 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;worktreeのworking directoryを削除
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;今回の調査の発端の処理。&lt;code&gt;git worktree remove&lt;/code&gt;を実行すると、worktreeのworking directoryも削除されることがわかった。&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;削除対象のworktreeのメモリを解放
-&lt;code&gt;free_worktrees()&lt;/code&gt;では主に以下の&lt;code&gt;free_worktree()&lt;/code&gt;を呼んで、&lt;code&gt;worktrees&lt;/code&gt;のメモリを解放している。
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// https://github.com/git/git/blob/8d96f09e9245ddf80c1981476fcbac8c4bb4125f/worktree.c#L18
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;free_worktree&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; worktree &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;worktree)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;worktree)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;free&lt;/span&gt;(worktree&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;path);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;free&lt;/span&gt;(worktree&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;id);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;free&lt;/span&gt;(worktree&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;head_ref);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;free&lt;/span&gt;(worktree&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;lock_reason);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;free&lt;/span&gt;(worktree&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;prune_reason);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;free&lt;/span&gt;(worktree);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
 &lt;ul&gt;
