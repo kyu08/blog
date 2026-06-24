@@ -14,5 +14,5 @@ for file in "$TARGET"/*.{jpg,jpeg,png,JPG,JPEG,PNG}; do
 
   # NOTE: imagemagickのインストールが必要
   # -auto-orientをつけないと画像の向きが正しくならないことがある
-  magick "$file" -auto-orient -resize "1200x>" -define webp:target-size=204800 -format webp "${file%.*}.webp"
+  magick "$file" -auto-orient -quality 95 -format webp "${file%.*}.webp"
 done
