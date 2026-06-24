@@ -187,8 +187,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;└── refs
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt; directories, &lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt; files
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;たとえばworktreeの&lt;code&gt;.git&lt;/code&gt;ディレクトリの位置が格納されていたりする。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;たとえばworktreeの&lt;code&gt;.git&lt;/code&gt;ディレクトリの位置が格納されていたりする。
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;❯ cat .git/worktrees/myworktree/gitdir
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/Users/kyu08/code/fzf-make/myworktree/.git
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
@@ -206,7 +205,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;gitとかLinuxとかコンパイラはついつい魔法で動いていると思いこんでしまいがちだが、普通にコードを読めばわかることもあるので気になることがあったら読んでみると意外と発見があるかもしれない。(もちろん自分の知識が足りなすぎて読んでもわからない場合もありそうですが&amp;hellip;)&lt;/li&gt;
+&lt;li&gt;gitとかLinuxとかコンパイラはついつい魔法で動いていると思いこんでしまいがちだが、普通にコードを読めばわかることもあるので気になることがあったら読んでみると発見があるかもしれない。(もちろん自分の知識が足りなすぎて読んでもわからない場合もありそうですが&amp;hellip;)&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     </item>
