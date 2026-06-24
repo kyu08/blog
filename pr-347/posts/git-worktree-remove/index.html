@@ -395,22 +395,22 @@ if (!doNotTrack) {
 <li><code>.git/worktrees/&lt;id&gt;</code>を削除
 <ul>
 <li>ちなみに、<code>.git/worktrees/&lt;id&gt;</code>にはworktreeのメタ情報が入っている。
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ae81ff">❯ tree .git/worktrees/myworktree</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">.git/worktrees/myworktree</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">├── commondir</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">├── gitdir</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">├── HEAD</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">├── index</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">├── logs</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">│   └── HEAD</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">├── ORIG_HEAD</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">└── refs</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>❯ tree .git/worktrees/myworktree
+</span></span><span style="display:flex;"><span>.git/worktrees/myworktree
+</span></span><span style="display:flex;"><span>├── commondir
+</span></span><span style="display:flex;"><span>├── gitdir
+</span></span><span style="display:flex;"><span>├── HEAD
+</span></span><span style="display:flex;"><span>├── index
+</span></span><span style="display:flex;"><span>├── logs
+</span></span><span style="display:flex;"><span>│   └── HEAD
+</span></span><span style="display:flex;"><span>├── ORIG_HEAD
+</span></span><span style="display:flex;"><span>└── refs
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span> <span style="color:#ae81ff">directories, 6 files</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span> directories, <span style="color:#ae81ff">6</span> files
 </span></span></code></pre></div></li>
 <li>たとえばworktreeの<code>.git</code>ディレクトリの位置が格納されていたりする。
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ae81ff">❯ cat .git/worktrees/myworktree/gitdir</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">/Users/kyu08/code/fzf-make/myworktree/.git</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>❯ cat .git/worktrees/myworktree/gitdir
+</span></span><span style="display:flex;"><span>/Users/kyu08/code/fzf-make/myworktree/.git
 </span></span></code></pre></div></li>
 </ul>
 </li>
