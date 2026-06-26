@@ -21,7 +21,7 @@
     &lt;figcaption&gt;lazygitでworktreeを削除しようとすると表示されるモーダル&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;実際にlazygitでworktreeを削除してみればすぐにわかることではあるが、そういえばgitのソースコードを読んだことがなく、読んでみたかったのであえてソースコードから挙動を追ってみた。&lt;/p&gt;
-&lt;p&gt;（なお、タイトルが誤解を生みそうなので先に書いておきますが、lazygitでworktreeを削除したとしても&lt;code&gt;git worktree remove&lt;/code&gt;コマンドでworktreeを削除したとしても挙動に大きな差はなさそうでした。）&lt;/p&gt;
+&lt;p&gt;（なお、タイトルが誤解を生みそうなので先に書いておきますが、lazygitでworktreeを削除しても、&lt;code&gt;git worktree remove&lt;/code&gt;コマンドでworktreeを削除しても、挙動に大きな差はなさそうでした。）&lt;/p&gt;
 &lt;p&gt;なお、調査に使用したrepositoryとcommit hashは以下の通り。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
