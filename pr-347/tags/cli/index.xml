@@ -20,7 +20,7 @@
     &lt;img src=&#34;lazygit.webp&#34; alt=&#34;lazygit.webp&#34; loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;lazygitでworktreeを削除しようとすると表示されるモーダル&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;実際にやってみればすぐにわかることではあるが、そういえばgitのソースコードを読んだことがなく、読んでみたかったのであえてソースコードから挙動を追ってみた。&lt;/p&gt;
+&lt;p&gt;実際にlazygitでworktreeを削除してみればすぐにわかることではあるが、そういえばgitのソースコードを読んだことがなく、読んでみたかったのであえてソースコードから挙動を追ってみた。&lt;/p&gt;
 &lt;p&gt;（なお、タイトルが誤解を生みそうなので先に書いておきますが、lazygitでworktreeを削除したとしても&lt;code&gt;git worktree remove&lt;/code&gt;コマンドでworktreeを削除したとしても挙動に大きな差はなさそうでした。）&lt;/p&gt;
 &lt;p&gt;なお、調査に使用したrepositoryとcommit hashは以下の通り。&lt;/p&gt;
 &lt;table&gt;
@@ -49,11 +49,14 @@
     &lt;figcaption&gt;lazygitでworktreeを削除しようとすると表示されるモーダル(再掲)&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/li&gt;
 &lt;li&gt;モーダルに表示された文言でlazygitのソースコードを検索してみる。
-&lt;img src=&#34;lazygit-grep.webp&#34; alt=&#34;lazygit-grep.webp&#34; loading=&#34;lazy&#34; /&gt;
-検索結果の一番上のこれが該当文言な模様（他はtestファイルなので関係なさそう。）
+&lt;figure class=&#34;image-with-caption&#34;&gt;
+    &lt;img src=&#34;lazygit-grep.webp&#34; alt=&#34;lazygit-grep.webp&#34; loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;git grep -- &amp;#34;Are you sure you want to remove worktree&amp;#34;の結果&lt;/figcaption&gt;
+  &lt;/figure&gt;
+検索結果の一番上にあるこの箇所が探していた実装な模様（他はtestファイルなので関係なさそう。）
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pkg/i18n/english.go: RemoveWorktreePrompt: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Are you sure you want to remove worktree &amp;#39;{{.worktreeName}}&amp;#39;?&amp;#34;&lt;/span&gt;,
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;RemoveWorktreePrompt&lt;/code&gt;の参照場所を見るとここで使われていることがわかる。
+&lt;li&gt;&lt;code&gt;RemoveWorktreePrompt&lt;/code&gt;の参照場所を見ると下記で使われていることがわかる。
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// https://github.com/jesseduffield/lazygit/blob/16cf2ff1a9c18352c60d38655d9eb2c284dbec4b/pkg/gui/controllers/helpers/worktree_helper.go#L173
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;WorktreeHelper&lt;/span&gt;) &lt;span style=&#34;color:#a6e22e&#34;&gt;Remove&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;worktree&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;models&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Worktree&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;force&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;bool&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;error&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Tr&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;RemoveWorktreeTitle&lt;/span&gt;
@@ -84,7 +87,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	},
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;})
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;self.c.Git().Worktree.Delete()&lt;/code&gt; の実装は以下。&lt;code&gt;git worktree remove&lt;/code&gt; というコマンドを呼んでいそうなことがわかった。
+&lt;li&gt;&lt;code&gt;self.c.Git().Worktree.Delete()&lt;/code&gt; の実装は以下。&lt;code&gt;git worktree remove&lt;/code&gt; というコマンドを呼んでいることがわかった。
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// https://github.com/jesseduffield/lazygit/blob/16cf2ff1a9c18352c60d38655d9eb2c284dbec4b/pkg/commands/git_commands/worktree.go#L45-L49
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;WorktreeCommands&lt;/span&gt;) &lt;span style=&#34;color:#a6e22e&#34;&gt;Delete&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;worktreePath&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;force&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;bool&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;error&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;cmdArgs&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;NewGitCmd&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;worktree&amp;#34;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;Arg&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;remove&amp;#34;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;ArgIf&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;force&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-f&amp;#34;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;Arg&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;worktreePath&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;ToArgv&lt;/span&gt;()
@@ -96,14 +99,14 @@
 &lt;p&gt;ということでlazygitが&lt;code&gt;git worktree remove&lt;/code&gt;を呼んでいることがわかったので次はgit本体のソースコードを見てみる。&lt;/p&gt;
 &lt;h2 id=&#34;2-gitの挙動を追う&#34;&gt;2. gitの挙動を追う&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;gitのソースコードはGitHubに&lt;a href=&#34;https://github.com/git/git&#34; target=&#34;_blank&#34; &gt;ミラー&lt;/a&gt;があるので以下のコマンドでcloneできる。
+&lt;li&gt;gitのソースコードはGitHubに&lt;a href=&#34;https://github.com/git/git&#34; target=&#34;_blank&#34; &gt;ミラー&lt;/a&gt;があり、以下のコマンドでcloneできる。
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gh repo clone git/git
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git grep -- &amp;quot;worktree remove&amp;quot;&lt;/code&gt;したら104箇所も出てきてしまった。
 &lt;img src=&#34;git-grep1.webp&#34; alt=&#34;git-grep1.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
-&lt;li&gt;Cのファイルに絞ったところ&lt;code&gt;git worktree remove&lt;/code&gt;のhelpの文言のような部分が見つかったので該当ファイルを見てみる。
+&lt;li&gt;検索結果をCのファイルに絞ったところ&lt;code&gt;git worktree remove --help&lt;/code&gt;の文言のような部分が見つかったので該当ファイルを見てみる。
 &lt;img src=&#34;git-grep2.webp&#34; alt=&#34;git-grep2.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;builtin/worktree.c&lt;/code&gt;の関数一覧を眺めているとそれっぽい関数が見つかった。
+&lt;li&gt;&lt;code&gt;builtin/worktree.c&lt;/code&gt;の関数一覧を眺めているとかなりそれっぽい関数が見つかった。
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// https://github.com/git/git/blob/8d96f09e9245ddf80c1981476fcbac8c4bb4125f/builtin/worktree.c#L1378-L1431
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;remove_worktree&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; ac, &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;**&lt;/span&gt;av, &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;prefix,
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			   &lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; repository &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;repo UNUSED)
@@ -164,9 +167,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;ということで、おおよそ以下のような処理をしていることがわかった。&lt;/p&gt;
+&lt;p&gt;ということで、&lt;code&gt;git worktree remove&lt;/code&gt;がおおよそ以下のような処理をしていることがわかった。&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;引数に指定されたworktreeを取得する&lt;/li&gt;
+&lt;li&gt;worktree全体を取得し、さらにそこから引数に指定されたworktreeを検索する&lt;/li&gt;
 &lt;li&gt;worktreeのworking directoryを削除
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;今回の調査の発端の処理。&lt;code&gt;git worktree remove&lt;/code&gt;を実行すると、worktreeのworking directoryも削除されることがわかった。&lt;/strong&gt;&lt;/li&gt;
@@ -199,13 +202,15 @@
 &lt;li&gt;&lt;code&gt;git worktree remove&lt;/code&gt;を実行したときに何が行われるかがおおよそわかった。&lt;/li&gt;
 &lt;li&gt;git/gitが意外と読みやすかった。
 &lt;ul&gt;
-&lt;li&gt;歴史あるコードは略語が多くて読みづらいという偏見があったが、あまり略語が使われておらず読みやすかった。（もちろんごく一部を読んだだけなので他の部分についてはわからないが）&lt;/li&gt;
-&lt;li&gt;gitの挙動が気になったら今後も気軽にソースコードを読んでみようという気持ちになった。
-  &lt;!-- - 今回は最短で答えにたどり着きたい、というよりはgit/gitのコードを読んでみたかったので自力で追ってみましたが、目的によってはコードを読むよりもいい手段があるかもです。（それはそう） --&gt;
-&lt;/li&gt;
+&lt;li&gt;歴史あるコードは略語が多くて読みづらいという偏見があったが、あまり略語が使われておらず読みやすかった。（もちろんコードベースのごく一部を読んだだけなので他の部分についてはわからないが）&lt;/li&gt;
+&lt;li&gt;gitの挙動が気になったら今後も気軽にソースコードを読んでみようという気持ちになった。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;gitとかLinuxとかコンパイラはついつい魔法で動いていると思いこんでしまいがちだが、普通にコードを読めばわかることもあるので気になることがあったら読んでみると発見があるかもしれない。(もちろん自分の知識が足りなすぎて読んでもわからない場合もありそうですが&amp;hellip;)&lt;/li&gt;
+&lt;li&gt;gitやLinuxやコンパイラがついつい何か特別な魔法的なものによって動いていると思いこんでしまいがちだが、普通にコードを読めばわかることもあるので気になることがあったら読んでみると発見があるかもしれない。(もちろん自分の知識が足りなすぎて読んでもわからない場合もありそうですが&amp;hellip;)
+&lt;ul&gt;
+&lt;li&gt;引き続きKubernetesやLinuxを始めとしたCS関連の諸々など、身の回りの技術に対する解像度を上げていきたい。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     </item>

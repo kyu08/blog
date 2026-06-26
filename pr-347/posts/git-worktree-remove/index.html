@@ -225,7 +225,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/06/25</time>
       
-    <span class="post-reading-time">5 min read (2093 words)</span></div>
+    <span class="post-reading-time">5 min read (2254 words)</span></div>
 
   
     <span class="post-tags">
@@ -259,7 +259,7 @@ if (!doNotTrack) {
     <img src="lazygit.webp" alt="lazygit.webp" loading="lazy" />
     <figcaption>lazygitでworktreeを削除しようとすると表示されるモーダル</figcaption>
   </figure></p>
-<p>実際にやってみればすぐにわかることではあるが、そういえばgitのソースコードを読んだことがなく、読んでみたかったのであえてソースコードから挙動を追ってみた。</p>
+<p>実際にlazygitでworktreeを削除してみればすぐにわかることではあるが、そういえばgitのソースコードを読んだことがなく、読んでみたかったのであえてソースコードから挙動を追ってみた。</p>
 <p>（なお、タイトルが誤解を生みそうなので先に書いておきますが、lazygitでworktreeを削除したとしても<code>git worktree remove</code>コマンドでworktreeを削除したとしても挙動に大きな差はなさそうでした。）</p>
 <p>なお、調査に使用したrepositoryとcommit hashは以下の通り。</p>
 <table>
@@ -288,11 +288,14 @@ if (!doNotTrack) {
     <figcaption>lazygitでworktreeを削除しようとすると表示されるモーダル(再掲)</figcaption>
   </figure></li>
 <li>モーダルに表示された文言でlazygitのソースコードを検索してみる。
-<img src="lazygit-grep.webp" alt="lazygit-grep.webp" loading="lazy" />
-検索結果の一番上のこれが該当文言な模様（他はtestファイルなので関係なさそう。）
+<figure class="image-with-caption">
+    <img src="lazygit-grep.webp" alt="lazygit-grep.webp" loading="lazy" />
+    <figcaption>git grep -- &#34;Are you sure you want to remove worktree&#34;の結果</figcaption>
+  </figure>
+検索結果の一番上にあるこの箇所が探していた実装な模様（他はtestファイルなので関係なさそう。）
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>pkg/i18n/english.go: RemoveWorktreePrompt: <span style="color:#e6db74">&#34;Are you sure you want to remove worktree &#39;{{.worktreeName}}&#39;?&#34;</span>,
 </span></span></code></pre></div></li>
-<li><code>RemoveWorktreePrompt</code>の参照場所を見るとここで使われていることがわかる。
+<li><code>RemoveWorktreePrompt</code>の参照場所を見ると下記で使われていることがわかる。
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// https://github.com/jesseduffield/lazygit/blob/16cf2ff1a9c18352c60d38655d9eb2c284dbec4b/pkg/gui/controllers/helpers/worktree_helper.go#L173
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">self</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">WorktreeHelper</span>) <span style="color:#a6e22e">Remove</span>(<span style="color:#a6e22e">worktree</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">models</span>.<span style="color:#a6e22e">Worktree</span>, <span style="color:#a6e22e">force</span> <span style="color:#66d9ef">bool</span>) <span style="color:#66d9ef">error</span> {
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Tr</span>.<span style="color:#a6e22e">RemoveWorktreeTitle</span>
@@ -323,7 +326,7 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>	},
 </span></span><span style="display:flex;"><span>})
 </span></span></code></pre></div></li>
-<li><code>self.c.Git().Worktree.Delete()</code> の実装は以下。<code>git worktree remove</code> というコマンドを呼んでいそうなことがわかった。
+<li><code>self.c.Git().Worktree.Delete()</code> の実装は以下。<code>git worktree remove</code> というコマンドを呼んでいることがわかった。
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// https://github.com/jesseduffield/lazygit/blob/16cf2ff1a9c18352c60d38655d9eb2c284dbec4b/pkg/commands/git_commands/worktree.go#L45-L49
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">self</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">WorktreeCommands</span>) <span style="color:#a6e22e">Delete</span>(<span style="color:#a6e22e">worktreePath</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">force</span> <span style="color:#66d9ef">bool</span>) <span style="color:#66d9ef">error</span> {
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">cmdArgs</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">NewGitCmd</span>(<span style="color:#e6db74">&#34;worktree&#34;</span>).<span style="color:#a6e22e">Arg</span>(<span style="color:#e6db74">&#34;remove&#34;</span>).<span style="color:#a6e22e">ArgIf</span>(<span style="color:#a6e22e">force</span>, <span style="color:#e6db74">&#34;-f&#34;</span>).<span style="color:#a6e22e">Arg</span>(<span style="color:#a6e22e">worktreePath</span>).<span style="color:#a6e22e">ToArgv</span>()
@@ -335,14 +338,14 @@ if (!doNotTrack) {
 <p>ということでlazygitが<code>git worktree remove</code>を呼んでいることがわかったので次はgit本体のソースコードを見てみる。</p>
 <h2 id="2-gitの挙動を追う">2. gitの挙動を追う<a href="#2-gitの挙動を追う" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <ol>
-<li>gitのソースコードはGitHubに<a href="https://github.com/git/git" target="_blank" >ミラー</a>があるので以下のコマンドでcloneできる。
+<li>gitのソースコードはGitHubに<a href="https://github.com/git/git" target="_blank" >ミラー</a>があり、以下のコマンドでcloneできる。
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gh repo clone git/git
 </span></span></code></pre></div></li>
 <li><code>git grep -- &quot;worktree remove&quot;</code>したら104箇所も出てきてしまった。
 <img src="git-grep1.webp" alt="git-grep1.webp" loading="lazy" /></li>
-<li>Cのファイルに絞ったところ<code>git worktree remove</code>のhelpの文言のような部分が見つかったので該当ファイルを見てみる。
+<li>検索結果をCのファイルに絞ったところ<code>git worktree remove --help</code>の文言のような部分が見つかったので該当ファイルを見てみる。
 <img src="git-grep2.webp" alt="git-grep2.webp" loading="lazy" /></li>
-<li><code>builtin/worktree.c</code>の関数一覧を眺めているとそれっぽい関数が見つかった。
+<li><code>builtin/worktree.c</code>の関数一覧を眺めているとかなりそれっぽい関数が見つかった。
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// https://github.com/git/git/blob/8d96f09e9245ddf80c1981476fcbac8c4bb4125f/builtin/worktree.c#L1378-L1431
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">remove_worktree</span>(<span style="color:#66d9ef">int</span> ac, <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">**</span>av, <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>prefix,
 </span></span><span style="display:flex;"><span>			   <span style="color:#66d9ef">struct</span> repository <span style="color:#f92672">*</span>repo UNUSED)
@@ -403,9 +406,9 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div></li>
 </ol>
-<p>ということで、おおよそ以下のような処理をしていることがわかった。</p>
+<p>ということで、<code>git worktree remove</code>がおおよそ以下のような処理をしていることがわかった。</p>
 <ol>
-<li>引数に指定されたworktreeを取得する</li>
+<li>worktree全体を取得し、さらにそこから引数に指定されたworktreeを検索する</li>
 <li>worktreeのworking directoryを削除
 <ul>
 <li><strong>今回の調査の発端の処理。<code>git worktree remove</code>を実行すると、worktreeのworking directoryも削除されることがわかった。</strong></li>
@@ -438,13 +441,15 @@ if (!doNotTrack) {
 <li><code>git worktree remove</code>を実行したときに何が行われるかがおおよそわかった。</li>
 <li>git/gitが意外と読みやすかった。
 <ul>
-<li>歴史あるコードは略語が多くて読みづらいという偏見があったが、あまり略語が使われておらず読みやすかった。（もちろんごく一部を読んだだけなので他の部分についてはわからないが）</li>
-<li>gitの挙動が気になったら今後も気軽にソースコードを読んでみようという気持ちになった。
-  <!-- - 今回は最短で答えにたどり着きたい、というよりはgit/gitのコードを読んでみたかったので自力で追ってみましたが、目的によってはコードを読むよりもいい手段があるかもです。（それはそう） -->
-</li>
+<li>歴史あるコードは略語が多くて読みづらいという偏見があったが、あまり略語が使われておらず読みやすかった。（もちろんコードベースのごく一部を読んだだけなので他の部分についてはわからないが）</li>
+<li>gitの挙動が気になったら今後も気軽にソースコードを読んでみようという気持ちになった。</li>
 </ul>
 </li>
-<li>gitとかLinuxとかコンパイラはついつい魔法で動いていると思いこんでしまいがちだが、普通にコードを読めばわかることもあるので気になることがあったら読んでみると発見があるかもしれない。(もちろん自分の知識が足りなすぎて読んでもわからない場合もありそうですが&hellip;)</li>
+<li>gitやLinuxやコンパイラがついつい何か特別な魔法的なものによって動いていると思いこんでしまいがちだが、普通にコードを読めばわかることもあるので気になることがあったら読んでみると発見があるかもしれない。(もちろん自分の知識が足りなすぎて読んでもわからない場合もありそうですが&hellip;)
+<ul>
+<li>引き続きKubernetesやLinuxを始めとしたCS関連の諸々など、身の回りの技術に対する解像度を上げていきたい。</li>
+</ul>
+</li>
 </ul>
 
       </div></div>
