@@ -225,7 +225,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/06/27</time>
       
-    <span class="post-reading-time">5 min read (2288 words)</span></div>
+    <span class="post-reading-time">5 min read (2345 words)</span></div>
 
   
     <span class="post-tags">
@@ -263,7 +263,7 @@ if (!doNotTrack) {
   </figure></p>
 <p>実際にlazygitでworktreeを削除してみればすぐにわかることではあるが、そういえばgitのソースコードを読んだことがなく、読んでみたかったのであえてソースコードから挙動を追ってみた。</p>
 <p>（なお、タイトルが誤解を生みそうなので先に書いておきますが、lazygitでworktreeを削除しても、<code>git worktree remove</code>コマンドでworktreeを削除しても、挙動に大きな差はなさそうでした。）</p>
-<p>なお、調査に使用したrepositoryとcommit hashは以下の通り。</p>
+<p>なお、調査に使用したGitHub repositoryとcommit hashは以下の通り。</p>
 <table>
 <thead>
 <tr>
@@ -297,7 +297,7 @@ if (!doNotTrack) {
 検索結果の一番上にあるこの箇所が探していた実装な模様（他はtestファイルなので関係なさそう。）
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>pkg/i18n/english.go: RemoveWorktreePrompt: <span style="color:#e6db74">&#34;Are you sure you want to remove worktree &#39;{{.worktreeName}}&#39;?&#34;</span>,
 </span></span></code></pre></div></li>
-<li><code>RemoveWorktreePrompt</code>の参照場所を見ると下記で使われていることがわかる。
+<li><code>git grep</code>して見つかった<code>RemoveWorktreePrompt</code>の参照場所を見ると下記で使われていることがわかる。
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// https://github.com/jesseduffield/lazygit/blob/16cf2ff1a9c18352c60d38655d9eb2c284dbec4b/pkg/gui/controllers/helpers/worktree_helper.go#L173
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">self</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">WorktreeHelper</span>) <span style="color:#a6e22e">Remove</span>(<span style="color:#a6e22e">worktree</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">models</span>.<span style="color:#a6e22e">Worktree</span>, <span style="color:#a6e22e">force</span> <span style="color:#66d9ef">bool</span>) <span style="color:#66d9ef">error</span> {
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Tr</span>.<span style="color:#a6e22e">RemoveWorktreeTitle</span>
@@ -337,7 +337,7 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div></li>
 </ol>
-<p>ということでlazygitが<code>git worktree remove</code>を呼んでいることがわかったので次はgit本体のソースコードを見てみる。</p>
+<p>ここまでlazygitでworktreeを削除すると<code>git worktree remove</code>が呼ばれることがわかったので次はgit本体のソースコードを見てみる。</p>
 <h2 id="2-gitの挙動を追う">2. gitの挙動を追う<a href="#2-gitの挙動を追う" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <ol>
 <li>gitのソースコードはGitHubに<a href="https://github.com/git/git" target="_blank" >ミラー</a>があり、以下のコマンドでcloneできる。
@@ -345,9 +345,9 @@ if (!doNotTrack) {
 </span></span></code></pre></div></li>
 <li><code>git grep -- &quot;worktree remove&quot;</code>したら104箇所も出てきてしまった。
 <img src="git-grep1.webp" alt="git-grep1.webp" loading="lazy" /></li>
-<li>検索結果をCのファイルに絞ったところ<code>git worktree remove --help</code>の文言のような部分が見つかったので該当ファイルを見てみる。
+<li>検索結果をCのファイルに絞ったところ<code>git worktree remove --help</code>の文言のような部分が見つかったので当該ファイル(<code>builtin/worktree.c</code>)を見てみる。
 <img src="git-grep2.webp" alt="git-grep2.webp" loading="lazy" /></li>
-<li><code>builtin/worktree.c</code>の関数一覧を眺めているとかなりそれっぽい関数が見つかった。
+<li><code>builtin/worktree.c</code>の関数一覧を眺めてみるとかなりそれっぽい関数が見つかった。
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// https://github.com/git/git/blob/8d96f09e9245ddf80c1981476fcbac8c4bb4125f/builtin/worktree.c#L1378-L1431
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">remove_worktree</span>(<span style="color:#66d9ef">int</span> ac, <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">**</span>av, <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>prefix,
 </span></span><span style="display:flex;"><span>			   <span style="color:#66d9ef">struct</span> repository <span style="color:#f92672">*</span>repo UNUSED)
@@ -408,9 +408,9 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div></li>
 </ol>
-<p>ということで、<code>git worktree remove</code>がおおよそ以下のような処理をしていることがわかった。</p>
+<p>この関数の中身を読んだところ、<code>git worktree remove</code>がおおよそ以下のような処理をしていることがわかった。</p>
 <ol>
-<li>worktree全体を取得し、さらにそこから引数に指定されたworktreeを検索する</li>
+<li>worktree全体を取得し、さらにそこから引数に指定されたworktreeを取得する</li>
 <li>worktreeのworking directoryを削除する
 <ul>
 <li><strong>今回の調査の発端の処理。<code>git worktree remove</code>を実行すると、worktreeのworking directoryも削除されることがわかった。</strong></li>
@@ -448,7 +448,7 @@ if (!doNotTrack) {
 </ul>
 </li>
 <li>gitやLinuxやコンパイラがついつい何か特別な魔法的なものによって動いていると思いこんでしまいがちだが、普通にコードを読めばわかることもあるので気になることがあったら読んでみると発見があるかもしれない。(もちろん自分の知識が足りなすぎて読んでもわからない場合もありそうですが&hellip;)</li>
-<li>引き続きKubernetesやLinuxを始めとしたCS関連の諸々など、身の回りの技術に対する解像度を上げていきたい。</li>
+<li>引き続きLinuxを始めとしたCS関連の諸々やKubernetesなど、身の回りの技術に対する解像度を上げていきたい。</li>
 </ul>
 
       </div></div>
