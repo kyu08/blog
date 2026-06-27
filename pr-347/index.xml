@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Thu, 25 Jun 2026 00:07:40 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-347/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Jun 2026 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-347/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>lazygitでworktreeを削除すると何が起こるのか</title>
       <link>https://blog.kyu08.com/pr-347/posts/git-worktree-remove/</link>
-      <pubDate>Thu, 25 Jun 2026 00:07:40 +0900</pubDate>
+      <pubDate>Sat, 27 Jun 2026 00:00:00 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/pr-347/posts/git-worktree-remove/</guid>
       <description>lazygitでworktreeを削除したときにworktreeのworking directoryも一緒に削除されるのかどうかがふと気になっ</description>
@@ -87,7 +87,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	},
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;})
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;self.c.Git().Worktree.Delete()&lt;/code&gt; の実装は以下。&lt;code&gt;git worktree remove&lt;/code&gt; というコマンドを呼んでいることがわかった。
+&lt;li&gt;&lt;code&gt;self.c.Git().Worktree.Delete()&lt;/code&gt;の実装は以下。&lt;code&gt;git worktree remove&lt;/code&gt;というコマンドを呼んでいることがわかった。
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// https://github.com/jesseduffield/lazygit/blob/16cf2ff1a9c18352c60d38655d9eb2c284dbec4b/pkg/commands/git_commands/worktree.go#L45-L49
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;self&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;WorktreeCommands&lt;/span&gt;) &lt;span style=&#34;color:#a6e22e&#34;&gt;Delete&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;worktreePath&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;force&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;bool&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;error&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;cmdArgs&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;NewGitCmd&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;worktree&amp;#34;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;Arg&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;remove&amp;#34;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;ArgIf&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;force&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-f&amp;#34;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;Arg&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;worktreePath&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;ToArgv&lt;/span&gt;()
@@ -170,12 +170,12 @@
 &lt;p&gt;ということで、&lt;code&gt;git worktree remove&lt;/code&gt;がおおよそ以下のような処理をしていることがわかった。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;worktree全体を取得し、さらにそこから引数に指定されたworktreeを検索する&lt;/li&gt;
-&lt;li&gt;worktreeのworking directoryを削除
+&lt;li&gt;worktreeのworking directoryを削除する
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;今回の調査の発端の処理。&lt;code&gt;git worktree remove&lt;/code&gt;を実行すると、worktreeのworking directoryも削除されることがわかった。&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.git/worktrees/&amp;lt;id&amp;gt;&lt;/code&gt;を削除
+&lt;li&gt;&lt;code&gt;.git/worktrees/&amp;lt;id&amp;gt;&lt;/code&gt;を削除する
 &lt;ul&gt;
 &lt;li&gt;ちなみに、&lt;code&gt;.git/worktrees/&amp;lt;id&amp;gt;&lt;/code&gt;にはworktreeのメタ情報が入っている。
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;❯ tree .git/worktrees/myworktree
@@ -206,11 +206,8 @@
 &lt;li&gt;gitの挙動が気になったら今後も気軽にソースコードを読んでみようという気持ちになった。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;gitやLinuxやコンパイラがついつい何か特別な魔法的なものによって動いていると思いこんでしまいがちだが、普通にコードを読めばわかることもあるので気になることがあったら読んでみると発見があるかもしれない。(もちろん自分の知識が足りなすぎて読んでもわからない場合もありそうですが&amp;hellip;)
-&lt;ul&gt;
+&lt;li&gt;gitやLinuxやコンパイラがついつい何か特別な魔法的なものによって動いていると思いこんでしまいがちだが、普通にコードを読めばわかることもあるので気になることがあったら読んでみると発見があるかもしれない。(もちろん自分の知識が足りなすぎて読んでもわからない場合もありそうですが&amp;hellip;)&lt;/li&gt;
 &lt;li&gt;引き続きKubernetesやLinuxを始めとしたCS関連の諸々など、身の回りの技術に対する解像度を上げていきたい。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     </item>

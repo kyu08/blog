@@ -111,7 +111,7 @@ if (!doNotTrack) {
 <meta property="og:image:height" content="630">
 
 
-  <meta property="article:published_time" content="2026-06-25 00:07:40 &#43;0900 &#43;0900" />
+  <meta property="article:published_time" content="2026-06-27 00:00:00 &#43;0900 &#43;0900" />
 
 
 
@@ -223,9 +223,9 @@ if (!doNotTrack) {
   <h1 class="post-title">
     <a href="https://blog.kyu08.com/pr-347/posts/git-worktree-remove/">lazygitでworktreeを削除すると何が起こるのか</a>
   </h1>
-  <div class="post-meta"><time class="post-date">2026/06/25</time>
+  <div class="post-meta"><time class="post-date">2026/06/27</time>
       
-    <span class="post-reading-time">5 min read (2250 words)</span></div>
+    <span class="post-reading-time">5 min read (2288 words)</span></div>
 
   
     <span class="post-tags">
@@ -233,6 +233,8 @@ if (!doNotTrack) {
       #<a href="https://blog.kyu08.com/pr-347/tags/cli/">cli</a>&nbsp;
       
       #<a href="https://blog.kyu08.com/pr-347/tags/oss/">OSS</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-347/tags/git/">git</a>&nbsp;
       
     </span>
   
@@ -326,7 +328,7 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>	},
 </span></span><span style="display:flex;"><span>})
 </span></span></code></pre></div></li>
-<li><code>self.c.Git().Worktree.Delete()</code> の実装は以下。<code>git worktree remove</code> というコマンドを呼んでいることがわかった。
+<li><code>self.c.Git().Worktree.Delete()</code>の実装は以下。<code>git worktree remove</code>というコマンドを呼んでいることがわかった。
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// https://github.com/jesseduffield/lazygit/blob/16cf2ff1a9c18352c60d38655d9eb2c284dbec4b/pkg/commands/git_commands/worktree.go#L45-L49
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">self</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">WorktreeCommands</span>) <span style="color:#a6e22e">Delete</span>(<span style="color:#a6e22e">worktreePath</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">force</span> <span style="color:#66d9ef">bool</span>) <span style="color:#66d9ef">error</span> {
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">cmdArgs</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">NewGitCmd</span>(<span style="color:#e6db74">&#34;worktree&#34;</span>).<span style="color:#a6e22e">Arg</span>(<span style="color:#e6db74">&#34;remove&#34;</span>).<span style="color:#a6e22e">ArgIf</span>(<span style="color:#a6e22e">force</span>, <span style="color:#e6db74">&#34;-f&#34;</span>).<span style="color:#a6e22e">Arg</span>(<span style="color:#a6e22e">worktreePath</span>).<span style="color:#a6e22e">ToArgv</span>()
@@ -409,12 +411,12 @@ if (!doNotTrack) {
 <p>ということで、<code>git worktree remove</code>がおおよそ以下のような処理をしていることがわかった。</p>
 <ol>
 <li>worktree全体を取得し、さらにそこから引数に指定されたworktreeを検索する</li>
-<li>worktreeのworking directoryを削除
+<li>worktreeのworking directoryを削除する
 <ul>
 <li><strong>今回の調査の発端の処理。<code>git worktree remove</code>を実行すると、worktreeのworking directoryも削除されることがわかった。</strong></li>
 </ul>
 </li>
-<li><code>.git/worktrees/&lt;id&gt;</code>を削除
+<li><code>.git/worktrees/&lt;id&gt;</code>を削除する
 <ul>
 <li>ちなみに、<code>.git/worktrees/&lt;id&gt;</code>にはworktreeのメタ情報が入っている。
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>❯ tree .git/worktrees/myworktree
@@ -445,11 +447,8 @@ if (!doNotTrack) {
 <li>gitの挙動が気になったら今後も気軽にソースコードを読んでみようという気持ちになった。</li>
 </ul>
 </li>
-<li>gitやLinuxやコンパイラがついつい何か特別な魔法的なものによって動いていると思いこんでしまいがちだが、普通にコードを読めばわかることもあるので気になることがあったら読んでみると発見があるかもしれない。(もちろん自分の知識が足りなすぎて読んでもわからない場合もありそうですが&hellip;)
-<ul>
+<li>gitやLinuxやコンパイラがついつい何か特別な魔法的なものによって動いていると思いこんでしまいがちだが、普通にコードを読めばわかることもあるので気になることがあったら読んでみると発見があるかもしれない。(もちろん自分の知識が足りなすぎて読んでもわからない場合もありそうですが&hellip;)</li>
 <li>引き続きKubernetesやLinuxを始めとしたCS関連の諸々など、身の回りの技術に対する解像度を上げていきたい。</li>
-</ul>
-</li>
 </ul>
 
       </div></div>
