@@ -1,5 +1,5 @@
 ---
-title: "lazygitでworktreeを削除すると何が起こるのか"
+title: "lazygitでworktreeを削除すると何が起こるのか調べてみた"
 tags:
   - "cli"
   - "OSS"
