@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C on blog.kyu08.com</title>
+    <link>https://blog.kyu08.com/pr-351/tags/c/</link>
+    <description>Recent content in C on blog.kyu08.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>blog.kyu08.com</copyright>
+    <lastBuildDate>Sun, 12 Apr 2026 17:48:08 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-351/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>『プログラミング言語C 第2版』を読んだ</title>
+      <link>https://blog.kyu08.com/pr-351/posts/k_and_r/</link>
+      <pubDate>Sun, 12 Apr 2026 17:48:08 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-351/posts/k_and_r/</guid>
+      <description>Operating Systems: Three Easy Pieces(以下、OSTEP)に取り組むにあたって、C言語の知識があるとスムーズそうだったので読んだ。 プログラミング言語C - 共立出</description>
+      <content>&lt;p&gt;&lt;img src=&#34;./book.webp&#34; alt=&#34;book&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://pages.cs.wisc.edu/~remzi/OSTEP/&#34; target=&#34;_blank&#34; &gt;Operating Systems: Three Easy Pieces&lt;/a&gt;(以下、&lt;a href=&#34;https://pages.cs.wisc.edu/~remzi/OSTEP/&#34; target=&#34;_blank&#34; &gt;OSTEP&lt;/a&gt;)に取り組むにあたって、C言語の知識があるとスムーズそうだったので読んだ。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.kyoritsu-pub.co.jp/book/b10011596.html&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://www.kyoritsu-pub.co.jp/book/b10011596.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://hondana-image.s3.amazonaws.com/book/image/10011596/fd17bee4-f762-49a3-b1ee-d888d2ac90ca.jpg&#34; alt=&#34;プログラミング言語C - 共立出版&#34; loading=&#34;lazy&#34;&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;プログラミング言語C - 共立出版&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;Brian W.カーニハン 著&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.kyoritsu-pub.co.jp/book/b10011596.html&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;Cに関してはCS50で基本的な文法を学んだ程度であまり体系的には学んでいなかったので、CS50の内容を補完するような感じで読んだ。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://blog.kyu08.com/posts/cs50-jp/&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://blog.kyu08.com/posts/cs50-jp/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://blog.kyu08.com/posts/cs50-jp/cover.png&#34; alt=&#34;CS50.jpでCSに入門した&#34; loading=&#34;lazy&#34;&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;CS50.jpでCSに入門した&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;CS50.jpの気になっていたトピックを学んでみたので振り返っておく。 CS50.jpとは CS50.jpの説明はサイトから引用する。 このページ&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://blog.kyu08.com/posts/cs50-jp/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;どんな本か&#34;&gt;どんな本か&lt;/h2&gt;
+&lt;p&gt;C言語の開発者であるB.W.カーニハンとD.M.リッチーによるC言語の解説書。&lt;/p&gt;
+&lt;p&gt;1989/06/15発売と、約40年前の本だが入門書としての評価が未だに高いようだったので買ってみた。(結果的にも普通に勉強になったので良かった)&lt;/p&gt;
+&lt;p&gt;二人のイニシャルをとってK&amp;amp;Rと呼ばれることもあるらしい。&lt;/p&gt;
+&lt;p&gt;ちなみに、&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1.1 Getting Started に、例として掲載されている&amp;quot;hello, world&amp;quot;プログラムは、あらゆる「プログラミングの最初の例題」として定番となった。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9EC&#34; target=&#34;_blank&#34; &gt;https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9EC&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;とあるように、&lt;code&gt;hello, world&lt;/code&gt;の生みの親としても有名らしい。（！）&lt;/p&gt;
+&lt;p&gt;各章に演習問題が豊富に用意されているので手を動かしながら学びやすかった。&lt;/p&gt;
+&lt;p&gt;また、付録を除くと231ページと比較的コンパクトなので、Cの全体像をざっと把握するのにちょうどいいボリューム感だった。&lt;/p&gt;
+&lt;h2 id=&#34;読み方&#34;&gt;読み方&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;1,2章は演習問題をやりつつ読み、他の章は演習問題をスキップして本文だけ読んだ。
+&lt;ul&gt;
+&lt;li&gt;Cを完全理解したり人に教えられるレベルになりたい、というよりは&lt;a href=&#34;https://pages.cs.wisc.edu/~remzi/OSTEP/&#34; target=&#34;_blank&#34; &gt;OSTEP&lt;/a&gt;での実装がスムーズになれば嬉しいなーくらいの温度感だったのと、手を動かすのは&lt;a href=&#34;https://pages.cs.wisc.edu/~remzi/OSTEP/&#34; target=&#34;_blank&#34; &gt;OSTEP&lt;/a&gt;でできそうだったので知らない文法や仕組みを軽く頭に入れておくくらいの感じで読んだ。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#include&lt;/code&gt;なしでboolが使えると多少楽そうだったのでC23で動かした。
+&lt;ul&gt;
+&lt;li&gt;演習問題を解いた実装はこちら。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kyu08/sunaba/tree/d15fb4fa20d3e478cc0f5ac6f9e89e7d0c668b21/c/k_and_r&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://github.com/kyu08/sunaba/tree/d15fb4fa20d3e478cc0f5ac6f9e89e7d0c668b21/c/k_and_r&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/903bd6d6dd437fe6ffdcd00ef3a9bd8fa1acb8191443eed7373f3f2a5d7c9de1/kyu08/sunaba&#34; alt=&#34;sunaba/c/k_and_r at d15fb4fa20d3e478cc0f5ac6f9e89e7d0c668b21 · kyu08/sunaba&#34; loading=&#34;lazy&#34;&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;sunaba/c/k_and_r at d15fb4fa20d3e478cc0f5ac6f9e89e7d0c668b21 · kyu08/sunaba&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;Personal sandbox. Contribute to kyu08/sunaba development by creating an account on GitHub.&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kyu08/sunaba/tree/d15fb4fa20d3e478cc0f5ac6f9e89e7d0c668b21/c/k_and_r&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;学び&#34;&gt;学び&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;変数、関数の可視性の制御方法(&lt;code&gt;static&lt;/code&gt;、&lt;code&gt;extern&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#include&lt;/code&gt;の機能(&lt;code&gt;&amp;quot;foo.h&amp;quot;&lt;/code&gt;と&lt;code&gt;&amp;lt;foo.h&amp;gt;&lt;/code&gt;の違いなど)&lt;/li&gt;
+&lt;li&gt;aが配列のとき&lt;code&gt;a[i]&lt;/code&gt;と&lt;code&gt;*(a + i)&lt;/code&gt;は同じ&lt;/li&gt;
+&lt;li&gt;共用体
+&lt;ul&gt;
+&lt;li&gt;結構使うのが難しそうなので相当パフォーマンスを重視したいときにしか使わないかも&amp;hellip;?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;関数ポインタ&lt;/li&gt;
+&lt;li&gt;マクロの基礎&lt;/li&gt;
+&lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;(すべての演習問題をやったわけではないのもあって)1週間ちょっとでCについて一通り簡単に学べて、ちょうどいいボリューム感だった。&lt;/p&gt;
+&lt;p&gt;ということで&lt;a href=&#34;https://pages.cs.wisc.edu/~remzi/OSTEP/&#34; target=&#34;_blank&#34; &gt;OSTEP&lt;/a&gt;に取り組む準備ができたので次は実際に着手していこうと思う。&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
