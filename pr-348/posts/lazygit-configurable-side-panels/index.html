@@ -2,11 +2,11 @@
 <html lang="ja">
 <head>
   
-    <title>Lazygitのサイドパネルの配置が変更できるようになった :: blog.kyu08.com</title>
+    <title>Lazygit@v0.63.0でサイドパネルの配置が変更できるようになった :: blog.kyu08.com</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="日本時間の2026/07/04にリリースされたv0.63.0から、Lazygitのサイドパネルの配置が設定可能になった。 この機能は現在のLa" />
+<meta name="description" content="日本時間の2026/07/04にリリースされたv0.63.0から、Lazygitのサイドパネルの配置が設定可能になった。 この機能は現在の主要" />
 <meta name="keywords" content="" />
 
   <meta name="robots" content="noodp" />
@@ -91,8 +91,8 @@ if (!doNotTrack) {
 
 <meta property="og:locale" content="ja" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Lazygitのサイドパネルの配置が変更できるようになった">
-<meta property="og:description" content="日本時間の2026/07/04にリリースされたv0.63.0から、Lazygitのサイドパネルの配置が設定可能になった。 この機能は現在のLa" />
+<meta property="og:title" content="Lazygit@v0.63.0でサイドパネルの配置が変更できるようになった">
+<meta property="og:description" content="日本時間の2026/07/04にリリースされたv0.63.0から、Lazygitのサイドパネルの配置が設定可能になった。 この機能は現在の主要" />
 <meta property="og:url" content="https://blog.kyu08.com/pr-348/posts/lazygit-configurable-side-panels/" />
 <meta property="og:site_name" content="blog.kyu08.com" />
 
@@ -105,7 +105,7 @@ if (!doNotTrack) {
 
   <meta property="og:image" content="https://blog.kyu08.com/pr-348/posts/lazygit-configurable-side-panels/cover.png">
   <meta name="twitter:image" content="https://blog.kyu08.com/pr-348/posts/lazygit-configurable-side-panels/cover.png">
-  <meta name="twitter:image:alt" content="Lazygitのサイドパネルの配置が変更できるようになった">
+  <meta name="twitter:image:alt" content="Lazygit@v0.63.0でサイドパネルの配置が変更できるようになった">
 
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -221,11 +221,11 @@ if (!doNotTrack) {
     
 <article class="post">
   <h1 class="post-title">
-    <a href="https://blog.kyu08.com/pr-348/posts/lazygit-configurable-side-panels/">Lazygitのサイドパネルの配置が変更できるようになった</a>
+    <a href="https://blog.kyu08.com/pr-348/posts/lazygit-configurable-side-panels/"><a href="mailto:Lazygit@v0.63.0" >Lazygit@v0.63.0</a>でサイドパネルの配置が変更できるようになった</a>
   </h1>
   <div class="post-meta"><time class="post-date">2026/07/11</time>
       
-    <span class="post-reading-time">2 min read (596 words)</span></div>
+    <span class="post-reading-time">2 min read (688 words)</span></div>
 
   
     <span class="post-tags">
@@ -241,7 +241,7 @@ if (!doNotTrack) {
   
   <img src="/pr-348/posts/lazygit-configurable-side-panels/cover.png"
     class="post-cover"
-    alt="Lazygitのサイドパネルの配置が変更できるようになった"
+    alt="Lazygit@v0.63.0でサイドパネルの配置が変更できるようになった"
     title="Cover Image" />
 
 
@@ -249,7 +249,7 @@ if (!doNotTrack) {
     <nav id="TableOfContents">
   <ul>
     <li><a href="#変更点">変更点</a></li>
-    <li><a href="#こんな感じにしてみた">こんな感じにしてみた</a></li>
+    <li><a href="#設定例">設定例</a></li>
     <li><a href="#まとめ">まとめ</a></li>
   </ul>
 </nav>
@@ -257,7 +257,7 @@ if (!doNotTrack) {
 
   <div class="post-content"><div>
         <p>日本時間の2026/07/04にリリースされた<a href="https://github.com/jesseduffield/lazygit/releases/tag/v0.63.0" target="_blank" >v0.63.0</a>から、Lazygitのサイドパネルの配置が設定可能になった。</p>
-<p>この機能は現在のLazygitメンテナである<a href="https://github.com/stefanhaller" target="_blank" >@stefanhaller</a>によって以下のPRで実装された。</p>
+<p>この機能は現在の主要なLazygitメンテナである<a href="https://github.com/stefanhaller" target="_blank" >@stefanhaller</a><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>によって以下のPRで実装された。</p>
 <p><div class="blogcard" data-url="https://github.com/jesseduffield/lazygit/pull/5702" data-auto-fetch="false">
   <a href="https://github.com/jesseduffield/lazygit/pull/5702" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
       <img src="https://opengraph.githubassets.com/84af24c10a3e11d0b50f9f60bb8f04cb08d0a0cbc107b7862f904ce622448f8f/jesseduffield/lazygit/pull/5702" alt="Make the side panels configurable by stefanhaller · Pull Request #5702 · jesseduffield/lazygit" loading="lazy">
@@ -293,24 +293,28 @@ Reorder t...</div><div class="blogcard-url">https://github.com/jesseduffield/laz
 <ul>
 <li>パネルの並び替え</li>
 <li>不要なパネルの非表示</li>
-<li>どのパネルがどのタブを表示するかを自由に設定できる</li>
+<li>どのパネルをどのタブに表示するかを自由に設定できる</li>
 <li>タブをトップレベルパネルに昇格させる(e.g. WorktreesをFilesパネルから引き出して常に表示する)</li>
 </ul>
 <p>といったことができるようになった。</p>
-<h2 id="こんな感じにしてみた">こんな感じにしてみた<a href="#こんな感じにしてみた" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p>いくつか設定を試した結果、以下のような感じに落ち着いた。</p>
+<h2 id="設定例">設定例<a href="#設定例" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>変更前はこんな感じで、</p>
 <p><figure class="image-with-caption">
-    <img src="./after.webp" alt="after.webep" loading="lazy" />
-    <figcaption>After</figcaption>
-  </figure></p>
-<p>変更前(デフォルト)はこんな感じで、</p>
-<p><figure class="image-with-caption">
-    <img src="./before.webp" alt="before.webep" loading="lazy" />
+    <img src="./before.webp" alt="before.webp" loading="lazy" />
     <figcaption>Before</figcaption>
   </figure></p>
-<p>変更点は以下。</p>
+<p>いくつか設定を試した結果、以下のような感じに落ち着いた。</p>
 <p><figure class="image-with-caption">
-    <img src="./diff.webp" alt="diff.webep" loading="lazy" />
+    <img src="./after.webp" alt="after.webp" loading="lazy" />
+    <figcaption>After</figcaption>
+  </figure></p>
+<p>変更点は以下。</p>
+<ol>
+<li>Statusを非表示に</li>
+<li>StashタブをCommitと同じパネルに移動</li>
+</ol>
+<p><figure class="image-with-caption">
+    <img src="./diff.webp" alt="diff.webp" loading="lazy" />
     <figcaption>差分</figcaption>
   </figure></p>
 <p>というわけで表示領域が若干広くなった。(こう見ると割と地味ではあるw)</p>
@@ -329,6 +333,14 @@ Reorder t...</div><div class="blogcard-url">https://github.com/jesseduffield/laz
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e"># - [stash]</span>
 </span></span></code></pre></div><h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>サイドパネルを自分好みにカスタマイズできると地味に捗るのでオススメです。</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>2025/07に<a href="https://github.com/jesseduffield" target="_blank" >@jesseduffield</a>がメンテナンスの主導権を<a href="https://github.com/stefanhaller" target="_blank" >@stefanhaller</a>に譲る、という主旨のことが投稿がされた。 <a href="https://github.com/jesseduffield/lazygit/issues/4655#issue-3164810345" target="_blank" >https://github.com/jesseduffield/lazygit/issues/4655#issue-3164810345</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 
       </div></div>
 
@@ -374,7 +386,7 @@ Reorder t...</div><div class="blogcard-url">https://github.com/jesseduffield/laz
       <nav id="TableOfContents">
   <ul>
     <li><a href="#変更点">変更点</a></li>
-    <li><a href="#こんな感じにしてみた">こんな感じにしてみた</a></li>
+    <li><a href="#設定例">設定例</a></li>
     <li><a href="#まとめ">まとめ</a></li>
   </ul>
 </nav>
