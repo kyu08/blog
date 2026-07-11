@@ -5,8 +5,8 @@ on:
     types: [opened, synchronize, reopened]
 
 concurrency:
-  group: preview-${{ github.event.pull_request.number }}
-  cancel-in-progress: true
+  group: github-pages
+  cancel-in-progress: false
 
 jobs:
   deploy-preview:

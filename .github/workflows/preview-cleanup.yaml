@@ -4,6 +4,10 @@ on:
   pull_request:
     types: [closed]
 
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
 jobs:
   cleanup-preview:
     runs-on: ubuntu-latest
