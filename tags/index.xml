@@ -7,7 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sat, 27 Jun 2026 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Jul 2026 17:32:54 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lazygit</title>
+      <link>https://blog.kyu08.com/tags/lazygit/</link>
+      <pubDate>Sat, 11 Jul 2026 17:32:54 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/lazygit/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>OSS</title>
+      <link>https://blog.kyu08.com/tags/oss/</link>
+      <pubDate>Sat, 11 Jul 2026 17:32:54 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/oss/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>tui</title>
+      <link>https://blog.kyu08.com/tags/tui/</link>
+      <pubDate>Sat, 11 Jul 2026 17:32:54 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/tui/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
     <item>
       <title>cli</title>
       <link>https://blog.kyu08.com/tags/cli/</link>
@@ -24,16 +54,6 @@
       <pubDate>Sat, 27 Jun 2026 00:00:00 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/tags/git/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>OSS</title>
-      <link>https://blog.kyu08.com/tags/oss/</link>
-      <pubDate>Sat, 27 Jun 2026 00:00:00 +0900</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/oss/</guid>
       <description></description>
       <content></content>
     </item>
@@ -104,16 +124,6 @@
       <pubDate>Sun, 15 Feb 2026 00:00:08 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/tags/neovim/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>tui</title>
-      <link>https://blog.kyu08.com/tags/tui/</link>
-      <pubDate>Sun, 15 Feb 2026 00:00:08 +0900</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/tui/</guid>
       <description></description>
       <content></content>
     </item>

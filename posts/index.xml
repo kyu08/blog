@@ -7,7 +7,102 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sat, 27 Jun 2026 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Jul 2026 17:32:54 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lazygit@v0.63.0でサイドパネルの配置が変更できるようになった</title>
+      <link>https://blog.kyu08.com/posts/lazygit-configurable-side-panels/</link>
+      <pubDate>Sat, 11 Jul 2026 17:32:54 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/posts/lazygit-configurable-side-panels/</guid>
+      <description>日本時間の2026/07/04にリリースされたv0.63.0から、Lazygitのサイドパネルの配置が設定可能になった。 この機能は現在の主要</description>
+      <content>&lt;p&gt;日本時間の2026/07/04にリリースされた&lt;a href=&#34;https://github.com/jesseduffield/lazygit/releases/tag/v0.63.0&#34; target=&#34;_blank&#34; &gt;v0.63.0&lt;/a&gt;から、Lazygitのサイドパネルの配置が設定可能になった。&lt;/p&gt;
+&lt;p&gt;この機能は現在の主要なLazygitメンテナである&lt;a href=&#34;https://github.com/stefanhaller&#34; target=&#34;_blank&#34; &gt;@stefanhaller&lt;/a&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;によって以下のPRで実装された。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/jesseduffield/lazygit/pull/5702&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://github.com/jesseduffield/lazygit/pull/5702&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://opengraph.githubassets.com/84af24c10a3e11d0b50f9f60bb8f04cb08d0a0cbc107b7862f904ce622448f8f/jesseduffield/lazygit/pull/5702&#34; alt=&#34;Make the side panels configurable by stefanhaller · Pull Request #5702 · jesseduffield/lazygit&#34; loading=&#34;lazy&#34;&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;Make the side panels configurable by stefanhaller · Pull Request #5702 · jesseduffield/lazygit&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;Lazygit&amp;amp;#39;s left-hand side panels — and the tabs within them — have always had a fixed arrangement. This adds a gui.sidePanels option so you can lay them out the way you want.
+You can:
+
+Reorder t...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/jesseduffield/lazygit/pull/5702&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;変更点&#34;&gt;変更点&lt;/h2&gt;
+&lt;p&gt;以下のような設定項目が追加され、自由にサイドパネルの配置を変更できるようになった。(以下はdefaultの設定)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;gui&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;sidePanels&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - [&lt;span style=&#34;color:#ae81ff&#34;&gt;status]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - [&lt;span style=&#34;color:#ae81ff&#34;&gt;files, worktrees, submodules]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - [&lt;span style=&#34;color:#ae81ff&#34;&gt;branches, remotes, tags]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - [&lt;span style=&#34;color:#ae81ff&#34;&gt;commits, reflog]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - [&lt;span style=&#34;color:#ae81ff&#34;&gt;stash]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;PR Bodyに&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reorder the panels&lt;/li&gt;
+&lt;li&gt;Hide panels you don&amp;rsquo;t use&lt;/li&gt;
+&lt;li&gt;Regroup which panels share a slot as tabs&lt;/li&gt;
+&lt;li&gt;Promote a tab to its own top-level panel — e.g. pull Worktrees out of the Files panel so it&amp;rsquo;s always visible&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;とあるように、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;パネルの並び替え&lt;/li&gt;
+&lt;li&gt;不要なパネルの非表示&lt;/li&gt;
+&lt;li&gt;どのパネルをどのタブにグルーピングするか&lt;/li&gt;
+&lt;li&gt;タブをトップレベルパネルに昇格させる(e.g. WorktreesをFilesパネルから引き出して常に表示する)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;といったことができるようになった。&lt;/p&gt;
+&lt;h2 id=&#34;設定例&#34;&gt;設定例&lt;/h2&gt;
+&lt;p&gt;変更前はこんな感じで、&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&#34;image-with-caption&#34;&gt;
+    &lt;img src=&#34;./before.webp&#34; alt=&#34;before.webp&#34; loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Before&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;いくつか設定を試した結果、以下のような感じに落ち着いた。&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&#34;image-with-caption&#34;&gt;
+    &lt;img src=&#34;./after.webp&#34; alt=&#34;after.webp&#34; loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;After&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;主な変更点は以下。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Statusを非表示に&lt;/li&gt;
+&lt;li&gt;StashタブをCommitsと同じパネルに移動&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;figure class=&#34;image-with-caption&#34;&gt;
+    &lt;img src=&#34;./diff.webp&#34; alt=&#34;diff.webp&#34; loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;差分&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;というわけで表示領域が若干広くなった。(こう見ると割と地味ではある)&lt;/p&gt;
+&lt;p&gt;設定は以下。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;gui&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;sidePanels&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - [&lt;span style=&#34;color:#ae81ff&#34;&gt;files, worktrees, submodules]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - [&lt;span style=&#34;color:#ae81ff&#34;&gt;branches, tags, remotes]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - [&lt;span style=&#34;color:#ae81ff&#34;&gt;commits, stash, reflog]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# 以下はdefault設定&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# - [status]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# - [files, worktrees, submodules]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# - [branches, remotes, tags]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# - [commits, reflog]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# - [stash]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;サイドパネルを自分好みにカスタマイズできると地味に捗るのでオススメです。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;2025/07に&lt;a href=&#34;https://github.com/jesseduffield&#34; target=&#34;_blank&#34; &gt;@jesseduffield&lt;/a&gt;がメンテナンスの主導権を&lt;a href=&#34;https://github.com/stefanhaller&#34; target=&#34;_blank&#34; &gt;@stefanhaller&lt;/a&gt;に譲る、という主旨のことが投稿された。 &lt;a href=&#34;https://github.com/jesseduffield/lazygit/issues/4655#issue-3164810345&#34; target=&#34;_blank&#34; &gt;https://github.com/jesseduffield/lazygit/issues/4655#issue-3164810345&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
     <item>
       <title>lazygitでworktreeを削除すると何が起こるのか</title>
       <link>https://blog.kyu08.com/posts/git-worktree-remove/</link>
