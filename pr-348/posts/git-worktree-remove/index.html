@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+    <title>lazygitでworktreeを削除すると何が起こるのか :: blog.kyu08.com</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="lazygitでworktreeを削除したときにworktreeのworking directoryも一緒に削除されるのかどうかがふと気になっ" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://blog.kyu08.com/pr-348/posts/git-worktree-remove/" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BDQ408J45J', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-348/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-348/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-348/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-348/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-348/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-348/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-348/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-348/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-348/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-348/css/post.min.f049fef13af1dfd5ea526cc59ea5a3fc7be11a05911ca7198c5bb9225250119c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-348/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-348/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-348/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-348/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+<link rel="stylesheet" href="https://blog.kyu08.com/pr-348/style.css">
+
+
+<link rel="shortcut icon" href="https://blog.kyu08.com/pr-348/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/pr-348/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="kyu08_" />
+
+
+
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="lazygitでworktreeを削除すると何が起こるのか">
+<meta property="og:description" content="lazygitでworktreeを削除したときにworktreeのworking directoryも一緒に削除されるのかどうかがふと気になっ" />
+<meta property="og:url" content="https://blog.kyu08.com/pr-348/posts/git-worktree-remove/" />
+<meta property="og:site_name" content="blog.kyu08.com" />
+
+
+  
+  
+    
+  
+
+
+  <meta property="og:image" content="https://blog.kyu08.com/pr-348/posts/git-worktree-remove/cover.png">
+  <meta name="twitter:image" content="https://blog.kyu08.com/pr-348/posts/git-worktree-remove/cover.png">
+  <meta name="twitter:image:alt" content="lazygitでworktreeを削除すると何が起こるのか">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+  <meta property="article:published_time" content="2026-06-27 00:00:00 &#43;0900 &#43;0900" />
+
+
+
+
+
+
+
+
+
+<link rel="author" href="http://www.hatena.ne.jp/kyu08/" />
+
+
+<script src="https://blog.kyu08.com/pr-348/docswell-loader.js"></script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BDQ408J45J');
+</script>
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    blog.kyu08.com
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/pr-348/tags/diary/">_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-348/about">about</a></li>
+        
+      
+        
+          <li><a href="/pr-348/index.xml">rss</a></li>
+        
+      
+        
+          <li><a href="/pr-348/tags">tags</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/pr-348/tags/diary/" >_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-348/about" >about</a></li>
+        
+      
+        
+          <li><a href="/pr-348/index.xml" >rss</a></li>
+        
+      
+        
+          <li><a href="/pr-348/tags" >tags</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://blog.kyu08.com/pr-348/posts/git-worktree-remove/">lazygitでworktreeを削除すると何が起こるのか</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2026/06/27</time>
+      
+    <span class="post-reading-time">5 min read (2342 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://blog.kyu08.com/pr-348/tags/cli/">cli</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-348/tags/oss/">OSS</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-348/tags/git/">git</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="/pr-348/posts/git-worktree-remove/cover.png"
+    class="post-cover"
+    alt="lazygitでworktreeを削除すると何が起こるのか"
+    title="Cover Image" />
+
+
+  
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-lazygitの挙動を追う">1. lazygitの挙動を追う</a></li>
+    <li><a href="#2-gitの挙動を追う">2. gitの挙動を追う</a></li>
+    <li><a href="#感想">感想</a></li>
+  </ul>
+</nav>
+  
+
+  <div class="post-content"><div>
+        <p>lazygitでworktreeを削除したときにworktreeのworking directoryも一緒に削除されるのかどうかがふと気になった。（普段はworktreeのworking directoryをrepository内に配置し、かつgit ignoreする運用にしているのでworktree削除後にworking directoryが残っているのかどうかを意識していない）</p>
+<p><figure class="image-with-caption">
+    <img src="lazygit.webp" alt="lazygit.webp" loading="lazy" />
+    <figcaption>lazygitでworktreeを削除しようとすると表示されるモーダル</figcaption>
+  </figure></p>
+<p>実際にlazygitでworktreeを削除してみればすぐにわかることではあるが、そういえばgitのソースコードを読んだことがなく、読んでみたかったのであえてソースコードから挙動を追ってみた。</p>
+<p>（なおタイトルが誤解を生みそうなので先に書いておきますが、lazygitでworktreeを削除しても<code>git worktree remove</code>コマンドでworktreeを削除しても挙動に大きな差はなさそうでした。）</p>
+<p>なお、調査に使用したGitHub repositoryとcommit hashは以下の通り。</p>
+<table>
+<thead>
+<tr>
+<th>repository</th>
+<th>commit hash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>jesseduffield/lazygit</code></td>
+<td><code>16cf2ff1a9c18352c60d38655d9eb2c284dbec4b</code></td>
+</tr>
+<tr>
+<td><code>git/git</code></td>
+<td><code>8d96f09e9245ddf80c1981476fcbac8c4bb4125f</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-lazygitの挙動を追う">1. lazygitの挙動を追う<a href="#1-lazygitの挙動を追う" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ol>
+<li>lazygitで削除したいworktreeにカーソルを合わせて<code>d</code>キーを押すとこのような確認モーダルが表示される。
+<figure class="image-with-caption">
+    <img src="lazygit.webp" alt="lazygit.webp" loading="lazy" />
+    <figcaption>lazygitでworktreeを削除しようとすると表示されるモーダル(再掲)</figcaption>
+  </figure></li>
+<li>モーダルに表示された文言でlazygitのソースコードを検索してみる。
+<figure class="image-with-caption">
+    <img src="lazygit-grep.webp" alt="lazygit-grep.webp" loading="lazy" />
+    <figcaption>git grep -- &#34;Are you sure you want to remove worktree&#34;の結果</figcaption>
+  </figure>
+検索結果の一番上にあるこの箇所が探していた実装な模様（他はtestファイルなので関係なさそう。）
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>pkg/i18n/english.go: RemoveWorktreePrompt: <span style="color:#e6db74">&#34;Are you sure you want to remove worktree &#39;{{.worktreeName}}&#39;?&#34;</span>,
+</span></span></code></pre></div></li>
+<li><code>git grep</code>して見つかった<code>RemoveWorktreePrompt</code>の参照場所を見ると下記で使われていることがわかる。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// https://github.com/jesseduffield/lazygit/blob/16cf2ff1a9c18352c60d38655d9eb2c284dbec4b/pkg/gui/controllers/helpers/worktree_helper.go#L173
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">self</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">WorktreeHelper</span>) <span style="color:#a6e22e">Remove</span>(<span style="color:#a6e22e">worktree</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">models</span>.<span style="color:#a6e22e">Worktree</span>, <span style="color:#a6e22e">force</span> <span style="color:#66d9ef">bool</span>) <span style="color:#66d9ef">error</span> {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Tr</span>.<span style="color:#a6e22e">RemoveWorktreeTitle</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">templateStr</span> <span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">force</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">templateStr</span> = <span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Tr</span>.<span style="color:#a6e22e">ForceRemoveWorktreePrompt</span>
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ここで文言を参照している
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">templateStr</span> = <span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Tr</span>.<span style="color:#a6e22e">RemoveWorktreePrompt</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ...
+</span></span></span></code></pre></div></li>
+<li>その少し下のここでworktreeの削除処理(<code>self.c.Git().Worktree.Delete()</code>)を呼んでいる。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// https://github.com/jesseduffield/lazygit/blob/16cf2ff1a9c18352c60d38655d9eb2c284dbec4b/pkg/gui/controllers/helpers/worktree_helper.go#L188
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Confirm</span>(<span style="color:#a6e22e">types</span>.<span style="color:#a6e22e">ConfirmOpts</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Title</span>:  <span style="color:#a6e22e">title</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Prompt</span>: <span style="color:#a6e22e">message</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">HandleConfirm</span>: <span style="color:#66d9ef">func</span>() <span style="color:#66d9ef">error</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">WithWaitingStatus</span>(<span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Tr</span>.<span style="color:#a6e22e">RemovingWorktree</span>, <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">gocui</span>.<span style="color:#a6e22e">Task</span>) <span style="color:#66d9ef">error</span> {
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">LogAction</span>(<span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Tr</span>.<span style="color:#a6e22e">RemoveWorktree</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// ここでworktreeの削除処理を呼んでいそう
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Git</span>().<span style="color:#a6e22e">Worktree</span>.<span style="color:#a6e22e">Delete</span>(<span style="color:#a6e22e">worktree</span>.<span style="color:#a6e22e">Path</span>, <span style="color:#a6e22e">force</span>); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// 省略
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			}
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Refresh</span>(<span style="color:#a6e22e">types</span>.<span style="color:#a6e22e">RefreshOptions</span>{<span style="color:#a6e22e">Mode</span>: <span style="color:#a6e22e">types</span>.<span style="color:#a6e22e">ASYNC</span>, <span style="color:#a6e22e">Scope</span>: []<span style="color:#a6e22e">types</span>.<span style="color:#a6e22e">RefreshableView</span>{<span style="color:#a6e22e">types</span>.<span style="color:#a6e22e">WORKTREES</span>, <span style="color:#a6e22e">types</span>.<span style="color:#a6e22e">BRANCHES</span>, <span style="color:#a6e22e">types</span>.<span style="color:#a6e22e">FILES</span>}})
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span>		})
+</span></span><span style="display:flex;"><span>	},
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div></li>
+<li><code>self.c.Git().Worktree.Delete()</code>の実装は以下。<code>git worktree remove</code>というコマンドを呼んでいることがわかった。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// https://github.com/jesseduffield/lazygit/blob/16cf2ff1a9c18352c60d38655d9eb2c284dbec4b/pkg/commands/git_commands/worktree.go#L45-L49
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">self</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">WorktreeCommands</span>) <span style="color:#a6e22e">Delete</span>(<span style="color:#a6e22e">worktreePath</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">force</span> <span style="color:#66d9ef">bool</span>) <span style="color:#66d9ef">error</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">cmdArgs</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">NewGitCmd</span>(<span style="color:#e6db74">&#34;worktree&#34;</span>).<span style="color:#a6e22e">Arg</span>(<span style="color:#e6db74">&#34;remove&#34;</span>).<span style="color:#a6e22e">ArgIf</span>(<span style="color:#a6e22e">force</span>, <span style="color:#e6db74">&#34;-f&#34;</span>).<span style="color:#a6e22e">Arg</span>(<span style="color:#a6e22e">worktreePath</span>).<span style="color:#a6e22e">ToArgv</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">New</span>(<span style="color:#a6e22e">cmdArgs</span>).<span style="color:#a6e22e">Run</span>()
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ol>
+<p>ここまでlazygitでworktreeを削除すると<code>git worktree remove</code>が呼ばれることがわかったので次はgit本体のソースコードを見てみる。</p>
+<h2 id="2-gitの挙動を追う">2. gitの挙動を追う<a href="#2-gitの挙動を追う" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ol>
+<li>gitのソースコードはGitHubに<a href="https://github.com/git/git" target="_blank" >ミラー</a>があり、以下のコマンドでcloneできる。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gh repo clone git/git
+</span></span></code></pre></div></li>
+<li><code>git grep -- &quot;worktree remove&quot;</code>したら104箇所も出てきてしまった。
+<img src="git-grep1.webp" alt="git-grep1.webp" loading="lazy" /></li>
+<li>検索結果をCのファイルに絞ったところ<code>git worktree remove --help</code>の文言のような部分が見つかったので当該ファイル(<code>builtin/worktree.c</code>)を見てみる。
+<img src="git-grep2.webp" alt="git-grep2.webp" loading="lazy" /></li>
+<li><code>builtin/worktree.c</code>の関数一覧を眺めてみるとかなりそれっぽい関数が見つかった。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// https://github.com/git/git/blob/8d96f09e9245ddf80c1981476fcbac8c4bb4125f/builtin/worktree.c#L1378-L1431
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">remove_worktree</span>(<span style="color:#66d9ef">int</span> ac, <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">**</span>av, <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>prefix,
+</span></span><span style="display:flex;"><span>			   <span style="color:#66d9ef">struct</span> repository <span style="color:#f92672">*</span>repo UNUSED)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> force <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">struct</span> option options[] <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">OPT__FORCE</span>(<span style="color:#f92672">&amp;</span>force,
+</span></span><span style="display:flex;"><span>			   <span style="color:#a6e22e">N_</span>(<span style="color:#e6db74">&#34;force removal even if worktree is dirty or locked&#34;</span>),
+</span></span><span style="display:flex;"><span>			   PARSE_OPT_NOCOMPLETE),
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">OPT_END</span>()
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">struct</span> worktree <span style="color:#f92672">**</span>worktrees, <span style="color:#f92672">*</span>wt;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">struct</span> strbuf errmsg <span style="color:#f92672">=</span> STRBUF_INIT;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>reason <span style="color:#f92672">=</span> NULL;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> ret <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	ac <span style="color:#f92672">=</span> <span style="color:#a6e22e">parse_options</span>(ac, av, prefix, options, git_worktree_remove_usage, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> (ac <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">usage_with_options</span>(git_worktree_remove_usage, options);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// worktree全体から対象のworktreeを取得
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	worktrees <span style="color:#f92672">=</span> <span style="color:#a6e22e">get_worktrees</span>();
+</span></span><span style="display:flex;"><span>	wt <span style="color:#f92672">=</span> <span style="color:#a6e22e">find_worktree</span>(worktrees, prefix, av[<span style="color:#ae81ff">0</span>]);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>wt) <span style="color:#75715e">// NULLが返った == 見つからなかった
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#a6e22e">die</span>(<span style="color:#a6e22e">_</span>(<span style="color:#e6db74">&#34;&#39;%s&#39; is not a working tree&#34;</span>), av[<span style="color:#ae81ff">0</span>]);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">is_main_worktree</span>(wt))
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">die</span>(<span style="color:#a6e22e">_</span>(<span style="color:#e6db74">&#34;&#39;%s&#39; is a main working tree&#34;</span>), av[<span style="color:#ae81ff">0</span>]);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> (force <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>		reason <span style="color:#f92672">=</span> <span style="color:#a6e22e">worktree_lock_reason</span>(wt);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> (reason) {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> (<span style="color:#f92672">*</span>reason)
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">die</span>(<span style="color:#a6e22e">_</span>(<span style="color:#e6db74">&#34;cannot remove a locked working tree, lock reason: %s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">use &#39;remove -f -f&#39; to override or unlock first&#34;</span>),
+</span></span><span style="display:flex;"><span>			    reason);
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">die</span>(<span style="color:#a6e22e">_</span>(<span style="color:#e6db74">&#34;cannot remove a locked working tree;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">use &#39;remove -f -f&#39; to override or unlock first&#34;</span>));
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">validate_worktree</span>(wt, <span style="color:#f92672">&amp;</span>errmsg, WT_VALIDATE_WORKTREE_MISSING_OK))
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">die</span>(<span style="color:#a6e22e">_</span>(<span style="color:#e6db74">&#34;validation failed, cannot remove working tree: %s&#34;</span>),
+</span></span><span style="display:flex;"><span>		    errmsg.buf);
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">strbuf_release</span>(<span style="color:#f92672">&amp;</span>errmsg);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">file_exists</span>(wt<span style="color:#f92672">-&gt;</span>path)) {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>force)
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">check_clean_worktree</span>(wt, av[<span style="color:#ae81ff">0</span>]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// worktreeのworking directoryを削除
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		ret <span style="color:#f92672">|=</span> <span style="color:#a6e22e">delete_git_work_tree</span>(wt);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * continue on even if ret is non-zero, there&#39;s no going back
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 * from here.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// .git/worktrees/&lt;id&gt;を削除
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	ret <span style="color:#f92672">|=</span> <span style="color:#a6e22e">delete_git_dir</span>(wt<span style="color:#f92672">-&gt;</span>id);
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">delete_worktrees_dir_if_empty</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">free_worktrees</span>(worktrees);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> ret;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ol>
+<p>この関数の中身を読んだところ、<code>git worktree remove</code>がおおよそ以下のような処理をしていることがわかった。</p>
+<ol>
+<li>worktree全体を取得し、さらにそこから引数に指定されたworktreeを取得する</li>
+<li>worktreeのworking directoryを削除する
+<ul>
+<li><strong>今回の調査の発端の処理。<code>git worktree remove</code>を実行すると、worktreeのworking directoryも削除されることがわかった。</strong></li>
+</ul>
+</li>
+<li><code>.git/worktrees/&lt;id&gt;</code>を削除する
+<ul>
+<li>ちなみに、<code>.git/worktrees/&lt;id&gt;</code>にはworktreeのメタ情報が入っている。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>❯ tree .git/worktrees/myworktree
+</span></span><span style="display:flex;"><span>.git/worktrees/myworktree
+</span></span><span style="display:flex;"><span>├── commondir
+</span></span><span style="display:flex;"><span>├── gitdir
+</span></span><span style="display:flex;"><span>├── HEAD
+</span></span><span style="display:flex;"><span>├── index
+</span></span><span style="display:flex;"><span>├── logs
+</span></span><span style="display:flex;"><span>│   └── HEAD
+</span></span><span style="display:flex;"><span>├── ORIG_HEAD
+</span></span><span style="display:flex;"><span>└── refs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span> directories, <span style="color:#ae81ff">6</span> files
+</span></span></code></pre></div>たとえばworktreeの<code>.git</code>ディレクトリの位置が格納されていたりする。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>❯ cat .git/worktrees/myworktree/gitdir
+</span></span><span style="display:flex;"><span>/Users/kyu08/code/fzf-make/myworktree/.git
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h2 id="感想">感想<a href="#感想" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li><code>git worktree remove</code>を実行したときに何が行われるかがおおよそわかった。</li>
+<li>git/gitが意外と読みやすかった。
+<ul>
+<li>歴史あるコードは略語が多くて読みづらいという偏見があったが、あまり略語が使われておらず読みやすかった。（もちろんコードベースのごく一部を読んだだけなので他の部分についてはわからないが）</li>
+<li>gitの挙動が気になったら今後も気軽にソースコードを読んでみようという気持ちになった。</li>
+</ul>
+</li>
+<li>gitやLinuxやコンパイラがついつい何か特別な魔法的なものによって動いていると思いこんでしまいがちだが、普通にコードを読めばわかることもあるので気になることがあったら読んでみると発見があるかもしれない。(もちろん自分の知識が足りなすぎて読んでもわからない場合もありそうですが&hellip;)</li>
+<li>引き続きLinuxを始めとしたCS関連の諸々やKubernetesなど、身の回りの技術に対する解像度を上げていきたい。</li>
+</ul>
+
+      </div></div>
+
+  
+  
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="https://blog.kyu08.com/pr-348/posts/lazygit-configurable-side-panels/" class="button inline prev">
+        Lazygit@v0.63.0でサイドパネルの配置が変更できるようになった
+      </a>
+    
+    
+      <a href="https://blog.kyu08.com/pr-348/posts/k_and_r/" class="button inline next">
+        『プログラミング言語C 第2版』を読んだ
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+        repo="kyu08/blog-comments"
+        issue-term="pathname"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  
+
+  
+    <div class="table-of-contents-sidebar">
+      <h2>
+        目次
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-lazygitの挙動を追う">1. lazygitの挙動を追う</a></li>
+    <li><a href="#2-gitの挙動を追う">2. gitの挙動を追う</a></li>
+    <li><a href="#感想">感想</a></li>
+  </ul>
+</nav>
+    </div>
+    <script src="https://blog.kyu08.com/pr-348/toc.js"></script>
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>blog.kyu08.com</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/pr-348/bundle.min.js"></script>
+
+
+<font color="#808080">
+  <span>
+    This site uses Google Analytics for access analysis.
+    Google Analytics uses cookies to collect traffic data, but this traffic data is collected anonymously and does not personally identify you.
+    Cookies can be disabled in your browser.
+  </span>
+</font>
+
+
+<script src="https://blog.kyu08.com/pr-348/blogcard.js"></script>
+
+
+  
+</div>
+
+</body>
+</html>
