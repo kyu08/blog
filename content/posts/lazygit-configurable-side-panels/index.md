@@ -24,7 +24,7 @@ cover: "cover.png"
 https://github.com/jesseduffield/lazygit/pull/5702
 
 ## どう変わるのか
-以下のような設定項目が追加され、自由にサイドパネルの配置を変更できる。(以下はdefaultの設定)
+以下のような設定項目が追加され、自由にサイドパネルの配置を変更できるようになった。(以下はdefaultの設定)
 
 ```yaml
 gui:
