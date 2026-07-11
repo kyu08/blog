@@ -1,5 +1,5 @@
 ---
-title: "Lazygit@v0.63.0でサイドパネルの配置が変更できるようになった"
+title: "Lazygit v0.63.0でサイドパネルの配置が変更できるようになった"
 tags:
   - "Lazygit"
   - "OSS"
