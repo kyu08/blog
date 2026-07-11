@@ -29,7 +29,7 @@ Reorder t...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.c
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;どう変わるのか&#34;&gt;どう変わるのか&lt;/h2&gt;
+&lt;h2 id=&#34;変更点&#34;&gt;変更点&lt;/h2&gt;
 &lt;p&gt;以下のような設定項目が追加され、自由にサイドパネルの配置を変更できるようになった。(以下はdefaultの設定)&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;gui&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;sidePanels&lt;/span&gt;:
@@ -51,12 +51,12 @@ Reorder t...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.c
 &lt;p&gt;とあるように、&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;パネルの並び替え&lt;/li&gt;
-&lt;li&gt;不要なパネルを非表示にする&lt;/li&gt;
-&lt;li&gt;どのパネルが同じスロットを共有するかを再構成する&lt;/li&gt;
+&lt;li&gt;不要なパネルの非表示&lt;/li&gt;
+&lt;li&gt;どのパネルがどのタブを表示するかを自由に設定できる&lt;/li&gt;
 &lt;li&gt;タブをトップレベルパネルに昇格させる(e.g. WorktreesをFilesパネルから引き出して常に表示する)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;などができるようになった。&lt;/p&gt;
-&lt;h2 id=&#34;個人的な嬉しみ&#34;&gt;個人的な嬉しみ&lt;/h2&gt;
+&lt;p&gt;といったことができるようになった。&lt;/p&gt;
+&lt;h2 id=&#34;こんな感じにしてみた&#34;&gt;こんな感じにしてみた&lt;/h2&gt;
 &lt;p&gt;いくつか設定を試した結果、以下のような感じに落ち着いた。&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&#34;image-with-caption&#34;&gt;
     &lt;img src=&#34;./after.webp&#34; alt=&#34;after.webep&#34; loading=&#34;lazy&#34; /&gt;
@@ -72,7 +72,7 @@ Reorder t...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.c
     &lt;img src=&#34;./diff.webp&#34; alt=&#34;diff.webep&#34; loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;差分&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;表示領域が若干広くなった。(こう見ると割と地味ではあるw)&lt;/p&gt;
+&lt;p&gt;というわけで表示領域が若干広くなった。(こう見ると割と地味ではあるw)&lt;/p&gt;
 &lt;p&gt;設定は以下。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;gui&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;sidePanels&lt;/span&gt;:
