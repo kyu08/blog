@@ -49,7 +49,7 @@ PR Bodyに
 
 - パネルの並び替え
 - 不要なパネルの非表示
-- どのパネルをどのタブに表示するかを自由に設定できる
+- どのパネルをどのタブにグルーピングするか
 - タブをトップレベルパネルに昇格させる(e.g. WorktreesをFilesパネルから引き出して常に表示する)
 
 といったことができるようになった。
@@ -63,14 +63,14 @@ PR Bodyに
 
 ![after.webp](./after.webp "After")
 
-変更点は以下。
+主な変更点は以下。
 
 1. Statusを非表示に
-1. StashタブをCommitと同じパネルに移動
+1. StashタブをCommitsと同じパネルに移動
 
 ![diff.webp](./diff.webp "差分")
 
-というわけで表示領域が若干広くなった。(こう見ると割と地味ではあるw)
+というわけで表示領域が若干広くなった。(こう見ると割と地味ではある)
 
 設定は以下。
 
@@ -92,4 +92,4 @@ gui:
 ## まとめ
 サイドパネルを自分好みにカスタマイズできると地味に捗るのでオススメです。
 
-[^1]: 2025/07に[@jesseduffield](https://github.com/jesseduffield)がメンテナンスの主導権を[@stefanhaller](https://github.com/stefanhaller)に譲る、という主旨のことが投稿がされた。 https://github.com/jesseduffield/lazygit/issues/4655#issue-3164810345
+[^1]: 2025/07に[@jesseduffield](https://github.com/jesseduffield)がメンテナンスの主導権を[@stefanhaller](https://github.com/stefanhaller)に譲る、という主旨のことが投稿された。 https://github.com/jesseduffield/lazygit/issues/4655#issue-3164810345
