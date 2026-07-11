@@ -616,5 +616,11 @@
     "description": "Personal sandbox. Contribute to kyu08/sunaba development by creating an account on GitHub.",
     "image": "https://opengraph.githubassets.com/903bd6d6dd437fe6ffdcd00ef3a9bd8fa1acb8191443eed7373f3f2a5d7c9de1/kyu08/sunaba",
     "fetchedAt": "2026-04-12T09:38:21.480Z"
+  },
+  "https://github.com/jesseduffield/lazygit/pull/5702": {
+    "title": "Make the side panels configurable by stefanhaller · Pull Request #5702 · jesseduffield/lazygit",
+    "description": "Lazygit&#39;s left-hand side panels — and the tabs within them — have always had a fixed arrangement. This adds a gui.sidePanels option so you can lay them out the way you want.\nYou can:\n\nReorder t...",
+    "image": "https://opengraph.githubassets.com/84af24c10a3e11d0b50f9f60bb8f04cb08d0a0cbc107b7862f904ce622448f8f/jesseduffield/lazygit/pull/5702",
+    "fetchedAt": "2026-07-11T09:37:53.859Z"
   }
 }
