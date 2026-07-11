@@ -52,7 +52,7 @@ Reorder t...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.c
 &lt;ul&gt;
 &lt;li&gt;パネルの並び替え&lt;/li&gt;
 &lt;li&gt;不要なパネルの非表示&lt;/li&gt;
-&lt;li&gt;どのパネルをどのタブに表示するかを自由に設定できる&lt;/li&gt;
+&lt;li&gt;どのパネルをどのタブにグルーピングするか&lt;/li&gt;
 &lt;li&gt;タブをトップレベルパネルに昇格させる(e.g. WorktreesをFilesパネルから引き出して常に表示する)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;といったことができるようになった。&lt;/p&gt;
@@ -67,10 +67,10 @@ Reorder t...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.c
     &lt;img src=&#34;./after.webp&#34; alt=&#34;after.webp&#34; loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;After&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;変更点は以下。&lt;/p&gt;
+&lt;p&gt;主な変更点は以下。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Statusを非表示に&lt;/li&gt;
-&lt;li&gt;StashタブをCommitと同じパネルに移動&lt;/li&gt;
+&lt;li&gt;StashタブをCommitsと同じパネルに移動&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;figure class=&#34;image-with-caption&#34;&gt;
     &lt;img src=&#34;./diff.webp&#34; alt=&#34;diff.webp&#34; loading=&#34;lazy&#34; /&gt;
@@ -96,7 +96,7 @@ Reorder t...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.c
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;2025/07に&lt;a href=&#34;https://github.com/jesseduffield&#34; target=&#34;_blank&#34; &gt;@jesseduffield&lt;/a&gt;がメンテナンスの主導権を&lt;a href=&#34;https://github.com/stefanhaller&#34; target=&#34;_blank&#34; &gt;@stefanhaller&lt;/a&gt;に譲る、という主旨のことが投稿がされた。 &lt;a href=&#34;https://github.com/jesseduffield/lazygit/issues/4655#issue-3164810345&#34; target=&#34;_blank&#34; &gt;https://github.com/jesseduffield/lazygit/issues/4655#issue-3164810345&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2025/07に&lt;a href=&#34;https://github.com/jesseduffield&#34; target=&#34;_blank&#34; &gt;@jesseduffield&lt;/a&gt;がメンテナンスの主導権を&lt;a href=&#34;https://github.com/stefanhaller&#34; target=&#34;_blank&#34; &gt;@stefanhaller&lt;/a&gt;に譲る、という主旨のことが投稿された。 &lt;a href=&#34;https://github.com/jesseduffield/lazygit/issues/4655#issue-3164810345&#34; target=&#34;_blank&#34; &gt;https://github.com/jesseduffield/lazygit/issues/4655#issue-3164810345&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
