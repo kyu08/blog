@@ -1,5 +1,5 @@
 ---
-title: "Lazygitのサイドパネルの配置が変更できるようになった"
+title: "Lazygit@v0.63.0でサイドパネルの配置が変更できるようになった"
 tags:
   - "Lazygit"
   - "OSS"
@@ -19,7 +19,7 @@ cover: "cover.png"
 
 日本時間の2026/07/04にリリースされた[v0.63.0](https://github.com/jesseduffield/lazygit/releases/tag/v0.63.0)から、Lazygitのサイドパネルの配置が設定可能になった。
 
-この機能は現在のLazygitメンテナである[@stefanhaller](https://github.com/stefanhaller)によって以下のPRで実装された。
+この機能は現在の主要なLazygitメンテナである[@stefanhaller](https://github.com/stefanhaller)[^1]によって以下のPRで実装された。
 
 https://github.com/jesseduffield/lazygit/pull/5702
 
@@ -57,15 +57,15 @@ PR Bodyに
 ## こんな感じにしてみた
 いくつか設定を試した結果、以下のような感じに落ち着いた。
 
-![after.webep](./after.webp "After")
+![after.webp](./after.webp "After")
 
 変更前(デフォルト)はこんな感じで、
 
-![before.webep](./before.webp "Before")
+![before.webp](./before.webp "Before")
 
 変更点は以下。
 
-![diff.webep](./diff.webp "差分")
+![diff.webp](./diff.webp "差分")
 
 というわけで表示領域が若干広くなった。(こう見ると割と地味ではあるw)
 
@@ -88,3 +88,5 @@ gui:
 
 ## まとめ
 サイドパネルを自分好みにカスタマイズできると地味に捗るのでオススメです。
+
+[^1]: 2025/07に[@jesseduffield](https://github.com/jesseduffield)がメンテナンスの主導権を[@stefanhaller](https://github.com/stefanhaller)に譲る、という主旨のことが投稿がされた。 https://github.com/jesseduffield/lazygit/issues/4655#issue-3164810345
