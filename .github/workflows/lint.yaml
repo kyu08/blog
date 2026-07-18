@@ -1,6 +1,7 @@
 name: textlint
 on: 
   pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
 jobs:
   textlint:
     name: textlint
