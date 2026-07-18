@@ -7,7 +7,54 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sat, 11 Jul 2026 17:32:54 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-344/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Jul 2026 00:32:15 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-344/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>『エンジニアのための時間管理術』を読んだ</title>
+      <link>https://blog.kyu08.com/pr-344/posts/time-management-for-system-administrators/</link>
+      <pubDate>Sat, 18 Jul 2026 00:32:15 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-344/posts/time-management-for-system-administrators/</guid>
+      <description>エンジニアのための時間管理術を読んだので参考になったところをまとめておく。 表紙はクズリというイタチ科の獰猛な動物らしい 読もうと思ったきっかけ</description>
+      <content>&lt;p&gt;&lt;a href=&#34;https://www.oreilly.co.jp/books/9784873113074/&#34; target=&#34;_blank&#34; &gt;エンジニアのための時間管理術&lt;/a&gt;を読んだので参考になったところをまとめておく。&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&#34;image-with-caption&#34;&gt;
+    &lt;img src=&#34;book.webp&#34; alt=&#34;book.webp&#34; loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;表紙はクズリというイタチ科の獰猛な動物らしい&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;!-- TODO: 2. それぞれに対してかけそうなトピックをかいていく --&gt;
+&lt;!-- TODO: 3. 文量調節 --&gt;
+&lt;!-- TODO: 4. 推敲 --&gt;
+&lt;h2 id=&#34;読もうと思ったきっかけ&#34;&gt;読もうと思ったきっかけ&lt;/h2&gt;
+&lt;p&gt;タスク管理についてもう少しいい感じにしたいなーというぼんやりとした課題感があったので、何か参考になることが書いてあるといいな、と思い読んでみた。&lt;/p&gt;
+&lt;h2 id=&#34;6つの重要なテーマp-p4&#34;&gt;6つの重要なテーマ(PⅥ, P4)&lt;/h2&gt;
+&lt;h2 id=&#34;プロセスを信頼しろp8&#34;&gt;プロセスを信頼しろ(P8)&lt;/h2&gt;
+&lt;p&gt;毎朝5分やっている、その日の計画をたてるのをおろそかにすると1日の過ごし方が微妙になる、というやつ
+P9の「ポジティブ思考になる」というのもめっちゃ良い点。&lt;/p&gt;
+&lt;h2 id=&#34;自分の要求をp30&#34;&gt;自分の要求を&amp;hellip;(P30)&lt;/h2&gt;
+&lt;p&gt;ついつい「自分の思考を言語化するのは基本的にはその人の責務」と思い込んでしまいがちだが、それに恐怖を感じる人もいる、というやつ。&lt;/p&gt;
+&lt;p&gt;特にエンジニア以外の職能の人と話すときは気をつけたいやつ&amp;hellip;。&lt;/p&gt;
+&lt;h2 id=&#34;いざやってみると意外と大したことがないということはよくあるp35&#34;&gt;いざやってみると意外と大したことがない、ということはよくある(P35)&lt;/h2&gt;
+&lt;p&gt;あとは遅れれば遅れるほどタスクは増えることが多い（送れたことの謝罪やスケジュールやリソースの調整の必要性が発生する、など）&lt;/p&gt;
+&lt;h2 id=&#34;サイクルシステムp65&#34;&gt;サイクルシステム(P65)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;1h刻みのスケジュールをたてる&lt;/li&gt;
+&lt;li&gt;作業リストを作成する&lt;/li&gt;
+&lt;li&gt;そこに会議もいれる&lt;/li&gt;
+&lt;li&gt;1日の終わりに残っているタスクを翌日に移動する&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- TODO: この本を読んで、orgmodeでその日の使用可能時間やその残り時間を表示するようにした --&gt;
+&lt;h2 id=&#34;残業についてp74&#34;&gt;残業について(P74)&lt;/h2&gt;
+&lt;h2 id=&#34;見積もりについてp76&#34;&gt;見積もりについて(P76)&lt;/h2&gt;
+&lt;h2 id=&#34;1つやったら次の作業にすぐに着手するp79&#34;&gt;1つやったら次の作業にすぐに着手する(P79)&lt;/h2&gt;
+&lt;h2 id=&#34;公私で価値観が違っても良いp110&#34;&gt;公私で価値観が違っても良い(P110)&lt;/h2&gt;
+&lt;p&gt;仕事に熱中していると、ついついプライベートの時間も仕事と同じマインドセットで取り組んでしまい、悪い方向に転ぶことがある。&lt;/p&gt;
+&lt;h2 id=&#34;リストの先頭から片付けていくp120&#34;&gt;リストの先頭から片付けていく(P120)&lt;/h2&gt;
+&lt;h2 id=&#34;誰かに状況を説明することはストレスの解消になるp137&#34;&gt;誰かに状況を説明することはストレスの解消になる(P137)&lt;/h2&gt;
+&lt;p&gt;めっちゃ経験がある。PJをリードしていて、自分の選択に自信がないとき、今の状況や取りうる選択肢とそのメリデメ、そこからなぜ何を選択したかを話すだけでかなり楽になる。(もらったFBが反対意見だったとしても。)&lt;/p&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;!-- TODO: 272ページなのと内容もわかりやすい口調で書かれているのでサクッと読めるのできになるかたはぜひ手に取ってみてください。 --&gt;
+</content>
+    </item>
+    
     <item>
       <title>Lazygit v0.63.0でサイドパネルの配置が変更できるようになった</title>
       <link>https://blog.kyu08.com/pr-344/posts/lazygit-configurable-side-panels/</link>
@@ -304,25 +351,6 @@ Reorder t...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.c
 &lt;li&gt;gitやLinuxやコンパイラがついつい何か特別な魔法的なものによって動いていると思いこんでしまいがちだが、普通にコードを読めばわかることもあるので気になることがあったら読んでみると発見があるかもしれない。(もちろん自分の知識が足りなすぎて読んでもわからない場合もありそうですが&amp;hellip;)&lt;/li&gt;
 &lt;li&gt;引き続きLinuxを始めとしたCS関連の諸々やKubernetesなど、身の回りの技術に対する解像度を上げていきたい。&lt;/li&gt;
 &lt;/ul&gt;
-</content>
-    </item>
-    
-    <item>
-      <title>『エンジニアのための時間管理術』を読んだ</title>
-      <link>https://blog.kyu08.com/pr-344/posts/time-management-for-system-administrators/</link>
-      <pubDate>Sun, 21 Jun 2026 23:32:15 +0900</pubDate>
-      
-      <guid>https://blog.kyu08.com/pr-344/posts/time-management-for-system-administrators/</guid>
-      <description>エンジニアのための時間管理術を読んだので参考になったところをまとめておく。 表紙はクズリというイタチ科の獰猛な動物らしい 読もうと思ったきっかけ</description>
-      <content>&lt;p&gt;&lt;a href=&#34;https://www.oreilly.co.jp/books/9784873113074/&#34; target=&#34;_blank&#34; &gt;エンジニアのための時間管理術&lt;/a&gt;を読んだので参考になったところをまとめておく。&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&#34;image-with-caption&#34;&gt;
-    &lt;img src=&#34;book.webp&#34; alt=&#34;book.webp&#34; loading=&#34;lazy&#34; /&gt;
-    &lt;figcaption&gt;表紙はクズリというイタチ科の獰猛な動物らしい&lt;/figcaption&gt;
-  &lt;/figure&gt;&lt;/p&gt;
-&lt;h2 id=&#34;読もうと思ったきっかけ&#34;&gt;読もうと思ったきっかけ&lt;/h2&gt;
-&lt;!-- TODO: 書けそうなら書く。仕事の時間管理がイマイチな感じがしたので参考になる点があるといいなと思って読んでみた。 --&gt;
-&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
-&lt;!-- TODO: 272ページなのと内容もわかりやすい口調で書かれているのでサクッと読めるのできになるかたはぜひ手に取ってみてください。 --&gt;
 </content>
     </item>
     
