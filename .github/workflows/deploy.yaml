@@ -37,7 +37,7 @@ jobs:
         continue-on-error: true
         run: |
           git pull --rebase origin main
-          git push
+          git push || echo "::warning::blogcard cacheのpushに失敗しました。次回のデプロイ時に再度試みられます。"
 
       - name: Generate OGP images
         run: npm run generate-ogp
