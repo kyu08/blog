@@ -225,7 +225,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/07/19</time>
       
-    <span class="post-reading-time">5 min read (2358 words)</span></div>
+    <span class="post-reading-time">6 min read (2643 words)</span></div>
 
   
     <span class="post-tags">
@@ -288,27 +288,36 @@ if (!doNotTrack) {
 <li>1日の終わりに未完了のタスクを次の日のタスクとして持ち越す</li>
 </ol>
 <p>これを自分は<a href="https://github.com/nvim-orgmode/orgmode" target="_blank" >nvim-orgmode/orgmode</a>という、org-modeを再現したNeovimプラグインを使って実現している。</p>
-<!-- TODO: ↓っていうスクショをとるためにダミーの予定をいれたりする -->
-<!-- TODO: こんな見た目になっている。 -->
+<p><figure class="image-with-caption">
+    <img src="orgmode-final-form.webp" alt="orgmode-final-form.webp" loading="lazy" />
+    <figcaption>orgmodeのdaily agenda(簡単にいうとその日の予定やタスクの一覧)を表示している様子</figcaption>
+  </figure></p>
 <p>上の画像のような感じで、その日の</p>
 <ol>
+<li>タスクと完了予定時刻(上の画像では赤または緑で表示されている行)</li>
 <li>mtgなどの予定</li>
-<li>タスク(と完了予定時刻)</li>
-<li>利用可能時間</li>
-<li>利用可能時間のうち現在の残り時間</li>
+<li>作業可能時間</li>
+<li>作業可能時間のうち現在の残り時間(L2の<code>⏰ Remaining: 4h 00m</code>のようなやつ)</li>
 </ol>
 <p>を表示するようにしている。</p>
 <p>自分の使い方は以下のような感じ。</p>
-<ol>
-<li>一日の始まりにsnippetに登録したその日の予定をnvim-orgmode/orgmodeに反映するコマンドを実行している。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>具体的な処理は以下。
+<p><figure class="image-with-caption">
+    <img src="orgmode-initial.webp" alt="orgmode-initial.webp" loading="lazy" />
+    <figcaption>初期状態</figcaption>
+  </figure></p>
+<p>初期状態は上の画像のような感じで、前日の夜時点で翌日に移動したタスクだけが表示されている。</p>
+<p><img src="orgmode-schedules-of-the-day.webp" alt="orgmode-schedules-of-the-day.webp" loading="lazy" /></p>
+<p>次に、一日の始まりにsnippetに登録したその日の予定をnvim-orgmode/orgmodeに反映するコマンドを実行する。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>具体的な処理は以下。</p>
 <ol>
 <li><a href="https://formulae.brew.sh/formula/ical-buddy" target="_blank" >icalBuddy</a>を使ってmacのCalendar.appからその日の予定を取得</li>
 <li>その日の予定からその日作業に使える時間(≒mtgがない時間の合計)を算出</li>
-<li><code>1.</code>と<code>2.</code>をnvim-orgmode/orgmode
-春頃までは完了予定時刻を入れておらず、どうにも1日の終わりになってやっと危機感から仕事の集中力が上がってくる、というあまりよくない感じだった。</li>
+<li><code>1.</code>と<code>2.</code>に加えて<code>今日のタスクをplanningする</code>というタスクをnvim-orgmode/orgmodeで認識できるformatで出力</li>
 </ol>
-</li>
-</ol>
+<p><img src="orgmode-estimate-completion-time.webp" alt="orgmode-estimate-completion-time.webp" loading="lazy" /></p>
+<p>その後、その日に完了したいタスクの完了予定時刻を登録し、<code>今日のタスクをplanningする</code>を<code>DONE</code>に変更する。</p>
+<p><img src="orgmode-during-day.webp" alt="orgmode-during-day.webp" loading="lazy" /></p>
+<p>あとはこんな感じで適宜タスクを<code>DONE</code>にしていく、という流れ。</p>
+<p>春頃までは完了予定時刻を入れたり、その日の作業可能時間を計算したりしておらず、1日の終わりになってやっと危機感から仕事の集中力が上がってくる、というあまりよくない感じの日が多かった。</p>
 <p>タスクの完了予定時刻を入れるようにしてから常に各タスクの完了予定時刻までに終えられるようにタイムアタックしている感覚になり、集中力が増した気がしている。</p>
 <!-- ## 残業について(P74) -->
 <h2 id="見積もりについて">見積もりについて<a href="#見積もりについて" class="hanchor" ariaLabel="Anchor">#</a> </h2>
