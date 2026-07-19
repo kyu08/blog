@@ -41,16 +41,16 @@
 &lt;!-- ## いざやってみると意外と大したことがない、ということはよくある(P35) --&gt;
 &lt;!-- あとは遅れれば遅れるほどタスクは増えることが多い（送れたことの謝罪やスケジュールやリソースの調整の必要性が発生する、など） --&gt;
 &lt;h2 id=&#34;サイクルシステム&#34;&gt;サイクルシステム&lt;/h2&gt;
-&lt;p&gt;このセクションでは著者が考案したタスク管理プロセスである「サイクルシステム」について説明されてる。(P65)気になる方は本書を読んでいただくとして、ここで紹介されているうち、自分が取り入れているのは主に以下。&lt;/p&gt;
+&lt;p&gt;P65付近では、著者が10年以上にわたって実践しているタスク管理手法である「サイクルシステム」について説明されている。気になる方は本書を読んでいただくとして、ここで紹介されているアイディアのうち、自分が取り入れているのは主に以下。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;タスクとその日のスケジュールを一箇所で管理する&lt;/li&gt;
 &lt;li&gt;1日の始めにその日取り組むタスクとその完了予定時刻を記入する&lt;/li&gt;
-&lt;li&gt;1日の終わりに未完了の仕事を次の日のタスクとして持ち越す&lt;/li&gt;
+&lt;li&gt;1日の終わりに未完了のタスクを次の日のタスクとして持ち越す&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;これを自分は&lt;a href=&#34;https://github.com/nvim-orgmode/orgmode&#34; target=&#34;_blank&#34; &gt;nvim-orgmode/orgmode&lt;/a&gt;というNeovimで利用できるorg-modeを再現したプラグインを使って行っている。&lt;/p&gt;
+&lt;p&gt;これを自分は&lt;a href=&#34;https://github.com/nvim-orgmode/orgmode&#34; target=&#34;_blank&#34; &gt;nvim-orgmode/orgmode&lt;/a&gt;という、org-modeを再現したNeovimプラグインを使って実現している。&lt;/p&gt;
 &lt;!-- TODO: ↓っていうスクショをとるためにダミーの予定をいれたりする --&gt;
 &lt;!-- TODO: こんな見た目になっている。 --&gt;
-&lt;p&gt;その日の&lt;/p&gt;
+&lt;p&gt;上の画像のような感じで、その日の&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;mtgなどの予定&lt;/li&gt;
 &lt;li&gt;タスク(と完了予定時刻)&lt;/li&gt;
@@ -58,7 +58,17 @@
 &lt;li&gt;利用可能時間のうち現在の残り時間&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;を表示するようにしている。&lt;/p&gt;
-&lt;p&gt;春頃までは完了予定時刻を入れておらず、どうにも1日の終わりになってやっと危機感から仕事の集中力が上がってくる、というあまりよくない感じだった。&lt;/p&gt;
+&lt;p&gt;自分の使い方は以下のような感じ。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;一日の始まりにsnippetに登録したその日の予定をnvim-orgmode/orgmodeに反映するコマンドを実行している。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;具体的な処理は以下。
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://formulae.brew.sh/formula/ical-buddy&#34; target=&#34;_blank&#34; &gt;icalBuddy&lt;/a&gt;を使ってmacのCalendar.appからその日の予定を取得&lt;/li&gt;
+&lt;li&gt;その日の予定からその日作業に使える時間(≒mtgがない時間の合計)を算出&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1.&lt;/code&gt;と&lt;code&gt;2.&lt;/code&gt;をnvim-orgmode/orgmode
+春頃までは完了予定時刻を入れておらず、どうにも1日の終わりになってやっと危機感から仕事の集中力が上がってくる、というあまりよくない感じだった。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;タスクの完了予定時刻を入れるようにしてから常に各タスクの完了予定時刻までに終えられるようにタイムアタックしている感覚になり、集中力が増した気がしている。&lt;/p&gt;
 &lt;!-- ## 残業について(P74) --&gt;
 &lt;h2 id=&#34;見積もりについて&#34;&gt;見積もりについて&lt;/h2&gt;
@@ -88,6 +98,14 @@
 &lt;p&gt;ラバーダックデバッグ大事。&lt;/p&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;272ページとそこまで文量が多くないのと、内容もわかりやすい口調で書かれておりサクッと読めるので気になるかたはぜひ手に取ってみてください。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;snippet pluginは&lt;a href=&#34;https://github.com/L3MON4D3/LuaSnip&#34; target=&#34;_blank&#34; &gt;L3MON4D3/LuaSnip&lt;/a&gt;を使っている。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 </content>
     </item>
     

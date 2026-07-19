@@ -225,7 +225,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/07/19</time>
       
-    <span class="post-reading-time">5 min read (2093 words)</span></div>
+    <span class="post-reading-time">5 min read (2358 words)</span></div>
 
   
     <span class="post-tags">
@@ -281,16 +281,16 @@ if (!doNotTrack) {
 <!-- ## いざやってみると意外と大したことがない、ということはよくある(P35) -->
 <!-- あとは遅れれば遅れるほどタスクは増えることが多い（送れたことの謝罪やスケジュールやリソースの調整の必要性が発生する、など） -->
 <h2 id="サイクルシステム">サイクルシステム<a href="#サイクルシステム" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p>このセクションでは著者が考案したタスク管理プロセスである「サイクルシステム」について説明されてる。(P65)気になる方は本書を読んでいただくとして、ここで紹介されているうち、自分が取り入れているのは主に以下。</p>
+<p>P65付近では、著者が10年以上にわたって実践しているタスク管理手法である「サイクルシステム」について説明されている。気になる方は本書を読んでいただくとして、ここで紹介されているアイディアのうち、自分が取り入れているのは主に以下。</p>
 <ol>
 <li>タスクとその日のスケジュールを一箇所で管理する</li>
 <li>1日の始めにその日取り組むタスクとその完了予定時刻を記入する</li>
-<li>1日の終わりに未完了の仕事を次の日のタスクとして持ち越す</li>
+<li>1日の終わりに未完了のタスクを次の日のタスクとして持ち越す</li>
 </ol>
-<p>これを自分は<a href="https://github.com/nvim-orgmode/orgmode" target="_blank" >nvim-orgmode/orgmode</a>というNeovimで利用できるorg-modeを再現したプラグインを使って行っている。</p>
+<p>これを自分は<a href="https://github.com/nvim-orgmode/orgmode" target="_blank" >nvim-orgmode/orgmode</a>という、org-modeを再現したNeovimプラグインを使って実現している。</p>
 <!-- TODO: ↓っていうスクショをとるためにダミーの予定をいれたりする -->
 <!-- TODO: こんな見た目になっている。 -->
-<p>その日の</p>
+<p>上の画像のような感じで、その日の</p>
 <ol>
 <li>mtgなどの予定</li>
 <li>タスク(と完了予定時刻)</li>
@@ -298,7 +298,17 @@ if (!doNotTrack) {
 <li>利用可能時間のうち現在の残り時間</li>
 </ol>
 <p>を表示するようにしている。</p>
-<p>春頃までは完了予定時刻を入れておらず、どうにも1日の終わりになってやっと危機感から仕事の集中力が上がってくる、というあまりよくない感じだった。</p>
+<p>自分の使い方は以下のような感じ。</p>
+<ol>
+<li>一日の始まりにsnippetに登録したその日の予定をnvim-orgmode/orgmodeに反映するコマンドを実行している。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>具体的な処理は以下。
+<ol>
+<li><a href="https://formulae.brew.sh/formula/ical-buddy" target="_blank" >icalBuddy</a>を使ってmacのCalendar.appからその日の予定を取得</li>
+<li>その日の予定からその日作業に使える時間(≒mtgがない時間の合計)を算出</li>
+<li><code>1.</code>と<code>2.</code>をnvim-orgmode/orgmode
+春頃までは完了予定時刻を入れておらず、どうにも1日の終わりになってやっと危機感から仕事の集中力が上がってくる、というあまりよくない感じだった。</li>
+</ol>
+</li>
+</ol>
 <p>タスクの完了予定時刻を入れるようにしてから常に各タスクの完了予定時刻までに終えられるようにタイムアタックしている感覚になり、集中力が増した気がしている。</p>
 <!-- ## 残業について(P74) -->
 <h2 id="見積もりについて">見積もりについて<a href="#見積もりについて" class="hanchor" ariaLabel="Anchor">#</a> </h2>
@@ -328,6 +338,14 @@ if (!doNotTrack) {
 <p>ラバーダックデバッグ大事。</p>
 <h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>272ページとそこまで文量が多くないのと、内容もわかりやすい口調で書かれておりサクッと読めるので気になるかたはぜひ手に取ってみてください。</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>snippet pluginは<a href="https://github.com/L3MON4D3/LuaSnip" target="_blank" >L3MON4D3/LuaSnip</a>を使っている。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 
       </div></div>
 
