@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ソフトスキル on blog.kyu08.com</title>
+    <link>https://blog.kyu08.com/pr-355/tags/%E3%82%BD%E3%83%95%E3%83%88%E3%82%B9%E3%82%AD%E3%83%AB/</link>
+    <description>Recent content in ソフトスキル on blog.kyu08.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>blog.kyu08.com</copyright>
+    <lastBuildDate>Sun, 19 Jul 2026 00:00:15 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-355/tags/%E3%82%BD%E3%83%95%E3%83%88%E3%82%B9%E3%82%AD%E3%83%AB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>『エンジニアのための時間管理術』を読んだ</title>
+      <link>https://blog.kyu08.com/pr-355/posts/time-management-for-system-administrators/</link>
+      <pubDate>Sun, 19 Jul 2026 00:00:15 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-355/posts/time-management-for-system-administrators/</guid>
+      <description>タスク管理についてもう少しいい感じにしたいなーというぼんやりとした課題感があったので、何か参考になることが書いてあるかも、と思い『エンジニア</description>
+      <content>&lt;p&gt;タスク管理についてもう少しいい感じにしたいなーというぼんやりとした課題感があったので、何か参考になることが書いてあるかも、と思い『エンジニアのための時間管理術』を読んでみた。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.oreilly.co.jp/books/9784873113074/&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://www.oreilly.co.jp/books/9784873113074/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://www.oreilly.co.jp/books/images/picture_large4-87311-307-5.jpeg&#34; alt=&#34;エンジニアのための時間管理術&#34; loading=&#34;lazy&#34;&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;エンジニアのための時間管理術&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;……筆者が言いたいのは、システム管理が仕事ではないということです。それはライフスタイルなのです。私たちのライフスタイルを私たちの言葉で述べ、私たちの問題を解決するタイムマネジメントの本が必要なのです。（「はじめに」より）
+本書はシステム管理者、ネットワーク管理者を中心にしたエンジニアのための実践的な時間管理術を紹介する書籍です。著者が考案した「サイクルシステム」と呼ばれる方法を使って、作業リスト、スケジュール、さらに仕事とプライベート双方の長期的な目標を管理する方法を解説します。長期的に行うプロジェクトとすぐに行う必要がある割り込み作業の優先順位を整理し、ストレスの少ない、充実した一日を送ることを可能にすることでしょう。上司とのコミュニケーション、文書化の進め方、作業の自動化などシステム管理者が必要としているノウハウを紹介していることも特徴です。&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.oreilly.co.jp/books/9784873113074/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;この記事では本書を読んで参考になったところをまとめておく。なお引用部分末尾の&lt;code&gt;(P8)&lt;/code&gt;のような数字は引用部分のページ番号を表す。&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&#34;image-with-caption&#34;&gt;
+    &lt;img src=&#34;book.webp&#34; alt=&#34;book.webp&#34; loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;表紙はクズリというイタチ科の獰猛な動物らしい&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;プロセスを信頼する&#34;&gt;プロセスを信頼する&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本書のいくつかの章では、毎朝5分間かけて1日の計画を立てることを勧めています。皮肉なことに、忙しい日ほどその5分間を削ってしまいたくなりますが、そういうときこそ、5分間の計画が最も効果を発揮するのです。筆者は「プロセスを信頼しろ」と自分に言い聞かせて、計画を立てています。そしていつも、そうしておいてよかったとあとから実感するのです。&lt;/p&gt;
+&lt;p&gt;「後回しにしよう」とか、「1日の計画を立てるのに5分間もかけている暇はない」といったマイナス思考に支配されているときでも、モットーには、頭をポジティブ思考に切り替え、マイナス思考を追い出す力があります。(P8)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;忙しい日こそプランニングが重要になるので、例外なく毎日その日の計画を立てるのが重要そう。&lt;/p&gt;
+&lt;p&gt;あとは書かれている通りだが、忙しくて気持ちに余裕がないときでもルーティンを守れると自己効力感が湧いてきたり小さな達成感を感じてポジティブな気持ちになったりするのでその意味でも毎日ちゃんとやるのは大事そう。&lt;/p&gt;
+&lt;p&gt;毎日無理なく続けるための工夫としては自動化できる部分は自動化して少ないエネルギーでタスクを管理できるようにしたり、お気に入りの道具を使ったりするのが大事なように思う。自分の場合はキーボードだけで操作できるUIが好きなのでNeovim上でタスクを管理している。(詳しくは次のセクションで説明する)&lt;/p&gt;
+&lt;p&gt;人によってはお気に入りの紙とペンを使ったり、Notionを使ったり、それ用のデスクトップアプリを自作したりするのもいいかもしれない。&lt;/p&gt;
+&lt;h2 id=&#34;サイクルシステム&#34;&gt;サイクルシステム&lt;/h2&gt;
+&lt;p&gt;P65付近では、著者が10年以上にわたって実践しているタスク管理手法である「サイクルシステム」について説明されている。気になる方は本書を読んでいただくとして、ここで紹介されているアイディアのうち、自分が取り入れているのは主に以下。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;タスクとその日のスケジュールを一箇所で管理する&lt;/li&gt;
+&lt;li&gt;1日の始めにその日取り組むタスクとその完了予定時刻を記入する&lt;/li&gt;
+&lt;li&gt;1日の終わりに未完了のタスクを次の日のタスクとして持ち越す&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;これを自分は&lt;a href=&#34;https://github.com/nvim-orgmode/orgmode&#34; target=&#34;_blank&#34; &gt;nvim-orgmode/orgmode&lt;/a&gt;という、org-modeを再現したNeovimプラグインを使って実現している。&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&#34;image-with-caption&#34;&gt;
+    &lt;img src=&#34;orgmode-final-form.webp&#34; alt=&#34;orgmode-final-form.webp&#34; loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;orgmodeのdaily agenda(簡単にいうとその日の予定やタスクの一覧)を表示している様子&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;上の画像のような感じで、その日の&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;タスク名とその完了予定時刻、&lt;code&gt;TODO&lt;/code&gt;/&lt;code&gt;DOING&lt;/code&gt;/&lt;code&gt;WAIT&lt;/code&gt;/&lt;code&gt;DONE&lt;/code&gt;などのステータス(上の画像では赤または緑で表示されている行)&lt;/li&gt;
+&lt;li&gt;ミーティングなどの予定&lt;/li&gt;
+&lt;li&gt;作業可能時間&lt;/li&gt;
+&lt;li&gt;作業可能時間のうち現在の残り時間(L2の&lt;code&gt;⏰ Remaining: 4h 00m&lt;/code&gt;のようなやつ)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;を表示するようにしている。&lt;/p&gt;
+&lt;p&gt;自分は以下のような流れで使っている。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h3 id=&#34;1-初期状態&#34;&gt;1. 初期状態&lt;/h3&gt;
+&lt;p&gt;&lt;figure class=&#34;image-with-caption&#34;&gt;
+    &lt;img src=&#34;orgmode-initial.webp&#34; alt=&#34;orgmode-initial.webp&#34; loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;初期状態&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;初期状態は上の画像のような感じで、前日の夜時点で翌日に移動したタスクだけが表示されている。&lt;/p&gt;
+&lt;h3 id=&#34;2-その日の予定を登録&#34;&gt;2. その日の予定を登録&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;orgmode-schedules-of-the-day.webp&#34; alt=&#34;orgmode-schedules-of-the-day.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;1日の始まりにその日の予定を反映する。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;具体的な処理は以下。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://formulae.brew.sh/formula/ical-buddy&#34; target=&#34;_blank&#34; &gt;icalBuddy&lt;/a&gt;を使ってmacのCalendar.appからその日の予定を取得する&lt;/li&gt;
+&lt;li&gt;その日の予定からその日作業に使える時間(≒ミーティングがない時間の合計)を算出する&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1.&lt;/code&gt;と&lt;code&gt;2.&lt;/code&gt;に加えて&lt;code&gt;今日のタスクをplanningする&lt;/code&gt;というタスクをnvim-orgmode/orgmodeが認識できるformatで出力する&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;3-各タスクの完了予定時刻を記入&#34;&gt;3. 各タスクの完了予定時刻を記入&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;orgmode-estimate-completion-time.webp&#34; alt=&#34;orgmode-estimate-completion-time.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;その日の作業可能時間を踏まえて、その日に完了したいタスクの完了予定時刻を登録し、&lt;code&gt;今日のタスクをplanningする&lt;/code&gt;を&lt;code&gt;DONE&lt;/code&gt;に変更する。&lt;/p&gt;
+&lt;h3 id=&#34;4-タスクを進める--終わらなかったものは翌日に持ち越す&#34;&gt;4. タスクを進める + 終わらなかったものは翌日に持ち越す&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;orgmode-during-day.webp&#34; alt=&#34;orgmode-during-day.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;あとはこんな感じで適宜タスクを&lt;code&gt;DONE&lt;/code&gt;にしていき、1日の最後に残ったタスクは次の日に持ち越す&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;、という流れで進めている。&lt;/p&gt;
+&lt;h3 id=&#34;今のところの所感&#34;&gt;今のところの所感&lt;/h3&gt;
+&lt;p&gt;春頃までは完了予定時刻を入れたり、その日の作業可能時間を計算したりしておらず、1日の終わりになってやっと危機感から仕事の集中力が上がってくる、というあまりよくない感じの日が多かった。&lt;/p&gt;
+&lt;p&gt;3ヶ月くらい今の方法で運用してみているが、タスクの完了予定時刻を入れるようにしてから、各タスクの完了予定時刻までに終えられるようにタイムアタックしている感覚になり、集中力が増した気がしている。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;タスクごとの時間管理をする、というアイディアが自分にとってはこの本での一番の発見だった。&lt;/strong&gt;(人によっては当たり前のようにやっているとは思うが自分はこれまでちゃんとできていなかった)&lt;/p&gt;
+&lt;h2 id=&#34;タスクの進め方&#34;&gt;タスクの進め方&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1つの作業を終えたら、次の作業を開始します。勢いを持続させてください。(P79)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;作業項目をリストの先頭にあるものから片付けていくことは、先延ばしを避けるためのよい方法です。(P120)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;1日の始めにその日のタスクプランニングをしたら、あとは上から勢いをもってひたすら片付けていく。&lt;/p&gt;
+&lt;p&gt;書いていて思ったがこれも意外と実践できておらず、途中で軽めのタスクを挟んだりしたくなりがち。機械的に上から進めるようにしばらく意識してみる。&lt;/p&gt;
+&lt;h2 id=&#34;誰かに状況を説明することはストレスの解消になる&#34;&gt;誰かに状況を説明することはストレスの解消になる&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;誰かに状況を説明することは、ストレスの解消にはもってこいです。何のアドバイスも得られなくても、少なくとも聞いてもらえたという気持ちになります。多くの場合は、それで気持ちが軽くなります。(P137)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;誰かになにかをはっきりと説明すると、問題を解決するのに役立ちます。誰かに問題を説明していて、その解決策に気付いたことが何度あるでしょう。(P137)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以前似たような経験をしたので共感した。例えばひとりプロジェクトだとスケジュール管理もタスクの実行も自分でやる必要があるが、自分の選択に自信がないときに今の状況や取りうる選択肢とそのメリデメ、そこからなぜ何を選択したかを話すだけでかなり楽になったことがあった。&lt;/p&gt;
+&lt;p&gt;自分の状況とそこに対する選択を人に説明することで「どう考えても今の選択が一番合理的」とか「この部分は自信がない、ってことはもう少し深く考えたほうがいいかも」のような感じで自分の選択を客観視できる。&lt;/p&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.oreilly.com/library/view/time-management-for/0596007833/&#34; target=&#34;_blank&#34; &gt;原著(Time Management for System Administrators)&lt;/a&gt;は21年前(2005年)に書かれた本のようだが、2026年現在でも参考にできる点が多く、自分のタスク管理を改善できたので読んでよかった。&lt;/p&gt;
+&lt;p&gt;272ページとそこまで文量が多くないのと、内容もわかりやすい口調で書かれておりサクサクと読むことができた。&lt;/p&gt;
+&lt;p&gt;紹介した部分以外にもいいことがたくさん書いてあったので気になった方はぜひ手に取ってみてください。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;ちなみに、ここで紹介している機能にはnvim-orgmode/orgmode標準のものもあれば、自分でscriptを書いて追加している機能もある。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/L3MON4D3/LuaSnip&#34; target=&#34;_blank&#34; &gt;L3MON4D3/LuaSnip&lt;/a&gt;というsnippet pluginを使って実現している。&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;もちろんプロジェクトによっては、ただ翌日に持ち越すだけではなく、プロジェクトのステークホルダーにQCDの相談をする必要があるケースもあるとは思います。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>『解像度を上げる』を読んだ</title>
+      <link>https://blog.kyu08.com/pr-355/posts/kaizodo-wo-ageru/</link>
+      <pubDate>Wed, 11 Feb 2026 13:00:41 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-355/posts/kaizodo-wo-ageru/</guid>
+      <description>おすすめしていただいて気になっていた『解像度を上げる――曖昧な思考を明晰にする「深さ・広さ・構造・時間」の４視点と行動法』を読んだ。 起業家に</description>
+      <content>&lt;p&gt;おすすめしていただいて気になっていた&lt;a href=&#34;https://eijipress.co.jp/products/2318&#34; target=&#34;_blank&#34; &gt;『解像度を上げる――曖昧な思考を明晰にする「深さ・広さ・構造・時間」の４視点と行動法』&lt;/a&gt;を読んだ。&lt;/p&gt;
+&lt;p&gt;起業家に向けて書かれている記述が多かったが、いちソフトウェアエンジニアとしても非常に参考になる部分が多かったので自分に刺さったポイントを書いていく。&lt;/p&gt;
+&lt;p&gt;なお、引用は特別に断りがない限りすべて同書からのものです。&lt;/p&gt;
+&lt;h2 id=&#34;解像度の構成要素&#34;&gt;「解像度」の構成要素&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;解像度の高さが何によって構成されているかを考えたときに見えてきたのが、「深さ」「広さ」「構造」「時間」の４つの視点です。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;解像度の構成要素を「深さ」「広さ」「構造」「時間」の4つと整理する視点&lt;/strong&gt;を得られたのが本書を読んで一番良かったポイントかもしれない。&lt;/p&gt;
+&lt;p&gt;この視点があると「なんか解像度が低いぞ&amp;hellip;」となったときにどの要素が足りていないかを考えることで効率的に再現性高く解像度を上げることができそう。他の人のアウトプットへのFBにもかなり便利に使えそう。&lt;/p&gt;
+&lt;p&gt;4要素は以下のように理解した。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;深さ:&lt;/strong&gt; 具体性を上げたり、因果関係を深堀りしたりする&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;広さ:&lt;/strong&gt; 網羅性（幅広さ）を上げる&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;構造:&lt;/strong&gt; 「深さ」と「広さ」のステップで出した各要素を構造化する（要素を分解したり整理したりする）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;時間:&lt;/strong&gt; 「過去」「現在」「未来」のような時間軸の観点を盛り込む&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;情報をツリー構造で整理する&#34;&gt;情報をツリー構造で整理する&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ここまで、深さ、広さ、構造、時間の４つの視点で解像度をチェックしてきました。こうしたチェックをやりやすくする一つの方法としてお勧めなのが、一度自分の理解をツリー構造で整理してみることです。 　&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本書でも幾度となくツリー構造で分析を整理した図が紹介されていた。&lt;/p&gt;
+&lt;p&gt;ツリー構造で書いていくと色々なメリットがあって良さそうので取り入れてみようと思う。&lt;/p&gt;
+&lt;p&gt;たとえば思考の現在地が把握しやすくなることでかなり効率よく思考を深めやすくなる気がする。（今自分は仮説1の解決策2について考えているんだな〜みたいなのが一目でわかるので狭くなりがちな思考を広げられたり、他の要素と行ったり来たりしながら思考を深めやすそう。）&lt;/p&gt;
+&lt;p&gt;あとは目的意識なく深さと広さを広げすぎるとノイズが増えそうなので構造化するのを忘れないことも大事そう。（このあたりは実際にやってみて調節するのがよさそう）&lt;/p&gt;
+&lt;h2 id=&#34;解像度を上げる対象&#34;&gt;解像度を上げる対象&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;上げるべきは、課題と解決策の解像度&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;ビジネスの文脈では特に&lt;strong&gt;課題&lt;/strong&gt;と&lt;strong&gt;解決策&lt;/strong&gt;の解像度を上げることが重要。&lt;/p&gt;
+&lt;p&gt;（文字にするとそれはそうという感じにはなってしまうが）「解像度が足りない」と感じたときに足りないのが&lt;strong&gt;課題の解像度&lt;/strong&gt;なのか&lt;strong&gt;解決策の解像度&lt;/strong&gt;なのか両方なのかを分けて考えられるとよりスムーズに成果に繋がりそう。&lt;/p&gt;
+&lt;p&gt;（直感的には課題の解像度が上がらないと解決策の精度や解像度は上がらなそうに思えるので前者が前提になりそう。）&lt;/p&gt;
+&lt;h2 id=&#34;課題の選び方&#34;&gt;課題の選び方&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;このように課題や問いが重要視される理由は、良い課題を選べるかどうかで生み出される価値がほぼ決まると言っても過言ではないからです。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;『イシューからはじめよ』でもイシュー度が高い課題を解くことの重要性が説かれていたのを思い出した。&lt;/p&gt;
+&lt;p&gt;そういう意味でもまずは課題の解像度を上げることが重要かもしれない。（緊急度が高く重要度が低い課題とかはぱっと解決して早く次に行きたい種類の課題なので例外かもしれないが）&lt;/p&gt;
+&lt;h2 id=&#34;書くことで考える&#34;&gt;書くことで考える&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;まず取り組んでほしいのは、「今、何が最も重要な課題だと思っているのか、それはなぜなのか」を仮説で良いから最初に書くことです。&lt;/p&gt;
+&lt;p&gt;考え抜いた「結果」を書くのではありません。書くことは思考の「過程」です。書くことで私たちは考えることができます。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;ブログに記事を書いたり（まさにこの記事とかがそう）チームで何か意思決定をする際に会議資料を書いたりすることで自分が考えていることがクリアになったり、思考が深まったりすることがよくあるので最後の2文にはすごく共感した。&lt;/p&gt;
+&lt;p&gt;文字にすることの効果はかなり感じているので今後も悩んだら（というか何かを考えたいときは）書くことで思考を深めていこうと思った。&lt;/p&gt;
+&lt;h2 id=&#34;書くときの留意点&#34;&gt;書くときの留意点&lt;/h2&gt;
+&lt;p&gt;課題の解像度を「深さ」の視点で上げるための方法として「現時点での自分の課題認識を書き出す」という方法が紹介されていた。&lt;/p&gt;
+&lt;p&gt;その際のポイントとして以下のような点が挙げられていた。&lt;/p&gt;
+&lt;p&gt;（他の人に読んでもらうための）わかりやすい文章を書くという観点でも非常に参考になりそうだったので一部を引用して紹介する。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最初の書き出しは箇条書きでも構いません。ただし、より詳細に課題を検討するときには、文章として長文で書くことをお勧めします。箇条書きを使うと、論理の飛躍や矛盾などに気づきづらいからです。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;箇条書きだと論理的にわかりやすい文書になるかはかなり書き手に依存すると思っているので頷けた。（自分は箇条書き自体がダメだとは思ってないが注意深く使わないと読み手の解釈が一意にならないので気をつけて使おうと思っている派）&lt;/p&gt;
+&lt;p&gt;よくあるパターンでいうと以下のようなケースがあると思う。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（「なので」「とはいえ」「しかし」などの接続詞が省略されることが多く、）論理的なつながりがわかりづらい&lt;/li&gt;
+&lt;li&gt;列挙された項目がシーケンスなのか選択肢なのか、AndなのかOrなのかがわかりづらい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Amazonでも会議資料に箇条書きだけで構成されたスライドを使うのは禁止らしい。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;（さすがに社員全員が同一のルールを実践してるとは限らないと思うが）&lt;/p&gt;
+&lt;p&gt;なんにせよ読み手が疑問を感じたり2パターン以上の解釈ができてしまうような文章を書かないことを心がけるのがよさそう。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;主語が明確な文にする　&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;これも抜けがちだがクリティカルな齟齬につながりやすいので気をつけたい。（自分の場合はどちらかというと口頭で話してるときに抜けがちかも）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;動詞を入れる　──　体言止めではなく、動詞を入れるようにしましょう。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;体言止めも読み手に解釈の余地を与えがちなので注意したい。&lt;/p&gt;
+&lt;p&gt;たとえば「データ移行の切り戻しは手動。」とドキュメントに書かれていた場合、「手動で行う予定」なのか「手動でしか行えない」（制約の共有）なのか「手動で行った」（完了報告）なのかが明確ではなかったりする。&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;スタートアップに関するエッセイで有名なポール・グレアムも、エッセイを公開する前には必ず声に出して読み上げて、友達に話すような言い回しになっているかを確認しているそうです（４）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;普段会議資料を書くときに最後は声に出して読んでみて詰まるポイントがないかチェックしているのでこの点も共感できた。うまく話せないところは論理が飛躍していたり変な結論になっていたりするのことが多いので、仕上げとして声に出して読むのは大事そう。&lt;/p&gt;
+&lt;p&gt;ことこのブログに関しては書いた後に声に出して読んだりはしていないが良さそうなので試してみようと思った。&lt;/p&gt;
+&lt;h2 id=&#34;深める&#34;&gt;深める&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;事例のサーベイが十分できているかどうかの閾値は、関連事例を「１００」程度知っているか&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;（起業ではなく）ソフトウェアエンジニアリングの場面では必ずしも100個必要とは限らないが、他社の事例を知っておくと引き出しが増えるので、知っておくに越したことはないと思う。&lt;/p&gt;
+&lt;p&gt;たとえばソフトウェアアーキテクチャのパターンやディレクトリ構成などは書籍やテックブログ、登壇資料で数多く紹介されているのでそういったアウトプットから学べるとよさそう。普段自分が仕事で関わっている領域ではゼロから何も見ずに自分で考えることに価値があるというよりは、効果的な施策や判断に価値があることが多いので重要な意思決定をする際には適切な情報収集をできるとよさそう。&lt;/p&gt;
+&lt;p&gt;また、そうしたネット上の資料は無料で公開されていることが多く、そうした環境にかなりお世話になっている自覚があるので自分もアウトプットを続けて少しでも業界、エコシステムに恩返しをしていければなと思う。&lt;/p&gt;
+&lt;h2 id=&#34;不慣れな分野のキャッチアップ&#34;&gt;不慣れな分野のキャッチアップ&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本屋に行って、端から端まで本を買う 　事例のサーベイがある程度終わったら、次は大きめの書店に行き、自分の課題に関連する業界の本を端から端まで買うことをお勧めします。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;著者によって異なる視点から同じ物事を見ることができますし、重複しているのなら、その情報は誰の目から見ても重要だということが分かります。そうして業界の構造やトレンドを深掘りしていくのです。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;特に不慣れな分野に飛び込むときにはこのような方法は効果的そう。&lt;/p&gt;
+&lt;p&gt;同じような内容の書籍は1冊読めばいいのでは？と思っていたが複数の著者で共通した内容がある場合はその内容の重要性が担保されるという観点はなるほどと思った。&lt;/p&gt;
+&lt;h2 id=&#34;教える&#34;&gt;教える&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;教える 　対話や質問のさらに一歩先の言語化として、教えるがあります。今考えている課題について、よく知らない人に教えるつもりで話してみましょう。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;自分がブログを書いている理由の1つ。あまり人に教えられるような書き方まではできていないが、先の引用でもあったように書くことを通して理解や思考を深められている。社内外の勉強会での登壇などもこれにあたりそう。&lt;/p&gt;
+&lt;h2 id=&#34;コミュニティに参加する&#34;&gt;コミュニティに参加する&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;コミュニティに参加すると、深く考えるためのヒントや、情報をもらえます。それに、誰かが近くにいることで、必然的に言語化や壁打ちの機会が生まれます。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;これまであまりコミュニティには参加してこなかったが、今年はGoの知識を深めたいのでチャレンジしてみようと思った。（さっそく2/21のGo Conference mini in Sendai 2026に行ってみることにした）&lt;/p&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;主に起業家や起業家を志す人に向けて書かれているように感じたが、いちソフトウェアエンジニアとしても参考になる部分が非常に多く、読んでよかった。&lt;/p&gt;
+&lt;p&gt;解像度を上げるための4つの視点「深さ」「広さ」「構造」「時間」は非常に有用なフレームワークだと感じたのでしばらくは意識的に使ってみようと思う。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;この箇条書き複数パターンの例示であることが伝わっている&amp;hellip;と信じたい。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://forbesjapan.com/articles/detail/38119&#34; target=&#34;_blank&#34; &gt;https://forbesjapan.com/articles/detail/38119&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;文脈を読めばわかるだろという意見もあるかもしれないが、可能な限りローコンテキストに記述することで読み手の認知負荷低減に繋がり、結果としてコミュニケーションコストを下げられると考えています。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>『コンサル一年目が学ぶこと』を読んだ</title>
+      <link>https://blog.kyu08.com/pr-355/posts/consultant/</link>
+      <pubDate>Sat, 25 Dec 2021 16:15:48 +0000</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-355/posts/consultant/</guid>
+      <description>コンサル一年目が学ぶこと を読んだ。 何を期待して読んだのか これまで技術の勉強はしたことがあったが、社会人として普遍的なスキルである 問題解決能力</description>
+      <content>&lt;p&gt;&lt;a href=&#34;https://www.amazon.co.jp/%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%AB%E4%B8%80%E5%B9%B4%E7%9B%AE%E3%81%8C%E5%AD%A6%E3%81%B6%E3%81%93%E3%81%A8-%E5%A4%A7%E7%9F%B3%E5%93%B2%E4%B9%8B-ebook/dp/B00MA671WW/ref=sr_1_5?adgrpid=89884031168&amp;amp;gclid=CjwKCAiAhreNBhAYEiwAFGGKPLfeLxQ_KIeJv22itv63KSRBjnAb3p0hH0Q0JvgN6FzTeD2J6dcsQBoCs3QQAvD_BwE&amp;amp;hvadid=553974437471&amp;amp;hvdev=c&amp;amp;hvlocphy=1009307&amp;amp;hvnetw=g&amp;amp;hvqmt=e&amp;amp;hvrand=17984675329684059400&amp;amp;hvtargid=kwd-416077613251&amp;amp;hydadcr=27493_14478962&amp;amp;jp-ad-ap=0&amp;amp;keywords=%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%AB&amp;#43;%E4%B8%80&amp;#43;%E5%B9%B4&amp;#43;%E7%9B%AE&amp;#43;%E3%81%8C&amp;#43;%E5%AD%A6%E3%81%B6&amp;#43;%E3%81%93%E3%81%A8&amp;amp;qid=1638793971&amp;amp;sr=8-5&#34; target=&#34;_blank&#34; &gt;コンサル一年目が学ぶこと&lt;/a&gt; を読んだ。&lt;/p&gt;
+&lt;h2 id=&#34;何を期待して読んだのか&#34;&gt;何を期待して読んだのか&lt;/h2&gt;
+&lt;p&gt;これまで技術の勉強はしたことがあったが、社会人として普遍的なスキルである&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;問題解決能力&lt;/li&gt;
+&lt;li&gt;仕事を円滑に進めるためのコミュニケーションの取り方&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;あたりをちゃんと学んだことがなく、一度入門書的なものに触れたいと思っていたので読んでみた。&lt;/p&gt;
+&lt;h2 id=&#34;学び&#34;&gt;学び&lt;/h2&gt;
+&lt;p&gt;印象に残っているのは以下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;端的に話す&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;仮説を持って行動する&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重要なことに時間を使う&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;期待値のすり合わせを怠らない&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Quick and Dirty&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;それぞれ簡単に補足していく。&lt;/p&gt;
+&lt;h3 id=&#34;端的に話すtalk-straight&#34;&gt;端的に話す(Talk Straight)&lt;/h3&gt;
+&lt;p&gt;聞かれたことに対してストレートに答える。具体的には&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;端的に喋る&lt;/li&gt;
+&lt;li&gt;素直に話す&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ことが重要。&lt;/p&gt;
+&lt;p&gt;これは相手の立場に立ってみれば当然で、質問をしたのにその答えがなかなか返ってこないと「結局何がいいたいんだ？」となってしまう。&lt;/p&gt;
+&lt;p&gt;とは言いつつも、自分自身も自分の思考が整理できていない時は特にだらだらと喋ってしまいがちなので、そういう時はいいチャンスだと思って一旦思考を整理するようにしたい。&lt;/p&gt;
+&lt;h3 id=&#34;仮説を持って行動する&#34;&gt;仮説を持って行動する&lt;/h3&gt;
+&lt;p&gt;1から10まで調査しきっていては時間が足りない。最低限の調査をして仮説を立てたら、検証 -&amp;gt; 仮説の修正のループを高速で回していくことで限られた時間で精度の高い結論を導くことができる。&lt;/p&gt;
+&lt;p&gt;仮説思考を身につける第1歩として、仮説を持つクセをつけるためにあらゆる事象に対して「自分はどう思うのか」「なぜそう思うのか」というスタンスを持つことを心がけたい。&lt;/p&gt;
+&lt;h3 id=&#34;重要なことに時間を使う&#34;&gt;重要なことに時間を使う&lt;/h3&gt;
+&lt;p&gt;使える時間は限られているので費用対効果を常に意識して時間の使い方を決める。&lt;/p&gt;
+&lt;p&gt;仮説思考の話とも繋がるが優先順位を設定して重要な課題から手をつけていきたい。&lt;/p&gt;
+&lt;p&gt;自分に振ってきたタスクどうしの優先順位だけでなく、もう一段上の視座で自分/自チームが今本当に取り組むべきことは何なのか、という思考を心がけたい。&lt;/p&gt;
+&lt;h3 id=&#34;期待値のすり合わせを怠らない&#34;&gt;期待値のすり合わせを怠らない&lt;/h3&gt;
+&lt;p&gt;求められていないことに時間を使っても成果には繋がらない。まずは自分が何を期待されているかを正確に把握することが重要。&lt;/p&gt;
+&lt;p&gt;自分の認識がズレていて後になって手戻りが発生することが稀によくあるので、タスクを振られた際などにその場で&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;そのタスクの目的&lt;/li&gt;
+&lt;li&gt;求められているアウトプット&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;を明確にするように心がけたい。&lt;/p&gt;
+&lt;h3 id=&#34;quick-and-dirty&#34;&gt;Quick and Dirty&lt;/h3&gt;
+&lt;p&gt;3日間かけて100% のアウトプットを出すのではなく、まずは3時間で30% のアウトプットをだすべき。&lt;/p&gt;
+&lt;p&gt;こまめにアウトプットを行ってフィードバックを得ることができれば間違った方向に進んでしまって時間を浪費する前に軌道修正できる。&lt;/p&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;この本を読んだことの収穫としては、自分の中でぼんやりと課題感としてあった&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ただがむしゃらに取り組むのではなく効率よく問題を解決するにはどうすればいいのか&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;というイシューへの回答の1つである、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;重要思考・仮説思考を用いる&lt;/li&gt;
+&lt;li&gt;Quick and Dirty&lt;/li&gt;
+&lt;li&gt;期待値のすり合わせを怠らない&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;という考え方に出会えたことが挙げられると思う。&lt;/p&gt;
+&lt;p&gt;また、コンサルタントのプロフェッショナリズムに触れて自分も周囲の期待を越え続ける存在でありたいと思った。&lt;/p&gt;
+&lt;h3 id=&#34;おまけ&#34;&gt;おまけ&lt;/h3&gt;
+&lt;p&gt;「仮説思考をやっていこうと思いました」(意訳) という話を上長にしたところ『イシューからはじめよ』をおすすめされたのでこちらも読んでみようと思う。&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
