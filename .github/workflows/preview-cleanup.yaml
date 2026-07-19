@@ -5,7 +5,7 @@ on:
     types: [closed]
 
 concurrency:
-  group: cleanup-preview-${{ github.event.pull_request.number }}
+  group: cleanup-preview
   cancel-in-progress: false
 
 jobs:
