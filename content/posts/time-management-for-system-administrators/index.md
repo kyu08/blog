@@ -57,25 +57,39 @@ P65付近では、著者が10年以上にわたって実践しているタスク
 
 これを自分は[nvim-orgmode/orgmode](https://github.com/nvim-orgmode/orgmode)という、org-modeを再現したNeovimプラグインを使って実現している。
 
-<!-- TODO: ↓っていうスクショをとるためにダミーの予定をいれたりする -->
-<!-- TODO: こんな見た目になっている。 -->
+![orgmode-final-form.webp](orgmode-final-form.webp "orgmodeのdaily agenda(簡単にいうとその日の予定やタスクの一覧)を表示している様子")
 
 上の画像のような感じで、その日の
 
+1. タスクと完了予定時刻(上の画像では赤または緑で表示されている行)
 1. mtgなどの予定
-1. タスク(と完了予定時刻)
-1. 利用可能時間
-1. 利用可能時間のうち現在の残り時間
+1. 作業可能時間
+1. 作業可能時間のうち現在の残り時間(L2の`⏰ Remaining: 4h 00m`のようなやつ)
 
 を表示するようにしている。
 
 自分の使い方は以下のような感じ。
 
-1. 一日の始まりにsnippetに登録したその日の予定をnvim-orgmode/orgmodeに反映するコマンドを実行している。[^1]具体的な処理は以下。
-    1. [icalBuddy](https://formulae.brew.sh/formula/ical-buddy)を使ってmacのCalendar.appからその日の予定を取得
-    1. その日の予定からその日作業に使える時間(≒mtgがない時間の合計)を算出
-    1. `1.`と`2.`をnvim-orgmode/orgmode
-春頃までは完了予定時刻を入れておらず、どうにも1日の終わりになってやっと危機感から仕事の集中力が上がってくる、というあまりよくない感じだった。
+![orgmode-initial.webp](orgmode-initial.webp "初期状態")
+
+初期状態は上の画像のような感じで、前日の夜時点で翌日に移動したタスクだけが表示されている。
+
+![orgmode-schedules-of-the-day.webp](orgmode-schedules-of-the-day.webp)
+
+次に、一日の始まりにsnippetに登録したその日の予定をnvim-orgmode/orgmodeに反映するコマンドを実行する。[^1]具体的な処理は以下。
+1. [icalBuddy](https://formulae.brew.sh/formula/ical-buddy)を使ってmacのCalendar.appからその日の予定を取得
+1. その日の予定からその日作業に使える時間(≒mtgがない時間の合計)を算出
+1. `1.`と`2.`に加えて`今日のタスクをplanningする`というタスクをnvim-orgmode/orgmodeで認識できるformatで出力
+
+![orgmode-estimate-completion-time.webp](orgmode-estimate-completion-time.webp)
+
+その後、その日に完了したいタスクの完了予定時刻を登録し、`今日のタスクをplanningする`を`DONE`に変更する。
+
+![orgmode-during-day.webp](orgmode-during-day.webp)
+
+あとはこんな感じで適宜タスクを`DONE`にしていく、という流れ。
+
+春頃までは完了予定時刻を入れたり、その日の作業可能時間を計算したりしておらず、1日の終わりになってやっと危機感から仕事の集中力が上がってくる、というあまりよくない感じの日が多かった。
 
 タスクの完了予定時刻を入れるようにしてから常に各タスクの完了予定時刻までに終えられるようにタイムアタックしている感覚になり、集中力が増した気がしている。
 
