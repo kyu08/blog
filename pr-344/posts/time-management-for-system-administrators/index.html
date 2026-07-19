@@ -225,7 +225,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/07/19</time>
       
-    <span class="post-reading-time">7 min read (3068 words)</span></div>
+    <span class="post-reading-time">7 min read (3042 words)</span></div>
 
   
     <span class="post-tags">
@@ -254,7 +254,6 @@ if (!doNotTrack) {
         <li><a href="#今のところの所感">今のところの所感</a></li>
       </ul>
     </li>
-    <li><a href="#見積もりについて">見積もりについて</a></li>
     <li><a href="#タスクの進め方">タスクの進め方</a></li>
     <li><a href="#誰かに状況を説明することはストレスの解消になる">誰かに状況を説明することはストレスの解消になる</a></li>
     <li><a href="#まとめ">まとめ</a></li>
@@ -308,7 +307,7 @@ if (!doNotTrack) {
 <li>作業可能時間のうち現在の残り時間(L2の<code>⏰ Remaining: 4h 00m</code>のようなやつ)</li>
 </ol>
 <p>を表示するようにしている。</p>
-<p>自分は以下のような流れで使っている。</p>
+<p>自分は以下のような流れで使っている。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <h3 id="1-初期状態">1. 初期状態<a href="#1-初期状態" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p><figure class="image-with-caption">
     <img src="orgmode-initial.webp" alt="orgmode-initial.webp" loading="lazy" />
@@ -317,7 +316,7 @@ if (!doNotTrack) {
 <p>初期状態は上の画像のような感じで、前日の夜時点で翌日に移動したタスクだけが表示されている。</p>
 <h3 id="2-その日の予定を登録">2. その日の予定を登録<a href="#2-その日の予定を登録" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p><img src="orgmode-schedules-of-the-day.webp" alt="orgmode-schedules-of-the-day.webp" loading="lazy" /></p>
-<p>一日の始まりにその日の予定をnvim-orgmode/orgmodeに反映する。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>具体的な処理は以下。</p>
+<p>一日の始まりにその日の予定をnvim-orgmode/orgmodeに反映する。<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>具体的な処理は以下。</p>
 <ol>
 <li><a href="https://formulae.brew.sh/formula/ical-buddy" target="_blank" >icalBuddy</a>を使ってmacのCalendar.appからその日の予定を取得</li>
 <li>その日の予定からその日作業に使える時間(≒mtgがない時間の合計)を算出</li>
@@ -328,17 +327,16 @@ if (!doNotTrack) {
 <p>その日に完了したいタスクの完了予定時刻を登録し、<code>今日のタスクをplanningする</code>を<code>DONE</code>に変更する。</p>
 <h3 id="4-タスクを進める--終わらなかったものは翌日に持ち越す">4. タスクを進める + 終わらなかったものは翌日に持ち越す<a href="#4-タスクを進める--終わらなかったものは翌日に持ち越す" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p><img src="orgmode-during-day.webp" alt="orgmode-during-day.webp" loading="lazy" /></p>
-<p>あとはこんな感じで適宜タスクを<code>DONE</code>にしていき、一日の最後に残ったタスクは次の日に持ち越す<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>、という流れ。</p>
+<p>あとはこんな感じで適宜タスクを<code>DONE</code>にしていき、一日の最後に残ったタスクは次の日に持ち越す<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>、という流れ。</p>
 <h3 id="今のところの所感">今のところの所感<a href="#今のところの所感" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>春頃までは完了予定時刻を入れたり、その日の作業可能時間を計算したりしておらず、1日の終わりになってやっと危機感から仕事の集中力が上がってくる、というあまりよくない感じの日が多かった。</p>
 <p>3ヶ月くらい今の方法で運用してみているが、タスクの完了予定時刻を入れるようにしてから常に各タスクの完了予定時刻までに終えられるようにタイムアタックしている感覚になり、集中力が増した気がしている。</p>
 <p><strong>タスクごとの時間管理をする、というアイディアが自分にとってはこの本での一番の発見だった。</strong>(人によっては当たり前のようにやっているとは思うが自分はこれまでちゃんとできていなかった)</p>
 <!-- ## 残業について(P74) -->
-<h2 id="見積もりについて">見積もりについて<a href="#見積もりについて" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<blockquote>
-<p>所要時間は常に多めに見積もりべきであり、その方が安全である。所要時間を長く見積もりすぎたとしても、約束の納期に現実的に収まる所要時間に見積もりを減らすことができる。(P76)</p>
-</blockquote>
-<p>(エンジニア何年目だよ、という感じだが)ついつい見積もりは少なめに言いたくなってしまうので意識的に長めに見積もるようにしている&hellip;。(が、全然忘れておりまわりから指摘してもらって適切な見積もりを引き直す、ということもあるので良くない&hellip;)</p>
+<!-- ## 見積もりについて -->
+<!-- > 所要時間は常に多めに見積もりべきであり、その方が安全である。所要時間を長く見積もりすぎたとしても、約束の納期に現実的に収まる所要時間に見積もりを減らすことができる。(P76) -->
+<!---->
+<!-- (エンジニア何年目だよ、という感じだが)ついつい見積もりは少なめに言いたくなってしまうので意識的に長めに見積もるようにしている...。(が、全然忘れておりまわりから指摘してもらって適切な見積もりを引き直す、ということもあるので良くない...) -->
 <h2 id="タスクの進め方">タスクの進め方<a href="#タスクの進め方" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <blockquote>
 <p>1つの作業を終えたら、次の作業を開始します。勢いを持続させてください。(P79)</p>
@@ -360,16 +358,20 @@ if (!doNotTrack) {
 <p>めっちゃ経験がある。例えばひとりPJだとスケジュール管理もタスクの実行も自分でやる必要があるが、自分の選択に自信がないときに今の状況や取りうる選択肢とそのメリデメ、そこからなぜ何を選択したかを話すだけでかなり楽になったことがあった。</p>
 <p>自分の状況とそこに対する選択を人に説明することで、「どう考えても今の選択が一番合理的」とか「この部分は自信がない、ってことはもう少し深く考えたほうがいいかも」のような感じで自分の選択を客観視できる。</p>
 <h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p>自分のタスク管理を改善できたので読んでよかった。</p>
-<p>272ページとそこまで文量が多くないのと、内容もわかりやすい口調で書かれておりサクサクと読めるので気になるかたはぜひ手に取ってみてください。</p>
+<p><a href="https://www.oreilly.com/library/view/time-management-for/0596007833/" target="_blank" >原著(Time Management for System Administrators)</a>は21年前(2005年)に書かれた本なようだが、2026年現在でも参考にできる点が多く、自分のタスク管理を改善できたので読んでよかった。</p>
+<p>272ページとそこまで文量が多くないのと、内容もわかりやすい口調で書かれておりサクサクと読むことができた。</p>
+<p>紹介した部分以外にもいいことがたくさん書いてあるので気になった方はぜひ手に取ってみてはいかがでしょうか。</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1">
-<p><a href="https://github.com/L3MON4D3/LuaSnip" target="_blank" >L3MON4D3/LuaSnip</a>というsnippet pluginを使って実現している。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>ちなみに、ここで紹介している機能にはnvim-orgmode/orgmode標準のものもあれば、自分でscriptを書いて追加している機能もある。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2">
-<p>もちろんPJによっては、ただ翌日に持ち越すだけではなく、PJのステークホルダーにQCDの相談をする必要があるケースもあるとは思います。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://github.com/L3MON4D3/LuaSnip" target="_blank" >L3MON4D3/LuaSnip</a>というsnippet pluginを使って実現している。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>もちろんPJによっては、ただ翌日に持ち越すだけではなく、PJのステークホルダーにQCDの相談をする必要があるケースもあるとは思います。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
@@ -427,7 +429,6 @@ if (!doNotTrack) {
         <li><a href="#今のところの所感">今のところの所感</a></li>
       </ul>
     </li>
-    <li><a href="#見積もりについて">見積もりについて</a></li>
     <li><a href="#タスクの進め方">タスクの進め方</a></li>
     <li><a href="#誰かに状況を説明することはストレスの解消になる">誰かに状況を説明することはストレスの解消になる</a></li>
     <li><a href="#まとめ">まとめ</a></li>
