@@ -5,7 +5,7 @@ on:
     types: [closed]
 
 concurrency:
-  group: github-pages
+  group: cleanup-preview
   cancel-in-progress: false
 
 jobs:
@@ -18,6 +18,8 @@ jobs:
 
       - name: Remove preview directory
         run: |
+          git fetch origin gh-pages
+          git reset --hard origin/gh-pages
           if [ -d "pr-${{ github.event.pull_request.number }}" ]; then
             git config user.name github-actions[bot]
             git config user.email github-actions[bot]@users.noreply.github.com

@@ -26,13 +26,22 @@ jobs:
       - name: Fetch blogcard OGP data
         run: npm run fetch-blogcard-ogp
 
-      - name: Commit and push blogcard cache
+      - name: Commit blogcard cache
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add data/blogcard_cache.json
           git diff --staged --quiet || git commit -m "Update blogcard OGP cache [skip ci]"
-          git push
+
+      - name: Push blogcard cache
+        continue-on-error: true
+        run: |
+          if ! git pull --rebase origin main; then
+            echo "::warning::blogcard cache の pull/rebase に失敗したため push をスキップします。次回のデプロイ時に再度試みられます。"
+            git rebase --abort || true
+            exit 0
+          fi
+          git push || echo "::warning::blogcard cacheのpushに失敗しました。次回のデプロイ時に再度試みられます。"
 
       - name: Generate OGP images
         run: npm run generate-ogp
