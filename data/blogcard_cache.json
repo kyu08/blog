@@ -622,5 +622,11 @@
     "description": "Lazygit&#39;s left-hand side panels — and the tabs within them — have always had a fixed arrangement. This adds a gui.sidePanels option so you can lay them out the way you want.\nYou can:\n\nReorder t...",
     "image": "https://opengraph.githubassets.com/84af24c10a3e11d0b50f9f60bb8f04cb08d0a0cbc107b7862f904ce622448f8f/jesseduffield/lazygit/pull/5702",
     "fetchedAt": "2026-07-11T09:37:53.859Z"
+  },
+  "https://www.oreilly.co.jp/books/9784873113074/": {
+    "title": "エンジニアのための時間管理術",
+    "description": "……筆者が言いたいのは、システム管理が仕事ではないということです。それはライフスタイルなのです。私たちのライフスタイルを私たちの言葉で述べ、私たちの問題を解決するタイムマネジメントの本が必要なのです。（「はじめに」より）\n本書はシステム管理者、ネットワーク管理者を中心にしたエンジニアのための実践的な時間管理術を紹介する書籍です。著者が考案した「サイクルシステム」と呼ばれる方法を使って、作業リスト、スケジュール、さらに仕事とプライベート双方の長期的な目標を管理する方法を解説します。長期的に行うプロジェクトとすぐに行う必要がある割り込み作業の優先順位を整理し、ストレスの少ない、充実した一日を送ることを可能にすることでしょう。上司とのコミュニケーション、文書化の進め方、作業の自動化などシステム管理者が必要としているノウハウを紹介していることも特徴です。",
+    "image": "https://www.oreilly.co.jp/books/images/picture_large4-87311-307-5.jpeg",
+    "fetchedAt": "2026-07-19T04:37:44.954Z"
   }
 }
