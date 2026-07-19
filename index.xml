@@ -7,7 +7,123 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sat, 11 Jul 2026 17:32:54 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jul 2026 00:00:15 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>『エンジニアのための時間管理術』を読んだ</title>
+      <link>https://blog.kyu08.com/posts/time-management-for-system-administrators/</link>
+      <pubDate>Sun, 19 Jul 2026 00:00:15 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/posts/time-management-for-system-administrators/</guid>
+      <description>タスク管理についてもう少しいい感じにしたいなーというぼんやりとした課題感があったので、何か参考になることが書いてあるかも、と思い『エンジニア</description>
+      <content>&lt;p&gt;タスク管理についてもう少しいい感じにしたいなーというぼんやりとした課題感があったので、何か参考になることが書いてあるかも、と思い『エンジニアのための時間管理術』を読んでみた。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://www.oreilly.co.jp/books/9784873113074/&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://www.oreilly.co.jp/books/9784873113074/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://www.oreilly.co.jp/books/images/picture_large4-87311-307-5.jpeg&#34; alt=&#34;エンジニアのための時間管理術&#34; loading=&#34;lazy&#34;&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;エンジニアのための時間管理術&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;……筆者が言いたいのは、システム管理が仕事ではないということです。それはライフスタイルなのです。私たちのライフスタイルを私たちの言葉で述べ、私たちの問題を解決するタイムマネジメントの本が必要なのです。（「はじめに」より）
+本書はシステム管理者、ネットワーク管理者を中心にしたエンジニアのための実践的な時間管理術を紹介する書籍です。著者が考案した「サイクルシステム」と呼ばれる方法を使って、作業リスト、スケジュール、さらに仕事とプライベート双方の長期的な目標を管理する方法を解説します。長期的に行うプロジェクトとすぐに行う必要がある割り込み作業の優先順位を整理し、ストレスの少ない、充実した一日を送ることを可能にすることでしょう。上司とのコミュニケーション、文書化の進め方、作業の自動化などシステム管理者が必要としているノウハウを紹介していることも特徴です。&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://www.oreilly.co.jp/books/9784873113074/&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;この記事では本書を読んで参考になったところをまとめておく。なお引用部分末尾の&lt;code&gt;(P8)&lt;/code&gt;のような数字は引用部分のページ番号を表す。&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&#34;image-with-caption&#34;&gt;
+    &lt;img src=&#34;book.webp&#34; alt=&#34;book.webp&#34; loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;表紙はクズリというイタチ科の獰猛な動物らしい&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;プロセスを信頼する&#34;&gt;プロセスを信頼する&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本書のいくつかの章では、毎朝5分間かけて1日の計画を立てることを勧めています。皮肉なことに、忙しい日ほどその5分間を削ってしまいたくなりますが、そういうときこそ、5分間の計画が最も効果を発揮するのです。筆者は「プロセスを信頼しろ」と自分に言い聞かせて、計画を立てています。そしていつも、そうしておいてよかったとあとから実感するのです。&lt;/p&gt;
+&lt;p&gt;「後回しにしよう」とか、「1日の計画を立てるのに5分間もかけている暇はない」といったマイナス思考に支配されているときでも、モットーには、頭をポジティブ思考に切り替え、マイナス思考を追い出す力があります。(P8)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;忙しい日こそプランニングが重要になるので、例外なく毎日その日の計画を立てるのが重要そう。&lt;/p&gt;
+&lt;p&gt;あとは書かれている通りだが、忙しくて気持ちに余裕がないときでもルーティンを守れると自己効力感が湧いてきたり小さな達成感を感じてポジティブな気持ちになったりするのでその意味でも毎日ちゃんとやるのは大事そう。&lt;/p&gt;
+&lt;p&gt;毎日無理なく続けるための工夫としては自動化できる部分は自動化して少ないエネルギーでタスクを管理できるようにしたり、お気に入りの道具を使ったりするのが大事なように思う。自分の場合はキーボードだけで操作できるUIが好きなのでNeovim上でタスクを管理している。(詳しくは次のセクションで説明する)&lt;/p&gt;
+&lt;p&gt;人によってはお気に入りの紙とペンを使ったり、Notionを使ったり、それ用のデスクトップアプリを自作したりするのもいいかもしれない。&lt;/p&gt;
+&lt;h2 id=&#34;サイクルシステム&#34;&gt;サイクルシステム&lt;/h2&gt;
+&lt;p&gt;P65付近では、著者が10年以上にわたって実践しているタスク管理手法である「サイクルシステム」について説明されている。気になる方は本書を読んでいただくとして、ここで紹介されているアイディアのうち、自分が取り入れているのは主に以下。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;タスクとその日のスケジュールを一箇所で管理する&lt;/li&gt;
+&lt;li&gt;1日の始めにその日取り組むタスクとその完了予定時刻を記入する&lt;/li&gt;
+&lt;li&gt;1日の終わりに未完了のタスクを次の日のタスクとして持ち越す&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;これを自分は&lt;a href=&#34;https://github.com/nvim-orgmode/orgmode&#34; target=&#34;_blank&#34; &gt;nvim-orgmode/orgmode&lt;/a&gt;という、org-modeを再現したNeovimプラグインを使って実現している。&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&#34;image-with-caption&#34;&gt;
+    &lt;img src=&#34;orgmode-final-form.webp&#34; alt=&#34;orgmode-final-form.webp&#34; loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;orgmodeのdaily agenda(簡単にいうとその日の予定やタスクの一覧)を表示している様子&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;上の画像のような感じで、その日の&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;タスク名とその完了予定時刻、&lt;code&gt;TODO&lt;/code&gt;/&lt;code&gt;DOING&lt;/code&gt;/&lt;code&gt;WAIT&lt;/code&gt;/&lt;code&gt;DONE&lt;/code&gt;などのステータス(上の画像では赤または緑で表示されている行)&lt;/li&gt;
+&lt;li&gt;ミーティングなどの予定&lt;/li&gt;
+&lt;li&gt;作業可能時間&lt;/li&gt;
+&lt;li&gt;作業可能時間のうち現在の残り時間(L2の&lt;code&gt;⏰ Remaining: 4h 00m&lt;/code&gt;のようなやつ)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;を表示するようにしている。&lt;/p&gt;
+&lt;p&gt;自分は以下のような流れで使っている。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h3 id=&#34;1-初期状態&#34;&gt;1. 初期状態&lt;/h3&gt;
+&lt;p&gt;&lt;figure class=&#34;image-with-caption&#34;&gt;
+    &lt;img src=&#34;orgmode-initial.webp&#34; alt=&#34;orgmode-initial.webp&#34; loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;初期状態&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;初期状態は上の画像のような感じで、前日の夜時点で翌日に移動したタスクだけが表示されている。&lt;/p&gt;
+&lt;h3 id=&#34;2-その日の予定を登録&#34;&gt;2. その日の予定を登録&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;orgmode-schedules-of-the-day.webp&#34; alt=&#34;orgmode-schedules-of-the-day.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;1日の始まりにその日の予定を反映する。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;具体的な処理は以下。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://formulae.brew.sh/formula/ical-buddy&#34; target=&#34;_blank&#34; &gt;icalBuddy&lt;/a&gt;を使ってmacのCalendar.appからその日の予定を取得する&lt;/li&gt;
+&lt;li&gt;その日の予定からその日作業に使える時間(≒ミーティングがない時間の合計)を算出する&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1.&lt;/code&gt;と&lt;code&gt;2.&lt;/code&gt;に加えて&lt;code&gt;今日のタスクをplanningする&lt;/code&gt;というタスクをnvim-orgmode/orgmodeが認識できるformatで出力する&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;3-各タスクの完了予定時刻を記入&#34;&gt;3. 各タスクの完了予定時刻を記入&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;orgmode-estimate-completion-time.webp&#34; alt=&#34;orgmode-estimate-completion-time.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;その日の作業可能時間を踏まえて、その日に完了したいタスクの完了予定時刻を登録し、&lt;code&gt;今日のタスクをplanningする&lt;/code&gt;を&lt;code&gt;DONE&lt;/code&gt;に変更する。&lt;/p&gt;
+&lt;h3 id=&#34;4-タスクを進める--終わらなかったものは翌日に持ち越す&#34;&gt;4. タスクを進める + 終わらなかったものは翌日に持ち越す&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;orgmode-during-day.webp&#34; alt=&#34;orgmode-during-day.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;あとはこんな感じで適宜タスクを&lt;code&gt;DONE&lt;/code&gt;にしていき、1日の最後に残ったタスクは次の日に持ち越す&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;、という流れで進めている。&lt;/p&gt;
+&lt;h3 id=&#34;今のところの所感&#34;&gt;今のところの所感&lt;/h3&gt;
+&lt;p&gt;春頃までは完了予定時刻を入れたり、その日の作業可能時間を計算したりしておらず、1日の終わりになってやっと危機感から仕事の集中力が上がってくる、というあまりよくない感じの日が多かった。&lt;/p&gt;
+&lt;p&gt;3ヶ月くらい今の方法で運用してみているが、タスクの完了予定時刻を入れるようにしてから、各タスクの完了予定時刻までに終えられるようにタイムアタックしている感覚になり、集中力が増した気がしている。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;タスクごとの時間管理をする、というアイディアが自分にとってはこの本での一番の発見だった。&lt;/strong&gt;(人によっては当たり前のようにやっているとは思うが自分はこれまでちゃんとできていなかった)&lt;/p&gt;
+&lt;h2 id=&#34;タスクの進め方&#34;&gt;タスクの進め方&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1つの作業を終えたら、次の作業を開始します。勢いを持続させてください。(P79)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;作業項目をリストの先頭にあるものから片付けていくことは、先延ばしを避けるためのよい方法です。(P120)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;1日の始めにその日のタスクプランニングをしたら、あとは上から勢いをもってひたすら片付けていく。&lt;/p&gt;
+&lt;p&gt;書いていて思ったがこれも意外と実践できておらず、途中で軽めのタスクを挟んだりしたくなりがち。機械的に上から進めるようにしばらく意識してみる。&lt;/p&gt;
+&lt;h2 id=&#34;誰かに状況を説明することはストレスの解消になる&#34;&gt;誰かに状況を説明することはストレスの解消になる&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;誰かに状況を説明することは、ストレスの解消にはもってこいです。何のアドバイスも得られなくても、少なくとも聞いてもらえたという気持ちになります。多くの場合は、それで気持ちが軽くなります。(P137)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;誰かになにかをはっきりと説明すると、問題を解決するのに役立ちます。誰かに問題を説明していて、その解決策に気付いたことが何度あるでしょう。(P137)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以前似たような経験をしたので共感した。例えばひとりプロジェクトだとスケジュール管理もタスクの実行も自分でやる必要があるが、自分の選択に自信がないときに今の状況や取りうる選択肢とそのメリデメ、そこからなぜ何を選択したかを話すだけでかなり楽になったことがあった。&lt;/p&gt;
+&lt;p&gt;自分の状況とそこに対する選択を人に説明することで「どう考えても今の選択が一番合理的」とか「この部分は自信がない、ってことはもう少し深く考えたほうがいいかも」のような感じで自分の選択を客観視できる。&lt;/p&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.oreilly.com/library/view/time-management-for/0596007833/&#34; target=&#34;_blank&#34; &gt;原著(Time Management for System Administrators)&lt;/a&gt;は21年前(2005年)に書かれた本のようだが、2026年現在でも参考にできる点が多く、自分のタスク管理を改善できたので読んでよかった。&lt;/p&gt;
+&lt;p&gt;272ページとそこまで文量が多くないのと、内容もわかりやすい口調で書かれておりサクサクと読むことができた。&lt;/p&gt;
+&lt;p&gt;紹介した部分以外にもいいことがたくさん書いてあったので気になった方はぜひ手に取ってみてください。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;ちなみに、ここで紹介している機能にはnvim-orgmode/orgmode標準のものもあれば、自分でscriptを書いて追加している機能もある。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/L3MON4D3/LuaSnip&#34; target=&#34;_blank&#34; &gt;L3MON4D3/LuaSnip&lt;/a&gt;というsnippet pluginを使って実現している。&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;もちろんプロジェクトによっては、ただ翌日に持ち越すだけではなく、プロジェクトのステークホルダーにQCDの相談をする必要があるケースもあるとは思います。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
     <item>
       <title>Lazygit v0.63.0でサイドパネルの配置が変更できるようになった</title>
       <link>https://blog.kyu08.com/posts/lazygit-configurable-side-panels/</link>

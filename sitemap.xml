@@ -2,8 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.kyu08.com/posts/time-management-for-system-administrators/</loc>
+    <lastmod>2026-07-19T00:00:15+09:00</lastmod>
+  </url><url>
     <loc>https://blog.kyu08.com/</loc>
-    <lastmod>2026-07-11T17:32:54+09:00</lastmod>
+    <lastmod>2026-07-19T00:00:15+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/posts/</loc>
+    <lastmod>2026-07-19T00:00:15+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/</loc>
+    <lastmod>2026-07-19T00:00:15+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/%E3%82%BD%E3%83%95%E3%83%88%E3%82%B9%E3%82%AD%E3%83%AB/</loc>
+    <lastmod>2026-07-19T00:00:15+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</loc>
+    <lastmod>2026-07-19T00:00:15+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/lazygit/</loc>
     <lastmod>2026-07-11T17:32:54+09:00</lastmod>
@@ -12,12 +27,6 @@
     <lastmod>2026-07-11T17:32:54+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/oss/</loc>
-    <lastmod>2026-07-11T17:32:54+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/posts/</loc>
-    <lastmod>2026-07-11T17:32:54+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/</loc>
     <lastmod>2026-07-11T17:32:54+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/tui/</loc>
@@ -39,9 +48,6 @@
     <lastmod>2026-04-12T17:48:08+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/tags/cs/</loc>
-    <lastmod>2026-04-12T17:48:08+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/%E8%AA%AD%E6%9B%B8%E3%83%AD%E3%82%B0/</loc>
     <lastmod>2026-04-12T17:48:08+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/how-networks-work/</loc>
@@ -72,9 +78,6 @@
     <lastmod>2026-02-15T00:00:08+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/kaizodo-wo-ageru/</loc>
-    <lastmod>2026-02-11T13:00:41+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/tags/%E3%82%BD%E3%83%95%E3%83%88%E3%82%B9%E3%82%AD%E3%83%AB/</loc>
     <lastmod>2026-02-11T13:00:41+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/posts/cqrs-documents-by-greg-young/</loc>
