@@ -36,7 +36,11 @@ jobs:
       - name: Push blogcard cache
         continue-on-error: true
         run: |
-          git pull --rebase origin main
+          if ! git pull --rebase origin main; then
+            echo "::warning::blogcard cache の pull/rebase に失敗したため push をスキップします。次回のデプロイ時に再度試みられます。"
+            git rebase --abort || true
+            exit 0
+          fi
           git push || echo "::warning::blogcard cacheのpushに失敗しました。次回のデプロイ時に再度試みられます。"
 
       - name: Generate OGP images
