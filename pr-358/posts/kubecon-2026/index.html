@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+    <title> :: blog.kyu08.com</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="受付の方の英語がまったく聞き取れず絶望(通訳の方がいたのでなんとかなった) スポンサーブース microsoft datadog aws Beyond Translation: The Journey of Building the Japanese Kubernetes SIG Docs Community 去年1年で173のp" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://blog.kyu08.com/pr-358/posts/kubecon-2026/" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BDQ408J45J', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-358/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-358/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-358/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-358/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-358/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-358/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-358/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-358/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-358/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-358/css/post.min.f049fef13af1dfd5ea526cc59ea5a3fc7be11a05911ca7198c5bb9225250119c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-358/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-358/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-358/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-358/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+<link rel="stylesheet" href="https://blog.kyu08.com/pr-358/style.css">
+
+
+<link rel="shortcut icon" href="https://blog.kyu08.com/pr-358/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/pr-358/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="kyu08_" />
+
+
+
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="">
+<meta property="og:description" content="受付の方の英語がまったく聞き取れず絶望(通訳の方がいたのでなんとかなった) スポンサーブース microsoft datadog aws Beyond Translation: The Journey of Building the Japanese Kubernetes SIG Docs Community 去年1年で173のp" />
+<meta property="og:url" content="https://blog.kyu08.com/pr-358/posts/kubecon-2026/" />
+<meta property="og:site_name" content="blog.kyu08.com" />
+
+
+  
+  
+    
+  
+
+
+  <meta property="og:image" content="https://blog.kyu08.com/pr-358/posts/kubecon-2026/cover.png">
+  <meta name="twitter:image" content="https://blog.kyu08.com/pr-358/posts/kubecon-2026/cover.png">
+  <meta name="twitter:image:alt" content="">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+  <meta property="article:published_time" content="2026-07-30 10:05:44 &#43;0900 &#43;0900" />
+
+
+
+
+
+
+
+
+
+<link rel="author" href="http://www.hatena.ne.jp/kyu08/" />
+
+
+<script src="https://blog.kyu08.com/pr-358/docswell-loader.js"></script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BDQ408J45J');
+</script>
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    blog.kyu08.com
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/pr-358/tags/diary/">_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-358/about">about</a></li>
+        
+      
+        
+          <li><a href="/pr-358/index.xml">rss</a></li>
+        
+      
+        
+          <li><a href="/pr-358/tags">tags</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/pr-358/tags/diary/" >_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-358/about" >about</a></li>
+        
+      
+        
+          <li><a href="/pr-358/index.xml" >rss</a></li>
+        
+      
+        
+          <li><a href="/pr-358/tags" >tags</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://blog.kyu08.com/pr-358/posts/kubecon-2026/"></a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2026/07/30</time>
+      
+    <span class="post-reading-time">2 min read (992 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://blog.kyu08.com/pr-358/tags/"></a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="/pr-358/posts/kubecon-2026/cover.png"
+    class="post-cover"
+    alt=" "
+    title="Cover Image" />
+
+
+  
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#スポンサーブース">スポンサーブース</a></li>
+    <li><a href="#beyond-translation-the-journey-of-building-the-japanese-kubernetes-sig-docs-community">Beyond Translation: The Journey of Building the Japanese Kubernetes SIG Docs Community</a>
+      <ul>
+        <li><a href="#感想">感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#from-user-to-contributor-a-quick-guide-to-kubectl--kustomize">From User to Contributor: A Quick Guide to kubectl &amp; kustomize</a>
+      <ul>
+        <li><a href="#kubectl">kubectl</a></li>
+        <li><a href="#感想-1">感想</a></li>
+        <li><a href="#kustomize">kustomize</a></li>
+      </ul>
+    </li>
+    <li><a href="#repurposing-opentelemetry-traces-as-test-data-breaking-the-cost-barrier-in-system-migration">Repurposing OpenTelemetry Traces as Test Data: Breaking the Cost Barrier in System Migration</a>
+      <ul>
+        <li><a href="#感想-2">感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#otel-meets-wasm-rethinking-opentelemetry-collector-extensibility">OTel meets Wasm: Rethinking OpenTelemetry Collector Extensibility</a></li>
+    <li><a href="#the-road-to-cilium-migrating-150-kubernetes-clusters-at-airbnb">The Road to Cilium: Migrating 150+ Kubernetes Clusters at Airbnb</a></li>
+    <li><a href="#感想-3">感想</a></li>
+  </ul>
+</nav>
+  
+
+  <div class="post-content"><div>
+        <p>受付の方の英語がまったく聞き取れず絶望(通訳の方がいたのでなんとかなった)</p>
+<h2 id="スポンサーブース">スポンサーブース<a href="#スポンサーブース" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>microsoft</li>
+<li>datadog</li>
+<li>aws</li>
+</ul>
+<h2 id="beyond-translation-the-journey-of-building-the-japanese-kubernetes-sig-docs-community">Beyond Translation: The Journey of Building the Japanese Kubernetes SIG Docs Community<a href="#beyond-translation-the-journey-of-building-the-japanese-kubernetes-sig-docs-community" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>去年1年で173のprがmergeされた</p>
+<p>Localization Guideを見るとどのように貢献を始めるかがわかるようになっている</p>
+<ul>
+<li>
+<p>Upstream Trainingもあるよ</p>
+<ul>
+<li>年に2回やっている</li>
+</ul>
+</li>
+<li>
+<p>aoiさんも去年のkube conでの発表をみてkube docへの貢献を始めた</p>
+</li>
+<li>
+<p>始め方</p>
+<ul>
+<li>動画をみた（Japanese Community have contes to train yourselfらしい）</li>
+<li>sample PRを作成した</li>
+</ul>
+</li>
+<li>
+<p>よかったこと</p>
+<ul>
+<li>docをメンテするために深く学習することになる</li>
+<li>Kubestranautにもなった</li>
+</ul>
+</li>
+<li>
+<p>気づき</p>
+<ul>
+<li>仕事と同じでリスペクトや明瞭なコミュニケーションは重要だし、それらがあればスムーズにことが進む</li>
+</ul>
+</li>
+</ul>
+<h3 id="感想">感想<a href="#感想" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<!-- TODO: かく -->
+<h2 id="from-user-to-contributor-a-quick-guide-to-kubectl--kustomize">From User to Contributor: A Quick Guide to kubectl &amp; kustomize<a href="#from-user-to-contributor-a-quick-guide-to-kubectl--kustomize" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="kubectl">kubectl<a href="#kubectl" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>Legacy
+<ul>
+<li>kubectlの各コマンドの構造(New, Options, Complete, Validate, Run)</li>
+</ul>
+</li>
+<li>NewStructure</li>
+</ul>
+<h3 id="感想-1">感想<a href="#感想-1" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>コードの構造がわかると貢献へのハードルが下がるのでめっちゃ良い時間だった。これまで以上に興味も持てたし。</p>
+<h3 id="kustomize">kustomize<a href="#kustomize" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h2 id="repurposing-opentelemetry-traces-as-test-data-breaking-the-cost-barrier-in-system-migration">Repurposing OpenTelemetry Traces as Test Data: Breaking the Cost Barrier in System Migration<a href="#repurposing-opentelemetry-traces-as-test-data-breaking-the-cost-barrier-in-system-migration" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<!-- Jul 30 • 14:50-15:20 3F | 315 -->
+<ul>
+<li>システム移行において、どのように新システムが旧システムと同じ挙動であることを保証するか
+<ul>
+<li>課題
+<ul>
+<li>コードが読みづらい</li>
+<li>最新の仕様書がない</li>
+<li>&hellip;</li>
+</ul>
+</li>
+<li>解決策(概要)
+<ul>
+<li>本番環境のinput/outputを新システムのテストデータとする</li>
+</ul>
+</li>
+<li>どのようにinput/outputを記録するか
+<ul>
+<li>traceを利用する。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>OBIを使って旧アプリケーションのコードに手を入れずに欲しいデータを入手する
+<ul>
+<li>eBPFを使ってネットワークパケットをキャプチャする</li>
+</ul>
+</li>
+</ul>
+<h3 id="感想-2">感想<a href="#感想-2" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>ちょうど仕事でも移行作業をする予定があったのでとても参考になった。
+<ul>
+<li>新旧システムの挙動を外形で比較するという発想はなかった。</li>
+</ul>
+</li>
+<li>疑問
+<ul>
+<li>多くの場合、APIはDatabaseの中身によってレスポンスが変わると思う。今回紹介された方法でテストのinputと期待値はわかるが、テストを実行するためにはシードデータも必要なはず。個々のテストケースで必要なシードデータはどう特定した？(PoCでは空のデータベースで行ったらしい)
+<ul>
+<li>CDCを使うことを検討しているが、技術的にもかなり大きな壁になりそう</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="otel-meets-wasm-rethinking-opentelemetry-collector-extensibility">OTel meets Wasm: Rethinking OpenTelemetry Collector Extensibility<a href="#otel-meets-wasm-rethinking-opentelemetry-collector-extensibility" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<!-- Jul 30 • 15:50-16:20 3F | 315 -->
+<h2 id="the-road-to-cilium-migrating-150-kubernetes-clusters-at-airbnb">The Road to Cilium: Migrating 150+ Kubernetes Clusters at Airbnb<a href="#the-road-to-cilium-migrating-150-kubernetes-clusters-at-airbnb" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<!-- Jul 30 • 16:30-17:00 5F | 502 -->
+<ul>
+<li>Cilium
+<ul>
+<li>Kubernetes-Native eBPF</li>
+</ul>
+</li>
+</ul>
+<h2 id="感想-3">感想<a href="#感想-3" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ul>
+<li>英語モチベが上がった</li>
+<li>もちろん技術モチベ(とくにkube)もあがった</li>
+<li>あとOSSモチベも上がったので翻訳への貢献をやっていきたい</li>
+<li>スポンサーブースでもためになる話を聞くことができた(各種グッズももらえたし)</li>
+<li>いってよかった</li>
+</ul>
+
+      </div></div>
+
+  
+  
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+    
+      <a href="https://blog.kyu08.com/pr-358/posts/time-management-for-system-administrators/" class="button inline next">
+        『エンジニアのための時間管理術』を読んだ
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+        repo="kyu08/blog-comments"
+        issue-term="pathname"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  
+
+  
+    <div class="table-of-contents-sidebar">
+      <h2>
+        目次
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#スポンサーブース">スポンサーブース</a></li>
+    <li><a href="#beyond-translation-the-journey-of-building-the-japanese-kubernetes-sig-docs-community">Beyond Translation: The Journey of Building the Japanese Kubernetes SIG Docs Community</a>
+      <ul>
+        <li><a href="#感想">感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#from-user-to-contributor-a-quick-guide-to-kubectl--kustomize">From User to Contributor: A Quick Guide to kubectl &amp; kustomize</a>
+      <ul>
+        <li><a href="#kubectl">kubectl</a></li>
+        <li><a href="#感想-1">感想</a></li>
+        <li><a href="#kustomize">kustomize</a></li>
+      </ul>
+    </li>
+    <li><a href="#repurposing-opentelemetry-traces-as-test-data-breaking-the-cost-barrier-in-system-migration">Repurposing OpenTelemetry Traces as Test Data: Breaking the Cost Barrier in System Migration</a>
+      <ul>
+        <li><a href="#感想-2">感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#otel-meets-wasm-rethinking-opentelemetry-collector-extensibility">OTel meets Wasm: Rethinking OpenTelemetry Collector Extensibility</a></li>
+    <li><a href="#the-road-to-cilium-migrating-150-kubernetes-clusters-at-airbnb">The Road to Cilium: Migrating 150+ Kubernetes Clusters at Airbnb</a></li>
+    <li><a href="#感想-3">感想</a></li>
+  </ul>
+</nav>
+    </div>
+    <script src="https://blog.kyu08.com/pr-358/toc.js"></script>
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>blog.kyu08.com</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/pr-358/bundle.min.js"></script>
+
+
+<font color="#808080">
+  <span>
+    This site uses Google Analytics for access analysis.
+    Google Analytics uses cookies to collect traffic data, but this traffic data is collected anonymously and does not personally identify you.
+    Cookies can be disabled in your browser.
+  </span>
+</font>
+
+
+<script src="https://blog.kyu08.com/pr-358/blogcard.js"></script>
+
+
+  
+</div>
+
+</body>
+</html>
