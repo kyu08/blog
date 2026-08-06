@@ -17,9 +17,8 @@ color: ""
 cover: "cover.png"
 ---
 
+<!-- TODO: 画像のファイル名をいい感じにする -->
 ![](5.webp)
-
-<!-- TODO: 写真貼る -->
 
 KubeCon + CloudNativeCon Japan 2026に参加したので感想などを記しておく。
 
