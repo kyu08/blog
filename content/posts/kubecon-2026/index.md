@@ -81,9 +81,15 @@ https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule
     - 多くの場合、APIはDatabaseの中身によってレスポンスが変わると思う。今回紹介された方法でテストのinputと期待値はわかるが、テストを実行するためにはシードデータも必要なはず。個々のテストケースで必要なシードデータはどう特定した？(PoCでは空のデータベースで行ったらしい)
         - CDCを使うことを検討しているが、技術的にもかなり大きな壁になりそう
 
-## OTel meets Wasm: Rethinking OpenTelemetry Collector Extensibility
+<!-- ## OTel meets Wasm: Rethinking OpenTelemetry Collector Extensibility -->
 
 ## The Road to Cilium: Migrating 150+ Kubernetes Clusters at Airbnb
+Yifei SunさんによるCilium移行の発表。
+
+https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1171327
+
+## 感想
+
 - Cilium
     - Kubernetes-Native eBPF
     - ネットワークまわり、何もわからないことがわかった
