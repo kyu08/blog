@@ -15,8 +15,7 @@
       
       <guid>https://blog.kyu08.com/pr-358/posts/kubecon-2026/</guid>
       <description>KubeCon + CloudNativeCon Japan 2026に参加したので感想などを記しておく。 ちなみに、カンファレンス自体は2026/7/28-2026/7/30で開催されていたが、</description>
-      <content>&lt;!-- TODO: 画像のファイル名をいい感じにする --&gt;
-&lt;p&gt;&lt;img src=&#34;5.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;logo.webp&#34; alt=&#34;logo&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;KubeCon + CloudNativeCon Japan 2026に参加したので感想などを記しておく。&lt;/p&gt;
 &lt;p&gt;ちなみに、カンファレンス自体は2026/7/28-2026/7/30で開催されていたが、KubeConが開催されていることに気付いたのが7/29の夜だったので最終日だけ参加した。(来年は全日程参加したい&amp;hellip;！)&lt;/p&gt;
 &lt;p&gt;参加したセッションの感想を簡単に書いていく。&lt;/p&gt;
@@ -112,8 +111,19 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;otel-meets-wasm-rethinking-opentelemetry-collector-extensibility&#34;&gt;OTel meets Wasm: Rethinking OpenTelemetry Collector Extensibility&lt;/h2&gt;
+&lt;!-- ## OTel meets Wasm: Rethinking OpenTelemetry Collector Extensibility --&gt;
 &lt;h2 id=&#34;the-road-to-cilium-migrating-150-kubernetes-clusters-at-airbnb&#34;&gt;The Road to Cilium: Migrating 150+ Kubernetes Clusters at Airbnb&lt;/h2&gt;
+&lt;p&gt;Yifei SunさんによるCilium移行の発表。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1171327&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1171327&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://events.linuxfoundation.org/wp-content/uploads/2026/05/kccnc-japan-2026-social-snackable.png&#34; alt=&#34;Schedule | LF Events&#34; loading=&#34;lazy&#34;&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;Schedule | LF Events&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;July 28-30, 2026 | Yokohama, Japan Sessions will be recorded and available on the CNCF YouTube channel within two weeks. Times shown in JST (UTC&amp;#43;9). Seating is first come, first served.&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1171327&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;感想-3&#34;&gt;感想&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Cilium
 &lt;ul&gt;
@@ -128,7 +138,7 @@
 &lt;li&gt;datadog&lt;/li&gt;
 &lt;li&gt;AWS&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;感想-3&#34;&gt;感想&lt;/h2&gt;
+&lt;h2 id=&#34;感想-4&#34;&gt;感想&lt;/h2&gt;
 &lt;!-- TODO: 画像どれか使う --&gt;
 &lt;!-- TODO: 画像のファイル名をいい感じにする --&gt;
 &lt;p&gt;&lt;img src=&#34;1.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;
@@ -143,6 +153,9 @@
 &lt;li&gt;もちろん技術モチベ(とくにkube)もあがった&lt;/li&gt;
 &lt;li&gt;あとOSSモチベも上がったので翻訳への貢献をやっていきたい&lt;/li&gt;
 &lt;li&gt;スポンサーブースでもためになる話を聞くことができた(各種グッズももらえたし)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- TODO: 全部は大変なので1,2個写真をのせる？ --&gt;
+&lt;ul&gt;
 &lt;li&gt;ノベルティたくさんもらえた&lt;/li&gt;
 &lt;li&gt;いってよかった&lt;/li&gt;
 &lt;/ul&gt;
