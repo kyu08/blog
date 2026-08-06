@@ -225,7 +225,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/07/30</time>
       
-    <span class="post-reading-time">3 min read (1401 words)</span></div>
+    <span class="post-reading-time">4 min read (1530 words)</span></div>
 
   
     <span class="post-tags">
@@ -255,9 +255,7 @@ if (!doNotTrack) {
     </li>
     <li><a href="#from-user-to-contributor-a-quick-guide-to-kubectl--kustomize">From User to Contributor: A Quick Guide to kubectl &amp; kustomize</a>
       <ul>
-        <li><a href="#kubectl">kubectl</a></li>
         <li><a href="#感想-1">感想</a></li>
-        <li><a href="#kustomize">kustomize</a></li>
       </ul>
     </li>
     <li><a href="#repurposing-opentelemetry-traces-as-test-data-breaking-the-cost-barrier-in-system-migration">Repurposing OpenTelemetry Traces as Test Data: Breaking the Cost Barrier in System Migration</a>
@@ -297,20 +295,35 @@ if (!doNotTrack) {
 <p>冒頭のリンクからスライドがダウンロードできるのでぜひ気になる方はご覧ください。</p>
 <!-- TODO:ここから -->
 <h2 id="from-user-to-contributor-a-quick-guide-to-kubectl--kustomize">From User to Contributor: A Quick Guide to kubectl &amp; kustomize<a href="#from-user-to-contributor-a-quick-guide-to-kubectl--kustomize" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<h3 id="kubectl">kubectl<a href="#kubectl" class="hanchor" ariaLabel="Anchor">#</a> </h3>
-<ul>
-<li>Legacy
-<ul>
-<li>kubectlの各コマンドの構造(New, Options, Complete, Validate, Run)</li>
-</ul>
-</li>
-<li>NewStructure</li>
-</ul>
+<p><img src="from-user-to-contributor-a-quick-guide-to-kubectl-kustomize.webp" alt="from-user-to-contributor-a-quick-guide-to-kubectl-kustomize.webp" loading="lazy" /></p>
+<p>SIG CLIの一員であるYugo KobayashiさんとMaciej Szulikさんによるkubectlとkustomizeの内部構造を解説したセッション。</p>
+<p><div class="blogcard" data-url="https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1228191" data-auto-fetch="false">
+  <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1228191" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://events.linuxfoundation.org/wp-content/uploads/2026/05/kccnc-japan-2026-social-snackable.png" alt="Schedule | LF Events" loading="lazy">
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">Schedule | LF Events</div><div class="blogcard-description">July 28-30, 2026 | Yokohama, Japan Sessions will be recorded and available on the CNCF YouTube channel within two weeks. Times shown in JST (UTC&#43;9). Seating is first come, first served.</div><div class="blogcard-url">https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1228191</div>
+    </div>
+  </a>
+</div>
+</p>
+<!-- ### kubectl -->
+<!-- - Legacy -->
+<!--     - kubectlの各コマンドの構造(New, Options, Complete, Validate, Run) -->
+<!-- - NewStructure -->
 <h3 id="感想-1">感想<a href="#感想-1" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <p>コードの構造がわかると貢献へのハードルが下がるのでめっちゃ良い時間だった。これまで以上に興味も持てたし。</p>
-<h3 id="kustomize">kustomize<a href="#kustomize" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <h2 id="repurposing-opentelemetry-traces-as-test-data-breaking-the-cost-barrier-in-system-migration">Repurposing OpenTelemetry Traces as Test Data: Breaking the Cost Barrier in System Migration<a href="#repurposing-opentelemetry-traces-as-test-data-breaking-the-cost-barrier-in-system-migration" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<!-- Jul 30 • 14:50-15:20 3F | 315 -->
+<!-- TODO: どんな発表だったのか書く -->
+<p>Yoshiki Fujikaneさんによる</p>
+<p><div class="blogcard" data-url="https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1194861" data-auto-fetch="false">
+  <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1194861" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://events.linuxfoundation.org/wp-content/uploads/2026/05/kccnc-japan-2026-social-snackable.png" alt="Schedule | LF Events" loading="lazy">
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">Schedule | LF Events</div><div class="blogcard-description">July 28-30, 2026 | Yokohama, Japan Sessions will be recorded and available on the CNCF YouTube channel within two weeks. Times shown in JST (UTC&#43;9). Seating is first come, first served.</div><div class="blogcard-url">https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1194861</div>
+    </div>
+  </a>
+</div>
+</p>
 <ul>
 <li>システム移行において、どのように新システムが旧システムと同じ挙動であることを保証するか
 <ul>
@@ -357,9 +370,7 @@ if (!doNotTrack) {
 </li>
 </ul>
 <h2 id="otel-meets-wasm-rethinking-opentelemetry-collector-extensibility">OTel meets Wasm: Rethinking OpenTelemetry Collector Extensibility<a href="#otel-meets-wasm-rethinking-opentelemetry-collector-extensibility" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<!-- Jul 30 • 15:50-16:20 3F | 315 -->
 <h2 id="the-road-to-cilium-migrating-150-kubernetes-clusters-at-airbnb">The Road to Cilium: Migrating 150+ Kubernetes Clusters at Airbnb<a href="#the-road-to-cilium-migrating-150-kubernetes-clusters-at-airbnb" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<!-- Jul 30 • 16:30-17:00 5F | 502 -->
 <ul>
 <li>Cilium
 <ul>
@@ -376,6 +387,7 @@ if (!doNotTrack) {
 </ul>
 <h2 id="感想-3">感想<a href="#感想-3" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <!-- TODO: 画像どれか使う -->
+<!-- TODO: 画像のファイル名をいい感じにする -->
 <p><img src="1.webp" alt="" loading="lazy" />
 <img src="2.webp" alt="" loading="lazy" />
 <img src="4.webp" alt="" loading="lazy" /></p>
@@ -442,9 +454,7 @@ if (!doNotTrack) {
     </li>
     <li><a href="#from-user-to-contributor-a-quick-guide-to-kubectl--kustomize">From User to Contributor: A Quick Guide to kubectl &amp; kustomize</a>
       <ul>
-        <li><a href="#kubectl">kubectl</a></li>
         <li><a href="#感想-1">感想</a></li>
-        <li><a href="#kustomize">kustomize</a></li>
       </ul>
     </li>
     <li><a href="#repurposing-opentelemetry-traces-as-test-data-breaking-the-cost-barrier-in-system-migration">Repurposing OpenTelemetry Traces as Test Data: Breaking the Cost Barrier in System Migration</a>

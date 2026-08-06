@@ -38,20 +38,35 @@
 &lt;p&gt;冒頭のリンクからスライドがダウンロードできるのでぜひ気になる方はご覧ください。&lt;/p&gt;
 &lt;!-- TODO:ここから --&gt;
 &lt;h2 id=&#34;from-user-to-contributor-a-quick-guide-to-kubectl--kustomize&#34;&gt;From User to Contributor: A Quick Guide to kubectl &amp;amp; kustomize&lt;/h2&gt;
-&lt;h3 id=&#34;kubectl&#34;&gt;kubectl&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Legacy
-&lt;ul&gt;
-&lt;li&gt;kubectlの各コマンドの構造(New, Options, Complete, Validate, Run)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;NewStructure&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;from-user-to-contributor-a-quick-guide-to-kubectl-kustomize.webp&#34; alt=&#34;from-user-to-contributor-a-quick-guide-to-kubectl-kustomize.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;SIG CLIの一員であるYugo KobayashiさんとMaciej Szulikさんによるkubectlとkustomizeの内部構造を解説したセッション。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1228191&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1228191&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://events.linuxfoundation.org/wp-content/uploads/2026/05/kccnc-japan-2026-social-snackable.png&#34; alt=&#34;Schedule | LF Events&#34; loading=&#34;lazy&#34;&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;Schedule | LF Events&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;July 28-30, 2026 | Yokohama, Japan Sessions will be recorded and available on the CNCF YouTube channel within two weeks. Times shown in JST (UTC&amp;#43;9). Seating is first come, first served.&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1228191&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;!-- ### kubectl --&gt;
+&lt;!-- - Legacy --&gt;
+&lt;!--     - kubectlの各コマンドの構造(New, Options, Complete, Validate, Run) --&gt;
+&lt;!-- - NewStructure --&gt;
 &lt;h3 id=&#34;感想-1&#34;&gt;感想&lt;/h3&gt;
 &lt;p&gt;コードの構造がわかると貢献へのハードルが下がるのでめっちゃ良い時間だった。これまで以上に興味も持てたし。&lt;/p&gt;
-&lt;h3 id=&#34;kustomize&#34;&gt;kustomize&lt;/h3&gt;
 &lt;h2 id=&#34;repurposing-opentelemetry-traces-as-test-data-breaking-the-cost-barrier-in-system-migration&#34;&gt;Repurposing OpenTelemetry Traces as Test Data: Breaking the Cost Barrier in System Migration&lt;/h2&gt;
-&lt;!-- Jul 30 • 14:50-15:20 3F | 315 --&gt;
+&lt;!-- TODO: どんな発表だったのか書く --&gt;
+&lt;p&gt;Yoshiki Fujikaneさんによる&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1194861&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1194861&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://events.linuxfoundation.org/wp-content/uploads/2026/05/kccnc-japan-2026-social-snackable.png&#34; alt=&#34;Schedule | LF Events&#34; loading=&#34;lazy&#34;&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;Schedule | LF Events&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;July 28-30, 2026 | Yokohama, Japan Sessions will be recorded and available on the CNCF YouTube channel within two weeks. Times shown in JST (UTC&amp;#43;9). Seating is first come, first served.&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1194861&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;システム移行において、どのように新システムが旧システムと同じ挙動であることを保証するか
 &lt;ul&gt;
@@ -98,9 +113,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;otel-meets-wasm-rethinking-opentelemetry-collector-extensibility&#34;&gt;OTel meets Wasm: Rethinking OpenTelemetry Collector Extensibility&lt;/h2&gt;
-&lt;!-- Jul 30 • 15:50-16:20 3F | 315 --&gt;
 &lt;h2 id=&#34;the-road-to-cilium-migrating-150-kubernetes-clusters-at-airbnb&#34;&gt;The Road to Cilium: Migrating 150+ Kubernetes Clusters at Airbnb&lt;/h2&gt;
-&lt;!-- Jul 30 • 16:30-17:00 5F | 502 --&gt;
 &lt;ul&gt;
 &lt;li&gt;Cilium
 &lt;ul&gt;
@@ -117,6 +130,7 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;感想-3&#34;&gt;感想&lt;/h2&gt;
 &lt;!-- TODO: 画像どれか使う --&gt;
+&lt;!-- TODO: 画像のファイル名をいい感じにする --&gt;
 &lt;p&gt;&lt;img src=&#34;1.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;
 &lt;img src=&#34;2.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;
 &lt;img src=&#34;4.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
