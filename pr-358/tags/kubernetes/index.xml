@@ -7,7 +7,129 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Wed, 10 Dec 2025 00:04:41 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-358/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Jul 2026 10:05:44 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-358/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>KubeCon &#43; CloudNativeCon Japan 2026に参加した</title>
+      <link>https://blog.kyu08.com/pr-358/posts/kubecon-2026/</link>
+      <pubDate>Thu, 30 Jul 2026 10:05:44 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/pr-358/posts/kubecon-2026/</guid>
+      <description>KubeCon + CloudNativeCon Japan 2026に参加したので感想などを記しておく。 ちなみに、カンファレンス自体は2026/7/28-2026/7/30で開催されていたが、</description>
+      <content>&lt;!-- TODO: 写真貼る --&gt;
+&lt;p&gt;KubeCon + CloudNativeCon Japan 2026に参加したので感想などを記しておく。&lt;/p&gt;
+&lt;p&gt;ちなみに、カンファレンス自体は2026/7/28-2026/7/30で開催されていたが、KubeConが開催されていることに気付いたのが7/29の夜だったので最終日だけ参加した。(来年は全日程参加したい&amp;hellip;！)&lt;/p&gt;
+&lt;p&gt;参加したセッションの感想を簡単に書いていく。&lt;/p&gt;
+&lt;h2 id=&#34;beyond-translation-the-journey-of-building-the-japanese-kubernetes-sig-docs-community&#34;&gt;Beyond Translation: The Journey of Building the Japanese Kubernetes SIG Docs Community&lt;/h2&gt;
+&lt;p&gt;Aoi Takahashiさん、Junya OkabeさんによるKubernetesドキュメントの日本語翻訳を進める中での取り組みを紹介した発表。&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1228189&#34; data-auto-fetch=&#34;false&#34;&gt;
+  &lt;a href=&#34;https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1228189&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
+      &lt;img src=&#34;https://events.linuxfoundation.org/wp-content/uploads/2026/05/kccnc-japan-2026-social-snackable.png&#34; alt=&#34;Schedule | LF Events&#34; loading=&#34;lazy&#34;&gt;
+    &lt;/div&gt;&lt;div class=&#34;blogcard-content&#34;&gt;
+      &lt;div class=&#34;blogcard-title&#34;&gt;Schedule | LF Events&lt;/div&gt;&lt;div class=&#34;blogcard-description&#34;&gt;July 28-30, 2026 | Yokohama, Japan Sessions will be recorded and available on the CNCF YouTube channel within two weeks. Times shown in JST (UTC&amp;#43;9). Seating is first come, first served.&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1228189&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;感想&#34;&gt;感想&lt;/h3&gt;
+&lt;p&gt;Aoiさんの「Kubernetesの試験勉強との両立は大変だったが、むしろドキュメントの翻訳を通してKubernetesを深く理解することができた」という言葉が強く印象に残っている。&lt;/p&gt;
+&lt;p&gt;自分も1年ほど前から仕事でkubernetesを使うようになり、このところキャッチアップに時間を使っているのでドキュメントの貢献を通して日本語フレンドリーな学習環境を作りつつ、自分の理解も深めていきたいと思った。&lt;/p&gt;
+&lt;p&gt;Aoiさん、Okabeさんのセッションとkubernetes slackに共通していえることだが、非常にオープンな雰囲気で新規の貢献者を歓迎している空気感があったのも貢献に踏み出してみたいと思ったきっかけだった。&lt;/p&gt;
+&lt;p&gt;冒頭のリンクからスライドがダウンロードできるのでぜひ気になる方はご覧ください。&lt;/p&gt;
+&lt;!-- TODO:ここから --&gt;
+&lt;h2 id=&#34;from-user-to-contributor-a-quick-guide-to-kubectl--kustomize&#34;&gt;From User to Contributor: A Quick Guide to kubectl &amp;amp; kustomize&lt;/h2&gt;
+&lt;h3 id=&#34;kubectl&#34;&gt;kubectl&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Legacy
+&lt;ul&gt;
+&lt;li&gt;kubectlの各コマンドの構造(New, Options, Complete, Validate, Run)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;NewStructure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;感想-1&#34;&gt;感想&lt;/h3&gt;
+&lt;p&gt;コードの構造がわかると貢献へのハードルが下がるのでめっちゃ良い時間だった。これまで以上に興味も持てたし。&lt;/p&gt;
+&lt;h3 id=&#34;kustomize&#34;&gt;kustomize&lt;/h3&gt;
+&lt;h2 id=&#34;repurposing-opentelemetry-traces-as-test-data-breaking-the-cost-barrier-in-system-migration&#34;&gt;Repurposing OpenTelemetry Traces as Test Data: Breaking the Cost Barrier in System Migration&lt;/h2&gt;
+&lt;!-- Jul 30 • 14:50-15:20 3F | 315 --&gt;
+&lt;ul&gt;
+&lt;li&gt;システム移行において、どのように新システムが旧システムと同じ挙動であることを保証するか
+&lt;ul&gt;
+&lt;li&gt;課題
+&lt;ul&gt;
+&lt;li&gt;コードが読みづらい&lt;/li&gt;
+&lt;li&gt;最新の仕様書がない&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;解決策(概要)
+&lt;ul&gt;
+&lt;li&gt;本番環境のinput/outputを新システムのテストデータとする&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;どのようにinput/outputを記録するか
+&lt;ul&gt;
+&lt;li&gt;traceを利用する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;OBIを使って旧アプリケーションのコードに手を入れずに欲しいデータを入手する
+&lt;ul&gt;
+&lt;li&gt;eBPFを使ってネットワークパケットをキャプチャする&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;感想-2&#34;&gt;感想&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;ちょうど仕事でも移行作業をする予定があったのでとても参考になった。
+&lt;ul&gt;
+&lt;li&gt;新旧システムの挙動を外形で比較するという発想はなかった。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;疑問
+&lt;ul&gt;
+&lt;li&gt;多くの場合、APIはDatabaseの中身によってレスポンスが変わると思う。今回紹介された方法でテストのinputと期待値はわかるが、テストを実行するためにはシードデータも必要なはず。個々のテストケースで必要なシードデータはどう特定した？(PoCでは空のデータベースで行ったらしい)
+&lt;ul&gt;
+&lt;li&gt;CDCを使うことを検討しているが、技術的にもかなり大きな壁になりそう&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;otel-meets-wasm-rethinking-opentelemetry-collector-extensibility&#34;&gt;OTel meets Wasm: Rethinking OpenTelemetry Collector Extensibility&lt;/h2&gt;
+&lt;!-- Jul 30 • 15:50-16:20 3F | 315 --&gt;
+&lt;h2 id=&#34;the-road-to-cilium-migrating-150-kubernetes-clusters-at-airbnb&#34;&gt;The Road to Cilium: Migrating 150+ Kubernetes Clusters at Airbnb&lt;/h2&gt;
+&lt;!-- Jul 30 • 16:30-17:00 5F | 502 --&gt;
+&lt;ul&gt;
+&lt;li&gt;Cilium
+&lt;ul&gt;
+&lt;li&gt;Kubernetes-Native eBPF&lt;/li&gt;
+&lt;li&gt;ネットワークまわり、何もわからないことがわかった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;スポンサーブースでお話したこと&#34;&gt;スポンサーブースでお話したこと&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;microsoft&lt;/li&gt;
+&lt;li&gt;datadog&lt;/li&gt;
+&lt;li&gt;AWS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;感想-3&#34;&gt;感想&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;英語モチベが上がった
+&lt;ul&gt;
+&lt;li&gt;受付の方の英語がまったく聞き取れず絶望した(通訳の方がいたのでなんとかなったが歯がゆい気持ちになった)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;もちろん技術モチベ(とくにkube)もあがった&lt;/li&gt;
+&lt;li&gt;あとOSSモチベも上がったので翻訳への貢献をやっていきたい&lt;/li&gt;
+&lt;li&gt;スポンサーブースでもためになる話を聞くことができた(各種グッズももらえたし)&lt;/li&gt;
+&lt;li&gt;ノベルティたくさんもらえた&lt;/li&gt;
+&lt;li&gt;いってよかった&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
     <item>
       <title>『つくって、壊して、直して学ぶ Kubernetes入門』を読んだ</title>
       <link>https://blog.kyu08.com/pr-358/posts/bbf_kubernetes/</link>

@@ -2,19 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.kyu08.com/pr-358/</loc>
+    <lastmod>2026-07-30T10:05:44+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/pr-358/tags/cncf/</loc>
+    <lastmod>2026-07-30T10:05:44+09:00</lastmod>
+  </url><url>
     <loc>https://blog.kyu08.com/pr-358/posts/kubecon-2026/</loc>
     <lastmod>2026-07-30T10:05:44+09:00</lastmod>
   </url><url>
-    <loc>https://blog.kyu08.com/pr-358/</loc>
+    <loc>https://blog.kyu08.com/pr-358/tags/kubernetes/</loc>
     <lastmod>2026-07-30T10:05:44+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/pr-358/posts/</loc>
     <lastmod>2026-07-30T10:05:44+09:00</lastmod>
   </url><url>
-    <loc>https://blog.kyu08.com/pr-358/posts/time-management-for-system-administrators/</loc>
-    <lastmod>2026-07-19T00:00:15+09:00</lastmod>
-  </url><url>
     <loc>https://blog.kyu08.com/pr-358/tags/</loc>
+    <lastmod>2026-07-30T10:05:44+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/pr-358/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</loc>
+    <lastmod>2026-07-30T10:05:44+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.kyu08.com/pr-358/posts/time-management-for-system-administrators/</loc>
     <lastmod>2026-07-19T00:00:15+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/pr-358/tags/%E3%82%BD%E3%83%95%E3%83%88%E3%82%B9%E3%82%AD%E3%83%AB/</loc>
@@ -63,9 +72,6 @@
     <lastmod>2026-03-01T09:00:32+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/pr-358/posts/go-con-mini-in-sendai-2026/</loc>
-    <lastmod>2026-03-01T09:00:32+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/pr-358/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</loc>
     <lastmod>2026-03-01T09:00:32+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/pr-358/tags/neovim/</loc>
@@ -117,9 +123,6 @@
     <lastmod>2025-12-15T19:21:35+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/pr-358/posts/bbf_kubernetes/</loc>
-    <lastmod>2025-12-10T00:04:41+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.kyu08.com/pr-358/tags/kubernetes/</loc>
     <lastmod>2025-12-10T00:04:41+09:00</lastmod>
   </url><url>
     <loc>https://blog.kyu08.com/pr-358/tags/%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A/</loc>
