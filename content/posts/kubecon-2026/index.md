@@ -1,7 +1,9 @@
 ---
-title: ""
+title: "KubeCon + CloudNativeCon Japan 2026に参加した"
 tags:
-  - ""
+  - "Kubernetes"
+  - "CNCF"
+  - "勉強会"
 
 description: ""
 date: 2026-07-30T10:05:44+09:00
@@ -15,36 +17,31 @@ color: ""
 cover: "cover.png"
 ---
 
-受付の方の英語がまったく聞き取れず絶望(通訳の方がいたのでなんとかなった)
+![](5.webp)
 
-## スポンサーブース
-- microsoft
-- datadog
-- aws
+<!-- TODO: 写真貼る -->
+
+KubeCon + CloudNativeCon Japan 2026に参加したので感想などを記しておく。
+
+ちなみに、カンファレンス自体は2026/7/28-2026/7/30で開催されていたが、KubeConが開催されていることに気付いたのが7/29の夜だったので最終日だけ参加した。(来年は全日程参加したい...！)
+
+参加したセッションの感想を簡単に書いていく。
 
 ## Beyond Translation: The Journey of Building the Japanese Kubernetes SIG Docs Community
-去年1年で173のprがmergeされた
+Aoi Takahashiさん、Junya OkabeさんによるKubernetesドキュメントの日本語翻訳を進める中での取り組みを紹介した発表。
 
-Localization Guideを見るとどのように貢献を始めるかがわかるようになっている
-
-- Upstream Trainingもあるよ
-    - 年に2回やっている
-
-- aoiさんも去年のkube conでの発表をみてkube docへの貢献を始めた
-
-- 始め方
-    - 動画をみた（Japanese Community have contes to train yourselfらしい）
-    - sample PRを作成した
-- よかったこと
-    - docをメンテするために深く学習することになる
-    - Kubestranautにもなった
-- 気づき
-    - 仕事と同じでリスペクトや明瞭なコミュニケーションは重要だし、それらがあればスムーズにことが進む
-
+https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1228189
 
 ### 感想
-<!-- TODO: かく -->
+Aoiさんの「Kubernetesの試験勉強との両立は大変だったが、むしろドキュメントの翻訳を通してKubernetesを深く理解することができた」という言葉が強く印象に残っている。
 
+自分も1年ほど前から仕事でkubernetesを使うようになり、このところキャッチアップに時間を使っているのでドキュメントの貢献を通して日本語フレンドリーな学習環境を作りつつ、自分の理解も深めていきたいと思った。
+
+Aoiさん、Okabeさんのセッションとkubernetes slackに共通していえることだが、非常にオープンな雰囲気で新規の貢献者を歓迎している空気感があったのも貢献に踏み出してみたいと思ったきっかけだった。
+
+冒頭のリンクからスライドがダウンロードできるのでぜひ気になる方はご覧ください。
+
+<!-- TODO:ここから -->
 ## From User to Contributor: A Quick Guide to kubectl & kustomize
 ### kubectl
 - Legacy
@@ -85,10 +82,23 @@ Localization Guideを見るとどのように貢献を始めるかがわかる�
 <!-- Jul 30 • 16:30-17:00 5F | 502 -->
 - Cilium
     - Kubernetes-Native eBPF
+    - ネットワークまわり、何もわからないことがわかった
+
+## スポンサーブースでお話したこと
+- microsoft
+- datadog
+- AWS
 
 ## 感想
+<!-- TODO: 画像どれか使う -->
+![](1.webp)
+![](2.webp)
+![](4.webp)
+
 - 英語モチベが上がった
+    - 受付の方の英語がまったく聞き取れず絶望した(通訳の方がいたのでなんとかなったが歯がゆい気持ちになった)
 - もちろん技術モチベ(とくにkube)もあがった
 - あとOSSモチベも上がったので翻訳への貢献をやっていきたい
 - スポンサーブースでもためになる話を聞くことができた(各種グッズももらえたし)
+- ノベルティたくさんもらえた
 - いってよかった
