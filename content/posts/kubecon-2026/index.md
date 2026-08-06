@@ -41,11 +41,11 @@ Aoiさん、Okabeさんのセッションとkubernetes slackに共通してい�
 
 冒頭のリンクからスライドがダウンロードできるのでぜひ気になる方はご覧ください。
 
-<!-- TODO:ここから -->
 ## From User to Contributor: A Quick Guide to kubectl & kustomize
 ![from-user-to-contributor-a-quick-guide-to-kubectl-kustomize.webp](from-user-to-contributor-a-quick-guide-to-kubectl-kustomize.webp)
 
-SIG CLIの一員であるYugo KobayashiさんとMaciej Szulikさんによるkubectlとkustomizeの内部構造を解説したセッション。
+SIG CLI[^1]のメンテナであるYugo KobayashiさんとMaciej Szulikさんによるkubectlとkustomizeの内部構造を解説したセッション。
+<!-- TODO:ここから -->
 
 https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1228191
 
@@ -109,3 +109,5 @@ https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule
 - スポンサーブースでもためになる話を聞くことができた(各種グッズももらえたし)
 - ノベルティたくさんもらえた
 - いってよかった
+
+[^1]: Special Interest Groupの略。SIG Docs、SIG CLIなど、分野ごとに存在するチームのような存在。（だと理解しているがあまり自信はない）ちなみにWorking Groupという組織もあるようだが、[New Contributor Orientationの資料](https://github.com/kubernetes/community/blob/main/mentoring/new-contributor-orientation/nco-slides/TEMPLATE%20%5BMONTH%5D%20New%20Contributor%20Orientation.pdf)によるとSIGとは違い、一時的な組織らしい。
