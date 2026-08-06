@@ -640,5 +640,11 @@
     "description": "July 28-30, 2026 | Yokohama, Japan Sessions will be recorded and available on the CNCF YouTube channel within two weeks. Times shown in JST (UTC+9). Seating is first come, first served.",
     "image": "https://events.linuxfoundation.org/wp-content/uploads/2026/05/kccnc-japan-2026-social-snackable.png",
     "fetchedAt": "2026-08-06T15:28:36.463Z"
+  },
+  "https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1194861": {
+    "title": "Schedule | LF Events",
+    "description": "July 28-30, 2026 | Yokohama, Japan Sessions will be recorded and available on the CNCF YouTube channel within two weeks. Times shown in JST (UTC+9). Seating is first come, first served.",
+    "image": "https://events.linuxfoundation.org/wp-content/uploads/2026/05/kccnc-japan-2026-social-snackable.png",
+    "fetchedAt": "2026-08-06T15:33:34.989Z"
   }
 }
