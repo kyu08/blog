@@ -15,7 +15,8 @@
       
       <guid>https://blog.kyu08.com/pr-358/posts/kubecon-2026/</guid>
       <description>KubeCon + CloudNativeCon Japan 2026に参加したので感想などを記しておく。 ちなみに、カンファレンス自体は2026/7/28-2026/7/30で開催されていたが、</description>
-      <content>&lt;!-- TODO: 写真貼る --&gt;
+      <content>&lt;p&gt;&lt;img src=&#34;5.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;!-- TODO: 写真貼る --&gt;
 &lt;p&gt;KubeCon + CloudNativeCon Japan 2026に参加したので感想などを記しておく。&lt;/p&gt;
 &lt;p&gt;ちなみに、カンファレンス自体は2026/7/28-2026/7/30で開催されていたが、KubeConが開催されていることに気付いたのが7/29の夜だったので最終日だけ参加した。(来年は全日程参加したい&amp;hellip;！)&lt;/p&gt;
 &lt;p&gt;参加したセッションの感想を簡単に書いていく。&lt;/p&gt;
@@ -115,6 +116,10 @@
 &lt;li&gt;AWS&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;感想-3&#34;&gt;感想&lt;/h2&gt;
+&lt;!-- TODO: 画像どれか使う --&gt;
+&lt;p&gt;&lt;img src=&#34;1.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;
+&lt;img src=&#34;2.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;
+&lt;img src=&#34;4.webp&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;英語モチベが上がった
 &lt;ul&gt;
