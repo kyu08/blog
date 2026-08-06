@@ -43,16 +43,19 @@ Aoiさん、Okabeさんのセッションとkubernetes slackに共通してい�
 
 <!-- TODO:ここから -->
 ## From User to Contributor: A Quick Guide to kubectl & kustomize
-### kubectl
-- Legacy
-    - kubectlの各コマンドの構造(New, Options, Complete, Validate, Run)
-- NewStructure
+![from-user-to-contributor-a-quick-guide-to-kubectl-kustomize.webp](from-user-to-contributor-a-quick-guide-to-kubectl-kustomize.webp)
+
+SIG CLIの一員であるYugo KobayashiさんとMaciej Szulikさんによるkubectlとkustomizeの内部構造を解説したセッション。
+
+https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1228191
+
+<!-- ### kubectl -->
+<!-- - Legacy -->
+<!--     - kubectlの各コマンドの構造(New, Options, Complete, Validate, Run) -->
+<!-- - NewStructure -->
 
 ### 感想
 コードの構造がわかると貢献へのハードルが下がるのでめっちゃ良い時間だった。これまで以上に興味も持てたし。
-
-### kustomize
-
 
 ## Repurposing OpenTelemetry Traces as Test Data: Breaking the Cost Barrier in System Migration
 <!-- Jul 30 • 14:50-15:20 3F | 315 -->
@@ -91,6 +94,8 @@ Aoiさん、Okabeさんのセッションとkubernetes slackに共通してい�
 
 ## 感想
 <!-- TODO: 画像どれか使う -->
+<!-- TODO: 画像のファイル名をいい感じにする -->
+
 ![](1.webp)
 ![](2.webp)
 ![](4.webp)
