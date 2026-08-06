@@ -17,8 +17,7 @@ color: ""
 cover: "cover.png"
 ---
 
-<!-- TODO: 画像のファイル名をいい感じにする -->
-![](5.webp)
+![logo](logo.webp)
 
 KubeCon + CloudNativeCon Japan 2026に参加したので感想などを記しておく。
 
@@ -112,6 +111,7 @@ https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule
 - もちろん技術モチベ(とくにkube)もあがった
 - あとOSSモチベも上がったので翻訳への貢献をやっていきたい
 - スポンサーブースでもためになる話を聞くことができた(各種グッズももらえたし)
+<!-- TODO: 全部は大変なので1,2個写真をのせる？ -->
 - ノベルティたくさんもらえた
 - いってよかった
 
