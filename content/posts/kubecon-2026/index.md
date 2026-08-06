@@ -58,7 +58,11 @@ https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule
 コードの構造がわかると貢献へのハードルが下がるのでめっちゃ良い時間だった。これまで以上に興味も持てたし。
 
 ## Repurposing OpenTelemetry Traces as Test Data: Breaking the Cost Barrier in System Migration
-<!-- Jul 30 • 14:50-15:20 3F | 315 -->
+<!-- TODO: どんな発表だったのか書く -->
+Yoshiki Fujikaneさんによる
+
+https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1194861
+
 - システム移行において、どのように新システムが旧システムと同じ挙動であることを保証するか
     - 課題
         - コードが読みづらい
@@ -79,10 +83,8 @@ https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule
         - CDCを使うことを検討しているが、技術的にもかなり大きな壁になりそう
 
 ## OTel meets Wasm: Rethinking OpenTelemetry Collector Extensibility
-<!-- Jul 30 • 15:50-16:20 3F | 315 -->
 
 ## The Road to Cilium: Migrating 150+ Kubernetes Clusters at Airbnb
-<!-- Jul 30 • 16:30-17:00 5F | 502 -->
 - Cilium
     - Kubernetes-Native eBPF
     - ネットワークまわり、何もわからないことがわかった
