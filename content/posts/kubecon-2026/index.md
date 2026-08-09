@@ -17,11 +17,13 @@ color: ""
 cover: "cover.png"
 ---
 
-![logo](logo.webp)
+![](welcome.webp)
 
 KubeCon + CloudNativeCon Japan 2026に参加したので感想などを記しておく。
 
 ちなみに、カンファレンス自体は2026/7/28-2026/7/30で開催されていたが、KubeConが開催されていることに気付いたのが7/29の夜だったので最終日だけ参加した。(来年は全日程参加したい...！)
+
+![logo](logo.webp)
 
 参加したセッションの感想を簡単に書いていく。
 
@@ -35,9 +37,17 @@ Aoiさんの「Kubernetesの試験勉強との両立は大変だったが、む�
 
 自分も1年ほど前から仕事でkubernetesを使うようになり、このところキャッチアップに時間を使っているのでドキュメントの貢献を通して日本語フレンドリーな学習環境を作りつつ、自分の理解も深めていきたいと思った。
 
-Aoiさん、Okabeさんのセッションとkubernetes slackに共通していえることだが、非常にオープンな雰囲気で新規の貢献者を歓迎している空気感があったのも貢献に踏み出してみたいと思ったきっかけだった。
+ので、いくつかPRを送ってみた。
 
-冒頭のリンクからスライドがダウンロードできるのでぜひ気になる方はご覧ください。
+https://github.com/kubernetes/website/pull/56876
+
+https://github.com/kubernetes/website/pull/56875
+
+https://github.com/kubernetes/website/pull/56839
+
+Aoiさん、Okabeさんのセッションとkubernetesのslackに共通していえることだが、非常にオープンな雰囲気で新規の貢献者を歓迎している空気感があったのも貢献に踏み出してみたいと思ったきっかけだった。とてもありがたい。
+
+冒頭のリンクから発表のスライドがダウンロードできるのでぜひご覧ください。
 
 ## From User to Contributor: A Quick Guide to kubectl & kustomize
 ![from-user-to-contributor-a-quick-guide-to-kubectl-kustomize.webp](from-user-to-contributor-a-quick-guide-to-kubectl-kustomize.webp)
@@ -81,26 +91,19 @@ https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule
 ## 感想
 ネットワークまわりが何もわかっていないことがわかった。
 
-## スポンサーブースでお話したこと
-- microsoft
-- datadog
-- AWS
+## スポンサーブース
+- スポンサーブースではKubernetesの相談をさせていただいたり、Datadogの相談をさせていただいたり、各社の製品をお話を聞かせていただいたりした。
+    ![novelty.webp](novelty.webp "いただいたノベルティ(の一部)")
 
 ## 感想
-<!-- TODO: 画像どれか使う -->
-<!-- TODO: 画像のファイル名をいい感じにする -->
-
-![](1.webp)
-![](2.webp)
-![](4.webp)
+![](signboard.webp)
+![](logo2.webp)
 
 - 英語モチベが上がった
     - 受付の方の英語がまったく聞き取れず絶望した(通訳の方がいたのでなんとかなったが歯がゆい気持ちになった)
 - もちろん技術モチベ(とくにkube)もあがった
 - あとOSSモチベも上がったので翻訳への貢献をやっていきたい
 - スポンサーブースでもためになる話を聞くことができた(各種グッズももらえたし)
-<!-- TODO: 全部は大変なので1,2個写真をのせる？ -->
-- ノベルティたくさんもらえた
 - いってよかった
 
 [^1]: Special Interest Groupの略。SIG Docs、SIG CLIなど、分野ごとに存在するチームのような存在。（だと理解しているがあまり自信はない）ちなみにWorking Groupという組織もあるようだが、[New Contributor Orientationの資料](https://github.com/kubernetes/community/blob/main/mentoring/new-contributor-orientation/nco-slides/TEMPLATE%20%5BMONTH%5D%20New%20Contributor%20Orientation.pdf)によるとSIGとは違い、一時的な組織らしい。
