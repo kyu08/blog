@@ -112,14 +112,7 @@
 &lt;/div&gt;
 &lt;/p&gt;
 &lt;h2 id=&#34;感想-3&#34;&gt;感想&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Cilium
-&lt;ul&gt;
-&lt;li&gt;Kubernetes-Native eBPF&lt;/li&gt;
-&lt;li&gt;ネットワークまわり、何もわからないことがわかった&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;ネットワークまわりが何もわかっていないことがわかった。&lt;/p&gt;
 &lt;h2 id=&#34;スポンサーブースでお話したこと&#34;&gt;スポンサーブースでお話したこと&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;microsoft&lt;/li&gt;
