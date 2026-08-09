@@ -17,13 +17,13 @@ color: ""
 cover: "cover.png"
 ---
 
-![](welcome.webp)
+![welcome.webp](welcome.webp)
 
 KubeCon + CloudNativeCon Japan 2026に参加したので感想などを記しておく。
 
 ちなみに、カンファレンス自体は2026/7/28-2026/7/30で開催されていたが、KubeConが開催されていることに気付いたのが7/29の夜だったので最終日だけ参加した。(来年は全日程参加したい...！)
 
-![logo](logo.webp)
+![logo.webp](logo.webp)
 
 参加したセッションの感想を簡単に書いていく。
 
@@ -96,8 +96,8 @@ https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule
     ![novelty.webp](novelty.webp "いただいたノベルティ(の一部)")
 
 ## 感想
-![](signboard.webp)
-![](logo2.webp)
+![signboard.webp](signboard.webp)
+![logo2.webp](logo2.webp)
 
 - 英語モチベが上がった
     - 受付の方の英語がまったく聞き取れず絶望した(通訳の方がいたのでなんとかなったが歯がゆい気持ちになった)
