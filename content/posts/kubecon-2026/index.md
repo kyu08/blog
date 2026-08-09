@@ -6,7 +6,7 @@ tags:
   - "勉強会"
 
 description: ""
-date: 2026-07-30T10:05:44+09:00
+date: 2026-08-09T10:05:44+09:00
 author: "kyu08"
 authorTwitter: "kyu08_"
 draft: false
@@ -43,44 +43,35 @@ Aoiさん、Okabeさんのセッションとkubernetes slackに共通してい�
 ![from-user-to-contributor-a-quick-guide-to-kubectl-kustomize.webp](from-user-to-contributor-a-quick-guide-to-kubectl-kustomize.webp)
 
 SIG CLI[^1]のメンテナであるYugo KobayashiさんとMaciej Szulikさんによるkubectlとkustomizeの内部構造を解説したセッション。
-<!-- TODO:ここから -->
 
 https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1228191
 
-<!-- ### kubectl -->
-<!-- - Legacy -->
-<!--     - kubectlの各コマンドの構造(New, Options, Complete, Validate, Run) -->
-<!-- - NewStructure -->
-
 ### 感想
-コードの構造がわかると貢献へのハードルが下がるのでめっちゃ良い時間だった。これまで以上に興味も持てたし。
+- コードの構造がわかると貢献へのハードルが下がるのでとても良い時間だった。
+- これまで以上にこれらのツールへの貢献への興味を持てた。
 
 ## Repurposing OpenTelemetry Traces as Test Data: Breaking the Cost Barrier in System Migration
-<!-- TODO: どんな発表だったのか書く -->
-Yoshiki Fujikaneさんによる
+Yoshiki Fujikaneさんによるシステム移行の際にOtelのTraceを利用してシステムのinput/outputを記録し、そこからテストのinputと期待値を導き出す、という手法の共有。
 
 https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1194861
+
+以下メモ。
 
 - システム移行において、どのように新システムが旧システムと同じ挙動であることを保証するか
     - 課題
         - コードが読みづらい
         - 最新の仕様書がない
-        - ...
+        - etc.
     - 解決策(概要)
-        - 本番環境のinput/outputを新システムのテストデータとする
+        - 本番環境のinput/outputから新システムのテストのinput/期待値を導出する
     - どのようにinput/outputを記録するか
-        - traceを利用する。
+        - otelのtraceを利用する。
 - OBIを使って旧アプリケーションのコードに手を入れずに欲しいデータを入手する
     - eBPFを使ってネットワークパケットをキャプチャする
 
 ### 感想
-- ちょうど仕事でも移行作業をする予定があったのでとても参考になった。
-    - 新旧システムの挙動を外形で比較するという発想はなかった。
-- 疑問
-    - 多くの場合、APIはDatabaseの中身によってレスポンスが変わると思う。今回紹介された方法でテストのinputと期待値はわかるが、テストを実行するためにはシードデータも必要なはず。個々のテストケースで必要なシードデータはどう特定した？(PoCでは空のデータベースで行ったらしい)
-        - CDCを使うことを検討しているが、技術的にもかなり大きな壁になりそう
-
-<!-- ## OTel meets Wasm: Rethinking OpenTelemetry Collector Extensibility -->
+- 新旧システムの挙動を外形から比較するという発想はなかったので勉強になった。
+    - ただ、現状はDBの中身はすべて空の状態を想定しているとのことで、DBを書き換えるAPI等についてはfeature workとのことだった。
 
 ## The Road to Cilium: Migrating 150+ Kubernetes Clusters at Airbnb
 Yifei SunさんによるCilium移行の発表。
@@ -88,10 +79,7 @@ Yifei SunさんによるCilium移行の発表。
 https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1171327
 
 ## 感想
-
-- Cilium
-    - Kubernetes-Native eBPF
-    - ネットワークまわり、何もわからないことがわかった
+ネットワークまわりが何もわかっていないことがわかった。
 
 ## スポンサーブースでお話したこと
 - microsoft
