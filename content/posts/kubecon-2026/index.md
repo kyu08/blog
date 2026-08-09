@@ -96,14 +96,17 @@ https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule
     ![novelty.webp](novelty.webp "いただいたノベルティ(の一部)")
 
 ## 感想
-![signboard.webp](signboard.webp)
 ![logo2.webp](logo2.webp)
 
-- 英語モチベが上がった
-    - 受付の方の英語がまったく聞き取れず絶望した(通訳の方がいたのでなんとかなったが歯がゆい気持ちになった)
-- もちろん技術モチベ(とくにkube)もあがった
-- あとOSSモチベも上がったので翻訳への貢献をやっていきたい
-- スポンサーブースでもためになる話を聞くことができた(各種グッズももらえたし)
-- いってよかった
+受付の方の英語がまったく聞き取れず絶望した。(通訳の方がいたのでなんとかなったが歯がゆい気持ちになった)結果英語モチベが上がった。
+
+もちろん技術モチベ(とくにKubernetes周り)もあがった。直近は今読んでいるKubernetes In Actionのまとめを社内で共有するのをやる予定。
+
+あとOSSモチベも上がったので翻訳への貢献もやっていきたい。
+
+![signboard.webp](signboard.webp)
+
+総じて行ってよかった！[^2]
 
 [^1]: Special Interest Groupの略。SIG Docs、SIG CLIなど、分野ごとに存在するチームのような存在。（だと理解しているがあまり自信はない）ちなみにWorking Groupという組織もあるようだが、[New Contributor Orientationの資料](https://github.com/kubernetes/community/blob/main/mentoring/new-contributor-orientation/nco-slides/TEMPLATE%20%5BMONTH%5D%20New%20Contributor%20Orientation.pdf)によるとSIGとは違い、一時的な組織らしい。
+[^2]: チケットは高かった。(ペイしたとも思っている)
