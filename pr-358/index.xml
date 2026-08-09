@@ -34,7 +34,7 @@
 &lt;h3 id=&#34;感想&#34;&gt;感想&lt;/h3&gt;
 &lt;p&gt;Aoiさんの「Kubernetesの試験勉強との両立は大変だったが、むしろドキュメントの翻訳を通してKubernetesを深く理解することができた」という言葉が強く印象に残っている。&lt;/p&gt;
 &lt;p&gt;自分も1年ほど前から仕事でkubernetesを使うようになり、このところキャッチアップに時間を使っているのでドキュメントの貢献を通して日本語フレンドリーな学習環境を作りつつ、自分の理解も深めていきたいと思った。&lt;/p&gt;
-&lt;p&gt;ので、いくつかPRを送ってみた。&lt;/p&gt;
+&lt;p&gt;ので、早速いくつかPRを送ってみた。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/kubernetes/website/pull/56876&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/kubernetes/website/pull/56876&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
       &lt;img src=&#34;https://opengraph.githubassets.com/1eb8830d5b40e9734f936906b5dcdd67bc4812ca1f24a544e73aa95b7c921faf/kubernetes/website/pull/56876&#34; alt=&#34;[ja] Translate content/en/docs/reference/glossary/condition.md into Japanese by kyu08 · Pull Request #56876 · kubernetes/website&#34; loading=&#34;lazy&#34;&gt;
