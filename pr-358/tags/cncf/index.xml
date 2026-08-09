@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Thu, 30 Jul 2026 10:05:44 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-358/tags/cncf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Aug 2026 10:05:44 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/pr-358/tags/cncf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>KubeCon &#43; CloudNativeCon Japan 2026に参加した</title>
       <link>https://blog.kyu08.com/pr-358/posts/kubecon-2026/</link>
-      <pubDate>Thu, 30 Jul 2026 10:05:44 +0900</pubDate>
+      <pubDate>Sun, 09 Aug 2026 10:05:44 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/pr-358/posts/kubecon-2026/</guid>
       <description>KubeCon + CloudNativeCon Japan 2026に参加したので感想などを記しておく。 ちなみに、カンファレンス自体は2026/7/28-2026/7/30で開催されていたが、</description>
@@ -38,7 +38,6 @@
 &lt;h2 id=&#34;from-user-to-contributor-a-quick-guide-to-kubectl--kustomize&#34;&gt;From User to Contributor: A Quick Guide to kubectl &amp;amp; kustomize&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;from-user-to-contributor-a-quick-guide-to-kubectl-kustomize.webp&#34; alt=&#34;from-user-to-contributor-a-quick-guide-to-kubectl-kustomize.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;SIG CLI&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;のメンテナであるYugo KobayashiさんとMaciej Szulikさんによるkubectlとkustomizeの内部構造を解説したセッション。&lt;/p&gt;
-&lt;!-- TODO:ここから --&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1228191&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1228191&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
       &lt;img src=&#34;https://events.linuxfoundation.org/wp-content/uploads/2026/05/kccnc-japan-2026-social-snackable.png&#34; alt=&#34;Schedule | LF Events&#34; loading=&#34;lazy&#34;&gt;
@@ -48,15 +47,13 @@
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;/p&gt;
-&lt;!-- ### kubectl --&gt;
-&lt;!-- - Legacy --&gt;
-&lt;!--     - kubectlの各コマンドの構造(New, Options, Complete, Validate, Run) --&gt;
-&lt;!-- - NewStructure --&gt;
 &lt;h3 id=&#34;感想-1&#34;&gt;感想&lt;/h3&gt;
-&lt;p&gt;コードの構造がわかると貢献へのハードルが下がるのでめっちゃ良い時間だった。これまで以上に興味も持てたし。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;コードの構造がわかると貢献へのハードルが下がるのでとても良い時間だった。&lt;/li&gt;
+&lt;li&gt;これまで以上にこれらのツールへの貢献への興味を持てた。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;repurposing-opentelemetry-traces-as-test-data-breaking-the-cost-barrier-in-system-migration&#34;&gt;Repurposing OpenTelemetry Traces as Test Data: Breaking the Cost Barrier in System Migration&lt;/h2&gt;
-&lt;!-- TODO: どんな発表だったのか書く --&gt;
-&lt;p&gt;Yoshiki Fujikaneさんによる&lt;/p&gt;
+&lt;p&gt;Yoshiki Fujikaneさんによるシステム移行の際にOtelのTraceを利用してシステムのinput/outputを記録し、そこからテストのinputと期待値を導き出す、という手法の共有。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1194861&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1194861&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
       &lt;img src=&#34;https://events.linuxfoundation.org/wp-content/uploads/2026/05/kccnc-japan-2026-social-snackable.png&#34; alt=&#34;Schedule | LF Events&#34; loading=&#34;lazy&#34;&gt;
@@ -66,6 +63,7 @@
   &lt;/a&gt;
 &lt;/div&gt;
 &lt;/p&gt;
+&lt;p&gt;以下メモ。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;システム移行において、どのように新システムが旧システムと同じ挙動であることを保証するか
 &lt;ul&gt;
@@ -73,17 +71,17 @@
 &lt;ul&gt;
 &lt;li&gt;コードが読みづらい&lt;/li&gt;
 &lt;li&gt;最新の仕様書がない&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;li&gt;etc.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;解決策(概要)
 &lt;ul&gt;
-&lt;li&gt;本番環境のinput/outputを新システムのテストデータとする&lt;/li&gt;
+&lt;li&gt;本番環境のinput/outputから新システムのテストのinput/期待値を導出する&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;どのようにinput/outputを記録するか
 &lt;ul&gt;
-&lt;li&gt;traceを利用する。&lt;/li&gt;
+&lt;li&gt;otelのtraceを利用する。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -96,22 +94,12 @@
 &lt;/ul&gt;
 &lt;h3 id=&#34;感想-2&#34;&gt;感想&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;ちょうど仕事でも移行作業をする予定があったのでとても参考になった。
+&lt;li&gt;新旧システムの挙動を外形から比較するという発想はなかったので勉強になった。
 &lt;ul&gt;
-&lt;li&gt;新旧システムの挙動を外形で比較するという発想はなかった。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;疑問
-&lt;ul&gt;
-&lt;li&gt;多くの場合、APIはDatabaseの中身によってレスポンスが変わると思う。今回紹介された方法でテストのinputと期待値はわかるが、テストを実行するためにはシードデータも必要なはず。個々のテストケースで必要なシードデータはどう特定した？(PoCでは空のデータベースで行ったらしい)
-&lt;ul&gt;
-&lt;li&gt;CDCを使うことを検討しているが、技術的にもかなり大きな壁になりそう&lt;/li&gt;
+&lt;li&gt;ただ、現状はDBの中身はすべて空の状態を想定しているとのことで、DBを書き換えるAPI等についてはfeature workとのことだった。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- ## OTel meets Wasm: Rethinking OpenTelemetry Collector Extensibility --&gt;
 &lt;h2 id=&#34;the-road-to-cilium-migrating-150-kubernetes-clusters-at-airbnb&#34;&gt;The Road to Cilium: Migrating 150+ Kubernetes Clusters at Airbnb&lt;/h2&gt;
 &lt;p&gt;Yifei SunさんによるCilium移行の発表。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1171327&#34; data-auto-fetch=&#34;false&#34;&gt;
