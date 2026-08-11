@@ -45,7 +45,7 @@ https://github.com/kubernetes/website/pull/56875
 
 https://github.com/kubernetes/website/pull/56839
 
-Aoiさん、OkabeさんのセッションとKubernetesのslackに共通していえることだが、非常にオープンな雰囲気で新規の貢献者を歓迎している空気感があったのも貢献に踏み出してみたいと思ったきっかけだった。とてもありがたい。
+Aoiさん、OkabeさんのセッションとKubernetesのSlackに共通していえることだが、非常にオープンな雰囲気で新規の貢献者を歓迎している空気感があったのも貢献に踏み出してみたいと思ったきっかけだった。とてもありがたい。
 
 冒頭のリンクから発表のスライドがダウンロードできるのでぜひご覧ください。
 
@@ -75,7 +75,7 @@ https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule
     - 解決策(概要)
         - 本番環境のinput/outputから新システムのテストのinput/期待値を導出する
     - どのようにinput/outputを記録するか
-        - otelのtraceを利用する。
+        - OpenTelemetryのTracesを利用する。
 - OBIを使って旧アプリケーションのコードに手を入れずに欲しいデータを入手する
     - eBPFを使ってネットワークパケットをキャプチャする
 
@@ -88,20 +88,20 @@ Yifei SunさんによるCilium移行の発表。
 
 https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1171327
 
-## 感想
+### 感想
 ネットワークまわりが何もわかっていないことがわかった。
 
 ## スポンサーブース
 ![novelty.webp](novelty.webp "いただいたノベルティ(の一部)")
 
-スポンサーブースではKubernetesの相談をさせていただいたり、Datadogの相談をさせていただいたり、各社の製品をお話を聞かせていただいたりした。
+スポンサーブースではKubernetesの相談をさせていただいたり、Datadogの相談をさせていただいたり、各社の製品のお話を聞かせていただいたりした。
 
 ## 感想
 ![logo2.webp](logo2.webp)
 
 受付の方の英語がまったく聞き取れず絶望した。(通訳の方がいたのでなんとかなったが歯がゆい気持ちになった)その結果英語モチベが上がった。
 
-もちろん技術モチベ(とくにKubernetes周り)もあがった。直近は今読んでいるKubernetes In Actionのまとめを社内で共有するのをやる予定。
+もちろん技術モチベ(とくにKubernetes周り)もあがった。直近は今読んでいるKubernetes in Actionのまとめを社内で共有するのをやる予定。
 
 あとOSSモチベも上がったので翻訳への貢献もやっていきたい。
 
