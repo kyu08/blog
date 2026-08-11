@@ -6,7 +6,7 @@ tags:
   - "勉強会"
 
 description: ""
-date: 2026-08-10T00:05:44+09:00
+date: 2026-08-11T00:05:44+09:00
 author: "kyu08"
 authorTwitter: "kyu08_"
 draft: false
