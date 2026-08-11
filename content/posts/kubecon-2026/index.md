@@ -58,7 +58,7 @@ https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule
 
 ### 感想
 - コードの構造がわかると貢献へのハードルが下がるのでとても良い時間だった。
-- これまで以上にこれらのツールへの貢献への興味を持てた。
+- これまで以上にこれらのツールへの貢献への興味を持った。
 
 ## Repurposing OpenTelemetry Traces as Test Data: Breaking the Cost Barrier in System Migration
 Yoshiki Fujikaneさんによるシステム移行の際にOtelのTraceを利用してシステムのinput/outputを記録し、そこからテストのinputと期待値を導き出す、という手法の共有。
@@ -80,7 +80,7 @@ https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule
     - eBPFを使ってネットワークパケットをキャプチャする
 
 ### 感想
-- 新旧システムの挙動を外形から比較するという発想はなかったので勉強になった。
+- 新旧システムの挙動をeBPFを使って比較するのはやったことがなかったので勉強になった。
     - ただ、現状はDBの中身はすべて空の状態を想定しているとのことで、DBを書き換えるAPI等についてはfeature workとのことだった。
 
 ## The Road to Cilium: Migrating 150+ Kubernetes Clusters at Airbnb
@@ -92,13 +92,14 @@ https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule
 ネットワークまわりが何もわかっていないことがわかった。
 
 ## スポンサーブース
-- スポンサーブースではKubernetesの相談をさせていただいたり、Datadogの相談をさせていただいたり、各社の製品をお話を聞かせていただいたりした。
-    ![novelty.webp](novelty.webp "いただいたノベルティ(の一部)")
+![novelty.webp](novelty.webp "いただいたノベルティ(の一部)")
+
+スポンサーブースではKubernetesの相談をさせていただいたり、Datadogの相談をさせていただいたり、各社の製品をお話を聞かせていただいたりした。
 
 ## 感想
 ![logo2.webp](logo2.webp)
 
-受付の方の英語がまったく聞き取れず絶望した。(通訳の方がいたのでなんとかなったが歯がゆい気持ちになった)結果英語モチベが上がった。
+受付の方の英語がまったく聞き取れず絶望した。(通訳の方がいたのでなんとかなったが歯がゆい気持ちになった)その結果英語モチベが上がった。
 
 もちろん技術モチベ(とくにKubernetes周り)もあがった。直近は今読んでいるKubernetes In Actionのまとめを社内で共有するのをやる予定。
 
@@ -109,4 +110,4 @@ https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule
 総じて行ってよかった！[^2]
 
 [^1]: Special Interest Groupの略。SIG Docs、SIG CLIなど、分野ごとに存在するチームのような存在。（だと理解しているがあまり自信はない）ちなみにWorking Groupという組織もあるようだが、[New Contributor Orientationの資料](https://github.com/kubernetes/community/blob/main/mentoring/new-contributor-orientation/nco-slides/TEMPLATE%20%5BMONTH%5D%20New%20Contributor%20Orientation.pdf)によるとSIGとは違い、一時的な組織らしい。
-[^2]: チケットは高かった。(ペイしたとも思っている)
+[^2]: チケットは高かった。(ペイしたとも思っているが...)
