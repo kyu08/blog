@@ -108,7 +108,7 @@ pa...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kube
 &lt;h3 id=&#34;感想-1&#34;&gt;感想&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;コードの構造がわかると貢献へのハードルが下がるのでとても良い時間だった。&lt;/li&gt;
-&lt;li&gt;これまで以上にこれらのツールへの貢献への興味を持てた。&lt;/li&gt;
+&lt;li&gt;これまで以上にこれらのツールへの貢献への興味を持った。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;repurposing-opentelemetry-traces-as-test-data-breaking-the-cost-barrier-in-system-migration&#34;&gt;Repurposing OpenTelemetry Traces as Test Data: Breaking the Cost Barrier in System Migration&lt;/h2&gt;
 &lt;p&gt;Yoshiki Fujikaneさんによるシステム移行の際にOtelのTraceを利用してシステムのinput/outputを記録し、そこからテストのinputと期待値を導き出す、という手法の共有。&lt;/p&gt;
@@ -152,7 +152,7 @@ pa...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kube
 &lt;/ul&gt;
 &lt;h3 id=&#34;感想-2&#34;&gt;感想&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;新旧システムの挙動を外形から比較するという発想はなかったので勉強になった。
+&lt;li&gt;新旧システムの挙動をeBPFを使って比較するのはやったことがなかったので勉強になった。
 &lt;ul&gt;
 &lt;li&gt;ただ、現状はDBの中身はすべて空の状態を想定しているとのことで、DBを書き換えるAPI等についてはfeature workとのことだった。&lt;/li&gt;
 &lt;/ul&gt;
@@ -172,16 +172,14 @@ pa...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kube
 &lt;h2 id=&#34;感想-3&#34;&gt;感想&lt;/h2&gt;
 &lt;p&gt;ネットワークまわりが何もわかっていないことがわかった。&lt;/p&gt;
 &lt;h2 id=&#34;スポンサーブース&#34;&gt;スポンサーブース&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;スポンサーブースではKubernetesの相談をさせていただいたり、Datadogの相談をさせていただいたり、各社の製品をお話を聞かせていただいたりした。
-&lt;figure class=&#34;image-with-caption&#34;&gt;
+&lt;p&gt;&lt;figure class=&#34;image-with-caption&#34;&gt;
     &lt;img src=&#34;novelty.webp&#34; alt=&#34;novelty.webp&#34; loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;いただいたノベルティ(の一部)&lt;/figcaption&gt;
-  &lt;/figure&gt;&lt;/li&gt;
-&lt;/ul&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;スポンサーブースではKubernetesの相談をさせていただいたり、Datadogの相談をさせていただいたり、各社の製品をお話を聞かせていただいたりした。&lt;/p&gt;
 &lt;h2 id=&#34;感想-4&#34;&gt;感想&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;logo2.webp&#34; alt=&#34;logo2.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;受付の方の英語がまったく聞き取れず絶望した。(通訳の方がいたのでなんとかなったが歯がゆい気持ちになった)結果英語モチベが上がった。&lt;/p&gt;
+&lt;p&gt;受付の方の英語がまったく聞き取れず絶望した。(通訳の方がいたのでなんとかなったが歯がゆい気持ちになった)その結果英語モチベが上がった。&lt;/p&gt;
 &lt;p&gt;もちろん技術モチベ(とくにKubernetes周り)もあがった。直近は今読んでいるKubernetes In Actionのまとめを社内で共有するのをやる予定。&lt;/p&gt;
 &lt;p&gt;あとOSSモチベも上がったので翻訳への貢献もやっていきたい。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;signboard.webp&#34; alt=&#34;signboard.webp&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
@@ -193,7 +191,7 @@ pa...&lt;/div&gt;&lt;div class=&#34;blogcard-url&#34;&gt;https://github.com/kube
 &lt;p&gt;Special Interest Groupの略。SIG Docs、SIG CLIなど、分野ごとに存在するチームのような存在。（だと理解しているがあまり自信はない）ちなみにWorking Groupという組織もあるようだが、&lt;a href=&#34;https://github.com/kubernetes/community/blob/main/mentoring/new-contributor-orientation/nco-slides/TEMPLATE%20%5BMONTH%5D%20New%20Contributor%20Orientation.pdf&#34; target=&#34;_blank&#34; &gt;New Contributor Orientationの資料&lt;/a&gt;によるとSIGとは違い、一時的な組織らしい。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:2&#34;&gt;
-&lt;p&gt;チケットは高かった。(ペイしたとも思っている)&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;チケットは高かった。(ペイしたとも思っているが&amp;hellip;)&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
