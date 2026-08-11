@@ -61,7 +61,7 @@ https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule
 - これまで以上にこれらのツールへの貢献への興味を持った。
 
 ## Repurposing OpenTelemetry Traces as Test Data: Breaking the Cost Barrier in System Migration
-Yoshiki Fujikaneさんによるシステム移行の際にOtelのTraceを利用してシステムのinput/outputを記録し、そこからテストのinputと期待値を導き出す、という手法の共有。
+Yoshiki Fujikaneさんによるシステム移行の際にOpenTelemetryのTracesを利用してシステムのinput/outputを記録し、そこからテストのinputと期待値を導き出す、という手法の共有。
 
 https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule/?id=1194861
 
@@ -81,7 +81,7 @@ https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule
 
 ### 感想
 - 新旧システムの挙動をeBPFを使って比較するのはやったことがなかったので勉強になった。
-    - ただ、現状はDBの中身はすべて空の状態を想定しているとのことで、DBを書き換えるAPI等についてはfeature workとのことだった。
+    - ただ、現状はDBの中身はすべて空の状態を想定しているとのことで、DBを書き換えるAPI等についてはfuture workとのことだった。
 
 ## The Road to Cilium: Migrating 150+ Kubernetes Clusters at Airbnb
 Yifei SunさんによるCilium移行の発表。
@@ -94,7 +94,7 @@ https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/program/schedule
 ## スポンサーブース
 ![novelty.webp](novelty.webp "いただいたノベルティ(の一部)")
 
-スポンサーブースではKubernetesの相談をさせていただいたり、Datadogの相談をさせていただいたり、各社の製品のお話を聞かせていただいたりした。
+スポンサーブースではKubernetesの相談をさせていただいたり、Datadogの相談をさせていただいたり、各社の製品のお話を聞いたりした。
 
 ## 感想
 ![logo2.webp](logo2.webp)
