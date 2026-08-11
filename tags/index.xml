@@ -7,7 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>blog.kyu08.com</copyright>
-    <lastBuildDate>Sun, 19 Jul 2026 00:00:15 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Aug 2026 00:05:44 +0900</lastBuildDate><atom:link href="https://blog.kyu08.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CNCF</title>
+      <link>https://blog.kyu08.com/tags/cncf/</link>
+      <pubDate>Tue, 11 Aug 2026 00:05:44 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/cncf/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://blog.kyu08.com/tags/kubernetes/</link>
+      <pubDate>Tue, 11 Aug 2026 00:05:44 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/kubernetes/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>勉強会</title>
+      <link>https://blog.kyu08.com/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</link>
+      <pubDate>Tue, 11 Aug 2026 00:05:44 +0900</pubDate>
+      
+      <guid>https://blog.kyu08.com/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
     <item>
       <title>ソフトスキル</title>
       <link>https://blog.kyu08.com/tags/%E3%82%BD%E3%83%95%E3%83%88%E3%82%B9%E3%82%AD%E3%83%AB/</link>
@@ -119,16 +149,6 @@
     </item>
     
     <item>
-      <title>勉強会</title>
-      <link>https://blog.kyu08.com/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</link>
-      <pubDate>Sun, 01 Mar 2026 09:00:32 +0900</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
       <title>neovim</title>
       <link>https://blog.kyu08.com/tags/neovim/</link>
       <pubDate>Sun, 15 Feb 2026 00:00:08 +0900</pubDate>
@@ -214,16 +234,6 @@
       <pubDate>Mon, 22 Dec 2025 00:13:06 +0900</pubDate>
       
       <guid>https://blog.kyu08.com/tags/rust/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>Kubernetes</title>
-      <link>https://blog.kyu08.com/tags/kubernetes/</link>
-      <pubDate>Wed, 10 Dec 2025 00:04:41 +0900</pubDate>
-      
-      <guid>https://blog.kyu08.com/tags/kubernetes/</guid>
       <description></description>
       <content></content>
     </item>
