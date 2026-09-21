@@ -670,5 +670,11 @@
     "description": "Description\nWHAT\n\nCurrently, these are 3 readability issues exist with deprecation warnings.\nPlease see the diff of corresponding commit and its message to know how I&#39;ve changed and why.\n\n\n\n\npa...",
     "image": "https://opengraph.githubassets.com/a01800a6c0aa97e1426649c32c8da556ff50eb8474b67225013fcbaca10f64be/kubernetes/website/pull/56839",
     "fetchedAt": "2026-08-09T15:16:58.615Z"
+  },
+  "https://github.com/pulls": {
+    "title": "Build software better, together",
+    "description": "GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.",
+    "image": "https://github.githubassets.com/assets/github-logo-55c5b9a1fe52.png",
+    "fetchedAt": "2026-09-21T00:03:48.373Z"
   }
 }
