@@ -1,3 +1,7 @@
 [tools]
 hugo-extended = "0.115.1"
 node = "22.18.0"
+
+[settings]
+# CIとローカルで同じバイナリを使うため、mise.lockでバージョンとchecksumを固定する
+lockfile = true
