@@ -5,7 +5,7 @@ tags:
   - "Go"
 
 description: ""
-date: 2026-09-10T22:27:22+09:00
+date: 2026-10-15T20:27:22+09:00
 author: "kyu08"
 authorTwitter: "kyu08_"
 draft: false
@@ -75,6 +75,8 @@ https://speakerdeck.com/po3rin/go-x-simd-de-kousokuka-suru-bekutoru-kensaku-de-s
 
 ## 株式会社ミラティブ: 動画配信サーバーにおけるGC負荷低減の取り組み
 
+https://tech.mirrativ.stream/entry/2026/03/30/100000
+
 ### メモ
 - mmapを使って自分でメモリ確保、解放をすることでGCによるパフォーマンス低下を防いだ。
 
@@ -82,6 +84,8 @@ https://speakerdeck.com/po3rin/go-x-simd-de-kousokuka-suru-bekutoru-kensaku-de-s
 - 
 
 ## 株式会社エウレカ: Podは生きているのにGoだけが落ちる：GOGCとGOMEMLIMITで追うInvisible OOM Killの謎
+
+https://speakerdeck.com/tkc66buzz/pod-ha-iki-te-iru-noni-go-dakega-ochiru-gogc-to-gomemlimit-de-ou-invisible-oom-kill-no-nazo
 
 ### メモ
 - 2025年4月のある日から500エラーの増加後にGoのプロセスが落ちる現象が起きだした
@@ -104,6 +108,9 @@ https://speakerdeck.com/po3rin/go-x-simd-de-kousokuka-suru-bekutoru-kensaku-de-s
 - pidの話など、Kubernetesを運用する者としてKubernetesの仕組みをしっかり学んで落とし穴を回避したりKubernetesが持っている力を活かすのは大事だなと思った。
 
 ## エムスリー株式会社: 更なる可用性を求めて、5年間運用したKotlinのアプリケーションをGoでリプレイスする話
+
+https://speakerdeck.com/ken_tunc/go-conference-2026-slide
+
 エムスリーの田口さんにサーバー実装言語をKotlinからGoにリプレイスしたという内容の発表。
 
 ### メモ
@@ -127,6 +134,8 @@ https://speakerdeck.com/po3rin/go-x-simd-de-kousokuka-suru-bekutoru-kensaku-de-s
 ## Go における FFI のこれまでとこれから
 <!-- goccyさんによる -->
 
+https://speakerdeck.com/goccy/go-niokeru-ffi-no-kore-madeto-korekara
+
 ### メモ
 - FFI(Foreign)
     - 同一プロセス内で異なるプログラミング言語で書かれた処理を呼びだす仕組み
@@ -144,6 +153,9 @@ https://speakerdeck.com/po3rin/go-x-simd-de-kousokuka-suru-bekutoru-kensaku-de-s
 
 
 ## そのリトライ、死んだコネクションを使い回していませんか ── GoのHTTPクライアントとHTTP/2を実プロダクト障害から学び直す
+
+https://speakerdeck.com/myus4a/2-o-jitsupurodakuto-shougai-kara-manabi-naosu
+
 REALITYの松田さんによる発表。
 
 ### メモ
