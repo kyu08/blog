@@ -16,6 +16,8 @@ color: ""
 cover: "cover.png"
 ---
 
+<!-- TODO: まえがきを書く -->
+
 ## Open Source, Open World
 sanposhihoさんによるKeynote。
 
@@ -58,8 +60,7 @@ https://speakerdeck.com/sanposhiho/gocon2026-open-source-open-world
     -  2022年頃に18歳以上であれば参加できるようになったらしい。[^1]
 
 ## Go × SIMDで高速化するベクトル検索 ~ ルーフラインモデルでSIMDが効く境界を探れ！ ~
-<!-- TODO: かく -->
-LayerXのHiromu Nakamuraさんによるベクトル検索の高速化を通してSIMDへの理解を深めるというテーマのワークショップ。
+LayerXのHiromu Nakamuraさんによるベクトル検索の高速化を通してSIMDへの理解を深めるというテーマのワークショップ。前提知識が足りなさ過ぎてかなり難しかったが、SIMDの嬉しさやチューニングの雰囲気を理解できたのでよかった。
 
 ワークショップで利用したRepositoryとスライドはこちら。
 
@@ -157,6 +158,7 @@ https://speakerdeck.com/ken_tunc/go-conference-2026-slide
 - (JVMには詳しくないのであまりちゃんとはわかってないが)Goはあまり気をつけずともパフォーマンスが出やすかったり、ビルドが高速なのは重要なメリットだなと改めて思った。
 - 「ついでの改善」はついついやりたくなってしまうが、スコープは増えるので気をつけるのが大事だなと思った。
 
+<!-- TODO: かくまたは消す -->
 <!-- ## Go における FFI のこれまでとこれから -->
 <!-- <!-- goccyさんによる --> -->
 <!---->
@@ -206,8 +208,10 @@ REALITYの松田さんによる発表。
     - 1回目のリクエストが `connection lost` で早めに失敗し、リトライで新しいコネクションが使われる。
 
 ### 感想
+<!-- TODO: かく -->
 
 
 ## まとめ
+<!-- TODO: かく -->
 
 [^1]: [働いているけど Google Summer of Code (GSoC) に応募した](https://blog.bokken.io/articles/2022-04-30/apply-google-summer-of-code.html)
