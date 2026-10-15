@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+    <title>Go Conference 2026 に参加した :: blog.kyu08.com</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Open Source, Open World sanposhihoさんによるKeynote。 https://speakerdeck.com/sanposhiho/gocon2026-open-source-open-world メモ Kubernetesに5年ほど貢献している。 Sig-Scheduling Chair / Tech Lead OSSを始める方法ではなく" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://blog.kyu08.com/pr-368/posts/go-conference-2026/" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BDQ408J45J', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-368/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-368/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-368/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-368/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-368/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-368/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-368/css/main.min.0832e53463742bab51a209f71625f505d20a9662c72e6fc66248658a02e0f4b9.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-368/css/menu.min.48f42ef526b5c0c074cc696ab2e25a4316fdb58c4f42be6ee88c83fed3fe3c90.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-368/css/pagination.min.82f6400eae7c7c6dc3c866733c2ec0579e4089608fea69400ff85b3880aa0d3c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-368/css/post.min.f049fef13af1dfd5ea526cc59ea5a3fc7be11a05911ca7198c5bb9225250119c.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-368/css/prism.min.9023bbc24533d09e97a51a0a42a5a7bfe4c591ae167c5551fb1d2191d11977c0.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-368/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-368/css/terminal.min.08e270ae3e1713b186bb6da1e872f4ed403127d18ae635cf9c981c6633809797.css">
+
+  
+  <link rel="stylesheet" href="https://blog.kyu08.com/pr-368/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+<link rel="stylesheet" href="https://blog.kyu08.com/pr-368/style.css">
+
+
+<link rel="shortcut icon" href="https://blog.kyu08.com/pr-368/favicon.png">
+<link rel="apple-touch-icon" href="https://blog.kyu08.com/pr-368/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="kyu08_" />
+
+
+
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Go Conference 2026 に参加した">
+<meta property="og:description" content="Open Source, Open World sanposhihoさんによるKeynote。 https://speakerdeck.com/sanposhiho/gocon2026-open-source-open-world メモ Kubernetesに5年ほど貢献している。 Sig-Scheduling Chair / Tech Lead OSSを始める方法ではなく" />
+<meta property="og:url" content="https://blog.kyu08.com/pr-368/posts/go-conference-2026/" />
+<meta property="og:site_name" content="blog.kyu08.com" />
+
+
+  
+  
+    
+  
+
+
+  <meta property="og:image" content="https://blog.kyu08.com/pr-368/posts/go-conference-2026/cover.png">
+  <meta name="twitter:image" content="https://blog.kyu08.com/pr-368/posts/go-conference-2026/cover.png">
+  <meta name="twitter:image:alt" content="Go Conference 2026 に参加した">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+  <meta property="article:published_time" content="2026-10-15 20:27:22 &#43;0900 &#43;0900" />
+
+
+
+
+
+
+
+
+
+<link rel="author" href="http://www.hatena.ne.jp/kyu08/" />
+
+
+<script src="https://blog.kyu08.com/pr-368/docswell-loader.js"></script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQ408J45J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BDQ408J45J');
+</script>
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    blog.kyu08.com
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/pr-368/tags/diary/">_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-368/about">about</a></li>
+        
+      
+        
+          <li><a href="/pr-368/index.xml">rss</a></li>
+        
+      
+        
+          <li><a href="/pr-368/tags">tags</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/pr-368/tags/diary/" >_misc</a></li>
+        
+      
+        
+          <li><a href="/pr-368/about" >about</a></li>
+        
+      
+        
+          <li><a href="/pr-368/index.xml" >rss</a></li>
+        
+      
+        
+          <li><a href="/pr-368/tags" >tags</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://blog.kyu08.com/pr-368/posts/go-conference-2026/">Go Conference 2026 に参加した</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2026/10/15</time>
+      
+    <span class="post-reading-time">6 min read (3002 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://blog.kyu08.com/pr-368/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/">勉強会</a>&nbsp;
+      
+      #<a href="https://blog.kyu08.com/pr-368/tags/go/">Go</a>&nbsp;
+      
+    </span>
+  
+  
+  <img src="/pr-368/posts/go-conference-2026/cover.png"
+    class="post-cover"
+    alt="Go Conference 2026 に参加した"
+    title="Cover Image" />
+
+
+  
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#open-source-open-world">Open Source, Open World</a>
+      <ul>
+        <li><a href="#メモ">メモ</a></li>
+        <li><a href="#感想">感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#go--simdで高速化するベクトル検索--ルーフラインモデルでsimdが効く境界を探れ-">Go × SIMDで高速化するベクトル検索 ~ ルーフラインモデルでSIMDが効く境界を探れ！ ~</a>
+      <ul>
+        <li><a href="#メモ-1">メモ</a></li>
+        <li><a href="#感想-1">感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#株式会社ミラティブ-動画配信サーバーにおけるgc負荷低減の取り組み">株式会社ミラティブ: 動画配信サーバーにおけるGC負荷低減の取り組み</a>
+      <ul>
+        <li><a href="#メモ-2">メモ</a></li>
+        <li><a href="#感想-2">感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#株式会社エウレカ-podは生きているのにgoだけが落ちるgogcとgomemlimitで追うinvisible-oom-killの謎">株式会社エウレカ: Podは生きているのにGoだけが落ちる：GOGCとGOMEMLIMITで追うInvisible OOM Killの謎</a>
+      <ul>
+        <li><a href="#メモ-3">メモ</a></li>
+        <li><a href="#感想-3">感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#エムスリー株式会社-更なる可用性を求めて5年間運用したkotlinのアプリケーションをgoでリプレイスする話">エムスリー株式会社: 更なる可用性を求めて、5年間運用したKotlinのアプリケーションをGoでリプレイスする話</a>
+      <ul>
+        <li><a href="#メモ-4">メモ</a></li>
+        <li><a href="#感想-4">感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#go-における-ffi-のこれまでとこれから">Go における FFI のこれまでとこれから</a>
+      <ul>
+        <li><a href="#メモ-5">メモ</a></li>
+        <li><a href="#感想-5">感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#そのリトライ死んだコネクションを使い回していませんか--goのhttpクライアントとhttp2を実プロダクト障害から学び直す">そのリトライ、死んだコネクションを使い回していませんか ── GoのHTTPクライアントとHTTP/2を実プロダクト障害から学び直す</a>
+      <ul>
+        <li><a href="#メモ-6">メモ</a></li>
+      </ul>
+    </li>
+    <li><a href="#原因">原因</a></li>
+    <li><a href="#http2の基礎">HTTP/2の基礎</a></li>
+    <li><a href="#nethttpのコネクション管理">net/httpのコネクション管理</a>
+      <ul>
+        <li><a href="#感想-6">感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#まとめ">まとめ</a></li>
+  </ul>
+</nav>
+  
+
+  <div class="post-content"><div>
+        <h2 id="open-source-open-world">Open Source, Open World<a href="#open-source-open-world" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>sanposhihoさんによるKeynote。</p>
+<p><a href="https://speakerdeck.com/sanposhiho/gocon2026-open-source-open-world" target="_blank">https://speakerdeck.com/sanposhiho/gocon2026-open-source-open-world</a></p>
+<h3 id="メモ">メモ<a href="#メモ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>Kubernetesに5年ほど貢献している。
+<ul>
+<li>Sig-Scheduling Chair / Tech Lead</li>
+</ul>
+</li>
+<li>OSSを始める方法ではなく、続けてきた理由の話
+<ul>
+<li>なぜ続けられたか</li>
+</ul>
+</li>
+<li>Google Summer of Code
+<ul>
+<li>英語は難しかった</li>
+<li>技術力よりも人との繋がりを得られたのがよかった</li>
+<li>英語モチベがあがった</li>
+</ul>
+</li>
+<li>OSSの続け方
+<ul>
+<li>一度実装を掴めると一気に取り組める課題が増える</li>
+</ul>
+</li>
+<li>モチベーション
+<ul>
+<li>最初は「OSSやってる人かっこいい」というのがモチベーションだった。
+<ul>
+<li>よく考えたら数年で↑は達成していた。（登壇、英語での議論など）</li>
+</ul>
+</li>
+<li>合理的な価値/理由はなにか
+<ul>
+<li>とはいえ無償の労働ではある</li>
+<li>自分の実績や知識/経験になる? キャリアに活用できる?</li>
+<li>OSSからビジネスにつなげる 自分が使うツールなのでいらない?</li>
+<li>仲間との繋がり
+<ul>
+<li>これが一番大きかった</li>
+<li>OSSの向こう側には人がいる</li>
+<li>孤独だと思っていたのは誰にも話しかけなかったから</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>OSSの嬉しさ
+<ul>
+<li>スキルは本を読んでも伸ばせるかも</li>
+<li>経験は自分の会社でも培えるかもしれない</li>
+<li>副業をしたほうが金銭的には稼げるかもしれない</li>
+<li>バックグラウンドがまったく異なる仲間をもたらす。その仲間があなたの世界を広げる。</li>
+</ul>
+</li>
+<li>OSSによって通常起こり得なかった出会い/仲間が生まれる</li>
+<li>それがOSSの一番ユニークな価値だと感じる</li>
+</ul>
+</li>
+</ul>
+<h3 id="感想">感想<a href="#感想" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>最近社会人でもGoogle Summer of Codeに参加できるようになったらしい
+<ul>
+<li>2022年頃に18歳以上であれば参加できるようになったらしい。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></li>
+</ul>
+</li>
+<li>かっこよさがOSSのモチベーションなの、わかる</li>
+<li>OSSに多少貢献をしたことはあるものの、OSSで関わった人とリアルで会ったことはないのでよさそうと思った（とはいえ英語で話せる自信はない）</li>
+</ul>
+<h2 id="go--simdで高速化するベクトル検索--ルーフラインモデルでsimdが効く境界を探れ-">Go × SIMDで高速化するベクトル検索 ~ ルーフラインモデルでSIMDが効く境界を探れ！ ~<a href="#go--simdで高速化するベクトル検索--ルーフラインモデルでsimdが効く境界を探れ-" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>LayerXのHiromu Nakamuraさんによるベクトル検索の高速化を通してSIMDへの理解を深めるというテーマのワークショップ。</p>
+<p>ワークショップで利用したRepositoryとスライドはこちら。</p>
+<p><div class="blogcard" data-url="https://github.com/po3rin/gocon2026-simd-search" data-auto-fetch="false">
+  <a href="https://github.com/po3rin/gocon2026-simd-search" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://opengraph.githubassets.com/a34be1a42bde95c9c987ce002885850d8d0b97bebf88c95fd539e165ad9fab31/po3rin/gocon2026-simd-search" alt="GitHub - po3rin/gocon2026-simd-search: Go Conference 2026 ワークショップ: Pure Go × SIMD でルーフライン駆動のベクトル検索高速化" loading="lazy">
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">GitHub - po3rin/gocon2026-simd-search: Go Conference 2026 ワークショップ: Pure Go × SIMD でルーフライン駆動のベクトル検索高速化</div><div class="blogcard-description">Go Conference 2026 ワークショップ: Pure Go × SIMD でルーフライン駆動のベクトル検索高速化 - po3rin/gocon2026-simd-search</div><div class="blogcard-url">https://github.com/po3rin/gocon2026-simd-search</div>
+    </div>
+  </a>
+</div>
+</p>
+<p><a href="https://speakerdeck.com/po3rin/go-x-simd-de-kousokuka-suru-bekutoru-kensaku-de-simd-ga-kiku-kyoukai-o-sagure" target="_blank">https://speakerdeck.com/po3rin/go-x-simd-de-kousokuka-suru-bekutoru-kensaku-de-simd-ga-kiku-kyoukai-o-sagure</a></p>
+<h3 id="メモ-1">メモ<a href="#メモ-1" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>ボトルネックがメモリ帯域幅になるかCPUになるかを明確にするとSIMDを使ってうまく高速化できる
+<ul>
+<li>これを測定するためにルーフラインモデルを用いる</li>
+</ul>
+</li>
+</ul>
+<h3 id="感想-1">感想<a href="#感想-1" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>難しくて途中までしか終えられなかったが、SIMDのざっくりとした仕組みとボトルネックがメモリ帯域幅/CPUのどちらなのかを意識することの重要性を学べてよかった。</p>
+<h2 id="株式会社ミラティブ-動画配信サーバーにおけるgc負荷低減の取り組み">株式会社ミラティブ: 動画配信サーバーにおけるGC負荷低減の取り組み<a href="#株式会社ミラティブ-動画配信サーバーにおけるgc負荷低減の取り組み" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><div class="blogcard" data-url="https://tech.mirrativ.stream/entry/2026/03/30/100000" data-auto-fetch="false">
+  <a href="https://tech.mirrativ.stream/entry/2026/03/30/100000" target="_blank" rel="noopener noreferrer" class="blogcard-link"><div class="blogcard-thumbnail">
+      <img src="https://cdn.image.st-hatena.com/image/scale/01cdb39ce823ec393ec03ce03a5651186306d41a/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fk%2Fkota-yata%2F20260318%2F20260318161723.png" alt="mmap直確保でGoのGC負荷を低減する - Mirrativ Tech Blog" loading="lazy">
+    </div><div class="blogcard-content">
+      <div class="blogcard-title">mmap直確保でGoのGC負荷を低減する - Mirrativ Tech Blog</div><div class="blogcard-description">インフラ・ストリーミングチーム インターンの八谷です。 本記事では、ガベージコレクション（GC）への負荷を低減することを目的として、Go言語でのメモリ確保時にOSから直接mmap領域を確保する手法と、make関数でランタイムから領域を確保する場合でのGC負荷などの比較を行います。結果としては、mmap領域を直接確保することでGCが走査するオブジェクト数を削減でき、それに伴ってアプリケーションの停止（Stop-The-World）時間を短縮できることがわかりました。 前提知識1: Goにおけるメモリ管理 Goのランタイムでは、起動時や必要に応じてOSから64MB単位の領域をあらかじめ確保し、それ…</div><div class="blogcard-url">https://tech.mirrativ.stream/entry/2026/03/30/100000</div>
+    </div>
+  </a>
+</div>
+</p>
+<h3 id="メモ-2">メモ<a href="#メモ-2" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>mmapを使って自分でメモリ確保、解放をすることでGCによるパフォーマンス低下を防いだ。</li>
+</ul>
+<h3 id="感想-2">感想<a href="#感想-2" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li></li>
+</ul>
+<h2 id="株式会社エウレカ-podは生きているのにgoだけが落ちるgogcとgomemlimitで追うinvisible-oom-killの謎">株式会社エウレカ: Podは生きているのにGoだけが落ちる：GOGCとGOMEMLIMITで追うInvisible OOM Killの謎<a href="#株式会社エウレカ-podは生きているのにgoだけが落ちるgogcとgomemlimitで追うinvisible-oom-killの謎" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><a href="https://speakerdeck.com/tkc66buzz/pod-ha-iki-te-iru-noni-go-dakega-ochiru-gogc-to-gomemlimit-de-ou-invisible-oom-kill-no-nazo" target="_blank">https://speakerdeck.com/tkc66buzz/pod-ha-iki-te-iru-noni-go-dakega-ochiru-gogc-to-gomemlimit-de-ou-invisible-oom-kill-no-nazo</a></p>
+<h3 id="メモ-3">メモ<a href="#メモ-3" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>2025年4月のある日から500エラーの増加後にGoのプロセスが落ちる現象が起きだした</li>
+<li>Invisible OOM
+<ul>
+<li>panic logなし Kubernetes/PodでのOOMKilledやTerminatedなし</li>
+<li>OSまで下るとOOMが起きていた。</li>
+<li>歴史的経緯で1つのコンテナで複数プロセスが動いており、Goのプロセスがpid1ではなかった。</li>
+<li>LinuxのOOMKillはメモリを一番使用しているプロセスをkillする。</li>
+</ul>
+</li>
+<li>なぜGoがOOMでkillされたのか
+<ul>
+<li>カーネル側ではOOMされていたが、Kubernetes側のcontainer memory limitは超えていなかった（ようにグラフ上ではみえた）</li>
+<li>なのでメモリが瞬間的にスパイクし、Linux側でOOMKillされたこと</li>
+</ul>
+</li>
+<li>なぜOOMを防げなかったのか
+<ul>
+<li>GOMEMORYLIMITが未設定だった。</li>
+</ul>
+</li>
+<li>なぜGCが走らなかったのか
+<ul>
+<li><code>GOGC=500</code>だったのでGCラインがcontainer memory limitを超えていたから。</li>
+</ul>
+</li>
+</ul>
+<h3 id="感想-3">感想<a href="#感想-3" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>きになり
+<ul>
+<li>どんな性質の処理を行うサーバーだったのか</li>
+</ul>
+</li>
+<li>pidの話など、Kubernetesを運用する者としてKubernetesの仕組みをしっかり学んで落とし穴を回避したりKubernetesが持っている力を活かすのは大事だなと思った。</li>
+</ul>
+<h2 id="エムスリー株式会社-更なる可用性を求めて5年間運用したkotlinのアプリケーションをgoでリプレイスする話">エムスリー株式会社: 更なる可用性を求めて、5年間運用したKotlinのアプリケーションをGoでリプレイスする話<a href="#エムスリー株式会社-更なる可用性を求めて5年間運用したkotlinのアプリケーションをgoでリプレイスする話" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><a href="https://speakerdeck.com/ken_tunc/go-conference-2026-slide" target="_blank">https://speakerdeck.com/ken_tunc/go-conference-2026-slide</a></p>
+<p>エムスリーの田口さんにサーバー実装言語をKotlinからGoにリプレイスしたという内容の発表。</p>
+<h3 id="メモ-4">メモ<a href="#メモ-4" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>GoにしたことでKotlinで必要だった暖機が不要になった。</li>
+<li>AIを使ったリプレイス
+<ul>
+<li>ogen</li>
+<li>本番リクエストのミラーリング
+<ul>
+<li>Kotlin側と同じリクエストをGoに流し、落ちたログベースで挙動を比較した。</li>
+</ul>
+</li>
+<li>Golde TestとSQLの構文比較</li>
+<li>方針
+<ul>
+<li>「ついでの改善をやらない」</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>リプレイス後
+<ul>
+<li>起動直後のrpcが増えた。</li>
+<li>全体のローリングアップデートも11分 -&gt; 1分ほどになった。緊急時の切り戻しがやりやすくなった。</li>
+<li>ctxを使うことで下流処理のキャンセル処理が書きやすくなった</li>
+</ul>
+</li>
+</ul>
+<h3 id="感想-4">感想<a href="#感想-4" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>(JVMには詳しくないのであまりちゃんとはわかってないが)Goはあまり気をつけずともパフォーマンスが出やすかったり、ビルドが高速なのは重要なメリットだなと改めて思った。</li>
+<li>「ついでの改善」はついついやりたくなってしまうが、スコープは増えるので気をつけるのが大事だなと思った。</li>
+</ul>
+<h2 id="go-における-ffi-のこれまでとこれから">Go における FFI のこれまでとこれから<a href="#go-における-ffi-のこれまでとこれから" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<!-- goccyさんによる -->
+<p><a href="https://speakerdeck.com/goccy/go-niokeru-ffi-no-kore-madeto-korekara" target="_blank">https://speakerdeck.com/goccy/go-niokeru-ffi-no-kore-madeto-korekara</a></p>
+<h3 id="メモ-5">メモ<a href="#メモ-5" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>FFI(Foreign)
+<ul>
+<li>同一プロセス内で異なるプログラミング言語で書かれた処理を呼びだす仕組み</li>
+<li>ABIをあわせて呼び出す</li>
+</ul>
+</li>
+<li>C ABIの課題とcgoの解決策
+<ul>
+<li>ホストからC側のメモリ利用状況を認識する方法がないのでメモリリークが起きやすい</li>
+<li>C側で不正なアドレスにアクセスしてSIGSEGVが発生するとホストごとクラッシュする</li>
+<li>ホストとC側でアドレス空間が同じなのでホストとCで同じメモリを読み書きできてしまう</li>
+<li>型変換の実装難易度が高い
+<ul>
+<li>構造体に対するポインタなどは複雑になる</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="感想-5">感想<a href="#感想-5" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h2 id="そのリトライ死んだコネクションを使い回していませんか--goのhttpクライアントとhttp2を実プロダクト障害から学び直す">そのリトライ、死んだコネクションを使い回していませんか ── GoのHTTPクライアントとHTTP/2を実プロダクト障害から学び直す<a href="#そのリトライ死んだコネクションを使い回していませんか--goのhttpクライアントとhttp2を実プロダクト障害から学び直す" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><a href="https://speakerdeck.com/myus4a/2-o-jitsupurodakuto-shougai-kara-manabi-naosu" target="_blank">https://speakerdeck.com/myus4a/2-o-jitsupurodakuto-shougai-kara-manabi-naosu</a></p>
+<p>REALITYの松田さんによる発表。</p>
+<h3 id="メモ-6">メモ<a href="#メモ-6" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<ul>
+<li>遭遇した障害
+<ul>
+<li>課金認証基盤へのリクエストがある日大量にタイムアウトする事象が発生(context deadline exceeded)</li>
+</ul>
+</li>
+<li>
+<h2 id="原因">原因<a href="#原因" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+</li>
+<li>
+<h2 id="http2の基礎">HTTP/2の基礎<a href="#http2の基礎" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+</li>
+<li>
+<h2 id="nethttpのコネクション管理">net/httpのコネクション管理<a href="#nethttpのコネクション管理" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+</li>
+</ul>
+<h3 id="感想-6">感想<a href="#感想-6" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://blog.bokken.io/articles/2022-04-30/apply-google-summer-of-code.html" target="_blank" >働いているけど Google Summer of Code (GSoC) に応募した</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+      </div></div>
+
+  
+  
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+    
+      <a href="https://blog.kyu08.com/pr-368/posts/kubecon-2026/" class="button inline next">
+        KubeCon &#43; CloudNativeCon Japan 2026に参加した
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+        repo="kyu08/blog-comments"
+        issue-term="pathname"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  
+
+  
+    <div class="table-of-contents-sidebar">
+      <h2>
+        目次
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#open-source-open-world">Open Source, Open World</a>
+      <ul>
+        <li><a href="#メモ">メモ</a></li>
+        <li><a href="#感想">感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#go--simdで高速化するベクトル検索--ルーフラインモデルでsimdが効く境界を探れ-">Go × SIMDで高速化するベクトル検索 ~ ルーフラインモデルでSIMDが効く境界を探れ！ ~</a>
+      <ul>
+        <li><a href="#メモ-1">メモ</a></li>
+        <li><a href="#感想-1">感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#株式会社ミラティブ-動画配信サーバーにおけるgc負荷低減の取り組み">株式会社ミラティブ: 動画配信サーバーにおけるGC負荷低減の取り組み</a>
+      <ul>
+        <li><a href="#メモ-2">メモ</a></li>
+        <li><a href="#感想-2">感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#株式会社エウレカ-podは生きているのにgoだけが落ちるgogcとgomemlimitで追うinvisible-oom-killの謎">株式会社エウレカ: Podは生きているのにGoだけが落ちる：GOGCとGOMEMLIMITで追うInvisible OOM Killの謎</a>
+      <ul>
+        <li><a href="#メモ-3">メモ</a></li>
+        <li><a href="#感想-3">感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#エムスリー株式会社-更なる可用性を求めて5年間運用したkotlinのアプリケーションをgoでリプレイスする話">エムスリー株式会社: 更なる可用性を求めて、5年間運用したKotlinのアプリケーションをGoでリプレイスする話</a>
+      <ul>
+        <li><a href="#メモ-4">メモ</a></li>
+        <li><a href="#感想-4">感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#go-における-ffi-のこれまでとこれから">Go における FFI のこれまでとこれから</a>
+      <ul>
+        <li><a href="#メモ-5">メモ</a></li>
+        <li><a href="#感想-5">感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#そのリトライ死んだコネクションを使い回していませんか--goのhttpクライアントとhttp2を実プロダクト障害から学び直す">そのリトライ、死んだコネクションを使い回していませんか ── GoのHTTPクライアントとHTTP/2を実プロダクト障害から学び直す</a>
+      <ul>
+        <li><a href="#メモ-6">メモ</a></li>
+      </ul>
+    </li>
+    <li><a href="#原因">原因</a></li>
+    <li><a href="#http2の基礎">HTTP/2の基礎</a></li>
+    <li><a href="#nethttpのコネクション管理">net/httpのコネクション管理</a>
+      <ul>
+        <li><a href="#感想-6">感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#まとめ">まとめ</a></li>
+  </ul>
+</nav>
+    </div>
+    <script src="https://blog.kyu08.com/pr-368/toc.js"></script>
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>blog.kyu08.com</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/pr-368/bundle.min.js"></script>
+
+
+<font color="#808080">
+  <span>
+    This site uses Google Analytics for access analysis.
+    Google Analytics uses cookies to collect traffic data, but this traffic data is collected anonymously and does not personally identify you.
+    Cookies can be disabled in your browser.
+  </span>
+</font>
+
+
+<script src="https://blog.kyu08.com/pr-368/blogcard.js"></script>
+
+
+  
+</div>
+
+</body>
+</html>
