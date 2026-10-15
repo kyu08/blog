@@ -15,7 +15,8 @@
       
       <guid>https://blog.kyu08.com/pr-368/posts/go-conference-2026/</guid>
       <description>Open Source, Open World sanposhihoさんによるKeynote。 メモ Kubernetesに5年ほど貢献している。 Sig-Scheduling Chair / Tech Lead OSSを始める方法ではなく、</description>
-      <content>&lt;h2 id=&#34;open-source-open-world&#34;&gt;Open Source, Open World&lt;/h2&gt;
+      <content>&lt;!-- TODO: まえがきを書く --&gt;
+&lt;h2 id=&#34;open-source-open-world&#34;&gt;Open Source, Open World&lt;/h2&gt;
 &lt;p&gt;sanposhihoさんによるKeynote。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;embed-container speakerdeck&#34;&gt;
         &lt;iframe src=&#34;https://speakerdeck.com/player/5bd8d25f80b84fff8882303812ece8fb&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
@@ -89,8 +90,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;go--simdで高速化するベクトル検索--ルーフラインモデルでsimdが効く境界を探れ-&#34;&gt;Go × SIMDで高速化するベクトル検索 ~ ルーフラインモデルでSIMDが効く境界を探れ！ ~&lt;/h2&gt;
-&lt;!-- TODO: かく --&gt;
-&lt;p&gt;LayerXのHiromu Nakamuraさんによるベクトル検索の高速化を通してSIMDへの理解を深めるというテーマのワークショップ。&lt;/p&gt;
+&lt;p&gt;LayerXのHiromu Nakamuraさんによるベクトル検索の高速化を通してSIMDへの理解を深めるというテーマのワークショップ。前提知識が足りなさ過ぎてかなり難しかったが、SIMDの嬉しさやチューニングの雰囲気を理解できたのでよかった。&lt;/p&gt;
 &lt;p&gt;ワークショップで利用したRepositoryとスライドはこちら。&lt;/p&gt;
 &lt;p&gt;&lt;div class=&#34;blogcard&#34; data-url=&#34;https://github.com/po3rin/gocon2026-simd-search&#34; data-auto-fetch=&#34;false&#34;&gt;
   &lt;a href=&#34;https://github.com/po3rin/gocon2026-simd-search&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;blogcard-link&#34;&gt;&lt;div class=&#34;blogcard-thumbnail&#34;&gt;
@@ -239,6 +239,7 @@
 &lt;li&gt;(JVMには詳しくないのであまりちゃんとはわかってないが)Goはあまり気をつけずともパフォーマンスが出やすかったり、ビルドが高速なのは重要なメリットだなと改めて思った。&lt;/li&gt;
 &lt;li&gt;「ついでの改善」はついついやりたくなってしまうが、スコープは増えるので気をつけるのが大事だなと思った。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;!-- TODO: かくまたは消す --&gt;
 &lt;!-- ## Go における FFI のこれまでとこれから --&gt;
 &lt;!-- &lt;!-- goccyさんによる --&gt; --&gt;
 &lt;!----&gt;
@@ -304,7 +305,9 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;感想-5&#34;&gt;感想&lt;/h3&gt;
+&lt;!-- TODO: かく --&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;!-- TODO: かく --&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
