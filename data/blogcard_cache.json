@@ -673,8 +673,56 @@
   },
   "https://github.com/pulls": {
     "title": "Build software better, together",
-    "description": "GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.",
+    "description": "GitHub is where people build software. More than 225 million people use GitHub to discover, fork, and contribute to over 800 million projects.",
     "image": "https://github.githubassets.com/assets/github-logo-55c5b9a1fe52.png",
-    "fetchedAt": "2026-09-21T00:03:48.373Z"
+    "fetchedAt": "2026-10-15T12:07:28.145Z"
+  },
+  "https://speakerdeck.com/sanposhiho/gocon2026-open-source-open-world": {
+    "title": "GoCon2026 - Open Source, Open World",
+    "description": "GoCon 2026 - keynote",
+    "image": "https://files.speakerdeck.com/presentations/5bd8d25f80b84fff8882303812ece8fb/slide_0.jpg?40533575",
+    "fetchedAt": "2026-10-15T12:07:28.315Z"
+  },
+  "https://github.com/po3rin/gocon2026-simd-search": {
+    "title": "GitHub - po3rin/gocon2026-simd-search: Go Conference 2026 ワークショップ: Pure Go × SIMD でルーフライン駆動のベクトル検索高速化",
+    "description": "Go Conference 2026 ワークショップ: Pure Go × SIMD でルーフライン駆動のベクトル検索高速化 - po3rin/gocon2026-simd-search",
+    "image": "https://opengraph.githubassets.com/a34be1a42bde95c9c987ce002885850d8d0b97bebf88c95fd539e165ad9fab31/po3rin/gocon2026-simd-search",
+    "fetchedAt": "2026-10-15T12:07:28.566Z"
+  },
+  "https://speakerdeck.com/po3rin/go-x-simd-de-kousokuka-suru-bekutoru-kensaku-de-simd-ga-kiku-kyoukai-o-sagure": {
+    "title": "Go × SIMDで高速化するベクトル検索 ~ルーフラインモデルでSIMDが効く境界を探れ！ ~",
+    "description": "リポジトリ\nhttps://github.com/po3rin/gocon2026-simd-search",
+    "image": "https://files.speakerdeck.com/presentations/453f71b6c30449cc9a3a2876d667e510/slide_0.jpg?40530012",
+    "fetchedAt": "2026-10-15T12:07:28.434Z"
+  },
+  "https://tech.mirrativ.stream/entry/2026/03/30/100000": {
+    "title": "mmap直確保でGoのGC負荷を低減する - Mirrativ Tech Blog",
+    "description": "インフラ・ストリーミングチーム インターンの八谷です。 本記事では、ガベージコレクション（GC）への負荷を低減することを目的として、Go言語でのメモリ確保時にOSから直接mmap領域を確保する手法と、make関数でランタイムから領域を確保する場合でのGC負荷などの比較を行います。結果としては、mmap領域を直接確保することでGCが走査するオブジェクト数を削減でき、それに伴ってアプリケーションの停止（Stop-The-World）時間を短縮できることがわかりました。 前提知識1: Goにおけるメモリ管理 Goのランタイムでは、起動時や必要に応じてOSから64MB単位の領域をあらかじめ確保し、それ…",
+    "image": "https://cdn.image.st-hatena.com/image/scale/01cdb39ce823ec393ec03ce03a5651186306d41a/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fk%2Fkota-yata%2F20260318%2F20260318161723.png",
+    "fetchedAt": "2026-10-15T12:07:28.676Z"
+  },
+  "https://speakerdeck.com/tkc66buzz/pod-ha-iki-te-iru-noni-go-dakega-ochiru-gogc-to-gomemlimit-de-ou-invisible-oom-kill-no-nazo": {
+    "title": "Podは生きているのにGoだけが落ちる：GOGCとGOMEMLIMITで追うInvisible OOM Killの謎",
+    "description": "2026/09/11(金)の登壇資料です。\nhttps://gocon.jp/2026/\nhttps://gocon.jp/2026/timetable/sponsorSlot2/",
+    "image": "https://files.speakerdeck.com/presentations/74ae8e1160f7428fbd91f6569700eb43/slide_0.jpg?40532706",
+    "fetchedAt": "2026-10-15T12:07:28.972Z"
+  },
+  "https://speakerdeck.com/ken_tunc/go-conference-2026-slide": {
+    "title": "更なる可用性を求めて、5年間運用したKotlinのアプリケーションをGoでリプレイスする話",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/e07aab055e2542ca9e58a682e9eb0151/slide_0.jpg?40569102",
+    "fetchedAt": "2026-10-15T12:07:28.887Z"
+  },
+  "https://speakerdeck.com/goccy/go-niokeru-ffi-no-kore-madeto-korekara": {
+    "title": "GoにおけるFFIのこれまでとこれから",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/56f87c0caeb2424aaaf720146b5f0142/slide_0.jpg?40522757",
+    "fetchedAt": "2026-10-15T12:07:29.121Z"
+  },
+  "https://speakerdeck.com/myus4a/2-o-jitsupurodakuto-shougai-kara-manabi-naosu": {
+    "title": "そのリトライ、死んだコネクションを使い回していませんか ── GoのHTTPクライアントとHTTP/2を実プロダクト障害から学び直す",
+    "description": "Go Conference 2026の登壇で使ったスライドです。\nhttps://gocon.jp/2026/timetable/1264230/",
+    "image": "https://files.speakerdeck.com/presentations/8cd0607b9254454d962ff006a3ea654c/slide_0.jpg?40560347",
+    "fetchedAt": "2026-10-15T12:07:29.039Z"
   }
 }
