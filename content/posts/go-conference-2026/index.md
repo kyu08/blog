@@ -105,23 +105,33 @@ https://speakerdeck.com/tkc66buzz/pod-ha-iki-te-iru-noni-go-dakega-ochiru-gogc-t
 
 ### メモ
 - 2025年4月のある日から500エラーの増加後にGoのプロセスが落ちる現象が起きだした
+    - Podは生きているがGoプロセスだけ落ちる。
+    - OOM Killedも出ていない。
+- 当時の状況
+    - EKS上のあるPodでNginxとGo Appが同一のコンテナで動いていた。(1コンテナに同居していたのは歴史的経緯とのこと)
 - Invisible OOM
     - panic logなし Kubernetes/PodでのOOMKilledやTerminatedなし
     - OSまで下るとOOMが起きていた。
     - 歴史的経緯で1つのコンテナで複数プロセスが動いており、Goのプロセスがpid1ではなかった。
-    - LinuxのOOMKillはメモリを一番使用しているプロセスをkillする。
+    - LinuxのOOM Killerはメモリを一番使用しているプロセスをkillする。
 - なぜGoがOOMでkillされたのか
     - カーネル側ではOOMされていたが、Kubernetes側のcontainer memory limitは超えていなかった（ようにグラフ上ではみえた）
-    - なのでメモリが瞬間的にスパイクし、Linux側でOOMKillされたこと
+    - なのでメモリが瞬間的にスパイクし、Linux側でOOMKillされた
 - なぜOOMを防げなかったのか
-    - GOMEMORYLIMITが未設定だった。
-- なぜGCが走らなかったのか
+    - `GOMEMORYLIMIT`が未設定だった。
+- なぜmemory limitを超過するまでGCが走らなかったのか
     - `GOGC=500`だったのでGCラインがcontainer memory limitを超えていたから。
 
+> The GOMEMLIMIT variable sets a soft memory limit for the runtime. This memory limit includes the Go heap and all other memory managed by the runtime, and excludes external memory sources such as mappings of the binary itself, memory managed in other languages, and memory held by the operating system on behalf of the Go program. (中略) The default setting is math.MaxInt64, which effectively disables the memory limit. runtime/debug.SetMemoryLimit allows changing this limit at run time.
+> 
+> https://pkg.go.dev/runtime
+>
+> GOMEMLIMIT 変数は、ランタイムのソフトメモリ制限を設定します。このメモリ制限には、Go ヒープおよびランタイムによって管理されるその他のすべてのメモリが含まれますが、バイナリ自体のマッピング、他の言語で管理されるメモリ、およびオペレーティングシステムが Go プログラムに代わって保持するメモリなどの外部メモリソースは除外されます。 (中略) デフォルト設定は math.MaxInt64 であり、これによりメモリ制限は事実上無効になります。runtime/debug.SetMemoryLimit を使用すると、実行時にこの制限を変更することができます。
+
+
 ### 感想
-- きになり
-    - どんな性質の処理を行うサーバーだったのか
-- pidの話など、Kubernetesを運用する者としてKubernetesの仕組みをしっかり学んで落とし穴を回避したりKubernetesが持っている力を活かすのは大事だなと思った。
+- pidの話など、Kubernetesを運用する者としてKubernetesの仕組みをしっかり学んで落とし穴を回避したりKubernetesが持っている力を活かすのは大事だと感じた。
+- 普段はあまり意識しないがGoのGCまわりの設定値についても一通り確認しておくとOOM Killedのトラブルシューティングがスムーズにできそう。
 
 ## エムスリー株式会社: 更なる可用性を求めて、5年間運用したKotlinのアプリケーションをGoでリプレイスする話
 
@@ -147,25 +157,25 @@ https://speakerdeck.com/ken_tunc/go-conference-2026-slide
 - (JVMには詳しくないのであまりちゃんとはわかってないが)Goはあまり気をつけずともパフォーマンスが出やすかったり、ビルドが高速なのは重要なメリットだなと改めて思った。
 - 「ついでの改善」はついついやりたくなってしまうが、スコープは増えるので気をつけるのが大事だなと思った。
 
-## Go における FFI のこれまでとこれから
-<!-- goccyさんによる -->
-
-https://speakerdeck.com/goccy/go-niokeru-ffi-no-kore-madeto-korekara
-
-### メモ
-- FFI(Foreign)
-    - 同一プロセス内で異なるプログラミング言語で書かれた処理を呼びだす仕組み
-    - ABIをあわせて呼び出す
-- C ABIの課題とcgoの解決策
-    - ホストからC側のメモリ利用状況を認識する方法がないのでメモリリークが起きやすい
-    - C側で不正なアドレスにアクセスしてSIGSEGVが発生するとホストごとクラッシュする
-    - ホストとC側でアドレス空間が同じなのでホストとCで同じメモリを読み書きできてしまう
-    - 型変換の実装難易度が高い
-        - 構造体に対するポインタなどは複雑になる
-
-
-
-### 感想
+<!-- ## Go における FFI のこれまでとこれから -->
+<!-- <!-- goccyさんによる --> -->
+<!---->
+<!-- https://speakerdeck.com/goccy/go-niokeru-ffi-no-kore-madeto-korekara -->
+<!---->
+<!-- ### メモ -->
+<!-- - FFI(Foreign) -->
+<!--     - 同一プロセス内で異なるプログラミング言語で書かれた処理を呼びだす仕組み -->
+<!--     - ABIをあわせて呼び出す -->
+<!-- - C ABIの課題とcgoの解決策 -->
+<!--     - ホストからC側のメモリ利用状況を認識する方法がないのでメモリリークが起きやすい -->
+<!--     - C側で不正なアドレスにアクセスしてSIGSEGVが発生するとホストごとクラッシュする -->
+<!--     - ホストとC側でアドレス空間が同じなのでホストとCで同じメモリを読み書きできてしまう -->
+<!--     - 型変換の実装難易度が高い -->
+<!--         - 構造体に対するポインタなどは複雑になる -->
+<!---->
+<!---->
+<!---->
+<!-- ### 感想 -->
 
 
 ## そのリトライ、死んだコネクションを使い回していませんか ── GoのHTTPクライアントとHTTP/2を実プロダクト障害から学び直す
@@ -177,12 +187,23 @@ REALITYの松田さんによる発表。
 ### メモ
 - 遭遇した障害
     - 課金認証基盤へのリクエストがある日大量にタイムアウトする事象が発生(context deadline exceeded)
+    - バースト的に発生して自然回復する。発生中はリトライしても成功しない。
+    - リトライを追加したが解決しなかった。
 - 原因
-    - 
+    - 相手側で切断済みのhalf-openなコネクションをプールから使い回していた。
+    - HTTP/2のヘルスチェック(Ping)の `SendPingTimeout`, `PingTimeout` がともに10秒で、リクエストのcontextのタイムアウト(10秒)以上だった。
+        - 死んだコネクションが検知される前にリクエストがタイムアウトし、プールに残り続けていた。
+    - 設定値はAIに推奨された値をそのまま入れていた。
 - HTTP/2の基礎
-    - 
+    - 1本のTCPコネクション上で複数のリクエスト/レスポンス(ストリーム)を同時にやり取りする。
+    - 1本のコネクションを長く共有するので、壊れるとその上のリクエストがまとめて失敗する。
 - net/httpのコネクション管理
-    - 
+    - 一定時間フレームを受信しないとPingを送り、ACKが返らなければプールから除外する。処理中のリクエストは `http2: client connection lost` で失敗する。
+    - `http.DefaultClient` ではこのヘルスチェックは無効になっている。
+    - 設定は `http.HTTP2Config` の `SendPingTimeout`(Ping送信までの待ち時間)と `PingTimeout`(ACK待ちの時間)。
+- 対策
+    - `SendPingTimeout` を5秒、`PingTimeout` を3秒にして、合計がcontextの10秒より短くなるようにした。
+    - 1回目のリクエストが `connection lost` で早めに失敗し、リトライで新しいコネクションが使われる。
 
 ### 感想
 
