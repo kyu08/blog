@@ -46,5 +46,41 @@
     "title": "Goで実現する堅牢なアーキテクチャ：DDD、gRPC-connect、そしてAI協調開発の実践",
     "ratio": "1.7794486215538847",
     "fetchedAt": "2026-02-26T15:09:13.956Z"
+  },
+  "https://speakerdeck.com/sanposhiho/gocon2026-open-source-open-world": {
+    "playerUrl": "https://speakerdeck.com/player/5bd8d25f80b84fff8882303812ece8fb",
+    "title": "GoCon2026 - Open Source, Open World",
+    "ratio": "1.7794486215538847",
+    "fetchedAt": "2026-10-15T12:07:29.429Z"
+  },
+  "https://speakerdeck.com/po3rin/go-x-simd-de-kousokuka-suru-bekutoru-kensaku-de-simd-ga-kiku-kyoukai-o-sagure": {
+    "playerUrl": "https://speakerdeck.com/player/453f71b6c30449cc9a3a2876d667e510",
+    "title": "Go × SIMDで高速化するベクトル検索 ~ルーフラインモデルでSIMDが効く境界を探れ！ ~",
+    "ratio": "1.7794486215538847",
+    "fetchedAt": "2026-10-15T12:07:29.456Z"
+  },
+  "https://speakerdeck.com/tkc66buzz/pod-ha-iki-te-iru-noni-go-dakega-ochiru-gogc-to-gomemlimit-de-ou-invisible-oom-kill-no-nazo": {
+    "playerUrl": "https://speakerdeck.com/player/74ae8e1160f7428fbd91f6569700eb43",
+    "title": "Podは生きているのにGoだけが落ちる：GOGCとGOMEMLIMITで追うInvisible OOM Killの謎",
+    "ratio": "1.7794486215538847",
+    "fetchedAt": "2026-10-15T12:07:29.428Z"
+  },
+  "https://speakerdeck.com/ken_tunc/go-conference-2026-slide": {
+    "playerUrl": "https://speakerdeck.com/player/e07aab055e2542ca9e58a682e9eb0151",
+    "title": "更なる可用性を求めて、5年間運用したKotlinのアプリケーションをGoでリプレイスする話",
+    "ratio": "1.7794486215538847",
+    "fetchedAt": "2026-10-15T12:07:29.495Z"
+  },
+  "https://speakerdeck.com/goccy/go-niokeru-ffi-no-kore-madeto-korekara": {
+    "playerUrl": "https://speakerdeck.com/player/56f87c0caeb2424aaaf720146b5f0142",
+    "title": "GoにおけるFFIのこれまでとこれから",
+    "ratio": "1.7794486215538847",
+    "fetchedAt": "2026-10-15T12:07:29.488Z"
+  },
+  "https://speakerdeck.com/myus4a/2-o-jitsupurodakuto-shougai-kara-manabi-naosu": {
+    "playerUrl": "https://speakerdeck.com/player/8cd0607b9254454d962ff006a3ea654c",
+    "title": "そのリトライ、死んだコネクションを使い回していませんか ── GoのHTTPクライアントとHTTP/2を実プロダクト障害から学び直す",
+    "ratio": "1.7794486215538847",
+    "fetchedAt": "2026-10-15T12:07:29.491Z"
   }
 }

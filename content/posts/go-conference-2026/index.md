@@ -1,0 +1,217 @@
+---
+title: "Go Conference 2026 に参加した"
+tags:
+  - "勉強会"
+  - "Go"
+
+description: ""
+date: 2026-10-15T20:27:22+09:00
+author: "kyu08"
+authorTwitter: "kyu08_"
+draft: false
+showFullContent: false
+readingTime: true
+hideComments: false
+color: ""
+cover: "cover.png"
+---
+
+<!-- TODO: まえがきを書く -->
+
+## Open Source, Open World
+sanposhihoさんによるKeynote。
+
+https://speakerdeck.com/sanposhiho/gocon2026-open-source-open-world
+
+### メモ
+- Kubernetesに5年ほど貢献している。
+    - Sig-Scheduling Chair / Tech Lead
+- OSSを始める方法ではなく、続けてきた理由の話
+    - なぜ続けられたか
+- Google Summer of Code
+    - 英語は難しかった
+    - 技術力よりも人との繋がりを得られたのがよかった
+    - 英語モチベがあがった
+- OSSの続け方
+    - 一度実装を掴めると一気に取り組める課題が増える
+- モチベーション
+    - 最初は「OSSやってる人かっこいい」というのがモチベーションだった。
+        - よく考えたら数年で↑は達成していた。（登壇、英語での議論など）
+    - 合理的な価値/理由はなにか
+        - とはいえ無償の労働ではある
+        - 自分の実績や知識/経験になる? キャリアに活用できる?
+        - OSSからビジネスにつなげる 自分が使うツールなのでいらない?
+        - 仲間との繋がり
+            - これが一番大きかった
+            - OSSの向こう側には人がいる
+            - 孤独だと思っていたのは誰にも話しかけなかったから
+    - OSSの嬉しさ
+        - スキルは本を読んでも伸ばせるかも
+        - 経験は自分の会社でも培えるかもしれない
+        - 副業をしたほうが金銭的には稼げるかもしれない
+        - バックグラウンドがまったく異なる仲間をもたらす。その仲間があなたの世界を広げる。
+    - OSSによって通常起こり得なかった出会い/仲間が生まれる
+    - それがOSSの一番ユニークな価値だと感じる
+
+### 感想
+- かっこよさがOSSのモチベーションなの、わかる
+- OSSに多少貢献をしたことはあるものの、OSSで関わった人とリアルで会ったことはないのでよさそうと思った（とはいえ英語で話せる自信はない......）
+- 最近社会人でもGoogle Summer of Codeに参加できるようになったらしい
+    -  2022年頃に18歳以上であれば参加できるようになったらしい。[^1]
+
+## Go × SIMDで高速化するベクトル検索 ~ ルーフラインモデルでSIMDが効く境界を探れ！ ~
+LayerXのHiromu Nakamuraさんによるベクトル検索の高速化を通してSIMDへの理解を深めるというテーマのワークショップ。前提知識が足りなさ過ぎてかなり難しかったが、SIMDの嬉しさやチューニングの雰囲気を理解できたのでよかった。
+
+ワークショップで利用したRepositoryとスライドはこちら。
+
+https://github.com/po3rin/gocon2026-simd-search
+
+https://speakerdeck.com/po3rin/go-x-simd-de-kousokuka-suru-bekutoru-kensaku-de-simd-ga-kiku-kyoukai-o-sagure
+
+### メモ
+- ボトルネックがメモリ帯域幅になるかCPUになるかを明確にするとSIMDを使ってうまく高速化できる
+    - これを測定するためにルーフラインモデルを用いる
+
+### 感想
+難しくて途中までしか終えられなかったが、SIMDのざっくりとした仕組みとボトルネックがメモリ帯域幅/CPUのどちらなのかを意識することの重要性を学べてよかった。
+
+## 株式会社ミラティブ: 動画配信サーバーにおけるGC負荷低減の取り組み
+
+https://tech.mirrativ.stream/entry/2026/03/30/100000
+
+### メモ
+> 本記事では、ガベージコレクション（GC）への負荷を低減することを目的として、Go言語でのメモリ確保時にOSから直接mmap領域を確保する手法と、make関数でランタイムから領域を確保する場合でのGC負荷などの比較を行います。結果としては、mmap領域を直接確保することでGCが走査するオブジェクト数を削減でき、それに伴ってアプリケーションの停止（Stop-The-World）時間を短縮できることがわかりました。
+
+- mmapを使って自分でメモリ確保、解放をすることでGCによるパフォーマンス低下を防いだ。
+
+> ルートオブジェクトのMark時、Mark終了時のmcacheのフラッシュなどの際に微小なStop-The-World（STW）が発生します。ただ、GoにおいてはGCはアプリケーションスレッドと並行で行われるため、GC実行の間ずっとSTWが発生するということはありません。
+
+> Mirrativでは、ライブ映像のストリーミングについて、サーバーを含めたパイプラインをGoで記述しています。特に配信された映像と音声を最初に受信するオリジンサーバーでは、AVCやAACのストリームをMPEG-TSやfMP4などのコンテナに詰めてHLSセグメントを生成するため、比較的大きなサイズのメモリ領域を用いた処理が発生します。フレーム毎に処理を行うのであれば一度確保したメモリ領域を使い回すのが好ましいですが、確保するサイズが大きいかつフレーム毎に確保が必要ではないケースでは、都度メモリ領域を確保するような処理を行っています。こういった場合に、ランタイムからメモリ領域を毎度確保していると、GCが走査するオブジェクト数が膨大になっていきます。オブジェクト数が膨大になるとGCの負荷が増大し、主に以下二つの事象でアプリケーションに影響を及ぼします。
+
+> Goのランタイムは、GCを行うためのgoroutineを複数生成してGCを行っているわけですが、走査するオブジェクト数が増大すると単一スレッドでは処理しきれなくなります。すると、Goでは、アプリケーションが生成したgoroutineのリソースを用いてGCを行います。これにより、本来アプリケーションの処理に使われるはずだったgoroutineのリソースがGCによって奪われる形になり、アプリケーションのスループットが低下します。
+
+>  **mmap領域をOSから直接確保する**
+>
+> この問題に対してMirrativでは、ある程度高頻度に大きなサイズのメモリ領域を確保する必要のある処理では、ランタイムからメモリを確保するのではなく、OSから直接mmap領域を確保しています。GCによるメモリ解放を待つことなく自らメモリ確保と解放を繰り返すことで、メモリ使用量とGCの負荷を抑えています。GCの負荷が低減することによりアプリケーションスレッドによるGCアシストの頻度も減り、結果的にアプリケーションのスループットが向上することも期待できます。
+>
+> 一方でトレードオフは存在します。自らメモリ確保と解放を行うことの問題は、GCが生まれる前の古典的なメモリ管理の問題に帰着します。単一のメモリ領域を複数のスレッドが参照していたり、非同期処理で用いている場合にはプログラマーが注意深く例外処理を書きメモリの解放を行う必要があります。また、先にも述べたとおりランタイムがすでに確保している領域を利用するmake関数などと比較すると、OSからの直接確保ではシステムコールの影響で確保にかかる時間は長くなります。
+
+### 感想
+- なかなか普段のWeb開発でGCがボトルネックになることがなく、GCによる負荷のチューニングに意識が向くことがないので、そういう意味でかなりDeepな発表だった。
+- メモリやGCまわりはあまり詳しくないのであまり詳しい感想を書けずだが、コンパイラやComputer Scienceを深く学ぶことがこのあたりの技術的難易度の高い課題の解決の質とスピードをに繋がると思うのでコツコツ学んでいきたい。
+
+## 株式会社エウレカ: Podは生きているのにGoだけが落ちる：GOGCとGOMEMLIMITで追うInvisible OOM Killの謎
+
+https://speakerdeck.com/tkc66buzz/pod-ha-iki-te-iru-noni-go-dakega-ochiru-gogc-to-gomemlimit-de-ou-invisible-oom-kill-no-nazo
+
+### メモ
+- 2025年4月のある日から500エラーの増加後にGoのプロセスが落ちる現象が起きだした
+    - Podは生きているがGoプロセスだけ落ちる。
+    - OOM Killedも出ていない。
+- 当時の状況
+    - EKS上のあるPodでNginxとGo Appが同一のコンテナで動いていた。(1コンテナに同居していたのは歴史的経緯とのこと)
+- Invisible OOM
+    - panic logなし Kubernetes/PodでのOOMKilledやTerminatedなし
+    - OSまで下るとOOMが起きていた。
+    - 歴史的経緯で1つのコンテナで複数プロセスが動いており、Goのプロセスがpid1ではなかった。
+    - LinuxのOOM Killerはメモリを一番使用しているプロセスをkillする。
+- なぜGoがOOMでkillされたのか
+    - カーネル側ではOOMされていたが、Kubernetes側のcontainer memory limitは超えていなかった（ようにグラフ上ではみえた）
+    - なのでメモリが瞬間的にスパイクし、Linux側でOOMKillされた
+- なぜOOMを防げなかったのか
+    - `GOMEMORYLIMIT`が未設定だった。
+- なぜmemory limitを超過するまでGCが走らなかったのか
+    - `GOGC=500`だったのでGCラインがcontainer memory limitを超えていたから。
+
+> The GOMEMLIMIT variable sets a soft memory limit for the runtime. This memory limit includes the Go heap and all other memory managed by the runtime, and excludes external memory sources such as mappings of the binary itself, memory managed in other languages, and memory held by the operating system on behalf of the Go program. (中略) The default setting is math.MaxInt64, which effectively disables the memory limit. runtime/debug.SetMemoryLimit allows changing this limit at run time.
+> 
+> https://pkg.go.dev/runtime
+>
+> GOMEMLIMIT 変数は、ランタイムのソフトメモリ制限を設定します。このメモリ制限には、Go ヒープおよびランタイムによって管理されるその他のすべてのメモリが含まれますが、バイナリ自体のマッピング、他の言語で管理されるメモリ、およびオペレーティングシステムが Go プログラムに代わって保持するメモリなどの外部メモリソースは除外されます。 (中略) デフォルト設定は math.MaxInt64 であり、これによりメモリ制限は事実上無効になります。runtime/debug.SetMemoryLimit を使用すると、実行時にこの制限を変更することができます。
+
+
+### 感想
+- pidの話など、Kubernetesを運用する者としてKubernetesの仕組みをしっかり学んで落とし穴を回避したりKubernetesが持っている力を活かすのは大事だと感じた。
+- 普段はあまり意識しないがGoのGCまわりの設定値についても一通り確認しておくとOOM Killedのトラブルシューティングがスムーズにできそう。
+
+## エムスリー株式会社: 更なる可用性を求めて、5年間運用したKotlinのアプリケーションをGoでリプレイスする話
+
+https://speakerdeck.com/ken_tunc/go-conference-2026-slide
+
+エムスリーの田口さんにサーバー実装言語をKotlinからGoにリプレイスしたという内容の発表。
+
+### メモ
+- GoにしたことでKotlinで必要だった暖機が不要になった。
+- AIを使ったリプレイス
+    - ogen
+    - 本番リクエストのミラーリング
+        - Kotlin側と同じリクエストをGoに流し、落ちたログベースで挙動を比較した。
+    - Golde TestとSQLの構文比較
+    - 方針
+        - 「ついでの改善をやらない」
+- リプレイス後
+    - 起動直後のrpcが増えた。
+    - 全体のローリングアップデートも11分 -> 1分ほどになった。緊急時の切り戻しがやりやすくなった。
+    - ctxを使うことで下流処理のキャンセル処理が書きやすくなった
+
+### 感想
+- (JVMには詳しくないのであまりちゃんとはわかってないが)Goはあまり気をつけずともパフォーマンスが出やすかったり、ビルドが高速なのは重要なメリットだなと改めて思った。
+- 「ついでの改善」はついついやりたくなってしまうが、スコープは増えるので気をつけるのが大事だなと思った。
+
+<!-- TODO: かくまたは消す -->
+<!-- ## Go における FFI のこれまでとこれから -->
+<!-- <!-- goccyさんによる --> -->
+<!---->
+<!-- https://speakerdeck.com/goccy/go-niokeru-ffi-no-kore-madeto-korekara -->
+<!---->
+<!-- ### メモ -->
+<!-- - FFI(Foreign) -->
+<!--     - 同一プロセス内で異なるプログラミング言語で書かれた処理を呼びだす仕組み -->
+<!--     - ABIをあわせて呼び出す -->
+<!-- - C ABIの課題とcgoの解決策 -->
+<!--     - ホストからC側のメモリ利用状況を認識する方法がないのでメモリリークが起きやすい -->
+<!--     - C側で不正なアドレスにアクセスしてSIGSEGVが発生するとホストごとクラッシュする -->
+<!--     - ホストとC側でアドレス空間が同じなのでホストとCで同じメモリを読み書きできてしまう -->
+<!--     - 型変換の実装難易度が高い -->
+<!--         - 構造体に対するポインタなどは複雑になる -->
+<!---->
+<!---->
+<!---->
+<!-- ### 感想 -->
+
+
+## そのリトライ、死んだコネクションを使い回していませんか ── GoのHTTPクライアントとHTTP/2を実プロダクト障害から学び直す
+
+https://speakerdeck.com/myus4a/2-o-jitsupurodakuto-shougai-kara-manabi-naosu
+
+REALITYの松田さんによる発表。
+
+### メモ
+- 遭遇した障害
+    - 課金認証基盤へのリクエストがある日大量にタイムアウトする事象が発生(context deadline exceeded)
+    - バースト的に発生して自然回復する。発生中はリトライしても成功しない。
+    - リトライを追加したが解決しなかった。
+- 原因
+    - 相手側で切断済みのhalf-openなコネクションをプールから使い回していた。
+    - HTTP/2のヘルスチェック(Ping)の `SendPingTimeout`, `PingTimeout` がともに10秒で、リクエストのcontextのタイムアウト(10秒)以上だった。
+        - 死んだコネクションが検知される前にリクエストがタイムアウトし、プールに残り続けていた。
+    - 設定値はAIに推奨された値をそのまま入れていた。
+- HTTP/2の基礎
+    - 1本のTCPコネクション上で複数のリクエスト/レスポンス(ストリーム)を同時にやり取りする。
+    - 1本のコネクションを長く共有するので、壊れるとその上のリクエストがまとめて失敗する。
+- net/httpのコネクション管理
+    - 一定時間フレームを受信しないとPingを送り、ACKが返らなければプールから除外する。処理中のリクエストは `http2: client connection lost` で失敗する。
+    - `http.DefaultClient` ではこのヘルスチェックは無効になっている。
+    - 設定は `http.HTTP2Config` の `SendPingTimeout`(Ping送信までの待ち時間)と `PingTimeout`(ACK待ちの時間)。
+- 対策
+    - `SendPingTimeout` を5秒、`PingTimeout` を3秒にして、合計がcontextの10秒より短くなるようにした。
+    - 1回目のリクエストが `connection lost` で早めに失敗し、リトライで新しいコネクションが使われる。
+
+### 感想
+<!-- TODO: かく -->
+
+
+## まとめ
+<!-- TODO: かく -->
+
+[^1]: [働いているけど Google Summer of Code (GSoC) に応募した](https://blog.bokken.io/articles/2022-04-30/apply-google-summer-of-code.html)
