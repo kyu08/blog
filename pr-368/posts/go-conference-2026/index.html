@@ -6,7 +6,7 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Open Source, Open World sanposhihoさんによるKeynote。 https://speakerdeck.com/sanposhiho/gocon2026-open-source-open-world メモ Kubernetesに5年ほど貢献している。 Sig-Scheduling Chair / Tech Lead OSSを始める方法ではなく" />
+<meta name="description" content="Open Source, Open World sanposhihoさんによるKeynote。 メモ Kubernetesに5年ほど貢献している。 Sig-Scheduling Chair / Tech Lead OSSを始める方法ではなく、" />
 <meta name="keywords" content="" />
 
   <meta name="robots" content="noodp" />
@@ -92,7 +92,7 @@ if (!doNotTrack) {
 <meta property="og:locale" content="ja" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Go Conference 2026 に参加した">
-<meta property="og:description" content="Open Source, Open World sanposhihoさんによるKeynote。 https://speakerdeck.com/sanposhiho/gocon2026-open-source-open-world メモ Kubernetesに5年ほど貢献している。 Sig-Scheduling Chair / Tech Lead OSSを始める方法ではなく" />
+<meta property="og:description" content="Open Source, Open World sanposhihoさんによるKeynote。 メモ Kubernetesに5年ほど貢献している。 Sig-Scheduling Chair / Tech Lead OSSを始める方法ではなく、" />
 <meta property="og:url" content="https://blog.kyu08.com/pr-368/posts/go-conference-2026/" />
 <meta property="og:site_name" content="blog.kyu08.com" />
 
@@ -225,7 +225,7 @@ if (!doNotTrack) {
   </h1>
   <div class="post-meta"><time class="post-date">2026/10/15</time>
       
-    <span class="post-reading-time">6 min read (3002 words)</span></div>
+    <span class="post-reading-time">11 min read (5417 words)</span></div>
 
   
     <span class="post-tags">
@@ -276,22 +276,10 @@ if (!doNotTrack) {
         <li><a href="#感想-4">感想</a></li>
       </ul>
     </li>
-    <li><a href="#go-における-ffi-のこれまでとこれから">Go における FFI のこれまでとこれから</a>
+    <li><a href="#そのリトライ死んだコネクションを使い回していませんか--goのhttpクライアントとhttp2を実プロダクト障害から学び直す">そのリトライ、死んだコネクションを使い回していませんか ── GoのHTTPクライアントとHTTP/2を実プロダクト障害から学び直す</a>
       <ul>
         <li><a href="#メモ-5">メモ</a></li>
         <li><a href="#感想-5">感想</a></li>
-      </ul>
-    </li>
-    <li><a href="#そのリトライ死んだコネクションを使い回していませんか--goのhttpクライアントとhttp2を実プロダクト障害から学び直す">そのリトライ、死んだコネクションを使い回していませんか ── GoのHTTPクライアントとHTTP/2を実プロダクト障害から学び直す</a>
-      <ul>
-        <li><a href="#メモ-6">メモ</a></li>
-      </ul>
-    </li>
-    <li><a href="#原因">原因</a></li>
-    <li><a href="#http2の基礎">HTTP/2の基礎</a></li>
-    <li><a href="#nethttpのコネクション管理">net/httpのコネクション管理</a>
-      <ul>
-        <li><a href="#感想-6">感想</a></li>
       </ul>
     </li>
     <li><a href="#まとめ">まとめ</a></li>
@@ -302,7 +290,9 @@ if (!doNotTrack) {
   <div class="post-content"><div>
         <h2 id="open-source-open-world">Open Source, Open World<a href="#open-source-open-world" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>sanposhihoさんによるKeynote。</p>
-<p><a href="https://speakerdeck.com/sanposhiho/gocon2026-open-source-open-world" target="_blank">https://speakerdeck.com/sanposhiho/gocon2026-open-source-open-world</a></p>
+<p><div class="embed-container speakerdeck">
+        <iframe src="https://speakerdeck.com/player/5bd8d25f80b84fff8882303812ece8fb" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      </div></p>
 <h3 id="メモ">メモ<a href="#メモ" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <ul>
 <li>Kubernetesに5年ほど貢献している。
@@ -363,15 +353,16 @@ if (!doNotTrack) {
 </ul>
 <h3 id="感想">感想<a href="#感想" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <ul>
+<li>かっこよさがOSSのモチベーションなの、わかる</li>
+<li>OSSに多少貢献をしたことはあるものの、OSSで関わった人とリアルで会ったことはないのでよさそうと思った（とはいえ英語で話せる自信はない&hellip;&hellip;）</li>
 <li>最近社会人でもGoogle Summer of Codeに参加できるようになったらしい
 <ul>
 <li>2022年頃に18歳以上であれば参加できるようになったらしい。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></li>
 </ul>
 </li>
-<li>かっこよさがOSSのモチベーションなの、わかる</li>
-<li>OSSに多少貢献をしたことはあるものの、OSSで関わった人とリアルで会ったことはないのでよさそうと思った（とはいえ英語で話せる自信はない）</li>
 </ul>
 <h2 id="go--simdで高速化するベクトル検索--ルーフラインモデルでsimdが効く境界を探れ-">Go × SIMDで高速化するベクトル検索 ~ ルーフラインモデルでSIMDが効く境界を探れ！ ~<a href="#go--simdで高速化するベクトル検索--ルーフラインモデルでsimdが効く境界を探れ-" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<!-- TODO: かく -->
 <p>LayerXのHiromu Nakamuraさんによるベクトル検索の高速化を通してSIMDへの理解を深めるというテーマのワークショップ。</p>
 <p>ワークショップで利用したRepositoryとスライドはこちら。</p>
 <p><div class="blogcard" data-url="https://github.com/po3rin/gocon2026-simd-search" data-auto-fetch="false">
@@ -383,7 +374,9 @@ if (!doNotTrack) {
   </a>
 </div>
 </p>
-<p><a href="https://speakerdeck.com/po3rin/go-x-simd-de-kousokuka-suru-bekutoru-kensaku-de-simd-ga-kiku-kyoukai-o-sagure" target="_blank">https://speakerdeck.com/po3rin/go-x-simd-de-kousokuka-suru-bekutoru-kensaku-de-simd-ga-kiku-kyoukai-o-sagure</a></p>
+<p><div class="embed-container speakerdeck">
+        <iframe src="https://speakerdeck.com/player/453f71b6c30449cc9a3a2876d667e510" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      </div></p>
 <h3 id="メモ-1">メモ<a href="#メモ-1" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <ul>
 <li>ボトルネックがメモリ帯域幅になるかCPUになるかを明確にするとSIMDを使ってうまく高速化できる
@@ -405,54 +398,87 @@ if (!doNotTrack) {
 </div>
 </p>
 <h3 id="メモ-2">メモ<a href="#メモ-2" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<blockquote>
+<p>本記事では、ガベージコレクション（GC）への負荷を低減することを目的として、Go言語でのメモリ確保時にOSから直接mmap領域を確保する手法と、make関数でランタイムから領域を確保する場合でのGC負荷などの比較を行います。結果としては、mmap領域を直接確保することでGCが走査するオブジェクト数を削減でき、それに伴ってアプリケーションの停止（Stop-The-World）時間を短縮できることがわかりました。</p>
+</blockquote>
 <ul>
 <li>mmapを使って自分でメモリ確保、解放をすることでGCによるパフォーマンス低下を防いだ。</li>
 </ul>
+<blockquote>
+<p>ルートオブジェクトのMark時、Mark終了時のmcacheのフラッシュなどの際に微小なStop-The-World（STW）が発生します。ただ、GoにおいてはGCはアプリケーションスレッドと並行で行われるため、GC実行の間ずっとSTWが発生するということはありません。</p>
+</blockquote>
+<blockquote>
+<p>Mirrativでは、ライブ映像のストリーミングについて、サーバーを含めたパイプラインをGoで記述しています。特に配信された映像と音声を最初に受信するオリジンサーバーでは、AVCやAACのストリームをMPEG-TSやfMP4などのコンテナに詰めてHLSセグメントを生成するため、比較的大きなサイズのメモリ領域を用いた処理が発生します。フレーム毎に処理を行うのであれば一度確保したメモリ領域を使い回すのが好ましいですが、確保するサイズが大きいかつフレーム毎に確保が必要ではないケースでは、都度メモリ領域を確保するような処理を行っています。こういった場合に、ランタイムからメモリ領域を毎度確保していると、GCが走査するオブジェクト数が膨大になっていきます。オブジェクト数が膨大になるとGCの負荷が増大し、主に以下二つの事象でアプリケーションに影響を及ぼします。</p>
+</blockquote>
+<blockquote>
+<p>Goのランタイムは、GCを行うためのgoroutineを複数生成してGCを行っているわけですが、走査するオブジェクト数が増大すると単一スレッドでは処理しきれなくなります。すると、Goでは、アプリケーションが生成したgoroutineのリソースを用いてGCを行います。これにより、本来アプリケーションの処理に使われるはずだったgoroutineのリソースがGCによって奪われる形になり、アプリケーションのスループットが低下します。</p>
+</blockquote>
+<blockquote>
+<p><strong>mmap領域をOSから直接確保する</strong></p>
+<p>この問題に対してMirrativでは、ある程度高頻度に大きなサイズのメモリ領域を確保する必要のある処理では、ランタイムからメモリを確保するのではなく、OSから直接mmap領域を確保しています。GCによるメモリ解放を待つことなく自らメモリ確保と解放を繰り返すことで、メモリ使用量とGCの負荷を抑えています。GCの負荷が低減することによりアプリケーションスレッドによるGCアシストの頻度も減り、結果的にアプリケーションのスループットが向上することも期待できます。</p>
+<p>一方でトレードオフは存在します。自らメモリ確保と解放を行うことの問題は、GCが生まれる前の古典的なメモリ管理の問題に帰着します。単一のメモリ領域を複数のスレッドが参照していたり、非同期処理で用いている場合にはプログラマーが注意深く例外処理を書きメモリの解放を行う必要があります。また、先にも述べたとおりランタイムがすでに確保している領域を利用するmake関数などと比較すると、OSからの直接確保ではシステムコールの影響で確保にかかる時間は長くなります。</p>
+</blockquote>
 <h3 id="感想-2">感想<a href="#感想-2" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <ul>
-<li></li>
+<li>なかなか普段のWeb開発でGCがボトルネックになることがなく、GCによる負荷のチューニングに意識が向くことがないので、そういう意味でかなりDeepな発表だった。</li>
+<li>メモリやGCまわりはあまり詳しくないのであまり詳しい感想を書けずだが、コンパイラやComputer Scienceを深く学ぶことがこのあたりの技術的難易度の高い課題の解決の質とスピードをに繋がると思うのでコツコツ学んでいきたい。</li>
 </ul>
 <h2 id="株式会社エウレカ-podは生きているのにgoだけが落ちるgogcとgomemlimitで追うinvisible-oom-killの謎">株式会社エウレカ: Podは生きているのにGoだけが落ちる：GOGCとGOMEMLIMITで追うInvisible OOM Killの謎<a href="#株式会社エウレカ-podは生きているのにgoだけが落ちるgogcとgomemlimitで追うinvisible-oom-killの謎" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p><a href="https://speakerdeck.com/tkc66buzz/pod-ha-iki-te-iru-noni-go-dakega-ochiru-gogc-to-gomemlimit-de-ou-invisible-oom-kill-no-nazo" target="_blank">https://speakerdeck.com/tkc66buzz/pod-ha-iki-te-iru-noni-go-dakega-ochiru-gogc-to-gomemlimit-de-ou-invisible-oom-kill-no-nazo</a></p>
+<p><div class="embed-container speakerdeck">
+        <iframe src="https://speakerdeck.com/player/74ae8e1160f7428fbd91f6569700eb43" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      </div></p>
 <h3 id="メモ-3">メモ<a href="#メモ-3" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <ul>
-<li>2025年4月のある日から500エラーの増加後にGoのプロセスが落ちる現象が起きだした</li>
+<li>2025年4月のある日から500エラーの増加後にGoのプロセスが落ちる現象が起きだした
+<ul>
+<li>Podは生きているがGoプロセスだけ落ちる。</li>
+<li>OOM Killedも出ていない。</li>
+</ul>
+</li>
+<li>当時の状況
+<ul>
+<li>EKS上のあるPodでNginxとGo Appが同一のコンテナで動いていた。(1コンテナに同居していたのは歴史的経緯とのこと)</li>
+</ul>
+</li>
 <li>Invisible OOM
 <ul>
 <li>panic logなし Kubernetes/PodでのOOMKilledやTerminatedなし</li>
 <li>OSまで下るとOOMが起きていた。</li>
 <li>歴史的経緯で1つのコンテナで複数プロセスが動いており、Goのプロセスがpid1ではなかった。</li>
-<li>LinuxのOOMKillはメモリを一番使用しているプロセスをkillする。</li>
+<li>LinuxのOOM Killerはメモリを一番使用しているプロセスをkillする。</li>
 </ul>
 </li>
 <li>なぜGoがOOMでkillされたのか
 <ul>
 <li>カーネル側ではOOMされていたが、Kubernetes側のcontainer memory limitは超えていなかった（ようにグラフ上ではみえた）</li>
-<li>なのでメモリが瞬間的にスパイクし、Linux側でOOMKillされたこと</li>
+<li>なのでメモリが瞬間的にスパイクし、Linux側でOOMKillされた</li>
 </ul>
 </li>
 <li>なぜOOMを防げなかったのか
 <ul>
-<li>GOMEMORYLIMITが未設定だった。</li>
+<li><code>GOMEMORYLIMIT</code>が未設定だった。</li>
 </ul>
 </li>
-<li>なぜGCが走らなかったのか
+<li>なぜmemory limitを超過するまでGCが走らなかったのか
 <ul>
 <li><code>GOGC=500</code>だったのでGCラインがcontainer memory limitを超えていたから。</li>
 </ul>
 </li>
 </ul>
+<blockquote>
+<p>The GOMEMLIMIT variable sets a soft memory limit for the runtime. This memory limit includes the Go heap and all other memory managed by the runtime, and excludes external memory sources such as mappings of the binary itself, memory managed in other languages, and memory held by the operating system on behalf of the Go program. (中略) The default setting is math.MaxInt64, which effectively disables the memory limit. runtime/debug.SetMemoryLimit allows changing this limit at run time.</p>
+<p><a href="https://pkg.go.dev/runtime" target="_blank" >https://pkg.go.dev/runtime</a></p>
+<p>GOMEMLIMIT 変数は、ランタイムのソフトメモリ制限を設定します。このメモリ制限には、Go ヒープおよびランタイムによって管理されるその他のすべてのメモリが含まれますが、バイナリ自体のマッピング、他の言語で管理されるメモリ、およびオペレーティングシステムが Go プログラムに代わって保持するメモリなどの外部メモリソースは除外されます。 (中略) デフォルト設定は math.MaxInt64 であり、これによりメモリ制限は事実上無効になります。runtime/debug.SetMemoryLimit を使用すると、実行時にこの制限を変更することができます。</p>
+</blockquote>
 <h3 id="感想-3">感想<a href="#感想-3" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <ul>
-<li>きになり
-<ul>
-<li>どんな性質の処理を行うサーバーだったのか</li>
-</ul>
-</li>
-<li>pidの話など、Kubernetesを運用する者としてKubernetesの仕組みをしっかり学んで落とし穴を回避したりKubernetesが持っている力を活かすのは大事だなと思った。</li>
+<li>pidの話など、Kubernetesを運用する者としてKubernetesの仕組みをしっかり学んで落とし穴を回避したりKubernetesが持っている力を活かすのは大事だと感じた。</li>
+<li>普段はあまり意識しないがGoのGCまわりの設定値についても一通り確認しておくとOOM Killedのトラブルシューティングがスムーズにできそう。</li>
 </ul>
 <h2 id="エムスリー株式会社-更なる可用性を求めて5年間運用したkotlinのアプリケーションをgoでリプレイスする話">エムスリー株式会社: 更なる可用性を求めて、5年間運用したKotlinのアプリケーションをGoでリプレイスする話<a href="#エムスリー株式会社-更なる可用性を求めて5年間運用したkotlinのアプリケーションをgoでリプレイスする話" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p><a href="https://speakerdeck.com/ken_tunc/go-conference-2026-slide" target="_blank">https://speakerdeck.com/ken_tunc/go-conference-2026-slide</a></p>
+<p><div class="embed-container speakerdeck">
+        <iframe src="https://speakerdeck.com/player/e07aab055e2542ca9e58a682e9eb0151" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      </div></p>
 <p>エムスリーの田口さんにサーバー実装言語をKotlinからGoにリプレイスしたという内容の発表。</p>
 <h3 id="メモ-4">メモ<a href="#メモ-4" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <ul>
@@ -486,52 +512,71 @@ if (!doNotTrack) {
 <li>(JVMには詳しくないのであまりちゃんとはわかってないが)Goはあまり気をつけずともパフォーマンスが出やすかったり、ビルドが高速なのは重要なメリットだなと改めて思った。</li>
 <li>「ついでの改善」はついついやりたくなってしまうが、スコープは増えるので気をつけるのが大事だなと思った。</li>
 </ul>
-<h2 id="go-における-ffi-のこれまでとこれから">Go における FFI のこれまでとこれから<a href="#go-における-ffi-のこれまでとこれから" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<!-- goccyさんによる -->
-<p><a href="https://speakerdeck.com/goccy/go-niokeru-ffi-no-kore-madeto-korekara" target="_blank">https://speakerdeck.com/goccy/go-niokeru-ffi-no-kore-madeto-korekara</a></p>
-<h3 id="メモ-5">メモ<a href="#メモ-5" class="hanchor" ariaLabel="Anchor">#</a> </h3>
-<ul>
-<li>FFI(Foreign)
-<ul>
-<li>同一プロセス内で異なるプログラミング言語で書かれた処理を呼びだす仕組み</li>
-<li>ABIをあわせて呼び出す</li>
-</ul>
-</li>
-<li>C ABIの課題とcgoの解決策
-<ul>
-<li>ホストからC側のメモリ利用状況を認識する方法がないのでメモリリークが起きやすい</li>
-<li>C側で不正なアドレスにアクセスしてSIGSEGVが発生するとホストごとクラッシュする</li>
-<li>ホストとC側でアドレス空間が同じなのでホストとCで同じメモリを読み書きできてしまう</li>
-<li>型変換の実装難易度が高い
-<ul>
-<li>構造体に対するポインタなどは複雑になる</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="感想-5">感想<a href="#感想-5" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<!-- ## Go における FFI のこれまでとこれから -->
+<!-- <!-- goccyさんによる --> -->
+<!---->
+<!-- https://speakerdeck.com/goccy/go-niokeru-ffi-no-kore-madeto-korekara -->
+<!---->
+<!-- ### メモ -->
+<!-- - FFI(Foreign) -->
+<!--     - 同一プロセス内で異なるプログラミング言語で書かれた処理を呼びだす仕組み -->
+<!--     - ABIをあわせて呼び出す -->
+<!-- - C ABIの課題とcgoの解決策 -->
+<!--     - ホストからC側のメモリ利用状況を認識する方法がないのでメモリリークが起きやすい -->
+<!--     - C側で不正なアドレスにアクセスしてSIGSEGVが発生するとホストごとクラッシュする -->
+<!--     - ホストとC側でアドレス空間が同じなのでホストとCで同じメモリを読み書きできてしまう -->
+<!--     - 型変換の実装難易度が高い -->
+<!--         - 構造体に対するポインタなどは複雑になる -->
+<!---->
+<!---->
+<!---->
+<!-- ### 感想 -->
 <h2 id="そのリトライ死んだコネクションを使い回していませんか--goのhttpクライアントとhttp2を実プロダクト障害から学び直す">そのリトライ、死んだコネクションを使い回していませんか ── GoのHTTPクライアントとHTTP/2を実プロダクト障害から学び直す<a href="#そのリトライ死んだコネクションを使い回していませんか--goのhttpクライアントとhttp2を実プロダクト障害から学び直す" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p><a href="https://speakerdeck.com/myus4a/2-o-jitsupurodakuto-shougai-kara-manabi-naosu" target="_blank">https://speakerdeck.com/myus4a/2-o-jitsupurodakuto-shougai-kara-manabi-naosu</a></p>
+<p><div class="embed-container speakerdeck">
+        <iframe src="https://speakerdeck.com/player/8cd0607b9254454d962ff006a3ea654c" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      </div></p>
 <p>REALITYの松田さんによる発表。</p>
-<h3 id="メモ-6">メモ<a href="#メモ-6" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h3 id="メモ-5">メモ<a href="#メモ-5" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <ul>
 <li>遭遇した障害
 <ul>
 <li>課金認証基盤へのリクエストがある日大量にタイムアウトする事象が発生(context deadline exceeded)</li>
+<li>バースト的に発生して自然回復する。発生中はリトライしても成功しない。</li>
+<li>リトライを追加したが解決しなかった。</li>
 </ul>
 </li>
-<li>
-<h2 id="原因">原因<a href="#原因" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<li>原因
+<ul>
+<li>相手側で切断済みのhalf-openなコネクションをプールから使い回していた。</li>
+<li>HTTP/2のヘルスチェック(Ping)の <code>SendPingTimeout</code>, <code>PingTimeout</code> がともに10秒で、リクエストのcontextのタイムアウト(10秒)以上だった。
+<ul>
+<li>死んだコネクションが検知される前にリクエストがタイムアウトし、プールに残り続けていた。</li>
+</ul>
 </li>
-<li>
-<h2 id="http2の基礎">HTTP/2の基礎<a href="#http2の基礎" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<li>設定値はAIに推奨された値をそのまま入れていた。</li>
+</ul>
 </li>
-<li>
-<h2 id="nethttpのコネクション管理">net/httpのコネクション管理<a href="#nethttpのコネクション管理" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<li>HTTP/2の基礎
+<ul>
+<li>1本のTCPコネクション上で複数のリクエスト/レスポンス(ストリーム)を同時にやり取りする。</li>
+<li>1本のコネクションを長く共有するので、壊れるとその上のリクエストがまとめて失敗する。</li>
+</ul>
+</li>
+<li>net/httpのコネクション管理
+<ul>
+<li>一定時間フレームを受信しないとPingを送り、ACKが返らなければプールから除外する。処理中のリクエストは <code>http2: client connection lost</code> で失敗する。</li>
+<li><code>http.DefaultClient</code> ではこのヘルスチェックは無効になっている。</li>
+<li>設定は <code>http.HTTP2Config</code> の <code>SendPingTimeout</code>(Ping送信までの待ち時間)と <code>PingTimeout</code>(ACK待ちの時間)。</li>
+</ul>
+</li>
+<li>対策
+<ul>
+<li><code>SendPingTimeout</code> を5秒、<code>PingTimeout</code> を3秒にして、合計がcontextの10秒より短くなるようにした。</li>
+<li>1回目のリクエストが <code>connection lost</code> で早めに失敗し、リトライで新しいコネクションが使われる。</li>
+</ul>
 </li>
 </ul>
-<h3 id="感想-6">感想<a href="#感想-6" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h3 id="感想-5">感想<a href="#感想-5" class="hanchor" ariaLabel="Anchor">#</a> </h3>
 <h2 id="まとめ">まとめ<a href="#まとめ" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <div class="footnotes" role="doc-endnotes">
 <hr>
@@ -615,22 +660,10 @@ if (!doNotTrack) {
         <li><a href="#感想-4">感想</a></li>
       </ul>
     </li>
-    <li><a href="#go-における-ffi-のこれまでとこれから">Go における FFI のこれまでとこれから</a>
+    <li><a href="#そのリトライ死んだコネクションを使い回していませんか--goのhttpクライアントとhttp2を実プロダクト障害から学び直す">そのリトライ、死んだコネクションを使い回していませんか ── GoのHTTPクライアントとHTTP/2を実プロダクト障害から学び直す</a>
       <ul>
         <li><a href="#メモ-5">メモ</a></li>
         <li><a href="#感想-5">感想</a></li>
-      </ul>
-    </li>
-    <li><a href="#そのリトライ死んだコネクションを使い回していませんか--goのhttpクライアントとhttp2を実プロダクト障害から学び直す">そのリトライ、死んだコネクションを使い回していませんか ── GoのHTTPクライアントとHTTP/2を実プロダクト障害から学び直す</a>
-      <ul>
-        <li><a href="#メモ-6">メモ</a></li>
-      </ul>
-    </li>
-    <li><a href="#原因">原因</a></li>
-    <li><a href="#http2の基礎">HTTP/2の基礎</a></li>
-    <li><a href="#nethttpのコネクション管理">net/httpのコネクション管理</a>
-      <ul>
-        <li><a href="#感想-6">感想</a></li>
       </ul>
     </li>
     <li><a href="#まとめ">まとめ</a></li>
